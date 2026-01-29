@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Data files (keep structure but not large files)
+data/raw/**/*.pdf
+data/raw/**/*.xlsx
+data/raw/**/*.xlsm
+data/raw/**/*.xls
+data/raw/**/*.csv
+data/raw/**/*.html
+
+# But keep metadata files
+!data/raw/**/metadata.json
+!data/raw/**/.gitkeep
+
+# Processed data (can be regenerated)
+data/processed/*.json
+data/processed/*.csv
+!data/processed/.gitkeep
+
+# Analysis outputs (can be regenerated)
+data/analysis/*.json
+data/analysis/dashboards/*.html
+!data/analysis/.gitkeep
+!data/analysis/dashboards/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp

@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fcps-audit/schemas/staffing.json",
+  "title": "Staffing Data",
+  "description": "Schema for school division staffing counts and salaries",
+  "type": "object",
+  "required": ["fiscal_year", "division_code", "division_name"],
+  "properties": {
+    "fiscal_year": {
+      "type": "string",
+      "description": "Fiscal year in format FY20XX",
+      "pattern": "^FY20\\d{2}$"
+    },
+    "division_code": {
+      "type": "string",
+      "description": "3-digit Virginia division code",
+      "pattern": "^\\d{3}$"
+    },
+    "division_name": {
+      "type": "string",
+      "description": "Full name of the school division"
+    },
+    "staffing": {
+      "type": "object",
+      "description": "Staff counts by category (FTE)",
+      "properties": {
+        "teachers": {
+          "type": "number",
+          "description": "Number of teachers (FTE)"
+        },
+        "administrators": {
+          "type": "number",
+          "description": "Number of administrators (FTE)"
+        },
+        "instructional_aides": {
+          "type": "number",
+          "description": "Number of instructional aides/paraprofessionals"
+        },
+        "guidance_counselors": {
+          "type": "number",
+          "description": "Number of guidance counselors"
+        },
+        "librarians": {
+          "type": "number",
+          "description": "Number of librarians/media specialists"
+        },
+        "support_staff": {
+          "type": "number",
+          "description": "Number of support staff"
+        },
+        "total_fte": {
+          "type": "number",
+          "description": "Total full-time equivalent staff"
+        }
+      }
+    },
+    "salaries": {
+      "type": "object",
+      "description": "Average salaries by category",
+      "properties": {
+        "avg_teacher_salary": {
+          "type": "number",
+          "description": "Average teacher salary"
+        },
+        "avg_admin_salary": {
+          "type": "number",
+          "description": "Average administrator salary"
+        },
+        "median_teacher_salary": {
+          "type": "number",
+          "description": "Median teacher salary"
+        }
+      }
+    },
+    "source": {
+      "type": "string",
+      "description": "Data source (e.g., 'VDOE Table 13')"
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL where data was obtained"
+    },
+    "downloaded_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date data was downloaded"
+    }
+  }
+}

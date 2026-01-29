@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fcps-audit/schemas/expenditures.json",
+  "title": "Expenditure Data",
+  "description": "Schema for school division expenditure and revenue data",
+  "type": "object",
+  "required": ["fiscal_year", "division_code", "division_name"],
+  "properties": {
+    "fiscal_year": {
+      "type": "string",
+      "description": "Fiscal year in format FY20XX",
+      "pattern": "^FY20\\d{2}$"
+    },
+    "division_code": {
+      "type": "string",
+      "description": "3-digit Virginia division code",
+      "pattern": "^\\d{3}$"
+    },
+    "division_name": {
+      "type": "string",
+      "description": "Full name of the school division"
+    },
+    "expenditures": {
+      "type": "object",
+      "description": "Expenditures by functional category",
+      "properties": {
+        "total": {
+          "type": "number",
+          "description": "Total operating expenditures"
+        },
+        "instruction": {
+          "type": "number",
+          "description": "Instructional expenditures (teaching, curriculum)"
+        },
+        "administration": {
+          "type": "number",
+          "description": "Administrative expenditures (central office, board)"
+        },
+        "attendance_health": {
+          "type": "number",
+          "description": "Attendance and health services"
+        },
+        "pupil_transportation": {
+          "type": "number",
+          "description": "Student transportation costs"
+        },
+        "operations_maintenance": {
+          "type": "number",
+          "description": "Operations and maintenance of facilities"
+        },
+        "facilities": {
+          "type": "number",
+          "description": "Facilities/capital expenditures"
+        },
+        "debt_service": {
+          "type": "number",
+          "description": "Debt service payments"
+        },
+        "technology": {
+          "type": "number",
+          "description": "Technology expenditures"
+        },
+        "other": {
+          "type": "number",
+          "description": "Other/uncategorized expenditures"
+        }
+      }
+    },
+    "revenues": {
+      "type": "object",
+      "description": "Revenue sources",
+      "properties": {
+        "total": {
+          "type": "number",
+          "description": "Total revenues"
+        },
+        "state": {
+          "type": "number",
+          "description": "State funding"
+        },
+        "local": {
+          "type": "number",
+          "description": "Local funding (county/city)"
+        },
+        "federal": {
+          "type": "number",
+          "description": "Federal funding"
+        },
+        "other": {
+          "type": "number",
+          "description": "Other revenue sources"
+        }
+      }
+    },
+    "source": {
+      "type": "string",
+      "description": "Data source (e.g., 'FCPS ACFR')"
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL where data was obtained"
+    },
+    "downloaded_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date data was downloaded"
+    }
+  }
+}

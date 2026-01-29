@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fcps-audit/schemas/enrollment.json",
+  "title": "Enrollment Data",
+  "description": "Schema for school division enrollment data (Average Daily Membership)",
+  "type": "object",
+  "required": ["fiscal_year", "division_code", "division_name", "enrollment"],
+  "properties": {
+    "fiscal_year": {
+      "type": "string",
+      "description": "Fiscal year in format FY20XX",
+      "pattern": "^FY20\\d{2}$"
+    },
+    "division_code": {
+      "type": "string",
+      "description": "3-digit Virginia division code",
+      "pattern": "^\\d{3}$"
+    },
+    "division_name": {
+      "type": "string",
+      "description": "Full name of the school division"
+    },
+    "enrollment": {
+      "type": "object",
+      "description": "Enrollment counts by level",
+      "properties": {
+        "adm": {
+          "type": "number",
+          "description": "Total Average Daily Membership"
+        },
+        "adm_total": {
+          "type": "number",
+          "description": "Total ADM (alternate field name)"
+        },
+        "adm_elementary": {
+          "type": "number",
+          "description": "Elementary school ADM"
+        },
+        "adm_middle": {
+          "type": "number",
+          "description": "Middle school ADM"
+        },
+        "adm_high": {
+          "type": "number",
+          "description": "High school ADM"
+        },
+        "adm_pre_k": {
+          "type": "number",
+          "description": "Pre-kindergarten ADM"
+        }
+      }
+    },
+    "source": {
+      "type": "string",
+      "description": "Data source (e.g., 'VDOE Table 3')"
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL where data was obtained"
+    },
+    "downloaded_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date data was downloaded"
+    }
+  }
+}

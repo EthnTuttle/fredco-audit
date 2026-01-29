@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fcps-audit/schemas/ratios.json",
+  "title": "Calculated Ratios and Metrics",
+  "description": "Schema for calculated audit metrics and benchmark comparisons",
+  "type": "object",
+  "required": ["fiscal_year", "division_code", "division_name"],
+  "properties": {
+    "fiscal_year": {
+      "type": "string",
+      "description": "Fiscal year in format FY20XX",
+      "pattern": "^FY20\\d{2}$"
+    },
+    "division_code": {
+      "type": "string",
+      "description": "3-digit Virginia division code",
+      "pattern": "^\\d{3}$"
+    },
+    "division_name": {
+      "type": "string",
+      "description": "Full name of the school division"
+    },
+    "per_pupil": {
+      "type": "object",
+      "description": "Per-pupil spending amounts",
+      "properties": {
+        "total": {
+          "type": "number",
+          "description": "Total per-pupil spending"
+        },
+        "instruction": {
+          "type": "number",
+          "description": "Per-pupil instructional spending"
+        },
+        "administration": {
+          "type": "number",
+          "description": "Per-pupil administrative spending"
+        },
+        "transportation": {
+          "type": "number",
+          "description": "Per-pupil transportation spending"
+        },
+        "operations": {
+          "type": "number",
+          "description": "Per-pupil operations/maintenance spending"
+        },
+        "facilities": {
+          "type": "number",
+          "description": "Per-pupil facilities spending"
+        },
+        "debt_service": {
+          "type": "number",
+          "description": "Per-pupil debt service"
+        },
+        "technology": {
+          "type": "number",
+          "description": "Per-pupil technology spending"
+        }
+      }
+    },
+    "ratios": {
+      "type": "object",
+      "description": "Spending and staffing ratios",
+      "properties": {
+        "admin_pct": {
+          "type": "number",
+          "description": "Administrative spending as % of total",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "instruction_pct": {
+          "type": "number",
+          "description": "Instructional spending as % of total",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "admin_to_student": {
+          "type": "number",
+          "description": "Number of students per administrator"
+        },
+        "admin_to_teacher": {
+          "type": "number",
+          "description": "Number of teachers per administrator"
+        },
+        "teacher_to_student": {
+          "type": "number",
+          "description": "Number of students per teacher"
+        }
+      }
+    },
+    "benchmarks": {
+      "type": "object",
+      "description": "Benchmark comparison values",
+      "properties": {
+        "state_avg_admin_pct": {
+          "type": "number",
+          "description": "Virginia state average admin spending %"
+        },
+        "state_avg_instruction_pct": {
+          "type": "number",
+          "description": "Virginia state average instruction spending %"
+        },
+        "state_avg_per_pupil": {
+          "type": "number",
+          "description": "Virginia state average per-pupil spending"
+        },
+        "peer_avg_admin_pct": {
+          "type": "number",
+          "description": "Peer district average admin spending %"
+        },
+        "peer_avg_per_pupil": {
+          "type": "number",
+          "description": "Peer district average per-pupil spending"
+        }
+      }
+    },
+    "flags": {
+      "type": "object",
+      "description": "Red flag indicators",
+      "properties": {
+        "admin_above_state_avg": {
+          "type": "boolean",
+          "description": "Admin spending above state average"
+        },
+        "admin_above_target": {
+          "type": "boolean",
+          "description": "Admin spending above 5% target"
+        },
+        "admin_above_warning": {
+          "type": "boolean",
+          "description": "Admin spending above 10% warning threshold"
+        },
+        "instruction_below_target": {
+          "type": "boolean",
+          "description": "Instruction spending below 65% target"
+        },
+        "instruction_below_warning": {
+          "type": "boolean",
+          "description": "Instruction spending below 60% warning threshold"
+        },
+        "admin_to_student_low": {
+          "type": "boolean",
+          "description": "Admin-to-student ratio below 1:200 target"
+        }
+      }
+    }
+  }
+}
