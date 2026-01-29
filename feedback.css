@@ -31,6 +31,58 @@
     display: none;
 }
 
+.feedback-toggle:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.feedback-toggle:disabled:hover {
+    transform: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Toggle button layout */
+.feedback-toggle-text {
+    display: inline;
+}
+
+/* Connection indicator dot */
+.feedback-connection-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.feedback-connection-indicator.connecting {
+    background: #fbbf24;
+    animation: pulse 1s infinite;
+}
+
+.feedback-connection-indicator.connected {
+    background: #34d399;
+}
+
+.feedback-connection-indicator.error,
+.feedback-connection-indicator.disconnected {
+    background: #f87171;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+/* Relay count in header */
+.feedback-relay-count {
+    font-size: 11px;
+    opacity: 0.8;
+    margin-right: 4px;
+}
+
 /* Main form container */
 .feedback-form {
     display: none;
