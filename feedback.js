@@ -11,10 +11,18 @@ const CONFIG = {
     relays: [
         'wss://relay.damus.io',
         'wss://relay.primal.net',
-        'wss://relay.bitcoindistrict.org'
+        'wss://relay.bitcoindistrict.org',
+        'wss://nos.lol',
+        'wss://relay.nostr.band',
+        'wss://nostr.wine',
+        'wss://relay.snort.social',
+        'wss://relay.current.fyi',
+        'wss://nostr.fmt.wiz.biz',
+        'wss://relay.nostr.bg'
     ],
     storageKey: 'fredco-feedback:user',
-    clientTag: 'fredco-audit'
+    clientTag: 'fredco-audit',
+    connectionTimeout: 5000 // 5 second timeout for relay connections
 };
 
 // Topics for dropdown (shared across pages, page-specific ones added dynamically)
@@ -150,6 +158,27 @@ async function getNpub(publicKey) {
 }
 
 /**
+ * Publish to a single relay with timeout
+ */
+async function publishToRelay(pool, relay, event, timeout) {
+    return new Promise((resolve, reject) => {
+        const timer = setTimeout(() => {
+            reject(new Error(`Timeout connecting to ${relay}`));
+        }, timeout);
+        
+        pool.publish([relay], event)
+            .then(result => {
+                clearTimeout(timer);
+                resolve({ relay, result });
+            })
+            .catch(err => {
+                clearTimeout(timer);
+                reject(err);
+            });
+    });
+}
+
+/**
  * Publish feedback to Nostr relays
  */
 async function publishFeedback(name, comment, topic, pageType) {
@@ -186,30 +215,43 @@ ${comment}`;
     // Sign the event
     const signedEvent = tools.finalizeEvent(unsignedEvent, state.secretKey);
     
-    // Publish to relays
+    // Publish to relays with timeout handling
     const pool = new tools.SimplePool();
     
     try {
         const results = await Promise.allSettled(
             CONFIG.relays.map(relay => 
-                pool.publish([relay], signedEvent)
+                publishToRelay(pool, relay, signedEvent, CONFIG.connectionTimeout)
             )
         );
         
-        const successful = results.filter(r => r.status === 'fulfilled').length;
+        const successful = results.filter(r => r.status === 'fulfilled');
+        const failed = results.filter(r => r.status === 'rejected');
         
-        if (successful === 0) {
-            throw new Error('Failed to publish to any relay');
+        // Log failures for debugging (but don't expose to user)
+        if (failed.length > 0) {
+            console.warn('Some relays failed:', failed.map(r => r.reason?.message || r.reason));
         }
+        
+        if (successful.length === 0) {
+            throw new Error('Failed to publish to any relay. Please check your internet connection.');
+        }
+        
+        console.log(`Published to ${successful.length}/${CONFIG.relays.length} relays`);
         
         // Save user if remember me is checked
         if (state.rememberMe) {
             saveUser(state.secretKey, state.publicKey, name);
         }
         
-        return { success: true, relays: successful };
+        return { success: true, relays: successful.length };
     } finally {
-        pool.close(CONFIG.relays);
+        // Close connections gracefully
+        try {
+            pool.close(CONFIG.relays);
+        } catch (e) {
+            // Ignore close errors
+        }
     }
 }
 
