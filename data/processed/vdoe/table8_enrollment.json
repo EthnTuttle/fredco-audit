@@ -1,0 +1,767 @@
+{
+  "table": "Table 8",
+  "description": "Number of Days Taught, Average Daily Membership, Average Daily Attendance",
+  "source": "VDOE Superintendent's Annual Report",
+  "source_url": "https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report",
+  "generated_date": "2026-01-29T06:47:51.961208",
+  "data": [
+    {
+      "division_code": "043",
+      "division_name": "Clarke County",
+      "fiscal_year": "2019-20",
+      "source_file": "table8_2019-20.xlsx",
+      "metrics": {
+        "days_taught_elementary": 125,
+        "days_taught_secondary": 125,
+        "adm_elementary": 1043.0,
+        "adm_secondary": 839.0,
+        "adm_total": 1882.0,
+        "ada_elementary": 988.0,
+        "ada_secondary": 788.0,
+        "ada_total": 1776.0,
+        "attendance_pct_elementary": 95.0,
+        "attendance_pct_secondary": 94.0
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier County",
+      "fiscal_year": "2019-20",
+      "source_file": "table8_2019-20.xlsx",
+      "metrics": {
+        "days_taught_elementary": 131,
+        "days_taught_secondary": 131,
+        "adm_elementary": 6349.0,
+        "adm_secondary": 4655.0,
+        "adm_total": 11004.0,
+        "ada_elementary": 6055.0,
+        "ada_secondary": 4453.0,
+        "ada_total": 10508.0,
+        "attendance_pct_elementary": 95.0,
+        "attendance_pct_secondary": 96.0
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick County",
+      "fiscal_year": "2019-20",
+      "source_file": "table8_2019-20.xlsx",
+      "metrics": {
+        "days_taught_elementary": 126,
+        "days_taught_secondary": 126,
+        "adm_elementary": 8332.0,
+        "adm_secondary": 5404.0,
+        "adm_total": 13736.0,
+        "ada_elementary": 7936.0,
+        "ada_secondary": 5097.0,
+        "ada_total": 13033.0,
+        "attendance_pct_elementary": 95.0,
+        "attendance_pct_secondary": 94.0
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun County",
+      "fiscal_year": "2019-20",
+      "source_file": "table8_2019-20.xlsx",
+      "metrics": {
+        "days_taught_elementary": 118,
+        "days_taught_secondary": 118,
+        "adm_elementary": 50126.0,
+        "adm_secondary": 33014.0,
+        "adm_total": 83140.0,
+        "ada_elementary": 48044.0,
+        "ada_secondary": 31457.0,
+        "ada_total": 79501.0,
+        "attendance_pct_elementary": 96.0,
+        "attendance_pct_secondary": 95.0
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah County",
+      "fiscal_year": "2019-20",
+      "source_file": "table8_2019-20.xlsx",
+      "metrics": {
+        "days_taught_elementary": 132,
+        "days_taught_secondary": 132,
+        "adm_elementary": 3514.0,
+        "adm_secondary": 2312.0,
+        "adm_total": 5826.0,
+        "ada_elementary": 3330.0,
+        "ada_secondary": 2179.0,
+        "ada_total": 5509.0,
+        "attendance_pct_elementary": 95.0,
+        "attendance_pct_secondary": 94.0
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren County",
+      "fiscal_year": "2019-20",
+      "source_file": "table8_2019-20.xlsx",
+      "metrics": {
+        "days_taught_elementary": 134,
+        "days_taught_secondary": 134,
+        "adm_elementary": 3129.0,
+        "adm_secondary": 2113.0,
+        "adm_total": 5242.0,
+        "ada_elementary": 2953.0,
+        "ada_secondary": 1958.0,
+        "ada_total": 4911.0,
+        "attendance_pct_elementary": 94.0,
+        "attendance_pct_secondary": 93.0
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke County",
+      "fiscal_year": "2020-21",
+      "source_file": "table8_2020-21.xlsx",
+      "metrics": {
+        "days_taught_elementary": 177,
+        "days_taught_secondary": 178,
+        "adm_elementary": 912.0,
+        "adm_secondary": 809.0,
+        "adm_total": 1721.0,
+        "ada_elementary": 887.0,
+        "ada_secondary": 786.0,
+        "ada_total": 1673.0,
+        "attendance_pct_elementary": 97.0,
+        "attendance_pct_secondary": 97.0
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier County",
+      "fiscal_year": "2020-21",
+      "source_file": "table8_2020-21.xlsx",
+      "metrics": {
+        "days_taught_elementary": 172,
+        "days_taught_secondary": 172,
+        "adm_elementary": 5744.0,
+        "adm_secondary": 4449.0,
+        "adm_total": 10193.0,
+        "ada_elementary": 5604.0,
+        "ada_secondary": 4375.0,
+        "ada_total": 9979.0,
+        "attendance_pct_elementary": 98.0,
+        "attendance_pct_secondary": 98.0
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick County",
+      "fiscal_year": "2020-21",
+      "source_file": "table8_2020-21.xlsx",
+      "metrics": {
+        "days_taught_elementary": 180,
+        "days_taught_secondary": 180,
+        "adm_elementary": 7808.0,
+        "adm_secondary": 5323.0,
+        "adm_total": 13131.0,
+        "ada_elementary": 7495.0,
+        "ada_secondary": 5112.0,
+        "ada_total": 12607.0,
+        "attendance_pct_elementary": 96.0,
+        "attendance_pct_secondary": 96.0
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun County",
+      "fiscal_year": "2020-21",
+      "source_file": "table8_2020-21.xlsx",
+      "metrics": {
+        "days_taught_elementary": 167,
+        "days_taught_secondary": 167,
+        "adm_elementary": 47247.0,
+        "adm_secondary": 33320.0,
+        "adm_total": 80567.0,
+        "ada_elementary": 46028.0,
+        "ada_secondary": 32403.0,
+        "ada_total": 78431.0,
+        "attendance_pct_elementary": 97.0,
+        "attendance_pct_secondary": 97.0
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah County",
+      "fiscal_year": "2020-21",
+      "source_file": "table8_2020-21.xlsx",
+      "metrics": {
+        "days_taught_elementary": 164,
+        "days_taught_secondary": 164,
+        "adm_elementary": 3323.0,
+        "adm_secondary": 2278.0,
+        "adm_total": 5601.0,
+        "ada_elementary": 3187.0,
+        "ada_secondary": 2186.0,
+        "ada_total": 5373.0,
+        "attendance_pct_elementary": 96.0,
+        "attendance_pct_secondary": 96.0
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren County",
+      "fiscal_year": "2020-21",
+      "source_file": "table8_2020-21.xlsx",
+      "metrics": {
+        "days_taught_elementary": 180,
+        "days_taught_secondary": 180,
+        "adm_elementary": 2904.0,
+        "adm_secondary": 2095.0,
+        "adm_total": 4999.0,
+        "ada_elementary": 2746.0,
+        "ada_secondary": 2002.0,
+        "ada_total": 4748.0,
+        "attendance_pct_elementary": 95.0,
+        "attendance_pct_secondary": 96.0
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke County",
+      "fiscal_year": "2021-22",
+      "source_file": "table8_2021-22.xlsx",
+      "metrics": {
+        "days_taught_elementary": 175,
+        "days_taught_secondary": 175,
+        "adm_elementary": 990.0,
+        "adm_secondary": 830.0,
+        "adm_total": 1820.0,
+        "ada_elementary": 920.0,
+        "ada_secondary": 757.0,
+        "ada_total": 1677.0,
+        "attendance_pct_elementary": 93.0,
+        "attendance_pct_secondary": 91.0
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier County",
+      "fiscal_year": "2021-22",
+      "source_file": "table8_2021-22.xlsx",
+      "metrics": {
+        "days_taught_elementary": 176,
+        "days_taught_secondary": 176,
+        "adm_elementary": 6107.0,
+        "adm_secondary": 4581.0,
+        "adm_total": 10688.0,
+        "ada_elementary": 5768.0,
+        "ada_secondary": 4287.0,
+        "ada_total": 10055.0,
+        "attendance_pct_elementary": 94.0,
+        "attendance_pct_secondary": 94.0
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick County",
+      "fiscal_year": "2021-22",
+      "source_file": "table8_2021-22.xlsx",
+      "metrics": {
+        "days_taught_elementary": 179,
+        "days_taught_secondary": 179,
+        "adm_elementary": 8080.0,
+        "adm_secondary": 5667.0,
+        "adm_total": 13747.0,
+        "ada_elementary": 7585.0,
+        "ada_secondary": 5227.0,
+        "ada_total": 12812.0,
+        "attendance_pct_elementary": 94.0,
+        "attendance_pct_secondary": 92.0
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun County",
+      "fiscal_year": "2021-22",
+      "source_file": "table8_2021-22.xlsx",
+      "metrics": {
+        "days_taught_elementary": 171,
+        "days_taught_secondary": 171,
+        "adm_elementary": 47271.0,
+        "adm_secondary": 33822.0,
+        "adm_total": 81093.0,
+        "ada_elementary": 44935.0,
+        "ada_secondary": 31723.0,
+        "ada_total": 76658.0,
+        "attendance_pct_elementary": 95.0,
+        "attendance_pct_secondary": 94.0
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah County",
+      "fiscal_year": "2021-22",
+      "source_file": "table8_2021-22.xlsx",
+      "metrics": {
+        "days_taught_elementary": 174,
+        "days_taught_secondary": 174,
+        "adm_elementary": 3200.0,
+        "adm_secondary": 2274.0,
+        "adm_total": 5474.0,
+        "ada_elementary": 2909.0,
+        "ada_secondary": 2039.0,
+        "ada_total": 4948.0,
+        "attendance_pct_elementary": 91.0,
+        "attendance_pct_secondary": 90.0
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren County",
+      "fiscal_year": "2021-22",
+      "source_file": "table8_2021-22.xlsx",
+      "metrics": {
+        "days_taught_elementary": 174,
+        "days_taught_secondary": 174,
+        "adm_elementary": 2858.0,
+        "adm_secondary": 2137.0,
+        "adm_total": 4995.0,
+        "ada_elementary": 2626.0,
+        "ada_secondary": 1892.0,
+        "ada_total": 4518.0,
+        "attendance_pct_elementary": 92.0,
+        "attendance_pct_secondary": 89.0
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke County",
+      "fiscal_year": "2022-23",
+      "source_file": "table8_2022-23.xlsx",
+      "metrics": {
+        "days_taught_elementary": 170,
+        "days_taught_secondary": 170,
+        "adm_elementary": 1030.0,
+        "adm_secondary": 834.0,
+        "adm_total": 1864.0,
+        "ada_elementary": 962.0,
+        "ada_secondary": 765.0,
+        "ada_total": 1727.0,
+        "attendance_pct_elementary": 93.0,
+        "attendance_pct_secondary": 92.0
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier County",
+      "fiscal_year": "2022-23",
+      "source_file": "table8_2022-23.xlsx",
+      "metrics": {
+        "days_taught_elementary": 177,
+        "days_taught_secondary": 177,
+        "adm_elementary": 6105.0,
+        "adm_secondary": 4516.0,
+        "adm_total": 10621.0,
+        "ada_elementary": 5721.0,
+        "ada_secondary": 4230.0,
+        "ada_total": 9951.0,
+        "attendance_pct_elementary": 94.0,
+        "attendance_pct_secondary": 94.0
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick County",
+      "fiscal_year": "2022-23",
+      "source_file": "table8_2022-23.xlsx",
+      "metrics": {
+        "days_taught_elementary": 179,
+        "days_taught_secondary": 179,
+        "adm_elementary": 7899.0,
+        "adm_secondary": 5542.0,
+        "adm_total": 13441.0,
+        "ada_elementary": 7623.0,
+        "ada_secondary": 5224.0,
+        "ada_total": 12847.0,
+        "attendance_pct_elementary": 97.0,
+        "attendance_pct_secondary": 94.0
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun County",
+      "fiscal_year": "2022-23",
+      "source_file": "table8_2022-23.xlsx",
+      "metrics": {
+        "days_taught_elementary": 169,
+        "days_taught_secondary": 169,
+        "adm_elementary": 47408.0,
+        "adm_secondary": 33984.0,
+        "adm_total": 81392.0,
+        "ada_elementary": 44493.0,
+        "ada_secondary": 31637.0,
+        "ada_total": 76130.0,
+        "attendance_pct_elementary": 94.0,
+        "attendance_pct_secondary": 93.0
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah County",
+      "fiscal_year": "2022-23",
+      "source_file": "table8_2022-23.xlsx",
+      "metrics": {
+        "days_taught_elementary": 177,
+        "days_taught_secondary": 177,
+        "adm_elementary": 3182.0,
+        "adm_secondary": 2251.0,
+        "adm_total": 5433.0,
+        "ada_elementary": 2958.0,
+        "ada_secondary": 2075.0,
+        "ada_total": 5033.0,
+        "attendance_pct_elementary": 93.0,
+        "attendance_pct_secondary": 92.0
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren County",
+      "fiscal_year": "2022-23",
+      "source_file": "table8_2022-23.xlsx",
+      "metrics": {
+        "days_taught_elementary": 175,
+        "days_taught_secondary": 175,
+        "adm_elementary": 2887.0,
+        "adm_secondary": 2106.0,
+        "adm_total": 4993.0,
+        "ada_elementary": 2666.0,
+        "ada_secondary": 1898.0,
+        "ada_total": 4564.0,
+        "attendance_pct_elementary": 92.0,
+        "attendance_pct_secondary": 90.0
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke County",
+      "fiscal_year": "2023-24",
+      "source_file": "table8_2023-24.xlsx",
+      "metrics": {
+        "days_taught_elementary": 174,
+        "days_taught_secondary": 174,
+        "adm_elementary": 1043.0,
+        "adm_secondary": 842.0,
+        "adm_total": 1885.0,
+        "ada_elementary": 988.0,
+        "ada_secondary": 789.0,
+        "ada_total": 1777.0,
+        "attendance_pct_elementary": 95.0,
+        "attendance_pct_secondary": 94.0
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier County",
+      "fiscal_year": "2023-24",
+      "source_file": "table8_2023-24.xlsx",
+      "metrics": {
+        "days_taught_elementary": 176,
+        "days_taught_secondary": 176,
+        "adm_elementary": 6197.0,
+        "adm_secondary": 4461.0,
+        "adm_total": 10658.0,
+        "ada_elementary": 5848.0,
+        "ada_secondary": 4192.0,
+        "ada_total": 10040.0,
+        "attendance_pct_elementary": 94.0,
+        "attendance_pct_secondary": 94.0
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick County",
+      "fiscal_year": "2023-24",
+      "source_file": "table8_2023-24.xlsx",
+      "metrics": {
+        "days_taught_elementary": 171,
+        "days_taught_secondary": 171,
+        "adm_elementary": 8359.0,
+        "adm_secondary": 5762.0,
+        "adm_total": 14121.0,
+        "ada_elementary": 7884.0,
+        "ada_secondary": 5346.0,
+        "ada_total": 13230.0,
+        "attendance_pct_elementary": 94.0,
+        "attendance_pct_secondary": 93.0
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun County",
+      "fiscal_year": "2023-24",
+      "source_file": "table8_2023-24.xlsx",
+      "metrics": {
+        "days_taught_elementary": 176,
+        "days_taught_secondary": 176,
+        "adm_elementary": 47082.0,
+        "adm_secondary": 34192.0,
+        "adm_total": 81274.0,
+        "ada_elementary": 44609.0,
+        "ada_secondary": 32062.0,
+        "ada_total": 76671.0,
+        "attendance_pct_elementary": 95.0,
+        "attendance_pct_secondary": 94.0
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah County",
+      "fiscal_year": "2023-24",
+      "source_file": "table8_2023-24.xlsx",
+      "metrics": {
+        "days_taught_elementary": 174,
+        "days_taught_secondary": 174,
+        "adm_elementary": 3239.0,
+        "adm_secondary": 2256.0,
+        "adm_total": 5495.0,
+        "ada_elementary": 3041.0,
+        "ada_secondary": 2112.0,
+        "ada_total": 5153.0,
+        "attendance_pct_elementary": 94.0,
+        "attendance_pct_secondary": 94.0
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren County",
+      "fiscal_year": "2023-24",
+      "source_file": "table8_2023-24.xlsx",
+      "metrics": {
+        "days_taught_elementary": 172,
+        "days_taught_secondary": 172,
+        "adm_elementary": 2938.0,
+        "adm_secondary": 2046.0,
+        "adm_total": 4984.0,
+        "ada_elementary": 2736.0,
+        "ada_secondary": 1854.0,
+        "ada_total": 4590.0,
+        "attendance_pct_elementary": 93.0,
+        "attendance_pct_secondary": 91.0
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke County",
+      "fiscal_year": "2024-25",
+      "source_file": "table8_2024-25.xlsx",
+      "metrics": {
+        "days_taught_elementary": 167,
+        "days_taught_secondary": 167,
+        "adm_elementary": 1017.0,
+        "adm_secondary": 823.0,
+        "adm_total": 1840.0,
+        "ada_elementary": 961.0,
+        "ada_secondary": 770.0,
+        "ada_total": 1731.0,
+        "attendance_pct_elementary": 94.0,
+        "attendance_pct_secondary": 94.0
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier County",
+      "fiscal_year": "2024-25",
+      "source_file": "table8_2024-25.xlsx",
+      "metrics": {
+        "days_taught_elementary": 172,
+        "days_taught_secondary": 172,
+        "adm_elementary": 6204.0,
+        "adm_secondary": 4424.0,
+        "adm_total": 10628.0,
+        "ada_elementary": 5852.0,
+        "ada_secondary": 4155.0,
+        "ada_total": 10007.0,
+        "attendance_pct_elementary": 94.0,
+        "attendance_pct_secondary": 94.0
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick County",
+      "fiscal_year": "2024-25",
+      "source_file": "table8_2024-25.xlsx",
+      "metrics": {
+        "days_taught_elementary": 166,
+        "days_taught_secondary": 166,
+        "adm_elementary": 8595.0,
+        "adm_secondary": 5713.0,
+        "adm_total": 14308.0,
+        "ada_elementary": 8079.0,
+        "ada_secondary": 5362.0,
+        "ada_total": 13441.0,
+        "attendance_pct_elementary": 94.0,
+        "attendance_pct_secondary": 94.0
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun County",
+      "fiscal_year": "2024-25",
+      "source_file": "table8_2024-25.xlsx",
+      "metrics": {
+        "days_taught_elementary": 169,
+        "days_taught_secondary": 169,
+        "adm_elementary": 46633.0,
+        "adm_secondary": 34204.0,
+        "adm_total": 80837.0,
+        "ada_elementary": 44152.0,
+        "ada_secondary": 32044.0,
+        "ada_total": 76196.0,
+        "attendance_pct_elementary": 95.0,
+        "attendance_pct_secondary": 94.0
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah County",
+      "fiscal_year": "2024-25",
+      "source_file": "table8_2024-25.xlsx",
+      "metrics": {
+        "days_taught_elementary": 164,
+        "days_taught_secondary": 164,
+        "adm_elementary": 3270.0,
+        "adm_secondary": 2239.0,
+        "adm_total": 5509.0,
+        "ada_elementary": 3093.0,
+        "ada_secondary": 2111.0,
+        "ada_total": 5204.0,
+        "attendance_pct_elementary": 95.0,
+        "attendance_pct_secondary": 94.0
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren County",
+      "fiscal_year": "2024-25",
+      "source_file": "table8_2024-25.xlsx",
+      "metrics": {
+        "days_taught_elementary": 167,
+        "days_taught_secondary": 167,
+        "adm_elementary": 2919.0,
+        "adm_secondary": 1986.0,
+        "adm_total": 4905.0,
+        "ada_elementary": 2709.0,
+        "ada_secondary": 1802.0,
+        "ada_total": 4511.0,
+        "attendance_pct_elementary": 93.0,
+        "attendance_pct_secondary": 91.0
+      }
+    }
+  ],
+  "state_totals": [
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia State Total",
+      "fiscal_year": "2019-20",
+      "source_file": "table8_2019-20.xlsx",
+      "metrics": {
+        "days_taught_elementary": null,
+        "days_taught_secondary": null,
+        "adm_elementary": 769832.0,
+        "adm_secondary": 489849.0,
+        "adm_total": 1259681.0,
+        "ada_elementary": 734294.0,
+        "ada_secondary": 462995.0,
+        "ada_total": 1197289.0,
+        "attendance_pct_elementary": 95.3836681249935,
+        "attendance_pct_secondary": 94.5179024556547
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia State Total",
+      "fiscal_year": "2020-21",
+      "source_file": "table8_2020-21.xlsx",
+      "metrics": {
+        "days_taught_elementary": null,
+        "days_taught_secondary": null,
+        "adm_elementary": 727763.0,
+        "adm_secondary": 489509.0,
+        "adm_total": 1217272.0,
+        "ada_elementary": 698211.0,
+        "ada_secondary": 469301.0,
+        "ada_total": 1167512.0,
+        "attendance_pct_elementary": 95.93933739417915,
+        "attendance_pct_secondary": 95.87178172413581
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia State Total",
+      "fiscal_year": "2021-22",
+      "source_file": "table8_2021-22.xlsx",
+      "metrics": {
+        "days_taught_elementary": null,
+        "days_taught_secondary": null,
+        "adm_elementary": 725881.0,
+        "adm_secondary": 491630.0,
+        "adm_total": 1217511.0,
+        "ada_elementary": 680766.0,
+        "ada_secondary": 453847.0,
+        "ada_total": 1134613.0,
+        "attendance_pct_elementary": 93.78479392627717,
+        "attendance_pct_secondary": 92.31474889652787
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia State Total",
+      "fiscal_year": "2022-23",
+      "source_file": "table8_2022-23.xlsx",
+      "metrics": {
+        "days_taught_elementary": null,
+        "days_taught_secondary": null,
+        "adm_elementary": 730722.0,
+        "adm_secondary": 492692.0,
+        "adm_total": 1223414.0,
+        "ada_elementary": 684609.0,
+        "ada_secondary": 456028.0,
+        "ada_total": 1140637.0,
+        "attendance_pct_elementary": 93.6893921354496,
+        "attendance_pct_secondary": 92.55843407240224
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia State Total",
+      "fiscal_year": "2023-24",
+      "source_file": "table8_2023-24.xlsx",
+      "metrics": {
+        "days_taught_elementary": null,
+        "days_taught_secondary": null,
+        "adm_elementary": 732740.0,
+        "adm_secondary": 491477.0,
+        "adm_total": 1224217.0,
+        "ada_elementary": 690655.0,
+        "ada_secondary": 457407.0,
+        "ada_total": 1148062.0,
+        "attendance_pct_elementary": 94.25648934137621,
+        "attendance_pct_secondary": 93.0678343035381
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia State Total",
+      "fiscal_year": "2024-25",
+      "source_file": "table8_2024-25.xlsx",
+      "metrics": {
+        "days_taught_elementary": null,
+        "days_taught_secondary": null,
+        "adm_elementary": 731682.0,
+        "adm_secondary": 488914.0,
+        "adm_total": 1220596.0,
+        "ada_elementary": 691234.0,
+        "ada_secondary": 456193.0,
+        "ada_total": 1147427.0,
+        "attendance_pct_elementary": 94.47191539493933,
+        "attendance_pct_secondary": 93.30741193747775
+      }
+    }
+  ]
+}

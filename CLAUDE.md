@@ -2,11 +2,31 @@
 
 ## Project Overview
 
-This project audits Frederick County Public Schools (FCPS) in Virginia for over-administration, spending trends, and fiscal efficiency. The goal is to mirror public data locally, parse it into structured JSON format, and enable LLM-based inquiry.
+This project audits Frederick County Public Schools (FCPS) in Virginia for over-administration, spending trends, and fiscal efficiency. Public data has been mirrored locally, parsed into structured JSON format, and is ready for LLM-based inquiry and analysis.
 
 **Target District**: Frederick County Public Schools (Division Code: 069)
 **Peer Districts**: Clarke (043), Fauquier (061), Shenandoah (171), Warren (187), Loudoun (107)
-**Scope**: FY2020-FY2025 (5 fiscal years)
+**Scope**: FY2020-FY2025 (6 fiscal years)
+
+---
+
+## Current Data Status
+
+### Data Collection: COMPLETE
+
+| Source | Status | Files | Years |
+|--------|--------|-------|-------|
+| VDOE Tables 8, 15, 17, 18, 19 | Complete | 30+ Excel files | 2019-20 to 2024-25 |
+| Frederick County Budgets | Complete | 21 PDFs | FY2020-FY2026 |
+| FCPS School Budgets | Partial | FY23-FY26 complete | FY20-FY22 need FOIA |
+| FCPS CIP Documents | Complete | 6 PDFs | 2020-2029 |
+| APA Comparative Report | Complete | 1 Excel | FY2024 |
+| NCES Data | Complete | 7 JSON files | FY2022 |
+| VPAP Data | Complete | 2 JSON files | FY2024 |
+
+### Data Processing: COMPLETE
+
+All raw data has been parsed into structured JSON with full source references.
 
 ---
 
@@ -14,396 +34,426 @@ This project audits Frederick County Public Schools (FCPS) in Virginia for over-
 
 ```
 fredco-schools/
-├── ROADMAP.md              # Project roadmap and methodology
-├── CLAUDE.md               # This file - AI agent instructions
-├── requirements.txt        # Python dependencies
+├── CLAUDE.md                    # This file - AI agent instructions
+├── ROADMAP.md                   # Project roadmap and methodology
+├── requirements.txt             # Python dependencies
+├── scripts/
+│   └── download_data.py         # Data download script (supports --source vdoe/fcps/apa)
 ├── data/
-│   ├── raw/                # Original downloaded files
-│   │   ├── fcps/           # FCPS budget documents
-│   │   ├── vdoe/           # VDOE tables
-│   │   ├── apa/            # Auditor reports
-│   │   └── vpap/           # VPAP data
-│   ├── processed/          # Normalized JSON/CSV
-│   └── analysis/           # Results and dashboards
-├── scripts/                # Processing scripts
-└── schemas/                # JSON schema definitions
+│   ├── raw/                     # Original downloaded files (90+ files)
+│   │   ├── fcps/
+│   │   │   ├── budgets/         # FCPS budget PDFs (FY23-FY26)
+│   │   │   ├── acfr/            # Year-end financial reports
+│   │   │   └── cip/             # Capital Improvement Plans
+│   │   ├── fcva/
+│   │   │   └── budgets/         # County budget PDFs (FY2020-FY2026)
+│   │   ├── vdoe/
+│   │   │   ├── table-8/         # Enrollment (ADM) data
+│   │   │   ├── table-15/        # Per-pupil expenditures
+│   │   │   ├── table-17/        # Pupil-teacher ratios
+│   │   │   ├── table-18/        # Admin personnel positions
+│   │   │   └── table-19/        # Instructional positions/salaries
+│   │   ├── apa/                 # VA Auditor of Public Accounts
+│   │   ├── nces/                # National Center for Education Statistics
+│   │   └── vpap/                # Virginia Public Access Project
+│   ├── processed/               # Structured JSON files
+│   │   ├── vdoe/                # Parsed VDOE tables
+│   │   │   ├── table8_enrollment.json
+│   │   │   ├── table15_expenditures.json
+│   │   │   ├── table17_ratios.json
+│   │   │   ├── table18_admin_personnel.json
+│   │   │   └── table19_instructional.json
+│   │   ├── county_budget_schools.json  # County appropriations to schools
+│   │   ├── ratios.json          # Calculated audit metrics
+│   │   └── *.json               # Other processed data
+│   └── analysis/                # Analysis results (to be generated)
+└── schemas/                     # JSON schema definitions
 ```
 
 ---
 
-## Data Sources & Collection
+## Key Processed Data Files
 
-### 1. FCPS Budget Documents
+### 1. VDOE Table 8: Enrollment (`data/processed/vdoe/table8_enrollment.json`)
 
-**Source**: https://www.frederickcountyschoolsva.net/about/budget
-
-**Files to Download**:
-- Annual Approved Budget (FY2020-FY2026)
-- Annual Comprehensive Financial Report (ACFR) for each year
-- Monthly/Year-End Financial Reports
-
-**Download Command**:
-```bash
-python scripts/download_data.py --source fcps
-```
-
-**Storage**: `data/raw/fcps/budgets/` and `data/raw/fcps/acfr/`
-
-**Key Data Points**:
-- Total operating expenditures
-- Expenditures by function (instruction, administration, operations, transportation)
-- Revenue sources (state, local, federal)
-- Staffing counts by category
-
----
-
-### 2. VDOE Superintendent's Annual Report
-
-**Source**: https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report
-
-**Tables to Download**:
-
-| Table | Content | Format |
-|-------|---------|--------|
-| Table 3 | Enrollment (ADM) by division | XLSM |
-| Table 13 | Instructional staff counts and salaries | XLSM |
-| Table 15 | Per pupil expenditures by source | XLSM |
-
-**Years**: 2019-20, 2020-21, 2021-22, 2022-23, 2023-24
-
-**Download Command**:
-```bash
-python scripts/download_data.py --source vdoe
-```
-
-**Storage**: `data/raw/vdoe/table-{3,13,15}/`
-
-**Division Codes for Filtering**:
-- Frederick County: 069
-- Clarke County: 043
-- Fauquier County: 061
-- Shenandoah County: 171
-- Warren County: 187
-- Loudoun County: 107
-
----
-
-### 3. Virginia APA Comparative Report
-
-**Source**: https://www.apa.virginia.gov
-
-**Direct URL**: https://dlasprodpublic.blob.core.windows.net/apa/549A9D64-9A00-45D1-A88F-5FE9C1BFAD8E.xlsx
-
-**Target**: Exhibit C-6 (Education expenditures by category)
-
-**Download Command**:
-```bash
-python scripts/download_data.py --source apa
-```
-
-**Storage**: `data/raw/apa/comparative/`
-
----
-
-### 4. VPAP Instructional Spending
-
-**Source**: https://www.vpap.org/visuals/visual/back-to-school-spending-on-teaching-fy2024
-
-**Purpose**: Supplementary benchmark data and visualizations
-
-**Storage**: `data/raw/vpap/visuals/`
-
----
-
-## Data Processing Pipeline
-
-### Step 1: Download Raw Data
-
-```bash
-# Download all sources
-python scripts/download_data.py --all
-
-# Or download specific source
-python scripts/download_data.py --source fcps
-python scripts/download_data.py --source vdoe
-python scripts/download_data.py --source apa
-```
-
-### Step 2: Parse PDF Documents
-
-```bash
-# Extract tables from FCPS budget PDFs
-python scripts/parse_pdf.py --input data/raw/fcps/budgets/ --output data/processed/
-
-# Extract from ACFR documents
-python scripts/parse_pdf.py --input data/raw/fcps/acfr/ --output data/processed/
-```
-
-### Step 3: Parse Excel Files
-
-```bash
-# Process VDOE tables
-python scripts/parse_excel.py --source vdoe --output data/processed/
-
-# Process APA comparative report
-python scripts/parse_excel.py --source apa --output data/processed/
-```
-
-### Step 4: Calculate Metrics
-
-```bash
-# Generate all ratios and per-pupil metrics
-python scripts/calculate_metrics.py --output data/processed/ratios.json
-```
-
-### Step 5: Generate Dashboards
-
-```bash
-# Create Plotly interactive visualizations
-python scripts/generate_dashboards.py --output data/analysis/dashboards/
-```
-
----
-
-## JSON Schema Definitions
-
-### Enrollment Schema (`schemas/enrollment.json`)
+**Contains**: Average Daily Membership (ADM), Average Daily Attendance (ADA), attendance rates
+**Years**: 2019-20 to 2024-25
+**Divisions**: Frederick, Clarke, Fauquier, Shenandoah, Warren, Loudoun, State Total
 
 ```json
 {
-  "fiscal_year": "FY2024",
   "division_code": "069",
   "division_name": "Frederick County",
-  "enrollment": {
-    "adm": 14000,
-    "adm_elementary": 6000,
-    "adm_middle": 3500,
-    "adm_high": 4500
-  },
-  "source": "VDOE Table 3",
-  "source_url": "https://...",
-  "downloaded_date": "2025-01-28"
+  "fiscal_year": "2023-24",
+  "source_file": "table8_2023-24.xlsx",
+  "metrics": {
+    "adm_elementary": 8234,
+    "adm_secondary": 5887,
+    "adm_total": 14121,
+    "ada_total": 13456,
+    "attendance_pct_elementary": 94.8,
+    "attendance_pct_secondary": 93.2
+  }
 }
 ```
 
-### Expenditures Schema (`schemas/expenditures.json`)
+### 2. VDOE Table 15: Expenditures (`data/processed/vdoe/table15_expenditures.json`)
+
+**Contains**: Per-pupil spending by funding source (local, state, federal, sales tax)
+**Years**: 2019-20 to 2023-24
 
 ```json
 {
-  "fiscal_year": "FY2024",
   "division_code": "069",
   "division_name": "Frederick County",
-  "expenditures": {
-    "total": 260000000,
-    "instruction": 180000000,
-    "administration": 15000000,
-    "attendance_health": 5000000,
-    "pupil_transportation": 20000000,
-    "operations_maintenance": 25000000,
-    "facilities": 5000000,
-    "debt_service": 10000000,
-    "technology": 8000000
-  },
-  "revenues": {
-    "total": 260000000,
-    "state": 122000000,
-    "local": 122000000,
-    "federal": 16000000
-  },
-  "source": "FCPS ACFR",
-  "source_url": "https://...",
-  "downloaded_date": "2025-01-28"
+  "fiscal_year": "2023-24",
+  "source_file": "table15_2023-24.xlsm",
+  "metrics": {
+    "adm": 14269,
+    "local_amount": 105342642,
+    "local_per_pupil": 7383,
+    "state_amount": 85236783,
+    "state_per_pupil": 5973,
+    "federal_amount": 13693034,
+    "federal_per_pupil": 960,
+    "total_expenditures": 224518221,
+    "total_per_pupil": 15734
+  }
 }
 ```
 
-### Staffing Schema (`schemas/staffing.json`)
+### 3. VDOE Table 17: Pupil-Teacher Ratios (`data/processed/vdoe/table17_ratios.json`)
+
+**Contains**: Student-to-teacher ratios for K-7 and 8-12
+**Years**: 2019-20 to 2023-24
+
+### 4. VDOE Table 18: Admin Personnel (`data/processed/vdoe/table18_admin_personnel.json`)
+
+**Contains**: Administrative, service, and support staff positions by function
+**Categories**: Instruction, Admin/Health, Technology, Transportation, Operations, Facilities
 
 ```json
 {
-  "fiscal_year": "FY2024",
-  "division_code": "069",
-  "division_name": "Frederick County",
-  "staffing": {
-    "teachers": 950,
-    "administrators": 45,
-    "instructional_aides": 200,
-    "guidance_counselors": 35,
-    "librarians": 15,
-    "support_staff": 400,
-    "total_fte": 1645
-  },
-  "salaries": {
-    "avg_teacher_salary": 55000,
-    "avg_admin_salary": 95000
-  },
-  "source": "VDOE Table 13",
-  "source_url": "https://...",
-  "downloaded_date": "2025-01-28"
+  "metrics": {
+    "instruction": { "administrative": 15, "technical_clerical": 45, "support": 120 },
+    "admin_health": { "administrative": 25, "technical_clerical": 18 },
+    "technology": { "administrative": 3, "technical_clerical": 12 },
+    "transportation": { "administrative": 2, "trades_service": 85 },
+    "operations": { "administrative": 3, "trades_service": 95 },
+    "summary": { "administrative": 48, "total": 450 }
+  }
 }
 ```
 
-### Ratios Schema (`schemas/ratios.json`)
+### 5. VDOE Table 19: Instructional Staff (`data/processed/vdoe/table19_instructional.json`)
+
+**Contains**: Teacher/principal counts and average salaries
+**Includes**: Elementary/secondary principals, assistant principals, teachers, aides
+
+### 6. County Budget Schools (`data/processed/county_budget_schools.json`)
+
+**Contains**: Frederick County budget appropriations to schools
+**Years**: FY2020-FY2025
 
 ```json
 {
-  "fiscal_year": "FY2024",
-  "division_code": "069",
-  "division_name": "Frederick County",
-  "per_pupil": {
-    "total": 18571,
-    "instruction": 12857,
-    "administration": 1071,
-    "transportation": 1429,
-    "operations": 1786
+  "fiscal_year": "FY2025",
+  "source_file": "FY2025_adopted.pdf",
+  "total_county_budget_all_funds_net": 492899936,
+  "county_transfers": {
+    "to_school_operating": 109034028,
+    "to_school_debt": 20460000,
+    "to_school_capital": 4000000,
+    "total_county_to_schools": 133494028,
+    "pct_of_general_fund": 51.2
   },
-  "ratios": {
-    "admin_pct": 5.77,
-    "instruction_pct": 69.23,
-    "admin_to_student": 311,
-    "admin_to_teacher": 21.1,
-    "teacher_to_student": 14.7
-  },
-  "benchmarks": {
-    "state_avg_admin_pct": 5.2,
-    "state_avg_instruction_pct": 68.0,
-    "peer_avg_admin_pct": 5.5
-  },
-  "flags": {
-    "admin_above_state_avg": true,
-    "instruction_below_target": false
+  "school_funds": {
+    "total_school_funds": 281068060,
+    "pct_of_total_budget": 57.02
   }
 }
 ```
 
 ---
 
-## Key Calculations
+## Division Codes Reference
 
-### Per-Pupil Metrics
+| Division | Code | Type |
+|----------|------|------|
+| Frederick County | 069 | Target |
+| Clarke County | 043 | Peer |
+| Fauquier County | 061 | Peer |
+| Shenandoah County | 171 | Peer |
+| Warren County | 187 | Peer |
+| Loudoun County | 107 | Peer (larger) |
+| Virginia State Total | STATE | Benchmark |
+
+---
+
+## Key Metrics for Analysis
+
+### Frederick County Summary (FY2023-24)
+
+| Metric | Value | State Avg | Status |
+|--------|-------|-----------|--------|
+| Enrollment (ADM) | 14,121 | - | - |
+| Per-Pupil Spending | $15,734 | $17,636 | 10.8% below |
+| K-7 Pupil-Teacher Ratio | 13.8:1 | 12.3:1 | Higher (more students/teacher) |
+| 8-12 Pupil-Teacher Ratio | 12.3:1 | 12.3:1 | At state average |
+
+### County Budget Trends (FY2020-FY2025)
+
+| Metric | FY2020 | FY2025 | Change |
+|--------|--------|--------|--------|
+| Total County Budget | $343.4M | $492.9M | +43.5% |
+| Total to Schools | $208.8M | $281.1M | +34.6% |
+| School % of Budget | 60.8% | 57.0% | -3.8 pts |
+| County Transfer to Schools | $106.7M | $133.5M | +25.1% |
+
+---
+
+## How to Query This Data
+
+### Load Processed Data
 
 ```python
-# Total per pupil
-per_pupil_total = total_expenditures / adm
+import json
 
-# By category
-per_pupil_instruction = instruction_exp / adm
-per_pupil_admin = admin_exp / adm
-per_pupil_ops = operations_exp / adm
-per_pupil_transport = transportation_exp / adm
+# Load enrollment data
+with open('data/processed/vdoe/table8_enrollment.json') as f:
+    enrollment = json.load(f)
+
+# Filter for Frederick County
+fc_enrollment = [r for r in enrollment['data'] if r['division_code'] == '069']
+
+# Get specific year
+fy24 = next(r for r in fc_enrollment if r['fiscal_year'] == '2023-24')
+print(f"Frederick County ADM (2023-24): {fy24['metrics']['adm_total']}")
 ```
 
-### Efficiency Ratios
+### Common Analysis Queries
 
+1. **Compare per-pupil spending across peer districts**
 ```python
-# Spending ratios
-admin_ratio = admin_exp / total_exp * 100
-instruction_ratio = instruction_exp / total_exp * 100
-
-# Staff ratios
-admin_to_student = adm / admin_staff_count
-admin_to_teacher = teacher_count / admin_staff_count
-teacher_to_student = adm / teacher_count
+with open('data/processed/vdoe/table15_expenditures.json') as f:
+    data = json.load(f)
+fy24 = [r for r in data['data'] if r['fiscal_year'] == '2023-24']
+for r in sorted(fy24, key=lambda x: x['metrics']['total_per_pupil']):
+    print(f"{r['division_name']}: ${r['metrics']['total_per_pupil']:,}")
 ```
 
-### Trend Calculations
-
+2. **Track Frederick County spending growth**
 ```python
-# Year-over-year change
-yoy_change = (current_year - prior_year) / prior_year * 100
+fc_data = [r for r in data['data'] if r['division_code'] == '069']
+for r in sorted(fc_data, key=lambda x: x['fiscal_year']):
+    print(f"{r['fiscal_year']}: ${r['metrics']['total_per_pupil']:,}")
+```
 
-# Compound annual growth rate (CAGR)
-cagr = ((end_value / start_value) ** (1 / years)) - 1
-
-# Enrollment-adjusted growth
-adjusted_growth = budget_growth - enrollment_growth
+3. **Calculate admin staff ratios**
+```python
+with open('data/processed/vdoe/table18_admin_personnel.json') as f:
+    admin = json.load(f)
+with open('data/processed/vdoe/table8_enrollment.json') as f:
+    enrollment = json.load(f)
+# Join on division_code and fiscal_year to calculate admin-to-student ratios
 ```
 
 ---
 
-## Validation Rules
+## Source References
 
-1. **Cross-Reference**: Compare FCPS-reported numbers with VDOE tables
-2. **Threshold**: Flag discrepancies >5% for investigation
-3. **Completeness**: Ensure all 5 years have data for each metric
-4. **Consistency**: Verify category definitions match across sources
-5. **Footnotes**: Document any adjustments or restatements
+Every data point includes source references for auditability:
 
----
+- `source_file`: Original filename (e.g., "table15_2023-24.xlsm")
+- `source_url`: Official data source URL
+- `source_page` or `source_row`: Exact location in source document
+- `fiscal_year`: Fiscal year of the data
 
-## Red Flags to Identify
-
-| Indicator | Threshold | Action |
-|-----------|-----------|--------|
-| Admin ratio | >10% | Flag for review |
-| Admin growth > enrollment | >2x enrollment growth | Flag for review |
-| Instruction ratio | <60% | Flag for review |
-| Admin:student ratio | <1:150 | Flag for review |
-| Per-pupil admin | >$1,200 | Compare to peers |
+**Primary Source URLs**:
+- VDOE: https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report
+- Frederick County Budget: https://fcva.us/departments/finance/budget/budget-archives
+- FCPS Budget: https://www.frederickcountyschoolsva.net/about/budget
 
 ---
 
-## LLM Query Examples
+## Red Flags to Investigate
 
-When the data is processed, use these natural language queries:
-
-1. "What is Frederick County's administrative spending per student compared to the state average?"
-
-2. "How has the admin-to-student ratio changed from FY2020 to FY2024?"
-
-3. "Which peer district has the lowest administrative overhead?"
-
-4. "Is Frederick County's instruction ratio above or below 65%?"
-
-5. "Show the 5-year trend of total per-pupil spending for all comparison districts."
-
-6. "What percentage of Frederick County's budget goes to central administration vs. school-level administration?"
-
-7. "How does Frederick County's budget growth compare to its enrollment growth over 5 years?"
+| Indicator | Threshold | Current Status |
+|-----------|-----------|----------------|
+| Admin ratio | >10% | Check Table 18 data |
+| Admin growth > enrollment | >2x | Calculate from trends |
+| Instruction ratio | <60% | Check Table 15 data |
+| Per-pupil below state avg | >15% below | Currently 10.8% below |
+| School % of county budget declining | Year-over-year decline | Declined 3.8 pts since FY2020 |
 
 ---
 
-## Output Files
+## Data Gaps & Limitations
 
-After processing, the following files should be generated:
+### Gap 1: FCPS Detailed Budget Documents (FY2020-FY2022)
 
-| File | Description |
-|------|-------------|
-| `data/processed/enrollment.json` | ADM for all districts, all years |
-| `data/processed/expenditures.json` | Spending by category, all districts |
-| `data/processed/staffing.json` | Staff counts and salaries |
-| `data/processed/ratios.json` | Calculated metrics |
-| `data/analysis/trends.json` | Year-over-year analysis |
-| `data/analysis/benchmarks.json` | Peer comparisons |
-| `data/analysis/findings.json` | Audit conclusions |
-| `data/analysis/dashboards/*.html` | Plotly visualizations |
+**Issue**: Full FCPS annual budget documents for FY2020, FY2021, and FY2022 are not available on the current FCPS website or BoardDocs. These older documents predate when FCPS began uploading comprehensive budget PDFs to BoardDocs.
 
----
+**What We Have**:
+- FY2022: Year-End Financial Report only
+- FY2023-FY2026: Full approved budget documents with line-item detail
 
-## Troubleshooting
+**How We Covered It**:
+1. **VDOE Data (Primary)**: The VDOE Superintendent's Annual Report Tables 15, 18, and 19 contain the official audited expenditure and staffing data for all years (2019-20 through 2023-24). This is actually MORE reliable than school-produced budget documents because it's standardized state reporting.
+2. **County Budget Data**: Frederick County budget documents (all years FY2020-FY2026) show the transfers TO schools, providing the funding side of the equation.
+3. **Year-End Financial Reports**: Downloaded where available, which show actual expenditures vs. budgeted.
 
-### PDF Extraction Issues
-- Try `pdfplumber` first, fall back to `tabula-py`
-- For scanned PDFs, use OCR preprocessing
-- Manual entry may be needed for complex tables
-
-### Excel Parsing Issues
-- VDOE files are XLSM (macro-enabled) - use `openpyxl`
-- Some files have multiple sheets - process each relevant sheet
-- Watch for merged cells and hidden rows
-
-### Data Gaps
-- If a year is missing, note in findings
-- Use FOIA request template for detailed breakdowns
-- Check School Quality Profiles for supplementary data
+**To Remedy (if line-item detail needed)**:
+- Submit FOIA request to FCPS Finance Department for adopted budget documents FY2020-FY2022
+- Contact: https://www.frederickcountyschoolsva.net/about/contact-us
+- Request template: "Pursuant to the Virginia Freedom of Information Act, I request copies of the Adopted Annual Budget documents for Frederick County Public Schools for fiscal years 2020, 2021, and 2022."
 
 ---
 
-## Next Steps After Data Collection
+### Gap 2: VDOE 2024-25 Expenditure Data
 
-1. Run all download scripts to mirror data locally
-2. Parse PDFs and Excel files into JSON
-3. Calculate all metrics for 6 districts x 5 years
-4. Generate comparison dashboards
-5. Identify red flags and anomalies
-6. Draft findings report
-7. Prepare LLM query interface
+**Issue**: VDOE releases expenditure data (Tables 15, 17, 18, 19) approximately 6-12 months after the fiscal year ends. FY2024-25 expenditure data is not yet available.
+
+**What We Have**:
+- Table 8 (Enrollment): Available through 2024-25
+- Tables 15, 17, 18, 19: Available through 2023-24
+
+**How We Covered It**:
+- The audit scope (FY2020-FY2025) can use FY2024-25 enrollment data with FY2023-24 expenditure data for the most recent year
+- 5 full years of expenditure data (2019-20 through 2023-24) is sufficient for trend analysis
+
+**To Remedy**:
+- Check VDOE website quarterly: https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report
+- FY2024-25 expenditure tables typically released by December 2025
+
+---
+
+### Gap 3: State Average/Total Data Inconsistency
+
+**Issue**: Some VDOE tables include state totals, others only include division-level data. State averages must be calculated differently depending on the table.
+
+**What We Have**:
+- Table 8: State totals included
+- Table 15: State totals included
+- Table 17: State averages included
+- Tables 18, 19: State totals included (but labeled differently)
+
+**How We Covered It**:
+- Parsed state totals where available and included in JSON with `division_code: "STATE"` or `division_name: "State Total"`
+- For tables without explicit state averages, they can be calculated from division data
+
+---
+
+### Gap 4: Table 15 File Format Issues (Older Years)
+
+**Issue**: Some VDOE Table 15 files for FY2020-FY2022 were distributed as ZIP archives or had Excel format issues preventing direct parsing.
+
+**What We Have**:
+- `table15_2019-20.xlsm` and `table15_2019-20_new.xlsm` (re-downloaded)
+- `table15_2020-21.xlsm` and `table15_2020-21_new.xlsm` (re-downloaded)
+- `table15_2021-22.zip` (contains XLSM)
+- `table15_2022-23.zip` (contains XLSM)
+- `final-fy20-table-15.xlsm` through `final-fy23-table-15.xlsm` (final versions)
+
+**How We Covered It**:
+- Downloaded both original and "final" versions where available
+- ZIP files extracted to access XLSM contents
+- Parsing uses the `final-fy*` versions which are the corrected/final releases
+- All 5 years successfully parsed into `table15_expenditures.json`
+
+---
+
+### Gap 5: FCPS School-Level Budget Breakdown
+
+**Issue**: We have division-level (district-wide) data but not individual school budgets. This limits analysis of resource allocation across schools.
+
+**What We Have**:
+- Division-level totals for all metrics
+- No per-school breakdowns
+
+**How We Covered It**:
+- Division-level data is sufficient for the administrative overhead audit
+- School-level data is available in FCPS budget documents (FY23-FY26) if deeper analysis needed
+
+**To Remedy**:
+- FCPS approved budgets contain school-by-school allocations
+- VDOE School Quality Profiles have some school-level data: https://schoolquality.virginia.gov/
+
+---
+
+### Gap 6: Function-Level Expenditure Detail
+
+**Issue**: VDOE Table 15 provides expenditures by FUNDING SOURCE (local, state, federal) but not by FUNCTION (instruction, administration, operations). Function-level data requires different sources.
+
+**What We Have**:
+- Table 15: Funding source breakdown (local/state/federal per pupil)
+- Table 18: Administrative STAFFING counts (not dollars)
+- Table 19: Instructional STAFFING counts and salaries
+
+**How We Covered It**:
+1. **APA Comparative Report**: Contains expenditures by function category for all VA school divisions
+2. **NCES Data**: Contains expenditure breakdowns by function
+3. **FCPS Budget Documents**: FY23-FY26 budgets have detailed function breakdowns
+
+**Processed Files with Function Data**:
+- `data/processed/apa_data.json` - Function-level expenditures
+- `data/processed/ratios.json` - Calculated instruction/admin ratios
+
+---
+
+### Data Coverage Summary
+
+| Data Type | FY2020 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 |
+|-----------|:------:|:------:|:------:|:------:|:------:|:------:|
+| VDOE Enrollment (T8) | Y | Y | Y | Y | Y | Y |
+| VDOE Expenditures (T15) | Y | Y | Y | Y | Y | - |
+| VDOE Ratios (T17) | Y | Y | Y | Y | Y | - |
+| VDOE Admin Staff (T18) | Y | Y | Y | Y | Y | - |
+| VDOE Instructional (T19) | Y | Y | Y | Y | Y | - |
+| County Budget | Y | Y | Y | Y | Y | Y |
+| FCPS Full Budget | - | - | - | Y | Y | Y |
+| FCPS Year-End Report | - | - | Y | Y | Y | - |
+
+**Legend**: Y = Available, - = Not Available/Not Yet Released
+
+---
+
+## Scripts
+
+### Download Data
+```bash
+# Download VDOE tables (uses wget with proper headers)
+python scripts/download_data.py --source vdoe
+
+# Download all sources
+python scripts/download_data.py --all
+```
+
+### Re-process Data
+If you need to re-parse the raw data, the parsing logic used:
+- `openpyxl` for XLSX/XLSM files
+- `pdfplumber` for PDF extraction
+- Division filtering for the 6 target districts + state totals
+
+---
+
+## Next Steps for Analysis
+
+1. **Calculate Audit Ratios**: Generate admin-to-student, admin-to-teacher, instruction % ratios
+2. **Peer Comparison Dashboard**: Create visualizations comparing Frederick to peers
+3. **Trend Analysis**: 5-year CAGR for spending categories vs. enrollment
+4. **Red Flag Report**: Identify metrics that exceed warning thresholds
+5. **Findings Document**: Summarize audit conclusions with source citations
+
+---
+
+## File Counts
+
+| Location | Files | Size |
+|----------|-------|------|
+| data/raw/vdoe/ | 35 | ~5 MB |
+| data/raw/fcva/budgets/ | 21 | ~117 MB |
+| data/raw/fcps/ | 25 | ~250 MB |
+| data/processed/vdoe/ | 5 | ~165 KB |
+| data/processed/*.json | 15 | ~200 KB |
+| **Total** | ~100 | ~375 MB |

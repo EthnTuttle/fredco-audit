@@ -12,7 +12,9 @@ Usage:
 import argparse
 import json
 import os
+import subprocess
 import sys
+import zipfile
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
@@ -61,6 +63,48 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.5",
+    "Referer": "https://www.doe.virginia.gov/",
+}
+
+# VDOE Superintendent's Annual Report - Direct download URLs
+# These URLs are for the official VDOE data tables
+VDOE_TABLE_URLS = {
+    "table-8": {  # Number of Days Taught, ADA, ADM (Enrollment)
+        "2024-25": "https://www.doe.virginia.gov/home/showpublisheddocument/74065/639004519261330000",
+        "2023-24": "https://www.doe.virginia.gov/home/showpublisheddocument/57636/638629416751370000",
+        "2022-23": "https://www.doe.virginia.gov/home/showpublisheddocument/50076/638321092834370000",
+        "2021-22": "https://www.doe.virginia.gov/home/showpublisheddocument/19287/638042787714630000",
+        "2020-21": "https://www.doe.virginia.gov/home/showpublisheddocument/19301/638042791091270000",
+        "2019-20": "https://www.doe.virginia.gov/home/showpublisheddocument/19323/638042793435930000",
+    },
+    "table-15": {  # Per Pupil Expenditures (XLSM or ZIP)
+        "2023-24": "https://www.doe.virginia.gov/home/showpublisheddocument/60388/638809985334430000",
+        "2022-23": "https://www.doe.virginia.gov/home/showpublisheddocument/54399/638562109182270000",  # ZIP
+        "2021-22": "https://www.doe.virginia.gov/home/showpublisheddocument/44327/638180142004800000",  # ZIP
+        "2020-21": "https://www.doe.virginia.gov/home/showpublisheddocument/39444/638066222557500000",
+        "2019-20": "https://www.doe.virginia.gov/home/showpublisheddocument/42861/638133561521670000",
+    },
+    "table-17": {  # Pupil-to-Teacher Ratios
+        "2023-24": "https://www.doe.virginia.gov/home/showpublisheddocument/60288/638774664072470000",
+        "2022-23": "https://www.doe.virginia.gov/home/showpublisheddocument/54195/638503230223070000",
+        "2021-22": "https://www.doe.virginia.gov/home/showpublisheddocument/44373/638185291091570000",
+        "2020-21": "https://www.doe.virginia.gov/home/showpublisheddocument/19315/638042791125000000",
+        "2019-20": "https://www.doe.virginia.gov/home/showpublisheddocument/19341/638042793500770000",
+    },
+    "table-18": {  # Administrative, Service and Support Personnel Positions
+        "2023-24": "https://www.doe.virginia.gov/home/showpublisheddocument/60290/638774664079170000",
+        "2022-23": "https://www.doe.virginia.gov/home/showpublisheddocument/54227/638507556129670000",
+        "2021-22": "https://www.doe.virginia.gov/home/showpublisheddocument/44339/638180976020370000",
+        "2020-21": "https://www.doe.virginia.gov/home/showpublisheddocument/19317/638042791130170000",
+        "2019-20": "https://www.doe.virginia.gov/home/showpublisheddocument/19343/638042793508570000",
+    },
+    "table-19": {  # Total Instructional Positions and Average Annual Salaries
+        "2023-24": "https://www.doe.virginia.gov/home/showpublisheddocument/60304/638774758522230000",
+        "2022-23": "https://www.doe.virginia.gov/home/showpublisheddocument/54229/638507556136330000",
+        "2021-22": "https://www.doe.virginia.gov/home/showpublisheddocument/44341/638180976025200000",
+        "2020-21": "https://www.doe.virginia.gov/home/showpublisheddocument/19319/638042791136400000",
+        "2019-20": "https://www.doe.virginia.gov/home/showpublisheddocument/19345/638042793515470000",
+    },
 }
 
 
@@ -77,16 +121,25 @@ def ensure_dirs():
     (RAW_DIR / "fcps" / "monthly-reports").mkdir(parents=True, exist_ok=True)
     
     # Create subdirectories for VDOE tables
-    for table in ["table-3", "table-13", "table-15"]:
+    for table in ["table-8", "table-15", "table-17", "table-18", "table-19"]:
         (RAW_DIR / "vdoe" / table).mkdir(parents=True, exist_ok=True)
 
 
-def download_file(url: str, output_path: Path, description: str = "") -> bool:
+def download_file(url: str, output_path: Path, description: str = "", use_wget: bool = False) -> bool:
     """
     Download a file from URL to output_path.
     
     Returns True if successful, False otherwise.
+    
+    Args:
+        url: The URL to download from
+        output_path: Local path to save the file
+        description: Optional description for progress bar
+        use_wget: If True, use wget instead of requests (for sites with strict bot protection)
     """
+    if use_wget:
+        return download_file_wget(url, output_path, description)
+    
     try:
         response = requests.get(url, headers=HEADERS, stream=True, timeout=60)
         response.raise_for_status()
@@ -108,6 +161,41 @@ def download_file(url: str, output_path: Path, description: str = "") -> bool:
         
     except requests.RequestException as e:
         print(f"  Error downloading {url}: {e}")
+        return False
+
+
+def download_file_wget(url: str, output_path: Path, description: str = "") -> bool:
+    """
+    Download a file using wget (for sites with strict bot protection).
+    
+    The VDOE website blocks requests library but accepts wget with proper headers.
+    """
+    try:
+        cmd = [
+            "wget",
+            "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            "--referer=https://www.doe.virginia.gov/",
+            "-q",  # Quiet mode
+            "-O", str(output_path),
+            url
+        ]
+        
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+        
+        if result.returncode == 0 and output_path.exists() and output_path.stat().st_size > 0:
+            print(f"  Downloaded: {output_path.name}")
+            return True
+        else:
+            print(f"  Error downloading {url}: wget returned {result.returncode}")
+            if result.stderr:
+                print(f"    {result.stderr}")
+            return False
+            
+    except subprocess.TimeoutExpired:
+        print(f"  Error downloading {url}: timeout")
+        return False
+    except FileNotFoundError:
+        print("  Error: wget not found. Please install wget or download files manually.")
         return False
 
 
@@ -193,70 +281,71 @@ def download_vdoe():
     """
     Download VDOE Superintendent's Annual Report tables.
     
-    Downloads Tables 3, 13, and 15 for available years.
+    Downloads Tables 8, 15, 17, 18, and 19 for available years using direct URLs.
+    
+    Tables:
+    - Table 8: Number of Days Taught, ADA, ADM (Enrollment)
+    - Table 15: Per Pupil Expenditures
+    - Table 17: Pupil-to-Teacher Ratios
+    - Table 18: Administrative, Service and Support Personnel Positions
+    - Table 19: Total Instructional Positions and Average Annual Salaries
     """
     print("\n=== Downloading VDOE Superintendent's Annual Report ===")
     
     output_dir = SOURCES["vdoe"]["output_dir"]
-    base_url = SOURCES["vdoe"]["base_url"]
+    downloaded_files = []
     
-    # VDOE table URLs follow a pattern - we'll need to find actual URLs from the page
-    try:
-        response = requests.get(base_url, headers=HEADERS, timeout=30)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, "lxml")
+    table_descriptions = {
+        "table-8": "Number of Days Taught, ADA, ADM",
+        "table-15": "Per Pupil Expenditures",
+        "table-17": "Pupil-to-Teacher Ratios",
+        "table-18": "Administrative Personnel Positions",
+        "table-19": "Instructional Positions and Salaries",
+    }
+    
+    for table_name, years_data in VDOE_TABLE_URLS.items():
+        subdir = output_dir / table_name
+        subdir.mkdir(parents=True, exist_ok=True)
         
-        # Find Excel/XLSM file links
-        excel_links = []
-        for link in soup.find_all("a", href=True):
-            href = link["href"]
-            if any(ext in href.lower() for ext in [".xlsx", ".xlsm", ".xls"]):
-                full_url = urljoin(base_url, href)
-                text = link.get_text(strip=True)
-                excel_links.append({
-                    "url": full_url,
-                    "text": text,
-                    "filename": os.path.basename(urlparse(href).path),
-                })
+        print(f"\n  {table_name.upper()}: {table_descriptions.get(table_name, '')}")
         
-        print(f"  Found {len(excel_links)} Excel files")
-        
-        downloaded_files = []
-        for excel in excel_links:
-            filename = excel["filename"].lower()
-            text = excel["text"].lower()
-            
-            # Categorize by table number
-            if "table 3" in text or "table3" in filename or "table-3" in filename:
-                subdir = output_dir / "table-3"
-            elif "table 13" in text or "table13" in filename or "table-13" in filename:
-                subdir = output_dir / "table-13"
-            elif "table 15" in text or "table15" in filename or "table-15" in filename:
-                subdir = output_dir / "table-15"
+        for year, url in years_data.items():
+            # Determine file extension based on table and year
+            if table_name == "table-15":
+                if year in ["2022-23", "2021-22"]:
+                    ext = ".zip"
+                else:
+                    ext = ".xlsm"
+            elif table_name == "table-8":
+                ext = ".xlsx"
             else:
-                # Skip tables we don't need
-                continue
+                ext = ".xlsx"
             
-            subdir.mkdir(parents=True, exist_ok=True)
-            output_path = subdir / excel["filename"]
+            filename = f"{table_name.replace('-', '')}_{year}{ext}"
+            output_path = subdir / filename
             
-            if download_file(excel["url"], output_path, excel["text"][:50]):
+            if download_file(url, output_path, f"{table_name} {year}", use_wget=True):
                 downloaded_files.append({
-                    "filename": excel["filename"],
-                    "url": excel["url"],
-                    "description": excel["text"],
+                    "filename": filename,
+                    "url": url,
+                    "table": table_name,
+                    "year": year,
+                    "description": f"{table_descriptions.get(table_name, '')} - {year}",
                 })
-        
-        if not downloaded_files:
-            print("  No matching tables found automatically.")
-            print("  Please manually download Tables 3, 13, and 15 from:")
-            print(f"  {base_url}")
-        else:
-            save_metadata(output_dir, "vdoe", downloaded_files)
-            print(f"  Total downloaded: {len(downloaded_files)} files")
-        
-    except requests.RequestException as e:
-        print(f"  Error accessing VDOE page: {e}")
+    
+    # Extract any ZIP files
+    print("\n  Extracting ZIP files...")
+    for table_dir in (output_dir / "table-15").iterdir():
+        if table_dir.suffix.lower() == ".zip":
+            try:
+                with zipfile.ZipFile(table_dir, 'r') as zip_ref:
+                    zip_ref.extractall(output_dir / "table-15")
+                print(f"    Extracted: {table_dir.name}")
+            except zipfile.BadZipFile:
+                print(f"    Warning: Could not extract {table_dir.name}")
+    
+    save_metadata(output_dir, "vdoe", downloaded_files)
+    print(f"\n  Total downloaded: {len(downloaded_files)} files")
 
 
 def download_apa():

@@ -1,0 +1,676 @@
+{
+  "table": "Table 15",
+  "description": "Sources of Financial Support for Expenditures, Total Expenditures for Operations and Total Per Pupil Expenditures",
+  "source": "VDOE Superintendent's Annual Report",
+  "source_url": "https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report",
+  "generated_date": "2026-01-29T06:48:12.957388",
+  "data": [
+    {
+      "division_code": "043",
+      "division_name": "Clarke County",
+      "fiscal_year": "2019-20",
+      "source_file": "final-fy20-table-15.xlsm",
+      "metrics": {
+        "adm": 1916.62,
+        "local_amount": 14054815.370000001,
+        "local_per_pupil": 7333,
+        "state_amount": 6631214.890000001,
+        "state_per_pupil": 3460,
+        "sales_tax_amount": 2436947.1,
+        "sales_tax_per_pupil": 1271,
+        "federal_amount": 1241276.2600000002,
+        "federal_per_pupil": 648,
+        "total_expenditures": 24364253.62,
+        "total_per_pupil": 12712
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier County",
+      "fiscal_year": "2019-20",
+      "source_file": "final-fy20-table-15.xlsm",
+      "metrics": {
+        "adm": 11125.050000000001,
+        "local_amount": 95781293.30000001,
+        "local_per_pupil": 8610,
+        "state_amount": 35044955.25999999,
+        "state_per_pupil": 3150,
+        "sales_tax_amount": 13855188.0,
+        "sales_tax_per_pupil": 1245,
+        "federal_amount": 6019150.9399999995,
+        "federal_per_pupil": 541,
+        "total_expenditures": 150700587.5,
+        "total_per_pupil": 13546
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick County",
+      "fiscal_year": "2019-20",
+      "source_file": "final-fy20-table-15.xlsm",
+      "metrics": {
+        "adm": 13832.880000000001,
+        "local_amount": 89407433.53000002,
+        "local_per_pupil": 6463,
+        "state_amount": 67488511.21999998,
+        "state_per_pupil": 4879,
+        "sales_tax_amount": 16470768.08,
+        "sales_tax_per_pupil": 1191,
+        "federal_amount": 7726024.8,
+        "federal_per_pupil": 559,
+        "total_expenditures": 181092737.63,
+        "total_per_pupil": 13091
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun County",
+      "fiscal_year": "2019-20",
+      "source_file": "final-fy20-table-15.xlsm",
+      "metrics": {
+        "adm": 84080.89,
+        "local_amount": 938385408.8599999,
+        "local_per_pupil": 11161,
+        "state_amount": 293838909.14000005,
+        "state_per_pupil": 3495,
+        "sales_tax_amount": 91396911.04,
+        "sales_tax_per_pupil": 1087,
+        "federal_amount": 30588736.51,
+        "federal_per_pupil": 364,
+        "total_expenditures": 1354209965.55,
+        "total_per_pupil": 16106
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah County",
+      "fiscal_year": "2019-20",
+      "source_file": "final-fy20-table-15.xlsm",
+      "metrics": {
+        "adm": 5937.189999999999,
+        "local_amount": 30187637.620000012,
+        "local_per_pupil": 5084,
+        "state_amount": 30325045.66,
+        "state_per_pupil": 5108,
+        "sales_tax_amount": 7516569.31,
+        "sales_tax_per_pupil": 1266,
+        "federal_amount": 4106169.79,
+        "federal_per_pupil": 692,
+        "total_expenditures": 72135422.38000001,
+        "total_per_pupil": 12150
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren County",
+      "fiscal_year": "2019-20",
+      "source_file": "final-fy20-table-15.xlsm",
+      "metrics": {
+        "adm": 5355.72,
+        "local_amount": 26300296.28,
+        "local_per_pupil": 4911,
+        "state_amount": 23156859.150000002,
+        "state_per_pupil": 4324,
+        "sales_tax_amount": 7118939.36,
+        "sales_tax_per_pupil": 1329,
+        "federal_amount": 4319221.839999999,
+        "federal_per_pupil": 806,
+        "total_expenditures": 60895316.63,
+        "total_per_pupil": 11370
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke County",
+      "fiscal_year": "2020-21",
+      "source_file": "final-fy21-table-15.xlsm",
+      "metrics": {
+        "adm": 1741.95,
+        "local_amount": 12343282.709999997,
+        "local_per_pupil": 7086,
+        "state_amount": 6479411.080000001,
+        "state_per_pupil": 3720,
+        "sales_tax_amount": 2758642.1,
+        "sales_tax_per_pupil": 1584,
+        "federal_amount": 1948285.8800000001,
+        "federal_per_pupil": 1118,
+        "total_expenditures": 23529621.77,
+        "total_per_pupil": 13508
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier County",
+      "fiscal_year": "2020-21",
+      "source_file": "final-fy21-table-15.xlsm",
+      "metrics": {
+        "adm": 10281.470000000001,
+        "local_amount": 87770036.28,
+        "local_per_pupil": 8537,
+        "state_amount": 38916674.95999999,
+        "state_per_pupil": 3785,
+        "sales_tax_amount": 15120335.44,
+        "sales_tax_per_pupil": 1471,
+        "federal_amount": 12371102.210000003,
+        "federal_per_pupil": 1203,
+        "total_expenditures": 154178148.89,
+        "total_per_pupil": 14996
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick County",
+      "fiscal_year": "2020-21",
+      "source_file": "final-fy21-table-15.xlsm",
+      "metrics": {
+        "adm": 13239.0,
+        "local_amount": 91039709.67999999,
+        "local_per_pupil": 6877,
+        "state_amount": 67512642.04,
+        "state_per_pupil": 5100,
+        "sales_tax_amount": 18155437.47,
+        "sales_tax_per_pupil": 1371,
+        "federal_amount": 11469562.34,
+        "federal_per_pupil": 866,
+        "total_expenditures": 188177351.53,
+        "total_per_pupil": 14214
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun County",
+      "fiscal_year": "2020-21",
+      "source_file": "final-fy21-table-15.xlsm",
+      "metrics": {
+        "adm": 81444.15,
+        "local_amount": 944970654.58,
+        "local_per_pupil": 11603,
+        "state_amount": 300285439.78,
+        "state_per_pupil": 3687,
+        "sales_tax_amount": 102936837.45,
+        "sales_tax_per_pupil": 1264,
+        "federal_amount": 65546694.91,
+        "federal_per_pupil": 805,
+        "total_expenditures": 1413739626.72,
+        "total_per_pupil": 17358
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah County",
+      "fiscal_year": "2020-21",
+      "source_file": "final-fy21-table-15.xlsm",
+      "metrics": {
+        "adm": 5738.379999999999,
+        "local_amount": 26626126.35,
+        "local_per_pupil": 4640,
+        "state_amount": 31479624.39,
+        "state_per_pupil": 5486,
+        "sales_tax_amount": 8172660.36,
+        "sales_tax_per_pupil": 1424,
+        "federal_amount": 6800249.99,
+        "federal_per_pupil": 1185,
+        "total_expenditures": 73078661.09,
+        "total_per_pupil": 12735
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren County",
+      "fiscal_year": "2020-21",
+      "source_file": "final-fy21-table-15.xlsm",
+      "metrics": {
+        "adm": 5135.43,
+        "local_amount": 23994191.5,
+        "local_per_pupil": 4672,
+        "state_amount": 24228135.21000001,
+        "state_per_pupil": 4718,
+        "sales_tax_amount": 7745490.52,
+        "sales_tax_per_pupil": 1508,
+        "federal_amount": 8514093.169999998,
+        "federal_per_pupil": 1658,
+        "total_expenditures": 64481910.400000006,
+        "total_per_pupil": 12556
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke County",
+      "fiscal_year": "2021-22",
+      "source_file": "final-fy22-table-15.xlsm",
+      "metrics": {
+        "adm": 1845.84,
+        "local_amount": 13379853.590000002,
+        "local_per_pupil": 7249,
+        "state_amount": 6683016.22,
+        "state_per_pupil": 3621,
+        "sales_tax_amount": 3128236.5,
+        "sales_tax_per_pupil": 1695,
+        "federal_amount": 2395523.67,
+        "federal_per_pupil": 1298,
+        "total_expenditures": 25586629.98,
+        "total_per_pupil": 13862
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier County",
+      "fiscal_year": "2021-22",
+      "source_file": "final-fy22-table-15.xlsm",
+      "metrics": {
+        "adm": 10818.16,
+        "local_amount": 101925956.06000002,
+        "local_per_pupil": 9422,
+        "state_amount": 37925539.989999995,
+        "state_per_pupil": 3506,
+        "sales_tax_amount": 17833822.32,
+        "sales_tax_per_pupil": 1649,
+        "federal_amount": 14087455.21,
+        "federal_per_pupil": 1302,
+        "total_expenditures": 171772773.58,
+        "total_per_pupil": 15878
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick County",
+      "fiscal_year": "2021-22",
+      "source_file": "final-fy22-table-15.xlsm",
+      "metrics": {
+        "adm": 13877.54,
+        "local_amount": 90827789.32,
+        "local_per_pupil": 6545,
+        "state_amount": 68239051.14999999,
+        "state_per_pupil": 4917,
+        "sales_tax_amount": 21777708.2,
+        "sales_tax_per_pupil": 1569,
+        "federal_amount": 18060810.03,
+        "federal_per_pupil": 1301,
+        "total_expenditures": 198905358.7,
+        "total_per_pupil": 14333
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun County",
+      "fiscal_year": "2021-22",
+      "source_file": "final-fy22-table-15.xlsm",
+      "metrics": {
+        "adm": 82120.43000000001,
+        "local_amount": 1038528839.25,
+        "local_per_pupil": 12646,
+        "state_amount": 302740164.5299999,
+        "state_per_pupil": 3687,
+        "sales_tax_amount": 119674958.98,
+        "sales_tax_per_pupil": 1457,
+        "federal_amount": 80250293.01999998,
+        "federal_per_pupil": 977,
+        "total_expenditures": 1541194255.78,
+        "total_per_pupil": 18767
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah County",
+      "fiscal_year": "2021-22",
+      "source_file": "final-fy22-table-15.xlsm",
+      "metrics": {
+        "adm": 5620.4,
+        "local_amount": 28281095.14999999,
+        "local_per_pupil": 5032,
+        "state_amount": 32030934.63,
+        "state_per_pupil": 5699,
+        "sales_tax_amount": 9559268.22,
+        "sales_tax_per_pupil": 1701,
+        "federal_amount": 10103100.9,
+        "federal_per_pupil": 1798,
+        "total_expenditures": 79974398.89999999,
+        "total_per_pupil": 14229
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren County",
+      "fiscal_year": "2021-22",
+      "source_file": "final-fy22-table-15.xlsm",
+      "metrics": {
+        "adm": 5131.110000000001,
+        "local_amount": 26987827.309999995,
+        "local_per_pupil": 5260,
+        "state_amount": 24319440.260000005,
+        "state_per_pupil": 4740,
+        "sales_tax_amount": 9096462.8,
+        "sales_tax_per_pupil": 1773,
+        "federal_amount": 8792209.959999999,
+        "federal_per_pupil": 1714,
+        "total_expenditures": 69195940.33,
+        "total_per_pupil": 13486
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke County",
+      "fiscal_year": "2022-23",
+      "source_file": "final-fy23-table-15.xlsm",
+      "metrics": {
+        "adm": 1896.02,
+        "local_amount": 15365524.94,
+        "local_per_pupil": 8104,
+        "state_amount": 7199121.48,
+        "state_per_pupil": 3797,
+        "sales_tax_amount": 2981953.52,
+        "sales_tax_per_pupil": 1573,
+        "federal_amount": 2014893.6700000006,
+        "federal_per_pupil": 1063,
+        "total_expenditures": 27561493.61,
+        "total_per_pupil": 14536
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier County",
+      "fiscal_year": "2022-23",
+      "source_file": "final-fy23-table-15.xlsm",
+      "metrics": {
+        "adm": 10765.339999999998,
+        "local_amount": 100869851.44,
+        "local_per_pupil": 9370,
+        "state_amount": 44426110.17,
+        "state_per_pupil": 4127,
+        "sales_tax_amount": 16772559.31,
+        "sales_tax_per_pupil": 1558,
+        "federal_amount": 13195545.609999998,
+        "federal_per_pupil": 1226,
+        "total_expenditures": 175264066.53,
+        "total_per_pupil": 16280
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick County",
+      "fiscal_year": "2022-23",
+      "source_file": "final-fy23-table-15.xlsm",
+      "metrics": {
+        "adm": 13566.730000000001,
+        "local_amount": 101280022.86999997,
+        "local_per_pupil": 7465,
+        "state_amount": 73842429.60000001,
+        "state_per_pupil": 5443,
+        "sales_tax_amount": 20785299.5,
+        "sales_tax_per_pupil": 1532,
+        "federal_amount": 14395929.350000001,
+        "federal_per_pupil": 1061,
+        "total_expenditures": 210303681.32,
+        "total_per_pupil": 15501
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun County",
+      "fiscal_year": "2022-23",
+      "source_file": "final-fy23-table-15.xlsm",
+      "metrics": {
+        "adm": 82544.74,
+        "local_amount": 1146083345.4699998,
+        "local_per_pupil": 13884,
+        "state_amount": 319776791.41,
+        "state_per_pupil": 3874,
+        "sales_tax_amount": 118779687.68,
+        "sales_tax_per_pupil": 1439,
+        "federal_amount": 49037061.52,
+        "federal_per_pupil": 594,
+        "total_expenditures": 1633676886.08,
+        "total_per_pupil": 19791
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah County",
+      "fiscal_year": "2022-23",
+      "source_file": "final-fy23-table-15.xlsm",
+      "metrics": {
+        "adm": 5601.65,
+        "local_amount": 35111717.41,
+        "local_per_pupil": 6268,
+        "state_amount": 33344102.92,
+        "state_per_pupil": 5953,
+        "sales_tax_amount": 8875963.78,
+        "sales_tax_per_pupil": 1585,
+        "federal_amount": 10247808.019999998,
+        "federal_per_pupil": 1829,
+        "total_expenditures": 87579592.13,
+        "total_per_pupil": 15635
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren County",
+      "fiscal_year": "2022-23",
+      "source_file": "final-fy23-table-15.xlsm",
+      "metrics": {
+        "adm": 5152.98,
+        "local_amount": 30705318.64999999,
+        "local_per_pupil": 5959,
+        "state_amount": 27829831.490000002,
+        "state_per_pupil": 5401,
+        "sales_tax_amount": 8537761.06,
+        "sales_tax_per_pupil": 1657,
+        "federal_amount": 5920743.62,
+        "federal_per_pupil": 1149,
+        "total_expenditures": 72993654.82,
+        "total_per_pupil": 14165
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke County",
+      "fiscal_year": "2023-24",
+      "source_file": "table15_2023-24.xlsm",
+      "metrics": {
+        "adm": 1920.9599999999998,
+        "local_amount": 16096516.72,
+        "local_per_pupil": 8379,
+        "state_amount": 8171242.77,
+        "state_per_pupil": 4254,
+        "sales_tax_amount": 2907973.28,
+        "sales_tax_per_pupil": 1514,
+        "federal_amount": 1955318.4300000002,
+        "federal_per_pupil": 1018,
+        "total_expenditures": 29131051.2,
+        "total_per_pupil": 15165
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier County",
+      "fiscal_year": "2023-24",
+      "source_file": "table15_2023-24.xlsm",
+      "metrics": {
+        "adm": 10805.279999999999,
+        "local_amount": 98445972.27999999,
+        "local_per_pupil": 9111,
+        "state_amount": 50142788.81000001,
+        "state_per_pupil": 4641,
+        "sales_tax_amount": 16230711.24,
+        "sales_tax_per_pupil": 1502,
+        "federal_amount": 11861417.790000001,
+        "federal_per_pupil": 1098,
+        "total_expenditures": 176680890.12,
+        "total_per_pupil": 16351
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick County",
+      "fiscal_year": "2023-24",
+      "source_file": "table15_2023-24.xlsm",
+      "metrics": {
+        "adm": 14269.210000000001,
+        "local_amount": 105342642.46000002,
+        "local_per_pupil": 7383,
+        "state_amount": 85236783.75999999,
+        "state_per_pupil": 5973,
+        "sales_tax_amount": 20245760.72,
+        "sales_tax_per_pupil": 1419,
+        "federal_amount": 13693034.86,
+        "federal_per_pupil": 960,
+        "total_expenditures": 224518221.8,
+        "total_per_pupil": 15734
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun County",
+      "fiscal_year": "2023-24",
+      "source_file": "table15_2023-24.xlsm",
+      "metrics": {
+        "adm": 82439.12999999999,
+        "local_amount": 1205785797.7200003,
+        "local_per_pupil": 14626,
+        "state_amount": 388687169.7099998,
+        "state_per_pupil": 4715,
+        "sales_tax_amount": 110131367.5,
+        "sales_tax_per_pupil": 1336,
+        "federal_amount": 41696474.3,
+        "federal_per_pupil": 506,
+        "total_expenditures": 1746300809.23,
+        "total_per_pupil": 21183
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah County",
+      "fiscal_year": "2023-24",
+      "source_file": "table15_2023-24.xlsm",
+      "metrics": {
+        "adm": 5655.0199999999995,
+        "local_amount": 32812512.33,
+        "local_per_pupil": 5802,
+        "state_amount": 38215257.63,
+        "state_per_pupil": 6758,
+        "sales_tax_amount": 8713701.38,
+        "sales_tax_per_pupil": 1541,
+        "federal_amount": 11194554.02,
+        "federal_per_pupil": 1980,
+        "total_expenditures": 90936025.36,
+        "total_per_pupil": 16081
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren County",
+      "fiscal_year": "2023-24",
+      "source_file": "table15_2023-24.xlsm",
+      "metrics": {
+        "adm": 5107.370000000001,
+        "local_amount": 29942674.739999995,
+        "local_per_pupil": 5863,
+        "state_amount": 29004671.25,
+        "state_per_pupil": 5679,
+        "sales_tax_amount": 8236772.16,
+        "sales_tax_per_pupil": 1613,
+        "federal_amount": 9639194.33,
+        "federal_per_pupil": 1887,
+        "total_expenditures": 76823312.47999999,
+        "total_per_pupil": 15042
+      }
+    }
+  ],
+  "state_totals": [
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia State Total",
+      "fiscal_year": "2019-20",
+      "source_file": "final-fy20-table-15.xlsm",
+      "metrics": {
+        "adm": 1290985.7499999995,
+        "local_amount": 8740047836.459997,
+        "local_per_pupil": 6770,
+        "state_amount": 5729381568.200001,
+        "state_per_pupil": 4438,
+        "sales_tax_amount": 1504448202.8499994,
+        "sales_tax_per_pupil": 1165,
+        "federal_amount": 1119885697.8300002,
+        "federal_per_pupil": 867,
+        "total_expenditures": 17093763305.34,
+        "total_per_pupil": 13241
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia State Total",
+      "fiscal_year": "2020-21",
+      "source_file": "final-fy21-table-15.xlsm",
+      "metrics": {
+        "adm": 1243806.2400000002,
+        "local_amount": 8294619561.56,
+        "local_per_pupil": 6669,
+        "state_amount": 6042696382.040005,
+        "state_per_pupil": 4858,
+        "sales_tax_amount": 1650161513.4699993,
+        "sales_tax_per_pupil": 1327,
+        "federal_amount": 1681827684.7599995,
+        "federal_per_pupil": 1352,
+        "total_expenditures": 17669305141.83,
+        "total_per_pupil": 14206
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia State Total",
+      "fiscal_year": "2021-22",
+      "source_file": "final-fy22-table-15.xlsm",
+      "metrics": {
+        "adm": 1248043.93,
+        "local_amount": 8923402753.489996,
+        "local_per_pupil": 7150,
+        "state_amount": 6163377290.310001,
+        "state_per_pupil": 4938,
+        "sales_tax_amount": 1892028509.2100003,
+        "sales_tax_per_pupil": 1516,
+        "federal_amount": 2416779370.71,
+        "federal_per_pupil": 1936,
+        "total_expenditures": 19395587923.719997,
+        "total_per_pupil": 15541
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia State Total",
+      "fiscal_year": "2022-23",
+      "source_file": "final-fy23-table-15.xlsm",
+      "metrics": {
+        "adm": 1256880.2700000005,
+        "local_amount": 9806484108.770006,
+        "local_per_pupil": 7802,
+        "state_amount": 6878316988.26,
+        "state_per_pupil": 5473,
+        "sales_tax_amount": 1864176195.3199997,
+        "sales_tax_per_pupil": 1483,
+        "federal_amount": 2410452109.49,
+        "federal_per_pupil": 1918,
+        "total_expenditures": 20959429401.839993,
+        "total_per_pupil": 16676
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia State Total",
+      "fiscal_year": "2023-24",
+      "source_file": "table15_2023-24.xlsm",
+      "metrics": {
+        "adm": 1257959.93,
+        "local_amount": 10570240243.459993,
+        "local_per_pupil": 8403,
+        "state_amount": 7664513386.829998,
+        "state_per_pupil": 6093,
+        "sales_tax_amount": 1737049862.2300005,
+        "sales_tax_per_pupil": 1381,
+        "federal_amount": 2213212558.4899983,
+        "federal_per_pupil": 1759,
+        "total_expenditures": 22185016051.01,
+        "total_per_pupil": 17636
+      }
+    }
+  ]
+}

@@ -1,0 +1,1802 @@
+{
+  "table": "Table 18",
+  "description": "Administrative, Service and Support Personnel Positions by Function",
+  "source": "VDOE Superintendent's Annual Report",
+  "source_url": "https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report",
+  "generated_date": "2026-01-29T06:47:32.331537",
+  "columns": {
+    "instruction": [
+      "administrative",
+      "technical_clerical",
+      "support",
+      "other_professional"
+    ],
+    "admin_health": [
+      "administrative",
+      "technical_clerical",
+      "other_professional"
+    ],
+    "technology": [
+      "administrative",
+      "technical_clerical",
+      "instructional_support"
+    ],
+    "transportation": [
+      "administrative",
+      "technical_clerical",
+      "other_professional",
+      "trades_service"
+    ],
+    "operations": [
+      "administrative",
+      "technical_clerical",
+      "other_professional",
+      "trades_service"
+    ],
+    "facilities": [
+      "administrative",
+      "technical_clerical",
+      "other_professional"
+    ],
+    "summary": [
+      "administrative",
+      "technical_clerical",
+      "instructional_support",
+      "other_professional",
+      "trades_service",
+      "total"
+    ]
+  },
+  "data": [
+    {
+      "division_code": "043",
+      "division_name": "Clarke",
+      "fiscal_year": "FY2020",
+      "source_file": "table18_2019-20.xlsx",
+      "source_row": 28,
+      "metrics": {
+        "instruction": {
+          "administrative": 3.0,
+          "technical_clerical": 11.93,
+          "support": 1.87,
+          "other_professional": 0.6
+        },
+        "admin_health": {
+          "administrative": 8.8,
+          "technical_clerical": 3.0500000000000003,
+          "other_professional": 4.66
+        },
+        "technology": {
+          "administrative": 1.0,
+          "technical_clerical": 6.73,
+          "instructional_support": 0.0
+        },
+        "transportation": {
+          "administrative": 0.6,
+          "technical_clerical": 2.0,
+          "other_professional": 0.0,
+          "trades_service": 33.4
+        },
+        "operations": {
+          "administrative": 0.5,
+          "technical_clerical": 4.27,
+          "other_professional": 0.0,
+          "trades_service": 3.12
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.0,
+          "other_professional": 0.0
+        },
+        "summary": {
+          "administrative": 13.9,
+          "technical_clerical": 27.98,
+          "instructional_support": 1.87,
+          "other_professional": 5.26,
+          "trades_service": 36.519999999999996,
+          "total": 85.53
+        }
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier",
+      "fiscal_year": "FY2020",
+      "source_file": "table18_2019-20.xlsx",
+      "source_row": 36,
+      "metrics": {
+        "instruction": {
+          "administrative": 18.0,
+          "technical_clerical": 91.54999999999998,
+          "support": 1.08,
+          "other_professional": 4.75
+        },
+        "admin_health": {
+          "administrative": 12.0,
+          "technical_clerical": 10.0,
+          "other_professional": 58.75
+        },
+        "technology": {
+          "administrative": 5.0,
+          "technical_clerical": 12.0,
+          "instructional_support": 0.0
+        },
+        "transportation": {
+          "administrative": 1.0,
+          "technical_clerical": 7.0,
+          "other_professional": 2.0,
+          "trades_service": 192.75
+        },
+        "operations": {
+          "administrative": 1.0,
+          "technical_clerical": 2.25,
+          "other_professional": 2.0,
+          "trades_service": 117.0
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.0,
+          "other_professional": 0.0
+        },
+        "summary": {
+          "administrative": 37.0,
+          "technical_clerical": 122.79999999999998,
+          "instructional_support": 1.08,
+          "other_professional": 67.5,
+          "trades_service": 309.75,
+          "total": 538.13
+        }
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick",
+      "fiscal_year": "FY2020",
+      "source_file": "table18_2019-20.xlsx",
+      "source_row": 40,
+      "metrics": {
+        "instruction": {
+          "administrative": 8.0,
+          "technical_clerical": 109.55000000000001,
+          "support": 54.06,
+          "other_professional": 11.52
+        },
+        "admin_health": {
+          "administrative": 12.0,
+          "technical_clerical": 29.29,
+          "other_professional": 35.5
+        },
+        "technology": {
+          "administrative": 1.0,
+          "technical_clerical": 34.75,
+          "instructional_support": 12.11
+        },
+        "transportation": {
+          "administrative": 1.24,
+          "technical_clerical": 41.76,
+          "other_professional": 1.0,
+          "trades_service": 195.22
+        },
+        "operations": {
+          "administrative": 1.0,
+          "technical_clerical": 3.64,
+          "other_professional": 5.0,
+          "trades_service": 119.13
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.37,
+          "other_professional": 1.5
+        },
+        "summary": {
+          "administrative": 23.24,
+          "technical_clerical": 219.35999999999999,
+          "instructional_support": 66.17,
+          "other_professional": 54.519999999999996,
+          "trades_service": 314.35,
+          "total": 677.64
+        }
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun",
+      "fiscal_year": "FY2020",
+      "source_file": "table18_2019-20.xlsx",
+      "source_row": 59,
+      "metrics": {
+        "instruction": {
+          "administrative": 130.7,
+          "technical_clerical": 838.0099999999999,
+          "support": 65.24000000000001,
+          "other_professional": 55.00000000000001
+        },
+        "admin_health": {
+          "administrative": 78.1,
+          "technical_clerical": 115.19999999999999,
+          "other_professional": 248.57999999999998
+        },
+        "technology": {
+          "administrative": 25.0,
+          "technical_clerical": 95.5,
+          "instructional_support": 0.0
+        },
+        "transportation": {
+          "administrative": 10.99,
+          "technical_clerical": 52.71,
+          "other_professional": 22.900000000000002,
+          "trades_service": 875.9100000000001
+        },
+        "operations": {
+          "administrative": 14.99,
+          "technical_clerical": 34.69,
+          "other_professional": 104.78,
+          "trades_service": 1006.25
+        },
+        "facilities": {
+          "administrative": 11.02,
+          "technical_clerical": 3.92,
+          "other_professional": 15.57
+        },
+        "summary": {
+          "administrative": 270.79999999999995,
+          "technical_clerical": 1140.03,
+          "instructional_support": 65.24000000000001,
+          "other_professional": 446.83,
+          "trades_service": 1882.16,
+          "total": 3805.06
+        }
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah",
+      "fiscal_year": "FY2020",
+      "source_file": "table18_2019-20.xlsx",
+      "source_row": 88,
+      "metrics": {
+        "instruction": {
+          "administrative": 10.0,
+          "technical_clerical": 26.11,
+          "support": 3.0,
+          "other_professional": 4.0
+        },
+        "admin_health": {
+          "administrative": 12.0,
+          "technical_clerical": 9.0,
+          "other_professional": 23.15
+        },
+        "technology": {
+          "administrative": 2.0,
+          "technical_clerical": 6.0,
+          "instructional_support": 6.0
+        },
+        "transportation": {
+          "administrative": 1.0,
+          "technical_clerical": 1.5,
+          "other_professional": 0.0,
+          "trades_service": 113.7
+        },
+        "operations": {
+          "administrative": 1.0,
+          "technical_clerical": 0.5,
+          "other_professional": 0.0,
+          "trades_service": 52.5
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.0,
+          "other_professional": 0.0
+        },
+        "summary": {
+          "administrative": 26.0,
+          "technical_clerical": 43.11,
+          "instructional_support": 9.0,
+          "other_professional": 27.15,
+          "trades_service": 166.2,
+          "total": 271.46
+        }
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren",
+      "fiscal_year": "FY2020",
+      "source_file": "table18_2019-20.xlsx",
+      "source_row": 96,
+      "metrics": {
+        "instruction": {
+          "administrative": 0.0,
+          "technical_clerical": 42.730000000000004,
+          "support": 11.0,
+          "other_professional": 2.0
+        },
+        "admin_health": {
+          "administrative": 9.0,
+          "technical_clerical": 6.01,
+          "other_professional": 14.13
+        },
+        "technology": {
+          "administrative": 0.0,
+          "technical_clerical": 9.0,
+          "instructional_support": 7.0
+        },
+        "transportation": {
+          "administrative": 1.0,
+          "technical_clerical": 6.8,
+          "other_professional": 1.0,
+          "trades_service": 69.7
+        },
+        "operations": {
+          "administrative": 1.0,
+          "technical_clerical": 1.01,
+          "other_professional": 0.0,
+          "trades_service": 15.2
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.0,
+          "other_professional": 0.0
+        },
+        "summary": {
+          "administrative": 11.0,
+          "technical_clerical": 65.55000000000001,
+          "instructional_support": 18.0,
+          "other_professional": 17.130000000000003,
+          "trades_service": 84.9,
+          "total": 196.58
+        }
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia State Total (School Divisions Only)",
+      "fiscal_year": "FY2020",
+      "source_file": "table18_2019-20.xlsx",
+      "source_row": 145,
+      "metrics": {
+        "instruction": {
+          "administrative": 1265.1599999999999,
+          "technical_clerical": 9827.38,
+          "support": 2553.649999999999,
+          "other_professional": 853.9499999999998
+        },
+        "admin_health": {
+          "administrative": 1655.5099999999998,
+          "technical_clerical": 2591.19,
+          "other_professional": 3943.670000000001
+        },
+        "technology": {
+          "administrative": 208.47,
+          "technical_clerical": 2438.3999999999996,
+          "instructional_support": 632.6000000000001
+        },
+        "transportation": {
+          "administrative": 147.04,
+          "technical_clerical": 1259.7199999999998,
+          "other_professional": 212.82999999999998,
+          "trades_service": 16051.540000000005
+        },
+        "operations": {
+          "administrative": 218.95,
+          "technical_clerical": 515.26,
+          "other_professional": 292.01,
+          "trades_service": 12336.480000000003
+        },
+        "facilities": {
+          "administrative": 40.919999999999995,
+          "technical_clerical": 21.39,
+          "other_professional": 178.47
+        },
+        "summary": {
+          "administrative": 3536.0499999999984,
+          "technical_clerical": 16653.340000000007,
+          "instructional_support": 3186.25,
+          "other_professional": 5480.930000000001,
+          "trades_service": 28388.020000000004,
+          "total": 57244.59000000002
+        }
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke",
+      "fiscal_year": "FY2021",
+      "source_file": "table18_2020-21.xlsx",
+      "source_row": 28,
+      "metrics": {
+        "instruction": {
+          "administrative": 3.0,
+          "technical_clerical": 14.080000000000002,
+          "support": 3.9299999999999997,
+          "other_professional": 0.6
+        },
+        "admin_health": {
+          "administrative": 8.46,
+          "technical_clerical": 2.04,
+          "other_professional": 7.25
+        },
+        "technology": {
+          "administrative": 1.0,
+          "technical_clerical": 6.0,
+          "instructional_support": 0.0
+        },
+        "transportation": {
+          "administrative": 0.6,
+          "technical_clerical": 2.6799999999999997,
+          "other_professional": 0.0,
+          "trades_service": 29.6
+        },
+        "operations": {
+          "administrative": 0.5,
+          "technical_clerical": 3.5700000000000003,
+          "other_professional": 0.0,
+          "trades_service": 3.9800000000000004
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.0,
+          "other_professional": 0.0
+        },
+        "summary": {
+          "administrative": 13.56,
+          "technical_clerical": 28.37,
+          "instructional_support": 3.9299999999999997,
+          "other_professional": 7.85,
+          "trades_service": 33.58,
+          "total": 87.28999999999999
+        }
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier",
+      "fiscal_year": "FY2021",
+      "source_file": "table18_2020-21.xlsx",
+      "source_row": 36,
+      "metrics": {
+        "instruction": {
+          "administrative": 21.0,
+          "technical_clerical": 108.5,
+          "support": 1.0,
+          "other_professional": 14.0
+        },
+        "admin_health": {
+          "administrative": 15.0,
+          "technical_clerical": 10.0,
+          "other_professional": 57.0
+        },
+        "technology": {
+          "administrative": 12.0,
+          "technical_clerical": 18.0,
+          "instructional_support": -1.0
+        },
+        "transportation": {
+          "administrative": 1.0,
+          "technical_clerical": 4.0,
+          "other_professional": 2.0,
+          "trades_service": 195.0
+        },
+        "operations": {
+          "administrative": 1.0,
+          "technical_clerical": 3.0,
+          "other_professional": 7.0,
+          "trades_service": 118.0
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.0,
+          "other_professional": 0.0
+        },
+        "summary": {
+          "administrative": 50.0,
+          "technical_clerical": 143.5,
+          "instructional_support": 0.0,
+          "other_professional": 80.0,
+          "trades_service": 313.0,
+          "total": 586.5
+        }
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick",
+      "fiscal_year": "FY2021",
+      "source_file": "table18_2020-21.xlsx",
+      "source_row": 40,
+      "metrics": {
+        "instruction": {
+          "administrative": 8.0,
+          "technical_clerical": 112.29000000000002,
+          "support": 57.57,
+          "other_professional": 11.82
+        },
+        "admin_health": {
+          "administrative": 12.0,
+          "technical_clerical": 26.67,
+          "other_professional": 40.94
+        },
+        "technology": {
+          "administrative": 1.0,
+          "technical_clerical": 35.040000000000006,
+          "instructional_support": 12.65
+        },
+        "transportation": {
+          "administrative": 2.0,
+          "technical_clerical": 45.87,
+          "other_professional": 1.0,
+          "trades_service": 192.18
+        },
+        "operations": {
+          "administrative": 1.0,
+          "technical_clerical": 3.22,
+          "other_professional": 4.7,
+          "trades_service": 121.55000000000001
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.5,
+          "other_professional": 1.5
+        },
+        "summary": {
+          "administrative": 24.0,
+          "technical_clerical": 223.59000000000006,
+          "instructional_support": 70.22,
+          "other_professional": 59.96,
+          "trades_service": 313.73,
+          "total": 691.5
+        }
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun",
+      "fiscal_year": "FY2021",
+      "source_file": "table18_2020-21.xlsx",
+      "source_row": 59,
+      "metrics": {
+        "instruction": {
+          "administrative": 134.85000000000002,
+          "technical_clerical": 769.3800000000001,
+          "support": 68.05000000000001,
+          "other_professional": 53.050000000000004
+        },
+        "admin_health": {
+          "administrative": 72.31,
+          "technical_clerical": 121.97,
+          "other_professional": 247.52
+        },
+        "technology": {
+          "administrative": 24.0,
+          "technical_clerical": 64.05,
+          "instructional_support": 0.0
+        },
+        "transportation": {
+          "administrative": 10.52,
+          "technical_clerical": 34.6,
+          "other_professional": 22.5,
+          "trades_service": 864.22
+        },
+        "operations": {
+          "administrative": 13.32,
+          "technical_clerical": 31.92,
+          "other_professional": 101.9,
+          "trades_service": 850.04
+        },
+        "facilities": {
+          "administrative": 10.06,
+          "technical_clerical": 4.97,
+          "other_professional": 14.68
+        },
+        "summary": {
+          "administrative": 265.06,
+          "technical_clerical": 1026.89,
+          "instructional_support": 68.05000000000001,
+          "other_professional": 439.65000000000003,
+          "trades_service": 1714.26,
+          "total": 3513.91
+        }
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah",
+      "fiscal_year": "FY2021",
+      "source_file": "table18_2020-21.xlsx",
+      "source_row": 88,
+      "metrics": {
+        "instruction": {
+          "administrative": 10.5,
+          "technical_clerical": 27.36,
+          "support": 4.0,
+          "other_professional": 4.0
+        },
+        "admin_health": {
+          "administrative": 13.0,
+          "technical_clerical": 8.0,
+          "other_professional": 25.65
+        },
+        "technology": {
+          "administrative": 2.0,
+          "technical_clerical": 9.0,
+          "instructional_support": 6.0
+        },
+        "transportation": {
+          "administrative": 1.0,
+          "technical_clerical": 2.0,
+          "other_professional": 0.0,
+          "trades_service": 113.86
+        },
+        "operations": {
+          "administrative": 1.0,
+          "technical_clerical": 0.5,
+          "other_professional": 0.0,
+          "trades_service": 53.480000000000004
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.0,
+          "other_professional": 0.0
+        },
+        "summary": {
+          "administrative": 27.5,
+          "technical_clerical": 46.86,
+          "instructional_support": 10.0,
+          "other_professional": 29.65,
+          "trades_service": 167.34,
+          "total": 281.35
+        }
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren",
+      "fiscal_year": "FY2021",
+      "source_file": "table18_2020-21.xlsx",
+      "source_row": 96,
+      "metrics": {
+        "instruction": {
+          "administrative": 0.0,
+          "technical_clerical": 37.45,
+          "support": 12.88,
+          "other_professional": 0.0
+        },
+        "admin_health": {
+          "administrative": 9.0,
+          "technical_clerical": 6.27,
+          "other_professional": 14.0
+        },
+        "technology": {
+          "administrative": 0.0,
+          "technical_clerical": 9.0,
+          "instructional_support": 8.0
+        },
+        "transportation": {
+          "administrative": 1.0,
+          "technical_clerical": 2.0,
+          "other_professional": 1.0,
+          "trades_service": 61.0
+        },
+        "operations": {
+          "administrative": 1.0,
+          "technical_clerical": 1.0,
+          "other_professional": 0.0,
+          "trades_service": 15.02
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.0,
+          "other_professional": 0.0
+        },
+        "summary": {
+          "administrative": 11.0,
+          "technical_clerical": 55.72,
+          "instructional_support": 20.880000000000003,
+          "other_professional": 15.0,
+          "trades_service": 76.02,
+          "total": 178.62
+        }
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia State Total (School Divisions Only)",
+      "fiscal_year": "FY2021",
+      "source_file": "table18_2020-21.xlsx",
+      "source_row": 145,
+      "metrics": {
+        "instruction": {
+          "administrative": 1262.6799999999998,
+          "technical_clerical": 9719.070000000002,
+          "support": 2544.77,
+          "other_professional": 871.12
+        },
+        "admin_health": {
+          "administrative": 1681.96,
+          "technical_clerical": 2469.4699999999993,
+          "other_professional": 4173.96
+        },
+        "technology": {
+          "administrative": 220.39000000000004,
+          "technical_clerical": 2432.11,
+          "instructional_support": 550.91
+        },
+        "transportation": {
+          "administrative": 149.5,
+          "technical_clerical": 1027.6900000000003,
+          "other_professional": 220.66999999999996,
+          "trades_service": 14462.250000000005
+        },
+        "operations": {
+          "administrative": 207.05,
+          "technical_clerical": 455.74,
+          "other_professional": 298.95,
+          "trades_service": 12287.87
+        },
+        "facilities": {
+          "administrative": 41.6,
+          "technical_clerical": 25.59,
+          "other_professional": 173.99
+        },
+        "summary": {
+          "administrative": 3563.1799999999994,
+          "technical_clerical": 16129.669999999998,
+          "instructional_support": 3095.6799999999994,
+          "other_professional": 5738.6900000000005,
+          "trades_service": 26750.120000000003,
+          "total": 55277.340000000004
+        }
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke",
+      "fiscal_year": "FY2022",
+      "source_file": "table18_2021-22.xlsx",
+      "source_row": 28,
+      "metrics": {
+        "instruction": {
+          "administrative": 2.0,
+          "technical_clerical": 13.66,
+          "support": 1.67,
+          "other_professional": 1.0
+        },
+        "admin_health": {
+          "administrative": 8.700000000000001,
+          "technical_clerical": 2.17,
+          "other_professional": 5.31
+        },
+        "technology": {
+          "administrative": 1.0,
+          "technical_clerical": 7.0,
+          "instructional_support": 0.0
+        },
+        "transportation": {
+          "administrative": 0.6,
+          "technical_clerical": 2.95,
+          "other_professional": 0.0,
+          "trades_service": 34.9
+        },
+        "operations": {
+          "administrative": 0.5,
+          "technical_clerical": 3.49,
+          "other_professional": 0.0,
+          "trades_service": 4.92
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.0,
+          "other_professional": 0.0
+        },
+        "summary": {
+          "administrative": 12.8,
+          "technical_clerical": 29.269999999999996,
+          "instructional_support": 1.67,
+          "other_professional": 6.31,
+          "trades_service": 39.82,
+          "total": 89.87
+        }
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier",
+      "fiscal_year": "FY2022",
+      "source_file": "table18_2021-22.xlsx",
+      "source_row": 36,
+      "metrics": {
+        "instruction": {
+          "administrative": 15.4,
+          "technical_clerical": 104.28,
+          "support": 3.0,
+          "other_professional": 12.0
+        },
+        "admin_health": {
+          "administrative": 11.0,
+          "technical_clerical": 8.75,
+          "other_professional": 76.22
+        },
+        "technology": {
+          "administrative": 5.0,
+          "technical_clerical": 14.0,
+          "instructional_support": 0.0
+        },
+        "transportation": {
+          "administrative": 2.0,
+          "technical_clerical": 4.0,
+          "other_professional": 2.0,
+          "trades_service": 236.87
+        },
+        "operations": {
+          "administrative": 2.0,
+          "technical_clerical": 2.0,
+          "other_professional": 2.0,
+          "trades_service": 98.17
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.0,
+          "other_professional": 0.0
+        },
+        "summary": {
+          "administrative": 35.4,
+          "technical_clerical": 133.03,
+          "instructional_support": 3.0,
+          "other_professional": 92.22,
+          "trades_service": 335.04,
+          "total": 598.69
+        }
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick",
+      "fiscal_year": "FY2022",
+      "source_file": "table18_2021-22.xlsx",
+      "source_row": 40,
+      "metrics": {
+        "instruction": {
+          "administrative": 8.0,
+          "technical_clerical": 124.61000000000001,
+          "support": 62.86,
+          "other_professional": 13.07
+        },
+        "admin_health": {
+          "administrative": 12.0,
+          "technical_clerical": 24.69,
+          "other_professional": 43.010000000000005
+        },
+        "technology": {
+          "administrative": 1.0,
+          "technical_clerical": 37.410000000000004,
+          "instructional_support": 13.66
+        },
+        "transportation": {
+          "administrative": 2.0,
+          "technical_clerical": 51.97,
+          "other_professional": 1.0,
+          "trades_service": 198.41
+        },
+        "operations": {
+          "administrative": 1.0,
+          "technical_clerical": 3.0,
+          "other_professional": 4.74,
+          "trades_service": 119.91
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.5,
+          "other_professional": 1.5
+        },
+        "summary": {
+          "administrative": 24.0,
+          "technical_clerical": 242.18,
+          "instructional_support": 76.52,
+          "other_professional": 63.32000000000001,
+          "trades_service": 318.32,
+          "total": 724.3399999999999
+        }
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun",
+      "fiscal_year": "FY2022",
+      "source_file": "table18_2021-22.xlsx",
+      "source_row": 59,
+      "metrics": {
+        "instruction": {
+          "administrative": 166.63,
+          "technical_clerical": 819.53,
+          "support": 110.09,
+          "other_professional": 73.41
+        },
+        "admin_health": {
+          "administrative": 86.63,
+          "technical_clerical": 120.44000000000001,
+          "other_professional": 252.83
+        },
+        "technology": {
+          "administrative": 30.0,
+          "technical_clerical": 70.39,
+          "instructional_support": 0.0
+        },
+        "transportation": {
+          "administrative": 11.32,
+          "technical_clerical": 24.16,
+          "other_professional": 29.12,
+          "trades_service": 931.47
+        },
+        "operations": {
+          "administrative": 18.42,
+          "technical_clerical": 45.800000000000004,
+          "other_professional": 125.92,
+          "trades_service": 926.78
+        },
+        "facilities": {
+          "administrative": 11.26,
+          "technical_clerical": 4.72,
+          "other_professional": 14.68
+        },
+        "summary": {
+          "administrative": 324.26,
+          "technical_clerical": 1085.04,
+          "instructional_support": 110.09,
+          "other_professional": 495.96000000000004,
+          "trades_service": 1858.25,
+          "total": 3873.6
+        }
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah",
+      "fiscal_year": "FY2022",
+      "source_file": "table18_2021-22.xlsx",
+      "source_row": 88,
+      "metrics": {
+        "instruction": {
+          "administrative": 10.0,
+          "technical_clerical": 27.0,
+          "support": 4.0,
+          "other_professional": 13.0
+        },
+        "admin_health": {
+          "administrative": 11.0,
+          "technical_clerical": 5.0,
+          "other_professional": 16.0
+        },
+        "technology": {
+          "administrative": 2.0,
+          "technical_clerical": 17.0,
+          "instructional_support": 6.0
+        },
+        "transportation": {
+          "administrative": 1.0,
+          "technical_clerical": 2.0,
+          "other_professional": 0.0,
+          "trades_service": 114.5
+        },
+        "operations": {
+          "administrative": 1.0,
+          "technical_clerical": 1.0,
+          "other_professional": 0.0,
+          "trades_service": 50.5
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.0,
+          "other_professional": 0.0
+        },
+        "summary": {
+          "administrative": 25.0,
+          "technical_clerical": 52.0,
+          "instructional_support": 10.0,
+          "other_professional": 29.0,
+          "trades_service": 165.0,
+          "total": 281.0
+        }
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren",
+      "fiscal_year": "FY2022",
+      "source_file": "table18_2021-22.xlsx",
+      "source_row": 96,
+      "metrics": {
+        "instruction": {
+          "administrative": 0.0,
+          "technical_clerical": 39.0,
+          "support": 11.2,
+          "other_professional": 2.0
+        },
+        "admin_health": {
+          "administrative": 8.25,
+          "technical_clerical": 6.27,
+          "other_professional": 23.0
+        },
+        "technology": {
+          "administrative": 0.0,
+          "technical_clerical": 9.0,
+          "instructional_support": 2.0
+        },
+        "transportation": {
+          "administrative": 0.0,
+          "technical_clerical": 2.0,
+          "other_professional": 2.0,
+          "trades_service": 56.0
+        },
+        "operations": {
+          "administrative": 0.0,
+          "technical_clerical": 1.0,
+          "other_professional": 1.0,
+          "trades_service": 15.0
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.0,
+          "other_professional": 0.0
+        },
+        "summary": {
+          "administrative": 8.25,
+          "technical_clerical": 57.269999999999996,
+          "instructional_support": 13.2,
+          "other_professional": 28.0,
+          "trades_service": 71.0,
+          "total": 177.72
+        }
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia State Total (School Divisions Only)",
+      "fiscal_year": "FY2022",
+      "source_file": "table18_2021-22.xlsx",
+      "source_row": 145,
+      "metrics": {
+        "instruction": {
+          "administrative": 1368.85,
+          "technical_clerical": 10020.829999999998,
+          "support": 3010.65,
+          "other_professional": 981.14
+        },
+        "admin_health": {
+          "administrative": 1738.51,
+          "technical_clerical": 2565.5099999999998,
+          "other_professional": 4393.689999999999
+        },
+        "technology": {
+          "administrative": 227.28000000000003,
+          "technical_clerical": 2567.9300000000003,
+          "instructional_support": 645.2900000000001
+        },
+        "transportation": {
+          "administrative": 151.84,
+          "technical_clerical": 1132.2199999999998,
+          "other_professional": 279.66,
+          "trades_service": 15413.690000000002
+        },
+        "operations": {
+          "administrative": 237.78000000000003,
+          "technical_clerical": 491.50000000000006,
+          "other_professional": 331.47,
+          "trades_service": 12540.750000000004
+        },
+        "facilities": {
+          "administrative": 44.69,
+          "technical_clerical": 26.04,
+          "other_professional": 174.66
+        },
+        "summary": {
+          "administrative": 3768.9499999999994,
+          "technical_clerical": 16804.030000000002,
+          "instructional_support": 3655.9399999999987,
+          "other_professional": 6160.620000000001,
+          "trades_service": 27954.44,
+          "total": 58343.98000000001
+        }
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke",
+      "fiscal_year": "FY2023",
+      "source_file": "table18_2022-23.xlsx",
+      "source_row": 28,
+      "metrics": {
+        "instruction": {
+          "administrative": 2.0,
+          "technical_clerical": 13.15,
+          "support": 1.0,
+          "other_professional": 1.0
+        },
+        "admin_health": {
+          "administrative": 7.4,
+          "technical_clerical": 2.2,
+          "other_professional": 6.180000000000001
+        },
+        "technology": {
+          "administrative": 1.0,
+          "technical_clerical": 7.05,
+          "instructional_support": 0.0
+        },
+        "transportation": {
+          "administrative": 0.6,
+          "technical_clerical": 3.63,
+          "other_professional": 0.0,
+          "trades_service": 40.28
+        },
+        "operations": {
+          "administrative": 0.5,
+          "technical_clerical": 3.66,
+          "other_professional": 0.0,
+          "trades_service": 5.84
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.0,
+          "other_professional": 0.0
+        },
+        "summary": {
+          "administrative": 11.5,
+          "technical_clerical": 29.69,
+          "instructional_support": 1.0,
+          "other_professional": 7.180000000000001,
+          "trades_service": 46.120000000000005,
+          "total": 95.49000000000001
+        }
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier",
+      "fiscal_year": "FY2023",
+      "source_file": "table18_2022-23.xlsx",
+      "source_row": 36,
+      "metrics": {
+        "instruction": {
+          "administrative": 20.0,
+          "technical_clerical": 105.7,
+          "support": 4.42,
+          "other_professional": 16.0
+        },
+        "admin_health": {
+          "administrative": 12.0,
+          "technical_clerical": 9.0,
+          "other_professional": 56.07
+        },
+        "technology": {
+          "administrative": 4.0,
+          "technical_clerical": 14.0,
+          "instructional_support": 0.0
+        },
+        "transportation": {
+          "administrative": 2.0,
+          "technical_clerical": 6.0,
+          "other_professional": 2.0,
+          "trades_service": 143.83
+        },
+        "operations": {
+          "administrative": 2.0,
+          "technical_clerical": 3.0,
+          "other_professional": 2.0,
+          "trades_service": 114.0
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.0,
+          "other_professional": 0.0
+        },
+        "summary": {
+          "administrative": 40.0,
+          "technical_clerical": 137.7,
+          "instructional_support": 4.42,
+          "other_professional": 76.07,
+          "trades_service": 257.83000000000004,
+          "total": 516.02
+        }
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick",
+      "fiscal_year": "FY2023",
+      "source_file": "table18_2022-23.xlsx",
+      "source_row": 40,
+      "metrics": {
+        "instruction": {
+          "administrative": 7.779999999999999,
+          "technical_clerical": 113.9,
+          "support": 77.78,
+          "other_professional": 12.81
+        },
+        "admin_health": {
+          "administrative": 12.299999999999997,
+          "technical_clerical": 25.76,
+          "other_professional": 40.53
+        },
+        "technology": {
+          "administrative": 1.0,
+          "technical_clerical": 35.949999999999996,
+          "instructional_support": 13.48
+        },
+        "transportation": {
+          "administrative": 2.0,
+          "technical_clerical": 49.39,
+          "other_professional": 1.0,
+          "trades_service": 188.47
+        },
+        "operations": {
+          "administrative": 1.0,
+          "technical_clerical": 3.66,
+          "other_professional": 3.8000000000000003,
+          "trades_service": 122.04
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.45,
+          "other_professional": 0.5
+        },
+        "summary": {
+          "administrative": 24.08,
+          "technical_clerical": 229.10999999999999,
+          "instructional_support": 91.26,
+          "other_professional": 58.64,
+          "trades_service": 310.51,
+          "total": 713.5999999999999
+        }
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun",
+      "fiscal_year": "FY2023",
+      "source_file": "table18_2022-23.xlsx",
+      "source_row": 59,
+      "metrics": {
+        "instruction": {
+          "administrative": 187.17000000000002,
+          "technical_clerical": 764.27,
+          "support": 110.84,
+          "other_professional": 78.69
+        },
+        "admin_health": {
+          "administrative": 92.97,
+          "technical_clerical": 134.98,
+          "other_professional": 199.65
+        },
+        "technology": {
+          "administrative": 40.52,
+          "technical_clerical": 469.47,
+          "instructional_support": 0.0
+        },
+        "transportation": {
+          "administrative": 11.35,
+          "technical_clerical": 22.61,
+          "other_professional": 37.1,
+          "trades_service": 916.25
+        },
+        "operations": {
+          "administrative": 19.650000000000002,
+          "technical_clerical": 59.33,
+          "other_professional": 138.52,
+          "trades_service": 932.25
+        },
+        "facilities": {
+          "administrative": 13.870000000000001,
+          "technical_clerical": 6.1000000000000005,
+          "other_professional": 18.16
+        },
+        "summary": {
+          "administrative": 365.53,
+          "technical_clerical": 1456.7599999999998,
+          "instructional_support": 110.84,
+          "other_professional": 472.12000000000006,
+          "trades_service": 1848.5,
+          "total": 4253.75
+        }
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah",
+      "fiscal_year": "FY2023",
+      "source_file": "table18_2022-23.xlsx",
+      "source_row": 88,
+      "metrics": {
+        "instruction": {
+          "administrative": 9.0,
+          "technical_clerical": 26.5,
+          "support": 3.0,
+          "other_professional": 12.0
+        },
+        "admin_health": {
+          "administrative": 11.0,
+          "technical_clerical": 9.0,
+          "other_professional": 26.0
+        },
+        "technology": {
+          "administrative": 2.0,
+          "technical_clerical": 9.0,
+          "instructional_support": 6.0
+        },
+        "transportation": {
+          "administrative": 1.0,
+          "technical_clerical": 2.0,
+          "other_professional": 0.0,
+          "trades_service": 115.0
+        },
+        "operations": {
+          "administrative": 1.0,
+          "technical_clerical": 1.0,
+          "other_professional": 0.0,
+          "trades_service": 45.5
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.0,
+          "other_professional": 0.0
+        },
+        "summary": {
+          "administrative": 24.0,
+          "technical_clerical": 47.5,
+          "instructional_support": 9.0,
+          "other_professional": 38.0,
+          "trades_service": 160.5,
+          "total": 279.0
+        }
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren",
+      "fiscal_year": "FY2023",
+      "source_file": "table18_2022-23.xlsx",
+      "source_row": 96,
+      "metrics": {
+        "instruction": {
+          "administrative": 0.0,
+          "technical_clerical": 32.580000000000005,
+          "support": 11.41,
+          "other_professional": 2.38
+        },
+        "admin_health": {
+          "administrative": 10.0,
+          "technical_clerical": 7.1000000000000005,
+          "other_professional": 12.01
+        },
+        "technology": {
+          "administrative": 1.0,
+          "technical_clerical": 8.0,
+          "instructional_support": 0.0
+        },
+        "transportation": {
+          "administrative": 1.0,
+          "technical_clerical": 2.0,
+          "other_professional": 1.0,
+          "trades_service": 43.0
+        },
+        "operations": {
+          "administrative": 1.0,
+          "technical_clerical": 1.0,
+          "other_professional": 0.0,
+          "trades_service": 14.0
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.0,
+          "other_professional": 0.0
+        },
+        "summary": {
+          "administrative": 13.0,
+          "technical_clerical": 50.68000000000001,
+          "instructional_support": 11.41,
+          "other_professional": 15.39,
+          "trades_service": 57.0,
+          "total": 147.48000000000002
+        }
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia State Total (School Divisions Only)",
+      "fiscal_year": "FY2023",
+      "source_file": "table18_2022-23.xlsx",
+      "source_row": 145,
+      "metrics": {
+        "instruction": {
+          "administrative": 1395.6399999999994,
+          "technical_clerical": 10112.859999999997,
+          "support": 3073.2799999999997,
+          "other_professional": 1133.5500000000004
+        },
+        "admin_health": {
+          "administrative": 1802.6,
+          "technical_clerical": 2582.06,
+          "other_professional": 4380.45
+        },
+        "technology": {
+          "administrative": 249.18,
+          "technical_clerical": 2915.2599999999993,
+          "instructional_support": 632.02
+        },
+        "transportation": {
+          "administrative": 165.82999999999996,
+          "technical_clerical": 1198.78,
+          "other_professional": 243.76,
+          "trades_service": 15159.31
+        },
+        "operations": {
+          "administrative": 240.81,
+          "technical_clerical": 509.75000000000006,
+          "other_professional": 370.7800000000001,
+          "trades_service": 12572.05
+        },
+        "facilities": {
+          "administrative": 47.46,
+          "technical_clerical": 29.529999999999998,
+          "other_professional": 174.35
+        },
+        "summary": {
+          "administrative": 3901.5200000000004,
+          "technical_clerical": 17348.24,
+          "instructional_support": 3705.2999999999997,
+          "other_professional": 6302.89,
+          "trades_service": 27731.359999999993,
+          "total": 58989.31000000001
+        }
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke",
+      "fiscal_year": "FY2024",
+      "source_file": "table18_2023-24.xlsx",
+      "source_row": 28,
+      "metrics": {
+        "instruction": {
+          "administrative": 2.0,
+          "technical_clerical": 13.450000000000001,
+          "support": 1.01,
+          "other_professional": 1.0
+        },
+        "admin_health": {
+          "administrative": 7.4,
+          "technical_clerical": 2.06,
+          "other_professional": 6.620000000000001
+        },
+        "technology": {
+          "administrative": 1.0,
+          "technical_clerical": 7.05,
+          "instructional_support": 0.0
+        },
+        "transportation": {
+          "administrative": 0.6,
+          "technical_clerical": 3.0,
+          "other_professional": 0.0,
+          "trades_service": 36.25
+        },
+        "operations": {
+          "administrative": 1.3800000000000001,
+          "technical_clerical": 2.27,
+          "other_professional": 0.0,
+          "trades_service": 22.08
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.0,
+          "other_professional": 0.0
+        },
+        "summary": {
+          "administrative": 12.38,
+          "technical_clerical": 27.830000000000002,
+          "instructional_support": 1.01,
+          "other_professional": 7.620000000000001,
+          "trades_service": 58.33,
+          "total": 107.17
+        }
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier",
+      "fiscal_year": "FY2024",
+      "source_file": "table18_2023-24.xlsx",
+      "source_row": 36,
+      "metrics": {
+        "instruction": {
+          "administrative": 13.5,
+          "technical_clerical": 94.0,
+          "support": 3.01,
+          "other_professional": 12.0
+        },
+        "admin_health": {
+          "administrative": 11.0,
+          "technical_clerical": 9.0,
+          "other_professional": 56.0
+        },
+        "technology": {
+          "administrative": 4.0,
+          "technical_clerical": 14.0,
+          "instructional_support": 0.0
+        },
+        "transportation": {
+          "administrative": 2.0,
+          "technical_clerical": 6.0,
+          "other_professional": 2.0,
+          "trades_service": 204.29999999999998
+        },
+        "operations": {
+          "administrative": 2.0,
+          "technical_clerical": 3.0,
+          "other_professional": 2.0,
+          "trades_service": 113.21
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.0,
+          "other_professional": 0.0
+        },
+        "summary": {
+          "administrative": 32.5,
+          "technical_clerical": 126.0,
+          "instructional_support": 3.01,
+          "other_professional": 72.0,
+          "trades_service": 317.51,
+          "total": 551.02
+        }
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick",
+      "fiscal_year": "FY2024",
+      "source_file": "table18_2023-24.xlsx",
+      "source_row": 40,
+      "metrics": {
+        "instruction": {
+          "administrative": 7.76,
+          "technical_clerical": 115.97999999999999,
+          "support": 86.21000000000001,
+          "other_professional": 14.18
+        },
+        "admin_health": {
+          "administrative": 12.9,
+          "technical_clerical": 28.12,
+          "other_professional": 37.79
+        },
+        "technology": {
+          "administrative": 0.87,
+          "technical_clerical": 35.91,
+          "instructional_support": 13.05
+        },
+        "transportation": {
+          "administrative": 1.8,
+          "technical_clerical": 40.21,
+          "other_professional": 1.0,
+          "trades_service": 192.57
+        },
+        "operations": {
+          "administrative": 1.03,
+          "technical_clerical": 4.4,
+          "other_professional": 4.0600000000000005,
+          "trades_service": 123.83000000000001
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.47000000000000003,
+          "other_professional": 1.5
+        },
+        "summary": {
+          "administrative": 24.360000000000003,
+          "technical_clerical": 225.09,
+          "instructional_support": 99.26,
+          "other_professional": 58.53,
+          "trades_service": 316.4,
+          "total": 723.64
+        }
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun",
+      "fiscal_year": "FY2024",
+      "source_file": "table18_2023-24.xlsx",
+      "source_row": 59,
+      "metrics": {
+        "instruction": {
+          "administrative": 184.0,
+          "technical_clerical": 746.0799999999999,
+          "support": 110.40000000000002,
+          "other_professional": 76.16
+        },
+        "admin_health": {
+          "administrative": 105.59,
+          "technical_clerical": 79.45,
+          "other_professional": 227.3
+        },
+        "technology": {
+          "administrative": 43.37,
+          "technical_clerical": 312.63000000000005,
+          "instructional_support": 0.0
+        },
+        "transportation": {
+          "administrative": 11.34,
+          "technical_clerical": 10.97,
+          "other_professional": 23.62,
+          "trades_service": 757.34
+        },
+        "operations": {
+          "administrative": 21.63,
+          "technical_clerical": 37.81,
+          "other_professional": 154.77,
+          "trades_service": 904.78
+        },
+        "facilities": {
+          "administrative": 14.08,
+          "technical_clerical": 2.36,
+          "other_professional": 15.57
+        },
+        "summary": {
+          "administrative": 380.01,
+          "technical_clerical": 1189.3,
+          "instructional_support": 110.40000000000002,
+          "other_professional": 497.42,
+          "trades_service": 1662.12,
+          "total": 3839.25
+        }
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah",
+      "fiscal_year": "FY2024",
+      "source_file": "table18_2023-24.xlsx",
+      "source_row": 88,
+      "metrics": {
+        "instruction": {
+          "administrative": 9.5,
+          "technical_clerical": 27.5,
+          "support": 3.0,
+          "other_professional": 12.0
+        },
+        "admin_health": {
+          "administrative": 11.0,
+          "technical_clerical": 9.0,
+          "other_professional": 26.5
+        },
+        "technology": {
+          "administrative": 2.0,
+          "technical_clerical": 9.0,
+          "instructional_support": 6.0
+        },
+        "transportation": {
+          "administrative": 1.0,
+          "technical_clerical": 2.0,
+          "other_professional": 0.0,
+          "trades_service": 117.0
+        },
+        "operations": {
+          "administrative": 1.0,
+          "technical_clerical": 1.0,
+          "other_professional": 0.0,
+          "trades_service": 48.0
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.0,
+          "other_professional": 0.0
+        },
+        "summary": {
+          "administrative": 24.5,
+          "technical_clerical": 48.5,
+          "instructional_support": 9.0,
+          "other_professional": 38.5,
+          "trades_service": 165.0,
+          "total": 285.5
+        }
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren",
+      "fiscal_year": "FY2024",
+      "source_file": "table18_2023-24.xlsx",
+      "source_row": 96,
+      "metrics": {
+        "instruction": {
+          "administrative": 0.0,
+          "technical_clerical": 39.769999999999996,
+          "support": 15.040000000000001,
+          "other_professional": 1.75
+        },
+        "admin_health": {
+          "administrative": 13.0,
+          "technical_clerical": 8.03,
+          "other_professional": 13.0
+        },
+        "technology": {
+          "administrative": 0.3,
+          "technical_clerical": 7.0,
+          "instructional_support": 0.0
+        },
+        "transportation": {
+          "administrative": 1.0,
+          "technical_clerical": 2.0,
+          "other_professional": 1.0,
+          "trades_service": 46.11
+        },
+        "operations": {
+          "administrative": 1.0,
+          "technical_clerical": 1.0,
+          "other_professional": 0.0,
+          "trades_service": 14.0
+        },
+        "facilities": {
+          "administrative": 0.0,
+          "technical_clerical": 0.0,
+          "other_professional": 0.0
+        },
+        "summary": {
+          "administrative": 15.3,
+          "technical_clerical": 57.8,
+          "instructional_support": 15.040000000000001,
+          "other_professional": 15.75,
+          "trades_service": 60.11,
+          "total": 164.0
+        }
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia State Total (School Divisions Only)",
+      "fiscal_year": "FY2024",
+      "source_file": "table18_2023-24.xlsx",
+      "source_row": 145,
+      "metrics": {
+        "instruction": {
+          "administrative": 1562.3100000000004,
+          "technical_clerical": 10336.440000000004,
+          "support": 3147.949999999999,
+          "other_professional": 1093.38
+        },
+        "admin_health": {
+          "administrative": 1872.31,
+          "technical_clerical": 2510.4499999999994,
+          "other_professional": 4546.459999999999
+        },
+        "technology": {
+          "administrative": 254.26999999999998,
+          "technical_clerical": 2874.0499999999997,
+          "instructional_support": 595.7300000000001
+        },
+        "transportation": {
+          "administrative": 170.89,
+          "technical_clerical": 1142.2000000000003,
+          "other_professional": 332.90000000000003,
+          "trades_service": 15373.099999999997
+        },
+        "operations": {
+          "administrative": 256.71,
+          "technical_clerical": 691.01,
+          "other_professional": 432.2900000000001,
+          "trades_service": 13014.319999999998
+        },
+        "facilities": {
+          "administrative": 54.83,
+          "technical_clerical": 27.78,
+          "other_professional": 168.16000000000003
+        },
+        "summary": {
+          "administrative": 4171.320000000001,
+          "technical_clerical": 17581.929999999997,
+          "instructional_support": 3743.6799999999994,
+          "other_professional": 6573.19,
+          "trades_service": 28387.42000000001,
+          "total": 60457.54000000001
+        }
+      }
+    }
+  ]
+}

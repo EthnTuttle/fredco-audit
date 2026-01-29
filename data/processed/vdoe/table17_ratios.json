@@ -1,0 +1,507 @@
+{
+  "table": "Table 17",
+  "description": "Ratio of Pupil to Classroom Teacher Positions - Regular Day School",
+  "source": "VDOE Superintendent's Annual Report",
+  "source_url": "https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report",
+  "generated_date": "2026-01-29T06:48:32.395718",
+  "notes": [
+    "Elementary = K-7 grades",
+    "Secondary = 8-12 grades",
+    "Teaching positions include classroom, homebound, media, and technology instructional teachers",
+    "ADM reflects serving membership at end of year"
+  ],
+  "data": [
+    {
+      "division_code": "043",
+      "division_name": "Clarke County",
+      "fiscal_year": "2019-20",
+      "source_file": "table17_2019-20.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 88.53,
+        "elementary_adm_k7": 1042.7440000000001,
+        "pupil_teacher_ratio_k7": 11.78,
+        "secondary_teaching_positions": 69.61,
+        "secondary_adm_8_12": 829.2280000000001,
+        "pupil_teacher_ratio_8_12": 11.91
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier County",
+      "fiscal_year": "2019-20",
+      "source_file": "table17_2019-20.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 522.71,
+        "elementary_adm_k7": 6331.8475,
+        "pupil_teacher_ratio_k7": 12.11,
+        "secondary_teaching_positions": 411.77000000000004,
+        "secondary_adm_8_12": 4472.70218,
+        "pupil_teacher_ratio_8_12": 10.86
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick County",
+      "fiscal_year": "2019-20",
+      "source_file": "table17_2019-20.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 587.6700000000001,
+        "elementary_adm_k7": 8307.02388,
+        "pupil_teacher_ratio_k7": 14.14,
+        "secondary_teaching_positions": 450.28,
+        "secondary_adm_8_12": 5319.3590300000005,
+        "pupil_teacher_ratio_8_12": 11.81
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun County",
+      "fiscal_year": "2019-20",
+      "source_file": "table17_2019-20.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 3868.85,
+        "elementary_adm_k7": 50109.87046,
+        "pupil_teacher_ratio_k7": 12.95,
+        "secondary_teaching_positions": 2767.96,
+        "secondary_adm_8_12": 32967.37992,
+        "pupil_teacher_ratio_8_12": 11.91
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah County",
+      "fiscal_year": "2019-20",
+      "source_file": "table17_2019-20.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 315.7,
+        "elementary_adm_k7": 3454.64397,
+        "pupil_teacher_ratio_k7": 10.94,
+        "secondary_teaching_positions": 181.76,
+        "secondary_adm_8_12": 2251.87131,
+        "pupil_teacher_ratio_8_12": 12.39
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren County",
+      "fiscal_year": "2019-20",
+      "source_file": "table17_2019-20.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 239.64999999999998,
+        "elementary_adm_k7": 3121.3470500000003,
+        "pupil_teacher_ratio_k7": 13.02,
+        "secondary_teaching_positions": 175.31,
+        "secondary_adm_8_12": 2070.63061,
+        "pupil_teacher_ratio_8_12": 11.81
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke County",
+      "fiscal_year": "2020-21",
+      "source_file": "table17_2020-21.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 85.24,
+        "elementary_adm_k7": 911.7465100000001,
+        "pupil_teacher_ratio_k7": 10.7,
+        "secondary_teaching_positions": 71.85000000000001,
+        "secondary_adm_8_12": 802.27527,
+        "pupil_teacher_ratio_8_12": 11.17
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier County",
+      "fiscal_year": "2020-21",
+      "source_file": "table17_2020-21.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 404.21,
+        "elementary_adm_k7": 5723.90682,
+        "pupil_teacher_ratio_k7": 14.16,
+        "secondary_teaching_positions": 474.79,
+        "secondary_adm_8_12": 4289.04768,
+        "pupil_teacher_ratio_8_12": 9.03
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick County",
+      "fiscal_year": "2020-21",
+      "source_file": "table17_2020-21.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 605.37,
+        "elementary_adm_k7": 7791.48233,
+        "pupil_teacher_ratio_k7": 12.87,
+        "secondary_teaching_positions": 448.17,
+        "secondary_adm_8_12": 5243.10336,
+        "pupil_teacher_ratio_8_12": 11.7
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun County",
+      "fiscal_year": "2020-21",
+      "source_file": "table17_2020-21.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 3916.66,
+        "elementary_adm_k7": 47234.479479999995,
+        "pupil_teacher_ratio_k7": 12.06,
+        "secondary_teaching_positions": 2891.55,
+        "secondary_adm_8_12": 33277.15266,
+        "pupil_teacher_ratio_8_12": 11.51
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah County",
+      "fiscal_year": "2020-21",
+      "source_file": "table17_2020-21.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 305.55,
+        "elementary_adm_k7": 3281.09763,
+        "pupil_teacher_ratio_k7": 10.74,
+        "secondary_teaching_positions": 175.5,
+        "secondary_adm_8_12": 2219.42675,
+        "pupil_teacher_ratio_8_12": 12.65
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren County",
+      "fiscal_year": "2020-21",
+      "source_file": "table17_2020-21.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 220.69,
+        "elementary_adm_k7": 2900.6388099999995,
+        "pupil_teacher_ratio_k7": 13.14,
+        "secondary_teaching_positions": 180.45,
+        "secondary_adm_8_12": 2051.01114,
+        "pupil_teacher_ratio_8_12": 11.37
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke County",
+      "fiscal_year": "2021-22",
+      "source_file": "table17_2021-22.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 81.46,
+        "elementary_adm_k7": 988.90576,
+        "pupil_teacher_ratio_k7": 12.14,
+        "secondary_teaching_positions": 71.09,
+        "secondary_adm_8_12": 821.9314599999999,
+        "pupil_teacher_ratio_8_12": 11.56
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier County",
+      "fiscal_year": "2021-22",
+      "source_file": "table17_2021-22.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 515.35,
+        "elementary_adm_k7": 6092.0906,
+        "pupil_teacher_ratio_k7": 11.82,
+        "secondary_teaching_positions": 377.87,
+        "secondary_adm_8_12": 4426.57392,
+        "pupil_teacher_ratio_8_12": 11.71
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick County",
+      "fiscal_year": "2021-22",
+      "source_file": "table17_2021-22.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 600.0200000000001,
+        "elementary_adm_k7": 8031.24011,
+        "pupil_teacher_ratio_k7": 13.38,
+        "secondary_teaching_positions": 457.51,
+        "secondary_adm_8_12": 5556.10768,
+        "pupil_teacher_ratio_8_12": 12.14
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun County",
+      "fiscal_year": "2021-22",
+      "source_file": "table17_2021-22.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 3773.04,
+        "elementary_adm_k7": 47264.94342,
+        "pupil_teacher_ratio_k7": 12.53,
+        "secondary_teaching_positions": 2907.6,
+        "secondary_adm_8_12": 33782.72865,
+        "pupil_teacher_ratio_8_12": 11.62
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah County",
+      "fiscal_year": "2021-22",
+      "source_file": "table17_2021-22.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 311.24,
+        "elementary_adm_k7": 3188.46554,
+        "pupil_teacher_ratio_k7": 10.24,
+        "secondary_teaching_positions": 163.28,
+        "secondary_adm_8_12": 2226.6897,
+        "pupil_teacher_ratio_8_12": 13.64
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren County",
+      "fiscal_year": "2021-22",
+      "source_file": "table17_2021-22.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 221.4,
+        "elementary_adm_k7": 2849.2298499999997,
+        "pupil_teacher_ratio_k7": 12.87,
+        "secondary_teaching_positions": 185.82,
+        "secondary_adm_8_12": 2102.22407,
+        "pupil_teacher_ratio_8_12": 11.31
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke County",
+      "fiscal_year": "2022-23",
+      "source_file": "table17_2022-23.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 83.73,
+        "elementary_adm_k7": 1029.19264,
+        "pupil_teacher_ratio_k7": 12.29,
+        "secondary_teaching_positions": 70.13000000000001,
+        "secondary_adm_8_12": 825.4661200000002,
+        "pupil_teacher_ratio_8_12": 11.77
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier County",
+      "fiscal_year": "2022-23",
+      "source_file": "table17_2022-23.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 374.58,
+        "elementary_adm_k7": 6063.34425,
+        "pupil_teacher_ratio_k7": 16.19,
+        "secondary_teaching_positions": 491.17,
+        "secondary_adm_8_12": 4326.04532,
+        "pupil_teacher_ratio_8_12": 8.81
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick County",
+      "fiscal_year": "2022-23",
+      "source_file": "table17_2022-23.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 595.87,
+        "elementary_adm_k7": 7879.069799999999,
+        "pupil_teacher_ratio_k7": 13.22,
+        "secondary_teaching_positions": 457.44,
+        "secondary_adm_8_12": 5460.88406,
+        "pupil_teacher_ratio_8_12": 11.94
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun County",
+      "fiscal_year": "2022-23",
+      "source_file": "table17_2022-23.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 3651.95,
+        "elementary_adm_k7": 47403.52709,
+        "pupil_teacher_ratio_k7": 12.98,
+        "secondary_teaching_positions": 2982.32,
+        "secondary_adm_8_12": 33949.39749,
+        "pupil_teacher_ratio_8_12": 11.38
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah County",
+      "fiscal_year": "2022-23",
+      "source_file": "table17_2022-23.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 291.04,
+        "elementary_adm_k7": 3151.54782,
+        "pupil_teacher_ratio_k7": 10.83,
+        "secondary_teaching_positions": 157.27,
+        "secondary_adm_8_12": 2195.0677299999998,
+        "pupil_teacher_ratio_8_12": 13.96
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren County",
+      "fiscal_year": "2022-23",
+      "source_file": "table17_2022-23.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 234.65,
+        "elementary_adm_k7": 2855.70003,
+        "pupil_teacher_ratio_k7": 12.17,
+        "secondary_teaching_positions": 166.74,
+        "secondary_adm_8_12": 2027.95145,
+        "pupil_teacher_ratio_8_12": 12.16
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke County",
+      "fiscal_year": "2023-24",
+      "source_file": "table17_2023-24.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 87.16,
+        "elementary_adm_k7": 1041.49296,
+        "pupil_teacher_ratio_k7": 11.95,
+        "secondary_teaching_positions": 71.28,
+        "secondary_adm_8_12": 828.6810099999999,
+        "pupil_teacher_ratio_8_12": 11.63
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier County",
+      "fiscal_year": "2023-24",
+      "source_file": "table17_2023-24.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 513.9000000000001,
+        "elementary_adm_k7": 6163.550899999999,
+        "pupil_teacher_ratio_k7": 11.99,
+        "secondary_teaching_positions": 376.26,
+        "secondary_adm_8_12": 4263.6304,
+        "pupil_teacher_ratio_8_12": 11.33
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick County",
+      "fiscal_year": "2023-24",
+      "source_file": "table17_2023-24.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 601.9300000000001,
+        "elementary_adm_k7": 8339.11684,
+        "pupil_teacher_ratio_k7": 13.85,
+        "secondary_teaching_positions": 461.76,
+        "secondary_adm_8_12": 5674.629930000001,
+        "pupil_teacher_ratio_8_12": 12.29
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun County",
+      "fiscal_year": "2023-24",
+      "source_file": "table17_2023-24.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 3516.85,
+        "elementary_adm_k7": 47076.01503,
+        "pupil_teacher_ratio_k7": 13.39,
+        "secondary_teaching_positions": 3036.0899999999997,
+        "secondary_adm_8_12": 34152.53254,
+        "pupil_teacher_ratio_8_12": 11.25
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah County",
+      "fiscal_year": "2023-24",
+      "source_file": "table17_2023-24.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 292.27,
+        "elementary_adm_k7": 3214.0287000000003,
+        "pupil_teacher_ratio_k7": 11.0,
+        "secondary_teaching_positions": 149.89,
+        "secondary_adm_8_12": 2198.7987399999997,
+        "pupil_teacher_ratio_8_12": 14.67
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren County",
+      "fiscal_year": "2023-24",
+      "source_file": "table17_2023-24.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 233.96,
+        "elementary_adm_k7": 2923.14545,
+        "pupil_teacher_ratio_k7": 12.49,
+        "secondary_teaching_positions": 184.51,
+        "secondary_adm_8_12": 1980.02024,
+        "pupil_teacher_ratio_8_12": 10.73
+      }
+    }
+  ],
+  "state_totals": [
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia School Division Subtotal",
+      "fiscal_year": "2019-20",
+      "source_file": "table17_2019-20.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 59151.19000000002,
+        "elementary_adm_k7": 767071.6956999999,
+        "pupil_teacher_ratio_k7": 12.97,
+        "secondary_teaching_positions": 37743.479999999996,
+        "secondary_adm_8_12": 478063.16738,
+        "pupil_teacher_ratio_8_12": 12.67
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia School Division Subtotal",
+      "fiscal_year": "2020-21",
+      "source_file": "table17_2020-21.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 59699.21000000002,
+        "elementary_adm_k7": 725459.7697199999,
+        "pupil_teacher_ratio_k7": 12.15,
+        "secondary_teaching_positions": 38198.67,
+        "secondary_adm_8_12": 478427.63676000026,
+        "pupil_teacher_ratio_8_12": 12.52
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia School Division Subtotal",
+      "fiscal_year": "2021-22",
+      "source_file": "table17_2021-22.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 58570.98999999998,
+        "elementary_adm_k7": 719814.0672200001,
+        "pupil_teacher_ratio_k7": 12.29,
+        "secondary_teaching_positions": 37806.009999999995,
+        "secondary_adm_8_12": 477943.55415000004,
+        "pupil_teacher_ratio_8_12": 12.64
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia School Division Subtotal",
+      "fiscal_year": "2022-23",
+      "source_file": "table17_2022-23.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 58505.74999999999,
+        "elementary_adm_k7": 726207.4951299999,
+        "pupil_teacher_ratio_k7": 12.41,
+        "secondary_teaching_positions": 38290.369999999995,
+        "secondary_adm_8_12": 480187.31036000024,
+        "pupil_teacher_ratio_8_12": 12.54
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia School Division Subtotal",
+      "fiscal_year": "2023-24",
+      "source_file": "table17_2023-24.xlsx",
+      "metrics": {
+        "elementary_teaching_positions": 59017.31999999998,
+        "elementary_adm_k7": 729816.7268000001,
+        "pupil_teacher_ratio_k7": 12.36614483341501,
+        "secondary_teaching_positions": 38926.61,
+        "secondary_adm_8_12": 479092.3951199998,
+        "pupil_teacher_ratio_8_12": 12.307580729994207
+      }
+    }
+  ]
+}

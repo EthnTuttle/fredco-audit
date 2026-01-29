@@ -1,0 +1,1622 @@
+{
+  "table": "Table 19",
+  "description": "Total Instructional Positions and Average Annual Salaries: Principals and Assistant Principals, Teachers, Instructional Positions and Teacher Aides",
+  "source": "VDOE Superintendent's Annual Report",
+  "source_url": "https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report",
+  "generated_date": "2026-01-29T06:47:54.600217",
+  "columns": {
+    "principals": [
+      "elementary_positions",
+      "elementary_avg_salary",
+      "secondary_positions",
+      "secondary_avg_salary",
+      "total_positions",
+      "total_avg_salary"
+    ],
+    "assistant_principals": [
+      "elementary_positions",
+      "elementary_avg_salary",
+      "secondary_positions",
+      "secondary_avg_salary",
+      "total_positions",
+      "total_avg_salary"
+    ],
+    "teaching_positions": [
+      "elementary_positions",
+      "elementary_avg_salary",
+      "secondary_positions",
+      "secondary_avg_salary",
+      "total_positions",
+      "total_avg_salary"
+    ],
+    "all_instructional": [
+      "positions",
+      "avg_salary"
+    ],
+    "teacher_aides": [
+      "positions",
+      "avg_salary"
+    ],
+    "district_wide_instructional": [
+      "positions",
+      "avg_salary"
+    ]
+  },
+  "data": [
+    {
+      "division_code": "043",
+      "division_name": "Clarke",
+      "fiscal_year": "FY2020",
+      "source_file": "table19_2019-20.xlsx",
+      "source_row": 29,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 2.67,
+          "elementary_avg_salary": 106784.49,
+          "secondary_positions": 1.33,
+          "secondary_avg_salary": 109955.1,
+          "total_positions": 4.0,
+          "total_avg_salary": 107838.72
+        },
+        "assistant_principals": {
+          "elementary_positions": 2.67,
+          "elementary_avg_salary": 77346.79,
+          "secondary_positions": 2.33,
+          "secondary_avg_salary": 85263.91,
+          "total_positions": 5.0,
+          "total_avg_salary": 81036.17
+        },
+        "teaching_positions": {
+          "elementary_positions": 93.94,
+          "elementary_avg_salary": 53105.0,
+          "secondary_positions": 74.6,
+          "secondary_avg_salary": 57324.36,
+          "total_positions": 168.54,
+          "total_avg_salary": 54972.59
+        },
+        "all_instructional": {
+          "positions": 177.54,
+          "avg_salary": 56897.69
+        },
+        "teacher_aides": {
+          "positions": 33.8,
+          "avg_salary": 23283.18
+        },
+        "district_wide_instructional": {
+          "positions": 3.45,
+          "avg_salary": 77783.51
+        }
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier",
+      "fiscal_year": "FY2020",
+      "source_file": "table19_2019-20.xlsx",
+      "source_row": 37,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 11.02,
+          "elementary_avg_salary": 128204.78,
+          "secondary_positions": 5.4,
+          "secondary_avg_salary": 108057.46,
+          "total_positions": 16.42,
+          "total_avg_salary": 121578.99
+        },
+        "assistant_principals": {
+          "elementary_positions": 13.6,
+          "elementary_avg_salary": 81780.71,
+          "secondary_positions": 11.4,
+          "secondary_avg_salary": 84114.08,
+          "total_positions": 25.0,
+          "total_avg_salary": 82844.73
+        },
+        "teaching_positions": {
+          "elementary_positions": 554.91,
+          "elementary_avg_salary": 56455.7,
+          "secondary_positions": 434.35,
+          "secondary_avg_salary": 59338.8,
+          "total_positions": 989.26,
+          "total_avg_salary": 57721.57
+        },
+        "all_instructional": {
+          "positions": 1030.68,
+          "avg_salary": 59348.28
+        },
+        "teacher_aides": {
+          "positions": 190.78,
+          "avg_salary": 21262.63
+        },
+        "district_wide_instructional": {
+          "positions": 9.0,
+          "avg_salary": 48651.78
+        }
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick",
+      "fiscal_year": "FY2020",
+      "source_file": "table19_2019-20.xlsx",
+      "source_row": 41,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 13.67,
+          "elementary_avg_salary": 106491.64,
+          "secondary_positions": 5.4,
+          "secondary_avg_salary": 121765.23,
+          "total_positions": 19.07,
+          "total_avg_salary": 110816.62
+        },
+        "assistant_principals": {
+          "elementary_positions": 18.75,
+          "elementary_avg_salary": 83981.2,
+          "secondary_positions": 14.09,
+          "secondary_avg_salary": 92000.94,
+          "total_positions": 32.84,
+          "total_avg_salary": 87422.07
+        },
+        "teaching_positions": {
+          "elementary_positions": 630.39,
+          "elementary_avg_salary": 55705.88,
+          "secondary_positions": 488.74,
+          "secondary_avg_salary": 60328.11,
+          "total_positions": 1119.13,
+          "total_avg_salary": 57724.47
+        },
+        "all_instructional": {
+          "positions": 1171.04,
+          "avg_salary": 59421.88
+        },
+        "teacher_aides": {
+          "positions": 223.77,
+          "avg_salary": 21609.46
+        },
+        "district_wide_instructional": {
+          "positions": 10.37,
+          "avg_salary": 64652.49
+        }
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun",
+      "fiscal_year": "FY2020",
+      "source_file": "table19_2019-20.xlsx",
+      "source_row": 60,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 68.39,
+          "elementary_avg_salary": 135137.97,
+          "secondary_positions": 28.61,
+          "secondary_avg_salary": 155305.23,
+          "total_positions": 97.0,
+          "total_avg_salary": 141086.27
+        },
+        "assistant_principals": {
+          "elementary_positions": 141.61,
+          "elementary_avg_salary": 90188.84,
+          "secondary_positions": 100.39,
+          "secondary_avg_salary": 103945.74,
+          "total_positions": 242.0,
+          "total_avg_salary": 95895.68
+        },
+        "teaching_positions": {
+          "elementary_positions": 4080.05,
+          "elementary_avg_salary": 73455.55,
+          "secondary_positions": 2952.16,
+          "secondary_avg_salary": 78698.37,
+          "total_positions": 7032.21,
+          "total_avg_salary": 75656.51
+        },
+        "all_instructional": {
+          "positions": 7371.21,
+          "avg_salary": 77181.98
+        },
+        "teacher_aides": {
+          "positions": 1416.94,
+          "avg_salary": 26693.68
+        },
+        "district_wide_instructional": {
+          "positions": 63.52,
+          "avg_salary": 86417.83
+        }
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah",
+      "fiscal_year": "FY2020",
+      "source_file": "table19_2019-20.xlsx",
+      "source_row": 89,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 6.0,
+          "elementary_avg_salary": 94611.48,
+          "secondary_positions": 4.0,
+          "secondary_avg_salary": 106097.08,
+          "total_positions": 10.0,
+          "total_avg_salary": 99205.72
+        },
+        "assistant_principals": {
+          "elementary_positions": 9.0,
+          "elementary_avg_salary": 81370.11,
+          "secondary_positions": 7.0,
+          "secondary_avg_salary": 84637.86,
+          "total_positions": 16.0,
+          "total_avg_salary": 82799.75
+        },
+        "teaching_positions": {
+          "elementary_positions": 333.7,
+          "elementary_avg_salary": 52115.93,
+          "secondary_positions": 191.76,
+          "secondary_avg_salary": 53250.72,
+          "total_positions": 525.46,
+          "total_avg_salary": 52530.06
+        },
+        "all_instructional": {
+          "positions": 551.46,
+          "avg_salary": 54254.7
+        },
+        "teacher_aides": {
+          "positions": 115.34,
+          "avg_salary": 16583.36
+        },
+        "district_wide_instructional": {
+          "positions": 18.0,
+          "avg_salary": 47550.22
+        }
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren",
+      "fiscal_year": "FY2020",
+      "source_file": "table19_2019-20.xlsx",
+      "source_row": 97,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 6.35,
+          "elementary_avg_salary": 106762.12,
+          "secondary_positions": 3.65,
+          "secondary_avg_salary": 93990.55,
+          "total_positions": 10.0,
+          "total_avg_salary": 102100.5
+        },
+        "assistant_principals": {
+          "elementary_positions": 5.35,
+          "elementary_avg_salary": 88626.5,
+          "secondary_positions": 7.65,
+          "secondary_avg_salary": 79606.56,
+          "total_positions": 13.0,
+          "total_avg_salary": 83318.61
+        },
+        "teaching_positions": {
+          "elementary_positions": 250.98,
+          "elementary_avg_salary": 52066.87,
+          "secondary_positions": 185.31,
+          "secondary_avg_salary": 45446.43,
+          "total_positions": 436.29,
+          "total_avg_salary": 49254.9
+        },
+        "all_instructional": {
+          "positions": 459.29,
+          "avg_salary": 51369.66
+        },
+        "teacher_aides": {
+          "positions": 110.19,
+          "avg_salary": 19032.35
+        },
+        "district_wide_instructional": {
+          "positions": 4.0,
+          "avg_salary": 47550.89
+        }
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia State Total (School Divisions)",
+      "fiscal_year": "FY2020",
+      "source_file": "table19_2019-20.xlsx",
+      "source_row": 146,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 1370.8300000000002,
+          "elementary_avg_salary": 105428.94860777778,
+          "secondary_positions": 541.4600000000002,
+          "secondary_avg_salary": 110603.3036235363,
+          "total_positions": 1912.2900000000004,
+          "total_avg_salary": 106894.05393533409
+        },
+        "assistant_principals": {
+          "elementary_positions": 1539.5699999999993,
+          "elementary_avg_salary": 85433.8075436648,
+          "secondary_positions": 1321.2900000000006,
+          "secondary_avg_salary": 89674.9620219633,
+          "total_positions": 2860.86,
+          "total_avg_salary": 87392.5874212649
+        },
+        "teaching_positions": {
+          "elementary_positions": 62875.14999999999,
+          "elementary_avg_salary": 60720.677900410556,
+          "secondary_positions": 40617.340000000004,
+          "secondary_avg_salary": 62649.43372658082,
+          "total_positions": 103492.49000000002,
+          "total_avg_salary": 61477.650035959115
+        },
+        "all_instructional": {
+          "positions": 108265.64000000003,
+          "avg_salary": 62964.625430746055
+        },
+        "teacher_aides": {
+          "positions": 19477.380000000005,
+          "avg_salary": 23366.736950760307
+        },
+        "district_wide_instructional": {
+          "positions": 3212.240000000001,
+          "avg_salary": 55434.226710955554
+        }
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke",
+      "fiscal_year": "FY2021",
+      "source_file": "table19_2020-21.xlsx",
+      "source_row": 29,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 2.67,
+          "elementary_avg_salary": 106784.49,
+          "secondary_positions": 1.33,
+          "secondary_avg_salary": 109955.1,
+          "total_positions": 4.0,
+          "total_avg_salary": 107838.72
+        },
+        "assistant_principals": {
+          "elementary_positions": 2.67,
+          "elementary_avg_salary": 75955.07,
+          "secondary_positions": 2.33,
+          "secondary_avg_salary": 86069.96,
+          "total_positions": 5.0,
+          "total_avg_salary": 80668.61
+        },
+        "teaching_positions": {
+          "elementary_positions": 90.73,
+          "elementary_avg_salary": 48464.91,
+          "secondary_positions": 76.58,
+          "secondary_avg_salary": 52351.32,
+          "total_positions": 167.31,
+          "total_avg_salary": 50243.77
+        },
+        "all_instructional": {
+          "positions": 176.31,
+          "avg_salary": 52413.27
+        },
+        "teacher_aides": {
+          "positions": 35.44,
+          "avg_salary": 18523.51
+        },
+        "district_wide_instructional": {
+          "positions": 3.22,
+          "avg_salary": 81342.98
+        }
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier",
+      "fiscal_year": "FY2021",
+      "source_file": "table19_2020-21.xlsx",
+      "source_row": 37,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 11.0,
+          "elementary_avg_salary": 131500.12,
+          "secondary_positions": 8.0,
+          "secondary_avg_salary": 74906.36,
+          "total_positions": 19.0,
+          "total_avg_salary": 107671.17
+        },
+        "assistant_principals": {
+          "elementary_positions": 11.0,
+          "elementary_avg_salary": 106452.08,
+          "secondary_positions": 12.0,
+          "secondary_avg_salary": 79854.16,
+          "total_positions": 23.0,
+          "total_avg_salary": 92574.91
+        },
+        "teaching_positions": {
+          "elementary_positions": 420.21,
+          "elementary_avg_salary": 74911.54,
+          "secondary_positions": 507.79,
+          "secondary_avg_salary": 49854.82,
+          "total_positions": 928.0,
+          "total_avg_salary": 61200.81
+        },
+        "all_instructional": {
+          "positions": 970.0,
+          "avg_salary": 62854.98
+        },
+        "teacher_aides": {
+          "positions": 213.0,
+          "avg_salary": 18424.75
+        },
+        "district_wide_instructional": {
+          "positions": 1.0,
+          "avg_salary": 344422.4
+        }
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick",
+      "fiscal_year": "FY2021",
+      "source_file": "table19_2020-21.xlsx",
+      "source_row": 41,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 14.6,
+          "elementary_avg_salary": 100483.38,
+          "secondary_positions": 5.4,
+          "secondary_avg_salary": 121631.38,
+          "total_positions": 20.0,
+          "total_avg_salary": 106193.34
+        },
+        "assistant_principals": {
+          "elementary_positions": 18.55,
+          "elementary_avg_salary": 87338.79,
+          "secondary_positions": 15.51,
+          "secondary_avg_salary": 83965.28,
+          "total_positions": 34.06,
+          "total_avg_salary": 85802.58
+        },
+        "teaching_positions": {
+          "elementary_positions": 648.87,
+          "elementary_avg_salary": 54517.55,
+          "secondary_positions": 484.89,
+          "secondary_avg_salary": 59991.4,
+          "total_positions": 1133.76,
+          "total_avg_salary": 56858.62
+        },
+        "all_instructional": {
+          "positions": 1187.82,
+          "avg_salary": 58519.25
+        },
+        "teacher_aides": {
+          "positions": 238.91,
+          "avg_salary": 20819.18
+        },
+        "district_wide_instructional": {
+          "positions": 8.3,
+          "avg_salary": 73804.09
+        }
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun",
+      "fiscal_year": "FY2021",
+      "source_file": "table19_2020-21.xlsx",
+      "source_row": 60,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 69.39,
+          "elementary_avg_salary": 139676.53,
+          "secondary_positions": 24.61,
+          "secondary_avg_salary": 180382.16,
+          "total_positions": 94.0,
+          "total_avg_salary": 150333.61
+        },
+        "assistant_principals": {
+          "elementary_positions": 134.95,
+          "elementary_avg_salary": 98309.18,
+          "secondary_positions": 105.05,
+          "secondary_avg_salary": 107594.68,
+          "total_positions": 240.0,
+          "total_avg_salary": 102373.52
+        },
+        "teaching_positions": {
+          "elementary_positions": 4123.51,
+          "elementary_avg_salary": 74388.2,
+          "secondary_positions": 3084.33,
+          "secondary_avg_salary": 78663.34,
+          "total_positions": 7207.84,
+          "total_avg_salary": 76217.59
+        },
+        "all_instructional": {
+          "positions": 7541.84,
+          "avg_salary": 77973.7
+        },
+        "teacher_aides": {
+          "positions": 1501.2,
+          "avg_salary": 24823.6
+        },
+        "district_wide_instructional": {
+          "positions": 68.4,
+          "avg_salary": 79792.72
+        }
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah",
+      "fiscal_year": "FY2021",
+      "source_file": "table19_2020-21.xlsx",
+      "source_row": 89,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 6.0,
+          "elementary_avg_salary": 96068.23,
+          "secondary_positions": 4.0,
+          "secondary_avg_salary": 107532.54,
+          "total_positions": 10.0,
+          "total_avg_salary": 100653.95
+        },
+        "assistant_principals": {
+          "elementary_positions": 8.0,
+          "elementary_avg_salary": 85693.5,
+          "secondary_positions": 6.0,
+          "secondary_avg_salary": 92590.25,
+          "total_positions": 14.0,
+          "total_avg_salary": 88649.25
+        },
+        "teaching_positions": {
+          "elementary_positions": 322.55,
+          "elementary_avg_salary": 52094.26,
+          "secondary_positions": 185.5,
+          "secondary_avg_salary": 56006.2,
+          "total_positions": 508.05,
+          "total_avg_salary": 53522.59
+        },
+        "all_instructional": {
+          "positions": 532.05,
+          "avg_salary": 55332.74
+        },
+        "teacher_aides": {
+          "positions": 106.14,
+          "avg_salary": 17582.59
+        },
+        "district_wide_instructional": {
+          "positions": 17.0,
+          "avg_salary": 61157.02
+        }
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren",
+      "fiscal_year": "FY2021",
+      "source_file": "table19_2020-21.xlsx",
+      "source_row": 97,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 6.28,
+          "elementary_avg_salary": 109676.43,
+          "secondary_positions": 3.72,
+          "secondary_avg_salary": 93413.16,
+          "total_positions": 10.0,
+          "total_avg_salary": 103626.49
+        },
+        "assistant_principals": {
+          "elementary_positions": 5.28,
+          "elementary_avg_salary": 91714.16,
+          "secondary_positions": 7.72,
+          "secondary_avg_salary": 80288.36,
+          "total_positions": 13.0,
+          "total_avg_salary": 84928.99
+        },
+        "teaching_positions": {
+          "elementary_positions": 239.98,
+          "elementary_avg_salary": 54662.01,
+          "secondary_positions": 195.19,
+          "secondary_avg_salary": 55591.17,
+          "total_positions": 435.17,
+          "total_avg_salary": 55078.77
+        },
+        "all_instructional": {
+          "positions": 458.17,
+          "avg_salary": 56985.34
+        },
+        "teacher_aides": {
+          "positions": 113.0,
+          "avg_salary": 18561.79
+        },
+        "district_wide_instructional": {
+          "positions": 6.0,
+          "avg_salary": 68102.52
+        }
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia State Total (School Divisions)",
+      "fiscal_year": "FY2021",
+      "source_file": "table19_2020-21.xlsx",
+      "source_row": 146,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 1379.0999999999995,
+          "elementary_avg_salary": 105365.06800087017,
+          "secondary_positions": 521.4799999999999,
+          "secondary_avg_salary": 114862.88826033598,
+          "total_positions": 1900.58,
+          "total_avg_salary": 107971.07422471032
+        },
+        "assistant_principals": {
+          "elementary_positions": 1529.1100000000001,
+          "elementary_avg_salary": 87152.12150205018,
+          "secondary_positions": 1311.7100000000007,
+          "secondary_avg_salary": 91967.2742145748,
+          "total_positions": 2840.8199999999997,
+          "total_avg_salary": 89375.45278123925
+        },
+        "teaching_positions": {
+          "elementary_positions": 63496.21000000001,
+          "elementary_avg_salary": 60551.730827556516,
+          "secondary_positions": 41134.74,
+          "secondary_avg_salary": 63206.62144916922,
+          "total_positions": 104630.95000000006,
+          "total_avg_salary": 61595.47778243435
+        },
+        "all_instructional": {
+          "positions": 109372.35000000003,
+          "avg_salary": 63122.90623818543
+        },
+        "teacher_aides": {
+          "positions": 19970.44,
+          "avg_salary": 22676.138102615645
+        },
+        "district_wide_instructional": {
+          "positions": 2852.080000000001,
+          "avg_salary": 59777.75270329024
+        }
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke",
+      "fiscal_year": "FY2022",
+      "source_file": "table19_2021-22.xlsx",
+      "source_row": 29,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 2.67,
+          "elementary_avg_salary": 110342.07,
+          "secondary_positions": 1.33,
+          "secondary_avg_salary": 115453.17,
+          "total_positions": 4.0,
+          "total_avg_salary": 112041.51
+        },
+        "assistant_principals": {
+          "elementary_positions": 1.67,
+          "elementary_avg_salary": 84859.89,
+          "secondary_positions": 2.33,
+          "secondary_avg_salary": 90910.44,
+          "total_positions": 4.0,
+          "total_avg_salary": 88384.34
+        },
+        "teaching_positions": {
+          "elementary_positions": 87.87,
+          "elementary_avg_salary": 56111.58,
+          "secondary_positions": 75.98,
+          "secondary_avg_salary": 60113.99,
+          "total_positions": 163.85,
+          "total_avg_salary": 57967.57
+        },
+        "all_instructional": {
+          "positions": 171.85,
+          "avg_salary": 59934.18
+        },
+        "teacher_aides": {
+          "positions": 36.43,
+          "avg_salary": 22209.07
+        },
+        "district_wide_instructional": {
+          "positions": 6.33,
+          "avg_salary": 60379.13
+        }
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier",
+      "fiscal_year": "FY2022",
+      "source_file": "table19_2021-22.xlsx",
+      "source_row": 37,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 18.33,
+          "elementary_avg_salary": 90113.9,
+          "secondary_positions": 4.67,
+          "secondary_avg_salary": 132610.0,
+          "total_positions": 23.0,
+          "total_avg_salary": 98742.46
+        },
+        "assistant_principals": {
+          "elementary_positions": 16.33,
+          "elementary_avg_salary": 67043.0,
+          "secondary_positions": 10.67,
+          "secondary_avg_salary": 90468.37,
+          "total_positions": 27.0,
+          "total_avg_salary": 76300.36
+        },
+        "teaching_positions": {
+          "elementary_positions": 545.03,
+          "elementary_avg_salary": 57401.38,
+          "secondary_positions": 402.56,
+          "secondary_avg_salary": 61690.35,
+          "total_positions": 947.59,
+          "total_avg_salary": 59223.44
+        },
+        "all_instructional": {
+          "positions": 997.59,
+          "avg_salary": 60596.76
+        },
+        "teacher_aides": {
+          "positions": 220.61,
+          "avg_salary": 23013.23
+        },
+        "district_wide_instructional": {
+          "positions": 31.01,
+          "avg_salary": 52665.54
+        }
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick",
+      "fiscal_year": "FY2022",
+      "source_file": "table19_2021-22.xlsx",
+      "source_row": 41,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 14.8,
+          "elementary_avg_salary": 104260.42,
+          "secondary_positions": 5.4,
+          "secondary_avg_salary": 128804.8,
+          "total_positions": 20.2,
+          "total_avg_salary": 110821.79
+        },
+        "assistant_principals": {
+          "elementary_positions": 17.77,
+          "elementary_avg_salary": 89329.57,
+          "secondary_positions": 14.21,
+          "secondary_avg_salary": 95110.33,
+          "total_positions": 31.98,
+          "total_avg_salary": 91898.19
+        },
+        "teaching_positions": {
+          "elementary_positions": 646.3,
+          "elementary_avg_salary": 57620.03,
+          "secondary_positions": 492.91,
+          "secondary_avg_salary": 63186.02,
+          "total_positions": 1139.21,
+          "total_avg_salary": 60028.31
+        },
+        "all_instructional": {
+          "positions": 1191.39,
+          "avg_salary": 61744.98
+        },
+        "teacher_aides": {
+          "positions": 237.8,
+          "avg_salary": 22007.68
+        },
+        "district_wide_instructional": {
+          "positions": 17.8,
+          "avg_salary": 58243.33
+        }
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun",
+      "fiscal_year": "FY2022",
+      "source_file": "table19_2021-22.xlsx",
+      "source_row": 60,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 71.4,
+          "elementary_avg_salary": 154249.54,
+          "secondary_positions": 27.62,
+          "secondary_avg_salary": 185666.05,
+          "total_positions": 99.02,
+          "total_avg_salary": 163012.65
+        },
+        "assistant_principals": {
+          "elementary_positions": 161.64,
+          "elementary_avg_salary": 106635.5,
+          "secondary_positions": 107.36,
+          "secondary_avg_salary": 118581.87,
+          "total_positions": 269.0,
+          "total_avg_salary": 111403.39
+        },
+        "teaching_positions": {
+          "elementary_positions": 3990.49,
+          "elementary_avg_salary": 77984.88,
+          "secondary_positions": 3123.13,
+          "secondary_avg_salary": 81827.35,
+          "total_positions": 7113.62,
+          "total_avg_salary": 79671.86
+        },
+        "all_instructional": {
+          "positions": 7481.64,
+          "avg_salary": 81915.78
+        },
+        "teacher_aides": {
+          "positions": 1623.5,
+          "avg_salary": 27065.29
+        },
+        "district_wide_instructional": {
+          "positions": 426.1,
+          "avg_salary": 72950.31
+        }
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah",
+      "fiscal_year": "FY2022",
+      "source_file": "table19_2021-22.xlsx",
+      "source_row": 89,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 6.0,
+          "elementary_avg_salary": 99483.17,
+          "secondary_positions": 4.0,
+          "secondary_avg_salary": 112909.25,
+          "total_positions": 10.0,
+          "total_avg_salary": 104853.6
+        },
+        "assistant_principals": {
+          "elementary_positions": 9.0,
+          "elementary_avg_salary": 83453.5,
+          "secondary_positions": 7.0,
+          "secondary_avg_salary": 89181.43,
+          "total_positions": 16.0,
+          "total_avg_salary": 85959.47
+        },
+        "teaching_positions": {
+          "elementary_positions": 326.01,
+          "elementary_avg_salary": 54249.07,
+          "secondary_positions": 172.28,
+          "secondary_avg_salary": 59585.77,
+          "total_positions": 498.29,
+          "total_avg_salary": 56094.19
+        },
+        "all_instructional": {
+          "positions": 524.29,
+          "avg_salary": 57935.61
+        },
+        "teacher_aides": {
+          "positions": 126.0,
+          "avg_salary": 16107.64
+        },
+        "district_wide_instructional": {
+          "positions": 9.63,
+          "avg_salary": 100738.65
+        }
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren",
+      "fiscal_year": "FY2022",
+      "source_file": "table19_2021-22.xlsx",
+      "source_row": 97,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 6.28,
+          "elementary_avg_salary": 104327.1,
+          "secondary_positions": 3.72,
+          "secondary_avg_salary": 107378.61,
+          "total_positions": 10.0,
+          "total_avg_salary": 105462.26
+        },
+        "assistant_principals": {
+          "elementary_positions": 5.28,
+          "elementary_avg_salary": 81263.17,
+          "secondary_positions": 7.72,
+          "secondary_avg_salary": 84522.08,
+          "total_positions": 13.0,
+          "total_avg_salary": 83198.46
+        },
+        "teaching_positions": {
+          "elementary_positions": 237.41,
+          "elementary_avg_salary": 58004.87,
+          "secondary_positions": 195.34,
+          "secondary_avg_salary": 60050.03,
+          "total_positions": 432.75,
+          "total_avg_salary": 58928.04
+        },
+        "all_instructional": {
+          "positions": 455.75,
+          "avg_salary": 60641.39
+        },
+        "teacher_aides": {
+          "positions": 161.0,
+          "avg_salary": 21497.25
+        },
+        "district_wide_instructional": {
+          "positions": 6.0,
+          "avg_salary": 130864.56
+        }
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia State Total (School Divisions)",
+      "fiscal_year": "FY2022",
+      "source_file": "table19_2021-22.xlsx",
+      "source_row": 146,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 1389.0799999999995,
+          "elementary_avg_salary": 110795.37497480355,
+          "secondary_positions": 536.88,
+          "secondary_avg_salary": 117062.62740277157,
+          "total_positions": 1925.9600000000003,
+          "total_avg_salary": 112542.43227792889
+        },
+        "assistant_principals": {
+          "elementary_positions": 1629.36,
+          "elementary_avg_salary": 90513.92895369962,
+          "secondary_positions": 1351.7299999999996,
+          "secondary_avg_salary": 95955.05065360687,
+          "total_positions": 2981.09,
+          "total_avg_salary": 92981.12297850789
+        },
+        "teaching_positions": {
+          "elementary_positions": 62957.32000000002,
+          "elementary_avg_salary": 63065.14242378804,
+          "secondary_positions": 40683.87000000001,
+          "secondary_avg_salary": 66865.13394128924,
+          "total_positions": 103641.19000000005,
+          "total_avg_salary": 64556.81152657544
+        },
+        "all_instructional": {
+          "positions": 108548.24,
+          "avg_salary": 66188.83998478462
+        },
+        "teacher_aides": {
+          "positions": 20564.109999999997,
+          "avg_salary": 24807.375505188425
+        },
+        "district_wide_instructional": {
+          "positions": 4291.95,
+          "avg_salary": 65361.899108796686
+        }
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke",
+      "fiscal_year": "FY2023",
+      "source_file": "table19_2022-23.xlsx",
+      "source_row": 29,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 2.67,
+          "elementary_avg_salary": 119573.8,
+          "secondary_positions": 1.33,
+          "secondary_avg_salary": 139097.77,
+          "total_positions": 4.0,
+          "total_avg_salary": 126065.52
+        },
+        "assistant_principals": {
+          "elementary_positions": 1.17,
+          "elementary_avg_salary": 86199.93,
+          "secondary_positions": 2.33,
+          "secondary_avg_salary": 97096.0,
+          "total_positions": 3.5,
+          "total_avg_salary": 93453.6
+        },
+        "teaching_positions": {
+          "elementary_positions": 90.3,
+          "elementary_avg_salary": 59475.72,
+          "secondary_positions": 75.1,
+          "secondary_avg_salary": 64555.16,
+          "total_positions": 165.4,
+          "total_avg_salary": 61782.05
+        },
+        "all_instructional": {
+          "positions": 172.9,
+          "avg_salary": 63910.35
+        },
+        "teacher_aides": {
+          "positions": 34.74,
+          "avg_salary": 22543.38
+        },
+        "district_wide_instructional": {
+          "positions": 6.1,
+          "avg_salary": 65410.75
+        }
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier",
+      "fiscal_year": "FY2023",
+      "source_file": "table19_2022-23.xlsx",
+      "source_row": 37,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 12.0,
+          "elementary_avg_salary": 145278.01,
+          "secondary_positions": 8.0,
+          "secondary_avg_salary": 70162.83,
+          "total_positions": 20.0,
+          "total_avg_salary": 115231.94
+        },
+        "assistant_principals": {
+          "elementary_positions": 10.0,
+          "elementary_avg_salary": 119844.39,
+          "secondary_positions": 13.0,
+          "secondary_avg_salary": 75728.0,
+          "total_positions": 23.0,
+          "total_avg_salary": 94909.04
+        },
+        "teaching_positions": {
+          "elementary_positions": 399.58,
+          "elementary_avg_salary": 91100.86,
+          "secondary_positions": 520.67,
+          "secondary_avg_salary": 49339.55,
+          "total_positions": 920.25,
+          "total_avg_salary": 67472.65
+        },
+        "all_instructional": {
+          "positions": 963.25,
+          "avg_salary": 69119.39
+        },
+        "teacher_aides": {
+          "positions": 222.0,
+          "avg_salary": 26550.51
+        },
+        "district_wide_instructional": {
+          "positions": 25.32,
+          "avg_salary": 74928.62
+        }
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick",
+      "fiscal_year": "FY2023",
+      "source_file": "table19_2022-23.xlsx",
+      "source_row": 41,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 15.03,
+          "elementary_avg_salary": 109554.17,
+          "secondary_positions": 5.94,
+          "secondary_avg_salary": 126023.07,
+          "total_positions": 20.97,
+          "total_avg_salary": 114219.18
+        },
+        "assistant_principals": {
+          "elementary_positions": 17.84,
+          "elementary_avg_salary": 92759.65,
+          "secondary_positions": 13.86,
+          "secondary_avg_salary": 100477.19,
+          "total_positions": 31.7,
+          "total_avg_salary": 96133.95
+        },
+        "teaching_positions": {
+          "elementary_positions": 641.61,
+          "elementary_avg_salary": 60336.4,
+          "secondary_positions": 493.29,
+          "secondary_avg_salary": 65707.57,
+          "total_positions": 1134.9,
+          "total_avg_salary": 62671.01
+        },
+        "all_instructional": {
+          "positions": 1187.57,
+          "avg_salary": 64474.47
+        },
+        "teacher_aides": {
+          "positions": 254.69,
+          "avg_salary": 23514.57
+        },
+        "district_wide_instructional": {
+          "positions": 11.85,
+          "avg_salary": 64482.13
+        }
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun",
+      "fiscal_year": "FY2023",
+      "source_file": "table19_2022-23.xlsx",
+      "source_row": 60,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 67.96,
+          "elementary_avg_salary": 166314.05,
+          "secondary_positions": 31.05,
+          "secondary_avg_salary": 168204.79,
+          "total_positions": 99.01,
+          "total_avg_salary": 166906.99
+        },
+        "assistant_principals": {
+          "elementary_positions": 159.82,
+          "elementary_avg_salary": 110576.01,
+          "secondary_positions": 112.58,
+          "secondary_avg_salary": 117594.98,
+          "total_positions": 272.4,
+          "total_avg_salary": 113476.87
+        },
+        "teaching_positions": {
+          "elementary_positions": 3856.37,
+          "elementary_avg_salary": 81828.89,
+          "secondary_positions": 3202.51,
+          "secondary_avg_salary": 84760.48,
+          "total_positions": 7058.88,
+          "total_avg_salary": 83158.91
+        },
+        "all_instructional": {
+          "positions": 7430.29,
+          "avg_salary": 85386.35
+        },
+        "teacher_aides": {
+          "positions": 1518.6,
+          "avg_salary": 31460.66
+        },
+        "district_wide_instructional": {
+          "positions": 140.04,
+          "avg_salary": 54361.13
+        }
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah",
+      "fiscal_year": "FY2023",
+      "source_file": "table19_2022-23.xlsx",
+      "source_row": 89,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 6.0,
+          "elementary_avg_salary": 102939.18,
+          "secondary_positions": 4.0,
+          "secondary_avg_salary": 116627.76,
+          "total_positions": 10.0,
+          "total_avg_salary": 108414.61
+        },
+        "assistant_principals": {
+          "elementary_positions": 9.0,
+          "elementary_avg_salary": 87585.63,
+          "secondary_positions": 8.0,
+          "secondary_avg_salary": 83832.66,
+          "total_positions": 17.0,
+          "total_avg_salary": 85819.53
+        },
+        "teaching_positions": {
+          "elementary_positions": 308.04,
+          "elementary_avg_salary": 59109.66,
+          "secondary_positions": 166.27,
+          "secondary_avg_salary": 65206.72,
+          "total_positions": 474.31,
+          "total_avg_salary": 61246.99
+        },
+        "all_instructional": {
+          "positions": 501.31,
+          "avg_salary": 63021.16
+        },
+        "teacher_aides": {
+          "positions": 106.3,
+          "avg_salary": 19923.42
+        },
+        "district_wide_instructional": {
+          "positions": 18.0,
+          "avg_salary": 71291.86
+        }
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren",
+      "fiscal_year": "FY2023",
+      "source_file": "table19_2022-23.xlsx",
+      "source_row": 97,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 7.0,
+          "elementary_avg_salary": 103942.48,
+          "secondary_positions": 5.0,
+          "secondary_avg_salary": 101368.27,
+          "total_positions": 12.0,
+          "total_avg_salary": 102869.89
+        },
+        "assistant_principals": {
+          "elementary_positions": 7.25,
+          "elementary_avg_salary": 77696.19,
+          "secondary_positions": 6.4,
+          "secondary_avg_salary": 102834.92,
+          "total_positions": 13.65,
+          "total_avg_salary": 89482.85
+        },
+        "teaching_positions": {
+          "elementary_positions": 250.9,
+          "elementary_avg_salary": 59436.83,
+          "secondary_positions": 176.89,
+          "secondary_avg_salary": 62498.82,
+          "total_positions": 427.79,
+          "total_avg_salary": 60702.95
+        },
+        "all_instructional": {
+          "positions": 453.44,
+          "avg_salary": 62685.24
+        },
+        "teacher_aides": {
+          "positions": 168.27,
+          "avg_salary": 21150.26
+        },
+        "district_wide_instructional": {
+          "positions": 8.0,
+          "avg_salary": 56011.87
+        }
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia State Total (School Divisions)",
+      "fiscal_year": "FY2023",
+      "source_file": "table19_2022-23.xlsx",
+      "source_row": 147,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 1381.5000000000002,
+          "elementary_avg_salary": 116723.23288454578,
+          "secondary_positions": 542.74,
+          "secondary_avg_salary": 119204.85307882223,
+          "total_positions": 1924.2400000000002,
+          "total_avg_salary": 117423.18431692505
+        },
+        "assistant_principals": {
+          "elementary_positions": 1696.6999999999998,
+          "elementary_avg_salary": 94255.38512995819,
+          "secondary_positions": 1417.22,
+          "secondary_avg_salary": 99645.91867882201,
+          "total_positions": 3113.9199999999996,
+          "total_avg_salary": 96708.74679503647
+        },
+        "teaching_positions": {
+          "elementary_positions": 62407.57,
+          "elementary_avg_salary": 66766.81562429047,
+          "secondary_positions": 41221.79999999999,
+          "secondary_avg_salary": 70120.49687446936,
+          "total_positions": 103629.36999999998,
+          "total_avg_salary": 68100.84648599137
+        },
+        "all_instructional": {
+          "positions": 108667.52999999996,
+          "avg_salary": 69793.99924540482
+        },
+        "teacher_aides": {
+          "positions": 21336.210000000006,
+          "avg_salary": 26590.527258589955
+        },
+        "district_wide_instructional": {
+          "positions": 3864.889999999999,
+          "avg_salary": 68513.0897981573
+        }
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke",
+      "fiscal_year": "FY2024",
+      "source_file": "table19_2023-24.xlsx",
+      "source_row": 29,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 2.64,
+          "elementary_avg_salary": 126743.05,
+          "secondary_positions": 1.36,
+          "secondary_avg_salary": 146997.04,
+          "total_positions": 4.0,
+          "total_avg_salary": 133629.41
+        },
+        "assistant_principals": {
+          "elementary_positions": 2.64,
+          "elementary_avg_salary": 77050.86,
+          "secondary_positions": 2.36,
+          "secondary_avg_salary": 102047.69,
+          "total_positions": 5.0,
+          "total_avg_salary": 88849.37
+        },
+        "teaching_positions": {
+          "elementary_positions": 93.59,
+          "elementary_avg_salary": 61682.94,
+          "secondary_positions": 76.48,
+          "secondary_avg_salary": 67966.83,
+          "total_positions": 170.07,
+          "total_avg_salary": 64508.79
+        },
+        "all_instructional": {
+          "positions": 179.07,
+          "avg_salary": 66732.42
+        },
+        "teacher_aides": {
+          "positions": 29.02,
+          "avg_salary": 23420.92
+        },
+        "district_wide_instructional": {
+          "positions": 5.7,
+          "avg_salary": 68836.62
+        }
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier",
+      "fiscal_year": "FY2024",
+      "source_file": "table19_2023-24.xlsx",
+      "source_row": 37,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 15.36,
+          "elementary_avg_salary": 113687.75,
+          "secondary_positions": 4.64,
+          "secondary_avg_salary": 146974.05,
+          "total_positions": 20.0,
+          "total_avg_salary": 121410.17
+        },
+        "assistant_principals": {
+          "elementary_positions": 12.7,
+          "elementary_avg_salary": 93011.69,
+          "secondary_positions": 10.3,
+          "secondary_avg_salary": 100583.02,
+          "total_positions": 23.0,
+          "total_avg_salary": 96402.33
+        },
+        "teaching_positions": {
+          "elementary_positions": 544.99,
+          "elementary_avg_salary": 66978.12,
+          "secondary_positions": 398.17,
+          "secondary_avg_salary": 70445.13,
+          "total_positions": 943.16,
+          "total_avg_salary": 68441.77
+        },
+        "all_instructional": {
+          "positions": 986.16,
+          "avg_salary": 70168.13
+        },
+        "teacher_aides": {
+          "positions": 261.58,
+          "avg_salary": 26004.1
+        },
+        "district_wide_instructional": {
+          "positions": 5.0,
+          "avg_salary": 85877.76
+        }
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick",
+      "fiscal_year": "FY2024",
+      "source_file": "table19_2023-24.xlsx",
+      "source_row": 41,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 16.92,
+          "elementary_avg_salary": 109000.66,
+          "secondary_positions": 6.19,
+          "secondary_avg_salary": 126879.77,
+          "total_positions": 23.11,
+          "total_avg_salary": 113789.57
+        },
+        "assistant_principals": {
+          "elementary_positions": 17.95,
+          "elementary_avg_salary": 95881.55,
+          "secondary_positions": 12.24,
+          "secondary_avg_salary": 104292.18,
+          "total_positions": 30.19,
+          "total_avg_salary": 99291.49
+        },
+        "teaching_positions": {
+          "elementary_positions": 651.61,
+          "elementary_avg_salary": 64173.96,
+          "secondary_positions": 502.37,
+          "secondary_avg_salary": 69381.12,
+          "total_positions": 1153.98,
+          "total_avg_salary": 66440.83
+        },
+        "all_instructional": {
+          "positions": 1207.28,
+          "avg_salary": 68168.67
+        },
+        "teacher_aides": {
+          "positions": 264.98,
+          "avg_salary": 25825.42
+        },
+        "district_wide_instructional": {
+          "positions": 16.99,
+          "avg_salary": 66490.85
+        }
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun",
+      "fiscal_year": "FY2024",
+      "source_file": "table19_2023-24.xlsx",
+      "source_row": 60,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 70.44,
+          "elementary_avg_salary": 168051.57,
+          "secondary_positions": 31.23,
+          "secondary_avg_salary": 186336.26,
+          "total_positions": 101.67,
+          "total_avg_salary": 173668.08
+        },
+        "assistant_principals": {
+          "elementary_positions": 154.48,
+          "elementary_avg_salary": 114026.66,
+          "secondary_positions": 113.25,
+          "secondary_avg_salary": 126714.45,
+          "total_positions": 267.73,
+          "total_avg_salary": 119393.61
+        },
+        "teaching_positions": {
+          "elementary_positions": 3753.26,
+          "elementary_avg_salary": 85575.14,
+          "secondary_positions": 3246.79,
+          "secondary_avg_salary": 89794.36,
+          "total_positions": 7000.05,
+          "total_avg_salary": 87532.12
+        },
+        "all_instructional": {
+          "positions": 7369.45,
+          "avg_salary": 89877.98
+        },
+        "teacher_aides": {
+          "positions": 1516.69,
+          "avg_salary": 31018.77
+        },
+        "district_wide_instructional": {
+          "positions": 95.06,
+          "avg_salary": 74615.59
+        }
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah",
+      "fiscal_year": "FY2024",
+      "source_file": "table19_2023-24.xlsx",
+      "source_row": 89,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 6.0,
+          "elementary_avg_salary": 105670.2,
+          "secondary_positions": 3.75,
+          "secondary_avg_salary": 127139.81,
+          "total_positions": 9.75,
+          "total_avg_salary": 113927.74
+        },
+        "assistant_principals": {
+          "elementary_positions": 10.0,
+          "elementary_avg_salary": 84911.62,
+          "secondary_positions": 7.0,
+          "secondary_avg_salary": 97842.53,
+          "total_positions": 17.0,
+          "total_avg_salary": 90236.11
+        },
+        "teaching_positions": {
+          "elementary_positions": 306.12,
+          "elementary_avg_salary": 61013.18,
+          "secondary_positions": 158.89,
+          "secondary_avg_salary": 67970.45,
+          "total_positions": 465.01,
+          "total_avg_salary": 63390.42
+        },
+        "all_instructional": {
+          "positions": 491.76,
+          "avg_salary": 65320.45
+        },
+        "teacher_aides": {
+          "positions": 114.0,
+          "avg_salary": 19862.23
+        },
+        "district_wide_instructional": {
+          "positions": 19.0,
+          "avg_salary": 61686.25
+        }
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren",
+      "fiscal_year": "FY2024",
+      "source_file": "table19_2023-24.xlsx",
+      "source_row": 97,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 6.34,
+          "elementary_avg_salary": 108797.31,
+          "secondary_positions": 2.66,
+          "secondary_avg_salary": 126179.91,
+          "total_positions": 9.0,
+          "total_avg_salary": 113934.84
+        },
+        "assistant_principals": {
+          "elementary_positions": 5.34,
+          "elementary_avg_salary": 90686.25,
+          "secondary_positions": 6.66,
+          "secondary_avg_salary": 105124.15,
+          "total_positions": 12.0,
+          "total_avg_salary": 98699.29
+        },
+        "teaching_positions": {
+          "elementary_positions": 249.3,
+          "elementary_avg_salary": 63267.31,
+          "secondary_positions": 194.51,
+          "secondary_avg_salary": 66436.82,
+          "total_positions": 443.81,
+          "total_avg_salary": 64656.42
+        },
+        "all_instructional": {
+          "positions": 464.81,
+          "avg_salary": 66489.47
+        },
+        "teacher_aides": {
+          "positions": 133.55,
+          "avg_salary": 25749.92
+        },
+        "district_wide_instructional": {
+          "positions": 15.35,
+          "avg_salary": 32331.52
+        }
+      }
+    },
+    {
+      "division_code": "STATE",
+      "division_name": "Virginia State Total (School Divisions)",
+      "fiscal_year": "FY2024",
+      "source_file": "table19_2023-24.xlsx",
+      "source_row": 147,
+      "metrics": {
+        "principals": {
+          "elementary_positions": 1387.4999999999998,
+          "elementary_avg_salary": 122146.59135135144,
+          "secondary_positions": 544.9300000000001,
+          "secondary_avg_salary": 128345.73035068721,
+          "total_positions": 1932.4299999999996,
+          "total_avg_salary": 123894.69959584567
+        },
+        "assistant_principals": {
+          "elementary_positions": 1742.2199999999996,
+          "elementary_avg_salary": 99800.06529026192,
+          "secondary_positions": 1451.0,
+          "secondary_avg_salary": 105908.12770503102,
+          "total_positions": 3193.2200000000003,
+          "total_avg_salary": 102575.57044300115
+        },
+        "teaching_positions": {
+          "elementary_positions": 63012.36000000001,
+          "elementary_avg_salary": 70190.06073887726,
+          "secondary_positions": 41932.190000000024,
+          "secondary_avg_salary": 74176.26533338704,
+          "total_positions": 104944.55000000002,
+          "total_avg_salary": 71782.80937075817
+        },
+        "all_instructional": {
+          "positions": 110070.2,
+          "avg_salary": 73591.024859953
+        },
+        "teacher_aides": {
+          "positions": 22237.720000000005,
+          "avg_salary": 28113.739521857457
+        },
+        "district_wide_instructional": {
+          "positions": 3787.91,
+          "avg_salary": 70840.65254454303
+        }
+      }
+    }
+  ]
+}
