@@ -1,0 +1,47 @@
+{
+  "enrollment": 14447,
+  "teachers_fte": 1026.0,
+  "student_teacher_ratio": 14.08,
+  "total_staff_fte": 2287.5,
+  "staff_breakdown": {
+    "instructional_aides": 361.0,
+    "instructional_coordinators": 107.0,
+    "guidance_counselors": 54.0,
+    "school_psychologists": 8.0,
+    "librarians": 22.0,
+    "district_administrators": 36.0,
+    "district_admin_support": 80.0,
+    "school_administrators": 49.0,
+    "school_admin_support": 79.0
+  },
+  "revenue": {
+    "total_revenue": 230528000,
+    "federal_revenue": 18481000,
+    "local_revenue": 120888000,
+    "state_revenue": 91159000
+  },
+  "expenditures": {
+    "total_expenditures": 221408000,
+    "total_current_expenditures": 193387000,
+    "instructional_expenditures": 112209000,
+    "student_staff_support": 26355000,
+    "administration": 20209000,
+    "operations_food_other": 34614000,
+    "capital_outlay": 18080000
+  },
+  "per_pupil": {
+    "total_revenue_pp": 16615,
+    "total_expenditures_pp": 15957,
+    "instructional_pp": 8087,
+    "administration_pp": 1457
+  },
+  "nces_id": "5101470",
+  "district_name": "Frederick County Public Schools",
+  "vdoe_division_code": "069",
+  "source_url": "https://nces.ed.gov/ccd/districtsearch/district_detail.asp?ID2=5101470",
+  "download_date": "2026-01-28T22:45:33.386008",
+  "data_year": {
+    "directory": "2024-2025",
+    "fiscal": "2021-2022"
+  }
+}

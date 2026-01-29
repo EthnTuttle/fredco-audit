@@ -1,0 +1,47 @@
+{
+  "enrollment": 5703,
+  "teachers_fte": 421.37,
+  "student_teacher_ratio": 13.53,
+  "total_staff_fte": 992.57,
+  "staff_breakdown": {
+    "instructional_aides": 132.0,
+    "instructional_coordinators": 50.0,
+    "guidance_counselors": 19.0,
+    "school_psychologists": 4.0,
+    "librarians": 9.0,
+    "district_administrators": 10.0,
+    "district_admin_support": 27.0,
+    "school_administrators": 24.5,
+    "school_admin_support": 26.2
+  },
+  "revenue": {
+    "total_revenue": 83026000,
+    "federal_revenue": 10251000,
+    "local_revenue": 30798000,
+    "state_revenue": 41977000
+  },
+  "expenditures": {
+    "total_expenditures": 82358000,
+    "total_current_expenditures": 77230000,
+    "instructional_expenditures": 46839000,
+    "student_staff_support": 9687000,
+    "administration": 7181000,
+    "operations_food_other": 13523000,
+    "capital_outlay": 3733000
+  },
+  "per_pupil": {
+    "total_revenue_pp": 14628,
+    "total_expenditures_pp": 14510,
+    "instructional_pp": 8252,
+    "administration_pp": 1265
+  },
+  "nces_id": "5103510",
+  "district_name": "Shenandoah County Public Schools",
+  "vdoe_division_code": "171",
+  "source_url": "https://nces.ed.gov/ccd/districtsearch/district_detail.asp?ID2=5103510",
+  "download_date": "2026-01-28T22:45:58.222724",
+  "data_year": {
+    "directory": "2024-2025",
+    "fiscal": "2021-2022"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "download_date": "2026-01-28T22:46:09.505706",
+  "source": "NCES Common Core of Data",
+  "source_url": "https://nces.ed.gov/ccd/districtsearch/",
+  "data_years": {
+    "directory_data": "2024-2025",
+    "fiscal_data": "2021-2022"
+  },
+  "districts_downloaded": 6,
+  "files_created": [
+    "all_districts.json",
+    "frederick_county_public_schools.json",
+    "clarke_county_public_schools.json",
+    "fauquier_county_public_schools.json",
+    "shenandoah_county_public_schools.json",
+    "warren_county_public_schools.json",
+    "loudoun_county_public_schools.json"
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "source": "Frederick County Public Schools (FCPS) Virginia",
+  "division_code": "069",
+  "download_date": "2026-01-28",
+  "source_urls": {
+    "budget_page": "https://www.frederickcountyschoolsva.net/about/budget",
+    "financial_reports_page": "https://www.frederickcountyschoolsva.net/fs/pages/784"
+  },
+  "files": {
+    "budgets": [
+      {
+        "filename": "FY26_Approved_Budget_with_Addendum.pdf",
+        "description": "FY26 School Board Approved Budget with Line Item Detail",
+        "fiscal_year": "FY2026",
+        "document_type": "approved_budget",
+        "source_url": "https://go.boarddocs.com/va/fcpsva/Board.nsf/files/DKYN485E0FBF/$file/FY%202026%20Annual%20Budget%20Document%20with%20Addendum.pdf",
+        "file_size_bytes": 58219539,
+        "download_status": "success"
+      },
+      {
+        "filename": "FY26_Superintendent_Proposed_Budget.pdf",
+        "description": "Superintendent's FY26 Proposed Budget Document",
+        "fiscal_year": "FY2026",
+        "document_type": "proposed_budget",
+        "source_url": "https://go.boarddocs.com/va/fcpsva/Board.nsf/files/DDJSYV750471/$file/FY26%20SUPERINTENDENT'S%20PROPOSED%20BUDGET%20DOCUMENT.pdf",
+        "file_size_bytes": 7437844,
+        "download_status": "success"
+      },
+      {
+        "filename": "FY26_Superintendent_Proposed_Budget_Presentation.pdf",
+        "description": "Superintendent's FY26 Proposed Budget Presentation",
+        "fiscal_year": "FY2026",
+        "document_type": "budget_presentation",
+        "source_url": "https://go.boarddocs.com/va/fcpsva/Board.nsf/files/DCYSK272FC2A/$file/Superintendents%20FY26%20Proposed%20Budget%20Presentation.pdf",
+        "file_size_bytes": 13719099,
+        "download_status": "success"
+      },
+      {
+        "filename": "FY26-29_Capital_Asset_Plan.pdf",
+        "description": "FY2026-29 Capital Asset Plan",
+        "fiscal_year": "FY2026-FY2029",
+        "document_type": "capital_asset_plan",
+        "source_url": "https://go.boarddocs.com/va/fcpsva/Board.nsf/files/DCYHUM4A3187/$file/Capital%20Asset%20Plan%20(CAP).pdf",
+        "file_size_bytes": 3704890,
+        "download_status": "success"
+      },
+      {
+        "filename": "FY25_Approved_Budget_with_Addendum.pdf",
+        "description": "FY25 School Board Approved Budget with Line Item Detail",
+        "fiscal_year": "FY2025",
+        "document_type": "approved_budget",
+        "source_url": "https://go.boarddocs.com/va/fcpsva/Board.nsf/files/D8HHMH49291A/$file/FY25%20APPROVED%20BUDGET%20with%20Addendum%20for%20Website.pdf",
+        "file_size_bytes": 39181625,
+        "download_status": "success"
+      },
+      {
+        "filename": "FY25_Approved_Budget_Summary.pdf",
+        "description": "School Board's Approved FY25 Budget Summary",
+        "fiscal_year": "FY2025",
+        "document_type": "budget_summary",
+        "source_url": "https://www.frederickcountyschoolsva.net/fs/resource-manager/view/ed6f162e-8ac7-43ad-bd93-e5c090bd664a",
+        "file_size_bytes": 89711,
+        "download_status": "success"
+      },
+      {
+        "filename": "FY25_Capital_Asset_Plan.pdf",
+        "description": "FY25 Capital Asset Plan",
+        "fiscal_year": "FY2025",
+        "document_type": "capital_asset_plan",
+        "source_url": "https://go.boarddocs.com/va/fcpsva/Board.nsf/files/CZCUE2721C5E/$file/Capital%20Asset%20Plan.pdf",
+        "file_size_bytes": 3337037,
+        "download_status": "success"
+      }
+    ],
+    "acfr_financial_reports": [
+      {
+        "filename": "FY25_Year-End_Financial_Reports.pdf",
+        "description": "FY25 Year-end Financial Statement",
+        "fiscal_year": "FY2025",
+        "document_type": "year_end_financial_report",
+        "source_url": "https://go.boarddocs.com/va/fcpsva/Board.nsf/files/DKYN595E37F5/$file/FY2025%20YEAR-END%20FINANCIAL%20REPORTS.pdf",
+        "file_size_bytes": 5109273,
+        "download_status": "success"
+      },
+      {
+        "filename": "FY24_Year-End_Financial_Statements.pdf",
+        "description": "FY24 Year-end Financial Statement",
+        "fiscal_year": "FY2024",
+        "document_type": "year_end_financial_report",
+        "source_url": "https://go.boarddocs.com/va/fcpsva/Board.nsf/files/D8KJ2J4B1248/$file/FCPS%20FY2024%20Financial%20Statements.pdf",
+        "file_size_bytes": 2515508,
+        "download_status": "success"
+      },
+      {
+        "filename": "FY25_Activity_Fund_Audit.pdf",
+        "description": "Activity Fund Audit Report - June 30, 2025",
+        "fiscal_year": "FY2025",
+        "document_type": "activity_fund_audit",
+        "source_url": "https://go.boarddocs.com/va/fcpsva/Board.nsf/files/DKYN4S5E2712/$file/Frederick%20County%20Public%20Schools%20Student%20Activity%20Funds%20Financial%20Report%2006.30.2025.pdf",
+        "file_size_bytes": 1365655,
+        "download_status": "success"
+      },
+      {
+        "filename": "FY24_Activity_Fund_Audit.pdf",
+        "description": "Activity Fund Audit Report - June 30, 2024",
+        "fiscal_year": "FY2024",
+        "document_type": "activity_fund_audit",
+        "source_url": "https://www.frederickcountyschoolsva.net/fs/resource-manager/view/895fbf4d-fe8e-49fe-91ba-7afab25693a7",
+        "file_size_bytes": 336874,
+        "download_status": "success"
+      },
+      {
+        "filename": "Internal_Audit_Aug24.pdf",
+        "description": "Internal Audit - August 31, 2024",
+        "fiscal_year": "FY2025",
+        "document_type": "internal_audit",
+        "source_url": "https://www.frederickcountyschoolsva.net/fs/resource-manager/view/e38387af-06ee-4424-a4d9-7e81ce78a919",
+        "file_size_bytes": 452751,
+        "download_status": "success"
+      },
+      {
+        "filename": "FY26_Oct25_Monthly_Financial_Report.pdf",
+        "description": "FCPS Statement of Revenues and Expenditures - October 31, 2025",
+        "fiscal_year": "FY2026",
+        "document_type": "monthly_financial_report",
+        "source_url": "https://www.frederickcountyschoolsva.net/fs/resource-manager/view/4c936065-0e2f-4c3d-b812-08b3c6619db5",
+        "file_size_bytes": 1124894,
+        "download_status": "success"
+      },
+      {
+        "filename": "FY26_Sept25_Monthly_Financial_Report.pdf",
+        "description": "FCPS Statement of Revenues and Expenditures - September 30, 2025",
+        "fiscal_year": "FY2026",
+        "document_type": "monthly_financial_report",
+        "source_url": "https://www.frederickcountyschoolsva.net/fs/resource-manager/view/e31a2632-a14b-4cab-ae7c-33a5c5701b8c",
+        "file_size_bytes": 1698361,
+        "download_status": "success"
+      },
+      {
+        "filename": "FY26_Aug25_Monthly_Financial_Report.pdf",
+        "description": "FCPS Statement of Revenues and Expenditures - August 31, 2025",
+        "fiscal_year": "FY2026",
+        "document_type": "monthly_financial_report",
+        "source_url": "https://www.frederickcountyschoolsva.net/fs/resource-manager/view/1b586c8f-c4cb-40af-9ccb-46ee41adf79d",
+        "file_size_bytes": 1123209,
+        "download_status": "success"
+      }
+    ]
+  },
+  "online_resources": [
+    {
+      "description": "FY26 School Board Approved Budget (Full Document - online version)",
+      "url": "https://public_schools-frederick-county-va-cleardoc.cleargov.com/15994/559686/d",
+      "type": "interactive_budget_book"
+    },
+    {
+      "description": "FY25 School Board Approved Budget (Full Document - online version)",
+      "url": "https://public_schools-frederick-county-va-budget-book.cleargov.com/18165/executive-summary/introduction",
+      "type": "interactive_budget_book"
+    },
+    {
+      "description": "Budget Town Hall Meeting Recording",
+      "url": "https://youtu.be/UJKcdjRzf6w",
+      "type": "video"
+    }
+  ],
+  "notes": [
+    "FCPS is a component unit of Frederick County Government - the full ACFR is published by the County",
+    "Historical budgets prior to FY2025 are available in ClearGov interactive format but not as direct PDF downloads",
+    "BoardDocs contains additional historical meeting materials that may include budget presentations"
+  ],
+  "total_files_downloaded": 15,
+  "total_size_bytes": 128690231
+}

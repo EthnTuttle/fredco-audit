@@ -1,0 +1,84 @@
+{
+  "source": "Virginia Public Access Project (VPAP)",
+  "source_url": "https://www.vpap.org/visuals/visual/back-to-school-spending-on-teaching-fy2024",
+  "title": "Back to School 2025: Spending on Teaching",
+  "fiscal_year": "FY2024",
+  "downloaded_date": "2026-01-28",
+  "downloaded_timestamp": "2026-01-28T22:20:36.289100",
+  "description": "VPAP visualization of Virginia school division instructional spending per pupil for FY2024",
+  "files": [
+    {
+      "filename": "back-to-school-spending-fy2024.html",
+      "type": "HTML",
+      "description": "Full webpage with interactive visualization",
+      "size_bytes": 346406,
+      "url": "https://www.vpap.org/visuals/visual/back-to-school-spending-on-teaching-fy2024"
+    },
+    {
+      "filename": "school_spending_by_district_2025.json",
+      "type": "TopoJSON",
+      "description": "Geographic data with embedded spending metrics per district",
+      "size_bytes": 146590,
+      "url": "https://vpap-production.s3.amazonaws.com/media/visuals/custom/datasets/school_spending_by_district_2025.json"
+    },
+    {
+      "filename": "instructional_spending_extracted.json",
+      "type": "JSON",
+      "description": "Extracted district spending data (derived from TopoJSON)",
+      "size_bytes": 30332,
+      "url": null
+    }
+  ],
+  "data_fields": {
+    "sp_ins_pupil": "Instructional spending per pupil ($)",
+    "sp_oth_pupil": "Other spending per pupil ($)",
+    "sp_ins_tot": "Total instructional spending ($)",
+    "sp_oth_tot": "Total other spending ($)",
+    "students": "Enrollment count"
+  },
+  "target_districts": {
+    "Frederick County": {
+      "found": true,
+      "geoid": 5101680,
+      "students": 14172,
+      "instructional_per_pupil": 12731
+    },
+    "Clarke County": {
+      "found": true,
+      "geoid": 5100420,
+      "students": 1921,
+      "instructional_per_pupil": 11829
+    },
+    "Fauquier County": {
+      "found": true,
+      "geoid": 5101200,
+      "students": 10845,
+      "instructional_per_pupil": 12199
+    },
+    "Shenandoah County": {
+      "found": true,
+      "geoid": 5103480,
+      "students": 5691,
+      "instructional_per_pupil": 11357
+    },
+    "Warren County": {
+      "found": true,
+      "geoid": 5103870,
+      "students": 5132,
+      "instructional_per_pupil": null,
+      "note": "Spending data not available"
+    },
+    "Loudoun County": {
+      "found": true,
+      "geoid": 5102280,
+      "students": 81693,
+      "instructional_per_pupil": 15875
+    }
+  },
+  "notes": [
+    "Data format is TopoJSON with district spending metrics in geometry properties",
+    "Warren County has null spending values - may need supplemental data source",
+    "FY2024 data appears to be labeled as 2025 in the source file name",
+    "No direct CSV/XLSX download available - data embedded in visualization"
+  ]
+}

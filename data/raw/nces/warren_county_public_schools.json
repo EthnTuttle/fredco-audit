@@ -1,0 +1,47 @@
+{
+  "enrollment": 5779,
+  "teachers_fte": 473.28,
+  "student_teacher_ratio": 12.21,
+  "total_staff_fte": 1030.11,
+  "staff_breakdown": {
+    "instructional_aides": 175.23,
+    "instructional_coordinators": 30.0,
+    "guidance_counselors": 18.47,
+    "school_psychologists": 3.0,
+    "librarians": 10.0,
+    "district_administrators": 9.0,
+    "district_admin_support": 20.0,
+    "school_administrators": 24.25,
+    "school_admin_support": 30.24
+  },
+  "revenue": {
+    "total_revenue": 82848000,
+    "federal_revenue": 16310000,
+    "local_revenue": 19220000,
+    "state_revenue": 47318000
+  },
+  "expenditures": {
+    "total_expenditures": 78081000,
+    "total_current_expenditures": 67071000,
+    "instructional_expenditures": 45020000,
+    "student_staff_support": 4455000,
+    "administration": 4848000,
+    "operations_food_other": 12748000,
+    "capital_outlay": 6132000
+  },
+  "per_pupil": {
+    "total_revenue_pp": 14371,
+    "total_expenditures_pp": 13544,
+    "instructional_pp": 7809,
+    "administration_pp": 841
+  },
+  "nces_id": "5104080",
+  "district_name": "Warren County Public Schools",
+  "vdoe_division_code": "187",
+  "source_url": "https://nces.ed.gov/ccd/districtsearch/district_detail.asp?ID2=5104080",
+  "download_date": "2026-01-28T22:46:04.004652",
+  "data_year": {
+    "directory": "2024-2025",
+    "fiscal": "2021-2022"
+  }
+}

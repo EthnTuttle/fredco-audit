@@ -1,0 +1,1189 @@
+{
+  "fiscal_year": "FY2024",
+  "source": "VPAP",
+  "source_url": "https://www.vpap.org/visuals/visual/back-to-school-spending-on-teaching-fy2024",
+  "data_url": "https://vpap-production.s3.amazonaws.com/media/visuals/custom/datasets/school_spending_by_district_2025.json",
+  "extracted_date": "2026-01-28T22:20:20.999917",
+  "total_districts": 131,
+  "districts": [
+    {
+      "geoid": "5102100",
+      "name": "King George",
+      "students": 4543,
+      "instructional_per_pupil": 10843,
+      "other_per_pupil": 3696,
+      "instructional_total": 49257649,
+      "other_total": 16790416
+    },
+    {
+      "geoid": "5100036",
+      "name": "Williamsburg-James City",
+      "students": 11415,
+      "instructional_per_pupil": 12501,
+      "other_per_pupil": 3990,
+      "instructional_total": 142696343,
+      "other_total": 45547174
+    },
+    {
+      "geoid": "5102220",
+      "name": "Lexington",
+      "students": 511,
+      "instructional_per_pupil": 13900,
+      "other_per_pupil": 4112,
+      "instructional_total": 7102920,
+      "other_total": 2101306
+    },
+    {
+      "geoid": "5100060",
+      "name": "Accomack",
+      "students": 4726,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5100090",
+      "name": "Albemarle",
+      "students": 13821,
+      "instructional_per_pupil": 15266,
+      "other_per_pupil": 5216,
+      "instructional_total": 210986608,
+      "other_total": 72091605
+    },
+    {
+      "geoid": "5100120",
+      "name": "Alexandria",
+      "students": 16415,
+      "instructional_per_pupil": 16733,
+      "other_per_pupil": 5901,
+      "instructional_total": 274679229,
+      "other_total": 96868279
+    },
+    {
+      "geoid": "5100180",
+      "name": "Amelia",
+      "students": 1606,
+      "instructional_per_pupil": 9804,
+      "other_per_pupil": 6397,
+      "instructional_total": 15745322,
+      "other_total": 10273559
+    },
+    {
+      "geoid": "5100210",
+      "name": "Amherst",
+      "students": 3965,
+      "instructional_per_pupil": 11511,
+      "other_per_pupil": 4604,
+      "instructional_total": 45639669,
+      "other_total": 18254398
+    },
+    {
+      "geoid": "5100240",
+      "name": "Appomattox",
+      "students": 2372,
+      "instructional_per_pupil": 9535,
+      "other_per_pupil": 3383,
+      "instructional_total": 22617004,
+      "other_total": 8023441
+    },
+    {
+      "geoid": "5100270",
+      "name": "Arlington",
+      "students": 27534,
+      "instructional_per_pupil": 19465,
+      "other_per_pupil": 6158,
+      "instructional_total": 535951090,
+      "other_total": 169553385
+    },
+    {
+      "geoid": "5100300",
+      "name": "Augusta",
+      "students": 10139,
+      "instructional_per_pupil": 11243,
+      "other_per_pupil": 3805,
+      "instructional_total": 113994886,
+      "other_total": 38580664
+    },
+    {
+      "geoid": "5100330",
+      "name": "Bath",
+      "students": 509,
+      "instructional_per_pupil": 15993,
+      "other_per_pupil": 9300,
+      "instructional_total": 8140534,
+      "other_total": 4733800
+    },
+    {
+      "geoid": "5100360",
+      "name": "Bedford",
+      "students": 9061,
+      "instructional_per_pupil": 10223,
+      "other_per_pupil": 4838,
+      "instructional_total": 92629890,
+      "other_total": 43841373
+    },
+    {
+      "geoid": "5100390",
+      "name": "Bland",
+      "students": 793,
+      "instructional_per_pupil": 10528,
+      "other_per_pupil": 4443,
+      "instructional_total": 8349097,
+      "other_total": 3523511
+    },
+    {
+      "geoid": "5100420",
+      "name": "Botetourt",
+      "students": 4488,
+      "instructional_per_pupil": 11871,
+      "other_per_pupil": 4555,
+      "instructional_total": 53278141,
+      "other_total": 20444939
+    },
+    {
+      "geoid": "5100450",
+      "name": "Bristol",
+      "students": 2154,
+      "instructional_per_pupil": 14159,
+      "other_per_pupil": 4234,
+      "instructional_total": 30498186,
+      "other_total": 9119779
+    },
+    {
+      "geoid": "5100480",
+      "name": "Brunswick",
+      "students": 1395,
+      "instructional_per_pupil": 15146,
+      "other_per_pupil": 6553,
+      "instructional_total": 21128990,
+      "other_total": 9141805
+    },
+    {
+      "geoid": "5100510",
+      "name": "Buchanan",
+      "students": 2378,
+      "instructional_per_pupil": 11635,
+      "other_per_pupil": 6985,
+      "instructional_total": 27668491,
+      "other_total": 16611316
+    },
+    {
+      "geoid": "5100540",
+      "name": "Buckingham",
+      "students": 1966,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5100560",
+      "name": "Buena Vista",
+      "students": 856,
+      "instructional_per_pupil": 12470,
+      "other_per_pupil": 6555,
+      "instructional_total": 10674464,
+      "other_total": 5610680
+    },
+    {
+      "geoid": "5100600",
+      "name": "Campbell",
+      "students": 7896,
+      "instructional_per_pupil": 11103,
+      "other_per_pupil": 3629,
+      "instructional_total": 87667025,
+      "other_total": 28650868
+    },
+    {
+      "geoid": "5100660",
+      "name": "Caroline",
+      "students": 4564,
+      "instructional_per_pupil": 10562,
+      "other_per_pupil": 4705,
+      "instructional_total": 48203527,
+      "other_total": 21474307
+    },
+    {
+      "geoid": "5100690",
+      "name": "Carroll",
+      "students": 3442,
+      "instructional_per_pupil": 11504,
+      "other_per_pupil": 9283,
+      "instructional_total": 39596030,
+      "other_total": 31951913
+    },
+    {
+      "geoid": "5100720",
+      "name": "Charles City",
+      "students": 530,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5100750",
+      "name": "Charlotte",
+      "students": 1705,
+      "instructional_per_pupil": 11524,
+      "other_per_pupil": 6024,
+      "instructional_total": 19648090,
+      "other_total": 10270848
+    },
+    {
+      "geoid": "5100780",
+      "name": "Charlottesville",
+      "students": 4433,
+      "instructional_per_pupil": 18495,
+      "other_per_pupil": 12241,
+      "instructional_total": 81987334,
+      "other_total": 54265705
+    },
+    {
+      "geoid": "5100810",
+      "name": "Chesapeake",
+      "students": 40640,
+      "instructional_per_pupil": 13829,
+      "other_per_pupil": 3645,
+      "instructional_total": 562029125,
+      "other_total": 148146434
+    },
+    {
+      "geoid": "5100840",
+      "name": "Chesterfield",
+      "students": 64132,
+      "instructional_per_pupil": 11019,
+      "other_per_pupil": 3494,
+      "instructional_total": 706679843,
+      "other_total": 224099374
+    },
+    {
+      "geoid": "5100870",
+      "name": "Clarke",
+      "students": 1921,
+      "instructional_per_pupil": 11829,
+      "other_per_pupil": 4106,
+      "instructional_total": 22723942,
+      "other_total": 7887384
+    },
+    {
+      "geoid": "5100930",
+      "name": "Colonial Beach",
+      "students": 605,
+      "instructional_per_pupil": 13470,
+      "other_per_pupil": 5692,
+      "instructional_total": 8149178,
+      "other_total": 3443954
+    },
+    {
+      "geoid": "5100960",
+      "name": "Colonial Heights",
+      "students": 2931,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5101020",
+      "name": "Craig",
+      "students": 470,
+      "instructional_per_pupil": 12952,
+      "other_per_pupil": 6115,
+      "instructional_total": 6087507,
+      "other_total": 2873887
+    },
+    {
+      "geoid": "5101050",
+      "name": "Culpeper",
+      "students": 8368,
+      "instructional_per_pupil": 10892,
+      "other_per_pupil": 3089,
+      "instructional_total": 91140071,
+      "other_total": 25845287
+    },
+    {
+      "geoid": "5101080",
+      "name": "Cumberland",
+      "students": 1233,
+      "instructional_per_pupil": 12620,
+      "other_per_pupil": 6300,
+      "instructional_total": 15560770,
+      "other_total": 7767767
+    },
+    {
+      "geoid": "5101110",
+      "name": "Danville",
+      "students": 5580,
+      "instructional_per_pupil": 14959,
+      "other_per_pupil": 7493,
+      "instructional_total": 83473434,
+      "other_total": 41812288
+    },
+    {
+      "geoid": "5101140",
+      "name": "Dickenson",
+      "students": 1883,
+      "instructional_per_pupil": 10792,
+      "other_per_pupil": 8577,
+      "instructional_total": 20320466,
+      "other_total": 16150603
+    },
+    {
+      "geoid": "5101170",
+      "name": "Dinwiddie",
+      "students": 4258,
+      "instructional_per_pupil": 11363,
+      "other_per_pupil": 4176,
+      "instructional_total": 48382399,
+      "other_total": 17780256
+    },
+    {
+      "geoid": "5101200",
+      "name": "Essex",
+      "students": 1163,
+      "instructional_per_pupil": 12217,
+      "other_per_pupil": 5987,
+      "instructional_total": 14208408,
+      "other_total": 6962417
+    },
+    {
+      "geoid": "5101260",
+      "name": "Fairfax",
+      "students": 180947,
+      "instructional_per_pupil": 16313,
+      "other_per_pupil": 4488,
+      "instructional_total": 2951788906,
+      "other_total": 812105584
+    },
+    {
+      "geoid": "5101290",
+      "name": "Falls Church",
+      "students": 2616,
+      "instructional_per_pupil": 18367,
+      "other_per_pupil": 6742,
+      "instructional_total": 48049047,
+      "other_total": 17636895
+    },
+    {
+      "geoid": "5101320",
+      "name": "Fauquier",
+      "students": 10845,
+      "instructional_per_pupil": 12199,
+      "other_per_pupil": 4793,
+      "instructional_total": 132301294,
+      "other_total": 51975073
+    },
+    {
+      "geoid": "5101350",
+      "name": "Floyd",
+      "students": 1713,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5101380",
+      "name": "Fluvanna",
+      "students": 3372,
+      "instructional_per_pupil": 12872,
+      "other_per_pupil": 3661,
+      "instructional_total": 43404270,
+      "other_total": 12345791
+    },
+    {
+      "geoid": "5101410",
+      "name": "Franklin City",
+      "students": 1015,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5101440",
+      "name": "Franklin County",
+      "students": 6160,
+      "instructional_per_pupil": 11668,
+      "other_per_pupil": 5076,
+      "instructional_total": 71877446,
+      "other_total": 31271026
+    },
+    {
+      "geoid": "5101470",
+      "name": "Frederick",
+      "students": 14172,
+      "instructional_per_pupil": 12731,
+      "other_per_pupil": 3988,
+      "instructional_total": 180416887,
+      "other_total": 56521080
+    },
+    {
+      "geoid": "5101510",
+      "name": "Fredericksburg",
+      "students": 3578,
+      "instructional_per_pupil": 13678,
+      "other_per_pupil": 5585,
+      "instructional_total": 48941272,
+      "other_total": 19983103
+    },
+    {
+      "geoid": "5101560",
+      "name": "Galax",
+      "students": 1417,
+      "instructional_per_pupil": 11369,
+      "other_per_pupil": 4851,
+      "instructional_total": 16110269,
+      "other_total": 6874328
+    },
+    {
+      "geoid": "5101590",
+      "name": "Giles",
+      "students": 3499,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5101620",
+      "name": "Gloucester",
+      "students": 4990,
+      "instructional_per_pupil": 12146,
+      "other_per_pupil": 4720,
+      "instructional_total": 60608798,
+      "other_total": 23551019
+    },
+    {
+      "geoid": "5101650",
+      "name": "Goochland",
+      "students": 2572,
+      "instructional_per_pupil": 12153,
+      "other_per_pupil": 7058,
+      "instructional_total": 31256757,
+      "other_total": 18152269
+    },
+    {
+      "geoid": "5101690",
+      "name": "Grayson",
+      "students": 1576,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5101710",
+      "name": "Greene",
+      "students": 2818,
+      "instructional_per_pupil": 11608,
+      "other_per_pupil": 4746,
+      "instructional_total": 32709935,
+      "other_total": 13374324
+    },
+    {
+      "geoid": "5101740",
+      "name": "Greensville-Emporia",
+      "students": 2027,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5101770",
+      "name": "Halifax",
+      "students": 4576,
+      "instructional_per_pupil": 12755,
+      "other_per_pupil": 4215,
+      "instructional_total": 58365088,
+      "other_total": 19287073
+    },
+    {
+      "geoid": "5101800",
+      "name": "Hampton",
+      "students": 19661,
+      "instructional_per_pupil": 11733,
+      "other_per_pupil": 5654,
+      "instructional_total": 230687278,
+      "other_total": 111153381
+    },
+    {
+      "geoid": "5101830",
+      "name": "Hanover",
+      "students": 16820,
+      "instructional_per_pupil": 11520,
+      "other_per_pupil": 3257,
+      "instructional_total": 193769430,
+      "other_total": 54780076
+    },
+    {
+      "geoid": "5101860",
+      "name": "Harrisonburg",
+      "students": 6787,
+      "instructional_per_pupil": 12951,
+      "other_per_pupil": 4231,
+      "instructional_total": 87897620,
+      "other_total": 28715250
+    },
+    {
+      "geoid": "5101890",
+      "name": "Henrico",
+      "students": 50464,
+      "instructional_per_pupil": 11163,
+      "other_per_pupil": 4623,
+      "instructional_total": 563307919,
+      "other_total": 233275356
+    },
+    {
+      "geoid": "5101920",
+      "name": "Henry",
+      "students": 6938,
+      "instructional_per_pupil": 12448,
+      "other_per_pupil": 4328,
+      "instructional_total": 86362457,
+      "other_total": 30025658
+    },
+    {
+      "geoid": "5101950",
+      "name": "Highland",
+      "students": 212,
+      "instructional_per_pupil": 18232,
+      "other_per_pupil": 7780,
+      "instructional_total": 3865218,
+      "other_total": 1649465
+    },
+    {
+      "geoid": "5101980",
+      "name": "Hopewell",
+      "students": 3946,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5102010",
+      "name": "Isle of Wight",
+      "students": 5592,
+      "instructional_per_pupil": 10954,
+      "other_per_pupil": 3957,
+      "instructional_total": 61257016,
+      "other_total": 22125474
+    },
+    {
+      "geoid": "5102070",
+      "name": "King and Queen",
+      "students": 855,
+      "instructional_per_pupil": 11659,
+      "other_per_pupil": 6324,
+      "instructional_total": 9968523,
+      "other_total": 5406895
+    },
+    {
+      "geoid": "5102120",
+      "name": "King William",
+      "students": 2106,
+      "instructional_per_pupil": 9809,
+      "other_per_pupil": 4650,
+      "instructional_total": 20656787,
+      "other_total": 9791889
+    },
+    {
+      "geoid": "5102160",
+      "name": "Lancaster",
+      "students": 1020,
+      "instructional_per_pupil": 12293,
+      "other_per_pupil": 8016,
+      "instructional_total": 12539275,
+      "other_total": 8175974
+    },
+    {
+      "geoid": "5102190",
+      "name": "Lee",
+      "students": 2971,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5102250",
+      "name": "Loudoun",
+      "students": 81693,
+      "instructional_per_pupil": 15875,
+      "other_per_pupil": 5962,
+      "instructional_total": 1296907117,
+      "other_total": 487044079
+    },
+    {
+      "geoid": "5102280",
+      "name": "Louisa",
+      "students": 5211,
+      "instructional_per_pupil": 13070,
+      "other_per_pupil": 4582,
+      "instructional_total": 68105181,
+      "other_total": 23874714
+    },
+    {
+      "geoid": "5102310",
+      "name": "Lunenburg",
+      "students": 1582,
+      "instructional_per_pupil": 12036,
+      "other_per_pupil": 4792,
+      "instructional_total": 19041639,
+      "other_total": 7581181
+    },
+    {
+      "geoid": "5102340",
+      "name": "Lynchburg",
+      "students": 7727,
+      "instructional_per_pupil": 14691,
+      "other_per_pupil": 5113,
+      "instructional_total": 113517977,
+      "other_total": 39507271
+    },
+    {
+      "geoid": "5102360",
+      "name": "Manassas",
+      "students": 7350,
+      "instructional_per_pupil": 14651,
+      "other_per_pupil": 4912,
+      "instructional_total": 107682562,
+      "other_total": 36104529
+    },
+    {
+      "geoid": "5102370",
+      "name": "Madison",
+      "students": 1669,
+      "instructional_per_pupil": 10490,
+      "other_per_pupil": 5267,
+      "instructional_total": 17507663,
+      "other_total": 8790141
+    },
+    {
+      "geoid": "5102390",
+      "name": "Manassas Park",
+      "students": 3410,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5102400",
+      "name": "Martinsville",
+      "students": 1807,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5102430",
+      "name": "Mathews",
+      "students": 841,
+      "instructional_per_pupil": 13790,
+      "other_per_pupil": 7829,
+      "instructional_total": 11597471,
+      "other_total": 6584460
+    },
+    {
+      "geoid": "5102460",
+      "name": "Mecklenburg",
+      "students": 3937,
+      "instructional_per_pupil": 12205,
+      "other_per_pupil": 4345,
+      "instructional_total": 48052042,
+      "other_total": 17106315
+    },
+    {
+      "geoid": "5102490",
+      "name": "Middlesex",
+      "students": 1226,
+      "instructional_per_pupil": 13468,
+      "other_per_pupil": 5903,
+      "instructional_total": 16511927,
+      "other_total": 7237377
+    },
+    {
+      "geoid": "5102520",
+      "name": "Montgomery",
+      "students": 9591,
+      "instructional_per_pupil": 11390,
+      "other_per_pupil": 4200,
+      "instructional_total": 109243368,
+      "other_total": 40286928
+    },
+    {
+      "geoid": "5102580",
+      "name": "Nelson",
+      "students": 1495,
+      "instructional_per_pupil": 14524,
+      "other_per_pupil": 8619,
+      "instructional_total": 21713494,
+      "other_total": 12884769
+    },
+    {
+      "geoid": "5102610",
+      "name": "New Kent",
+      "students": 3536,
+      "instructional_per_pupil": 9188,
+      "other_per_pupil": 4972,
+      "instructional_total": 32488563,
+      "other_total": 17580083
+    },
+    {
+      "geoid": "5102640",
+      "name": "Newport News",
+      "students": 26217,
+      "instructional_per_pupil": 13169,
+      "other_per_pupil": 6080,
+      "instructional_total": 345254664,
+      "other_total": 159389651
+    },
+    {
+      "geoid": "5102670",
+      "name": "Norfolk",
+      "students": 26884,
+      "instructional_per_pupil": 11892,
+      "other_per_pupil": 4859,
+      "instructional_total": 319714010,
+      "other_total": 130619632
+    },
+    {
+      "geoid": "5102710",
+      "name": "Northampton",
+      "students": 1334,
+      "instructional_per_pupil": 13037,
+      "other_per_pupil": 6310,
+      "instructional_total": 17391573,
+      "other_total": 8416984
+    },
+    {
+      "geoid": "5102730",
+      "name": "Northumberland",
+      "students": 1162,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5102760",
+      "name": "Norton",
+      "students": 807,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5102790",
+      "name": "Nottoway",
+      "students": 1818,
+      "instructional_per_pupil": 12978,
+      "other_per_pupil": 6598,
+      "instructional_total": 23594767,
+      "other_total": 11994701
+    },
+    {
+      "geoid": "5102820",
+      "name": "Orange",
+      "students": 5081,
+      "instructional_per_pupil": 9745,
+      "other_per_pupil": 6019,
+      "instructional_total": 49512481,
+      "other_total": 30580895
+    },
+    {
+      "geoid": "5102850",
+      "name": "Page",
+      "students": 3011,
+      "instructional_per_pupil": 11627,
+      "other_per_pupil": 4942,
+      "instructional_total": 35008957,
+      "other_total": 14881405
+    },
+    {
+      "geoid": "5102880",
+      "name": "Patrick",
+      "students": 2379,
+      "instructional_per_pupil": 11074,
+      "other_per_pupil": 4229,
+      "instructional_total": 26346079,
+      "other_total": 10061825
+    },
+    {
+      "geoid": "5102910",
+      "name": "Petersburg",
+      "students": 4464,
+      "instructional_per_pupil": 12213,
+      "other_per_pupil": 5770,
+      "instructional_total": 54517335,
+      "other_total": 25756046
+    },
+    {
+      "geoid": "5102940",
+      "name": "Pittsylvania",
+      "students": 7860,
+      "instructional_per_pupil": 11360,
+      "other_per_pupil": 5538,
+      "instructional_total": 89293381,
+      "other_total": 43525179
+    },
+    {
+      "geoid": "5102980",
+      "name": "Poquoson",
+      "students": 2038,
+      "instructional_per_pupil": 10996,
+      "other_per_pupil": 4244,
+      "instructional_total": 22410627,
+      "other_total": 8649155
+    },
+    {
+      "geoid": "5103000",
+      "name": "Portsmouth",
+      "students": 13162,
+      "instructional_per_pupil": 13068,
+      "other_per_pupil": 4808,
+      "instructional_total": 172002381,
+      "other_total": 63288778
+    },
+    {
+      "geoid": "5103030",
+      "name": "Powhatan",
+      "students": 4218,
+      "instructional_per_pupil": 10278,
+      "other_per_pupil": 4672,
+      "instructional_total": 43350591,
+      "other_total": 19707051
+    },
+    {
+      "geoid": "5103060",
+      "name": "Prince Edward",
+      "students": 1814,
+      "instructional_per_pupil": 12466,
+      "other_per_pupil": 6796,
+      "instructional_total": 22613596,
+      "other_total": 12327855
+    },
+    {
+      "geoid": "5103090",
+      "name": "Prince George",
+      "students": 6181,
+      "instructional_per_pupil": 10809,
+      "other_per_pupil": 3594,
+      "instructional_total": 66810090,
+      "other_total": 22213635
+    },
+    {
+      "geoid": "5103130",
+      "name": "Prince William",
+      "students": 90631,
+      "instructional_per_pupil": 13168,
+      "other_per_pupil": 3963,
+      "instructional_total": 1193419000,
+      "other_total": 359182000
+    },
+    {
+      "geoid": "5103150",
+      "name": "Pulaski",
+      "students": 4361,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5103180",
+      "name": "Radford",
+      "students": 3207,
+      "instructional_per_pupil": 9449,
+      "other_per_pupil": 1962,
+      "instructional_total": 30302733,
+      "other_total": 6291601
+    },
+    {
+      "geoid": "5103210",
+      "name": "Rappahannock",
+      "students": 774,
+      "instructional_per_pupil": 13448,
+      "other_per_pupil": 7213,
+      "instructional_total": 10408985,
+      "other_total": 5582682
+    },
+    {
+      "geoid": "5103240",
+      "name": "Richmond City",
+      "students": 21259,
+      "instructional_per_pupil": 17876,
+      "other_per_pupil": 6893,
+      "instructional_total": 380033051,
+      "other_total": 146534999
+    },
+    {
+      "geoid": "5103270",
+      "name": "Richmond County",
+      "students": 1374,
+      "instructional_per_pupil": 11472,
+      "other_per_pupil": 4873,
+      "instructional_total": 15762000,
+      "other_total": 6695161
+    },
+    {
+      "geoid": "5103300",
+      "name": "Roanoke City",
+      "students": 13638,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5103330",
+      "name": "Roanoke County",
+      "students": 13803,
+      "instructional_per_pupil": 10736,
+      "other_per_pupil": 4993,
+      "instructional_total": 148195765,
+      "other_total": 68923921
+    },
+    {
+      "geoid": "5103370",
+      "name": "Rockbridge",
+      "students": 2496,
+      "instructional_per_pupil": 11798,
+      "other_per_pupil": 5906,
+      "instructional_total": 29448806,
+      "other_total": 14742471
+    },
+    {
+      "geoid": "5103390",
+      "name": "Rockingham",
+      "students": 11542,
+      "instructional_per_pupil": 12107,
+      "other_per_pupil": 4070,
+      "instructional_total": 139734764,
+      "other_total": 46974422
+    },
+    {
+      "geoid": "5103420",
+      "name": "Russell",
+      "students": 3454,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5103460",
+      "name": "Salem",
+      "students": 4318,
+      "instructional_per_pupil": 11074,
+      "other_per_pupil": 3294,
+      "instructional_total": 47815623,
+      "other_total": 14225282
+    },
+    {
+      "geoid": "5103480",
+      "name": "Scott",
+      "students": 4268,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5103510",
+      "name": "Shenandoah",
+      "students": 5691,
+      "instructional_per_pupil": 11357,
+      "other_per_pupil": 5182,
+      "instructional_total": 64632627,
+      "other_total": 29488675
+    },
+    {
+      "geoid": "5103520",
+      "name": "Smyth",
+      "students": 3894,
+      "instructional_per_pupil": 11356,
+      "other_per_pupil": 5592,
+      "instructional_total": 44219034,
+      "other_total": 21776907
+    },
+    {
+      "geoid": "5103600",
+      "name": "Southampton",
+      "students": 2523,
+      "instructional_per_pupil": 10932,
+      "other_per_pupil": 5363,
+      "instructional_total": 27582389,
+      "other_total": 13532066
+    },
+    {
+      "geoid": "5103640",
+      "name": "Spotsylvania",
+      "students": 24033,
+      "instructional_per_pupil": 11325,
+      "other_per_pupil": 3737,
+      "instructional_total": 272177091,
+      "other_total": 89820437
+    },
+    {
+      "geoid": "5103660",
+      "name": "Stafford",
+      "students": 31588,
+      "instructional_per_pupil": 11180,
+      "other_per_pupil": 3177,
+      "instructional_total": 353152722,
+      "other_total": 100356000
+    },
+    {
+      "geoid": "5103690",
+      "name": "Staunton",
+      "students": 2698,
+      "instructional_per_pupil": 13581,
+      "other_per_pupil": 4687,
+      "instructional_total": 36642778,
+      "other_total": 12646123
+    },
+    {
+      "geoid": "5103710",
+      "name": "Suffolk",
+      "students": 14520,
+      "instructional_per_pupil": 11604,
+      "other_per_pupil": 4733,
+      "instructional_total": 168496542,
+      "other_total": 68726674
+    },
+    {
+      "geoid": "5103750",
+      "name": "Surry",
+      "students": 694,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5103780",
+      "name": "Sussex",
+      "students": 994,
+      "instructional_per_pupil": 16373,
+      "other_per_pupil": 9364,
+      "instructional_total": 16274298,
+      "other_total": 9308240
+    },
+    {
+      "geoid": "5103810",
+      "name": "Tazewell",
+      "students": 5307,
+      "instructional_per_pupil": 10131,
+      "other_per_pupil": 6273,
+      "instructional_total": 53764724,
+      "other_total": 33291965
+    },
+    {
+      "geoid": "5103840",
+      "name": "Virginia Beach",
+      "students": 65078,
+      "instructional_per_pupil": 12359,
+      "other_per_pupil": 4159,
+      "instructional_total": 804313241,
+      "other_total": 270653264
+    },
+    {
+      "geoid": "5103870",
+      "name": "Warren",
+      "students": 5132,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5103900",
+      "name": "Washington",
+      "students": 6709,
+      "instructional_per_pupil": 12370,
+      "other_per_pupil": 3749,
+      "instructional_total": 82992542,
+      "other_total": 25149566
+    },
+    {
+      "geoid": "5103930",
+      "name": "Waynesboro",
+      "students": 3060,
+      "instructional_per_pupil": 12673,
+      "other_per_pupil": 4740,
+      "instructional_total": 38778432,
+      "other_total": 14504041
+    },
+    {
+      "geoid": "5103950",
+      "name": "West Point",
+      "students": 840,
+      "instructional_per_pupil": 14036,
+      "other_per_pupil": 2536,
+      "instructional_total": 11790292,
+      "other_total": 2130096
+    },
+    {
+      "geoid": "5103980",
+      "name": "Westmoreland",
+      "students": 1579,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    },
+    {
+      "geoid": "5104050",
+      "name": "Winchester",
+      "students": 4236,
+      "instructional_per_pupil": 17728,
+      "other_per_pupil": 3389,
+      "instructional_total": 75097693,
+      "other_total": 14353823
+    },
+    {
+      "geoid": "5104080",
+      "name": "Wise",
+      "students": 5883,
+      "instructional_per_pupil": 11160,
+      "other_per_pupil": 4006,
+      "instructional_total": 65651746,
+      "other_total": 23568342
+    },
+    {
+      "geoid": "5104110",
+      "name": "Wythe",
+      "students": 3802,
+      "instructional_per_pupil": 11447,
+      "other_per_pupil": 3762,
+      "instructional_total": 43521035,
+      "other_total": 14301959
+    },
+    {
+      "geoid": "5104150",
+      "name": "York",
+      "students": 12735,
+      "instructional_per_pupil": 11238,
+      "other_per_pupil": 3792,
+      "instructional_total": 143115618,
+      "other_total": 48296072
+    },
+    {
+      "geoid": "5100152",
+      "name": "Alleghany-Highlands",
+      "students": 2835,
+      "instructional_per_pupil": null,
+      "other_per_pupil": null,
+      "instructional_total": null,
+      "other_total": null
+    }
+  ]
+}

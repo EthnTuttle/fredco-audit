@@ -1,0 +1,17 @@
+{
+  "source": "Virginia Auditor of Public Accounts (APA)",
+  "report_type": "Comparative Report of Local Government Revenues and Expenditures",
+  "source_url": "https://dlasprodpublic.blob.core.windows.net/apa/549A9D64-9A00-45D1-A88F-5FE9C1BFAD8E.xlsx",
+  "apa_website": "https://www.apa.virginia.gov",
+  "file_name": "apa_comparative_report.xlsx",
+  "file_size_bytes": 1301614,
+  "file_type": "Microsoft Excel 2007+ (xlsx)",
+  "md5_checksum": "96002542cdb4e6105c694e7169b325af",
+  "downloaded_date": "2026-01-28",
+  "downloaded_time_utc": "22:19:29",
+  "download_method": "wget",
+  "http_status": 200,
+  "target_exhibit": "Exhibit C-6 (Education expenditures by category)",
+  "purpose": "FCPS audit - benchmark administrative spending against Virginia localities",
+  "notes": "Original file timestamp from server: Oct 27 15:19"
+}

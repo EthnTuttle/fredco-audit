@@ -1,0 +1,47 @@
+{
+  "enrollment": 1868,
+  "teachers_fte": 128.0,
+  "student_teacher_ratio": 14.59,
+  "total_staff_fte": 360.5,
+  "staff_breakdown": {
+    "instructional_aides": 88.0,
+    "instructional_coordinators": 11.0,
+    "guidance_counselors": 5.0,
+    "school_psychologists": 1.0,
+    "librarians": 3.0,
+    "district_administrators": 9.0,
+    "district_admin_support": 11.0,
+    "school_administrators": 10.0,
+    "school_admin_support": 12.0
+  },
+  "revenue": {
+    "total_revenue": 30522000,
+    "federal_revenue": 6159000,
+    "local_revenue": 8046000,
+    "state_revenue": 16317000
+  },
+  "expenditures": {
+    "total_expenditures": 30465000,
+    "total_current_expenditures": 28704000,
+    "instructional_expenditures": 16453000,
+    "student_staff_support": 3486000,
+    "administration": 2649000,
+    "operations_food_other": 6116000,
+    "capital_outlay": 1735000
+  },
+  "per_pupil": {
+    "total_revenue_pp": 15790,
+    "total_expenditures_pp": 15760,
+    "instructional_pp": 8512,
+    "administration_pp": 1370
+  },
+  "nces_id": "5100540",
+  "district_name": "Clarke County Public Schools",
+  "vdoe_division_code": "043",
+  "source_url": "https://nces.ed.gov/ccd/districtsearch/district_detail.asp?ID2=5100540",
+  "download_date": "2026-01-28T22:45:38.523239",
+  "data_year": {
+    "directory": "2024-2025",
+    "fiscal": "2021-2022"
+  }
+}

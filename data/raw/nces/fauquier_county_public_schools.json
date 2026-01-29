@@ -1,0 +1,47 @@
+{
+  "enrollment": 6109,
+  "teachers_fte": 567.25,
+  "student_teacher_ratio": 10.77,
+  "total_staff_fte": 1340.26,
+  "staff_breakdown": {
+    "instructional_aides": 154.83,
+    "instructional_coordinators": 34.6,
+    "guidance_counselors": 27.0,
+    "school_psychologists": 9.6,
+    "librarians": 14.0,
+    "district_administrators": 10.0,
+    "district_admin_support": 24.0,
+    "school_administrators": 24.0,
+    "school_admin_support": 43.67
+  },
+  "revenue": {
+    "total_revenue": 97473000,
+    "federal_revenue": 13262000,
+    "local_revenue": 39437000,
+    "state_revenue": 44774000
+  },
+  "expenditures": {
+    "total_expenditures": 95034000,
+    "total_current_expenditures": 88274000,
+    "instructional_expenditures": 53312000,
+    "student_staff_support": 8900000,
+    "administration": 7804000,
+    "operations_food_other": 18258000,
+    "capital_outlay": 4500000
+  },
+  "per_pupil": {
+    "total_revenue_pp": 15440,
+    "total_expenditures_pp": 15054,
+    "instructional_pp": 8445,
+    "administration_pp": 1236
+  },
+  "nces_id": "5101440",
+  "district_name": "Fauquier County Public Schools",
+  "vdoe_division_code": "061",
+  "source_url": "https://nces.ed.gov/ccd/districtsearch/district_detail.asp?ID2=5101440",
+  "download_date": "2026-01-28T22:45:43.213637",
+  "data_year": {
+    "directory": "2024-2025",
+    "fiscal": "2021-2022"
+  }
+}

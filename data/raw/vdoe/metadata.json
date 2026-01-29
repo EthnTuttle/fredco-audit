@@ -1,0 +1,74 @@
+{
+  "download_date": "2026-01-28T22:46:42.847592",
+  "status": "blocked - using NCES alternative",
+  "reason": "VDOE website (doe.virginia.gov) uses Akamai enterprise bot protection that blocks automated access",
+  "attempted_methods": [
+    "curl with browser user-agent",
+    "Python requests library",
+    "Playwright with headless Chrome",
+    "Playwright with Firefox",
+    "Wayback Machine (rate limited)",
+    "Tor proxy (connection refused)"
+  ],
+  "alternative_data_source": {
+    "name": "NCES Common Core of Data",
+    "url": "https://nces.ed.gov/ccd/districtsearch/",
+    "status": "successfully downloaded",
+    "data_files_location": "../nces/",
+    "data_years": {
+      "enrollment_staffing": "2024-2025",
+      "fiscal": "2021-2022"
+    }
+  },
+  "vdoe_tables_needed_for_time_series": {
+    "table_3": {
+      "description": "Enrollment (ADM) by division",
+      "years_needed": [
+        "2019-20",
+        "2020-21",
+        "2021-22",
+        "2022-23",
+        "2023-24"
+      ],
+      "manual_download_url": "https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report"
+    },
+    "table_13": {
+      "description": "Instructional staff counts and salaries",
+      "years_needed": [
+        "2019-20",
+        "2020-21",
+        "2021-22",
+        "2022-23",
+        "2023-24"
+      ],
+      "manual_download_url": "https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report"
+    },
+    "table_15": {
+      "description": "Per pupil expenditures by source",
+      "years_needed": [
+        "2019-20",
+        "2020-21",
+        "2021-22",
+        "2022-23",
+        "2023-24"
+      ],
+      "manual_download_url": "https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report"
+    }
+  },
+  "target_divisions": {
+    "069": "Frederick County",
+    "043": "Clarke County",
+    "061": "Fauquier County",
+    "171": "Shenandoah County",
+    "187": "Warren County",
+    "107": "Loudoun County"
+  },
+  "nces_district_ids": {
+    "Frederick County": "5101470",
+    "Clarke County": "5100540",
+    "Fauquier County": "5101440",
+    "Shenandoah County": "5103510",
+    "Warren County": "5104080",
+    "Loudoun County": "5102250"
+  }
+}

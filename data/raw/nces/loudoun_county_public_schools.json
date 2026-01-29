@@ -1,0 +1,47 @@
+{
+  "enrollment": 81486,
+  "teachers_fte": 6719.23,
+  "student_teacher_ratio": 12.13,
+  "total_staff_fte": 13456.05,
+  "staff_breakdown": {
+    "instructional_aides": 1795.19,
+    "instructional_coordinators": 323.2,
+    "guidance_counselors": 340.0,
+    "school_psychologists": 65.0,
+    "librarians": 0.0,
+    "district_administrators": 247.0,
+    "district_admin_support": 343.0,
+    "school_administrators": 259.0,
+    "school_admin_support": 376.5
+  },
+  "revenue": {
+    "total_revenue": 1605997000,
+    "federal_revenue": 80404000,
+    "local_revenue": 1090349000,
+    "state_revenue": 435244000
+  },
+  "expenditures": {
+    "total_expenditures": 1686230000,
+    "total_current_expenditures": 1537644000,
+    "instructional_expenditures": 965868000,
+    "student_staff_support": 185541000,
+    "administration": 158120000,
+    "operations_food_other": 228115000,
+    "capital_outlay": 141578000
+  },
+  "per_pupil": {
+    "total_revenue_pp": 19795,
+    "total_expenditures_pp": 20784,
+    "instructional_pp": 11905,
+    "administration_pp": 1949
+  },
+  "nces_id": "5102250",
+  "district_name": "Loudoun County Public Schools",
+  "vdoe_division_code": "107",
+  "source_url": "https://nces.ed.gov/ccd/districtsearch/district_detail.asp?ID2=5102250",
+  "download_date": "2026-01-28T22:46:08.503791",
+  "data_year": {
+    "directory": "2024-2025",
+    "fiscal": "2021-2022"
+  }
+}
