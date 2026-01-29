@@ -8,6 +8,7 @@
 // Configuration
 const CONFIG = {
     targetPubkey: '87ad21b2fffac510fb01f631edc2b3c09c49297a4f65187656c72cf7da04d328',
+    targetNpub: 'npub1s7kjrvhlltz3p7cp7cc7ms4nczwyj2t6faj3sajkcuk00ksy6v5qzrh47t',
     relays: [
         'wss://relay.damus.io',
         'wss://relay.primal.net',
@@ -22,7 +23,7 @@ const CONFIG = {
     ],
     storageKey: 'fredco-feedback:user',
     clientTag: 'fredco-audit',
-    connectionTimeout: 5000 // 5 second timeout for relay connections
+    publishTimeout: 10000 // 10 second timeout for publishing
 };
 
 // Topics for dropdown (shared across pages, page-specific ones added dynamically)
@@ -59,13 +60,11 @@ let state = {
     isOpen: false,
     isAdvancedOpen: false,
     isSubmitting: false,
-    connectedRelays: [],
-    connectionStatus: 'disconnected' // 'disconnected', 'connecting', 'connected', 'error'
+    isReady: false
 };
 
 // Nostr-tools imports (loaded dynamically)
 let nostrTools = null;
-let pool = null;
 
 /**
  * Load nostr-tools from CDN
@@ -86,69 +85,6 @@ async function loadNostrTools() {
         console.error('Failed to load nostr-tools:', error);
         throw new Error('Failed to load required libraries');
     }
-}
-
-/**
- * Connect to relays and track connection status
- */
-async function connectToRelays(onStatusChange) {
-    const tools = await loadNostrTools();
-    
-    state.connectionStatus = 'connecting';
-    onStatusChange?.(state.connectionStatus, 0);
-    
-    pool = new tools.SimplePool();
-    state.connectedRelays = [];
-    
-    // Try to connect to each relay
-    const connectionPromises = CONFIG.relays.map(async (relayUrl) => {
-        try {
-            // SimplePool connects lazily, so we'll do a quick subscription to test
-            const relay = await pool.ensureRelay(relayUrl);
-            
-            // Wait for connection with timeout
-            await new Promise((resolve, reject) => {
-                const timeout = setTimeout(() => {
-                    reject(new Error(`Timeout connecting to ${relayUrl}`));
-                }, CONFIG.connectionTimeout);
-                
-                if (relay.status === 1) { // WebSocket.OPEN
-                    clearTimeout(timeout);
-                    resolve();
-                } else {
-                    relay.onconnect = () => {
-                        clearTimeout(timeout);
-                        resolve();
-                    };
-                    relay.ondisconnect = () => {
-                        clearTimeout(timeout);
-                        reject(new Error(`Disconnected from ${relayUrl}`));
-                    };
-                }
-            });
-            
-            state.connectedRelays.push(relayUrl);
-            onStatusChange?.(state.connectionStatus, state.connectedRelays.length);
-            console.log(`Connected to ${relayUrl}`);
-            return { relay: relayUrl, connected: true };
-        } catch (err) {
-            console.warn(`Failed to connect to ${relayUrl}:`, err.message);
-            return { relay: relayUrl, connected: false, error: err.message };
-        }
-    });
-    
-    await Promise.allSettled(connectionPromises);
-    
-    if (state.connectedRelays.length > 0) {
-        state.connectionStatus = 'connected';
-        console.log(`Connected to ${state.connectedRelays.length}/${CONFIG.relays.length} relays`);
-    } else {
-        state.connectionStatus = 'error';
-        console.error('Failed to connect to any relay');
-    }
-    
-    onStatusChange?.(state.connectionStatus, state.connectedRelays.length);
-    return state.connectedRelays.length;
 }
 
 /**
@@ -229,10 +165,6 @@ async function getNpub(publicKey) {
 async function publishFeedback(name, comment, topic, pageType) {
     const tools = await loadNostrTools();
     
-    if (state.connectedRelays.length === 0) {
-        throw new Error('Not connected to any relays');
-    }
-    
     // Ensure we have a keypair
     if (!state.secretKey) {
         const keypair = await generateKeypair();
@@ -240,12 +172,14 @@ async function publishFeedback(name, comment, topic, pageType) {
         state.publicKey = keypair.publicKey;
     }
     
-    // Build event content
+    // Build event content with NIP-27 mention
     const pageUrl = window.location.href;
-    const content = `Feedback from: ${name}
+    const content = `Feedback for nostr:${CONFIG.targetNpub}
+
+From: ${name}
 Topic: ${topic}
 Page: ${pageUrl}
----
+
 ${comment}`;
     
     // Create unsigned event
@@ -264,25 +198,38 @@ ${comment}`;
     // Sign the event
     const signedEvent = tools.finalizeEvent(unsignedEvent, state.secretKey);
     
-    // Publish to connected relays
+    console.log('Publishing event:', signedEvent.id);
+    
+    // Create a new pool for this publish operation
+    const pool = new tools.SimplePool();
+    
     try {
-        const pubPromises = pool.publish(state.connectedRelays, signedEvent);
+        // Publish to all relays - SimplePool handles connections
+        const publishPromises = pool.publish(CONFIG.relays, signedEvent);
         
-        // pubPromises is an array of promises, one per relay
-        const results = await Promise.allSettled(pubPromises);
+        // Add timeout wrapper
+        const timeoutPromise = new Promise((_, reject) => {
+            setTimeout(() => reject(new Error('Publish timeout')), CONFIG.publishTimeout);
+        });
+        
+        // Wait for at least one successful publish or timeout
+        const results = await Promise.race([
+            Promise.allSettled(publishPromises),
+            timeoutPromise
+        ]);
         
         const successful = results.filter(r => r.status === 'fulfilled');
         const failed = results.filter(r => r.status === 'rejected');
         
+        console.log(`Publish results: ${successful.length} succeeded, ${failed.length} failed`);
+        
         if (failed.length > 0) {
-            console.warn('Some relays failed to accept event:', failed.map(r => r.reason?.message || r.reason));
+            console.warn('Failed relays:', failed.map(r => r.reason));
         }
         
         if (successful.length === 0) {
             throw new Error('Failed to publish to any relay');
         }
-        
-        console.log(`Published to ${successful.length}/${state.connectedRelays.length} relays`);
         
         // Save user if remember me is checked
         if (state.rememberMe) {
@@ -290,9 +237,9 @@ ${comment}`;
         }
         
         return { success: true, relays: successful.length };
-    } catch (error) {
-        console.error('Publish error:', error);
-        throw error;
+    } finally {
+        // Clean up pool
+        pool.close(CONFIG.relays);
     }
 }
 
@@ -307,15 +254,13 @@ function createWidgetHTML(pageType) {
     
     return `
         <button class="feedback-toggle" aria-label="Leave Feedback" disabled>
-            <span class="feedback-toggle-text">Connecting...</span>
-            <span class="feedback-connection-indicator"></span>
+            <span class="feedback-toggle-text">Loading...</span>
         </button>
         
         <div class="feedback-form">
             <div class="feedback-header">
                 <span class="feedback-header-title">Feedback</span>
                 <div class="feedback-header-actions">
-                    <span class="feedback-relay-count" title="Connected relays"></span>
                     <button class="feedback-gear" aria-label="Advanced options" title="Advanced options">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="3"></circle>
@@ -348,6 +293,13 @@ function createWidgetHTML(pageType) {
                     <textarea id="feedback-comment" placeholder="Share your thoughts, suggestions, or report issues..." required></textarea>
                 </div>
                 
+                <label class="feedback-checkbox">
+                    <input type="checkbox" id="feedback-remember">
+                    <div>
+                        <div class="feedback-checkbox-label">Remember me on this device</div>
+                    </div>
+                </label>
+                
                 <button class="feedback-submit" type="button">Send Feedback</button>
                 
                 <div class="feedback-status"></div>
@@ -355,14 +307,6 @@ function createWidgetHTML(pageType) {
             
             <div class="feedback-advanced">
                 <div class="feedback-advanced-title">Advanced Options</div>
-                
-                <label class="feedback-checkbox">
-                    <input type="checkbox" id="feedback-remember">
-                    <div>
-                        <div class="feedback-checkbox-label">Remember me on this device</div>
-                        <div class="feedback-checkbox-hint">Use the same identity for future feedback</div>
-                    </div>
-                </label>
                 
                 <div class="feedback-npub">
                     <div class="feedback-npub-label">Your Nostr identity:</div>
@@ -396,7 +340,6 @@ export async function initFeedbackWidget(options = {}) {
     // Get elements
     const toggle = container.querySelector('.feedback-toggle');
     const toggleText = container.querySelector('.feedback-toggle-text');
-    const connectionIndicator = container.querySelector('.feedback-connection-indicator');
     const form = container.querySelector('.feedback-form');
     const closeBtn = container.querySelector('.feedback-close');
     const gearBtn = container.querySelector('.feedback-gear');
@@ -413,31 +356,6 @@ export async function initFeedbackWidget(options = {}) {
     const loggedInDiv = container.querySelector('.feedback-logged-in');
     const loggedInName = container.querySelector('.feedback-logged-in-name');
     const npubDisplay = container.querySelector('#feedback-npub-display');
-    const relayCount = container.querySelector('.feedback-relay-count');
-    
-    // Update connection status UI
-    function updateConnectionUI(status, connectedCount) {
-        connectionIndicator.className = 'feedback-connection-indicator ' + status;
-        
-        switch (status) {
-            case 'connecting':
-                toggleText.textContent = 'Connecting...';
-                toggle.disabled = true;
-                relayCount.textContent = '';
-                break;
-            case 'connected':
-                toggleText.textContent = 'Leave Feedback';
-                toggle.disabled = false;
-                relayCount.textContent = `${connectedCount} relays`;
-                relayCount.title = `Connected to ${connectedCount} of ${CONFIG.relays.length} relays`;
-                break;
-            case 'error':
-                toggleText.textContent = 'Offline';
-                toggle.disabled = true;
-                relayCount.textContent = 'No relays';
-                break;
-        }
-    }
     
     // Load saved user
     const savedUser = loadSavedUser();
@@ -453,31 +371,34 @@ export async function initFeedbackWidget(options = {}) {
         loggedInDiv.style.display = 'block';
     }
     
-    // Connect to relays early
-    connectToRelays(updateConnectionUI).then(async (connectedCount) => {
-        if (connectedCount > 0) {
-            // Generate keypair and display npub
-            if (!state.secretKey) {
-                const keypair = await generateKeypair();
-                state.secretKey = keypair.secretKey;
-                state.publicKey = keypair.publicKey;
-            }
-            const npub = await getNpub(state.publicKey);
-            npubDisplay.textContent = npub;
-        } else {
-            npubDisplay.textContent = 'Not connected';
+    // Load nostr-tools and enable the widget
+    loadNostrTools().then(async () => {
+        // Generate keypair if needed
+        if (!state.secretKey) {
+            const keypair = await generateKeypair();
+            state.secretKey = keypair.secretKey;
+            state.publicKey = keypair.publicKey;
         }
+        
+        // Display npub
+        const npub = await getNpub(state.publicKey);
+        npubDisplay.textContent = npub;
+        
+        // Enable the toggle button
+        state.isReady = true;
+        toggle.disabled = false;
+        toggleText.textContent = 'Leave Feedback';
+        
+        console.log('Nostr feedback widget ready');
     }).catch(err => {
         console.error('Failed to initialize nostr:', err);
         npubDisplay.textContent = 'Error loading';
-        updateConnectionUI('error', 0);
+        toggleText.textContent = 'Unavailable';
     });
     
     // Toggle form visibility
     function openForm() {
-        if (state.connectionStatus !== 'connected') {
-            return; // Don't open if not connected
-        }
+        if (!state.isReady) return;
         state.isOpen = true;
         toggle.classList.add('hidden');
         form.classList.add('visible');
@@ -541,13 +462,6 @@ export async function initFeedbackWidget(options = {}) {
             return;
         }
         
-        // Check connection
-        if (state.connectedRelays.length === 0) {
-            statusDiv.textContent = 'Not connected to any relays. Please refresh and try again.';
-            statusDiv.className = 'feedback-status visible error';
-            return;
-        }
-        
         // Submit
         state.isSubmitting = true;
         submitBtn.disabled = true;
@@ -555,7 +469,7 @@ export async function initFeedbackWidget(options = {}) {
         statusDiv.classList.remove('visible');
         
         try {
-            await publishFeedback(name, comment, topic, pageType);
+            const result = await publishFeedback(name, comment, topic, pageType);
             
             // Show thanks
             bodyDiv.style.display = 'none';
