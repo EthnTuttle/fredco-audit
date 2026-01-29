@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frederick County Government - Efficiency Audit Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="feedback.css">
     <style>
         :root {
             --primary: #1e40af;
@@ -2337,6 +2338,12 @@
                 }
             }
         });
+    </script>
+
+    <!-- Nostr Feedback Widget -->
+    <script type="module">
+        import { initFeedbackWidget } from './feedback.js';
+        initFeedbackWidget({ pageType: 'county' });
     </script>
 </body>
 </html>
