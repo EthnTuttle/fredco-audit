@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frederick County - District Map</title>
+    <title>District Map | Open Frederick</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="stylesheet" href="feedback.css">
@@ -44,7 +44,7 @@
         }
 
         header {
-            background: linear-gradient(135deg, #047857 0%, #10b981 100%);
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
             color: white;
             padding: 40px 20px;
             margin-bottom: 30px;
@@ -295,12 +295,13 @@
 
     <div class="container">
         <nav class="nav-bar">
-            <a href="index.html">County Government</a>
-            <a href="schools.html">School District</a>
-            <a href="map.html" class="active">District Map</a>
-            <a href="real_estate.html">Real Estate</a>
-            <a href="demographics.html">Demographics</a>
+            <a href="index.html">Home</a>
+            <a href="budget.html">Budget</a>
+            <a href="education.html">Education</a>
+            <a href="property.html">Property</a>
+            <a href="map.html" class="active">Map</a>
             <a href="about.html">About</a>
+            <a href="data.html">Data</a>
         </nav>
 
         <div class="controls-panel">
@@ -737,6 +738,10 @@
         // Initialize on load
         document.addEventListener('DOMContentLoaded', initMap);
     </script>
+
+    <footer style="background: var(--gray-800); color: white; padding: 30px 20px; margin-top: 40px; text-align: center;">
+        <p style="margin: 0; opacity: 0.9;">Open Frederick | Public Data for Frederick County, Virginia</p>
+    </footer>
 
     <!-- Feedback Widget -->
     <script type="module">

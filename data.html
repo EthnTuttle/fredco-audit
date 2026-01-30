@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Catalog - Open Frederick</title>
+    <link rel="stylesheet" href="feedback.css">
+    <style>
+        :root {
+            --primary: #1e40af;
+            --primary-light: #3b82f6;
+            --success: #059669;
+            --warning: #d97706;
+            --danger: #dc2626;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--gray-100);
+            color: var(--gray-800);
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+        header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+        }
+
+        header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 10px; }
+        header p { font-size: 1.1rem; opacity: 0.9; }
+        .subtitle { font-size: 0.9rem; opacity: 0.8; margin-top: 5px; }
+
+        .nav-bar {
+            background: white;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-bar a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .nav-bar a:hover { background: var(--gray-100); }
+        .nav-bar a.active { background: var(--primary); color: white; }
+        .nav-bar span { color: var(--gray-300); }
+
+        .intro-box {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .intro-box h2 {
+            font-size: 1.25rem;
+            color: var(--gray-900);
+            margin-bottom: 12px;
+        }
+
+        .intro-box p {
+            color: var(--gray-600);
+        }
+
+        .section { margin-bottom: 40px; }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--gray-200);
+        }
+
+        .section-header h2 {
+            font-size: 1.5rem;
+            color: var(--gray-800);
+        }
+
+        .section-header .badge {
+            margin-left: 12px;
+            background: var(--gray-100);
+            color: var(--gray-600);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .data-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .data-card h3 {
+            font-size: 1.1rem;
+            color: var(--gray-900);
+            margin-bottom: 8px;
+        }
+
+        .data-card .description {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        .data-card .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 0.85rem;
+        }
+
+        .data-card .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: var(--gray-500);
+        }
+
+        .data-card .meta-item strong {
+            color: var(--gray-700);
+        }
+
+        .data-card .actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1e3a8a;
+        }
+
+        .btn-secondary {
+            background: var(--gray-100);
+            color: var(--gray-700);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gray-200);
+        }
+
+        .source-list {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .source-list h3 {
+            font-size: 1.1rem;
+            color: var(--gray-900);
+            margin-bottom: 16px;
+        }
+
+        .source-list ul {
+            list-style: none;
+        }
+
+        .source-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .source-list li:last-child {
+            border-bottom: none;
+        }
+
+        .source-list a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .source-list a:hover {
+            text-decoration: underline;
+        }
+
+        .source-list .source-desc {
+            color: var(--gray-500);
+            font-size: 0.85rem;
+            margin-top: 4px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--gray-200);
+            margin-top: 40px;
+        }
+
+        footer a { color: var(--primary); }
+
+        @media (max-width: 768px) {
+            .data-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Data Catalog</h1>
+            <p>Download Processed Datasets</p>
+            <p class="subtitle">Open Frederick | All data in JSON format with source citations</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Navigation -->
+        <div class="nav-bar">
+            <a href="index.html">Home</a>
+            <span>|</span>
+            <a href="budget.html">Budget</a>
+            <span>|</span>
+            <a href="education.html">Education</a>
+            <span>|</span>
+            <a href="property.html">Property</a>
+            <span>|</span>
+            <a href="map.html">Map</a>
+            <span>|</span>
+            <a href="about.html">About</a>
+            <span>|</span>
+            <a href="data.html" class="active">Data</a>
+        </div>
+
+        <!-- Intro -->
+        <div class="intro-box">
+            <h2>About Our Data</h2>
+            <p>All datasets are processed from official public sources and include full source citations. 
+               Data is provided in JSON format for easy integration with analysis tools. 
+               Raw source files (Excel, PDF) are also available in the repository.</p>
+        </div>
+
+        <!-- Budget & Government Data -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Budget & Government</h2>
+                <span class="badge">5 datasets</span>
+            </div>
+            <div class="data-grid">
+                <div class="data-card">
+                    <h3>County Budget Summary</h3>
+                    <p class="description">Annual county budget totals, school transfers, and fund breakdowns.</p>
+                    <div class="meta">
+                        <span class="meta-item"><strong>Years:</strong> FY2020-FY2025</span>
+                        <span class="meta-item"><strong>Format:</strong> JSON</span>
+                    </div>
+                    <div class="actions">
+                        <a href="data/processed/county_budget_schools.json" class="btn btn-primary" download>Download</a>
+                    </div>
+                </div>
+                <div class="data-card">
+                    <h3>Department Expenditures</h3>
+                    <p class="description">Detailed spending by department with personnel, operating, and capital breakdowns.</p>
+                    <div class="meta">
+                        <span class="meta-item"><strong>Years:</strong> FY2022-FY2026</span>
+                        <span class="meta-item"><strong>Format:</strong> JSON</span>
+                    </div>
+                    <div class="actions">
+                        <a href="data/processed/county_department_detail.json" class="btn btn-primary" download>Download</a>
+                    </div>
+                </div>
+                <div class="data-card">
+                    <h3>Government Analysis</h3>
+                    <p class="description">Calculated metrics, trends, and comparative analysis of county government operations.</p>
+                    <div class="meta">
+                        <span class="meta-item"><strong>Years:</strong> FY2020-FY2025</span>
+                        <span class="meta-item"><strong>Format:</strong> JSON</span>
+                    </div>
+                    <div class="actions">
+                        <a href="data/processed/county_government_analysis.json" class="btn btn-primary" download>Download</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Data -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Education</h2>
+                <span class="badge">6 datasets</span>
+            </div>
+            <div class="data-grid">
+                <div class="data-card">
+                    <h3>Enrollment (VDOE Table 8)</h3>
+                    <p class="description">Average Daily Membership (ADM) and attendance data for Frederick County and peers.</p>
+                    <div class="meta">
+                        <span class="meta-item"><strong>Years:</strong> 2019-2025</span>
+                        <span class="meta-item"><strong>Format:</strong> JSON</span>
+                    </div>
+                    <div class="actions">
+                        <a href="data/processed/vdoe/table8_enrollment.json" class="btn btn-primary" download>Download</a>
+                    </div>
+                </div>
+                <div class="data-card">
+                    <h3>Per-Pupil Expenditures (VDOE Table 15)</h3>
+                    <p class="description">Spending per student by funding source (local, state, federal).</p>
+                    <div class="meta">
+                        <span class="meta-item"><strong>Years:</strong> 2019-2024</span>
+                        <span class="meta-item"><strong>Format:</strong> JSON</span>
+                    </div>
+                    <div class="actions">
+                        <a href="data/processed/vdoe/table15_expenditures.json" class="btn btn-primary" download>Download</a>
+                    </div>
+                </div>
+                <div class="data-card">
+                    <h3>Pupil-Teacher Ratios (VDOE Table 17)</h3>
+                    <p class="description">Student-to-teacher ratios for elementary and secondary grades.</p>
+                    <div class="meta">
+                        <span class="meta-item"><strong>Years:</strong> 2019-2024</span>
+                        <span class="meta-item"><strong>Format:</strong> JSON</span>
+                    </div>
+                    <div class="actions">
+                        <a href="data/processed/vdoe/table17_ratios.json" class="btn btn-primary" download>Download</a>
+                    </div>
+                </div>
+                <div class="data-card">
+                    <h3>Admin Personnel (VDOE Table 18)</h3>
+                    <p class="description">Administrative, technical, and support staff positions by function.</p>
+                    <div class="meta">
+                        <span class="meta-item"><strong>Years:</strong> 2019-2024</span>
+                        <span class="meta-item"><strong>Format:</strong> JSON</span>
+                    </div>
+                    <div class="actions">
+                        <a href="data/processed/vdoe/table18_admin_personnel.json" class="btn btn-primary" download>Download</a>
+                    </div>
+                </div>
+                <div class="data-card">
+                    <h3>Instructional Staff (VDOE Table 19)</h3>
+                    <p class="description">Teacher and principal counts with average salaries.</p>
+                    <div class="meta">
+                        <span class="meta-item"><strong>Years:</strong> 2019-2024</span>
+                        <span class="meta-item"><strong>Format:</strong> JSON</span>
+                    </div>
+                    <div class="actions">
+                        <a href="data/processed/vdoe/table19_instructional.json" class="btn btn-primary" download>Download</a>
+                    </div>
+                </div>
+                <div class="data-card">
+                    <h3>Audit Ratios & Metrics</h3>
+                    <p class="description">Calculated efficiency metrics and peer comparisons.</p>
+                    <div class="meta">
+                        <span class="meta-item"><strong>Years:</strong> 2019-2024</span>
+                        <span class="meta-item"><strong>Format:</strong> JSON</span>
+                    </div>
+                    <div class="actions">
+                        <a href="data/processed/ratios.json" class="btn btn-primary" download>Download</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Property Data -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Property & Real Estate</h2>
+                <span class="badge">3 datasets</span>
+            </div>
+            <div class="data-grid">
+                <div class="data-card">
+                    <h3>Real Estate Tax Summary</h3>
+                    <p class="description">Annual tax summaries by district and property class.</p>
+                    <div class="meta">
+                        <span class="meta-item"><strong>Years:</strong> 2021-2025</span>
+                        <span class="meta-item"><strong>Format:</strong> JSON</span>
+                    </div>
+                    <div class="actions">
+                        <a href="data/processed/real_estate_tax_summary.json" class="btn btn-primary" download>Download</a>
+                    </div>
+                </div>
+                <div class="data-card">
+                    <h3>Ownership Analysis</h3>
+                    <p class="description">Property ownership patterns, entity types, and concentration metrics.</p>
+                    <div class="meta">
+                        <span class="meta-item"><strong>Years:</strong> 2021-2025</span>
+                        <span class="meta-item"><strong>Format:</strong> JSON</span>
+                    </div>
+                    <div class="actions">
+                        <a href="data/processed/real_estate_ownership_analysis.json" class="btn btn-primary" download>Download</a>
+                    </div>
+                </div>
+                <div class="data-card">
+                    <h3>District Boundaries</h3>
+                    <p class="description">GeoJSON boundaries for magisterial districts.</p>
+                    <div class="meta">
+                        <span class="meta-item"><strong>Format:</strong> GeoJSON</span>
+                    </div>
+                    <div class="actions">
+                        <a href="data/processed/district_boundaries.geojson" class="btn btn-primary" download>Download</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Original Sources -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Original Data Sources</h2>
+            </div>
+            <div class="source-list">
+                <h3>Official Government Sources</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report" target="_blank">Virginia Department of Education</a>
+                        <p class="source-desc">Superintendent's Annual Report - Tables 8, 15, 17, 18, 19</p>
+                    </li>
+                    <li>
+                        <a href="https://www.fcva.us/departments/finance/budget/budget-archives" target="_blank">Frederick County Budget Office</a>
+                        <p class="source-desc">Annual Adopted Budget Documents (FY2020-FY2026)</p>
+                    </li>
+                    <li>
+                        <a href="https://www.fcva.us/departments/commissioner-of-the-revenue" target="_blank">Commissioner of Revenue</a>
+                        <p class="source-desc">Real Estate Tax Book (2021-2025)</p>
+                    </li>
+                    <li>
+                        <a href="https://www.frederickcountyschoolsva.net/about/budget" target="_blank">Frederick County Public Schools</a>
+                        <p class="source-desc">School Budget Documents</p>
+                    </li>
+                    <li>
+                        <a href="https://nces.ed.gov/ccd/" target="_blank">National Center for Education Statistics</a>
+                        <p class="source-desc">Common Core of Data</p>
+                    </li>
+                    <li>
+                        <a href="https://www.apa.virginia.gov/" target="_blank">Virginia Auditor of Public Accounts</a>
+                        <p class="source-desc">Comparative Education Report</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Repository Link -->
+        <div class="intro-box" style="text-align: center;">
+            <h2>Full Repository</h2>
+            <p style="margin-bottom: 16px;">Access all raw data, processing scripts, and methodology on GitHub.</p>
+            <a href="https://github.com/EthnTuttle/fredco-audit" class="btn btn-primary" target="_blank">View on GitHub</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Open Frederick | Public Data for Frederick County, Virginia</p>
+        <p style="margin-top: 8px;">Data updated January 2026</p>
+    </footer>
+
+    <!-- Nostr Feedback Widget -->
+    <script type="module">
+        import { initFeedbackWidget } from './feedback.js';
+        initFeedbackWidget({ pageType: 'data' });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Open Frederick</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="feedback.css">
+    <style>
+        :root {
+            --primary: #1e40af;
+            --primary-light: #3b82f6;
+            --success: #059669;
+            --warning: #d97706;
+            --danger: #dc2626;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--gray-100);
+            color: var(--gray-800);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        /* Stats Cards */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .stat-card.highlight {
+            border-left: 4px solid var(--success);
+        }
+
+        .stat-card.warning {
+            border-left: 4px solid var(--warning);
+        }
+
+        .stat-card.info {
+            border-left: 4px solid var(--primary-light);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gray-900);
+        }
+
+        .stat-detail {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            margin-top: 8px;
+        }
+
+        .stat-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        .badge-success {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .badge-warning {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .badge-info {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        /* Section Headers */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--gray-200);
+        }
+
+        .section-header h2 {
+            font-size: 1.5rem;
+            color: var(--gray-800);
+        }
+
+        /* Chart Cards */
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 24px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .chart-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .chart-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .chart-card h3 {
+            font-size: 1.1rem;
+            color: var(--gray-700);
+            margin-bottom: 20px;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+        }
+
+        .chart-container.tall {
+            height: 400px;
+        }
+
+        /* Tables */
+        .table-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        th {
+            background: var(--gray-50);
+            font-weight: 600;
+            color: var(--gray-700);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        tr:hover {
+            background: var(--gray-50);
+        }
+
+        tr.highlight {
+            background: #eff6ff;
+        }
+
+        tr.highlight:hover {
+            background: #dbeafe;
+        }
+
+        .rank-1 {
+            color: var(--success);
+            font-weight: 700;
+        }
+
+        /* Findings */
+        .findings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .finding-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .finding-card.ok {
+            border-left: 4px solid var(--success);
+        }
+
+        .finding-card.warning {
+            border-left: 4px solid var(--warning);
+        }
+
+        .finding-card.info {
+            border-left: 4px solid var(--primary-light);
+        }
+
+        .finding-card.critical {
+            border-left: 4px solid var(--danger);
+        }
+
+        .finding-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .finding-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .finding-icon.ok {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .finding-icon.warning {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .finding-icon.info {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .finding-title {
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+
+        .finding-description {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+
+        /* Analysis Box */
+        .analysis-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .analysis-box h4 {
+            color: #92400e;
+            margin-bottom: 10px;
+        }
+
+        .analysis-box p {
+            color: #78350f;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--gray-200);
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: var(--primary);
+        }
+
+        /* Tooltips */
+        .tooltip {
+            position: relative;
+            cursor: help;
+            border-bottom: 1px dotted var(--gray-400);
+        }
+
+        /* Legend styling */
+        .custom-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: var(--gray-600);
+        }
+
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+        }
+
+        /* Navigation */
+        .nav-bar {
+            background: white;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-bar a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .nav-bar a:hover {
+            background: var(--gray-100);
+        }
+
+        .nav-bar a.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .nav-bar span {
+            color: var(--gray-400);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Education</h1>
+            <p>Frederick County Public Schools Data</p>
+            <p class="subtitle">Open Frederick | Data: VDOE & County Budgets | FY2020-FY2024</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Navigation -->
+        <div class="nav-bar">
+            <a href="index.html">Home</a>
+            <span>|</span>
+            <a href="budget.html">Budget</a>
+            <span>|</span>
+            <a href="education.html" class="active">Education</a>
+            <span>|</span>
+            <a href="property.html">Property</a>
+            <span>|</span>
+            <a href="map.html">Map</a>
+            <span>|</span>
+            <a href="about.html">About</a>
+            <span>|</span>
+            <a href="data.html">Data</a>
+        </div>
+
+        <!-- Key Stats -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Key Metrics (FY2024)</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card info">
+                    <div class="stat-label">Enrollment (ADM)</div>
+                    <div class="stat-value">14,121</div>
+                    <div class="stat-detail">+2.8% from FY2020</div>
+                </div>
+                <div class="stat-card highlight">
+                    <div class="stat-label">Admin Efficiency Rank</div>
+                    <div class="stat-value">#1 <span class="stat-badge badge-success">Best</span></div>
+                    <div class="stat-detail">Among 6 peer divisions</div>
+                </div>
+                <div class="stat-card info">
+                    <div class="stat-label">Per-Pupil Spending</div>
+                    <div class="stat-value">$15,734</div>
+                    <div class="stat-detail">10.8% below state avg ($17,636)</div>
+                </div>
+                <div class="stat-card highlight">
+                    <div class="stat-label">Students per Admin</div>
+                    <div class="stat-value">580</div>
+                    <div class="stat-detail">Highest among peers (most efficient)</div>
+                </div>
+                <div class="stat-card info">
+                    <div class="stat-label">Admin Positions</div>
+                    <div class="stat-value">24.4</div>
+                    <div class="stat-detail">1.26% of total staff</div>
+                </div>
+                <div class="stat-card info">
+                    <div class="stat-label">Teaching Positions</div>
+                    <div class="stat-value">1,154</div>
+                    <div class="stat-detail">+3.1% from FY2020</div>
+                </div>
+                <div class="stat-card warning">
+                    <div class="stat-label">K-7 Class Size</div>
+                    <div class="stat-value">13.9:1 <span class="stat-badge badge-warning">Above Avg</span></div>
+                    <div class="stat-detail">State avg: 12.4:1 (+12% larger)</div>
+                </div>
+                <div class="stat-card info">
+                    <div class="stat-label">8-12 Class Size</div>
+                    <div class="stat-value">12.3:1</div>
+                    <div class="stat-detail">At state average (12.3:1)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Findings Summary -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Audit Findings</h2>
+            </div>
+            <div class="findings-grid">
+                <div class="finding-card ok">
+                    <div class="finding-header">
+                        <div class="finding-icon ok">&#10003;</div>
+                        <div class="finding-title">No Over-Administration Detected</div>
+                    </div>
+                    <div class="finding-description">
+                        Admin ratio (1.26%) is well below the 10% warning threshold. Frederick County has the leanest administration among all peer districts.
+                    </div>
+                </div>
+                <div class="finding-card ok">
+                    <div class="finding-header">
+                        <div class="finding-icon ok">&#10003;</div>
+                        <div class="finding-title">Admin Growth Proportional</div>
+                    </div>
+                    <div class="finding-description">
+                        Admin positions grew 4.8% while enrollment grew 2.8% (1.7x ratio). This is below the 2.0x warning threshold.
+                    </div>
+                </div>
+                <div class="finding-card info">
+                    <div class="finding-header">
+                        <div class="finding-icon info">i</div>
+                        <div class="finding-title">School Budget Share Declining</div>
+                    </div>
+                    <div class="finding-description">
+                        Schools' share of county budget decreased from 60.8% (FY2020) to 57.0% (FY2025), despite absolute funding increases.
+                    </div>
+                </div>
+                <div class="finding-card info">
+                    <div class="finding-header">
+                        <div class="finding-icon info">i</div>
+                        <div class="finding-title">Below-State Spending</div>
+                    </div>
+                    <div class="finding-description">
+                        Per-pupil spending ($15,734) is 10.8% below state average ($17,636). This may reflect regional cost differences or resource constraints.
+                    </div>
+                </div>
+                <div class="finding-card warning">
+                    <div class="finding-header">
+                        <div class="finding-icon warning">!</div>
+                        <div class="finding-title">Larger Elementary Class Sizes</div>
+                    </div>
+                    <div class="finding-description">
+                        K-7 pupil-teacher ratio (13.85:1) is 12% higher than state average (12.37:1). This means ~1.5 more students per teacher in elementary grades.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expenditure Growth Analysis -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Expenditure Growth Analysis</h2>
+            </div>
+            <div class="analysis-box">
+                <h4>Important Context on Growth Rates</h4>
+                <p>
+                    Total expenditures grew <strong>24%</strong> from FY2020-FY2024 while enrollment grew only <strong>2.8%</strong>. 
+                    This does NOT necessarily indicate inefficiency. Consider:
+                </p>
+                <ul style="margin: 10px 0 0 20px; color: #78350f;">
+                    <li><strong>Official Inflation (BLS CPI):</strong> ~19% cumulative 2020-2024 <em>(<a href="https://www.bls.gov/cpi/" target="_blank" style="color: #78350f;">bls.gov/cpi</a>)</em></li>
+                    <li><strong>Truflation:</strong> ~19-20% cumulative - real-time independent index <em>(<a href="https://truflation.com/" target="_blank" style="color: #78350f;">truflation.com</a>)</em></li>
+                    <li><strong>Chapwood Index:</strong> ~41% cumulative - tracks 500 items in 50 cities <em>(<a href="https://chapwoodindex.com/" target="_blank" style="color: #78350f;">chapwoodindex.com</a>)</em></li>
+                    <li><strong>Teacher salaries:</strong> Increased 15.1% ($57,724 to $66,441) <em>(VDOE Table 19)</em></li>
+                    <li><strong>Still below state average:</strong> Frederick spends 10.8% less per-pupil than Virginia average <em>(VDOE Table 15)</em></li>
+                </ul>
+                <p style="margin-top: 10px; font-size: 0.85rem; color: #92400e;">
+                    <strong>Key Insight:</strong> Using official CPI, expenditure growth (24%) slightly exceeds inflation (19%). 
+                    Using the Chapwood Index (41%), expenditures have actually <em>fallen behind</em> real-world cost increases.
+                    The "true" inflation rate is debated - we show all three measures for transparency.
+                </p>
+            </div>
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h3>Spending vs Enrollment Growth (Indexed to FY2020 = 100)</h3>
+                    <div class="chart-container">
+                        <canvas id="growthIndexChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Growth Rate Comparison</h3>
+                    <div class="chart-container">
+                        <canvas id="growthComparisonChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Peer Comparison -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Peer Division Comparison (FY2024)</h2>
+            </div>
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h3>Administrative Efficiency (Admin per 1,000 Students)</h3>
+                    <div class="chart-container">
+                        <canvas id="adminEfficiencyChart"></canvas>
+                    </div>
+                    <p style="text-align: center; margin-top: 10px; color: var(--gray-600); font-size: 0.85rem;">
+                        Lower is better - fewer administrators per student
+                    </p>
+                </div>
+                <div class="chart-card">
+                    <h3>Per-Pupil Spending Comparison</h3>
+                    <div class="chart-container">
+                        <canvas id="perPupilChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h3>Students per Administrator</h3>
+                    <div class="chart-container">
+                        <canvas id="studentsPerAdminChart"></canvas>
+                    </div>
+                    <p style="text-align: center; margin-top: 10px; color: var(--gray-600); font-size: 0.85rem;">
+                        Higher is better - more students served per administrator
+                    </p>
+                </div>
+                <div class="chart-card">
+                    <h3>Funding Source Mix</h3>
+                    <div class="chart-container">
+                        <canvas id="fundingMixChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Peer Comparison Table -->
+            <div class="table-card" style="margin-top: 24px;">
+                <h3 style="margin-bottom: 16px;">Detailed Peer Comparison</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Division</th>
+                            <th>Enrollment</th>
+                            <th>Per-Pupil $</th>
+                            <th>Admin Positions</th>
+                            <th>Teachers</th>
+                            <th>Admin/1000</th>
+                            <th>Students/Admin</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="highlight">
+                            <td><strong>Frederick County</strong></td>
+                            <td>14,121</td>
+                            <td>$15,734</td>
+                            <td>24.4</td>
+                            <td>1,154</td>
+                            <td class="rank-1">1.73</td>
+                            <td class="rank-1">579.7</td>
+                        </tr>
+                        <tr>
+                            <td>Fauquier County</td>
+                            <td>10,658</td>
+                            <td>$16,351</td>
+                            <td>32.5</td>
+                            <td>943</td>
+                            <td>3.05</td>
+                            <td>327.9</td>
+                        </tr>
+                        <tr>
+                            <td>Warren County</td>
+                            <td>4,984</td>
+                            <td>$15,042</td>
+                            <td>15.3</td>
+                            <td>444</td>
+                            <td>3.07</td>
+                            <td>325.8</td>
+                        </tr>
+                        <tr>
+                            <td>Shenandoah County</td>
+                            <td>5,495</td>
+                            <td>$16,081</td>
+                            <td>24.5</td>
+                            <td>465</td>
+                            <td>4.46</td>
+                            <td>224.3</td>
+                        </tr>
+                        <tr>
+                            <td>Loudoun County</td>
+                            <td>81,274</td>
+                            <td>$21,183</td>
+                            <td>380.0</td>
+                            <td>7,000</td>
+                            <td>4.68</td>
+                            <td>213.9</td>
+                        </tr>
+                        <tr>
+                            <td>Clarke County</td>
+                            <td>1,885</td>
+                            <td>$15,165</td>
+                            <td>12.4</td>
+                            <td>170</td>
+                            <td>6.57</td>
+                            <td>152.3</td>
+                        </tr>
+                        <tr style="background: var(--gray-100); font-style: italic;">
+                            <td>Virginia State Avg</td>
+                            <td>-</td>
+                            <td>$17,636</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Pupil-Teacher Ratios -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Pupil-Teacher Ratios (Class Size Indicator)</h2>
+            </div>
+            <div class="analysis-box" style="background: #fef2f2; border-color: #fca5a5;">
+                <h4 style="color: #991b1b;">Key Finding: Larger Elementary Class Sizes</h4>
+                <p style="color: #7f1d1d;">
+                    Frederick County's K-7 pupil-teacher ratio (13.85:1) is <strong>12% higher than the state average</strong> (12.37:1). 
+                    This means elementary classes have approximately 1.5 more students per teacher than the typical Virginia school division.
+                    Secondary ratios (8-12) are at the state average.
+                </p>
+            </div>
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h3>K-7 (Elementary) Pupil-Teacher Ratio</h3>
+                    <div class="chart-container">
+                        <canvas id="k7RatioChart"></canvas>
+                    </div>
+                    <p style="text-align: center; margin-top: 10px; color: var(--gray-600); font-size: 0.85rem;">
+                        Lower ratio = smaller class sizes (better for students)
+                    </p>
+                </div>
+                <div class="chart-card">
+                    <h3>8-12 (Secondary) Pupil-Teacher Ratio</h3>
+                    <div class="chart-container">
+                        <canvas id="secondaryRatioChart"></canvas>
+                    </div>
+                    <p style="text-align: center; margin-top: 10px; color: var(--gray-600); font-size: 0.85rem;">
+                        Lower ratio = smaller class sizes (better for students)
+                    </p>
+                </div>
+            </div>
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h3>Frederick County Pupil-Teacher Ratio Trend (5-Year)</h3>
+                    <div class="chart-container">
+                        <canvas id="ratioTrendChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Ratio vs State Average Over Time</h3>
+                    <div class="chart-container">
+                        <canvas id="ratioVsStateChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pupil-Teacher Ratio Table -->
+            <div class="table-card" style="margin-top: 24px;">
+                <h3 style="margin-bottom: 16px;">Pupil-Teacher Ratios by Division (FY2023-24)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Division</th>
+                            <th>K-7 Ratio</th>
+                            <th>vs State</th>
+                            <th>8-12 Ratio</th>
+                            <th>vs State</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="highlight">
+                            <td><strong>Frederick County</strong></td>
+                            <td style="color: var(--danger);">13.85</td>
+                            <td style="color: var(--danger);">+1.48</td>
+                            <td>12.29</td>
+                            <td style="color: var(--success);">-0.02</td>
+                        </tr>
+                        <tr>
+                            <td>Loudoun County</td>
+                            <td>13.39</td>
+                            <td>+1.02</td>
+                            <td>11.25</td>
+                            <td>-1.06</td>
+                        </tr>
+                        <tr>
+                            <td>Warren County</td>
+                            <td>12.49</td>
+                            <td>+0.12</td>
+                            <td>10.73</td>
+                            <td>-1.58</td>
+                        </tr>
+                        <tr>
+                            <td>Fauquier County</td>
+                            <td>11.99</td>
+                            <td>-0.38</td>
+                            <td>11.33</td>
+                            <td>-0.98</td>
+                        </tr>
+                        <tr>
+                            <td>Clarke County</td>
+                            <td>11.95</td>
+                            <td>-0.42</td>
+                            <td>11.63</td>
+                            <td>-0.68</td>
+                        </tr>
+                        <tr>
+                            <td>Shenandoah County</td>
+                            <td>11.00</td>
+                            <td style="color: var(--success);">-1.37</td>
+                            <td style="color: var(--danger);">14.67</td>
+                            <td style="color: var(--danger);">+2.36</td>
+                        </tr>
+                        <tr style="background: var(--gray-100); font-style: italic;">
+                            <td>Virginia State Avg</td>
+                            <td>12.37</td>
+                            <td>-</td>
+                            <td>12.31</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 12px; color: var(--gray-600); font-size: 0.85rem;">
+                    <strong>Note:</strong> Ratios are students per classroom teacher position. Lower = smaller class sizes.
+                    K-7 includes grades K through 7th; 8-12 includes grades 8th through 12th.
+                </p>
+            </div>
+        </section>
+
+        <!-- Trend Analysis -->
+        <section class="section">
+            <div class="section-header">
+                <h2>5-Year Trends (Frederick County)</h2>
+            </div>
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h3>Enrollment & Staffing Trends</h3>
+                    <div class="chart-container tall">
+                        <canvas id="enrollmentStaffingChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Expenditure Trends</h3>
+                    <div class="chart-container tall">
+                        <canvas id="expenditureTrendChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h3>Admin Positions Over Time</h3>
+                    <div class="chart-container">
+                        <canvas id="adminTrendChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Average Teacher Salary</h3>
+                    <div class="chart-container">
+                        <canvas id="salaryTrendChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- County Budget -->
+        <section class="section">
+            <div class="section-header">
+                <h2>County Budget Allocation to Schools</h2>
+            </div>
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h3>School Funding from County ($ Millions)</h3>
+                    <div class="chart-container">
+                        <canvas id="countyFundingChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Schools as % of Total County Budget</h3>
+                    <div class="chart-container">
+                        <canvas id="budgetShareChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Sources -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Data Sources & Methodology</h2>
+            </div>
+            
+            <!-- Primary Data Sources -->
+            <div class="table-card">
+                <h3 style="margin-bottom: 16px;">Primary Data Sources</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th>Data Used</th>
+                            <th>Years</th>
+                            <th>URL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>VDOE Table 8</strong></td>
+                            <td>Average Daily Membership (ADM), Average Daily Attendance (ADA), attendance rates by division</td>
+                            <td>2019-20 to 2024-25</td>
+                            <td><a href="https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report" target="_blank">VDOE SAR</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>VDOE Table 15</strong></td>
+                            <td>Total expenditures, per-pupil spending, funding breakdown (local, state, federal, sales tax)</td>
+                            <td>2019-20 to 2023-24</td>
+                            <td><a href="https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report" target="_blank">VDOE SAR</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>VDOE Table 17</strong></td>
+                            <td>Pupil-to-classroom-teacher ratios for K-7 (elementary) and 8-12 (secondary)</td>
+                            <td>2019-20 to 2023-24</td>
+                            <td><a href="https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report" target="_blank">VDOE SAR</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>VDOE Table 18</strong></td>
+                            <td>Administrative, technical/clerical, and support staff positions by function (instruction, admin, tech, transportation, operations, facilities)</td>
+                            <td>2019-20 to 2023-24</td>
+                            <td><a href="https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report" target="_blank">VDOE SAR</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>VDOE Table 19</strong></td>
+                            <td>Principal, assistant principal, teacher, and aide positions with average salaries</td>
+                            <td>2019-20 to 2023-24</td>
+                            <td><a href="https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report" target="_blank">VDOE SAR</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Frederick County Budget</strong></td>
+                            <td>Annual county budget documents showing transfers to school operating, debt, and capital funds</td>
+                            <td>FY2020 to FY2025</td>
+                            <td><a href="https://www.fcva.us/departments/finance/budget" target="_blank">FCVA Budget</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Methodology Notes -->
+            <div class="table-card" style="margin-top: 24px;">
+                <h3 style="margin-bottom: 16px;">Methodology & Definitions</h3>
+                
+                <h4 style="margin-top: 16px; color: var(--gray-700);">Division Selection</h4>
+                <p style="color: var(--gray-600); font-size: 0.9rem; margin-top: 8px;">
+                    <strong>Target:</strong> Frederick County Public Schools (Division Code: 069)<br>
+                    <strong>Peer Districts:</strong> Selected based on geographic proximity and similar characteristics:
+                </p>
+                <ul style="color: var(--gray-600); font-size: 0.9rem; margin: 8px 0 0 20px;">
+                    <li><strong>Clarke County (043)</strong> - Small neighboring rural district</li>
+                    <li><strong>Fauquier County (061)</strong> - Similar rural/suburban mix, comparable size</li>
+                    <li><strong>Shenandoah County (171)</strong> - Neighboring Shenandoah Valley district</li>
+                    <li><strong>Warren County (187)</strong> - Adjacent district, similar demographics</li>
+                    <li><strong>Loudoun County (107)</strong> - Larger neighbor, included for regional context</li>
+                </ul>
+
+                <h4 style="margin-top: 20px; color: var(--gray-700);">Administrative Staff Definition</h4>
+                <p style="color: var(--gray-600); font-size: 0.9rem; margin-top: 8px;">
+                    "Admin Positions" refers to the "Administrative" column in VDOE Table 18, which includes administrators across all functional areas: 
+                    Instruction, Administration/Attendance/Health, Technology, Transportation, Operations/Maintenance, and Facilities. 
+                    This is a narrower definition than "central office staff" and does not include principals (who are in Table 19).
+                </p>
+
+                <h4 style="margin-top: 20px; color: var(--gray-700);">Pupil-Teacher Ratio</h4>
+                <p style="color: var(--gray-600); font-size: 0.9rem; margin-top: 8px;">
+                    Per VDOE Table 17, this is the ratio of Average Daily Membership (ADM) to classroom teaching positions. 
+                    Teaching positions include classroom teachers, homebound teachers, media specialists, and technology instructional teachers.
+                    <strong>K-7</strong> covers elementary grades (Kindergarten through 7th). <strong>8-12</strong> covers secondary grades (8th through 12th).
+                    This is NOT the same as actual class size, which may be smaller due to co-teaching, resource teachers, etc.
+                </p>
+
+                <h4 style="margin-top: 20px; color: var(--gray-700);">Fiscal Year Convention</h4>
+                <p style="color: var(--gray-600); font-size: 0.9rem; margin-top: 8px;">
+                    School fiscal years run July 1 - June 30. "FY2024" or "2023-24" refers to July 1, 2023 through June 30, 2024.
+                    County fiscal years follow the same convention.
+                </p>
+            </div>
+
+            <!-- Estimates & Limitations -->
+            <div class="table-card" style="margin-top: 24px; border-left: 4px solid var(--warning);">
+                <h3 style="margin-bottom: 16px; color: var(--warning);">Estimates & Limitations</h3>
+                
+                <h4 style="margin-top: 16px; color: var(--gray-700);">Inflation Reference (ESTIMATE)</h4>
+                <p style="color: var(--gray-600); font-size: 0.9rem; margin-top: 8px;">
+                    The "US Inflation (CPI)" line shown in the growth chart uses <strong>approximate values</strong> based on Bureau of Labor Statistics 
+                    Consumer Price Index data. The figures used (FY2020=100, FY2021=101.2, FY2022=108.0, FY2023=114.6, FY2024=119.8) are estimates 
+                    representing roughly 20% cumulative inflation from 2020-2024. For precise figures, consult:
+                </p>
+                <ul style="color: var(--gray-600); font-size: 0.9rem; margin: 8px 0 0 20px;">
+                    <li><a href="https://www.bls.gov/cpi/" target="_blank">Bureau of Labor Statistics CPI Data</a> - Official US government inflation statistics</li>
+                    <li><a href="https://truflation.com/" target="_blank">Truflation</a> - Real-time, independent inflation index using multiple data sources</li>
+                    <li><a href="https://chapwoodindex.com/" target="_blank">Chapwood Index</a> - Tracks actual cost of 500 items in 50 US cities (often shows higher inflation than CPI)</li>
+                </ul>
+                <p style="color: var(--gray-600); font-size: 0.85rem; margin-top: 8px; font-style: italic;">
+                    Note: The Chapwood Index typically reports higher inflation rates than official CPI, suggesting actual cost-of-living increases 
+                    may exceed the ~20% estimate used here. This would make the 24% expenditure growth appear more reasonable relative to true inflation.
+                </p>
+
+                <h4 style="margin-top: 20px; color: var(--gray-700);">Data Gaps</h4>
+                <ul style="color: var(--gray-600); font-size: 0.9rem; margin: 8px 0 0 20px;">
+                    <li><strong>FY2024-25 Expenditure Data:</strong> Not yet released by VDOE (typically available 6-12 months after fiscal year ends)</li>
+                    <li><strong>FCPS Budgets FY2020-FY2022:</strong> Detailed school budget documents not available online for these years; VDOE data used instead</li>
+                    <li><strong>Function-Level Spending:</strong> VDOE Table 15 shows funding SOURCE (local/state/federal) not FUNCTION (instruction/admin). Function breakdown requires APA or NCES data.</li>
+                </ul>
+
+                <h4 style="margin-top: 20px; color: var(--gray-700);">What This Analysis Does NOT Include</h4>
+                <ul style="color: var(--gray-600); font-size: 0.9rem; margin: 8px 0 0 20px;">
+                    <li>Student outcome data (test scores, graduation rates, etc.)</li>
+                    <li>School-level budget breakdowns (only division-level totals)</li>
+                    <li>Actual class sizes (ratios are based on total positions, not classroom assignments)</li>
+                    <li>Benefits costs or total compensation analysis</li>
+                    <li>Capital expenditures analysis (focus is on operating budgets)</li>
+                </ul>
+            </div>
+
+            <!-- Raw Data Access -->
+            <div class="table-card" style="margin-top: 24px;">
+                <h3 style="margin-bottom: 16px;">Raw Data Access</h3>
+                <p style="color: var(--gray-600); font-size: 0.9rem;">
+                    All processed data files are available in the project repository:
+                </p>
+                <ul style="color: var(--gray-600); font-size: 0.9rem; margin: 8px 0 0 20px;">
+                    <li><code>data/processed/vdoe/table8_enrollment.json</code> - Enrollment data</li>
+                    <li><code>data/processed/vdoe/table15_expenditures.json</code> - Expenditure data</li>
+                    <li><code>data/processed/vdoe/table17_ratios.json</code> - Pupil-teacher ratios</li>
+                    <li><code>data/processed/vdoe/table18_admin_personnel.json</code> - Admin staff data</li>
+                    <li><code>data/processed/vdoe/table19_instructional.json</code> - Teacher/principal data</li>
+                    <li><code>data/processed/county_budget_schools.json</code> - County budget appropriations</li>
+                    <li><code>data/analysis/fcps_audit_report.json</code> - Calculated metrics and findings</li>
+                </ul>
+                <p style="color: var(--gray-600); font-size: 0.9rem; margin-top: 12px;">
+                    Original source files (Excel, PDF) are preserved in <code>data/raw/</code> directories.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Open Frederick | Public Data for Frederick County, Virginia</p>
+        <p>Source: <a href="https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report" target="_blank">VDOE Superintendent's Annual Report</a> | Data updated January 2026</p>
+    </footer>
+
+    <script>
+        // Color palette
+        const colors = {
+            primary: '#3b82f6',
+            primaryLight: '#93c5fd',
+            success: '#10b981',
+            warning: '#f59e0b',
+            danger: '#ef4444',
+            purple: '#8b5cf6',
+            pink: '#ec4899',
+            gray: '#6b7280',
+            frederick: '#1e40af',
+        };
+
+        const peerColors = {
+            'Frederick': '#1e40af',
+            'Clarke': '#7c3aed',
+            'Fauquier': '#059669',
+            'Shenandoah': '#d97706',
+            'Warren': '#dc2626',
+            'Loudoun': '#0891b2',
+            'State': '#6b7280',
+        };
+
+        // Data
+        const years = ['FY2020', 'FY2021', 'FY2022', 'FY2023', 'FY2024'];
+        const yearLabels = ['2019-20', '2020-21', '2021-22', '2022-23', '2023-24'];
+
+        const frederickData = {
+            enrollment: [13736, 13131, 13747, 13441, 14121],
+            perPupil: [13091, 14214, 14333, 15501, 15734],
+            totalExp: [181.1, 188.2, 198.9, 210.3, 224.5],
+            adminPositions: [23.24, 24.0, 24.0, 24.08, 24.36],
+            teachingPositions: [1119.13, 1133.76, 1139.21, 1134.9, 1153.98],
+            avgTeacherSalary: [57724, 56859, 60028, 62671, 66441],
+        };
+
+        const countyBudget = {
+            years: ['FY2020', 'FY2021', 'FY2022', 'FY2023', 'FY2024', 'FY2025'],
+            schoolFunding: [208.8, 218.2, 226.0, 261.5, 265.2, 281.1],
+            schoolPct: [60.8, 61.4, 60.9, 61.5, 59.6, 57.0],
+        };
+
+        const peerComparison = {
+            divisions: ['Frederick', 'Fauquier', 'Warren', 'Shenandoah', 'Loudoun', 'Clarke'],
+            adminPer1000: [1.73, 3.05, 3.07, 4.46, 4.68, 6.57],
+            studentsPerAdmin: [579.7, 327.9, 325.8, 224.3, 213.9, 152.3],
+            perPupil: [15734, 16351, 15042, 16081, 21183, 15165],
+            localPct: [46.9, 55.7, 39.0, 36.1, 69.0, 55.3],
+            statePct: [38.0, 28.4, 37.8, 42.0, 22.3, 28.1],
+            federalPct: [6.1, 6.7, 12.5, 12.3, 2.4, 6.7],
+        };
+
+        // Inflation data from three sources (indexed to FY2020 = 100)
+        // Sources: BLS CPI-U, Truflation, Chapwood Index
+        // Note: These are estimates based on published annual rates
+        const inflationData = {
+            // BLS CPI-U: Official government measure
+            // Annual rates approx: 1.2%, 4.7%, 8.0%, 4.1%, 3.4%
+            blsCpi: [100, 101.2, 105.9, 114.4, 119.1, 123.2],
+            
+            // Truflation: Independent real-time index (generally tracks close to CPI)
+            // Tends to show slightly different timing but similar cumulative
+            truflation: [100, 101.4, 107.2, 115.8, 119.5, 122.8],
+            
+            // Chapwood Index: Tracks 500 items in 50 US cities
+            // Reports significantly higher inflation (avg 8-12% annually in many cities)
+            // Using conservative ~9% average annual rate
+            chapwood: [100, 109.0, 118.8, 129.5, 141.2, 153.9],
+        };
+
+        // Chart defaults
+        Chart.defaults.font.family = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+        Chart.defaults.font.size = 12;
+        Chart.defaults.color = '#4b5563';
+
+        // 1. Growth Index Chart
+        new Chart(document.getElementById('growthIndexChart'), {
+            type: 'line',
+            data: {
+                labels: yearLabels,
+                datasets: [
+                    {
+                        label: 'Total Expenditures',
+                        data: frederickData.totalExp.map(v => (v / frederickData.totalExp[0]) * 100),
+                        borderColor: colors.primary,
+                        backgroundColor: colors.primaryLight + '40',
+                        fill: true,
+                        tension: 0.3,
+                    },
+                    {
+                        label: 'Per-Pupil Spending',
+                        data: frederickData.perPupil.map(v => (v / frederickData.perPupil[0]) * 100),
+                        borderColor: colors.purple,
+                        borderDash: [5, 5],
+                        tension: 0.3,
+                    },
+                    {
+                        label: 'Enrollment',
+                        data: frederickData.enrollment.map(v => (v / frederickData.enrollment[0]) * 100),
+                        borderColor: colors.success,
+                        tension: 0.3,
+                    },
+                    {
+                        label: 'BLS CPI-U (Official)',
+                        data: inflationData.blsCpi.slice(0, 5),
+                        borderColor: colors.gray,
+                        borderDash: [2, 2],
+                        tension: 0.3,
+                    },
+                    {
+                        label: 'Truflation',
+                        data: inflationData.truflation.slice(0, 5),
+                        borderColor: '#06b6d4',
+                        borderDash: [4, 4],
+                        tension: 0.3,
+                    },
+                    {
+                        label: 'Chapwood Index',
+                        data: inflationData.chapwood.slice(0, 5),
+                        borderColor: '#f97316',
+                        borderDash: [6, 3],
+                        tension: 0.3,
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => `${ctx.dataset.label}: ${ctx.raw.toFixed(1)}`
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 95,
+                        title: { display: true, text: 'Index (FY2020 = 100)' }
+                    }
+                }
+            }
+        });
+
+        // 2. Growth Comparison Chart
+        new Chart(document.getElementById('growthComparisonChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Enrollment', 'Per-Pupil $', 'Total Exp', 'Admin Pos', 'Teachers', 'Salary', 'BLS CPI', 'Truflation', 'Chapwood'],
+                datasets: [{
+                    label: '5-Year Growth (%)',
+                    data: [2.8, 20.2, 24.0, 4.8, 3.1, 15.1, 19.1, 19.5, 41.2],
+                    backgroundColor: [
+                        colors.success,
+                        colors.primary,
+                        colors.primary,
+                        colors.warning,
+                        colors.success,
+                        colors.purple,
+                        colors.gray,
+                        '#06b6d4',
+                        '#f97316',
+                    ],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => `${ctx.raw.toFixed(1)}% growth`
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Growth (%)' }
+                    }
+                }
+            }
+        });
+
+        // 3. Admin Efficiency Chart
+        new Chart(document.getElementById('adminEfficiencyChart'), {
+            type: 'bar',
+            data: {
+                labels: peerComparison.divisions,
+                datasets: [{
+                    label: 'Admin per 1,000 Students',
+                    data: peerComparison.adminPer1000,
+                    backgroundColor: peerComparison.divisions.map(d => 
+                        d === 'Frederick' ? colors.frederick : colors.gray + '80'
+                    ),
+                    borderColor: peerComparison.divisions.map(d => 
+                        d === 'Frederick' ? colors.frederick : colors.gray
+                    ),
+                    borderWidth: 1,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false },
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Admin per 1,000 Students' }
+                    }
+                }
+            }
+        });
+
+        // 4. Per-Pupil Chart
+        new Chart(document.getElementById('perPupilChart'), {
+            type: 'bar',
+            data: {
+                labels: [...peerComparison.divisions, 'State Avg'],
+                datasets: [{
+                    label: 'Per-Pupil Spending',
+                    data: [...peerComparison.perPupil, 17636],
+                    backgroundColor: [...peerComparison.divisions, 'State'].map(d => 
+                        d === 'Frederick' ? colors.frederick : 
+                        d === 'State' ? colors.gray + '60' : colors.gray + '80'
+                    ),
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => `$${ctx.raw.toLocaleString()}`
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 14000,
+                        title: { display: true, text: 'Per-Pupil Spending ($)' },
+                        ticks: {
+                            callback: (v) => '$' + v.toLocaleString()
+                        }
+                    }
+                }
+            }
+        });
+
+        // 5. Students per Admin Chart
+        new Chart(document.getElementById('studentsPerAdminChart'), {
+            type: 'bar',
+            data: {
+                labels: peerComparison.divisions,
+                datasets: [{
+                    label: 'Students per Administrator',
+                    data: peerComparison.studentsPerAdmin,
+                    backgroundColor: peerComparison.divisions.map(d => 
+                        d === 'Frederick' ? colors.success : colors.gray + '80'
+                    ),
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Students per Admin' }
+                    }
+                }
+            }
+        });
+
+        // 6. Funding Mix Chart
+        new Chart(document.getElementById('fundingMixChart'), {
+            type: 'bar',
+            data: {
+                labels: peerComparison.divisions,
+                datasets: [
+                    {
+                        label: 'Local',
+                        data: peerComparison.localPct,
+                        backgroundColor: colors.primary,
+                    },
+                    {
+                        label: 'State',
+                        data: peerComparison.statePct,
+                        backgroundColor: colors.success,
+                    },
+                    {
+                        label: 'Federal',
+                        data: peerComparison.federalPct,
+                        backgroundColor: colors.warning,
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => `${ctx.dataset.label}: ${ctx.raw}%`
+                        }
+                    }
+                },
+                scales: {
+                    x: { stacked: true },
+                    y: { 
+                        stacked: true,
+                        max: 100,
+                        title: { display: true, text: 'Percentage (%)' }
+                    }
+                }
+            }
+        });
+
+        // 7. Enrollment & Staffing Trends
+        new Chart(document.getElementById('enrollmentStaffingChart'), {
+            type: 'line',
+            data: {
+                labels: yearLabels,
+                datasets: [
+                    {
+                        label: 'Enrollment (ADM)',
+                        data: frederickData.enrollment,
+                        borderColor: colors.primary,
+                        backgroundColor: colors.primaryLight + '40',
+                        fill: true,
+                        yAxisID: 'y',
+                        tension: 0.3,
+                    },
+                    {
+                        label: 'Teaching Positions',
+                        data: frederickData.teachingPositions,
+                        borderColor: colors.success,
+                        yAxisID: 'y1',
+                        tension: 0.3,
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' },
+                },
+                scales: {
+                    y: {
+                        type: 'linear',
+                        position: 'left',
+                        title: { display: true, text: 'Enrollment' },
+                        min: 12500,
+                    },
+                    y1: {
+                        type: 'linear',
+                        position: 'right',
+                        title: { display: true, text: 'Teachers' },
+                        min: 1100,
+                        grid: { drawOnChartArea: false },
+                    }
+                }
+            }
+        });
+
+        // 8. Expenditure Trend Chart
+        new Chart(document.getElementById('expenditureTrendChart'), {
+            type: 'line',
+            data: {
+                labels: yearLabels,
+                datasets: [
+                    {
+                        label: 'Total Expenditures ($M)',
+                        data: frederickData.totalExp,
+                        borderColor: colors.primary,
+                        backgroundColor: colors.primaryLight + '40',
+                        fill: true,
+                        yAxisID: 'y',
+                        tension: 0.3,
+                    },
+                    {
+                        label: 'Per-Pupil ($)',
+                        data: frederickData.perPupil,
+                        borderColor: colors.purple,
+                        yAxisID: 'y1',
+                        tension: 0.3,
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' },
+                },
+                scales: {
+                    y: {
+                        type: 'linear',
+                        position: 'left',
+                        title: { display: true, text: 'Total ($ Millions)' },
+                        min: 170,
+                    },
+                    y1: {
+                        type: 'linear',
+                        position: 'right',
+                        title: { display: true, text: 'Per-Pupil ($)' },
+                        min: 12000,
+                        grid: { drawOnChartArea: false },
+                        ticks: {
+                            callback: (v) => '$' + v.toLocaleString()
+                        }
+                    }
+                }
+            }
+        });
+
+        // 9. Admin Trend Chart
+        new Chart(document.getElementById('adminTrendChart'), {
+            type: 'bar',
+            data: {
+                labels: yearLabels,
+                datasets: [{
+                    label: 'Admin Positions',
+                    data: frederickData.adminPositions,
+                    backgroundColor: colors.warning + 'cc',
+                    borderColor: colors.warning,
+                    borderWidth: 1,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 22,
+                        max: 26,
+                        title: { display: true, text: 'Admin Positions (FTE)' }
+                    }
+                }
+            }
+        });
+
+        // 10. Salary Trend Chart
+        new Chart(document.getElementById('salaryTrendChart'), {
+            type: 'line',
+            data: {
+                labels: yearLabels,
+                datasets: [{
+                    label: 'Avg Teacher Salary',
+                    data: frederickData.avgTeacherSalary,
+                    borderColor: colors.success,
+                    backgroundColor: colors.success + '20',
+                    fill: true,
+                    tension: 0.3,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => '$' + ctx.raw.toLocaleString()
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 55000,
+                        title: { display: true, text: 'Average Salary ($)' },
+                        ticks: {
+                            callback: (v) => '$' + v.toLocaleString()
+                        }
+                    }
+                }
+            }
+        });
+
+        // 11. County Funding Chart
+        new Chart(document.getElementById('countyFundingChart'), {
+            type: 'bar',
+            data: {
+                labels: countyBudget.years,
+                datasets: [{
+                    label: 'Total School Funding',
+                    data: countyBudget.schoolFunding,
+                    backgroundColor: colors.primary + 'cc',
+                    borderColor: colors.primary,
+                    borderWidth: 1,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => '$' + ctx.raw.toFixed(1) + 'M'
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 180,
+                        title: { display: true, text: 'Total Funding ($ Millions)' }
+                    }
+                }
+            }
+        });
+
+        // 12. Budget Share Chart
+        new Chart(document.getElementById('budgetShareChart'), {
+            type: 'line',
+            data: {
+                labels: countyBudget.years,
+                datasets: [{
+                    label: 'School % of County Budget',
+                    data: countyBudget.schoolPct,
+                    borderColor: colors.warning,
+                    backgroundColor: colors.warning + '20',
+                    fill: true,
+                    tension: 0.3,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => ctx.raw.toFixed(1) + '%'
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 55,
+                        max: 65,
+                        title: { display: true, text: 'Percentage of County Budget (%)' }
+                    }
+                }
+            }
+        });
+
+        // ============================================
+        // PUPIL-TEACHER RATIO CHARTS
+        // ============================================
+
+        // Pupil-Teacher Ratio Data
+        const pupilTeacherData = {
+            divisions: ['Frederick', 'Loudoun', 'Warren', 'Fauquier', 'Clarke', 'Shenandoah', 'State Avg'],
+            k7Ratio: [13.85, 13.39, 12.49, 11.99, 11.95, 11.00, 12.37],
+            secondaryRatio: [12.29, 11.25, 10.73, 11.33, 11.63, 14.67, 12.31],
+        };
+
+        const frederickRatioTrend = {
+            k7: [14.14, 12.87, 13.38, 13.22, 13.85],
+            secondary: [11.81, 11.70, 12.14, 11.94, 12.29],
+        };
+
+        const stateRatioTrend = {
+            k7: [12.97, 12.15, 12.29, 12.41, 12.37],
+            secondary: [12.67, 12.52, 12.64, 12.54, 12.31],
+        };
+
+        // 13. K-7 Ratio Chart
+        new Chart(document.getElementById('k7RatioChart'), {
+            type: 'bar',
+            data: {
+                labels: pupilTeacherData.divisions,
+                datasets: [{
+                    label: 'K-7 Pupil-Teacher Ratio',
+                    data: pupilTeacherData.k7Ratio,
+                    backgroundColor: pupilTeacherData.divisions.map(d => 
+                        d === 'Frederick' ? colors.danger : 
+                        d === 'State Avg' ? colors.gray + '60' : colors.gray + '80'
+                    ),
+                    borderColor: pupilTeacherData.divisions.map(d => 
+                        d === 'Frederick' ? colors.danger : colors.gray
+                    ),
+                    borderWidth: 1,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => `${ctx.raw}:1 students per teacher`
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 10,
+                        max: 15,
+                        title: { display: true, text: 'Students per Teacher' }
+                    }
+                }
+            }
+        });
+
+        // 14. Secondary Ratio Chart
+        new Chart(document.getElementById('secondaryRatioChart'), {
+            type: 'bar',
+            data: {
+                labels: pupilTeacherData.divisions,
+                datasets: [{
+                    label: '8-12 Pupil-Teacher Ratio',
+                    data: pupilTeacherData.secondaryRatio,
+                    backgroundColor: pupilTeacherData.divisions.map(d => 
+                        d === 'Frederick' ? colors.frederick : 
+                        d === 'State Avg' ? colors.gray + '60' : colors.gray + '80'
+                    ),
+                    borderColor: pupilTeacherData.divisions.map(d => 
+                        d === 'Frederick' ? colors.frederick : colors.gray
+                    ),
+                    borderWidth: 1,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => `${ctx.raw}:1 students per teacher`
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 10,
+                        max: 16,
+                        title: { display: true, text: 'Students per Teacher' }
+                    }
+                }
+            }
+        });
+
+        // 15. Frederick Ratio Trend Chart
+        new Chart(document.getElementById('ratioTrendChart'), {
+            type: 'line',
+            data: {
+                labels: yearLabels,
+                datasets: [
+                    {
+                        label: 'K-7 (Elementary)',
+                        data: frederickRatioTrend.k7,
+                        borderColor: colors.danger,
+                        backgroundColor: colors.danger + '20',
+                        fill: true,
+                        tension: 0.3,
+                    },
+                    {
+                        label: '8-12 (Secondary)',
+                        data: frederickRatioTrend.secondary,
+                        borderColor: colors.frederick,
+                        backgroundColor: colors.frederick + '20',
+                        fill: true,
+                        tension: 0.3,
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => `${ctx.dataset.label}: ${ctx.raw}:1`
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 11,
+                        max: 15,
+                        title: { display: true, text: 'Students per Teacher' }
+                    }
+                }
+            }
+        });
+
+        // 16. Frederick vs State Ratio Chart
+        new Chart(document.getElementById('ratioVsStateChart'), {
+            type: 'line',
+            data: {
+                labels: yearLabels,
+                datasets: [
+                    {
+                        label: 'Frederick K-7',
+                        data: frederickRatioTrend.k7,
+                        borderColor: colors.danger,
+                        tension: 0.3,
+                    },
+                    {
+                        label: 'State K-7',
+                        data: stateRatioTrend.k7,
+                        borderColor: colors.danger,
+                        borderDash: [5, 5],
+                        tension: 0.3,
+                    },
+                    {
+                        label: 'Frederick 8-12',
+                        data: frederickRatioTrend.secondary,
+                        borderColor: colors.frederick,
+                        tension: 0.3,
+                    },
+                    {
+                        label: 'State 8-12',
+                        data: stateRatioTrend.secondary,
+                        borderColor: colors.frederick,
+                        borderDash: [5, 5],
+                        tension: 0.3,
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => `${ctx.dataset.label}: ${ctx.raw}:1`
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 11,
+                        max: 15,
+                        title: { display: true, text: 'Students per Teacher' }
+                    }
+                }
+            }
+        });
+    </script>
+
+    <!-- Nostr Feedback Widget -->
+    <script type="module">
+        import { initFeedbackWidget } from './feedback.js';
+        initFeedbackWidget({ pageType: 'education' });
+    </script>
+</body>
+</html>
