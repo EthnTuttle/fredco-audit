@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About This Project - Frederick County Schools Audit</title>
+    <link rel="stylesheet" href="feedback.css">
+    <style>
+        :root {
+            --primary: #1e40af;
+            --primary-light: #3b82f6;
+            --success: #059669;
+            --warning: #d97706;
+            --danger: #dc2626;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--gray-100);
+            color: var(--gray-800);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 60px 20px;
+            margin-bottom: 30px;
+        }
+
+        header .container {
+            max-width: 900px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        /* Navigation */
+        .nav-bar {
+            background: white;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-bar a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .nav-bar a:hover {
+            background: var(--gray-100);
+        }
+
+        .nav-bar a.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .nav-bar span {
+            color: var(--gray-400);
+        }
+
+        /* Article Content */
+        article {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        article h2 {
+            font-size: 1.75rem;
+            color: var(--gray-900);
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--gray-200);
+        }
+
+        article h2:first-child {
+            margin-top: 0;
+        }
+
+        article h3 {
+            font-size: 1.25rem;
+            color: var(--gray-800);
+            margin: 30px 0 15px 0;
+        }
+
+        article p {
+            margin-bottom: 16px;
+            color: var(--gray-700);
+        }
+
+        article ul, article ol {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        article li {
+            margin-bottom: 8px;
+            color: var(--gray-700);
+        }
+
+        article strong {
+            color: var(--gray-900);
+        }
+
+        /* Tables */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        th {
+            background: var(--gray-50);
+            font-weight: 600;
+            color: var(--gray-700);
+        }
+
+        tr:hover {
+            background: var(--gray-50);
+        }
+
+        /* Highlight boxes */
+        .highlight-box {
+            background: var(--gray-50);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box.success {
+            background: #ecfdf5;
+            border-color: var(--success);
+        }
+
+        .highlight-box.warning {
+            background: #fffbeb;
+            border-color: var(--warning);
+        }
+
+        .highlight-box h4 {
+            margin-bottom: 10px;
+            color: var(--gray-900);
+        }
+
+        /* Code blocks */
+        pre {
+            background: var(--gray-900);
+            color: #e5e7eb;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            margin: 20px 0;
+        }
+
+        code {
+            font-family: 'Monaco', 'Menlo', monospace;
+            background: var(--gray-100);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+        }
+
+        /* Separator */
+        hr {
+            border: none;
+            border-top: 2px solid var(--gray-200);
+            margin: 40px 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--gray-200);
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: var(--primary);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .cta-section h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 20px;
+        }
+
+        .cta-section .btn {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-section .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.75rem;
+            }
+
+            article {
+                padding: 24px;
+            }
+
+            .nav-bar {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Auditing Frederick County Schools</h1>
+            <p>A Data-Driven Deep Dive into Public School Spending</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Navigation -->
+        <div class="nav-bar">
+            <a href="index.html">County Government</a>
+            <span>|</span>
+            <a href="schools.html">School District (FCPS)</a>
+            <span>|</span>
+            <a href="map.html">District Map</a>
+            <span>|</span>
+            <a href="real_estate.html">Real Estate</a>
+            <span>|</span>
+            <a href="about.html" class="active">About</a>
+        </div>
+
+        <article>
+            <h2>The Question That Started It All</h2>
+            <p>Every year, Frederick County, Virginia transfers over $130 million to its public school system. That's more than half of the county's general fund. As taxpayers, residents have a right to know: Is that money being spent wisely? Are we top-heavy with administrators while classrooms are overcrowded? How do we compare to our neighbors?</p>
+            <p>This project set out to answer those questions with data, not opinions.</p>
+
+            <hr>
+
+            <h2>What Data Did We Collect?</h2>
+            <p>The first challenge was gathering comprehensive, authoritative data. We pulled from seven different public sources to build a complete picture spanning fiscal years 2020-2025:</p>
+
+            <h3>Virginia Department of Education (VDOE)</h3>
+            <p>The backbone of our analysis. VDOE publishes detailed annual reports on every school division in Virginia:</p>
+            <ul>
+                <li><strong>Table 8:</strong> Enrollment data (Average Daily Membership and Attendance)</li>
+                <li><strong>Table 15:</strong> Per-pupil expenditures broken down by funding source (local, state, federal)</li>
+                <li><strong>Table 17:</strong> Pupil-teacher ratios for elementary and secondary</li>
+                <li><strong>Table 18:</strong> Administrative and support staff positions by function</li>
+                <li><strong>Table 19:</strong> Instructional positions and average teacher salaries</li>
+            </ul>
+
+            <h3>Frederick County Government Budgets</h3>
+            <p>We downloaded 21 county budget PDFs covering FY2020-FY2026. These show exactly how much the county appropriates to schools each year—and how that compares to other county priorities.</p>
+
+            <h3>FCPS School District Budgets</h3>
+            <p>The school district's own budget documents (FY2023-FY2026) provide line-item detail on how funds are allocated across schools and functions.</p>
+
+            <h3>Additional Sources</h3>
+            <ul>
+                <li><strong>Virginia Auditor of Public Accounts (APA):</strong> Function-level expenditure comparisons across all VA districts</li>
+                <li><strong>NCES Common Core of Data:</strong> Federal education statistics for national context</li>
+                <li><strong>VPAP (Virginia Public Access Project):</strong> Political spending and education funding data</li>
+                <li><strong>County Real Estate Tax Records:</strong> To understand the tax burden context</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h4>Data Scale</h4>
+                <p>In total: <strong>90+ source files, ~375 MB of raw data</strong>.</p>
+            </div>
+
+            <hr>
+
+            <h2>How Did We Analyze It?</h2>
+            <p>Raw Excel files and PDFs don't answer questions—structured data does. We built a processing pipeline to transform everything into queryable JSON files with full source references for auditability.</p>
+
+            <h3>The Processing Pipeline</h3>
+            <pre><code>Raw Data (XLSX, PDF, ZIP)
+    ↓
+Python Scripts (openpyxl, pdfplumber, pandas)
+    ↓
+Structured JSON (with source citations)
+    ↓
+Audit Metrics (ratios, comparisons, trends)
+    ↓
+Interactive Dashboards (Chart.js, Leaflet)</code></pre>
+
+            <h3>Key Scripts</h3>
+            <ul>
+                <li><code>parse_excel.py</code> — Extracts data from VDOE's complex multi-sheet Excel workbooks</li>
+                <li><code>parse_county_budget.py</code> — Uses pdfplumber to pull budget tables from county PDFs</li>
+                <li><code>calculate_audit_metrics.py</code> — The heart of the audit: calculates admin ratios, peer comparisons, and flags anomalies</li>
+            </ul>
+
+            <h3>Peer Comparison Methodology</h3>
+            <p>No number means anything in isolation. We compared Frederick County against:</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>District</th>
+                            <th>Why Compare?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Clarke County</td>
+                            <td>Small rural neighbor</td>
+                        </tr>
+                        <tr>
+                            <td>Fauquier County</td>
+                            <td>Similar size, similar demographics</td>
+                        </tr>
+                        <tr>
+                            <td>Shenandoah County</td>
+                            <td>Adjacent valley district</td>
+                        </tr>
+                        <tr>
+                            <td>Warren County</td>
+                            <td>Adjacent district</td>
+                        </tr>
+                        <tr>
+                            <td>Loudoun County</td>
+                            <td>Larger regional benchmark</td>
+                        </tr>
+                        <tr>
+                            <td>Virginia State Average</td>
+                            <td>Statewide baseline</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>Every metric shows where Frederick stands in this peer group.</p>
+
+            <hr>
+
+            <h2>What Does the Site Display?</h2>
+            <p>We built four interactive dashboards to make the data accessible:</p>
+
+            <h3>1. County Government Dashboard</h3>
+            <ul>
+                <li>Total county budget growth over time</li>
+                <li>Department-by-department spending breakdown</li>
+                <li>How much goes to schools vs. other county functions</li>
+                <li>Personnel counts and growth rates</li>
+            </ul>
+
+            <h3>2. FCPS Schools Dashboard</h3>
+            <p>The star of the audit. This dashboard answers the core questions:</p>
+            <p><strong>Admin Efficiency Metrics:</strong> Admin positions per 1,000 students, students per administrator, admin as percentage of total staff, 5-year admin growth vs. enrollment growth.</p>
+            <p><strong>Peer Comparison Charts:</strong> Per-pupil spending across all peer districts, admin ratios: who's leanest? who's most bloated?, class sizes compared to state averages.</p>
+            <p><strong>Trend Analysis:</strong> Enrollment trajectory, spending growth vs. enrollment growth, teacher salary trends.</p>
+
+            <h3>3. Interactive District Map</h3>
+            <p>A Leaflet.js map showing school district boundaries with key metrics overlaid. Click any district to see its stats.</p>
+
+            <h3>4. Real Estate Analysis</h3>
+            <p>Context matters. This dashboard shows property values and tax rates so you can understand the funding picture.</p>
+
+            <hr>
+
+            <h2>What Did We Find?</h2>
+            <p>The results surprised us.</p>
+
+            <div class="highlight-box success">
+                <h4>The Good News: Frederick County is NOT Over-Administered</h4>
+                <p>Despite concerns about bureaucratic bloat, the data tells a different story:</p>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Frederick County</th>
+                            <th>Finding</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Admin per 1,000 students</td>
+                            <td>1.73</td>
+                            <td><strong>Lowest among all peers</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Students per admin</td>
+                            <td>579.7</td>
+                            <td><strong>Highest among peers</strong> (most efficient)</td>
+                        </tr>
+                        <tr>
+                            <td>Admin % of staff</td>
+                            <td>1.26%</td>
+                            <td>Well below 10% warning threshold</td>
+                        </tr>
+                        <tr>
+                            <td>Admin growth vs. enrollment</td>
+                            <td>1.7x</td>
+                            <td>Below 2.0x threshold</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>Frederick County Public Schools runs the leanest administration of any comparable district in the region.</p>
+
+            <div class="highlight-box warning">
+                <h4>The Concerns Worth Watching</h4>
+            </div>
+
+            <p><strong>1. Per-Pupil Spending is Below Average</strong><br>
+            At $15,734 per student, Frederick spends 10.8% less than the Virginia state average of $17,636. Is this efficiency or underfunding?</p>
+
+            <p><strong>2. K-7 Class Sizes are Larger Than Average</strong><br>
+            Elementary pupil-teacher ratio of 13.9:1 is 12% higher than the state average of 12.4:1. More students per teacher could impact educational quality.</p>
+
+            <p><strong>3. Schools' Share of County Budget is Declining</strong><br>
+            In FY2020, schools received 60.8% of the county budget. By FY2025, that dropped to 57.0%. The absolute dollars increased, but schools are getting a smaller slice of a growing pie.</p>
+
+            <p><strong>Historical NCES Data Showed One Red Flag</strong><br>
+            The FY2022 federal data (NCES) showed administration spending at 10.4% of total expenditures—slightly above our 10% threshold. However, current VDOE data shows this has improved.</p>
+
+            <hr>
+
+            <h2>The Technical Stack</h2>
+            <p>For those interested in replicating this approach:</p>
+            <ul>
+                <li><strong>Data Processing:</strong> Python 3, pandas, openpyxl, pdfplumber</li>
+                <li><strong>Frontend:</strong> Static HTML, vanilla JavaScript, CSS</li>
+                <li><strong>Charting:</strong> Chart.js for dashboards, Plotly for detailed analysis</li>
+                <li><strong>Mapping:</strong> Leaflet.js with GeoJSON district boundaries</li>
+                <li><strong>Data Format:</strong> JSON with source citations for every data point</li>
+                <li><strong>Hosting:</strong> Static files—no database, no server required</li>
+            </ul>
+            <p>The entire site can be hosted on GitHub Pages, Netlify, or any static host.</p>
+
+            <hr>
+
+            <h2>What Else Could We Do?</h2>
+            <p>This project answered our initial questions, but it opened doors to deeper investigations. Here's what we're considering:</p>
+
+            <h3>1. School-Level Analysis</h3>
+            <p>We have division-level data, but what about individual schools? Are resources distributed equitably across Frederick County's elementary, middle, and high schools? Do schools in different neighborhoods get different funding?</p>
+
+            <h3>2. Outcomes Correlation</h3>
+            <p>We've analyzed inputs (spending, staffing), but what about outputs? How do SOL scores, graduation rates, and college readiness correlate with spending levels? Are high-spending districts getting better results?</p>
+
+            <h3>3. Salary Benchmarking</h3>
+            <p>Teachers in Frederick County earn an average of $66,441. How does that compare to cost-of-living-adjusted salaries in peer districts? Are we competitive enough to attract and retain talent?</p>
+
+            <h3>4. Capital Spending Deep Dive</h3>
+            <p>We have CIP (Capital Improvement Plan) documents but haven't fully analyzed them. How much is going to new construction vs. maintenance? Are we addressing facility needs proactively or reactively?</p>
+
+            <h3>5. Special Education Analysis</h3>
+            <p>Federal IDEA funding and special education costs are growing nationwide. How is Frederick County handling this mandate? What's the local contribution beyond federal requirements?</p>
+
+            <h3>6. Longitudinal Staffing Analysis</h3>
+            <p>We know current admin ratios are healthy, but what about turnover? Are we losing experienced teachers? What's the tenure distribution of our teaching staff?</p>
+
+            <h3>7. Revenue Source Diversification</h3>
+            <p>How dependent is FCPS on local property taxes vs. state funding? What happens to school funding if real estate values decline?</p>
+
+            <h3>8. Predictive Modeling</h3>
+            <p>With 6 years of data, can we project future enrollment, staffing needs, and budget requirements? What if we see a 10% enrollment increase from new housing developments?</p>
+
+            <h3>9. Public Engagement Tools</h3>
+            <p>Could we build a "what if" calculator where residents explore trade-offs? "If we increase per-pupil spending by $500, what would that cost in property taxes?"</p>
+
+            <h3>10. Expand to Other Counties</h3>
+            <p>The pipeline we built works for any Virginia school division. We could audit every district in the Shenandoah Valley—or the entire state.</p>
+
+            <hr>
+
+            <h2>Conclusion</h2>
+            <p>Public data exists for a reason: accountability. But raw data locked in PDFs and spreadsheets doesn't inform anyone. By collecting, processing, and visualizing this information, we've made it possible for any resident to understand how their schools are funded and whether that money is being spent wisely.</p>
+
+            <p>The answer, at least for Frederick County, is encouraging: <strong>our schools are running lean</strong>, perhaps even too lean given the larger-than-average class sizes. The debate shouldn't be about administrative bloat—it should be about whether we're investing enough in the classroom.</p>
+
+            <p>All of our data, code, and methodology is available in this repository. We invite scrutiny, corrections, and contributions.</p>
+
+            <p><em>Because in the end, these are our schools. We should know how they're run.</em></p>
+
+            <div class="cta-section">
+                <h3>Explore the Data</h3>
+                <p>See the full analysis in our interactive dashboards.</p>
+                <a href="schools.html" class="btn">View School District Dashboard</a>
+            </div>
+
+            <hr>
+
+            <p><strong>Data Sources:</strong> Virginia Department of Education, Frederick County Government, FCPS, Virginia Auditor of Public Accounts, NCES, VPAP</p>
+
+            <p><strong>Methodology:</strong> All calculations use official state-reported data with full source citations. Peer districts selected based on geographic proximity and demographic similarity.</p>
+
+            <p><strong>Questions or Corrections?</strong> Open an issue in this repository.</p>
+        </article>
+    </div>
+
+    <footer>
+        <p>Data sources: <a href="https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report" target="_blank">VDOE</a> |
+        <a href="https://fcva.us/departments/finance/budget/budget-archives" target="_blank">Frederick County Budget</a> |
+        <a href="https://www.frederickcountyschoolsva.net/about/budget" target="_blank">FCPS Budget</a></p>
+        <p style="margin-top: 10px;">Last updated: January 2026 | FY2020-FY2025 Data</p>
+    </footer>
+
+    <!-- Nostr Feedback Widget -->
+    <script type="module">
+        import { initFeedbackWidget } from './feedback.js';
+        initFeedbackWidget({ pageType: 'about' });
+    </script>
+</body>
+</html>
