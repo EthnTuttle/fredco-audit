@@ -1,0 +1,435 @@
+{
+  "report_title": "Frederick County Public Schools Administrative Audit",
+  "target_division": {
+    "code": "069",
+    "name": "Frederick County"
+  },
+  "peer_divisions": [
+    "043",
+    "061",
+    "171",
+    "187",
+    "107"
+  ],
+  "analysis_date": "2026-01-29T07:17:18.567834",
+  "fiscal_year_analyzed": "FY2024",
+  "data_sources": [
+    "VDOE Superintendent's Annual Report Tables 8, 15, 17, 18, 19",
+    "Frederick County Annual Budgets FY2020-FY2025"
+  ],
+  "thresholds_used": {
+    "admin_ratio_pct": 10.0,
+    "admin_per_1000_students": 3.5,
+    "admin_to_teacher_ratio": 0.05,
+    "per_pupil_admin": 1200,
+    "admin_growth_vs_enrollment": 2.0
+  },
+  "sections": {
+    "admin_ratios": {
+      "069": {
+        "division_name": "Frederick County",
+        "fiscal_year": "FY2024",
+        "enrollment_adm": 14121.0,
+        "admin_positions": 24.360000000000003,
+        "total_support_staff": 723.64,
+        "teaching_positions": 1153.98,
+        "total_instructional": 1207.28,
+        "total_staff": 1930.92,
+        "admin_pct_of_total_staff": 1.26,
+        "admin_per_1000_students": 1.73,
+        "admin_to_teacher_ratio": 0.0211,
+        "students_per_admin": 579.7
+      },
+      "043": {
+        "division_name": "Clarke County",
+        "fiscal_year": "FY2024",
+        "enrollment_adm": 1885.0,
+        "admin_positions": 12.38,
+        "total_support_staff": 107.17,
+        "teaching_positions": 170.07,
+        "total_instructional": 179.07,
+        "total_staff": 286.24,
+        "admin_pct_of_total_staff": 4.33,
+        "admin_per_1000_students": 6.57,
+        "admin_to_teacher_ratio": 0.0728,
+        "students_per_admin": 152.3
+      },
+      "061": {
+        "division_name": "Fauquier County",
+        "fiscal_year": "FY2024",
+        "enrollment_adm": 10658.0,
+        "admin_positions": 32.5,
+        "total_support_staff": 551.02,
+        "teaching_positions": 943.16,
+        "total_instructional": 986.16,
+        "total_staff": 1537.1799999999998,
+        "admin_pct_of_total_staff": 2.11,
+        "admin_per_1000_students": 3.05,
+        "admin_to_teacher_ratio": 0.0345,
+        "students_per_admin": 327.9
+      },
+      "171": {
+        "division_name": "Shenandoah County",
+        "fiscal_year": "FY2024",
+        "enrollment_adm": 5495.0,
+        "admin_positions": 24.5,
+        "total_support_staff": 285.5,
+        "teaching_positions": 465.01,
+        "total_instructional": 491.76,
+        "total_staff": 777.26,
+        "admin_pct_of_total_staff": 3.15,
+        "admin_per_1000_students": 4.46,
+        "admin_to_teacher_ratio": 0.0527,
+        "students_per_admin": 224.3
+      },
+      "187": {
+        "division_name": "Warren County",
+        "fiscal_year": "FY2024",
+        "enrollment_adm": 4984.0,
+        "admin_positions": 15.3,
+        "total_support_staff": 164.0,
+        "teaching_positions": 443.81,
+        "total_instructional": 464.81,
+        "total_staff": 628.81,
+        "admin_pct_of_total_staff": 2.43,
+        "admin_per_1000_students": 3.07,
+        "admin_to_teacher_ratio": 0.0345,
+        "students_per_admin": 325.8
+      },
+      "107": {
+        "division_name": "Loudoun County",
+        "fiscal_year": "FY2024",
+        "enrollment_adm": 81274.0,
+        "admin_positions": 380.01,
+        "total_support_staff": 3839.25,
+        "teaching_positions": 7000.05,
+        "total_instructional": 7369.45,
+        "total_staff": 11208.7,
+        "admin_pct_of_total_staff": 3.39,
+        "admin_per_1000_students": 4.68,
+        "admin_to_teacher_ratio": 0.0543,
+        "students_per_admin": 213.9
+      }
+    },
+    "expenditure_analysis": {
+      "069": {
+        "division_name": "Frederick County",
+        "fiscal_year": "2023-24",
+        "adm": 14269.210000000001,
+        "total_expenditures": 224518221.8,
+        "total_per_pupil": 15734,
+        "local_per_pupil": 7383,
+        "state_per_pupil": 5973,
+        "federal_per_pupil": 960,
+        "local_pct": 46.9,
+        "state_pct": 38.0,
+        "federal_pct": 6.1
+      },
+      "043": {
+        "division_name": "Clarke County",
+        "fiscal_year": "2023-24",
+        "adm": 1920.9599999999998,
+        "total_expenditures": 29131051.2,
+        "total_per_pupil": 15165,
+        "local_per_pupil": 8379,
+        "state_per_pupil": 4254,
+        "federal_per_pupil": 1018,
+        "local_pct": 55.3,
+        "state_pct": 28.1,
+        "federal_pct": 6.7
+      },
+      "061": {
+        "division_name": "Fauquier County",
+        "fiscal_year": "2023-24",
+        "adm": 10805.279999999999,
+        "total_expenditures": 176680890.12,
+        "total_per_pupil": 16351,
+        "local_per_pupil": 9111,
+        "state_per_pupil": 4641,
+        "federal_per_pupil": 1098,
+        "local_pct": 55.7,
+        "state_pct": 28.4,
+        "federal_pct": 6.7
+      },
+      "171": {
+        "division_name": "Shenandoah County",
+        "fiscal_year": "2023-24",
+        "adm": 5655.0199999999995,
+        "total_expenditures": 90936025.36,
+        "total_per_pupil": 16081,
+        "local_per_pupil": 5802,
+        "state_per_pupil": 6758,
+        "federal_per_pupil": 1980,
+        "local_pct": 36.1,
+        "state_pct": 42.0,
+        "federal_pct": 12.3
+      },
+      "187": {
+        "division_name": "Warren County",
+        "fiscal_year": "2023-24",
+        "adm": 5107.370000000001,
+        "total_expenditures": 76823312.47999999,
+        "total_per_pupil": 15042,
+        "local_per_pupil": 5863,
+        "state_per_pupil": 5679,
+        "federal_per_pupil": 1887,
+        "local_pct": 39.0,
+        "state_pct": 37.8,
+        "federal_pct": 12.5
+      },
+      "107": {
+        "division_name": "Loudoun County",
+        "fiscal_year": "2023-24",
+        "adm": 82439.12999999999,
+        "total_expenditures": 1746300809.23,
+        "total_per_pupil": 21183,
+        "local_per_pupil": 14626,
+        "state_per_pupil": 4715,
+        "federal_per_pupil": 506,
+        "local_pct": 69.0,
+        "state_pct": 22.3,
+        "federal_pct": 2.4
+      },
+      "STATE": {
+        "division_name": "Virginia State",
+        "fiscal_year": "2023-24",
+        "adm": 1257959.93,
+        "total_expenditures": 22185016051.01,
+        "total_per_pupil": 17636,
+        "local_per_pupil": 8403,
+        "state_per_pupil": 6093,
+        "federal_per_pupil": 1759,
+        "local_pct": 47.6,
+        "state_pct": 34.5,
+        "federal_pct": 10.0
+      }
+    },
+    "trend_analysis": {
+      "division": "Frederick County (069)",
+      "years": [
+        "2019-20",
+        "2020-21",
+        "2021-22",
+        "2022-23",
+        "2023-24"
+      ],
+      "metrics": {
+        "enrollment_adm": [
+          13736.0,
+          13131.0,
+          13747.0,
+          13441.0,
+          14121.0
+        ],
+        "per_pupil_spending": [
+          13091,
+          14214,
+          14333,
+          15501,
+          15734
+        ],
+        "total_expenditures": [
+          181092737.63,
+          188177351.53,
+          198905358.7,
+          210303681.32,
+          224518221.8
+        ],
+        "admin_positions": [
+          23.24,
+          24.0,
+          24.0,
+          24.08,
+          24.360000000000003
+        ],
+        "total_support_staff": [
+          677.64,
+          691.5,
+          724.3399999999999,
+          713.5999999999999,
+          723.64
+        ],
+        "teaching_positions": [
+          1119.13,
+          1133.76,
+          1139.21,
+          1134.9,
+          1153.98
+        ],
+        "total_instructional": [
+          1171.04,
+          1187.82,
+          1191.39,
+          1187.57,
+          1207.28
+        ],
+        "avg_teacher_salary": [
+          57724.47,
+          56858.62,
+          60028.31,
+          62671.01,
+          66440.83
+        ]
+      },
+      "growth_rates": {
+        "enrollment": {
+          "start_value": 13736.0,
+          "end_value": 14121.0,
+          "total_growth_pct": 2.8,
+          "cagr_pct": 0.69,
+          "years": 4
+        },
+        "per_pupil_spending": {
+          "start_value": 13091,
+          "end_value": 15734,
+          "total_growth_pct": 20.19,
+          "cagr_pct": 4.7,
+          "years": 4
+        },
+        "total_expenditures": {
+          "start_value": 181092737.63,
+          "end_value": 224518221.8,
+          "total_growth_pct": 23.98,
+          "cagr_pct": 5.52,
+          "years": 4
+        },
+        "admin_positions": {
+          "start_value": 23.24,
+          "end_value": 24.360000000000003,
+          "total_growth_pct": 4.82,
+          "cagr_pct": 1.18,
+          "years": 4
+        },
+        "teaching_positions": {
+          "start_value": 1119.13,
+          "end_value": 1153.98,
+          "total_growth_pct": 3.11,
+          "cagr_pct": 0.77,
+          "years": 4
+        },
+        "avg_teacher_salary": {
+          "start_value": 57724.47,
+          "end_value": 66440.83,
+          "total_growth_pct": 15.1,
+          "cagr_pct": 3.58,
+          "years": 4
+        }
+      }
+    },
+    "peer_comparison": {
+      "fiscal_year": "FY2024",
+      "divisions": [
+        {
+          "division_code": "069",
+          "division_name": "Frederick County",
+          "enrollment_adm": 14121.0,
+          "per_pupil_spending": 15734,
+          "admin_positions": 24.360000000000003,
+          "teaching_positions": 1153.98,
+          "admin_pct_of_staff": 1.26,
+          "admin_per_1000_students": 1.73,
+          "students_per_admin": 579.7
+        },
+        {
+          "division_code": "043",
+          "division_name": "Clarke County",
+          "enrollment_adm": 1885.0,
+          "per_pupil_spending": 15165,
+          "admin_positions": 12.38,
+          "teaching_positions": 170.07,
+          "admin_pct_of_staff": 4.33,
+          "admin_per_1000_students": 6.57,
+          "students_per_admin": 152.3
+        },
+        {
+          "division_code": "061",
+          "division_name": "Fauquier County",
+          "enrollment_adm": 10658.0,
+          "per_pupil_spending": 16351,
+          "admin_positions": 32.5,
+          "teaching_positions": 943.16,
+          "admin_pct_of_staff": 2.11,
+          "admin_per_1000_students": 3.05,
+          "students_per_admin": 327.9
+        },
+        {
+          "division_code": "171",
+          "division_name": "Shenandoah County",
+          "enrollment_adm": 5495.0,
+          "per_pupil_spending": 16081,
+          "admin_positions": 24.5,
+          "teaching_positions": 465.01,
+          "admin_pct_of_staff": 3.15,
+          "admin_per_1000_students": 4.46,
+          "students_per_admin": 224.3
+        },
+        {
+          "division_code": "187",
+          "division_name": "Warren County",
+          "enrollment_adm": 4984.0,
+          "per_pupil_spending": 15042,
+          "admin_positions": 15.3,
+          "teaching_positions": 443.81,
+          "admin_pct_of_staff": 2.43,
+          "admin_per_1000_students": 3.07,
+          "students_per_admin": 325.8
+        },
+        {
+          "division_code": "107",
+          "division_name": "Loudoun County",
+          "enrollment_adm": 81274.0,
+          "per_pupil_spending": 21183,
+          "admin_positions": 380.01,
+          "teaching_positions": 7000.05,
+          "admin_pct_of_staff": 3.39,
+          "admin_per_1000_students": 4.68,
+          "students_per_admin": 213.9
+        }
+      ],
+      "rankings": {
+        "per_pupil_spending_rank": {
+          "187": 1,
+          "043": 2,
+          "069": 3,
+          "171": 4,
+          "061": 5,
+          "107": 6
+        },
+        "admin_efficiency_rank": {
+          "069": 1,
+          "061": 2,
+          "187": 3,
+          "171": 4,
+          "107": 5,
+          "043": 6
+        },
+        "students_per_admin_rank": {
+          "069": 1,
+          "061": 2,
+          "187": 3,
+          "171": 4,
+          "107": 5,
+          "043": 6
+        }
+      }
+    },
+    "red_flags": [
+      {
+        "flag": "Declining School Share of County Budget",
+        "metric": "school_pct_of_budget",
+        "value": 57.02,
+        "threshold": 60.8,
+        "severity": "INFO",
+        "description": "School share declined from 60.8% (FY2020) to 57.02% (FY2025)"
+      },
+      {
+        "flag": "Admin Ratio Within Threshold",
+        "metric": "admin_pct_of_total_staff",
+        "value": 1.26,
+        "threshold": 10.0,
+        "severity": "OK",
+        "description": "Admin staff ratio (1.26%) is within acceptable range"
+      }
+    ]
+  }
+}

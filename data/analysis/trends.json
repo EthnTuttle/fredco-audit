@@ -1,0 +1,113 @@
+{
+  "processed_date": "2026-01-28T22:55:19.396409",
+  "divisions": [
+    {
+      "division_code": "069",
+      "division_name": "Frederick County",
+      "trends": {
+        "years": [
+          "FY2022",
+          "FY2024"
+        ],
+        "instruction_pct_trend": [
+          58.0,
+          76.1
+        ],
+        "admin_pct_trend": [
+          10.4,
+          0
+        ]
+      }
+    },
+    {
+      "division_code": "043",
+      "division_name": "Clarke County",
+      "trends": {
+        "years": [
+          "FY2022",
+          "FY2024"
+        ],
+        "instruction_pct_trend": [
+          57.3,
+          74.2
+        ],
+        "admin_pct_trend": [
+          9.2,
+          0
+        ]
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier County",
+      "trends": {
+        "years": [
+          "FY2022",
+          "FY2024"
+        ],
+        "instruction_pct_trend": [
+          60.4,
+          71.8
+        ],
+        "admin_pct_trend": [
+          8.8,
+          0
+        ]
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah County",
+      "trends": {
+        "years": [
+          "FY2022",
+          "FY2024"
+        ],
+        "instruction_pct_trend": [
+          60.6,
+          68.7
+        ],
+        "admin_pct_trend": [
+          9.3,
+          0
+        ]
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren County",
+      "trends": {
+        "years": [
+          "FY2022",
+          "FY2024"
+        ],
+        "instruction_pct_trend": [
+          67.1,
+          0
+        ],
+        "admin_pct_trend": [
+          7.2,
+          0
+        ]
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun County",
+      "trends": {
+        "years": [
+          "FY2022",
+          "FY2024"
+        ],
+        "instruction_pct_trend": [
+          62.8,
+          72.7
+        ],
+        "admin_pct_trend": [
+          10.3,
+          0
+        ]
+      }
+    }
+  ]
+}

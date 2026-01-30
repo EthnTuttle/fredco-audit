@@ -1,0 +1,120 @@
+{
+  "processed_date": "2026-01-28T22:55:19.396538",
+  "benchmarks": {
+    "admin_ratio_target": 5.0,
+    "admin_ratio_warning": 10.0,
+    "instruction_ratio_target": 65.0,
+    "instruction_ratio_warning": 60.0,
+    "admin_to_student_target": 250,
+    "admin_to_student_warning": 150,
+    "per_pupil_admin_warning": 1200
+  },
+  "comparison_matrix": {
+    "latest_year": "FY2024",
+    "divisions": [
+      "Frederick County",
+      "Clarke County",
+      "Fauquier County",
+      "Shenandoah County",
+      "Warren County",
+      "Loudoun County"
+    ],
+    "comparisons": [
+      {
+        "division_code": "069",
+        "division_name": "Frederick County",
+        "fiscal_year": "FY2024",
+        "enrollment": 0,
+        "per_pupil_total": 16719,
+        "per_pupil_instruction": 12731,
+        "per_pupil_admin": 0,
+        "instruction_ratio": 76.1,
+        "admin_ratio": 0
+      },
+      {
+        "division_code": "043",
+        "division_name": "Clarke County",
+        "fiscal_year": "FY2024",
+        "enrollment": 0,
+        "per_pupil_total": 15935,
+        "per_pupil_instruction": 11829,
+        "per_pupil_admin": 0,
+        "instruction_ratio": 74.2,
+        "admin_ratio": 0
+      },
+      {
+        "division_code": "061",
+        "division_name": "Fauquier County",
+        "fiscal_year": "FY2024",
+        "enrollment": 0,
+        "per_pupil_total": 16992,
+        "per_pupil_instruction": 12199,
+        "per_pupil_admin": 0,
+        "instruction_ratio": 71.8,
+        "admin_ratio": 0
+      },
+      {
+        "division_code": "171",
+        "division_name": "Shenandoah County",
+        "fiscal_year": "FY2024",
+        "enrollment": 0,
+        "per_pupil_total": 16539,
+        "per_pupil_instruction": 11357,
+        "per_pupil_admin": 0,
+        "instruction_ratio": 68.7,
+        "admin_ratio": 0
+      },
+      {
+        "division_code": "187",
+        "division_name": "Warren County",
+        "fiscal_year": "FY2024",
+        "enrollment": 0,
+        "per_pupil_total": 0,
+        "per_pupil_instruction": null,
+        "per_pupil_admin": 0,
+        "instruction_ratio": 0,
+        "admin_ratio": 0
+      },
+      {
+        "division_code": "107",
+        "division_name": "Loudoun County",
+        "fiscal_year": "FY2024",
+        "enrollment": 0,
+        "per_pupil_total": 21837,
+        "per_pupil_instruction": 15875,
+        "per_pupil_admin": 0,
+        "instruction_ratio": 72.7,
+        "admin_ratio": 0
+      }
+    ],
+    "peer_average": {
+      "division_name": "Peer Average",
+      "per_pupil_total": 17604.4,
+      "per_pupil_instruction": 12798.2,
+      "instruction_ratio": 72.7
+    }
+  },
+  "red_flags": [
+    {
+      "indicator": "Frederick County admin % of current expenditures",
+      "value": "10.4%",
+      "threshold": ">10%",
+      "status": "FLAG",
+      "detail": "Frederick County's administration spending as % of current expenditures exceeds 10% threshold and is higher than peer average (8.96%)"
+    },
+    {
+      "indicator": "Frederick County per-pupil admin spending",
+      "value": "$1,457",
+      "threshold": ">$1,200",
+      "status": "FLAG",
+      "detail": "Per-pupil administration exceeds $1,200 benchmark"
+    },
+    {
+      "indicator": "Loudoun County per-pupil admin spending",
+      "value": "$1,949",
+      "threshold": ">$1,200",
+      "status": "FLAG",
+      "detail": "Highest in peer group - but Loudoun is a much larger, wealthier district"
+    }
+  ]
+}
