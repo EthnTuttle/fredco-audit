@@ -1,0 +1,300 @@
+{
+  "source": "Virginia Auditor of Public Accounts",
+  "source_file": "apa_comparative_report.xlsx",
+  "sheet": "Exhibit C6",
+  "description": "Education Expenditures by Activity",
+  "fiscal_year": "FY2024",
+  "report_period": "Year ended June 30, 2024",
+  "processed_date": "2026-01-28T22:48:19.927376",
+  "source_url": "https://dlasprodpublic.blob.core.windows.net/apa/549A9D64-9A00-45D1-A88F-5FE9C1BFAD8E.xlsx",
+  "divisions": [
+    {
+      "division_code": "043",
+      "division_name": "Clarke County",
+      "expenditures": {
+        "instruction": 22723942.0,
+        "admin_attendance_health": 1625841.0,
+        "pupil_transportation": 1455695.0,
+        "operations_maintenance": 3527630.0,
+        "food_services_noninstructional": 1261297.0,
+        "contributions_community_colleges": 16921.0,
+        "total": 30611326.0
+      },
+      "per_capita": {
+        "instruction": 1471.567284030566,
+        "admin_attendance_health": 105.28694469628286,
+        "pupil_transportation": 94.26855329620516,
+        "operations_maintenance": 228.4438544230022,
+        "food_services_noninstructional": 81.67963994301256,
+        "contributions_community_colleges": 1.095777748996244
+      },
+      "percent_of_state_average": {
+        "instruction": 74.1731779828191,
+        "admin_attendance_health": 74.06695249839011,
+        "pupil_transportation": 64.5143083455509,
+        "operations_maintenance": 83.27451155578164,
+        "food_services_noninstructional": 67.96166927588045,
+        "contributions_community_colleges": 55.81026488776099
+      },
+      "funding_sources": {
+        "commonwealth_categorical_aid": 11943687.0,
+        "commonwealth_categorical_aid_pct": 39.017215392760185,
+        "federal_pass_through": 1763106.0,
+        "federal_pass_through_pct": 5.7596524894086585,
+        "direct_federal_aid": 0.0,
+        "direct_federal_pct": 0.0,
+        "local_charges_service": 785722.0,
+        "state_expenditures_on_behalf": 2309.0
+      },
+      "population_figures": {
+        "total": 15442.0,
+        "instruction": 15442.0,
+        "admin": 15442.0,
+        "transportation": 15442.0,
+        "operations": 15442.0,
+        "noninstructional": 15442.0,
+        "community_colleges": 15442.0
+      }
+    },
+    {
+      "division_code": "061",
+      "division_name": "Fauquier County",
+      "expenditures": {
+        "instruction": 132301294.0,
+        "admin_attendance_health": 14933268.0,
+        "pupil_transportation": 12291492.0,
+        "operations_maintenance": 17866352.0,
+        "food_services_noninstructional": 6800696.0,
+        "contributions_community_colleges": 83265.0,
+        "total": 184276367.0
+      },
+      "per_capita": {
+        "instruction": 1794.3781313151862,
+        "admin_attendance_health": 202.53716889774992,
+        "pupil_transportation": 166.70724661268665,
+        "operations_maintenance": 242.31804803949493,
+        "food_services_noninstructional": 92.2365897654989,
+        "contributions_community_colleges": 1.1293078894901738
+      },
+      "percent_of_state_average": {
+        "instruction": 90.44420187025246,
+        "admin_attendance_health": 142.48025632410318,
+        "pupil_transportation": 114.08897596651262,
+        "operations_maintenance": 88.33206366004801,
+        "food_services_noninstructional": 76.74559551378326,
+        "contributions_community_colleges": 57.51802544815222
+      },
+      "funding_sources": {
+        "commonwealth_categorical_aid": 68363497.0,
+        "commonwealth_categorical_aid_pct": 37.0983529320393,
+        "federal_pass_through": 11251089.0,
+        "federal_pass_through_pct": 6.105551777021955,
+        "direct_federal_aid": 0.0,
+        "direct_federal_pct": 0.0,
+        "local_charges_service": 3064586.0,
+        "state_expenditures_on_behalf": 13273.0
+      },
+      "population_figures": {
+        "total": 73731.0,
+        "instruction": 73731.0,
+        "admin": 73731.0,
+        "transportation": 73731.0,
+        "operations": 73731.0,
+        "noninstructional": 73731.0,
+        "community_colleges": 73731.0
+      }
+    },
+    {
+      "division_code": "069",
+      "division_name": "Frederick County",
+      "expenditures": {
+        "instruction": 180416887.0,
+        "admin_attendance_health": 9025549.0,
+        "pupil_transportation": 13747928.0,
+        "operations_maintenance": 24637611.0,
+        "food_services_noninstructional": 9109992.0,
+        "contributions_community_colleges": 0.0,
+        "total": 236937967.0
+      },
+      "per_capita": {
+        "instruction": 1872.3407984723792,
+        "admin_attendance_health": 93.66586411232993,
+        "pupil_transportation": 142.67404186427837,
+        "operations_maintenance": 255.68562355358605,
+        "food_services_noninstructional": 94.54220155875424,
+        "contributions_community_colleges": 0.0
+      },
+      "percent_of_state_average": {
+        "instruction": 94.37384807115674,
+        "admin_attendance_health": 65.89178865376965,
+        "pupil_transportation": 97.6414382940215,
+        "operations_maintenance": 93.20493854842093,
+        "food_services_noninstructional": 78.66398333088324,
+        "contributions_community_colleges": 0.0
+      },
+      "funding_sources": {
+        "commonwealth_categorical_aid": 112548054.0,
+        "commonwealth_categorical_aid_pct": 47.50106343235401,
+        "federal_pass_through": 17453740.0,
+        "federal_pass_through_pct": 7.366375351739217,
+        "direct_federal_aid": 0.0,
+        "direct_federal_pct": 0.0,
+        "local_charges_service": 2488591.0,
+        "state_expenditures_on_behalf": 18743.0
+      },
+      "population_figures": {
+        "total": 96359.0,
+        "instruction": 96359.0,
+        "admin": 96359.0,
+        "transportation": 96359.0,
+        "operations": 96359.0,
+        "noninstructional": 96359.0,
+        "community_colleges": 0.0
+      }
+    },
+    {
+      "division_code": "107",
+      "division_name": "Loudoun County",
+      "expenditures": {
+        "instruction": 1296907117.0,
+        "admin_attendance_health": 83807440.0,
+        "pupil_transportation": 78935922.0,
+        "operations_maintenance": 278587606.0,
+        "food_services_noninstructional": 44714677.0,
+        "contributions_community_colleges": 998434.0,
+        "total": 1783951196.0
+      },
+      "per_capita": {
+        "instruction": 2988.754190201623,
+        "admin_attendance_health": 193.13629649090058,
+        "pupil_transportation": 181.90976403973923,
+        "operations_maintenance": 642.0119558729654,
+        "food_services_noninstructional": 103.04606744421322,
+        "contributions_community_colleges": 2.300915587573082
+      },
+      "percent_of_state_average": {
+        "instruction": 150.645776718774,
+        "admin_attendance_health": 135.86695804661863,
+        "pupil_transportation": 124.49308065066673,
+        "operations_maintenance": 234.03226220871352,
+        "food_services_noninstructional": 85.73963794049256,
+        "contributions_community_colleges": 117.1904690932651
+      },
+      "funding_sources": {
+        "commonwealth_categorical_aid": 509814611.0,
+        "commonwealth_categorical_aid_pct": 28.577833975677887,
+        "federal_pass_through": 41945023.0,
+        "federal_pass_through_pct": 2.3512427410598287,
+        "direct_federal_aid": 3264169.0,
+        "direct_federal_pct": 0.1829741198816966,
+        "local_charges_service": 24123098.0,
+        "state_expenditures_on_behalf": 14803.0
+      },
+      "population_figures": {
+        "total": 433929.0,
+        "instruction": 433929.0,
+        "admin": 433929.0,
+        "transportation": 433929.0,
+        "operations": 433929.0,
+        "noninstructional": 433929.0,
+        "community_colleges": 433929.0
+      }
+    },
+    {
+      "division_code": "171",
+      "division_name": "Shenandoah County",
+      "expenditures": {
+        "instruction": 64632627.0,
+        "admin_attendance_health": 4904638.0,
+        "pupil_transportation": 6476522.0,
+        "operations_maintenance": 11488707.0,
+        "food_services_noninstructional": 6574858.0,
+        "contributions_community_colleges": 43950.0,
+        "total": 94121302.0
+      },
+      "per_capita": {
+        "instruction": 1450.2676255441368,
+        "admin_attendance_health": 110.0533590629628,
+        "pupil_transportation": 145.32428308576044,
+        "operations_maintenance": 257.7908495265449,
+        "food_services_noninstructional": 147.53080823946507,
+        "contributions_community_colleges": 0.9861778037068617
+      },
+      "percent_of_state_average": {
+        "instruction": 73.09958564556625,
+        "admin_attendance_health": 77.4200157628139,
+        "pupil_transportation": 99.45517652776256,
+        "operations_maintenance": 93.97235540476618,
+        "food_services_noninstructional": 122.75323452171504,
+        "contributions_community_colleges": 50.22810921441605
+      },
+      "funding_sources": {
+        "commonwealth_categorical_aid": 49934569.0,
+        "commonwealth_categorical_aid_pct": 53.05341929927828,
+        "federal_pass_through": 10972232.0,
+        "federal_pass_through_pct": 11.657543793858695,
+        "direct_federal_aid": 180816.0,
+        "direct_federal_pct": 0.19210953966616398,
+        "local_charges_service": 761699.0,
+        "state_expenditures_on_behalf": 7026.0
+      },
+      "population_figures": {
+        "total": 44566.0,
+        "instruction": 44566.0,
+        "admin": 44566.0,
+        "transportation": 44566.0,
+        "operations": 44566.0,
+        "noninstructional": 44566.0,
+        "community_colleges": 44566.0
+      }
+    },
+    {
+      "division_code": "187",
+      "division_name": "Warren County",
+      "expenditures": {
+        "instruction": 0.0,
+        "admin_attendance_health": 0.0,
+        "pupil_transportation": 0.0,
+        "operations_maintenance": 0.0,
+        "food_services_noninstructional": 0.0,
+        "contributions_community_colleges": 0.0,
+        "total": 0.0
+      },
+      "per_capita": {
+        "instruction": 0.0,
+        "admin_attendance_health": 0.0,
+        "pupil_transportation": 0.0,
+        "operations_maintenance": 0.0,
+        "food_services_noninstructional": 0.0,
+        "contributions_community_colleges": 0.0
+      },
+      "percent_of_state_average": {
+        "instruction": 0.0,
+        "admin_attendance_health": 0.0,
+        "pupil_transportation": 0.0,
+        "operations_maintenance": 0.0,
+        "food_services_noninstructional": 0.0,
+        "contributions_community_colleges": 0.0
+      },
+      "funding_sources": {
+        "commonwealth_categorical_aid": 0.0,
+        "commonwealth_categorical_aid_pct": 0.0,
+        "federal_pass_through": 0.0,
+        "federal_pass_through_pct": 0.0,
+        "direct_federal_aid": 0.0,
+        "direct_federal_pct": 0.0,
+        "local_charges_service": 0.0,
+        "state_expenditures_on_behalf": null
+      },
+      "population_figures": {
+        "total": 0.0,
+        "instruction": 0.0,
+        "admin": 0.0,
+        "transportation": 0.0,
+        "operations": 0.0,
+        "noninstructional": 0.0,
+        "community_colleges": 0.0
+      }
+    }
+  ]
+}

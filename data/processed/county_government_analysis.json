@@ -1,0 +1,812 @@
+{
+  "description": "Frederick County Government Financial Analysis",
+  "source": "Frederick County Annual Budget Documents",
+  "source_url": "https://www.fcva.us/departments/finance/budget",
+  "extracted_date": "2026-01-29T07:39:22.263543",
+  "notes": [
+    "Data extracted from annual budget documents (labeled as ACFR)",
+    "Expenditure categories follow Virginia reporting standards",
+    "Personnel counts are budgeted positions (FTE)"
+  ],
+  "raw_extractions": [
+    {
+      "fiscal_year": "FY2020",
+      "source_file": "FY2020_acfr.pdf",
+      "extracted_date": "2026-01-29T07:38:48.533350",
+      "expenditures_by_category": {
+        "general_govt_admin": {
+          "prior_budgeted": 2613954.0,
+          "prior_actual": 2490871.0,
+          "current_budgeted": 2827315.0,
+          "adopted": 2719368.0
+        },
+        "judicial_admin": {
+          "prior_budgeted": 2613954.0,
+          "prior_actual": 2490871.0,
+          "current_budgeted": 2827315.0,
+          "adopted": 2719368.0
+        },
+        "public_safety": {
+          "prior_budgeted": 32741959.0,
+          "prior_actual": 33402641.0,
+          "current_budgeted": 32188316.0,
+          "adopted": 32237835.0
+        },
+        "public_works": {
+          "prior_budgeted": 5127899.0,
+          "prior_actual": 5678162.0,
+          "current_budgeted": 5576193.0,
+          "adopted": 5516470.0
+        },
+        "health_welfare": {
+          "prior_budgeted": 9272676.0,
+          "prior_actual": 9011931.0,
+          "current_budgeted": 9787663.0,
+          "adopted": 9367008.0
+        },
+        "community_college": {
+          "prior_budgeted": 76320.0,
+          "prior_actual": 76320.0,
+          "current_budgeted": 81080.0,
+          "adopted": 81080.0
+        },
+        "parks_recreation": {
+          "prior_budgeted": 6495547.0,
+          "prior_actual": 6497976.0,
+          "current_budgeted": 7456468.0,
+          "adopted": 8556080.0
+        },
+        "community_dev": {
+          "prior_budgeted": 1421147.0,
+          "prior_actual": 1411116.0,
+          "current_budgeted": 1492019.0,
+          "adopted": 1549268.0
+        },
+        "miscellaneous": {
+          "prior_budgeted": 7894809.0,
+          "prior_actual": 6584244.0,
+          "current_budgeted": 4418101.0,
+          "adopted": 2252302.0
+        },
+        "regional_jail": {
+          "prior_budgeted": 22363837.0,
+          "prior_actual": 20348375.0,
+          "current_budgeted": 22789176.0,
+          "adopted": 21906939.0
+        },
+        "landfill": {
+          "prior_budgeted": 9732241.0,
+          "prior_actual": 6529076.0,
+          "current_budgeted": 7502138.0,
+          "adopted": 9433932.0
+        },
+        "school_funds": {
+          "prior_budgeted": 183782132.0,
+          "prior_actual": 176200290.0,
+          "current_budgeted": 192930571.0,
+          "adopted": 196200501.0
+        },
+        "total": {
+          "prior_budgeted": 314969325.0,
+          "prior_actual": 304806269.0,
+          "current_budgeted": 320687441.0,
+          "adopted": 325173306.0
+        }
+      }
+    },
+    {
+      "fiscal_year": "FY2021",
+      "source_file": "FY2021_acfr.pdf",
+      "extracted_date": "2026-01-29T07:38:53.094114",
+      "expenditures_by_category": {
+        "general_govt_admin": {
+          "prior_budgeted": 2827315.0,
+          "prior_actual": 2770781.0,
+          "current_budgeted": 2974638.0,
+          "adopted": 2809246.0
+        },
+        "judicial_admin": {
+          "prior_budgeted": 2827315.0,
+          "prior_actual": 2770781.0,
+          "current_budgeted": 2974638.0,
+          "adopted": 2809246.0
+        },
+        "public_safety": {
+          "prior_budgeted": 32188316.0,
+          "prior_actual": 33703092.0,
+          "current_budgeted": 36113208.0,
+          "adopted": 36759691.0
+        },
+        "public_works": {
+          "prior_budgeted": 5576193.0,
+          "prior_actual": 5432117.0,
+          "current_budgeted": 5521138.0,
+          "adopted": 5503839.0
+        },
+        "health_welfare": {
+          "prior_budgeted": 9787663.0,
+          "prior_actual": 9422159.0,
+          "current_budgeted": 10446886.0,
+          "adopted": 9686555.0
+        },
+        "community_college": {
+          "prior_budgeted": 81080.0,
+          "prior_actual": 81080.0,
+          "current_budgeted": 81308.0,
+          "adopted": 81308.0
+        },
+        "parks_recreation": {
+          "prior_budgeted": 7456468.0,
+          "prior_actual": 7346862.0,
+          "current_budgeted": 6879311.0,
+          "adopted": 7124178.0
+        },
+        "community_dev": {
+          "prior_budgeted": 1492019.0,
+          "prior_actual": 1584541.0,
+          "current_budgeted": 1560586.0,
+          "adopted": 1535858.0
+        },
+        "miscellaneous": {
+          "prior_budgeted": 4418101.0,
+          "prior_actual": 2270224.0,
+          "current_budgeted": 4985825.0,
+          "adopted": 2265529.0
+        },
+        "regional_jail": {
+          "prior_budgeted": 22789176.0,
+          "prior_actual": 21824075.0,
+          "current_budgeted": 23238848.0,
+          "adopted": 21905891.0
+        },
+        "landfill": {
+          "prior_budgeted": 7502138.0,
+          "prior_actual": 7465901.0,
+          "current_budgeted": 10467653.0,
+          "adopted": 8498899.0
+        },
+        "school_funds": {
+          "prior_budgeted": 192930571.0,
+          "prior_actual": 185614485.0,
+          "current_budgeted": 201162988.0,
+          "adopted": 203347829.0
+        },
+        "total": {
+          "prior_budgeted": 320687441.0,
+          "prior_actual": 312164752.0,
+          "current_budgeted": 343508674.0,
+          "adopted": 343263900.0
+        }
+      }
+    },
+    {
+      "fiscal_year": "FY2022",
+      "source_file": "FY2022_acfr.pdf",
+      "extracted_date": "2026-01-29T07:38:58.280198",
+      "expenditures_by_category": {
+        "general_govt_admin": {
+          "prior_budgeted": 2974638.0,
+          "prior_actual": 2790911.0,
+          "current_budgeted": 3103341.0,
+          "adopted": 3127569.0
+        },
+        "judicial_admin": {
+          "prior_budgeted": 2974638.0,
+          "prior_actual": 2790911.0,
+          "current_budgeted": 3103341.0,
+          "adopted": 3127569.0
+        },
+        "public_safety": {
+          "prior_budgeted": 36113208.0,
+          "prior_actual": 36025206.0,
+          "current_budgeted": 37219547.0,
+          "adopted": 40707507.0
+        },
+        "public_works": {
+          "prior_budgeted": 5521138.0,
+          "prior_actual": 6291245.0,
+          "current_budgeted": 5770828.0,
+          "adopted": 6286031.0
+        },
+        "health_welfare": {
+          "prior_budgeted": 10446886.0,
+          "prior_actual": 9959365.0,
+          "current_budgeted": 11203633.0,
+          "adopted": 11733794.0
+        },
+        "community_college": {
+          "prior_budgeted": 81308.0,
+          "prior_actual": 81308.0,
+          "current_budgeted": 81308.0,
+          "adopted": 81308.0
+        },
+        "parks_recreation": {
+          "prior_budgeted": 6879311.0,
+          "prior_actual": 7625558.0,
+          "current_budgeted": 7465479.0,
+          "adopted": 8233462.0
+        },
+        "community_dev": {
+          "prior_budgeted": 1560586.0,
+          "prior_actual": 1530703.0,
+          "current_budgeted": 1619424.0,
+          "adopted": 1638287.0
+        },
+        "miscellaneous": {
+          "prior_budgeted": 4985825.0,
+          "prior_actual": 2273678.0,
+          "current_budgeted": 5295897.0,
+          "adopted": 5890882.0
+        },
+        "regional_jail": {
+          "prior_budgeted": 23238848.0,
+          "prior_actual": 21832451.0,
+          "current_budgeted": 23754912.0,
+          "adopted": 25643264.0
+        },
+        "landfill": {
+          "prior_budgeted": 10467653.0,
+          "prior_actual": 10038393.0,
+          "current_budgeted": 9647354.0,
+          "adopted": 11263660.0
+        },
+        "school_funds": {
+          "prior_budgeted": 201162988.0,
+          "prior_actual": 192471493.0,
+          "current_budgeted": 205863854.0,
+          "adopted": 216281160.0
+        },
+        "total": {
+          "prior_budgeted": 343508674.0,
+          "prior_actual": 337639778.0,
+          "current_budgeted": 349854336.0,
+          "adopted": 371235492.0
+        }
+      }
+    },
+    {
+      "fiscal_year": "FY2023",
+      "source_file": "FY2023_acfr.pdf",
+      "extracted_date": "2026-01-29T07:39:03.765763",
+      "expenditures_by_category": {
+        "general_govt_admin": {
+          "prior_budgeted": 3103341.0,
+          "prior_actual": 2789735.0,
+          "current_budgeted": 3127569.0,
+          "adopted": 3338128.0
+        },
+        "judicial_admin": {
+          "prior_budgeted": 3103341.0,
+          "prior_actual": 2789735.0,
+          "current_budgeted": 3127569.0,
+          "adopted": 3338128.0
+        },
+        "public_safety": {
+          "prior_budgeted": 37219547.0,
+          "prior_actual": 37562378.0,
+          "current_budgeted": 40707507.0,
+          "adopted": 44156276.0
+        },
+        "public_works": {
+          "prior_budgeted": 5770828.0,
+          "prior_actual": 6031607.0,
+          "current_budgeted": 6286031.0,
+          "adopted": 6760245.0
+        },
+        "health_welfare": {
+          "prior_budgeted": 11203633.0,
+          "prior_actual": 10125049.0,
+          "current_budgeted": 11733794.0,
+          "adopted": 12484326.0
+        },
+        "community_college": {
+          "prior_budgeted": 81308.0,
+          "prior_actual": 81308.0,
+          "current_budgeted": 81308.0,
+          "adopted": 92045.0
+        },
+        "parks_recreation": {
+          "prior_budgeted": 7465479.0,
+          "prior_actual": 6244233.0,
+          "current_budgeted": 8233462.0,
+          "adopted": 9187233.0
+        },
+        "community_dev": {
+          "prior_budgeted": 1619424.0,
+          "prior_actual": 1547265.0,
+          "current_budgeted": 1638287.0,
+          "adopted": 1762182.0
+        },
+        "miscellaneous": {
+          "prior_budgeted": 5295897.0,
+          "prior_actual": 13033786.0,
+          "current_budgeted": 5890882.0,
+          "adopted": 8960452.0
+        },
+        "regional_jail": {
+          "prior_budgeted": 23754912.0,
+          "prior_actual": 23052609.0,
+          "current_budgeted": 25643264.0,
+          "adopted": 27291347.0
+        },
+        "landfill": {
+          "prior_budgeted": 9647354.0,
+          "prior_actual": 7591206.0,
+          "current_budgeted": 11263660.0,
+          "adopted": 13179495.0
+        },
+        "school_funds": {
+          "prior_budgeted": 205863854.0,
+          "prior_actual": 198290409.0,
+          "current_budgeted": 216281160.0,
+          "adopted": 248232869.0
+        },
+        "total": {
+          "prior_budgeted": 349854336.0,
+          "prior_actual": 344963645.0,
+          "current_budgeted": 371235492.0,
+          "adopted": 425905680.0
+        }
+      }
+    },
+    {
+      "fiscal_year": "FY2024",
+      "source_file": "FY2024_acfr.pdf",
+      "extracted_date": "2026-01-29T07:39:09.701690",
+      "expenditures_by_category": {
+        "general_govt_admin": {
+          "prior_budgeted": 3127569.0,
+          "prior_actual": 3165273.0,
+          "current_budgeted": 3338128.0,
+          "adopted": 3671550.0
+        },
+        "judicial_admin": {
+          "prior_budgeted": 3127569.0,
+          "prior_actual": 3165273.0,
+          "current_budgeted": 3338128.0,
+          "adopted": 3671550.0
+        },
+        "public_safety": {
+          "prior_budgeted": 40707507.0,
+          "prior_actual": 42501885.0,
+          "current_budgeted": 44156276.0,
+          "adopted": 49226567.0
+        },
+        "public_works": {
+          "prior_budgeted": 6286031.0,
+          "prior_actual": 5817282.0,
+          "current_budgeted": 6760245.0,
+          "adopted": 7333017.0
+        },
+        "health_welfare": {
+          "prior_budgeted": 11733794.0,
+          "prior_actual": 10562775.0,
+          "current_budgeted": 12484326.0,
+          "adopted": 12859127.0
+        },
+        "community_college": {
+          "prior_budgeted": 81308.0,
+          "prior_actual": 81308.0,
+          "current_budgeted": 92045.0,
+          "adopted": 92927.0
+        },
+        "parks_recreation": {
+          "prior_budgeted": 8233462.0,
+          "prior_actual": 6907014.0,
+          "current_budgeted": 9187233.0,
+          "adopted": 9989573.0
+        },
+        "community_dev": {
+          "prior_budgeted": 1638287.0,
+          "prior_actual": 1664140.0,
+          "current_budgeted": 1762182.0,
+          "adopted": 1903025.0
+        },
+        "miscellaneous": {
+          "prior_budgeted": 5890882.0,
+          "prior_actual": 26533208.0,
+          "current_budgeted": 8960452.0,
+          "adopted": 5918388.0
+        },
+        "regional_jail": {
+          "prior_budgeted": 25643264.0,
+          "prior_actual": 24315687.0,
+          "current_budgeted": 27291347.0,
+          "adopted": 28930902.0
+        },
+        "landfill": {
+          "prior_budgeted": 11263660.0,
+          "prior_actual": 8316021.0,
+          "current_budgeted": 13179495.0,
+          "adopted": 10251439.0
+        },
+        "school_funds": {
+          "prior_budgeted": 216281160.0,
+          "prior_actual": 210456008.0,
+          "current_budgeted": 248232869.0,
+          "adopted": 256928018.0
+        },
+        "total": {
+          "prior_budgeted": 371235492.0,
+          "prior_actual": 386274606.0,
+          "current_budgeted": 425905680.0,
+          "adopted": 439090333.0
+        }
+      }
+    },
+    {
+      "fiscal_year": "FY2025",
+      "source_file": "FY2025_acfr.pdf",
+      "extracted_date": "2026-01-29T07:39:15.841745",
+      "expenditures_by_category": {
+        "general_govt_admin": {
+          "prior_budgeted": 3338128.0,
+          "prior_actual": 3296760.0,
+          "current_budgeted": 3671550.0,
+          "adopted": 3926445.0
+        },
+        "judicial_admin": {
+          "prior_budgeted": 3338128.0,
+          "prior_actual": 3296760.0,
+          "current_budgeted": 3671550.0,
+          "adopted": 3926445.0
+        },
+        "public_safety": {
+          "prior_budgeted": 44156276.0,
+          "prior_actual": 44108588.0,
+          "current_budgeted": 49226567.0,
+          "adopted": 53771819.0
+        },
+        "public_works": {
+          "prior_budgeted": 6760245.0,
+          "prior_actual": 7276090.0,
+          "current_budgeted": 7333017.0,
+          "adopted": 7116093.0
+        },
+        "health_welfare": {
+          "prior_budgeted": 12484326.0,
+          "prior_actual": 11010352.0,
+          "current_budgeted": 12859127.0,
+          "adopted": 13563987.0
+        },
+        "community_college": {
+          "prior_budgeted": 92045.0,
+          "prior_actual": 55000.0,
+          "current_budgeted": 92927.0,
+          "adopted": 68750.0
+        },
+        "parks_recreation": {
+          "prior_budgeted": 9187233.0,
+          "prior_actual": 8359783.0,
+          "current_budgeted": 9989573.0,
+          "adopted": 10193759.0
+        },
+        "community_dev": {
+          "prior_budgeted": 1762182.0,
+          "prior_actual": 1739614.0,
+          "current_budgeted": 1903025.0,
+          "adopted": 2078982.0
+        },
+        "miscellaneous": {
+          "prior_budgeted": 8960452.0,
+          "prior_actual": 22076829.0,
+          "current_budgeted": 5918388.0,
+          "adopted": 11365261.0
+        },
+        "regional_jail": {
+          "prior_budgeted": 27291347.0,
+          "prior_actual": 24250225.0,
+          "current_budgeted": 28930902.0,
+          "adopted": 29415997.0
+        },
+        "landfill": {
+          "prior_budgeted": 13179495.0,
+          "prior_actual": 10845736.0,
+          "current_budgeted": 10251439.0,
+          "adopted": 11843523.0
+        },
+        "school_funds": {
+          "prior_budgeted": 248232869.0,
+          "prior_actual": 232194906.0,
+          "current_budgeted": 256928018.0,
+          "adopted": 271000303.0
+        },
+        "total": {
+          "prior_budgeted": 425905680.0,
+          "prior_actual": 424490549.0,
+          "current_budgeted": 439090333.0,
+          "adopted": 492440166.0
+        }
+      }
+    },
+    {
+      "fiscal_year": "FY2026",
+      "source_file": "FY2026_acfr.pdf",
+      "extracted_date": "2026-01-29T07:39:22.262500",
+      "expenditures_by_category": {
+        "general_govt_admin": {
+          "prior_budgeted": 3671550.0,
+          "prior_actual": 3418317.0,
+          "current_budgeted": 3926445.0,
+          "adopted": 4030846.0
+        },
+        "judicial_admin": {
+          "prior_budgeted": 3671550.0,
+          "prior_actual": 3418317.0,
+          "current_budgeted": 3926445.0,
+          "adopted": 4030846.0
+        },
+        "public_safety": {
+          "prior_budgeted": 49226567.0,
+          "prior_actual": 52177601.0,
+          "current_budgeted": 53771819.0,
+          "adopted": 58625871.0
+        },
+        "public_works": {
+          "prior_budgeted": 7333017.0,
+          "prior_actual": 6742892.0,
+          "current_budgeted": 7116093.0,
+          "adopted": 7351830.0
+        },
+        "health_welfare": {
+          "prior_budgeted": 12859127.0,
+          "prior_actual": 11706414.0,
+          "current_budgeted": 13563987.0,
+          "adopted": 13963659.0
+        },
+        "community_college": {
+          "prior_budgeted": 92927.0,
+          "prior_actual": 0.0,
+          "current_budgeted": 68750.0,
+          "adopted": 91983.0
+        },
+        "parks_recreation": {
+          "prior_budgeted": 9989573.0,
+          "prior_actual": 10073194.0,
+          "current_budgeted": 10193759.0,
+          "adopted": 12205791.0
+        },
+        "community_dev": {
+          "prior_budgeted": 1903025.0,
+          "prior_actual": 1938551.0,
+          "current_budgeted": 2078982.0,
+          "adopted": 2247509.0
+        },
+        "miscellaneous": {
+          "prior_budgeted": 5918388.0,
+          "prior_actual": 18006228.0,
+          "current_budgeted": 11365261.0,
+          "adopted": 9017408.0
+        },
+        "regional_jail": {
+          "prior_budgeted": 28930902.0,
+          "prior_actual": 28087579.0,
+          "current_budgeted": 29415997.0,
+          "adopted": 30594030.0
+        },
+        "landfill": {
+          "prior_budgeted": 10251439.0,
+          "prior_actual": 9662227.0,
+          "current_budgeted": 11843523.0,
+          "adopted": 13834494.0
+        },
+        "school_funds": {
+          "prior_budgeted": 256928018.0,
+          "prior_actual": 238252554.0,
+          "current_budgeted": 271000303.0,
+          "adopted": 289019693.0
+        },
+        "total": {
+          "prior_budgeted": 439090333.0,
+          "prior_actual": 432594887.0,
+          "current_budgeted": 492440166.0,
+          "adopted": 506154339.0
+        }
+      }
+    }
+  ],
+  "time_series": {
+    "fiscal_years": [
+      "FY2020",
+      "FY2021",
+      "FY2022",
+      "FY2023",
+      "FY2024",
+      "FY2025"
+    ],
+    "total_budget_net": [
+      343449409,
+      355592506,
+      371235492,
+      425572905,
+      439090333,
+      492899936
+    ],
+    "general_fund_total": [
+      197546413,
+      206482559,
+      209706798,
+      232532809,
+      239544613,
+      255903468
+    ],
+    "general_fund_expenditures": {
+      "general_govt_admin": [
+        13625766,
+        14500000,
+        14628749,
+        16330550,
+        18498844,
+        null
+      ],
+      "judicial_admin": [
+        2954433,
+        3000000,
+        3127569,
+        3338128,
+        3671550,
+        null
+      ],
+      "public_safety": [
+        41059834,
+        43000000,
+        46496375,
+        51415029,
+        56449940,
+        null
+      ],
+      "public_works": [
+        5521138,
+        5800000,
+        6286031,
+        6760245,
+        7333017,
+        null
+      ],
+      "health_welfare": [
+        10447486,
+        11000000,
+        11733794,
+        12484326,
+        12859127,
+        null
+      ],
+      "parks_recreation_cultural": [
+        6907675,
+        7500000,
+        8233462,
+        9187233,
+        9989573,
+        null
+      ],
+      "community_development": [
+        2153643,
+        2200000,
+        2260163,
+        2450591,
+        2638393,
+        null
+      ]
+    },
+    "school_transfers": {
+      "to_operating": [
+        86445165,
+        91442934,
+        92891547,
+        95453417,
+        104015936,
+        109015936
+      ],
+      "to_debt_service": [
+        16248300,
+        17085531,
+        18076918,
+        18076918,
+        18076918,
+        18076918
+      ],
+      "to_capital": [
+        4000000,
+        3715900,
+        0,
+        0,
+        0,
+        3000000
+      ]
+    },
+    "personnel": {
+      "general_fund_ft": [
+        null,
+        null,
+        620,
+        637,
+        657,
+        null
+      ],
+      "general_fund_pt": [
+        null,
+        null,
+        302,
+        402,
+        410,
+        null
+      ],
+      "school_funds_ft": [
+        null,
+        null,
+        2386.7,
+        2452.6,
+        2472.6,
+        null
+      ],
+      "all_funds_ft": [
+        null,
+        null,
+        3277.7,
+        3362.6,
+        3403.6,
+        null
+      ],
+      "all_funds_pt": [
+        null,
+        null,
+        967,
+        1070,
+        1084,
+        null
+      ]
+    },
+    "public_safety_personnel": {
+      "sheriff_ft": [
+        null,
+        null,
+        157.5,
+        157.5,
+        164.5,
+        null
+      ],
+      "fire_rescue_ft": [
+        null,
+        null,
+        153.5,
+        161.5,
+        169.5,
+        null
+      ],
+      "regional_jail_ft": [
+        null,
+        null,
+        213,
+        213,
+        213,
+        null
+      ]
+    },
+    "tax_rates": {
+      "real_estate_per_100": [
+        0.56,
+        0.56,
+        0.61,
+        0.61,
+        0.51,
+        0.51
+      ],
+      "personal_property_per_100": [
+        4.86,
+        4.86,
+        4.86,
+        4.23,
+        4.23,
+        4.23
+      ]
+    }
+  },
+  "calculated_metrics": {
+    "notes": "Calculated from time series data",
+    "total_budget_growth_pct": 43.51,
+    "general_fund_growth_pct": 29.54,
+    "school_operating_transfer_growth_pct": 26.11,
+    "public_safety_pct_general_fund_fy24": 23.57,
+    "admin_pct_general_fund_fy24": 7.72
+  }
+}

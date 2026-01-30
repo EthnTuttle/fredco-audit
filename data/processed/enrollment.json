@@ -1,0 +1,161 @@
+{
+  "metadata": {
+    "description": "Average Daily Membership (ADM) enrollment data for FCPS audit target and peer districts",
+    "sources": [
+      {
+        "name": "NCES Common Core of Data",
+        "file": "data/raw/nces/all_districts.json",
+        "data_year": "2021-2022 (fiscal)",
+        "extracted_date": "2026-01-28"
+      },
+      {
+        "name": "VPAP Instructional Spending",
+        "file": "data/raw/vpap/visuals/instructional_spending_extracted.json",
+        "data_year": "FY2024",
+        "extracted_date": "2026-01-28"
+      }
+    ],
+    "target_districts": ["069", "043", "061", "171", "187", "107"],
+    "generated_date": "2026-01-28"
+  },
+  "records": [
+    {
+      "fiscal_year": "FY2022",
+      "division_code": "069",
+      "division_name": "Frederick County",
+      "nces_id": "5101470",
+      "data": {
+        "enrollment_adm": 14447,
+        "student_teacher_ratio": 14.08
+      },
+      "source": "NCES"
+    },
+    {
+      "fiscal_year": "FY2024",
+      "division_code": "069",
+      "division_name": "Frederick County",
+      "vpap_geoid": "5101470",
+      "data": {
+        "enrollment_adm": 14172
+      },
+      "source": "VPAP"
+    },
+    {
+      "fiscal_year": "FY2022",
+      "division_code": "043",
+      "division_name": "Clarke County",
+      "nces_id": "5100540",
+      "data": {
+        "enrollment_adm": 1868,
+        "student_teacher_ratio": 14.59
+      },
+      "source": "NCES"
+    },
+    {
+      "fiscal_year": "FY2024",
+      "division_code": "043",
+      "division_name": "Clarke County",
+      "vpap_geoid": "5100870",
+      "data": {
+        "enrollment_adm": 1921
+      },
+      "source": "VPAP"
+    },
+    {
+      "fiscal_year": "FY2022",
+      "division_code": "061",
+      "division_name": "Fauquier County",
+      "nces_id": "5101440",
+      "data": {
+        "enrollment_adm": 6109,
+        "student_teacher_ratio": 10.77
+      },
+      "source": "NCES"
+    },
+    {
+      "fiscal_year": "FY2024",
+      "division_code": "061",
+      "division_name": "Fauquier County",
+      "vpap_geoid": "5101320",
+      "data": {
+        "enrollment_adm": 10845
+      },
+      "source": "VPAP"
+    },
+    {
+      "fiscal_year": "FY2022",
+      "division_code": "171",
+      "division_name": "Shenandoah County",
+      "nces_id": "5103510",
+      "data": {
+        "enrollment_adm": 5703,
+        "student_teacher_ratio": 13.53
+      },
+      "source": "NCES"
+    },
+    {
+      "fiscal_year": "FY2024",
+      "division_code": "171",
+      "division_name": "Shenandoah County",
+      "vpap_geoid": "5103510",
+      "data": {
+        "enrollment_adm": 5691
+      },
+      "source": "VPAP"
+    },
+    {
+      "fiscal_year": "FY2022",
+      "division_code": "187",
+      "division_name": "Warren County",
+      "nces_id": "5104080",
+      "data": {
+        "enrollment_adm": 5779,
+        "student_teacher_ratio": 12.21
+      },
+      "source": "NCES"
+    },
+    {
+      "fiscal_year": "FY2024",
+      "division_code": "187",
+      "division_name": "Warren County",
+      "vpap_geoid": "5103870",
+      "data": {
+        "enrollment_adm": 5132
+      },
+      "note": "VPAP data has null values for instructional spending - enrollment only"
+    },
+    {
+      "fiscal_year": "FY2022",
+      "division_code": "107",
+      "division_name": "Loudoun County",
+      "nces_id": "5102250",
+      "data": {
+        "enrollment_adm": 81486,
+        "student_teacher_ratio": 12.13
+      },
+      "source": "NCES"
+    },
+    {
+      "fiscal_year": "FY2024",
+      "division_code": "107",
+      "division_name": "Loudoun County",
+      "vpap_geoid": "5102250",
+      "data": {
+        "enrollment_adm": 81693
+      },
+      "source": "VPAP"
+    }
+  ],
+  "data_gaps": [
+    {
+      "issue": "Missing FY2020-FY2021 and FY2023 enrollment data",
+      "affected_districts": "all",
+      "recommendation": "Obtain VDOE Table 3 for complete time series"
+    },
+    {
+      "issue": "Fauquier enrollment discrepancy between NCES (6,109) and VPAP (10,845)",
+      "affected_districts": ["061"],
+      "recommendation": "Verify VPAP geoid mapping - may be different district or data error"
+    }
+  ]
+}

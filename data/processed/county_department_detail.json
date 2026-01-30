@@ -1,0 +1,7598 @@
+{
+  "description": "Frederick County Department-Level Budget Analysis",
+  "source": "Frederick County Annual Budget Documents (ACFR)",
+  "source_url": "https://www.fcva.us/departments/finance/budget",
+  "extracted_date": "2026-01-29T08:00:06.073788",
+  "fiscal_years": [
+    "FY2020",
+    "FY2021",
+    "FY2022",
+    "FY2023",
+    "FY2024",
+    "FY2025",
+    "FY2026"
+  ],
+  "by_fiscal_year": {
+    "FY2020": {
+      "fiscal_year": "FY2020",
+      "source_file": "FY2020_acfr.pdf",
+      "extracted_date": "2026-01-29T08:00:06.073855",
+      "personnel_by_department": {},
+      "expenditures_by_department": {
+        "Board of Supervisors": {
+          "personnel": 207388,
+          "operating": 132260,
+          "capital": 0,
+          "total": 339648
+        },
+        "County Administrator": {
+          "personnel": 886552,
+          "operating": 46988,
+          "capital": 12000,
+          "total": 945540
+        },
+        "County Attorney": {
+          "personnel": 406039,
+          "operating": 36800,
+          "capital": 0,
+          "total": 442839
+        },
+        "Human Resources": {
+          "personnel": 539817,
+          "operating": 115851,
+          "capital": 6000,
+          "total": 661668
+        },
+        "Independent Auditor": {
+          "personnel": 0,
+          "operating": 66000,
+          "capital": 0,
+          "total": 66000
+        },
+        "Commissioner of the Revenue": {
+          "personnel": 1474710,
+          "operating": 69343,
+          "capital": 0,
+          "total": 1544053
+        },
+        "Reassessment": {
+          "personnel": 402236,
+          "operating": 81954,
+          "capital": 0,
+          "total": 484190
+        },
+        "Treasurer": {
+          "personnel": 1214085,
+          "operating": 426873,
+          "capital": 0,
+          "total": 1640958
+        },
+        "Finance": {
+          "personnel": 945351,
+          "operating": 32040,
+          "capital": 0,
+          "total": 977391
+        },
+        "Information Technology": {
+          "personnel": 1020144,
+          "operating": 903206,
+          "capital": 107794,
+          "total": 2031144
+        },
+        "Management Information Systems": {
+          "personnel": 521489,
+          "operating": 96780,
+          "capital": 24700,
+          "total": 642969
+        },
+        "Other": {
+          "personnel": 0,
+          "operating": 3484490,
+          "capital": 2400,
+          "total": 3486890
+        },
+        "Electoral Board": {
+          "personnel": 62942,
+          "operating": 79802,
+          "capital": 2400,
+          "total": 145144
+        },
+        "Registrar": {
+          "personnel": 196343,
+          "operating": 18276,
+          "capital": 2400,
+          "total": 217019
+        },
+        "Circuit Court": {
+          "personnel": 0,
+          "operating": 79500,
+          "capital": 0,
+          "total": 79500
+        },
+        "General District Court": {
+          "personnel": 8619,
+          "operating": 10805,
+          "capital": 4000,
+          "total": 23424
+        },
+        "J & D Relations Court": {
+          "personnel": 3770,
+          "operating": 14440,
+          "capital": 9009,
+          "total": 27219
+        },
+        "Clerk of Circuit Court": {
+          "personnel": 792716,
+          "operating": 62531,
+          "capital": 10000,
+          "total": 865247
+        },
+        "Law Library": {
+          "personnel": 0,
+          "operating": 12500,
+          "capital": 0,
+          "total": 12500
+        },
+        "Commonwealth Attorney": {
+          "personnel": 1669447,
+          "operating": 76600,
+          "capital": 5800,
+          "total": 1751847
+        },
+        "Victim Witness Program": {
+          "personnel": 203166,
+          "operating": 11735,
+          "capital": 0,
+          "total": 214901
+        },
+        "Sheriff": {
+          "personnel": 13505250,
+          "operating": 2029681,
+          "capital": 326020,
+          "total": 15860951
+        },
+        "Volunteer Fire Departments": {
+          "personnel": 93900,
+          "operating": 864419,
+          "capital": 0,
+          "total": 958319
+        },
+        "Ambulance and Rescue Service": {
+          "personnel": 0,
+          "operating": 409868,
+          "capital": 0,
+          "total": 409868
+        },
+        "Public Safety Contributions": {
+          "personnel": 0,
+          "operating": 5511011,
+          "capital": 0,
+          "total": 5511011
+        },
+        "Juvenile Court Probation": {
+          "personnel": 113312,
+          "operating": 42145,
+          "capital": 0,
+          "total": 155457
+        },
+        "Inspections": {
+          "personnel": 1296525,
+          "operating": 77490,
+          "capital": 2880,
+          "total": 1376895
+        },
+        "Fire and Rescue": {
+          "personnel": 13540982,
+          "operating": 1569345,
+          "capital": 106144,
+          "total": 15216471
+        },
+        "Public Safety Communications": {
+          "personnel": 1297183,
+          "operating": 382926,
+          "capital": 15665,
+          "total": 1695774
+        },
+        "Road Administration": {
+          "personnel": 0,
+          "operating": 18500,
+          "capital": 0,
+          "total": 18500
+        },
+        "Street Lights": {
+          "personnel": 0,
+          "operating": 38050,
+          "capital": 0,
+          "total": 38050
+        },
+        "General Engineering": {
+          "personnel": 383808,
+          "operating": 28070,
+          "capital": 0,
+          "total": 411878
+        },
+        "Refuse Collection": {
+          "personnel": 644989,
+          "operating": 887550,
+          "capital": 7340,
+          "total": 1539879
+        },
+        "Refuse Disposal": {
+          "personnel": 0,
+          "operating": 686880,
+          "capital": 0,
+          "total": 686880
+        },
+        "Litter Control": {
+          "personnel": 18113,
+          "operating": 10441,
+          "capital": 0,
+          "total": 28554
+        },
+        "Maintenance Administration": {
+          "personnel": 661636,
+          "operating": 12800,
+          "capital": 0,
+          "total": 674436
+        },
+        "County Office Buildings": {
+          "personnel": 0,
+          "operating": 1353408,
+          "capital": 0,
+          "total": 1353408
+        },
+        "Animal Shelter": {
+          "personnel": 591247,
+          "operating": 178306,
+          "capital": 0,
+          "total": 769553
+        },
+        "Local Health Department": {
+          "personnel": 0,
+          "operating": 436439,
+          "capital": 0,
+          "total": 436439
+        },
+        "Northwestern Community Services": {
+          "personnel": 0,
+          "operating": 416507,
+          "capital": 0,
+          "total": 416507
+        },
+        "Area Agency on Aging": {
+          "personnel": 0,
+          "operating": 63000,
+          "capital": 0,
+          "total": 63000
+        },
+        "Property Tax Relief": {
+          "personnel": 0,
+          "operating": 720000,
+          "capital": 0,
+          "total": 720000
+        },
+        "Public Assistance": {
+          "personnel": 0,
+          "operating": 1842317,
+          "capital": 0,
+          "total": 1842317
+        },
+        "Community College": {
+          "personnel": 0,
+          "operating": 81308,
+          "capital": 0,
+          "total": 81308
+        },
+        "Parks Administration": {
+          "personnel": 868902,
+          "operating": 209417,
+          "capital": 5202,
+          "total": 1083521
+        },
+        "Recreation Centers": {
+          "personnel": 2154224,
+          "operating": 749612,
+          "capital": 0,
+          "total": 2903836
+        },
+        "Clearbrook Park": {
+          "personnel": 563694,
+          "operating": 270368,
+          "capital": 6500,
+          "total": 840562
+        },
+        "Sherando Park": {
+          "personnel": 547944,
+          "operating": 277748,
+          "capital": 7500,
+          "total": 833192
+        },
+        "Regional Library": {
+          "personnel": 0,
+          "operating": 1218200,
+          "capital": 0,
+          "total": 1218200
+        },
+        "Planning and Development": {
+          "personnel": 1117011,
+          "operating": 84295,
+          "capital": 0,
+          "total": 1201306
+        },
+        "EDA Transfer": {
+          "personnel": 0,
+          "operating": 593057,
+          "capital": 0,
+          "total": 593057
+        },
+        "Zoning Board": {
+          "personnel": 4521,
+          "operating": 3300,
+          "capital": 0,
+          "total": 7821
+        },
+        "Building Appeals Board": {
+          "personnel": 161,
+          "operating": 400,
+          "capital": 0,
+          "total": 561
+        },
+        "NSV Regional Commission": {
+          "personnel": 0,
+          "operating": 74348,
+          "capital": 0,
+          "total": 74348
+        },
+        "Soil and Water Conservation District": {
+          "personnel": 0,
+          "operating": 11250,
+          "capital": 0,
+          "total": 11250
+        },
+        "Extension": {
+          "personnel": 157429,
+          "operating": 110386,
+          "capital": 1735,
+          "total": 269550
+        },
+        "Transfers/Miscellaneous": {
+          "personnel": 0,
+          "operating": 114675040,
+          "capital": 0,
+          "total": 114675040
+        },
+        "General Fund Total": {
+          "personnel": 54462518,
+          "operating": 142211806,
+          "capital": 872089,
+          "total": 197546413
+        },
+        "Landfill Fund": {
+          "personnel": 2272338,
+          "operating": 3235315,
+          "capital": 4960000,
+          "total": 10467653
+        },
+        "Old Dominion ASAP Fund": {
+          "personnel": 477749,
+          "operating": 81900,
+          "capital": 17000,
+          "total": 576649
+        },
+        "Shawneeland Sanitary District Fund": {
+          "personnel": 511692,
+          "operating": 775523,
+          "capital": 8000,
+          "total": 1295215
+        },
+        "Winchester Regional Airport Fund": {
+          "personnel": 784402,
+          "operating": 881388,
+          "capital": 90766,
+          "total": 1756556
+        },
+        "Lake Holiday Sanitary District Fund": {
+          "personnel": 0,
+          "operating": 41340,
+          "capital": 738658,
+          "total": 779998
+        },
+        "EMS Revenue Recovery Fund": {
+          "personnel": 132577,
+          "operating": 1671381,
+          "capital": 0,
+          "total": 1803958
+        },
+        "Economic Development Authority Fund": {
+          "personnel": 441224,
+          "operating": 159307,
+          "capital": 31271,
+          "total": 631802
+        },
+        "County Capital Fund": {
+          "personnel": 0,
+          "operating": 0,
+          "capital": 7000000,
+          "total": 7000000
+        },
+        "School Instruction": {
+          "personnel": 123147012,
+          "operating": 10015209,
+          "capital": 25500,
+          "total": 133187721
+        },
+        "Admin./Attendance and Health Services": {
+          "personnel": 7152007,
+          "operating": 585150,
+          "capital": 19000,
+          "total": 7756157
+        },
+        "Pupil Transportation Services": {
+          "personnel": 7677535,
+          "operating": 2719935,
+          "capital": 0,
+          "total": 10397470
+        },
+        "Operation and Maintenance Services": {
+          "personnel": 7917168,
+          "operating": 7090324,
+          "capital": 182731,
+          "total": 15190223
+        },
+        "Facilities": {
+          "personnel": 231024,
+          "operating": 164300,
+          "capital": 0,
+          "total": 395324
+        },
+        "Technology": {
+          "personnel": 5159951,
+          "operating": 2463106,
+          "capital": 877890,
+          "total": 8500947
+        },
+        "Transfers": {
+          "personnel": 0,
+          "operating": 548707,
+          "capital": 0,
+          "total": 548707
+        },
+        "School Operating Fund Total": {
+          "personnel": 151284697,
+          "operating": 23591731,
+          "capital": 1105121,
+          "total": 175981549
+        },
+        "School Debt Service Fund": {
+          "personnel": 0,
+          "operating": 16726869,
+          "capital": 0,
+          "total": 16726869
+        },
+        "School Nutrition Services Fund": {
+          "personnel": 3012019,
+          "operating": 2329100,
+          "capital": 2037438,
+          "total": 7378557
+        },
+        "School Textbook Fund": {
+          "personnel": 24921,
+          "operating": 3101128,
+          "capital": 0,
+          "total": 3126049
+        },
+        "School Private Purpose Funds": {
+          "personnel": 8777,
+          "operating": 291223,
+          "capital": 0,
+          "total": 300000
+        },
+        "NREP Operating Fund": {
+          "personnel": 5023117,
+          "operating": 618352,
+          "capital": 344071,
+          "total": 5985540
+        },
+        "NREP Textbook Fund": {
+          "personnel": 0,
+          "operating": 40000,
+          "capital": 0,
+          "total": 40000
+        },
+        "Consolidated Services Fund": {
+          "personnel": 1262926,
+          "operating": 2337074,
+          "capital": 0,
+          "total": 3600000
+        },
+        "School Capital Projects Fund": {
+          "personnel": 0,
+          "operating": 1300000,
+          "capital": 4000000,
+          "total": 5300000
+        }
+      },
+      "general_fund_summary": {},
+      "expenditure_pages": [
+        45,
+        46,
+        47
+      ],
+      "general_fund_page": 44
+    },
+    "FY2021": {
+      "fiscal_year": "FY2021",
+      "source_file": "FY2021_acfr.pdf",
+      "extracted_date": "2026-01-29T08:00:08.008057",
+      "personnel_by_department": {},
+      "expenditures_by_department": {
+        "Board of Supervisors": {
+          "personnel": 211080,
+          "operating": 133259,
+          "capital": 0,
+          "total": 344339
+        },
+        "County Administrator": {
+          "personnel": 794048,
+          "operating": 38950,
+          "capital": 0,
+          "total": 832998
+        },
+        "County Attorney": {
+          "personnel": 443710,
+          "operating": 40025,
+          "capital": 0,
+          "total": 483735
+        },
+        "Human Resources": {
+          "personnel": 559068,
+          "operating": 106866,
+          "capital": 7000,
+          "total": 672934
+        },
+        "Independent Auditor": {
+          "personnel": 0,
+          "operating": 66000,
+          "capital": 0,
+          "total": 66000
+        },
+        "Commissioner of the Revenue": {
+          "personnel": 1506259,
+          "operating": 69474,
+          "capital": 0,
+          "total": 1575733
+        },
+        "Reassessment": {
+          "personnel": 400288,
+          "operating": 73500,
+          "capital": 0,
+          "total": 473788
+        },
+        "Treasurer": {
+          "personnel": 1295963,
+          "operating": 453308,
+          "capital": 0,
+          "total": 1749271
+        },
+        "Finance": {
+          "personnel": 1054995,
+          "operating": 33813,
+          "capital": 0,
+          "total": 1088808
+        },
+        "Information Technology": {
+          "personnel": 1054677,
+          "operating": 1036833,
+          "capital": 0,
+          "total": 2091510
+        },
+        "Management Information Systems": {
+          "personnel": 548266,
+          "operating": 104796,
+          "capital": 36500,
+          "total": 689562
+        },
+        "Other": {
+          "personnel": 0,
+          "operating": 3564097,
+          "capital": 2400,
+          "total": 3566497
+        },
+        "Electoral Board": {
+          "personnel": 101198,
+          "operating": 85134,
+          "capital": 2400,
+          "total": 188732
+        },
+        "Registrar": {
+          "personnel": 194509,
+          "operating": 13234,
+          "capital": 2400,
+          "total": 210143
+        },
+        "Circuit Court": {
+          "personnel": 0,
+          "operating": 79500,
+          "capital": 0,
+          "total": 79500
+        },
+        "General District Court": {
+          "personnel": 10505,
+          "operating": 10605,
+          "capital": 4000,
+          "total": 25110
+        },
+        "J & D Relations Court": {
+          "personnel": 3770,
+          "operating": 13890,
+          "capital": 9000,
+          "total": 26660
+        },
+        "Clerk of Circuit Court": {
+          "personnel": 821078,
+          "operating": 65397,
+          "capital": 9485,
+          "total": 895960
+        },
+        "Law Library": {
+          "personnel": 0,
+          "operating": 15000,
+          "capital": 0,
+          "total": 15000
+        },
+        "Commonwealth Attorney": {
+          "personnel": 1737379,
+          "operating": 93050,
+          "capital": 7000,
+          "total": 1837429
+        },
+        "Victim Witness Program": {
+          "personnel": 211947,
+          "operating": 11735,
+          "capital": 0,
+          "total": 223682
+        },
+        "Sheriff": {
+          "personnel": 14084591,
+          "operating": 2072308,
+          "capital": 13420,
+          "total": 16170319
+        },
+        "Volunteer Fire Departments": {
+          "personnel": 91000,
+          "operating": 894419,
+          "capital": 0,
+          "total": 985419
+        },
+        "Ambulance and Rescue Service": {
+          "personnel": 0,
+          "operating": 411150,
+          "capital": 0,
+          "total": 411150
+        },
+        "Public Safety Contributions": {
+          "personnel": 0,
+          "operating": 6082170,
+          "capital": 0,
+          "total": 6082170
+        },
+        "Juvenile Court Probation": {
+          "personnel": 63016,
+          "operating": 93685,
+          "capital": 0,
+          "total": 156701
+        },
+        "Inspections": {
+          "personnel": 1420544,
+          "operating": 73634,
+          "capital": 2880,
+          "total": 1497058
+        },
+        "Fire and Rescue": {
+          "personnel": 14168078,
+          "operating": 1477149,
+          "capital": 11644,
+          "total": 15656871
+        },
+        "Public Safety Communications": {
+          "personnel": 1264342,
+          "operating": 500315,
+          "capital": 16160,
+          "total": 1780817
+        },
+        "Road Administration": {
+          "personnel": 0,
+          "operating": 18500,
+          "capital": 0,
+          "total": 18500
+        },
+        "Street Lights": {
+          "personnel": 0,
+          "operating": 32112,
+          "capital": 0,
+          "total": 32112
+        },
+        "General Engineering": {
+          "personnel": 403184,
+          "operating": 27404,
+          "capital": 1000,
+          "total": 431588
+        },
+        "Refuse Collection": {
+          "personnel": 686098,
+          "operating": 1006912,
+          "capital": 10400,
+          "total": 1703410
+        },
+        "Refuse Disposal": {
+          "personnel": 0,
+          "operating": 651360,
+          "capital": 0,
+          "total": 651360
+        },
+        "Litter Control": {
+          "personnel": 19302,
+          "operating": 11032,
+          "capital": 0,
+          "total": 30334
+        },
+        "Maintenance Administration": {
+          "personnel": 693777,
+          "operating": 12400,
+          "capital": 0,
+          "total": 706177
+        },
+        "County Office Buildings": {
+          "personnel": 0,
+          "operating": 1400947,
+          "capital": 0,
+          "total": 1400947
+        },
+        "Animal Shelter": {
+          "personnel": 613463,
+          "operating": 182937,
+          "capital": 0,
+          "total": 796400
+        },
+        "Local Health Department": {
+          "personnel": 0,
+          "operating": 436439,
+          "capital": 0,
+          "total": 436439
+        },
+        "Northwestern Community Services": {
+          "personnel": 0,
+          "operating": 416507,
+          "capital": 0,
+          "total": 416507
+        },
+        "Area Agency on Aging": {
+          "personnel": 0,
+          "operating": 63000,
+          "capital": 0,
+          "total": 63000
+        },
+        "Property Tax Relief": {
+          "personnel": 0,
+          "operating": 800000,
+          "capital": 0,
+          "total": 800000
+        },
+        "Public Assistance": {
+          "personnel": 0,
+          "operating": 2131770,
+          "capital": 0,
+          "total": 2131770
+        },
+        "Community College": {
+          "personnel": 0,
+          "operating": 81308,
+          "capital": 0,
+          "total": 81308
+        },
+        "Parks Administration": {
+          "personnel": 1048704,
+          "operating": 341284,
+          "capital": 108201,
+          "total": 1498189
+        },
+        "Recreation Centers": {
+          "personnel": 2294933,
+          "operating": 655809,
+          "capital": 0,
+          "total": 2950742
+        },
+        "Clearbrook Park": {
+          "personnel": 608134,
+          "operating": 268924,
+          "capital": 37250,
+          "total": 914308
+        },
+        "Sherando Park": {
+          "personnel": 536489,
+          "operating": 308801,
+          "capital": 38750,
+          "total": 884040
+        },
+        "Regional Library": {
+          "personnel": 0,
+          "operating": 1218200,
+          "capital": 0,
+          "total": 1218200
+        },
+        "Planning and Development": {
+          "personnel": 1168189,
+          "operating": 80284,
+          "capital": 0,
+          "total": 1248473
+        },
+        "EDA Transfer": {
+          "personnel": 0,
+          "operating": 614301,
+          "capital": 0,
+          "total": 614301
+        },
+        "Zoning Board": {
+          "personnel": 4521,
+          "operating": 3300,
+          "capital": 0,
+          "total": 7821
+        },
+        "Building Appeals Board": {
+          "personnel": 161,
+          "operating": 400,
+          "capital": 0,
+          "total": 561
+        },
+        "NSV Regional Commission": {
+          "personnel": 0,
+          "operating": 74348,
+          "capital": 0,
+          "total": 74348
+        },
+        "Soil and Water Conservation District": {
+          "personnel": 0,
+          "operating": 11250,
+          "capital": 0,
+          "total": 11250
+        },
+        "Extension": {
+          "personnel": 165133,
+          "operating": 110038,
+          "capital": 1800,
+          "total": 276971
+        },
+        "Transfers/Miscellaneous": {
+          "personnel": 0,
+          "operating": 114405262,
+          "capital": 0,
+          "total": 114405262
+        },
+        "General Fund Total": {
+          "personnel": 56960516,
+          "operating": 143499325,
+          "capital": 578290,
+          "total": 201038131
+        },
+        "Landfill Fund": {
+          "personnel": 2319564,
+          "operating": 3332790,
+          "capital": 3995000,
+          "total": 9647354
+        },
+        "Old Dominion ASAP Fund": {
+          "personnel": 489800,
+          "operating": 86082,
+          "capital": 16000,
+          "total": 591882
+        },
+        "Shawneeland Sanitary District Fund": {
+          "personnel": 496041,
+          "operating": 649982,
+          "capital": 0,
+          "total": 1146023
+        },
+        "Winchester Regional Airport Fund": {
+          "personnel": 838104,
+          "operating": 905195,
+          "capital": 161698,
+          "total": 1904997
+        },
+        "Lake Holiday Sanitary District Fund": {
+          "personnel": 0,
+          "operating": 41340,
+          "capital": 738658,
+          "total": 779998
+        },
+        "EMS Revenue Recovery Fund": {
+          "personnel": 139525,
+          "operating": 1727692,
+          "capital": 0,
+          "total": 1867217
+        },
+        "Economic Development Authority Fund": {
+          "personnel": 451873,
+          "operating": 157207,
+          "capital": 31271,
+          "total": 640351
+        },
+        "School Instruction": {
+          "personnel": 125503561,
+          "operating": 12137580,
+          "capital": 18500,
+          "total": 137659641
+        },
+        "Admin./Attendance and Health Services": {
+          "personnel": 7061288,
+          "operating": 614800,
+          "capital": 15500,
+          "total": 7691588
+        },
+        "Pupil Transportation Services": {
+          "personnel": 7870823,
+          "operating": 2718705,
+          "capital": 100000,
+          "total": 10689528
+        },
+        "Operation and Maintenance Services": {
+          "personnel": 8027115,
+          "operating": 7576794,
+          "capital": 142731,
+          "total": 15746640
+        },
+        "Facilities": {
+          "personnel": 267979,
+          "operating": 164300,
+          "capital": 0,
+          "total": 432279
+        },
+        "Technology": {
+          "personnel": 5178300,
+          "operating": 2619146,
+          "capital": 607935,
+          "total": 8405381
+        },
+        "Transfers": {
+          "personnel": 0,
+          "operating": 1127364,
+          "capital": 0,
+          "total": 1127364
+        },
+        "School Operating Fund Total": {
+          "personnel": 153909066,
+          "operating": 26966689,
+          "capital": 884666,
+          "total": 181760421
+        },
+        "School Debt Service Fund": {
+          "personnel": 0,
+          "operating": 17957232,
+          "capital": 0,
+          "total": 17957232
+        },
+        "School Nutrition Services Fund": {
+          "personnel": 3061991,
+          "operating": 2722115,
+          "capital": 1797638,
+          "total": 7581744
+        },
+        "School Textbook Fund": {
+          "personnel": 25104,
+          "operating": 2846136,
+          "capital": 0,
+          "total": 2871240
+        },
+        "School Private Purpose Funds": {
+          "personnel": 10790,
+          "operating": 289210,
+          "capital": 200000,
+          "total": 500000
+        },
+        "NREP Operating Fund": {
+          "personnel": 5004839,
+          "operating": 640637,
+          "capital": 606437,
+          "total": 6251913
+        },
+        "NREP Textbook Fund": {
+          "personnel": 0,
+          "operating": 20000,
+          "capital": 0,
+          "total": 20000
+        },
+        "Consolidated Services Fund": {
+          "personnel": 1139108,
+          "operating": 2460892,
+          "capital": 0,
+          "total": 3600000
+        },
+        "School Capital Projects Fund": {
+          "personnel": 0,
+          "operating": 1879300,
+          "capital": 2536600,
+          "total": 4415900
+        }
+      },
+      "general_fund_summary": {},
+      "expenditure_pages": [
+        44,
+        45,
+        46
+      ],
+      "general_fund_page": 43
+    },
+    "FY2022": {
+      "fiscal_year": "FY2022",
+      "source_file": "FY2022_acfr.pdf",
+      "extracted_date": "2026-01-29T08:00:09.781840",
+      "personnel_by_department": {
+        "Board of Supervisors": {
+          "fy_minus_2": {
+            "full_time": 1.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 1.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 1.0,
+            "part_time": 1
+          }
+        },
+        "County Administrator": {
+          "fy_minus_2": {
+            "full_time": 7.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 7.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 7.0,
+            "part_time": 0
+          }
+        },
+        "County Attorney": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 0
+          }
+        },
+        "Human Resources": {
+          "fy_minus_2": {
+            "full_time": 6.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 6.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 6.0,
+            "part_time": 0
+          }
+        },
+        "Commissioner of the Revenue": {
+          "fy_minus_2": {
+            "full_time": 18.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 18.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 18.0,
+            "part_time": 0
+          }
+        },
+        "Reassessment": {
+          "fy_minus_2": {
+            "full_time": 6.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 6.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 6.0,
+            "part_time": 0
+          }
+        },
+        "Treasurer": {
+          "fy_minus_2": {
+            "full_time": 13.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 13.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 13.0,
+            "part_time": 0
+          }
+        },
+        "Finance": {
+          "fy_minus_2": {
+            "full_time": 8.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 9.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 9.0,
+            "part_time": 0
+          }
+        },
+        "IT/MIS": {
+          "fy_minus_2": {
+            "full_time": 15.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 16.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 16.0,
+            "part_time": 0
+          }
+        },
+        "Electoral Board/Registrar": {
+          "fy_minus_2": {
+            "full_time": 2.0,
+            "part_time": 5
+          },
+          "fy_minus_1": {
+            "full_time": 2.0,
+            "part_time": 5
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 4
+          }
+        },
+        "Gen. District/J & D Courts": {
+          "fy_minus_2": {
+            "full_time": 0.0,
+            "part_time": 7
+          },
+          "fy_minus_1": {
+            "full_time": 0.0,
+            "part_time": 4
+          },
+          "fy_current": {
+            "full_time": 0.0,
+            "part_time": 1
+          }
+        },
+        "Clerk of the Circuit Court": {
+          "fy_minus_2": {
+            "full_time": 9.0,
+            "part_time": 4
+          },
+          "fy_minus_1": {
+            "full_time": 9.0,
+            "part_time": 3
+          },
+          "fy_current": {
+            "full_time": 9.0,
+            "part_time": 4
+          }
+        },
+        "Commonwealth Attorney": {
+          "fy_minus_2": {
+            "full_time": 15.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 16.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 16.0,
+            "part_time": 0
+          }
+        },
+        "Victim Witness": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 0
+          }
+        },
+        "Sheriff": {
+          "fy_minus_2": {
+            "full_time": 153.5,
+            "part_time": 8
+          },
+          "fy_minus_1": {
+            "full_time": 155.5,
+            "part_time": 13
+          },
+          "fy_current": {
+            "full_time": 157.5,
+            "part_time": 14
+          }
+        },
+        "Juvenile Court Probation": {
+          "fy_minus_2": {
+            "full_time": 2.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 1.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 1.0,
+            "part_time": 0
+          }
+        },
+        "Inspections": {
+          "fy_minus_2": {
+            "full_time": 15.0,
+            "part_time": 2
+          },
+          "fy_minus_1": {
+            "full_time": 16.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 17.0,
+            "part_time": 0
+          }
+        },
+        "Fire and Rescue": {
+          "fy_minus_2": {
+            "full_time": 140.5,
+            "part_time": 28
+          },
+          "fy_minus_1": {
+            "full_time": 148.5,
+            "part_time": 10
+          },
+          "fy_current": {
+            "full_time": 153.5,
+            "part_time": 8
+          }
+        },
+        "Public Safety Communications": {
+          "fy_minus_2": {
+            "full_time": 17.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 17.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 17.0,
+            "part_time": 1
+          }
+        },
+        "General Engineering": {
+          "fy_minus_2": {
+            "full_time": 4.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 5.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 5.0,
+            "part_time": 0
+          }
+        },
+        "Refuse Collection": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 28
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 22
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 21
+          }
+        },
+        "Litter Control": {
+          "fy_minus_2": {
+            "full_time": 0.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 0.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 0.0,
+            "part_time": 1
+          }
+        },
+        "Maintenance": {
+          "fy_minus_2": {
+            "full_time": 9.0,
+            "part_time": 4
+          },
+          "fy_minus_1": {
+            "full_time": 10.0,
+            "part_time": 3
+          },
+          "fy_current": {
+            "full_time": 10.0,
+            "part_time": 3
+          }
+        },
+        "Animal Shelter": {
+          "fy_minus_2": {
+            "full_time": 8.0,
+            "part_time": 4
+          },
+          "fy_minus_1": {
+            "full_time": 8.0,
+            "part_time": 4
+          },
+          "fy_current": {
+            "full_time": 8.0,
+            "part_time": 4
+          }
+        },
+        "Social Services": {
+          "fy_minus_2": {
+            "full_time": 82.0,
+            "part_time": 2
+          },
+          "fy_minus_1": {
+            "full_time": 83.0,
+            "part_time": 2
+          },
+          "fy_current": {
+            "full_time": 83.0,
+            "part_time": 2
+          }
+        },
+        "Parks and Recreation": {
+          "fy_minus_2": {
+            "full_time": 41.0,
+            "part_time": 427
+          },
+          "fy_minus_1": {
+            "full_time": 42.0,
+            "part_time": 339
+          },
+          "fy_current": {
+            "full_time": 42.0,
+            "part_time": 238
+          }
+        },
+        "Planning and Development": {
+          "fy_minus_2": {
+            "full_time": 11.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 11.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 11.0,
+            "part_time": 0
+          }
+        },
+        "Extension": {
+          "fy_minus_2": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 2.0,
+            "part_time": 0
+          }
+        },
+        "Total Positions General Fund": {
+          "fy_minus_2": {
+            "full_time": 594.0,
+            "part_time": 525
+          },
+          "fy_minus_1": {
+            "full_time": 611.0,
+            "part_time": 396
+          },
+          "fy_current": {
+            "full_time": 620.0,
+            "part_time": 302
+          }
+        },
+        "Regional Jail Fund": {
+          "fy_minus_2": {
+            "full_time": 209.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 209.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 213.0,
+            "part_time": 1
+          }
+        },
+        "Landfill Fund": {
+          "fy_minus_2": {
+            "full_time": 28.0,
+            "part_time": 5
+          },
+          "fy_minus_1": {
+            "full_time": 28.0,
+            "part_time": 5
+          },
+          "fy_current": {
+            "full_time": 28.0,
+            "part_time": 4
+          }
+        },
+        "Old Dominion ASAP Fund": {
+          "fy_minus_2": {
+            "full_time": 6.0,
+            "part_time": 10
+          },
+          "fy_minus_1": {
+            "full_time": 6.0,
+            "part_time": 7
+          },
+          "fy_current": {
+            "full_time": 5.0,
+            "part_time": 6
+          }
+        },
+        "Shawneeland Sanitary District Fund": {
+          "fy_minus_2": {
+            "full_time": 7.0,
+            "part_time": 9
+          },
+          "fy_minus_1": {
+            "full_time": 7.0,
+            "part_time": 9
+          },
+          "fy_current": {
+            "full_time": 7.0,
+            "part_time": 1
+          }
+        },
+        "Regional Airport Fund": {
+          "fy_minus_2": {
+            "full_time": 11.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 11.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 11.0,
+            "part_time": 1
+          }
+        },
+        "EMS Revenue Recovery Fund": {
+          "fy_minus_2": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 2.0,
+            "part_time": 0
+          }
+        },
+        "EDA Fund": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 2
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 2
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 2
+          }
+        },
+        "School Funds": {
+          "fy_minus_2": {
+            "full_time": 2267.8,
+            "part_time": 1016
+          },
+          "fy_minus_1": {
+            "full_time": 2341.5,
+            "part_time": 513
+          },
+          "fy_current": {
+            "full_time": 2375.5,
+            "part_time": 650
+          }
+        },
+        "Total Positions All Funds": {
+          "fy_minus_2": {
+            "full_time": 3127.8,
+            "part_time": 1567
+          },
+          "fy_minus_1": {
+            "full_time": 3218.5,
+            "part_time": 934
+          },
+          "fy_current": {
+            "full_time": 3264.5,
+            "part_time": 967
+          }
+        }
+      },
+      "expenditures_by_department": {
+        "Board of Supervisors": {
+          "personnel": 210893,
+          "operating": 103550,
+          "capital": 0,
+          "total": 314443
+        },
+        "County Administrator": {
+          "personnel": 961245,
+          "operating": 39650,
+          "capital": 0,
+          "total": 1000895
+        },
+        "County Attorney": {
+          "personnel": 446443,
+          "operating": 45025,
+          "capital": 0,
+          "total": 491468
+        },
+        "Human Resources": {
+          "personnel": 593003,
+          "operating": 145891,
+          "capital": 5400,
+          "total": 744294
+        },
+        "Independent Auditor": {
+          "personnel": 0,
+          "operating": 66000,
+          "capital": 0,
+          "total": 66000
+        },
+        "Commissioner of the Revenue": {
+          "personnel": 1517772,
+          "operating": 65600,
+          "capital": 0,
+          "total": 1583372
+        },
+        "Reassessment": {
+          "personnel": 397452,
+          "operating": 77500,
+          "capital": 0,
+          "total": 474952
+        },
+        "Treasurer": {
+          "personnel": 1304933,
+          "operating": 481585,
+          "capital": 0,
+          "total": 1786518
+        },
+        "Finance": {
+          "personnel": 1057818,
+          "operating": 34155,
+          "capital": 0,
+          "total": 1091973
+        },
+        "Information Technology": {
+          "personnel": 1161761,
+          "operating": 935243,
+          "capital": 132,
+          "total": 2097136
+        },
+        "Management Information Systems": {
+          "personnel": 551685,
+          "operating": 110014,
+          "capital": 38000,
+          "total": 699699
+        },
+        "Other": {
+          "personnel": 0,
+          "operating": 3790240,
+          "capital": 2400,
+          "total": 3792640
+        },
+        "Electoral Board": {
+          "personnel": 106087,
+          "operating": 89440,
+          "capital": 4090,
+          "total": 199617
+        },
+        "Registrar": {
+          "personnel": 261028,
+          "operating": 21624,
+          "capital": 3090,
+          "total": 285742
+        },
+        "Circuit Court": {
+          "personnel": 0,
+          "operating": 95400,
+          "capital": 0,
+          "total": 95400
+        },
+        "General District Court": {
+          "personnel": 10505,
+          "operating": 10305,
+          "capital": 4000,
+          "total": 24810
+        },
+        "J & D Relations Court": {
+          "personnel": 7395,
+          "operating": 14120,
+          "capital": 9000,
+          "total": 30515
+        },
+        "Clerk of Circuit Court": {
+          "personnel": 828539,
+          "operating": 56073,
+          "capital": 8485,
+          "total": 893097
+        },
+        "Law Library": {
+          "personnel": 0,
+          "operating": 12000,
+          "capital": 0,
+          "total": 12000
+        },
+        "Commonwealth Attorney": {
+          "personnel": 1737597,
+          "operating": 101550,
+          "capital": 7000,
+          "total": 1846147
+        },
+        "Victim Witness Program": {
+          "personnel": 213850,
+          "operating": 11750,
+          "capital": 0,
+          "total": 225600
+        },
+        "Sheriff": {
+          "personnel": 14976012,
+          "operating": 2181237,
+          "capital": 576272,
+          "total": 17733521
+        },
+        "Volunteer Fire Departments": {
+          "personnel": 96000,
+          "operating": 1101496,
+          "capital": 0,
+          "total": 1197496
+        },
+        "Ambulance and Rescue Service": {
+          "personnel": 0,
+          "operating": 416250,
+          "capital": 0,
+          "total": 416250
+        },
+        "Public Safety Contributions": {
+          "personnel": 0,
+          "operating": 6249161,
+          "capital": 0,
+          "total": 6249161
+        },
+        "Juvenile Court Probation": {
+          "personnel": 63688,
+          "operating": 93685,
+          "capital": 0,
+          "total": 157373
+        },
+        "Inspections": {
+          "personnel": 1419642,
+          "operating": 77268,
+          "capital": 2880,
+          "total": 1499790
+        },
+        "Fire and Rescue": {
+          "personnel": 15633826,
+          "operating": 1673319,
+          "capital": 12500,
+          "total": 17319645
+        },
+        "Public Safety Communications": {
+          "personnel": 1279277,
+          "operating": 504216,
+          "capital": 139646,
+          "total": 1923139
+        },
+        "Road Administration": {
+          "personnel": 0,
+          "operating": 15000,
+          "capital": 0,
+          "total": 15000
+        },
+        "Street Lights": {
+          "personnel": 0,
+          "operating": 32112,
+          "capital": 0,
+          "total": 32112
+        },
+        "General Engineering": {
+          "personnel": 464908,
+          "operating": 38886,
+          "capital": 1000,
+          "total": 504794
+        },
+        "Refuse Collection": {
+          "personnel": 685493,
+          "operating": 1173680,
+          "capital": 9240,
+          "total": 1868413
+        },
+        "Refuse Disposal": {
+          "personnel": 0,
+          "operating": 849984,
+          "capital": 0,
+          "total": 849984
+        },
+        "Litter Control": {
+          "personnel": 16083,
+          "operating": 11842,
+          "capital": 0,
+          "total": 27925
+        },
+        "Maintenance Administration": {
+          "personnel": 702644,
+          "operating": 12400,
+          "capital": 0,
+          "total": 715044
+        },
+        "County Office Buildings": {
+          "personnel": 0,
+          "operating": 1479938,
+          "capital": 0,
+          "total": 1479938
+        },
+        "Animal Shelter": {
+          "personnel": 617962,
+          "operating": 174859,
+          "capital": 0,
+          "total": 792821
+        },
+        "Local Health Department": {
+          "personnel": 0,
+          "operating": 436439,
+          "capital": 0,
+          "total": 436439
+        },
+        "Northwestern Community Services": {
+          "personnel": 0,
+          "operating": 416507,
+          "capital": 0,
+          "total": 416507
+        },
+        "Area Agency on Aging": {
+          "personnel": 0,
+          "operating": 63000,
+          "capital": 0,
+          "total": 63000
+        },
+        "Property Tax Relief": {
+          "personnel": 0,
+          "operating": 840000,
+          "capital": 0,
+          "total": 840000
+        },
+        "Public Assistance": {
+          "personnel": 0,
+          "operating": 2158810,
+          "capital": 0,
+          "total": 2158810
+        },
+        "Community College": {
+          "personnel": 0,
+          "operating": 81308,
+          "capital": 0,
+          "total": 81308
+        },
+        "Parks Administration": {
+          "personnel": 1062110,
+          "operating": 330570,
+          "capital": 484986,
+          "total": 1877666
+        },
+        "Recreation Centers": {
+          "personnel": 2592505,
+          "operating": 729921,
+          "capital": 0,
+          "total": 3322426
+        },
+        "Clearbrook Park": {
+          "personnel": 627251,
+          "operating": 265048,
+          "capital": 53671,
+          "total": 945970
+        },
+        "Sherando Park": {
+          "personnel": 560717,
+          "operating": 266048,
+          "capital": 42435,
+          "total": 869200
+        },
+        "Regional Library": {
+          "personnel": 0,
+          "operating": 1218200,
+          "capital": 0,
+          "total": 1218200
+        },
+        "Planning and Development": {
+          "personnel": 1175085,
+          "operating": 80295,
+          "capital": 0,
+          "total": 1255380
+        },
+        "EDA Transfer": {
+          "personnel": 0,
+          "operating": 621876,
+          "capital": 0,
+          "total": 621876
+        },
+        "Zoning Board": {
+          "personnel": 4521,
+          "operating": 3300,
+          "capital": 0,
+          "total": 7821
+        },
+        "Building Appeals Board": {
+          "personnel": 161,
+          "operating": 400,
+          "capital": 0,
+          "total": 561
+        },
+        "NSV Regional Commission": {
+          "personnel": 0,
+          "operating": 74348,
+          "capital": 0,
+          "total": 74348
+        },
+        "Soil and Water Conservation District": {
+          "personnel": 0,
+          "operating": 11250,
+          "capital": 0,
+          "total": 11250
+        },
+        "Extension": {
+          "personnel": 159903,
+          "operating": 127094,
+          "capital": 1930,
+          "total": 288927
+        },
+        "Transfers/Miscellaneous": {
+          "personnel": 0,
+          "operating": 116859347,
+          "capital": 0,
+          "total": 116859347
+        },
+        "General Fund Total": {
+          "personnel": 60645232,
+          "operating": 147397009,
+          "capital": 1664557,
+          "total": 209706798
+        },
+        "Landfill Fund": {
+          "personnel": 2387390,
+          "operating": 3581270,
+          "capital": 5295000,
+          "total": 11263660
+        },
+        "Old Dominion ASAP Fund": {
+          "personnel": 395109,
+          "operating": 76026,
+          "capital": 2800,
+          "total": 473935
+        },
+        "Shawneeland Sanitary District Fund": {
+          "personnel": 516897,
+          "operating": 464871,
+          "capital": 0,
+          "total": 981768
+        },
+        "Winchester Regional Airport Fund": {
+          "personnel": 843755,
+          "operating": 1059345,
+          "capital": 119933,
+          "total": 2023033
+        },
+        "Lake Holiday Sanitary District Fund": {
+          "personnel": 0,
+          "operating": 41340,
+          "capital": 738658,
+          "total": 779998
+        },
+        "EMS Revenue Recovery Fund": {
+          "personnel": 147314,
+          "operating": 1496727,
+          "capital": 340000,
+          "total": 1984041
+        },
+        "Economic Development Authority Fund": {
+          "personnel": 459448,
+          "operating": 157207,
+          "capital": 31271,
+          "total": 647926
+        },
+        "School Instruction": {
+          "personnel": 131428991,
+          "operating": 11992752,
+          "capital": 29700,
+          "total": 143451443
+        },
+        "Admin./Attendance and Health Services": {
+          "personnel": 7555249,
+          "operating": 651178,
+          "capital": 8500,
+          "total": 8214927
+        },
+        "Pupil Transportation Services": {
+          "personnel": 8215576,
+          "operating": 2919304,
+          "capital": 200000,
+          "total": 11334880
+        },
+        "Operation and Maintenance Services": {
+          "personnel": 8206424,
+          "operating": 7877743,
+          "capital": 4495244,
+          "total": 20579411
+        },
+        "Facilities": {
+          "personnel": 280530,
+          "operating": 1184300,
+          "capital": 0,
+          "total": 1464830
+        },
+        "Technology": {
+          "personnel": 5280006,
+          "operating": 3386724,
+          "capital": 607935,
+          "total": 9274665
+        },
+        "Transfers": {
+          "personnel": 0,
+          "operating": 645548,
+          "capital": 0,
+          "total": 645548
+        },
+        "School Operating Fund Total": {
+          "personnel": 160966776,
+          "operating": 28667549,
+          "capital": 5341379,
+          "total": 194975704
+        },
+        "School Debt Service Fund": {
+          "personnel": 0,
+          "operating": 18897606,
+          "capital": 0,
+          "total": 18897606
+        },
+        "School Nutrition Services Fund": {
+          "personnel": 3344961,
+          "operating": 2829601,
+          "capital": 1652904,
+          "total": 7827466
+        },
+        "School Textbook Fund": {
+          "personnel": 27046,
+          "operating": 2722275,
+          "capital": 0,
+          "total": 2749321
+        },
+        "School Private Purpose Funds": {
+          "personnel": 10790,
+          "operating": 289210,
+          "capital": 250000,
+          "total": 550000
+        },
+        "NREP Operating Fund": {
+          "personnel": 5139474,
+          "operating": 635637,
+          "capital": 439106,
+          "total": 6214217
+        },
+        "NREP Textbook Fund": {
+          "personnel": 0,
+          "operating": 20000,
+          "capital": 0,
+          "total": 20000
+        },
+        "Consolidated Services Fund": {
+          "personnel": 1112699,
+          "operating": 2487301,
+          "capital": 0,
+          "total": 3600000
+        },
+        "School Capital Projects Fund": {
+          "personnel": 0,
+          "operating": 1000000,
+          "capital": 0,
+          "total": 1000000
+        }
+      },
+      "general_fund_summary": {
+        "Administration": {
+          "prior_budgeted": 13625453,
+          "prior_actual": 15449196,
+          "current_budgeted": 14034050,
+          "adopted": 14628749,
+          "pct_of_total": 6.97
+        },
+        "Total Expenditures": {
+          "prior_budgeted": 197546413,
+          "prior_actual": 199233247,
+          "current_budgeted": 201038131,
+          "adopted": 209706798,
+          "pct_of_total": 100.0
+        }
+      },
+      "personnel_page": 47,
+      "expenditure_pages": [
+        44,
+        45,
+        46
+      ],
+      "general_fund_page": 43
+    },
+    "FY2023": {
+      "fiscal_year": "FY2023",
+      "source_file": "FY2023_acfr.pdf",
+      "extracted_date": "2026-01-29T08:00:11.701403",
+      "personnel_by_department": {
+        "Board of Supervisors": {
+          "fy_minus_2": {
+            "full_time": 1.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 1.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 1.0,
+            "part_time": 1
+          }
+        },
+        "County Administrator": {
+          "fy_minus_2": {
+            "full_time": 7.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 7.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 7.0,
+            "part_time": 0
+          }
+        },
+        "County Attorney": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 0
+          }
+        },
+        "Human Resources": {
+          "fy_minus_2": {
+            "full_time": 6.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 6.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 6.0,
+            "part_time": 1
+          }
+        },
+        "COR/Reassessment": {
+          "fy_minus_2": {
+            "full_time": 24.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 24.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 25.0,
+            "part_time": 0
+          }
+        },
+        "Treasurer": {
+          "fy_minus_2": {
+            "full_time": 13.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 13.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 13.0,
+            "part_time": 0
+          }
+        },
+        "Finance": {
+          "fy_minus_2": {
+            "full_time": 9.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 9.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 9.0,
+            "part_time": 0
+          }
+        },
+        "IT/MIS": {
+          "fy_minus_2": {
+            "full_time": 16.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 16.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 16.0,
+            "part_time": 0
+          }
+        },
+        "Electoral Board/Registrar": {
+          "fy_minus_2": {
+            "full_time": 2.0,
+            "part_time": 5
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 4
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 6
+          }
+        },
+        "Gen. District/J & D Courts": {
+          "fy_minus_2": {
+            "full_time": 0.0,
+            "part_time": 4
+          },
+          "fy_minus_1": {
+            "full_time": 0.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 0.0,
+            "part_time": 1
+          }
+        },
+        "Clerk of the Circuit Court": {
+          "fy_minus_2": {
+            "full_time": 9.0,
+            "part_time": 3
+          },
+          "fy_minus_1": {
+            "full_time": 9.0,
+            "part_time": 4
+          },
+          "fy_current": {
+            "full_time": 10.0,
+            "part_time": 2
+          }
+        },
+        "Commonwealth Attorney": {
+          "fy_minus_2": {
+            "full_time": 16.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 16.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 16.0,
+            "part_time": 1
+          }
+        },
+        "Victim Witness": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 0
+          }
+        },
+        "Sheriff": {
+          "fy_minus_2": {
+            "full_time": 155.5,
+            "part_time": 13
+          },
+          "fy_minus_1": {
+            "full_time": 157.5,
+            "part_time": 14
+          },
+          "fy_current": {
+            "full_time": 157.5,
+            "part_time": 10
+          }
+        },
+        "Juvenile Court Probation": {
+          "fy_minus_2": {
+            "full_time": 1.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 1.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 1.0,
+            "part_time": 0
+          }
+        },
+        "Inspections": {
+          "fy_minus_2": {
+            "full_time": 16.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 17.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 17.0,
+            "part_time": 0
+          }
+        },
+        "Fire and Rescue": {
+          "fy_minus_2": {
+            "full_time": 148.5,
+            "part_time": 10
+          },
+          "fy_minus_1": {
+            "full_time": 153.5,
+            "part_time": 8
+          },
+          "fy_current": {
+            "full_time": 161.5,
+            "part_time": 9
+          }
+        },
+        "Public Safety Communications": {
+          "fy_minus_2": {
+            "full_time": 17.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 17.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 18.0,
+            "part_time": 0
+          }
+        },
+        "General Engineering": {
+          "fy_minus_2": {
+            "full_time": 5.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 5.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 6.0,
+            "part_time": 0
+          }
+        },
+        "Refuse Collection": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 22
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 21
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 23
+          }
+        },
+        "Litter Control": {
+          "fy_minus_2": {
+            "full_time": 0.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 0.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 0.0,
+            "part_time": 1
+          }
+        },
+        "Maintenance": {
+          "fy_minus_2": {
+            "full_time": 10.0,
+            "part_time": 3
+          },
+          "fy_minus_1": {
+            "full_time": 10.0,
+            "part_time": 3
+          },
+          "fy_current": {
+            "full_time": 10.0,
+            "part_time": 3
+          }
+        },
+        "Animal Shelter": {
+          "fy_minus_2": {
+            "full_time": 8.0,
+            "part_time": 4
+          },
+          "fy_minus_1": {
+            "full_time": 8.0,
+            "part_time": 4
+          },
+          "fy_current": {
+            "full_time": 8.0,
+            "part_time": 8
+          }
+        },
+        "Social Services": {
+          "fy_minus_2": {
+            "full_time": 83.0,
+            "part_time": 2
+          },
+          "fy_minus_1": {
+            "full_time": 83.0,
+            "part_time": 2
+          },
+          "fy_current": {
+            "full_time": 84.0,
+            "part_time": 2
+          }
+        },
+        "Parks and Recreation": {
+          "fy_minus_2": {
+            "full_time": 42.0,
+            "part_time": 339
+          },
+          "fy_minus_1": {
+            "full_time": 42.0,
+            "part_time": 238
+          },
+          "fy_current": {
+            "full_time": 43.0,
+            "part_time": 335
+          }
+        },
+        "Planning and Development": {
+          "fy_minus_2": {
+            "full_time": 11.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 11.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 12.0,
+            "part_time": 0
+          }
+        },
+        "Extension": {
+          "fy_minus_2": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 2.0,
+            "part_time": 0
+          }
+        },
+        "Total Positions General Fund": {
+          "fy_minus_2": {
+            "full_time": 611.0,
+            "part_time": 396
+          },
+          "fy_minus_1": {
+            "full_time": 620.0,
+            "part_time": 302
+          },
+          "fy_current": {
+            "full_time": 635.0,
+            "part_time": 403
+          }
+        },
+        "Regional Jail Fund": {
+          "fy_minus_2": {
+            "full_time": 209.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 213.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 213.0,
+            "part_time": 1
+          }
+        },
+        "Landfill Fund": {
+          "fy_minus_2": {
+            "full_time": 28.0,
+            "part_time": 5
+          },
+          "fy_minus_1": {
+            "full_time": 28.0,
+            "part_time": 4
+          },
+          "fy_current": {
+            "full_time": 28.0,
+            "part_time": 5
+          }
+        },
+        "Old Dominion ASAP Fund": {
+          "fy_minus_2": {
+            "full_time": 6.0,
+            "part_time": 7
+          },
+          "fy_minus_1": {
+            "full_time": 5.0,
+            "part_time": 6
+          },
+          "fy_current": {
+            "full_time": 5.0,
+            "part_time": 5
+          }
+        },
+        "Shawneeland Sanitary District Fund": {
+          "fy_minus_2": {
+            "full_time": 7.0,
+            "part_time": 9
+          },
+          "fy_minus_1": {
+            "full_time": 7.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 7.0,
+            "part_time": 5
+          }
+        },
+        "Regional Airport Fund": {
+          "fy_minus_2": {
+            "full_time": 11.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 11.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 12.0,
+            "part_time": 0
+          }
+        },
+        "CSA Fund": {
+          "fy_minus_2": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 0
+          }
+        },
+        "EMS Revenue Recovery Fund": {
+          "fy_minus_2": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 2.0,
+            "part_time": 0
+          }
+        },
+        "EDA Fund": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 2
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 2
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 2
+          }
+        },
+        "School Funds": {
+          "fy_minus_2": {
+            "full_time": 2341.5,
+            "part_time": 513
+          },
+          "fy_minus_1": {
+            "full_time": 2386.7,
+            "part_time": 650
+          },
+          "fy_current": {
+            "full_time": 2444.7,
+            "part_time": 650
+          }
+        },
+        "Total Positions All Funds": {
+          "fy_minus_2": {
+            "full_time": 3128.8,
+            "part_time": 934
+          },
+          "fy_minus_1": {
+            "full_time": 3277.7,
+            "part_time": 967
+          },
+          "fy_current": {
+            "full_time": 3352.7,
+            "part_time": 1071
+          }
+        }
+      },
+      "expenditures_by_department": {
+        "Board of Supervisors": {
+          "personnel": 215178,
+          "operating": 143050,
+          "capital": 0,
+          "total": 358228
+        },
+        "County Administrator": {
+          "personnel": 990112,
+          "operating": 35550,
+          "capital": 0,
+          "total": 1025662
+        },
+        "County Attorney": {
+          "personnel": 435499,
+          "operating": 50250,
+          "capital": 0,
+          "total": 485749
+        },
+        "Human Resources": {
+          "personnel": 650455,
+          "operating": 243708,
+          "capital": 3600,
+          "total": 897763
+        },
+        "Independent Auditor": {
+          "personnel": 0,
+          "operating": 66000,
+          "capital": 0,
+          "total": 66000
+        },
+        "Commissioner of the Revenue": {
+          "personnel": 1793653,
+          "operating": 61550,
+          "capital": 0,
+          "total": 1855203
+        },
+        "Reassessment": {
+          "personnel": 302551,
+          "operating": 93900,
+          "capital": 0,
+          "total": 396451
+        },
+        "Treasurer": {
+          "personnel": 1376381,
+          "operating": 601335,
+          "capital": 0,
+          "total": 1977716
+        },
+        "Finance": {
+          "personnel": 1133597,
+          "operating": 33055,
+          "capital": 0,
+          "total": 1166652
+        },
+        "Information Technology": {
+          "personnel": 1225824,
+          "operating": 1314367,
+          "capital": 132,
+          "total": 2540323
+        },
+        "Management Information Systems": {
+          "personnel": 583283,
+          "operating": 119538,
+          "capital": 95108,
+          "total": 797929
+        },
+        "Other": {
+          "personnel": 0,
+          "operating": 4258644,
+          "capital": 2400,
+          "total": 4261044
+        },
+        "Electoral Board": {
+          "personnel": 89533,
+          "operating": 87957,
+          "capital": 4750,
+          "total": 182240
+        },
+        "Registrar": {
+          "personnel": 296236,
+          "operating": 20264,
+          "capital": 3090,
+          "total": 319590
+        },
+        "Circuit Court": {
+          "personnel": 0,
+          "operating": 120400,
+          "capital": 0,
+          "total": 120400
+        },
+        "General District Court": {
+          "personnel": 10344,
+          "operating": 10905,
+          "capital": 4000,
+          "total": 25249
+        },
+        "J & D Relations Court": {
+          "personnel": 7395,
+          "operating": 14120,
+          "capital": 9000,
+          "total": 30515
+        },
+        "Clerk of Circuit Court": {
+          "personnel": 916067,
+          "operating": 72920,
+          "capital": 10018,
+          "total": 999005
+        },
+        "Law Library": {
+          "personnel": 0,
+          "operating": 12000,
+          "capital": 0,
+          "total": 12000
+        },
+        "Commonwealth Attorney": {
+          "personnel": 1804887,
+          "operating": 101550,
+          "capital": 7000,
+          "total": 1913437
+        },
+        "Victim Witness Program": {
+          "personnel": 225272,
+          "operating": 12250,
+          "capital": 0,
+          "total": 237522
+        },
+        "Sheriff": {
+          "personnel": 15789425,
+          "operating": 2651667,
+          "capital": 514124,
+          "total": 18955216
+        },
+        "Volunteer Fire Departments": {
+          "personnel": 96000,
+          "operating": 1307246,
+          "capital": 0,
+          "total": 1403246
+        },
+        "Ambulance and Rescue Service": {
+          "personnel": 0,
+          "operating": 422050,
+          "capital": 0,
+          "total": 422050
+        },
+        "Public Safety Contributions": {
+          "personnel": 0,
+          "operating": 7736641,
+          "capital": 0,
+          "total": 7736641
+        },
+        "Juvenile Court Probation": {
+          "personnel": 64908,
+          "operating": 94085,
+          "capital": 0,
+          "total": 158993
+        },
+        "Inspections": {
+          "personnel": 1455528,
+          "operating": 80426,
+          "capital": 2880,
+          "total": 1538834
+        },
+        "Fire and Rescue": {
+          "personnel": 17016378,
+          "operating": 1904578,
+          "capital": 12500,
+          "total": 18933456
+        },
+        "Public Safety Communications": {
+          "personnel": 1605107,
+          "operating": 487031,
+          "capital": 174455,
+          "total": 2266593
+        },
+        "Road Administration": {
+          "personnel": 0,
+          "operating": 17000,
+          "capital": 0,
+          "total": 17000
+        },
+        "Street Lights": {
+          "personnel": 0,
+          "operating": 29956,
+          "capital": 0,
+          "total": 29956
+        },
+        "General Engineering": {
+          "personnel": 570382,
+          "operating": 43348,
+          "capital": 1000,
+          "total": 614730
+        },
+        "Refuse Collection": {
+          "personnel": 760845,
+          "operating": 1171091,
+          "capital": 9240,
+          "total": 1941176
+        },
+        "Refuse Disposal": {
+          "personnel": 0,
+          "operating": 803832,
+          "capital": 0,
+          "total": 803832
+        },
+        "Litter Control": {
+          "personnel": 25691,
+          "operating": 12768,
+          "capital": 0,
+          "total": 38459
+        },
+        "Maintenance Administration": {
+          "personnel": 736410,
+          "operating": 12400,
+          "capital": 0,
+          "total": 748810
+        },
+        "County Office Buildings": {
+          "personnel": 0,
+          "operating": 1710912,
+          "capital": 0,
+          "total": 1710912
+        },
+        "Animal Shelter": {
+          "personnel": 668261,
+          "operating": 187109,
+          "capital": 0,
+          "total": 855370
+        },
+        "Local Health Department": {
+          "personnel": 0,
+          "operating": 453676,
+          "capital": 0,
+          "total": 453676
+        },
+        "Northwestern Community Services": {
+          "personnel": 0,
+          "operating": 437332,
+          "capital": 0,
+          "total": 437332
+        },
+        "Area Agency on Aging": {
+          "personnel": 0,
+          "operating": 63000,
+          "capital": 0,
+          "total": 63000
+        },
+        "Property Tax Relief": {
+          "personnel": 0,
+          "operating": 950000,
+          "capital": 0,
+          "total": 950000
+        },
+        "Public Assistance": {
+          "personnel": 0,
+          "operating": 2357382,
+          "capital": 0,
+          "total": 2357382
+        },
+        "Community College": {
+          "personnel": 0,
+          "operating": 92045,
+          "capital": 0,
+          "total": 92045
+        },
+        "Parks Administration": {
+          "personnel": 1085691,
+          "operating": 334643,
+          "capital": 513916,
+          "total": 1934250
+        },
+        "Recreation Centers": {
+          "personnel": 2949824,
+          "operating": 845176,
+          "capital": 0,
+          "total": 3795000
+        },
+        "Clearbrook Park": {
+          "personnel": 660016,
+          "operating": 334699,
+          "capital": 52300,
+          "total": 1047015
+        },
+        "Sherando Park": {
+          "personnel": 659173,
+          "operating": 384195,
+          "capital": 42600,
+          "total": 1085968
+        },
+        "Regional Library": {
+          "personnel": 0,
+          "operating": 1325000,
+          "capital": 0,
+          "total": 1325000
+        },
+        "Planning and Development": {
+          "personnel": 1293093,
+          "operating": 61345,
+          "capital": 0,
+          "total": 1354438
+        },
+        "EDA Transfer": {
+          "personnel": 0,
+          "operating": 688409,
+          "capital": 0,
+          "total": 688409
+        },
+        "Zoning Board": {
+          "personnel": 4521,
+          "operating": 5800,
+          "capital": 0,
+          "total": 10321
+        },
+        "Building Appeals Board": {
+          "personnel": 161,
+          "operating": 400,
+          "capital": 0,
+          "total": 561
+        },
+        "NSV Regional Commission": {
+          "personnel": 0,
+          "operating": 81885,
+          "capital": 0,
+          "total": 81885
+        },
+        "Soil and Water Conservation District": {
+          "personnel": 0,
+          "operating": 11500,
+          "capital": 0,
+          "total": 11500
+        },
+        "Extension": {
+          "personnel": 168824,
+          "operating": 132353,
+          "capital": 2300,
+          "total": 303477
+        },
+        "Transfers/Miscellaneous": {
+          "personnel": 0,
+          "operating": 130474662,
+          "capital": 0,
+          "total": 130474662
+        },
+        "General Fund Total": {
+          "personnel": 65022841,
+          "operating": 165787155,
+          "capital": 1722813,
+          "total": 232532809
+        },
+        "Landfill Fund": {
+          "personnel": 2531965,
+          "operating": 5652530,
+          "capital": 4995000,
+          "total": 13179495
+        },
+        "Old Dominion ASAP Fund": {
+          "personnel": 419634,
+          "operating": 37714,
+          "capital": 2900,
+          "total": 460248
+        },
+        "Shawneeland Sanitary District Fund": {
+          "personnel": 558531,
+          "operating": 381351,
+          "capital": 0,
+          "total": 939882
+        },
+        "Winchester Regional Airport Fund": {
+          "personnel": 988548,
+          "operating": 1320070,
+          "capital": 120240,
+          "total": 2428858
+        },
+        "Lake Holiday Sanitary District Fund": {
+          "personnel": 0,
+          "operating": 41340,
+          "capital": 740483,
+          "total": 781823
+        },
+        "EMS Revenue Recovery Fund": {
+          "personnel": 157465,
+          "operating": 2035549,
+          "capital": 16000,
+          "total": 2209014
+        },
+        "Economic Development Authority Fund": {
+          "personnel": 502496,
+          "operating": 180513,
+          "capital": 31450,
+          "total": 714459
+        },
+        "County Transportation Projects Fund": {
+          "personnel": 0,
+          "operating": 8851758,
+          "capital": 0,
+          "total": 8851758
+        },
+        "School Instruction": {
+          "personnel": 142833457,
+          "operating": 12828920,
+          "capital": 79200,
+          "total": 155741577
+        },
+        "Admin./Attendance and Health Services": {
+          "personnel": 8206470,
+          "operating": 841945,
+          "capital": 505000,
+          "total": 9553415
+        },
+        "Pupil Transportation Services": {
+          "personnel": 8544316,
+          "operating": 2931863,
+          "capital": 900000,
+          "total": 12376179
+        },
+        "Operation and Maintenance Services": {
+          "personnel": 8525239,
+          "operating": 8240209,
+          "capital": 1392731,
+          "total": 18158179
+        },
+        "Facilities": {
+          "personnel": 296460,
+          "operating": 1701800,
+          "capital": 7200000,
+          "total": 9198260
+        },
+        "Technology": {
+          "personnel": 5600568,
+          "operating": 4453834,
+          "capital": 1607935,
+          "total": 11662337
+        },
+        "Transfers": {
+          "personnel": 0,
+          "operating": 786496,
+          "capital": 0,
+          "total": 786496
+        },
+        "School Operating Fund Total": {
+          "personnel": 174006510,
+          "operating": 31793067,
+          "capital": 11684866,
+          "total": 217484443
+        },
+        "School Debt Service Fund": {
+          "personnel": 0,
+          "operating": 18668623,
+          "capital": 0,
+          "total": 18668623
+        },
+        "School Nutrition Services Fund": {
+          "personnel": 3364608,
+          "operating": 2859584,
+          "capital": 3835337,
+          "total": 10059529
+        },
+        "School Textbook Fund": {
+          "personnel": 28409,
+          "operating": 3056368,
+          "capital": 0,
+          "total": 3084777
+        },
+        "School Private Purpose Funds": {
+          "personnel": 10790,
+          "operating": 262527,
+          "capital": 401683,
+          "total": 675000
+        },
+        "NREP Operating Fund": {
+          "personnel": 5168036,
+          "operating": 633087,
+          "capital": 615100,
+          "total": 6416223
+        },
+        "NREP Textbook Fund": {
+          "personnel": 0,
+          "operating": 20000,
+          "capital": 0,
+          "total": 20000
+        },
+        "Consolidated Services Fund": {
+          "personnel": 1173245,
+          "operating": 2826755,
+          "capital": 0,
+          "total": 4000000
+        },
+        "School Capital Projects Fund": {
+          "personnel": 0,
+          "operating": 7289392,
+          "capital": 0,
+          "total": 7289392
+        }
+      },
+      "general_fund_summary": {
+        "Administration": {
+          "prior_budgeted": 14034050,
+          "prior_actual": 14022227,
+          "current_budgeted": 14628749,
+          "adopted": 16330550,
+          "pct_of_total": 7.02
+        },
+        "Total Expenditures": {
+          "prior_budgeted": 201038131,
+          "prior_actual": 202591614,
+          "current_budgeted": 209706798,
+          "adopted": 232532809,
+          "pct_of_total": 100.0
+        }
+      },
+      "personnel_page": 47,
+      "expenditure_pages": [
+        44,
+        45,
+        46
+      ],
+      "general_fund_page": 43
+    },
+    "FY2024": {
+      "fiscal_year": "FY2024",
+      "source_file": "FY2024_acfr.pdf",
+      "extracted_date": "2026-01-29T08:00:13.632503",
+      "personnel_by_department": {
+        "Board of Supervisors": {
+          "fy_minus_2": {
+            "full_time": 1.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 1.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 2.0,
+            "part_time": 0
+          }
+        },
+        "County Administrator": {
+          "fy_minus_2": {
+            "full_time": 7.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 7.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 7.0,
+            "part_time": 0
+          }
+        },
+        "County Attorney": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 0
+          }
+        },
+        "Human Resources": {
+          "fy_minus_2": {
+            "full_time": 6.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 6.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 6.0,
+            "part_time": 1
+          }
+        },
+        "COR/Reassessment": {
+          "fy_minus_2": {
+            "full_time": 24.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 25.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 25.0,
+            "part_time": 0
+          }
+        },
+        "Treasurer": {
+          "fy_minus_2": {
+            "full_time": 13.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 13.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 13.0,
+            "part_time": 0
+          }
+        },
+        "Finance": {
+          "fy_minus_2": {
+            "full_time": 9.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 9.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 9.0,
+            "part_time": 0
+          }
+        },
+        "IT/MIS": {
+          "fy_minus_2": {
+            "full_time": 16.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 16.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 16.0,
+            "part_time": 0
+          }
+        },
+        "Electoral Board/Registrar": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 4
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 6
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 4
+          }
+        },
+        "Gen. District/J & D Courts": {
+          "fy_minus_2": {
+            "full_time": 0.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 0.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 0.0,
+            "part_time": 1
+          }
+        },
+        "Clerk of the Circuit Court": {
+          "fy_minus_2": {
+            "full_time": 9.0,
+            "part_time": 4
+          },
+          "fy_minus_1": {
+            "full_time": 10.0,
+            "part_time": 2
+          },
+          "fy_current": {
+            "full_time": 10.0,
+            "part_time": 1
+          }
+        },
+        "Commonwealth Attorney": {
+          "fy_minus_2": {
+            "full_time": 16.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 16.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 17.0,
+            "part_time": 1
+          }
+        },
+        "Victim Witness": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 0
+          }
+        },
+        "Sheriff": {
+          "fy_minus_2": {
+            "full_time": 157.5,
+            "part_time": 14
+          },
+          "fy_minus_1": {
+            "full_time": 157.5,
+            "part_time": 10
+          },
+          "fy_current": {
+            "full_time": 164.5,
+            "part_time": 8
+          }
+        },
+        "Juvenile Court Probation": {
+          "fy_minus_2": {
+            "full_time": 1.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 1.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 0.0,
+            "part_time": 0
+          }
+        },
+        "Inspections": {
+          "fy_minus_2": {
+            "full_time": 17.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 17.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 17.0,
+            "part_time": 0
+          }
+        },
+        "Fire and Rescue": {
+          "fy_minus_2": {
+            "full_time": 153.5,
+            "part_time": 8
+          },
+          "fy_minus_1": {
+            "full_time": 161.5,
+            "part_time": 8
+          },
+          "fy_current": {
+            "full_time": 169.5,
+            "part_time": 10
+          }
+        },
+        "Public Safety Communications": {
+          "fy_minus_2": {
+            "full_time": 17.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 19.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 20.0,
+            "part_time": 0
+          }
+        },
+        "General Engineering": {
+          "fy_minus_2": {
+            "full_time": 5.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 6.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 6.0,
+            "part_time": 0
+          }
+        },
+        "Refuse Collection": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 21
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 23
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 20
+          }
+        },
+        "Litter Control": {
+          "fy_minus_2": {
+            "full_time": 0.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 0.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 0.0,
+            "part_time": 1
+          }
+        },
+        "Maintenance": {
+          "fy_minus_2": {
+            "full_time": 10.0,
+            "part_time": 3
+          },
+          "fy_minus_1": {
+            "full_time": 10.0,
+            "part_time": 3
+          },
+          "fy_current": {
+            "full_time": 11.0,
+            "part_time": 3
+          }
+        },
+        "Animal Shelter": {
+          "fy_minus_2": {
+            "full_time": 8.0,
+            "part_time": 4
+          },
+          "fy_minus_1": {
+            "full_time": 8.0,
+            "part_time": 8
+          },
+          "fy_current": {
+            "full_time": 8.0,
+            "part_time": 4
+          }
+        },
+        "Social Services": {
+          "fy_minus_2": {
+            "full_time": 83.0,
+            "part_time": 2
+          },
+          "fy_minus_1": {
+            "full_time": 85.0,
+            "part_time": 2
+          },
+          "fy_current": {
+            "full_time": 87.0,
+            "part_time": 2
+          }
+        },
+        "Parks and Recreation": {
+          "fy_minus_2": {
+            "full_time": 42.0,
+            "part_time": 238
+          },
+          "fy_minus_1": {
+            "full_time": 43.0,
+            "part_time": 335
+          },
+          "fy_current": {
+            "full_time": 43.0,
+            "part_time": 354
+          }
+        },
+        "Planning and Development": {
+          "fy_minus_2": {
+            "full_time": 11.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 12.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 12.0,
+            "part_time": 0
+          }
+        },
+        "Extension": {
+          "fy_minus_2": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 2.0,
+            "part_time": 0
+          }
+        },
+        "Total Positions General Fund": {
+          "fy_minus_2": {
+            "full_time": 620.0,
+            "part_time": 302
+          },
+          "fy_minus_1": {
+            "full_time": 637.0,
+            "part_time": 402
+          },
+          "fy_current": {
+            "full_time": 657.0,
+            "part_time": 410
+          }
+        },
+        "Regional Jail Fund": {
+          "fy_minus_2": {
+            "full_time": 213.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 213.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 213.0,
+            "part_time": 4
+          }
+        },
+        "Landfill Fund": {
+          "fy_minus_2": {
+            "full_time": 28.0,
+            "part_time": 4
+          },
+          "fy_minus_1": {
+            "full_time": 28.0,
+            "part_time": 5
+          },
+          "fy_current": {
+            "full_time": 28.0,
+            "part_time": 6
+          }
+        },
+        "Old Dominion ASAP Fund": {
+          "fy_minus_2": {
+            "full_time": 5.0,
+            "part_time": 6
+          },
+          "fy_minus_1": {
+            "full_time": 5.0,
+            "part_time": 5
+          },
+          "fy_current": {
+            "full_time": 6.0,
+            "part_time": 5
+          }
+        },
+        "Shawneeland Sanitary District Fund": {
+          "fy_minus_2": {
+            "full_time": 7.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 7.0,
+            "part_time": 5
+          },
+          "fy_current": {
+            "full_time": 7.0,
+            "part_time": 8
+          }
+        },
+        "Regional Airport Fund": {
+          "fy_minus_2": {
+            "full_time": 11.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 12.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 12.0,
+            "part_time": 0
+          }
+        },
+        "CSA Fund": {
+          "fy_minus_2": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 0
+          }
+        },
+        "EMS Revenue Recovery Fund": {
+          "fy_minus_2": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 2.0,
+            "part_time": 0
+          }
+        },
+        "EDA Fund": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 2
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 2
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 1
+          }
+        },
+        "School Funds": {
+          "fy_minus_2": {
+            "full_time": 2386.7,
+            "part_time": 650
+          },
+          "fy_minus_1": {
+            "full_time": 2452.6,
+            "part_time": 650
+          },
+          "fy_current": {
+            "full_time": 2472.6,
+            "part_time": 650
+          }
+        },
+        "Total Positions All Funds": {
+          "fy_minus_2": {
+            "full_time": 3277.7,
+            "part_time": 967
+          },
+          "fy_minus_1": {
+            "full_time": 3362.6,
+            "part_time": 1070
+          },
+          "fy_current": {
+            "full_time": 3403.6,
+            "part_time": 1084
+          }
+        }
+      },
+      "expenditures_by_department": {
+        "Board of Supervisors": {
+          "personnel": 235406,
+          "operating": 161300,
+          "capital": 0,
+          "total": 396706
+        },
+        "County Administrator": {
+          "personnel": 1069472,
+          "operating": 42750,
+          "capital": 0,
+          "total": 1112222
+        },
+        "County Attorney": {
+          "personnel": 479006,
+          "operating": 54750,
+          "capital": 0,
+          "total": 533756
+        },
+        "Human Resources": {
+          "personnel": 697141,
+          "operating": 378412,
+          "capital": 4800,
+          "total": 1080353
+        },
+        "Independent Auditor": {
+          "personnel": 0,
+          "operating": 68200,
+          "capital": 0,
+          "total": 68200
+        },
+        "Commissioner of the Revenue": {
+          "personnel": 1922133,
+          "operating": 72450,
+          "capital": 0,
+          "total": 1994583
+        },
+        "Reassessment": {
+          "personnel": 318716,
+          "operating": 100650,
+          "capital": 0,
+          "total": 419366
+        },
+        "Treasurer": {
+          "personnel": 1524526,
+          "operating": 649835,
+          "capital": 0,
+          "total": 2174361
+        },
+        "Finance": {
+          "personnel": 1230381,
+          "operating": 32555,
+          "capital": 0,
+          "total": 1262936
+        },
+        "Information Technology": {
+          "personnel": 1346077,
+          "operating": 2120478,
+          "capital": 132,
+          "total": 3466687
+        },
+        "Management Information Systems": {
+          "personnel": 622880,
+          "operating": 159322,
+          "capital": 38000,
+          "total": 820202
+        },
+        "Other": {
+          "personnel": 0,
+          "operating": 4578346,
+          "capital": 2400,
+          "total": 4580746
+        },
+        "Electoral Board": {
+          "personnel": 98292,
+          "operating": 138953,
+          "capital": 4900,
+          "total": 242145
+        },
+        "Registrar": {
+          "personnel": 313200,
+          "operating": 29761,
+          "capital": 3620,
+          "total": 346581
+        },
+        "Circuit Court": {
+          "personnel": 0,
+          "operating": 123500,
+          "capital": 0,
+          "total": 123500
+        },
+        "General District Court": {
+          "personnel": 10341,
+          "operating": 10905,
+          "capital": 4000,
+          "total": 25246
+        },
+        "J & D Relations Court": {
+          "personnel": 7395,
+          "operating": 14188,
+          "capital": 9500,
+          "total": 31083
+        },
+        "Clerk of Circuit Court": {
+          "personnel": 982487,
+          "operating": 76622,
+          "capital": 8485,
+          "total": 1067594
+        },
+        "Law Library": {
+          "personnel": 0,
+          "operating": 12000,
+          "capital": 0,
+          "total": 12000
+        },
+        "Commonwealth Attorney": {
+          "personnel": 2040746,
+          "operating": 112925,
+          "capital": 7000,
+          "total": 2160671
+        },
+        "Victim Witness Program": {
+          "personnel": 239206,
+          "operating": 12250,
+          "capital": 0,
+          "total": 251456
+        },
+        "Sheriff": {
+          "personnel": 17665300,
+          "operating": 2840233,
+          "capital": 13568,
+          "total": 20519101
+        },
+        "Volunteer Fire Departments": {
+          "personnel": 75150,
+          "operating": 1386523,
+          "capital": 0,
+          "total": 1461673
+        },
+        "Ambulance and Rescue Service": {
+          "personnel": 0,
+          "operating": 422050,
+          "capital": 0,
+          "total": 422050
+        },
+        "Public Safety Contributions": {
+          "personnel": 0,
+          "operating": 7573179,
+          "capital": 0,
+          "total": 7573179
+        },
+        "Inspections": {
+          "personnel": 1534095,
+          "operating": 82599,
+          "capital": 3000,
+          "total": 1619694
+        },
+        "Fire and Rescue": {
+          "personnel": 19729255,
+          "operating": 2507687,
+          "capital": 5220,
+          "total": 22242162
+        },
+        "Public Safety Communications": {
+          "personnel": 1863828,
+          "operating": 730094,
+          "capital": 18159,
+          "total": 2612081
+        },
+        "Road Administration": {
+          "personnel": 0,
+          "operating": 20000,
+          "capital": 0,
+          "total": 20000
+        },
+        "Street Lights": {
+          "personnel": 0,
+          "operating": 31572,
+          "capital": 0,
+          "total": 31572
+        },
+        "General Engineering": {
+          "personnel": 603836,
+          "operating": 49790,
+          "capital": 1000,
+          "total": 654626
+        },
+        "Refuse Collection": {
+          "personnel": 809371,
+          "operating": 1056532,
+          "capital": 20221,
+          "total": 1886124
+        },
+        "Refuse Disposal": {
+          "personnel": 0,
+          "operating": 789852,
+          "capital": 0,
+          "total": 789852
+        },
+        "Litter Control": {
+          "personnel": 28849,
+          "operating": 13509,
+          "capital": 0,
+          "total": 42358
+        },
+        "Maintenance Administration": {
+          "personnel": 874268,
+          "operating": 18350,
+          "capital": 0,
+          "total": 892618
+        },
+        "County Office Buildings": {
+          "personnel": 0,
+          "operating": 2064652,
+          "capital": 2840,
+          "total": 2067492
+        },
+        "Animal Shelter": {
+          "personnel": 728123,
+          "operating": 220252,
+          "capital": 0,
+          "total": 948375
+        },
+        "Local Health Department": {
+          "personnel": 0,
+          "operating": 476359,
+          "capital": 0,
+          "total": 476359
+        },
+        "Northwestern Community Services": {
+          "personnel": 0,
+          "operating": 459198,
+          "capital": 0,
+          "total": 459198
+        },
+        "Area Agency on Aging": {
+          "personnel": 0,
+          "operating": 69300,
+          "capital": 0,
+          "total": 69300
+        },
+        "Property Tax Relief": {
+          "personnel": 0,
+          "operating": 975000,
+          "capital": 0,
+          "total": 975000
+        },
+        "Public Assistance": {
+          "personnel": 0,
+          "operating": 1946047,
+          "capital": 0,
+          "total": 1946047
+        },
+        "Community College": {
+          "personnel": 0,
+          "operating": 92927,
+          "capital": 0,
+          "total": 92927
+        },
+        "Parks Administration": {
+          "personnel": 941448,
+          "operating": 330280,
+          "capital": 5001,
+          "total": 1276729
+        },
+        "Recreation Centers": {
+          "personnel": 3711821,
+          "operating": 986698,
+          "capital": 0,
+          "total": 4698519
+        },
+        "Clearbrook Park": {
+          "personnel": 721676,
+          "operating": 430511,
+          "capital": 55061,
+          "total": 1207248
+        },
+        "Sherando Park": {
+          "personnel": 776251,
+          "operating": 526738,
+          "capital": 38088,
+          "total": 1341077
+        },
+        "Regional Library": {
+          "personnel": 0,
+          "operating": 1466000,
+          "capital": 0,
+          "total": 1466000
+        },
+        "Planning and Development": {
+          "personnel": 1308836,
+          "operating": 143695,
+          "capital": 0,
+          "total": 1452531
+        },
+        "EDA Transfer": {
+          "personnel": 0,
+          "operating": 735368,
+          "capital": 0,
+          "total": 735368
+        },
+        "Zoning Board": {
+          "personnel": 4521,
+          "operating": 5800,
+          "capital": 0,
+          "total": 10321
+        },
+        "Building Appeals Board": {
+          "personnel": 161,
+          "operating": 400,
+          "capital": 0,
+          "total": 561
+        },
+        "NSV Regional Commission": {
+          "personnel": 0,
+          "operating": 91250,
+          "capital": 0,
+          "total": 91250
+        },
+        "Soil and Water Conservation District": {
+          "personnel": 0,
+          "operating": 14000,
+          "capital": 0,
+          "total": 14000
+        },
+        "Extension": {
+          "personnel": 181201,
+          "operating": 145341,
+          "capital": 2300,
+          "total": 328842
+        },
+        "Transfers/Miscellaneous": {
+          "personnel": 0,
+          "operating": 128011242,
+          "capital": 0,
+          "total": 128011242
+        },
+        "General Fund Total": {
+          "personnel": 72787718,
+          "operating": 166245680,
+          "capital": 511215,
+          "total": 239544613
+        },
+        "Landfill Fund": {
+          "personnel": 2715309,
+          "operating": 4461130,
+          "capital": 3075000,
+          "total": 10251439
+        },
+        "Old Dominion ASAP Fund": {
+          "personnel": 572912,
+          "operating": 36147,
+          "capital": 2500,
+          "total": 611559
+        },
+        "Shawneeland Sanitary District Fund": {
+          "personnel": 594519,
+          "operating": 328185,
+          "capital": 2400,
+          "total": 925104
+        },
+        "Winchester Regional Airport Fund": {
+          "personnel": 1074251,
+          "operating": 1810320,
+          "capital": 90240,
+          "total": 2974811
+        },
+        "Lake Holiday Sanitary District Fund": {
+          "personnel": 0,
+          "operating": 73500,
+          "capital": 708263,
+          "total": 781763
+        },
+        "EMS Revenue Recovery Fund": {
+          "personnel": 184224,
+          "operating": 2163673,
+          "capital": 158748,
+          "total": 2506645
+        },
+        "Economic Development Authority Fund": {
+          "personnel": 539704,
+          "operating": 190264,
+          "capital": 31450,
+          "total": 761418
+        },
+        "County Transportation Projects Fund": {
+          "personnel": 0,
+          "operating": 6041046,
+          "capital": 0,
+          "total": 6041046
+        },
+        "County Capital Fund": {
+          "personnel": 0,
+          "operating": 6702220,
+          "capital": 0,
+          "total": 6702220
+        },
+        "School Instruction": {
+          "personnel": 150064699,
+          "operating": 15027599,
+          "capital": 118000,
+          "total": 165210298
+        },
+        "Admin./Attendance and Health Services": {
+          "personnel": 8371187,
+          "operating": 1141170,
+          "capital": 5000,
+          "total": 9517357
+        },
+        "Pupil Transportation Services": {
+          "personnel": 9172377,
+          "operating": 3728532,
+          "capital": 690000,
+          "total": 13590909
+        },
+        "Operation and Maintenance Services": {
+          "personnel": 9155251,
+          "operating": 9113681,
+          "capital": 1242731,
+          "total": 19511663
+        },
+        "Facilities": {
+          "personnel": 314268,
+          "operating": 1465781,
+          "capital": 7700000,
+          "total": 9480049
+        },
+        "Technology": {
+          "personnel": 5869475,
+          "operating": 4246745,
+          "capital": 1104000,
+          "total": 11220220
+        },
+        "Transfers": {
+          "personnel": 0,
+          "operating": 1044264,
+          "capital": 0,
+          "total": 1044264
+        },
+        "School Operating Fund Total": {
+          "personnel": 182947257,
+          "operating": 35776972,
+          "capital": 10859731,
+          "total": 229583960
+        },
+        "School Debt Service Fund": {
+          "personnel": 0,
+          "operating": 18927199,
+          "capital": 0,
+          "total": 18927199
+        },
+        "School Nutrition Services Fund": {
+          "personnel": 4045398,
+          "operating": 3730321,
+          "capital": 3820628,
+          "total": 11596347
+        },
+        "School Textbook Fund": {
+          "personnel": 31365,
+          "operating": 3358028,
+          "capital": 0,
+          "total": 3389393
+        },
+        "School Private Purpose Funds": {
+          "personnel": 79609,
+          "operating": 345391,
+          "capital": 250000,
+          "total": 675000
+        },
+        "NREP Operating Fund": {
+          "personnel": 6144998,
+          "operating": 726585,
+          "capital": 336000,
+          "total": 7207583
+        },
+        "NREP Textbook Fund": {
+          "personnel": 0,
+          "operating": 20000,
+          "capital": 0,
+          "total": 20000
+        },
+        "Consolidated Services Fund": {
+          "personnel": 1279903,
+          "operating": 3220097,
+          "capital": 0,
+          "total": 4500000
+        },
+        "School Capital Projects Fund": {
+          "personnel": 0,
+          "operating": 1000000,
+          "capital": 0,
+          "total": 1000000
+        }
+      },
+      "general_fund_summary": {
+        "Administration": {
+          "prior_budgeted": 14628749,
+          "prior_actual": 14022227,
+          "current_budgeted": 16330550,
+          "adopted": 18498844,
+          "pct_of_total": 7.72
+        },
+        "Total Expenditures": {
+          "prior_budgeted": 209706798,
+          "prior_actual": 202591614,
+          "current_budgeted": 232532809,
+          "adopted": 239544613,
+          "pct_of_total": 100.0
+        }
+      },
+      "personnel_page": 47,
+      "expenditure_pages": [
+        44,
+        45,
+        46
+      ],
+      "general_fund_page": 43
+    },
+    "FY2025": {
+      "fiscal_year": "FY2025",
+      "source_file": "FY2025_acfr.pdf",
+      "extracted_date": "2026-01-29T08:00:15.473937",
+      "personnel_by_department": {
+        "Board of Supervisors": {
+          "fy_minus_2": {
+            "full_time": 1.0,
+            "part_time": 8
+          },
+          "fy_minus_1": {
+            "full_time": 2.0,
+            "part_time": 7
+          },
+          "fy_current": {
+            "full_time": 2.0,
+            "part_time": 7
+          }
+        },
+        "County Administrator": {
+          "fy_minus_2": {
+            "full_time": 7.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 7.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 5.0,
+            "part_time": 0
+          }
+        },
+        "County Attorney": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 0
+          }
+        },
+        "Human Resources": {
+          "fy_minus_2": {
+            "full_time": 6.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 6.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 6.0,
+            "part_time": 1
+          }
+        },
+        "COR/Reassessment": {
+          "fy_minus_2": {
+            "full_time": 25.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 25.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 25.0,
+            "part_time": 0
+          }
+        },
+        "Treasurer": {
+          "fy_minus_2": {
+            "full_time": 13.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 13.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 13.0,
+            "part_time": 0
+          }
+        },
+        "Finance": {
+          "fy_minus_2": {
+            "full_time": 9.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 9.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 9.0,
+            "part_time": 0
+          }
+        },
+        "IT/MIS": {
+          "fy_minus_2": {
+            "full_time": 16.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 16.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 16.0,
+            "part_time": 0
+          }
+        },
+        "Electoral Board/Registrar": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 6
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 4
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 4
+          }
+        },
+        "Gen. District/J & D Courts": {
+          "fy_minus_2": {
+            "full_time": 0.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 0.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 0.0,
+            "part_time": 1
+          }
+        },
+        "Clerk of the Circuit Court": {
+          "fy_minus_2": {
+            "full_time": 10.0,
+            "part_time": 2
+          },
+          "fy_minus_1": {
+            "full_time": 10.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 10.0,
+            "part_time": 1
+          }
+        },
+        "Commonwealth Attorney": {
+          "fy_minus_2": {
+            "full_time": 16.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 17.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 17.0,
+            "part_time": 0
+          }
+        },
+        "Victim Witness": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 0
+          }
+        },
+        "Sheriff": {
+          "fy_minus_2": {
+            "full_time": 157.5,
+            "part_time": 10
+          },
+          "fy_minus_1": {
+            "full_time": 164.5,
+            "part_time": 8
+          },
+          "fy_current": {
+            "full_time": 168.5,
+            "part_time": 7
+          }
+        },
+        "Juvenile Court Probation": {
+          "fy_minus_2": {
+            "full_time": 1.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 0.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 0.0,
+            "part_time": 0
+          }
+        },
+        "Inspections": {
+          "fy_minus_2": {
+            "full_time": 17.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 17.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 17.0,
+            "part_time": 0
+          }
+        },
+        "Fire and Rescue": {
+          "fy_minus_2": {
+            "full_time": 161.5,
+            "part_time": 8
+          },
+          "fy_minus_1": {
+            "full_time": 169.5,
+            "part_time": 10
+          },
+          "fy_current": {
+            "full_time": 185.5,
+            "part_time": 10
+          }
+        },
+        "Public Safety Communications": {
+          "fy_minus_2": {
+            "full_time": 19.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 20.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 20.0,
+            "part_time": 1
+          }
+        },
+        "General Engineering": {
+          "fy_minus_2": {
+            "full_time": 6.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 6.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 6.0,
+            "part_time": 0
+          }
+        },
+        "Refuse Collection": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 23
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 20
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 22
+          }
+        },
+        "Litter Control": {
+          "fy_minus_2": {
+            "full_time": 0.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 0.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 0.0,
+            "part_time": 1
+          }
+        },
+        "Maintenance": {
+          "fy_minus_2": {
+            "full_time": 10.0,
+            "part_time": 3
+          },
+          "fy_minus_1": {
+            "full_time": 11.0,
+            "part_time": 3
+          },
+          "fy_current": {
+            "full_time": 11.0,
+            "part_time": 1
+          }
+        },
+        "Animal Shelter": {
+          "fy_minus_2": {
+            "full_time": 8.0,
+            "part_time": 8
+          },
+          "fy_minus_1": {
+            "full_time": 8.0,
+            "part_time": 4
+          },
+          "fy_current": {
+            "full_time": 8.0,
+            "part_time": 7
+          }
+        },
+        "Social Services": {
+          "fy_minus_2": {
+            "full_time": 85.0,
+            "part_time": 2
+          },
+          "fy_minus_1": {
+            "full_time": 87.0,
+            "part_time": 2
+          },
+          "fy_current": {
+            "full_time": 90.0,
+            "part_time": 2
+          }
+        },
+        "Parks and Recreation": {
+          "fy_minus_2": {
+            "full_time": 43.0,
+            "part_time": 335
+          },
+          "fy_minus_1": {
+            "full_time": 43.0,
+            "part_time": 354
+          },
+          "fy_current": {
+            "full_time": 43.0,
+            "part_time": 469
+          }
+        },
+        "Planning and Development": {
+          "fy_minus_2": {
+            "full_time": 12.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 12.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 12.0,
+            "part_time": 0
+          }
+        },
+        "Extension": {
+          "fy_minus_2": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 2.0,
+            "part_time": 0
+          }
+        },
+        "Total Positions General Fund": {
+          "fy_minus_2": {
+            "full_time": 637.0,
+            "part_time": 409
+          },
+          "fy_minus_1": {
+            "full_time": 657.0,
+            "part_time": 417
+          },
+          "fy_current": {
+            "full_time": 678.0,
+            "part_time": 534
+          }
+        },
+        "Regional Jail Fund": {
+          "fy_minus_2": {
+            "full_time": 213.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 214.0,
+            "part_time": 4
+          },
+          "fy_current": {
+            "full_time": 215.0,
+            "part_time": 3
+          }
+        },
+        "Landfill Fund": {
+          "fy_minus_2": {
+            "full_time": 28.0,
+            "part_time": 5
+          },
+          "fy_minus_1": {
+            "full_time": 28.0,
+            "part_time": 6
+          },
+          "fy_current": {
+            "full_time": 28.0,
+            "part_time": 5
+          }
+        },
+        "Old Dominion ASAP Fund": {
+          "fy_minus_2": {
+            "full_time": 5.0,
+            "part_time": 5
+          },
+          "fy_minus_1": {
+            "full_time": 6.0,
+            "part_time": 5
+          },
+          "fy_current": {
+            "full_time": 6.0,
+            "part_time": 4
+          }
+        },
+        "Shawneeland Sanitary District Fund": {
+          "fy_minus_2": {
+            "full_time": 7.0,
+            "part_time": 5
+          },
+          "fy_minus_1": {
+            "full_time": 7.0,
+            "part_time": 8
+          },
+          "fy_current": {
+            "full_time": 7.0,
+            "part_time": 8
+          }
+        },
+        "Regional Airport Fund": {
+          "fy_minus_2": {
+            "full_time": 12.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 12.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 11.0,
+            "part_time": 1
+          }
+        },
+        "CSA Fund": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 0
+          }
+        },
+        "EMS Revenue Recovery Fund": {
+          "fy_minus_2": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 2.0,
+            "part_time": 0
+          }
+        },
+        "EDA Fund": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 2
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 2
+          }
+        },
+        "School Funds": {
+          "fy_minus_2": {
+            "full_time": 2452.6,
+            "part_time": 650
+          },
+          "fy_minus_1": {
+            "full_time": 2472.6,
+            "part_time": 650
+          },
+          "fy_current": {
+            "full_time": 2535.1,
+            "part_time": 650
+          }
+        },
+        "Total Positions All Funds": {
+          "fy_minus_2": {
+            "full_time": 3362.6,
+            "part_time": 1077
+          },
+          "fy_minus_1": {
+            "full_time": 3404.6,
+            "part_time": 1091
+          },
+          "fy_current": {
+            "full_time": 3488.1,
+            "part_time": 1207
+          }
+        }
+      },
+      "expenditures_by_department": {
+        "Board of Supervisors": {
+          "personnel": 246523,
+          "operating": 169784,
+          "capital": 0,
+          "total": 416307
+        },
+        "County Administrator": {
+          "personnel": 932381,
+          "operating": 36750,
+          "capital": 7000,
+          "total": 976131
+        },
+        "County Attorney": {
+          "personnel": 506688,
+          "operating": 56100,
+          "capital": 900,
+          "total": 563688
+        },
+        "Human Resources": {
+          "personnel": 753183,
+          "operating": 267836,
+          "capital": 118525,
+          "total": 1139544
+        },
+        "Independent Auditor": {
+          "personnel": 0,
+          "operating": 78000,
+          "capital": 0,
+          "total": 78000
+        },
+        "Commissioner of the Revenue": {
+          "personnel": 1965851,
+          "operating": 119200,
+          "capital": 6100,
+          "total": 2091151
+        },
+        "Reassessment": {
+          "personnel": 360380,
+          "operating": 134500,
+          "capital": 25400,
+          "total": 520280
+        },
+        "Treasurer": {
+          "personnel": 1590400,
+          "operating": 674135,
+          "capital": 1150,
+          "total": 2265685
+        },
+        "Finance": {
+          "personnel": 1303552,
+          "operating": 32507,
+          "capital": 1500,
+          "total": 1337559
+        },
+        "Information Technology": {
+          "personnel": 1352126,
+          "operating": 472150,
+          "capital": 1024445,
+          "total": 2848721
+        },
+        "Management Information Systems": {
+          "personnel": 636755,
+          "operating": 100420,
+          "capital": 106977,
+          "total": 844152
+        },
+        "Other": {
+          "personnel": 0,
+          "operating": 4648610,
+          "capital": 2000,
+          "total": 4650610
+        },
+        "Electoral Board": {
+          "personnel": 117188,
+          "operating": 180890,
+          "capital": 16447,
+          "total": 314525
+        },
+        "Registrar": {
+          "personnel": 339901,
+          "operating": 38914,
+          "capital": 4908,
+          "total": 383723
+        },
+        "Circuit Court": {
+          "personnel": 0,
+          "operating": 138500,
+          "capital": 0,
+          "total": 138500
+        },
+        "General District Court": {
+          "personnel": 10341,
+          "operating": 10705,
+          "capital": 3500,
+          "total": 24546
+        },
+        "J & D Relations Court": {
+          "personnel": 7395,
+          "operating": 16842,
+          "capital": 10500,
+          "total": 34737
+        },
+        "Clerk of Circuit Court": {
+          "personnel": 1012551,
+          "operating": 196058,
+          "capital": 7295,
+          "total": 1215904
+        },
+        "Law Library": {
+          "personnel": 0,
+          "operating": 12200,
+          "capital": 0,
+          "total": 12200
+        },
+        "Commonwealth Attorney": {
+          "personnel": 2118721,
+          "operating": 113675,
+          "capital": 7000,
+          "total": 2239396
+        },
+        "Victim Witness Program": {
+          "personnel": 248912,
+          "operating": 12250,
+          "capital": 0,
+          "total": 261162
+        },
+        "Sheriff": {
+          "personnel": 18976552,
+          "operating": 2784286,
+          "capital": 885085,
+          "total": 22645923
+        },
+        "Volunteer Fire Departments": {
+          "personnel": 81350,
+          "operating": 1485469,
+          "capital": 0,
+          "total": 1566819
+        },
+        "Ambulance and Rescue Service": {
+          "personnel": 0,
+          "operating": 427250,
+          "capital": 0,
+          "total": 427250
+        },
+        "Public Safety Contributions": {
+          "personnel": 0,
+          "operating": 7575957,
+          "capital": 0,
+          "total": 7575957
+        },
+        "Juvenile Court Probation": {
+          "personnel": 0,
+          "operating": 158998,
+          "capital": 0,
+          "total": 158998
+        },
+        "Inspections": {
+          "personnel": 1586994,
+          "operating": 90768,
+          "capital": 3000,
+          "total": 1680762
+        },
+        "Fire and Rescue": {
+          "personnel": 21751484,
+          "operating": 2206386,
+          "capital": 251303,
+          "total": 24209173
+        },
+        "Public Safety Communications": {
+          "personnel": 1964301,
+          "operating": 657056,
+          "capital": 123696,
+          "total": 2745053
+        },
+        "Road Administration": {
+          "personnel": 0,
+          "operating": 23000,
+          "capital": 0,
+          "total": 23000
+        },
+        "Street Lights": {
+          "personnel": 0,
+          "operating": 32250,
+          "capital": 0,
+          "total": 32250
+        },
+        "General Engineering": {
+          "personnel": 627253,
+          "operating": 41350,
+          "capital": 9632,
+          "total": 678235
+        },
+        "Refuse Collection": {
+          "personnel": 817122,
+          "operating": 985649,
+          "capital": 20941,
+          "total": 1823712
+        },
+        "Refuse Disposal": {
+          "personnel": 0,
+          "operating": 750540,
+          "capital": 0,
+          "total": 750540
+        },
+        "Litter Control": {
+          "personnel": 28672,
+          "operating": 12586,
+          "capital": 0,
+          "total": 41258
+        },
+        "Maintenance Administration": {
+          "personnel": 903351,
+          "operating": 18900,
+          "capital": 300,
+          "total": 922551
+        },
+        "County Office Buildings": {
+          "personnel": 0,
+          "operating": 1879525,
+          "capital": 2840,
+          "total": 1882365
+        },
+        "Animal Shelter": {
+          "personnel": 737238,
+          "operating": 223744,
+          "capital": 1200,
+          "total": 962182
+        },
+        "Local Health Department": {
+          "personnel": 0,
+          "operating": 500177,
+          "capital": 0,
+          "total": 500177
+        },
+        "Northwestern Community Services": {
+          "personnel": 0,
+          "operating": 482157,
+          "capital": 0,
+          "total": 482157
+        },
+        "Area Agency on Aging": {
+          "personnel": 0,
+          "operating": 69300,
+          "capital": 0,
+          "total": 69300
+        },
+        "Property Tax Relief": {
+          "personnel": 0,
+          "operating": 1011043,
+          "capital": 0,
+          "total": 1011043
+        },
+        "Public Assistance": {
+          "personnel": 0,
+          "operating": 1875567,
+          "capital": 0,
+          "total": 1875567
+        },
+        "Community College": {
+          "personnel": 0,
+          "operating": 68750,
+          "capital": 0,
+          "total": 68750
+        },
+        "Parks Administration": {
+          "personnel": 968294,
+          "operating": 325685,
+          "capital": 56546,
+          "total": 1350525
+        },
+        "Recreation Centers": {
+          "personnel": 3371603,
+          "operating": 1019924,
+          "capital": 0,
+          "total": 4391527
+        },
+        "Clearbrook Park": {
+          "personnel": 745458,
+          "operating": 580733,
+          "capital": 61738,
+          "total": 1387929
+        },
+        "Sherando Park": {
+          "personnel": 802852,
+          "operating": 667870,
+          "capital": 42750,
+          "total": 1513472
+        },
+        "Regional Library": {
+          "personnel": 0,
+          "operating": 1550306,
+          "capital": 0,
+          "total": 1550306
+        },
+        "Planning and Development": {
+          "personnel": 1386188,
+          "operating": 225195,
+          "capital": 5520,
+          "total": 1616903
+        },
+        "EDA Transfer": {
+          "personnel": 0,
+          "operating": 726152,
+          "capital": 0,
+          "total": 726152
+        },
+        "Zoning Board": {
+          "personnel": 4521,
+          "operating": 5800,
+          "capital": 0,
+          "total": 10321
+        },
+        "Building Appeals Board": {
+          "personnel": 161,
+          "operating": 400,
+          "capital": 0,
+          "total": 561
+        },
+        "NSV Regional Commission": {
+          "personnel": 0,
+          "operating": 95521,
+          "capital": 0,
+          "total": 95521
+        },
+        "Soil and Water Conservation District": {
+          "personnel": 0,
+          "operating": 13283,
+          "capital": 0,
+          "total": 13283
+        },
+        "Extension": {
+          "personnel": 188935,
+          "operating": 150958,
+          "capital": 2500,
+          "total": 342393
+        },
+        "Transfers/Miscellaneous": {
+          "personnel": 0,
+          "operating": 139189289,
+          "capital": 0,
+          "total": 139189289
+        },
+        "General Fund Total": {
+          "personnel": 77229420,
+          "operating": 176003450,
+          "capital": 3070598,
+          "total": 256303468
+        },
+        "Landfill Fund": {
+          "personnel": 2728483,
+          "operating": 4420040,
+          "capital": 4695000,
+          "total": 11843523
+        },
+        "Old Dominion ASAP Fund": {
+          "personnel": 590428,
+          "operating": 30690,
+          "capital": 1980,
+          "total": 623098
+        },
+        "Shawneeland Sanitary District Fund": {
+          "personnel": 601430,
+          "operating": 684740,
+          "capital": 143400,
+          "total": 1429570
+        },
+        "Winchester Regional Airport Operating Fund": {
+          "personnel": 1002808,
+          "operating": 1737135,
+          "capital": 171806,
+          "total": 2911749
+        },
+        "Winchester Regional Airport Capital Fund": {
+          "personnel": 0,
+          "operating": 20000,
+          "capital": 25549357,
+          "total": 25569357
+        },
+        "Lake Holiday Sanitary District Fund": {
+          "personnel": 0,
+          "operating": 73560,
+          "capital": 1671018,
+          "total": 1744578
+        },
+        "EMS Revenue Recovery Fund": {
+          "personnel": 169539,
+          "operating": 2172375,
+          "capital": 282680,
+          "total": 2624594
+        },
+        "Economic Development Authority Fund": {
+          "personnel": 533143,
+          "operating": 190175,
+          "capital": 30124,
+          "total": 753442
+        },
+        "County Transportation Projects Fund": {
+          "personnel": 0,
+          "operating": 3200000,
+          "capital": 0,
+          "total": 3200000
+        },
+        "County Capital Fund": {
+          "personnel": 0,
+          "operating": 14222056,
+          "capital": 0,
+          "total": 14222056
+        },
+        "School Instruction": {
+          "personnel": 162125093,
+          "operating": 15334976,
+          "capital": 118000,
+          "total": 177578069
+        },
+        "Admin./Attendance and Health Services": {
+          "personnel": 9354554,
+          "operating": 1132314,
+          "capital": 5000,
+          "total": 10491868
+        },
+        "Pupil Transportation Services": {
+          "personnel": 9988796,
+          "operating": 3665671,
+          "capital": 1260000,
+          "total": 14914467
+        },
+        "Operation and Maintenance Services": {
+          "personnel": 9537440,
+          "operating": 9306395,
+          "capital": 1709750,
+          "total": 20553585
+        },
+        "Facilities": {
+          "personnel": 313892,
+          "operating": 1486922,
+          "capital": 0,
+          "total": 1800814
+        },
+        "Technology": {
+          "personnel": 6205606,
+          "operating": 4221110,
+          "capital": 604000,
+          "total": 11030716
+        },
+        "Transfers": {
+          "personnel": 0,
+          "operating": 1944597,
+          "capital": 0,
+          "total": 1944597
+        },
+        "School Operating Fund Total": {
+          "personnel": 197525381,
+          "operating": 37101705,
+          "capital": 3696750,
+          "total": 238323836
+        },
+        "School Debt Service Fund": {
+          "personnel": 0,
+          "operating": 20992393,
+          "capital": 0,
+          "total": 20992393
+        },
+        "School Nutrition Services Fund": {
+          "personnel": 4452984,
+          "operating": 4315682,
+          "capital": 2553091,
+          "total": 11321757
+        },
+        "School Textbook Fund": {
+          "personnel": 33525,
+          "operating": 5076549,
+          "capital": 0,
+          "total": 5110074
+        },
+        "School Private Purpose Funds": {
+          "personnel": 276750,
+          "operating": 272600,
+          "capital": 440650,
+          "total": 990000
+        },
+        "NREP Operating Fund": {
+          "personnel": 6866787,
+          "operating": 711146,
+          "capital": 91300,
+          "total": 7669233
+        },
+        "NREP Textbook Fund": {
+          "personnel": 0,
+          "operating": 20000,
+          "capital": 0,
+          "total": 20000
+        },
+        "Consolidated Services Fund": {
+          "personnel": 1367735,
+          "operating": 4132265,
+          "capital": 0,
+          "total": 5500000
+        },
+        "School Capital Projects Fund": {
+          "personnel": 0,
+          "operating": 4000000,
+          "capital": 0,
+          "total": 4000000
+        }
+      },
+      "general_fund_summary": {
+        "Administration": {
+          "prior_budgeted": 16330550,
+          "prior_actual": 25911418,
+          "current_budgeted": 18498844,
+          "adopted": 18430076,
+          "pct_of_total": 7.19
+        },
+        "Total Expenditures": {
+          "prior_budgeted": 232532809,
+          "prior_actual": 253193601,
+          "current_budgeted": 239544613,
+          "adopted": 256303468,
+          "pct_of_total": 100.0
+        }
+      },
+      "personnel_page": 49,
+      "expenditure_pages": [
+        46,
+        47,
+        48
+      ],
+      "general_fund_page": 45
+    },
+    "FY2026": {
+      "fiscal_year": "FY2026",
+      "source_file": "FY2026_acfr.pdf",
+      "extracted_date": "2026-01-29T08:00:17.488817",
+      "personnel_by_department": {
+        "Board of Supervisors": {
+          "fy_minus_2": {
+            "full_time": 2.0,
+            "part_time": 7
+          },
+          "fy_minus_1": {
+            "full_time": 2.0,
+            "part_time": 7
+          },
+          "fy_current": {
+            "full_time": 2.0,
+            "part_time": 7
+          }
+        },
+        "County Administrator": {
+          "fy_minus_2": {
+            "full_time": 7.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 5.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 6.0,
+            "part_time": 0
+          }
+        },
+        "County Attorney": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 0
+          }
+        },
+        "Human Resources": {
+          "fy_minus_2": {
+            "full_time": 6.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 6.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 6.0,
+            "part_time": 1
+          }
+        },
+        "COR/Reassessment": {
+          "fy_minus_2": {
+            "full_time": 25.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 25.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 26.0,
+            "part_time": 0
+          }
+        },
+        "Treasurer": {
+          "fy_minus_2": {
+            "full_time": 13.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 13.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 13.0,
+            "part_time": 0
+          }
+        },
+        "Finance": {
+          "fy_minus_2": {
+            "full_time": 9.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 9.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 9.0,
+            "part_time": 0
+          }
+        },
+        "IT/MIS": {
+          "fy_minus_2": {
+            "full_time": 16.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 16.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 16.0,
+            "part_time": 0
+          }
+        },
+        "Electoral Board/Registrar": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 4
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 4
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 3
+          }
+        },
+        "Gen. District/J & D Courts": {
+          "fy_minus_2": {
+            "full_time": 0.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 0.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 0.0,
+            "part_time": 0
+          }
+        },
+        "Clerk of the Circuit Court": {
+          "fy_minus_2": {
+            "full_time": 10.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 10.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 11.0,
+            "part_time": 1
+          }
+        },
+        "Commonwealth Attorney": {
+          "fy_minus_2": {
+            "full_time": 17.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 17.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 17.0,
+            "part_time": 0
+          }
+        },
+        "Victim Witness": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 0
+          }
+        },
+        "Sheriff": {
+          "fy_minus_2": {
+            "full_time": 164.5,
+            "part_time": 8
+          },
+          "fy_minus_1": {
+            "full_time": 168.5,
+            "part_time": 7
+          },
+          "fy_current": {
+            "full_time": 171.5,
+            "part_time": 9
+          }
+        },
+        "Inspections": {
+          "fy_minus_2": {
+            "full_time": 17.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 17.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 19.0,
+            "part_time": 0
+          }
+        },
+        "Fire and Rescue": {
+          "fy_minus_2": {
+            "full_time": 169.5,
+            "part_time": 10
+          },
+          "fy_minus_1": {
+            "full_time": 185.5,
+            "part_time": 10
+          },
+          "fy_current": {
+            "full_time": 193.5,
+            "part_time": 10
+          }
+        },
+        "Public Safety Communications": {
+          "fy_minus_2": {
+            "full_time": 20.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 20.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 20.0,
+            "part_time": 0
+          }
+        },
+        "General Engineering": {
+          "fy_minus_2": {
+            "full_time": 6.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 6.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 6.0,
+            "part_time": 0
+          }
+        },
+        "Refuse Collection": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 20
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 22
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 22
+          }
+        },
+        "Litter Control": {
+          "fy_minus_2": {
+            "full_time": 0.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 0.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 0.0,
+            "part_time": 1
+          }
+        },
+        "Maintenance": {
+          "fy_minus_2": {
+            "full_time": 11.0,
+            "part_time": 3
+          },
+          "fy_minus_1": {
+            "full_time": 11.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 12.0,
+            "part_time": 0
+          }
+        },
+        "Animal Shelter": {
+          "fy_minus_2": {
+            "full_time": 8.0,
+            "part_time": 4
+          },
+          "fy_minus_1": {
+            "full_time": 8.0,
+            "part_time": 7
+          },
+          "fy_current": {
+            "full_time": 8.0,
+            "part_time": 8
+          }
+        },
+        "Social Services": {
+          "fy_minus_2": {
+            "full_time": 87.0,
+            "part_time": 2
+          },
+          "fy_minus_1": {
+            "full_time": 90.0,
+            "part_time": 2
+          },
+          "fy_current": {
+            "full_time": 88.0,
+            "part_time": 2
+          }
+        },
+        "Parks and Recreation": {
+          "fy_minus_2": {
+            "full_time": 43.0,
+            "part_time": 354
+          },
+          "fy_minus_1": {
+            "full_time": 43.0,
+            "part_time": 469
+          },
+          "fy_current": {
+            "full_time": 43.0,
+            "part_time": 451
+          }
+        },
+        "Planning and Development": {
+          "fy_minus_2": {
+            "full_time": 12.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 12.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 12.0,
+            "part_time": 0
+          }
+        },
+        "Extension": {
+          "fy_minus_2": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 2.0,
+            "part_time": 0
+          }
+        },
+        "Total Positions General Fund": {
+          "fy_minus_2": {
+            "full_time": 657.0,
+            "part_time": 417
+          },
+          "fy_minus_1": {
+            "full_time": 678.0,
+            "part_time": 534
+          },
+          "fy_current": {
+            "full_time": 693.0,
+            "part_time": 534
+          }
+        },
+        "Regional Jail Fund": {
+          "fy_minus_2": {
+            "full_time": 214.0,
+            "part_time": 4
+          },
+          "fy_minus_1": {
+            "full_time": 215.0,
+            "part_time": 3
+          },
+          "fy_current": {
+            "full_time": 212.0,
+            "part_time": 6
+          }
+        },
+        "Landfill Fund": {
+          "fy_minus_2": {
+            "full_time": 28.0,
+            "part_time": 6
+          },
+          "fy_minus_1": {
+            "full_time": 28.0,
+            "part_time": 5
+          },
+          "fy_current": {
+            "full_time": 28.0,
+            "part_time": 7
+          }
+        },
+        "Old Dominion ASAP Fund": {
+          "fy_minus_2": {
+            "full_time": 6.0,
+            "part_time": 5
+          },
+          "fy_minus_1": {
+            "full_time": 6.0,
+            "part_time": 4
+          },
+          "fy_current": {
+            "full_time": 6.0,
+            "part_time": 3
+          }
+        },
+        "Shawneeland Sanitary District Fund": {
+          "fy_minus_2": {
+            "full_time": 7.0,
+            "part_time": 8
+          },
+          "fy_minus_1": {
+            "full_time": 7.0,
+            "part_time": 8
+          },
+          "fy_current": {
+            "full_time": 7.0,
+            "part_time": 7
+          }
+        },
+        "Regional Airport Fund": {
+          "fy_minus_2": {
+            "full_time": 12.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 11.0,
+            "part_time": 1
+          },
+          "fy_current": {
+            "full_time": 12.0,
+            "part_time": 1
+          }
+        },
+        "CSA Fund": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 0
+          }
+        },
+        "EMS Revenue Recovery Fund": {
+          "fy_minus_2": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_minus_1": {
+            "full_time": 2.0,
+            "part_time": 0
+          },
+          "fy_current": {
+            "full_time": 2.0,
+            "part_time": 0
+          }
+        },
+        "EDA Fund": {
+          "fy_minus_2": {
+            "full_time": 3.0,
+            "part_time": 1
+          },
+          "fy_minus_1": {
+            "full_time": 3.0,
+            "part_time": 2
+          },
+          "fy_current": {
+            "full_time": 3.0,
+            "part_time": 2
+          }
+        },
+        "School Funds": {
+          "fy_minus_2": {
+            "full_time": 2472.6,
+            "part_time": 650
+          },
+          "fy_minus_1": {
+            "full_time": 2535.1,
+            "part_time": 650
+          },
+          "fy_current": {
+            "full_time": 2560.6,
+            "part_time": 650
+          }
+        },
+        "Total Positions All Funds": {
+          "fy_minus_2": {
+            "full_time": 3404.6,
+            "part_time": 1091
+          },
+          "fy_minus_1": {
+            "full_time": 3488.1,
+            "part_time": 1207
+          },
+          "fy_current": {
+            "full_time": 3526.6,
+            "part_time": 1207
+          }
+        }
+      },
+      "expenditures_by_department": {
+        "Board of Supervisors": {
+          "personnel": 250107,
+          "operating": 196150,
+          "capital": 15315,
+          "total": 461572
+        },
+        "County Administrator": {
+          "personnel": 1083466,
+          "operating": 23955,
+          "capital": 2500,
+          "total": 1109921
+        },
+        "County Attorney": {
+          "personnel": 403418,
+          "operating": 55250,
+          "capital": 1750,
+          "total": 460418
+        },
+        "Human Resources": {
+          "personnel": 790027,
+          "operating": 262615,
+          "capital": 116676,
+          "total": 1169318
+        },
+        "Independent Auditor": {
+          "personnel": 0,
+          "operating": 84000,
+          "capital": 0,
+          "total": 84000
+        },
+        "Commissioner of the Revenue": {
+          "personnel": 2027864,
+          "operating": 125376,
+          "capital": 6280,
+          "total": 2159520
+        },
+        "Reassessment": {
+          "personnel": 438630,
+          "operating": 138500,
+          "capital": 26162,
+          "total": 603292
+        },
+        "Treasurer": {
+          "personnel": 1640051,
+          "operating": 640265,
+          "capital": 9675,
+          "total": 2289991
+        },
+        "Finance": {
+          "personnel": 1349633,
+          "operating": 29670,
+          "capital": 1500,
+          "total": 1380803
+        },
+        "Information Technology": {
+          "personnel": 1504183,
+          "operating": 386605,
+          "capital": 1205467,
+          "total": 3096255
+        },
+        "Management Information Systems": {
+          "personnel": 537965,
+          "operating": 110156,
+          "capital": 78584,
+          "total": 726705
+        },
+        "Other": {
+          "personnel": 0,
+          "operating": 5227759,
+          "capital": 1500,
+          "total": 5229259
+        },
+        "Electoral Board": {
+          "personnel": 96116,
+          "operating": 128782,
+          "capital": 36951,
+          "total": 261849
+        },
+        "Registrar": {
+          "personnel": 346706,
+          "operating": 26304,
+          "capital": 4920,
+          "total": 377930
+        },
+        "Circuit Court": {
+          "personnel": 0,
+          "operating": 152938,
+          "capital": 0,
+          "total": 152938
+        },
+        "General District Court": {
+          "personnel": 10339,
+          "operating": 10705,
+          "capital": 3500,
+          "total": 24544
+        },
+        "J & D Relations Court": {
+          "personnel": 7392,
+          "operating": 16843,
+          "capital": 10500,
+          "total": 34735
+        },
+        "Clerk of Circuit Court": {
+          "personnel": 1088057,
+          "operating": 174986,
+          "capital": 7295,
+          "total": 1270338
+        },
+        "Law Library": {
+          "personnel": 0,
+          "operating": 12200,
+          "capital": 0,
+          "total": 12200
+        },
+        "Commonwealth Attorney": {
+          "personnel": 2174189,
+          "operating": 114375,
+          "capital": 10000,
+          "total": 2298564
+        },
+        "Victim Witness Program": {
+          "personnel": 225277,
+          "operating": 11900,
+          "capital": 350,
+          "total": 237527
+        },
+        "Sheriff": {
+          "personnel": 20313069,
+          "operating": 2813180,
+          "capital": 1298538,
+          "total": 24424787
+        },
+        "Volunteer Fire Departments": {
+          "personnel": 90000,
+          "operating": 1555894,
+          "capital": 0,
+          "total": 1645894
+        },
+        "Ambulance and Rescue Service": {
+          "personnel": 0,
+          "operating": 427250,
+          "capital": 0,
+          "total": 427250
+        },
+        "Public Safety Contributions": {
+          "personnel": 0,
+          "operating": 7176801,
+          "capital": 0,
+          "total": 7176801
+        },
+        "Juvenile Court Probation": {
+          "personnel": 0,
+          "operating": 159598,
+          "capital": 0,
+          "total": 159598
+        },
+        "Inspections": {
+          "personnel": 1793355,
+          "operating": 97047,
+          "capital": 3000,
+          "total": 1893402
+        },
+        "Fire and Rescue": {
+          "personnel": 23797189,
+          "operating": 2047613,
+          "capital": 775320,
+          "total": 26620122
+        },
+        "Public Safety Communications": {
+          "personnel": 2044397,
+          "operating": 755818,
+          "capital": 122380,
+          "total": 2922595
+        },
+        "Road Administration": {
+          "personnel": 0,
+          "operating": 23500,
+          "capital": 0,
+          "total": 23500
+        },
+        "Street Lights": {
+          "personnel": 0,
+          "operating": 32350,
+          "capital": 0,
+          "total": 32350
+        },
+        "General Engineering": {
+          "personnel": 619263,
+          "operating": 37616,
+          "capital": 10042,
+          "total": 666921
+        },
+        "Refuse Collection": {
+          "personnel": 858851,
+          "operating": 1012353,
+          "capital": 21780,
+          "total": 1892984
+        },
+        "Refuse Disposal": {
+          "personnel": 0,
+          "operating": 913908,
+          "capital": 0,
+          "total": 913908
+        },
+        "Litter Control": {
+          "personnel": 30164,
+          "operating": 11598,
+          "capital": 0,
+          "total": 41762
+        },
+        "Maintenance Administration": {
+          "personnel": 904835,
+          "operating": 18300,
+          "capital": 300,
+          "total": 923435
+        },
+        "County Office Buildings": {
+          "personnel": 0,
+          "operating": 1881539,
+          "capital": 7240,
+          "total": 1888779
+        },
+        "Animal Shelter": {
+          "personnel": 719597,
+          "operating": 247394,
+          "capital": 1200,
+          "total": 968191
+        },
+        "Local Health Department": {
+          "personnel": 0,
+          "operating": 679091,
+          "capital": 0,
+          "total": 679091
+        },
+        "Northwestern Community Services": {
+          "personnel": 0,
+          "operating": 506265,
+          "capital": 0,
+          "total": 506265
+        },
+        "Area Agency on Aging": {
+          "personnel": 0,
+          "operating": 69300,
+          "capital": 0,
+          "total": 69300
+        },
+        "Property Tax Relief": {
+          "personnel": 0,
+          "operating": 1342699,
+          "capital": 0,
+          "total": 1342699
+        },
+        "Public Assistance": {
+          "personnel": 0,
+          "operating": 1879443,
+          "capital": 0,
+          "total": 1879443
+        },
+        "Community College": {
+          "personnel": 0,
+          "operating": 91983,
+          "capital": 0,
+          "total": 91983
+        },
+        "Parks Administration": {
+          "personnel": 1001059,
+          "operating": 308845,
+          "capital": 1423149,
+          "total": 2733053
+        },
+        "Recreation Centers": {
+          "personnel": 3607925,
+          "operating": 1163613,
+          "capital": 0,
+          "total": 4771538
+        },
+        "Clearbrook Park": {
+          "personnel": 761592,
+          "operating": 647960,
+          "capital": 62210,
+          "total": 1471762
+        },
+        "Sherando Park": {
+          "personnel": 821086,
+          "operating": 728279,
+          "capital": 52750,
+          "total": 1602115
+        },
+        "Regional Library": {
+          "personnel": 0,
+          "operating": 1627323,
+          "capital": 0,
+          "total": 1627323
+        },
+        "Planning and Development": {
+          "personnel": 1445258,
+          "operating": 292671,
+          "capital": 7100,
+          "total": 1745029
+        },
+        "EDA Transfer": {
+          "personnel": 0,
+          "operating": 745601,
+          "capital": 0,
+          "total": 745601
+        },
+        "Zoning Board": {
+          "personnel": 4521,
+          "operating": 7900,
+          "capital": 0,
+          "total": 12421
+        },
+        "Building Appeals Board": {
+          "personnel": 161,
+          "operating": 400,
+          "capital": 0,
+          "total": 561
+        },
+        "NSV Regional Commission": {
+          "personnel": 0,
+          "operating": 98852,
+          "capital": 0,
+          "total": 98852
+        },
+        "Soil and Water Conservation District": {
+          "personnel": 0,
+          "operating": 15000,
+          "capital": 0,
+          "total": 15000
+        },
+        "Extension": {
+          "personnel": 194969,
+          "operating": 177977,
+          "capital": 2700,
+          "total": 375646
+        },
+        "Transfers/Miscellaneous": {
+          "personnel": 0,
+          "operating": 142492863,
+          "capital": 0,
+          "total": 142492863
+        },
+        "General Fund Total": {
+          "personnel": 81705472,
+          "operating": 180517758,
+          "capital": 5588134,
+          "total": 267811364
+        },
+        "Landfill Fund": {
+          "personnel": 2818604,
+          "operating": 4754690,
+          "capital": 6261200,
+          "total": 13834494
+        },
+        "Old Dominion ASAP Fund": {
+          "personnel": 616888,
+          "operating": 31828,
+          "capital": 2544,
+          "total": 651260
+        },
+        "Shawneeland Sanitary District Fund": {
+          "personnel": 611614,
+          "operating": 411539,
+          "capital": 171850,
+          "total": 1195003
+        },
+        "Winchester Regional Airport Operating Fund": {
+          "personnel": 1095143,
+          "operating": 1742455,
+          "capital": 199604,
+          "total": 3037202
+        },
+        "Winchester Regional Airport Capital Fund": {
+          "personnel": 0,
+          "operating": 20000,
+          "capital": 10372700,
+          "total": 10392700
+        },
+        "EMS Revenue Recovery Fund": {
+          "personnel": 174179,
+          "operating": 2340817,
+          "capital": 223366,
+          "total": 2738362
+        },
+        "Economic Development Authority Fund": {
+          "personnel": 548329,
+          "operating": 193275,
+          "capital": 31287,
+          "total": 772891
+        },
+        "County Development Projects Fund": {
+          "personnel": 0,
+          "operating": 7000000,
+          "capital": 0,
+          "total": 7000000
+        },
+        "County Capital Fund": {
+          "personnel": 0,
+          "operating": 14955775,
+          "capital": 0,
+          "total": 14955775
+        },
+        "School Instruction": {
+          "personnel": 172286038,
+          "operating": 18008670,
+          "capital": 118000,
+          "total": 190412708
+        },
+        "Admin./Attendance and Health Services": {
+          "personnel": 10310041,
+          "operating": 1119737,
+          "capital": 5000,
+          "total": 11434778
+        },
+        "Pupil Transportation Services": {
+          "personnel": 11609810,
+          "operating": 2473978,
+          "capital": 1650000,
+          "total": 15733788
+        },
+        "Operation and Maintenance Services": {
+          "personnel": 10326518,
+          "operating": 9828784,
+          "capital": 682731,
+          "total": 20838033
+        },
+        "Facilities": {
+          "personnel": 551749,
+          "operating": 1737650,
+          "capital": 0,
+          "total": 2289399
+        },
+        "Technology": {
+          "personnel": 6041511,
+          "operating": 4771543,
+          "capital": 1306334,
+          "total": 12119388
+        },
+        "Transfers": {
+          "personnel": 0,
+          "operating": 2068395,
+          "capital": 0,
+          "total": 2068395
+        },
+        "School Operating Fund Total": {
+          "personnel": 211125667,
+          "operating": 40018477,
+          "capital": 3762065,
+          "total": 254906209
+        },
+        "School Debt Service Fund": {
+          "personnel": 0,
+          "operating": 20154099,
+          "capital": 0,
+          "total": 20154099
+        },
+        "School Nutrition Services Fund": {
+          "personnel": 4910765,
+          "operating": 5302905,
+          "capital": 2446288,
+          "total": 12659958
+        },
+        "School Textbook Fund": {
+          "personnel": 36496,
+          "operating": 6644614,
+          "capital": 0,
+          "total": 6681110
+        },
+        "School Private Purpose Funds": {
+          "personnel": 269174,
+          "operating": 282600,
+          "capital": 748226,
+          "total": 1300000
+        },
+        "NREP Operating Fund": {
+          "personnel": 6404966,
+          "operating": 714846,
+          "capital": 401000,
+          "total": 7520812
+        },
+        "NREP Textbook Fund": {
+          "personnel": 0,
+          "operating": 20000,
+          "capital": 0,
+          "total": 20000
+        },
+        "Consolidated Services Fund": {
+          "personnel": 0,
+          "operating": 3000000,
+          "capital": 0,
+          "total": 3000000
+        },
+        "School Capital Projects Fund": {
+          "personnel": 0,
+          "operating": 1000000,
+          "capital": 4000000,
+          "total": 5000000
+        }
+      },
+      "general_fund_summary": {
+        "Administration": {
+          "prior_budgeted": 18498844,
+          "prior_actual": 17211557,
+          "current_budgeted": 18430076,
+          "adopted": 19410833,
+          "pct_of_total": 7.25
+        },
+        "Total Expenditures": {
+          "prior_budgeted": 239544613,
+          "prior_actual": 247889000,
+          "current_budgeted": 256303468,
+          "adopted": 267811364,
+          "pct_of_total": 100.0
+        }
+      },
+      "personnel_page": 48,
+      "expenditure_pages": [
+        45,
+        46,
+        47
+      ],
+      "general_fund_page": 44
+    }
+  },
+  "time_series": {
+    "fiscal_years": [
+      "FY2020",
+      "FY2021",
+      "FY2022",
+      "FY2023",
+      "FY2024",
+      "FY2025",
+      "FY2026"
+    ],
+    "personnel": {
+      "Sheriff": {
+        "full_time": [
+          null,
+          null,
+          157.5,
+          157.5,
+          164.5,
+          168.5,
+          171.5
+        ],
+        "part_time": [
+          null,
+          null,
+          14,
+          10,
+          8,
+          7,
+          9
+        ]
+      },
+      "Fire and Rescue": {
+        "full_time": [
+          null,
+          null,
+          153.5,
+          161.5,
+          169.5,
+          185.5,
+          193.5
+        ],
+        "part_time": [
+          null,
+          null,
+          8,
+          9,
+          10,
+          10,
+          10
+        ]
+      },
+      "Social Services": {
+        "full_time": [
+          null,
+          null,
+          83.0,
+          84.0,
+          87.0,
+          90.0,
+          88.0
+        ],
+        "part_time": [
+          null,
+          null,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "Parks and Recreation": {
+        "full_time": [
+          null,
+          null,
+          42.0,
+          43.0,
+          43.0,
+          43.0,
+          43.0
+        ],
+        "part_time": [
+          null,
+          null,
+          238,
+          335,
+          354,
+          469,
+          451
+        ]
+      },
+      "IT/MIS": {
+        "full_time": [
+          null,
+          null,
+          16.0,
+          16.0,
+          16.0,
+          16.0,
+          16.0
+        ],
+        "part_time": [
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "Treasurer": {
+        "full_time": [
+          null,
+          null,
+          13.0,
+          13.0,
+          13.0,
+          13.0,
+          13.0
+        ],
+        "part_time": [
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "Finance": {
+        "full_time": [
+          null,
+          null,
+          9.0,
+          9.0,
+          9.0,
+          9.0,
+          9.0
+        ],
+        "part_time": [
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "Planning and Development": {
+        "full_time": [
+          null,
+          null,
+          11.0,
+          12.0,
+          12.0,
+          12.0,
+          12.0
+        ],
+        "part_time": [
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "Commonwealth Attorney": {
+        "full_time": [
+          null,
+          null,
+          16.0,
+          16.0,
+          17.0,
+          17.0,
+          17.0
+        ],
+        "part_time": [
+          null,
+          null,
+          0,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "Public Safety Communications": {
+        "full_time": [
+          null,
+          null,
+          17.0,
+          18.0,
+          20.0,
+          20.0,
+          20.0
+        ],
+        "part_time": [
+          null,
+          null,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      "Inspections": {
+        "full_time": [
+          null,
+          null,
+          17.0,
+          17.0,
+          17.0,
+          17.0,
+          19.0
+        ],
+        "part_time": [
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "Maintenance": {
+        "full_time": [
+          null,
+          null,
+          10.0,
+          10.0,
+          11.0,
+          11.0,
+          12.0
+        ],
+        "part_time": [
+          null,
+          null,
+          3,
+          3,
+          3,
+          1,
+          0
+        ]
+      },
+      "Animal Shelter": {
+        "full_time": [
+          null,
+          null,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0
+        ],
+        "part_time": [
+          null,
+          null,
+          4,
+          8,
+          4,
+          7,
+          8
+        ]
+      },
+      "Clerk of the Circuit Court": {
+        "full_time": [
+          null,
+          null,
+          9.0,
+          10.0,
+          10.0,
+          10.0,
+          11.0
+        ],
+        "part_time": [
+          null,
+          null,
+          4,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      "County Administrator": {
+        "full_time": [
+          null,
+          null,
+          7.0,
+          7.0,
+          7.0,
+          5.0,
+          6.0
+        ],
+        "part_time": [
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "County Attorney": {
+        "full_time": [
+          null,
+          null,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0
+        ],
+        "part_time": [
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "Human Resources": {
+        "full_time": [
+          null,
+          null,
+          6.0,
+          6.0,
+          6.0,
+          6.0,
+          6.0
+        ],
+        "part_time": [
+          null,
+          null,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "expenditures": {
+      "Sheriff": {
+        "personnel": [
+          13505250,
+          14084591,
+          14976012,
+          15789425,
+          17665300,
+          18976552,
+          20313069,
+          13505250,
+          14084591,
+          14976012,
+          15789425,
+          17665300,
+          18976552,
+          20313069
+        ],
+        "operating": [
+          2029681,
+          2072308,
+          2181237,
+          2651667,
+          2840233,
+          2784286,
+          2813180,
+          2029681,
+          2072308,
+          2181237,
+          2651667,
+          2840233,
+          2784286,
+          2813180
+        ],
+        "capital": [
+          326020,
+          13420,
+          576272,
+          514124,
+          13568,
+          885085,
+          1298538,
+          326020,
+          13420,
+          576272,
+          514124,
+          13568,
+          885085,
+          1298538
+        ],
+        "total": [
+          15860951,
+          16170319,
+          17733521,
+          18955216,
+          20519101,
+          22645923,
+          24424787,
+          15860951,
+          16170319,
+          17733521,
+          18955216,
+          20519101,
+          22645923,
+          24424787
+        ]
+      },
+      "Fire and Rescue": {
+        "personnel": [
+          13540982,
+          14168078,
+          15633826,
+          17016378,
+          19729255,
+          21751484,
+          23797189,
+          13540982,
+          14168078,
+          15633826,
+          17016378,
+          19729255,
+          21751484,
+          23797189
+        ],
+        "operating": [
+          1569345,
+          1477149,
+          1673319,
+          1904578,
+          2507687,
+          2206386,
+          2047613,
+          1569345,
+          1477149,
+          1673319,
+          1904578,
+          2507687,
+          2206386,
+          2047613
+        ],
+        "capital": [
+          106144,
+          11644,
+          12500,
+          12500,
+          5220,
+          251303,
+          775320,
+          106144,
+          11644,
+          12500,
+          12500,
+          5220,
+          251303,
+          775320
+        ],
+        "total": [
+          15216471,
+          15656871,
+          17319645,
+          18933456,
+          22242162,
+          24209173,
+          26620122,
+          15216471,
+          15656871,
+          17319645,
+          18933456,
+          22242162,
+          24209173,
+          26620122
+        ]
+      },
+      "Social Services": {
+        "personnel": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "operating": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "capital": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "total": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "Parks and Recreation": {
+        "personnel": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "operating": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "capital": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "total": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "IT/MIS": {
+        "personnel": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "operating": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "capital": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "total": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "Treasurer": {
+        "personnel": [
+          1214085,
+          1295963,
+          1304933,
+          1376381,
+          1524526,
+          1590400,
+          1640051
+        ],
+        "operating": [
+          426873,
+          453308,
+          481585,
+          601335,
+          649835,
+          674135,
+          640265
+        ],
+        "capital": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1150,
+          9675
+        ],
+        "total": [
+          1640958,
+          1749271,
+          1786518,
+          1977716,
+          2174361,
+          2265685,
+          2289991
+        ]
+      },
+      "Finance": {
+        "personnel": [
+          945351,
+          1054995,
+          1057818,
+          1133597,
+          1230381,
+          1303552,
+          1349633
+        ],
+        "operating": [
+          32040,
+          33813,
+          34155,
+          33055,
+          32555,
+          32507,
+          29670
+        ],
+        "capital": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1500,
+          1500
+        ],
+        "total": [
+          977391,
+          1088808,
+          1091973,
+          1166652,
+          1262936,
+          1337559,
+          1380803
+        ]
+      },
+      "Planning and Development": {
+        "personnel": [
+          1117011,
+          1168189,
+          1175085,
+          1293093,
+          1308836,
+          1386188,
+          1445258
+        ],
+        "operating": [
+          84295,
+          80284,
+          80295,
+          61345,
+          143695,
+          225195,
+          292671
+        ],
+        "capital": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          5520,
+          7100
+        ],
+        "total": [
+          1201306,
+          1248473,
+          1255380,
+          1354438,
+          1452531,
+          1616903,
+          1745029
+        ]
+      },
+      "Commonwealth Attorney": {
+        "personnel": [
+          1669447,
+          1737379,
+          1737597,
+          1804887,
+          2040746,
+          2118721,
+          2174189
+        ],
+        "operating": [
+          76600,
+          93050,
+          101550,
+          101550,
+          112925,
+          113675,
+          114375
+        ],
+        "capital": [
+          5800,
+          7000,
+          7000,
+          7000,
+          7000,
+          7000,
+          10000
+        ],
+        "total": [
+          1751847,
+          1837429,
+          1846147,
+          1913437,
+          2160671,
+          2239396,
+          2298564
+        ]
+      },
+      "Public Safety Communications": {
+        "personnel": [
+          1297183,
+          1264342,
+          1279277,
+          1605107,
+          1863828,
+          1964301,
+          2044397
+        ],
+        "operating": [
+          382926,
+          500315,
+          504216,
+          487031,
+          730094,
+          657056,
+          755818
+        ],
+        "capital": [
+          15665,
+          16160,
+          139646,
+          174455,
+          18159,
+          123696,
+          122380
+        ],
+        "total": [
+          1695774,
+          1780817,
+          1923139,
+          2266593,
+          2612081,
+          2745053,
+          2922595
+        ]
+      },
+      "Inspections": {
+        "personnel": [
+          1296525,
+          1420544,
+          1419642,
+          1455528,
+          1534095,
+          1586994,
+          1793355
+        ],
+        "operating": [
+          77490,
+          73634,
+          77268,
+          80426,
+          82599,
+          90768,
+          97047
+        ],
+        "capital": [
+          2880,
+          2880,
+          2880,
+          2880,
+          3000,
+          3000,
+          3000
+        ],
+        "total": [
+          1376895,
+          1497058,
+          1499790,
+          1538834,
+          1619694,
+          1680762,
+          1893402
+        ]
+      },
+      "Maintenance": {
+        "personnel": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "operating": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "capital": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "total": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "Animal Shelter": {
+        "personnel": [
+          591247,
+          613463,
+          617962,
+          668261,
+          728123,
+          737238,
+          719597
+        ],
+        "operating": [
+          178306,
+          182937,
+          174859,
+          187109,
+          220252,
+          223744,
+          247394
+        ],
+        "capital": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1200,
+          1200
+        ],
+        "total": [
+          769553,
+          796400,
+          792821,
+          855370,
+          948375,
+          962182,
+          968191
+        ]
+      },
+      "Clerk of the Circuit Court": {
+        "personnel": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "operating": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "capital": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "total": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "County Administrator": {
+        "personnel": [
+          886552,
+          794048,
+          961245,
+          990112,
+          1069472,
+          932381,
+          1083466
+        ],
+        "operating": [
+          46988,
+          38950,
+          39650,
+          35550,
+          42750,
+          36750,
+          23955
+        ],
+        "capital": [
+          12000,
+          0,
+          0,
+          0,
+          0,
+          7000,
+          2500
+        ],
+        "total": [
+          945540,
+          832998,
+          1000895,
+          1025662,
+          1112222,
+          976131,
+          1109921
+        ]
+      },
+      "County Attorney": {
+        "personnel": [
+          406039,
+          443710,
+          446443,
+          435499,
+          479006,
+          506688,
+          403418
+        ],
+        "operating": [
+          36800,
+          40025,
+          45025,
+          50250,
+          54750,
+          56100,
+          55250
+        ],
+        "capital": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          900,
+          1750
+        ],
+        "total": [
+          442839,
+          483735,
+          491468,
+          485749,
+          533756,
+          563688,
+          460418
+        ]
+      },
+      "Human Resources": {
+        "personnel": [
+          539817,
+          559068,
+          593003,
+          650455,
+          697141,
+          753183,
+          790027
+        ],
+        "operating": [
+          115851,
+          106866,
+          145891,
+          243708,
+          378412,
+          267836,
+          262615
+        ],
+        "capital": [
+          6000,
+          7000,
+          5400,
+          3600,
+          4800,
+          118525,
+          116676
+        ],
+        "total": [
+          661668,
+          672934,
+          744294,
+          897763,
+          1080353,
+          1139544,
+          1169318
+        ]
+      },
+      "Landfill Fund": {
+        "personnel": [
+          2272338,
+          2319564,
+          2387390,
+          2531965,
+          2715309,
+          2728483,
+          2818604
+        ],
+        "operating": [
+          3235315,
+          3332790,
+          3581270,
+          5652530,
+          4461130,
+          4420040,
+          4754690
+        ],
+        "capital": [
+          4960000,
+          3995000,
+          5295000,
+          4995000,
+          3075000,
+          4695000,
+          6261200
+        ],
+        "total": [
+          10467653,
+          9647354,
+          11263660,
+          13179495,
+          10251439,
+          11843523,
+          13834494
+        ]
+      },
+      "Regional Jail Fund": {
+        "personnel": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "operating": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "capital": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "total": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    },
+    "general_fund": {
+      "Administration": {
+        "adopted": [
+          null,
+          null,
+          14628749,
+          16330550,
+          18498844,
+          18430076,
+          19410833
+        ],
+        "pct_of_total": [
+          null,
+          null,
+          6.97,
+          7.02,
+          7.72,
+          7.19,
+          7.25
+        ]
+      },
+      "Judicial Administration": {
+        "adopted": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "pct_of_total": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "Public Safety": {
+        "adopted": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "pct_of_total": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "Public Works": {
+        "adopted": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "pct_of_total": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "Health/Welfare": {
+        "adopted": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "pct_of_total": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "Parks, Recreation, & Cultural": {
+        "adopted": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "pct_of_total": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "Community Development": {
+        "adopted": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "pct_of_total": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "Miscellaneous": {
+        "adopted": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "pct_of_total": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    }
+  }
+}

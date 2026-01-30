@@ -1,0 +1,129 @@
+{
+  "description": "Frederick County Government Budget Data",
+  "source": "Frederick County, Virginia Annual Budget Documents",
+  "source_url": "https://www.fcva.us/departments/finance/budget",
+  "extracted_date": "2026-01-29T07:36:49.433444",
+  "fiscal_years": [
+    "FY2020",
+    "FY2021",
+    "FY2022",
+    "FY2023",
+    "FY2024",
+    "FY2025",
+    "FY2026"
+  ],
+  "data": [
+    {
+      "fiscal_year": "FY2020",
+      "source_file": "FY2020_proposed.pdf",
+      "doc_type": "proposed",
+      "extracted_date": "2026-01-29T07:36:49.688126",
+      "general_fund_expenditures": {},
+      "positions": {},
+      "fund_totals": {
+        "school_operating": 168455680.0,
+        "school_debt": 14966405.0,
+        "school_capital": 3300000.0,
+        "capital_projects": 3300000.0,
+        "debt_service": 14966405.0
+      },
+      "_text_length": 9588
+    },
+    {
+      "fiscal_year": "FY2021",
+      "source_file": "FY2021_proposed.pdf",
+      "doc_type": "proposed",
+      "extracted_date": "2026-01-29T07:36:49.957768",
+      "general_fund_expenditures": {},
+      "positions": {},
+      "fund_totals": {
+        "school_operating": 175981549.0,
+        "school_debt": 16726869.0,
+        "school_capital": 5300000.0,
+        "capital_projects": 7000000.0,
+        "debt_service": 16726869.0
+      },
+      "_text_length": 10012
+    },
+    {
+      "fiscal_year": "FY2022",
+      "source_file": "FY2022_proposed.pdf",
+      "doc_type": "proposed",
+      "extracted_date": "2026-01-29T07:36:50.223279",
+      "general_fund_expenditures": {},
+      "positions": {},
+      "fund_totals": {
+        "school_operating": 181760421.0,
+        "school_debt": 17957232.0,
+        "school_capital": 4415900.0,
+        "capital_projects": 4415900.0,
+        "debt_service": 17957232.0
+      },
+      "_text_length": 9941
+    },
+    {
+      "fiscal_year": "FY2023",
+      "source_file": "FY2023_proposed.pdf",
+      "doc_type": "proposed",
+      "extracted_date": "2026-01-29T07:36:50.681572",
+      "general_fund_expenditures": {},
+      "positions": {},
+      "fund_totals": {
+        "school_operating": 194975704.0,
+        "school_debt": 18897606.0,
+        "school_capital": 1000000.0,
+        "capital_projects": 1000000.0,
+        "debt_service": 18897606.0
+      },
+      "_text_length": 10310
+    },
+    {
+      "fiscal_year": "FY2024",
+      "source_file": "FY2024_proposed.pdf",
+      "doc_type": "proposed",
+      "extracted_date": "2026-01-29T07:36:51.145581",
+      "general_fund_expenditures": {},
+      "positions": {},
+      "fund_totals": {
+        "school_operating": 217484444.0,
+        "school_debt": 18668623.0,
+        "school_capital": 7289392.0,
+        "capital_projects": 7289392.0,
+        "debt_service": 18668623.0
+      },
+      "_text_length": 10392
+    },
+    {
+      "fiscal_year": "FY2025",
+      "source_file": "FY2025_proposed.pdf",
+      "doc_type": "proposed",
+      "extracted_date": "2026-01-29T07:36:51.644832",
+      "general_fund_expenditures": {},
+      "positions": {},
+      "fund_totals": {
+        "school_operating": 229583959.0,
+        "school_debt": 18927199.0,
+        "school_capital": 1000000.0,
+        "capital_projects": 6702220.0,
+        "debt_service": 18927199.0
+      },
+      "_text_length": 11163
+    },
+    {
+      "fiscal_year": "FY2026",
+      "source_file": "FY2026_proposed.pdf",
+      "doc_type": "proposed",
+      "extracted_date": "2026-01-29T07:36:52.133886",
+      "general_fund_expenditures": {},
+      "positions": {},
+      "fund_totals": {
+        "school_operating": 238323836.0,
+        "school_debt": 20992393.0,
+        "school_capital": 4000000.0,
+        "capital_projects": 25569357.0,
+        "debt_service": 20992393.0
+      },
+      "_text_length": 10954
+    }
+  ]
+}

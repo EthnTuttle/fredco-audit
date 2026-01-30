@@ -1,0 +1,266 @@
+{
+  "description": "Frederick County Budget - School Appropriations",
+  "source": "Frederick County, Virginia Annual Budget",
+  "source_url": "https://fcva.us/departments/finance/budget/budget-archives",
+  "extracted_date": "2026-01-29",
+  "methodology": "Data extracted from proposed budget PDFs which contain detailed line items. Adopted budget presentations confirm these figures.",
+  "notes": [
+    "All dollar amounts are in whole dollars (not thousands)",
+    "School funds include: Operating, Debt Service, Capital, Nutrition, Textbook, and Private Purpose funds",
+    "County transfers are amounts appropriated from county General Fund or Capital Fund to school funds",
+    "Total county budget is NET of interfund transfers to avoid double counting"
+  ],
+  "data": [
+    {
+      "fiscal_year": "FY2020",
+      "source_file": "FY2020_proposed.pdf",
+      "source_page": "1-4",
+      "total_county_budget_all_funds_net": 343449409,
+      "general_fund_total": 197546413,
+      "county_transfers": {
+        "to_school_operating": 86445165,
+        "to_school_debt": 16248300,
+        "to_school_capital": 4000000,
+        "total_county_to_schools": 106693465,
+        "pct_of_general_fund": 54.01
+      },
+      "school_funds": {
+        "school_operating_fund": 175981549,
+        "school_debt_fund": 16726869,
+        "school_capital_fund": 5300000,
+        "school_nutrition_fund": 7378557,
+        "school_textbook_fund": 3126049,
+        "school_private_funds": 300000,
+        "total_school_funds": 208813024,
+        "pct_of_total_budget": 60.8
+      },
+      "general_fund_expenditures": {
+        "general_govt_admin": 13625766,
+        "judicial_admin": 2954433,
+        "public_safety": 41059834,
+        "public_works": 5521138,
+        "health_welfare": 10447486,
+        "community_college": 81308,
+        "parks_recreation_cultural": 6907675,
+        "planning_development": 2153643,
+        "school_transfers": 102693465,
+        "debt_merit_cola_contingency": 5101665,
+        "capital_fund_transfer": 7000000
+      },
+      "notes": [
+        "School Related per adopted budget: $217,889,857 (63% of all funds)",
+        "Includes NREP (Northwestern Regional Education Program) as separate entity"
+      ]
+    },
+    {
+      "fiscal_year": "FY2021",
+      "source_file": "FY2021_proposed.pdf",
+      "source_page": "1-4",
+      "total_county_budget_all_funds_net": 355592506,
+      "general_fund_total": 206482559,
+      "county_transfers": {
+        "to_school_operating": 91442934,
+        "to_school_debt": 17085531,
+        "to_school_capital": 3715900,
+        "total_county_to_schools": 112244365,
+        "pct_of_general_fund": 54.36
+      },
+      "school_funds": {
+        "school_operating_fund": 184895421,
+        "school_debt_fund": 17957232,
+        "school_capital_fund": 4415900,
+        "school_nutrition_fund": 7581744,
+        "school_textbook_fund": 2871240,
+        "school_private_funds": 500000,
+        "total_school_funds": 218221537,
+        "pct_of_total_budget": 61.37
+      },
+      "general_fund_expenditures": {
+        "general_fund_operations": 87811366,
+        "adult_detention_transfer": 5719536,
+        "airport_transfer": 92991,
+        "eda_transfer": 614301,
+        "school_operating_transfer": 91442934,
+        "school_capital_transfer": 3715900,
+        "school_debt_transfer": 17085531
+      },
+      "notes": []
+    },
+    {
+      "fiscal_year": "FY2022",
+      "source_file": "FY2022_proposed.pdf",
+      "source_page": "1-4",
+      "total_county_budget_all_funds_net": 371235492,
+      "general_fund_total": 209706798,
+      "county_transfers": {
+        "to_school_operating": 93093337,
+        "to_school_debt": 17875128,
+        "to_school_capital": 0,
+        "total_county_to_schools": 110968465,
+        "pct_of_general_fund": 52.92
+      },
+      "school_funds": {
+        "school_operating_fund": 195177494,
+        "school_debt_fund": 18695816,
+        "school_capital_fund": 1000000,
+        "school_nutrition_fund": 7827466,
+        "school_textbook_fund": 2749321,
+        "school_private_funds": 550000,
+        "total_school_funds": 226000097,
+        "pct_of_total_budget": 60.88
+      },
+      "general_fund_expenditures": {
+        "general_fund_operations": 92259101,
+        "adult_detention_transfer": 5788868,
+        "airport_transfer": 68488,
+        "eda_transfer": 621876,
+        "school_operating_transfer": 93093337,
+        "school_debt_transfer": 17875128
+      },
+      "notes": [
+        "No capital transfer to schools from general fund this year"
+      ]
+    },
+    {
+      "fiscal_year": "FY2023",
+      "source_file": "FY2023_proposed.pdf",
+      "source_page": "1-4",
+      "total_county_budget_all_funds_net": 425572905,
+      "general_fund_total": 232532809,
+      "county_transfers": {
+        "to_school_operating": 97553417,
+        "to_school_debt": 18076918,
+        "to_school_capital": 1283875,
+        "total_county_to_schools": 116914210,
+        "pct_of_general_fund": 50.28
+      },
+      "school_funds": {
+        "school_operating_fund": 219584444,
+        "school_debt_fund": 18668623,
+        "school_capital_fund": 9441150,
+        "school_nutrition_fund": 10059529,
+        "school_textbook_fund": 3084777,
+        "school_private_funds": 675000,
+        "total_school_funds": 261513523,
+        "pct_of_total_budget": 61.45
+      },
+      "general_fund_expenditures": {
+        "general_fund_operations": 102682412,
+        "adult_detention_transfer": 7591528,
+        "airport_transfer": 56250,
+        "eda_transfer": 688409,
+        "transportation_projects_transfer": 4600000,
+        "school_operating_transfer": 97553417,
+        "school_capital_transfer": 1283875,
+        "school_debt_transfer": 18076918
+      },
+      "notes": [
+        "New Transportation Projects Fund created"
+      ]
+    },
+    {
+      "fiscal_year": "FY2024",
+      "source_file": "FY2024_proposed.pdf",
+      "source_page": "1-4",
+      "total_county_budget_all_funds_net": 444884206,
+      "general_fund_total": 252474613,
+      "county_transfers": {
+        "to_school_operating": 104677110,
+        "to_school_debt": 18076918,
+        "to_school_capital": 0,
+        "total_county_to_schools": 122754028,
+        "pct_of_general_fund": 48.62
+      },
+      "school_funds": {
+        "school_operating_fund": 229583959,
+        "school_debt_fund": 18927199,
+        "school_capital_fund": 1000000,
+        "school_nutrition_fund": 11596347,
+        "school_textbook_fund": 3389393,
+        "school_private_funds": 675000,
+        "total_school_funds": 265171898,
+        "pct_of_total_budget": 59.6
+      },
+      "general_fund_expenditures": {
+        "general_fund_operations": 116237943,
+        "adult_detention_transfer": 7663639,
+        "airport_transfer": 42589,
+        "eda_transfer": 735368,
+        "transportation_projects_transfer": 5041046,
+        "school_operating_transfer": 104677110,
+        "school_debt_transfer": 18076918
+      },
+      "notes": []
+    },
+    {
+      "fiscal_year": "FY2025",
+      "source_file": "FY2025_proposed.pdf",
+      "source_page": "1-4",
+      "total_county_budget_all_funds_net": 492899936,
+      "general_fund_total": 255903468,
+      "county_transfers": {
+        "to_school_operating": 109015936,
+        "to_school_debt": 18076918,
+        "to_school_capital_from_capital_fund": 1051174,
+        "to_school_capital_fund": 3000000,
+        "to_school_debt_from_capital_fund": 2350000,
+        "total_county_to_schools": 133494028,
+        "pct_of_general_fund": 52.17
+      },
+      "school_funds": {
+        "school_operating_fund": 238643836,
+        "school_debt_fund": 20992393,
+        "school_capital_fund": 4000000,
+        "school_nutrition_fund": 11321757,
+        "school_textbook_fund": 5110074,
+        "school_private_funds": 1000000,
+        "total_school_funds": 281068060,
+        "pct_of_total_budget": 57.02
+      },
+      "general_fund_expenditures": {
+        "general_fund_operations": 114713501,
+        "adult_detention_transfer": 7515295,
+        "airport_transfers": 183610,
+        "eda_transfer": 726152,
+        "transportation_projects_transfer": 3200000,
+        "school_operating_transfer": 109015936,
+        "school_debt_transfer": 18076918
+      },
+      "capital_fund_transfers_to_schools": {
+        "to_school_operating": 1051174,
+        "to_school_capital": 3000000,
+        "to_school_debt": 2350000
+      },
+      "notes": [
+        "Multiple capital fund transfers to schools this year"
+      ]
+    }
+  ],
+  "summary": {
+    "fiscal_year_range": "FY2020-FY2025",
+    "school_operating_transfer_growth": {
+      "FY2020": 86445165,
+      "FY2025": 109015936,
+      "absolute_change": 22570771,
+      "pct_change": 26.11
+    },
+    "total_school_funds_growth": {
+      "FY2020": 208813024,
+      "FY2025": 281068060,
+      "absolute_change": 72255036,
+      "pct_change": 34.6
+    },
+    "total_county_budget_growth": {
+      "FY2020": 343449409,
+      "FY2025": 492899936,
+      "absolute_change": 149450527,
+      "pct_change": 43.51
+    },
+    "school_share_trend": {
+      "FY2020_pct": 60.8,
+      "FY2025_pct": 57.02,
+      "change": -3.78,
+      "note": "School share of total budget has decreased despite absolute increases"
+    }
+  }
+}
