@@ -1442,7 +1442,10 @@
                 const response = await fetch('data/processed/real_estate_ownership_analysis.json');
                 analysisData = await response.json();
                 
-                document.getElementById('gen-date').textContent = new Date(analysisData.metadata.generated).toLocaleDateString();
+                const genDateEl = document.getElementById('gen-date');
+                if (genDateEl) {
+                    genDateEl.textContent = new Date(analysisData.metadata.generated).toLocaleDateString();
+                }
                 
                 updateYear(currentYear);
 
