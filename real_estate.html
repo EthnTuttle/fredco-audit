@@ -1445,6 +1445,11 @@
                 document.getElementById('year-select').addEventListener('change', function(e) {
                     updateYear(e.target.value);
                 });
+                
+                // Initialize additional sections
+                initNetworks();
+                initInvestigations();
+                initTrends();
             } catch (e) {
                 console.error('Failed to load data:', e);
                 document.getElementById('stats-grid').innerHTML = '<p>Error loading data. Please ensure data files are available.</p>';
@@ -1794,14 +1799,6 @@
             }
         }
 
-        // Initialize new sections after data loads
-        const originalInit = init;
-        init = async function() {
-            await originalInit();
-            initNetworks();
-            initInvestigations();
-            initTrends();
-        };
     </script>
 
     <!-- Feedback Widget -->
