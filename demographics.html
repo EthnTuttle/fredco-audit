@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Owner Demographics - Frederick County</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="feedback.css">
+    <style>
+        :root {
+            --primary: #1e40af;
+            --primary-light: #3b82f6;
+            --success: #059669;
+            --warning: #d97706;
+            --danger: #dc2626;
+            --purple: #7c3aed;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--gray-100);
+            color: var(--gray-800);
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+
+        header {
+            background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+            color: white;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+        }
+
+        header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 10px; }
+        header p { font-size: 1.1rem; opacity: 0.9; }
+        .subtitle { font-size: 0.9rem; opacity: 0.8; margin-top: 5px; }
+
+        .nav-bar {
+            background: white;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-bar a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .nav-bar a:hover { background: var(--gray-100); }
+        .nav-bar a.active { background: #7c3aed; color: white; }
+        .nav-bar span { color: var(--gray-300); }
+
+        /* Methodology Box */
+        .methodology-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 2px solid #f59e0b;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 30px;
+        }
+
+        .methodology-box h3 {
+            color: #92400e;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .methodology-box h3::before {
+            content: "i";
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: #f59e0b;
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .methodology-box p {
+            color: #78350f;
+            margin-bottom: 10px;
+        }
+
+        .methodology-box ul {
+            color: #78350f;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .methodology-box li {
+            margin-bottom: 6px;
+        }
+
+        .methodology-box code {
+            background: rgba(255,255,255,0.5);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .stat-card.anglo { border-left: 4px solid var(--primary); }
+        .stat-card.hispanic { border-left: 4px solid var(--warning); }
+        .stat-card.asian { border-left: 4px solid var(--success); }
+        .stat-card.mena { border-left: 4px solid var(--purple); }
+        .stat-card.other { border-left: 4px solid var(--gray-400); }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .stat-value { font-size: 2rem; font-weight: 700; color: var(--gray-900); }
+        .stat-detail { font-size: 0.85rem; color: var(--gray-600); margin-top: 8px; }
+
+        /* Section Headers */
+        .section { margin-bottom: 40px; }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--gray-200);
+        }
+
+        .section-header h2 { font-size: 1.5rem; color: var(--gray-800); }
+
+        /* Chart Grid */
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 24px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .chart-grid { grid-template-columns: 1fr; }
+        }
+
+        .chart-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .chart-card h3 {
+            font-size: 1.1rem;
+            color: var(--gray-700);
+            margin-bottom: 20px;
+        }
+
+        .chart-container { position: relative; height: 300px; }
+        .chart-container.tall { height: 400px; }
+
+        /* Tables */
+        .table-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow-x: auto;
+            margin-bottom: 24px;
+        }
+
+        .table-card h3 {
+            font-size: 1.1rem;
+            color: var(--gray-700);
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        th {
+            background: var(--gray-50);
+            font-weight: 600;
+            color: var(--gray-700);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        tr:hover { background: var(--gray-50); }
+
+        .category-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .badge-anglo { background: #dbeafe; color: #1e40af; }
+        .badge-hispanic { background: #fef3c7; color: #92400e; }
+        .badge-asian { background: #d1fae5; color: #065f46; }
+        .badge-mena { background: #ede9fe; color: #5b21b6; }
+        .badge-other { background: #f3f4f6; color: #374151; }
+
+        /* Comparison Box */
+        .comparison-box {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 24px;
+        }
+
+        .comparison-box h3 {
+            font-size: 1.1rem;
+            color: var(--gray-700);
+            margin-bottom: 16px;
+        }
+
+        .comparison-row {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .comparison-row:last-child { border-bottom: none; }
+
+        .comparison-label { flex: 1; font-weight: 500; }
+        .comparison-census { width: 100px; text-align: center; color: var(--gray-600); }
+        .comparison-property { width: 100px; text-align: center; font-weight: 600; }
+        .comparison-bar { flex: 2; padding: 0 20px; }
+
+        .bar-container {
+            position: relative;
+            height: 24px;
+            background: var(--gray-100);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .bar-census {
+            position: absolute;
+            height: 100%;
+            background: var(--gray-300);
+            opacity: 0.5;
+        }
+
+        .bar-property {
+            position: absolute;
+            height: 100%;
+            background: var(--primary);
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--gray-200);
+            margin-top: 40px;
+        }
+
+        footer a { color: var(--primary); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Property Owner Demographics</h1>
+            <p>Surname Analysis of Frederick County Property Owners</p>
+            <p class="subtitle">Data: Real Estate Tax Records 2025 | 35,764 Individual Properties</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="nav-bar">
+            <a href="index.html">County Government</a>
+            <span>|</span>
+            <a href="schools.html">School District</a>
+            <span>|</span>
+            <a href="map.html">District Map</a>
+            <span>|</span>
+            <a href="real_estate.html">Real Estate</a>
+            <span>|</span>
+            <a href="demographics.html" class="active">Demographics</a>
+            <span>|</span>
+            <a href="about.html">About</a>
+        </nav>
+
+        <!-- Methodology Note -->
+        <div class="methodology-box">
+            <h3>How This Analysis Was Conducted</h3>
+            <p>This demographic analysis was performed by classifying property owner <strong>surnames</strong> using a local large language model (LLM). Here's the methodology:</p>
+            <ul>
+                <li><strong>Data Source:</strong> Frederick County Real Estate Tax Book (2025) containing 48,532 property records</li>
+                <li><strong>Filtering:</strong> Business entities (LLCs, trusts, corporations) were excluded, leaving 35,764 individual property owners</li>
+                <li><strong>Classification:</strong> Each unique surname (11,695 total) was classified by the <code>llama3.2:3b</code> model into ethnic/cultural origin categories</li>
+                <li><strong>Categories:</strong> Anglo-American, Hispanic/Latino, Asian, Middle Eastern/North African (MENA), Other European, Unknown</li>
+                <li><strong>Prompt:</strong> The model was asked to classify surnames based on typical ethnic/cultural associations (e.g., Smith = Anglo, Garcia = Hispanic, Nguyen = Asian)</li>
+            </ul>
+            <p><strong>Important Limitations:</strong> This analysis classifies <em>surnames</em>, not individuals. A surname does not determine ethnicity, citizenship, or identity. Many Americans have surnames from various origins due to marriage, adoption, immigration history, and cultural heritage. This data shows surname patterns only and should not be used to make assumptions about individuals.</p>
+        </div>
+
+        <!-- Key Stats -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Summary by Property Ownership</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card anglo">
+                    <div class="stat-label">Anglo-American</div>
+                    <div class="stat-value">65.1%</div>
+                    <div class="stat-detail">23,278 properties</div>
+                </div>
+                <div class="stat-card other">
+                    <div class="stat-label">Other European</div>
+                    <div class="stat-value">18.9%</div>
+                    <div class="stat-detail">6,756 properties</div>
+                </div>
+                <div class="stat-card hispanic">
+                    <div class="stat-label">Hispanic/Latino</div>
+                    <div class="stat-value">6.5%</div>
+                    <div class="stat-detail">2,326 properties</div>
+                </div>
+                <div class="stat-card asian">
+                    <div class="stat-label">Asian</div>
+                    <div class="stat-value">2.6%</div>
+                    <div class="stat-detail">929 properties</div>
+                </div>
+                <div class="stat-card mena">
+                    <div class="stat-label">Middle Eastern / N. African</div>
+                    <div class="stat-value">0.8%</div>
+                    <div class="stat-detail">303 properties</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Unclassified</div>
+                    <div class="stat-value">6.1%</div>
+                    <div class="stat-detail">2,172 properties</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Charts -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Visualizations</h2>
+            </div>
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h3>Property Ownership by Surname Origin</h3>
+                    <div class="chart-container">
+                        <canvas id="ownershipPieChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Unique Surnames by Category</h3>
+                    <div class="chart-container">
+                        <canvas id="surnameBarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Census Comparison -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Comparison with Census Population</h2>
+            </div>
+            <div class="comparison-box">
+                <h3>Property Ownership vs. Census Population (Frederick County 2020)</h3>
+                <div style="display: flex; padding: 8px 0; border-bottom: 1px solid var(--gray-200); font-weight: 600; font-size: 0.85rem; color: var(--gray-600);">
+                    <div style="flex: 1;">Group</div>
+                    <div style="width: 100px; text-align: center;">Census %</div>
+                    <div style="width: 100px; text-align: center;">Property %</div>
+                    <div style="flex: 2; padding: 0 20px;">Comparison</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-label">White / Anglo-American</div>
+                    <div class="comparison-census">86.6%</div>
+                    <div class="comparison-property">84.0%</div>
+                    <div class="comparison-bar">
+                        <div class="bar-container">
+                            <div class="bar-census" style="width: 86.6%;"></div>
+                            <div class="bar-property" style="width: 84.0%; background: var(--primary);"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-label">Hispanic / Latino</div>
+                    <div class="comparison-census">6.4%</div>
+                    <div class="comparison-property">6.5%</div>
+                    <div class="comparison-bar">
+                        <div class="bar-container">
+                            <div class="bar-census" style="width: 64%;"></div>
+                            <div class="bar-property" style="width: 65%; background: var(--warning);"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-label">Black / African American</div>
+                    <div class="comparison-census">4.9%</div>
+                    <div class="comparison-property">N/A</div>
+                    <div class="comparison-bar">
+                        <div class="bar-container">
+                            <div class="bar-census" style="width: 49%;"></div>
+                            <div class="bar-property" style="width: 0%; background: var(--gray-400);"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-label">Asian</div>
+                    <div class="comparison-census">1.8%</div>
+                    <div class="comparison-property">2.6%</div>
+                    <div class="comparison-bar">
+                        <div class="bar-container">
+                            <div class="bar-census" style="width: 18%;"></div>
+                            <div class="bar-property" style="width: 26%; background: var(--success);"></div>
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-top: 16px; font-size: 0.9rem; color: var(--gray-600);">
+                    <strong>Note:</strong> Anglo-American + Other European combined (84.0%) for comparison with Census White category.
+                    Black/African American surnames cannot be reliably distinguished from Anglo-American surnames using this methodology, so no estimate is provided.
+                    Census data from 2020 Decennial Census.
+                </p>
+            </div>
+        </section>
+
+        <!-- Top Surnames Tables -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Top Surnames by Category</h2>
+            </div>
+            
+            <div class="chart-grid">
+                <div class="table-card">
+                    <h3><span class="category-badge badge-anglo">Anglo-American</span> Top 15 Surnames</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Surname</th>
+                                <th>Properties</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>SMITH</td><td>355</td></tr>
+                            <tr><td>2</td><td>MILLER</td><td>206</td></tr>
+                            <tr><td>3</td><td>ANDERSON</td><td>177</td></tr>
+                            <tr><td>4</td><td>JOHNSON</td><td>169</td></tr>
+                            <tr><td>5</td><td>WILLIAMS</td><td>165</td></tr>
+                            <tr><td>6</td><td>WHITE</td><td>149</td></tr>
+                            <tr><td>7</td><td>BROWN</td><td>139</td></tr>
+                            <tr><td>8</td><td>DAVIS</td><td>129</td></tr>
+                            <tr><td>9</td><td>JENKINS</td><td>128</td></tr>
+                            <tr><td>10</td><td>JONES</td><td>125</td></tr>
+                            <tr><td>11</td><td>WILSON</td><td>107</td></tr>
+                            <tr><td>12</td><td>TAYLOR</td><td>103</td></tr>
+                            <tr><td>13</td><td>THOMPSON</td><td>101</td></tr>
+                            <tr><td>14</td><td>MARTIN</td><td>97</td></tr>
+                            <tr><td>15</td><td>CLARK</td><td>95</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-card">
+                    <h3><span class="category-badge badge-other">Other European</span> Top 15 Surnames</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Surname</th>
+                                <th>Properties</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>WHITACRE</td><td>105</td></tr>
+                            <tr><td>2</td><td>MCDONALD</td><td>94</td></tr>
+                            <tr><td>3</td><td>CAMPBELL</td><td>81</td></tr>
+                            <tr><td>4</td><td>ORNDORFF</td><td>59</td></tr>
+                            <tr><td>5</td><td>MCFARLAND</td><td>40</td></tr>
+                            <tr><td>6</td><td>ARNOLD</td><td>36</td></tr>
+                            <tr><td>7</td><td>FAUVER</td><td>31</td></tr>
+                            <tr><td>8</td><td>FELTNER</td><td>31</td></tr>
+                            <tr><td>9</td><td>OATES</td><td>29</td></tr>
+                            <tr><td>10</td><td>KERNS</td><td>28</td></tr>
+                            <tr><td>11</td><td>MURPHY</td><td>27</td></tr>
+                            <tr><td>12</td><td>O'BRIEN</td><td>26</td></tr>
+                            <tr><td>13</td><td>MCGEE</td><td>25</td></tr>
+                            <tr><td>14</td><td>COFFMAN</td><td>24</td></tr>
+                            <tr><td>15</td><td>ROSENBERGER</td><td>23</td></tr>
+                        </tbody>
+                    </table>
+                    <p style="margin-top: 12px; font-size: 0.85rem; color: var(--gray-600);">
+                        Includes Scottish/Irish (McDonald, Campbell, Murphy), German heritage common to Shenandoah Valley (Whitacre, Orndorff, Fauver), and other European origins.
+                    </p>
+                </div>
+            </div>
+
+            <div class="chart-grid">
+                <div class="table-card">
+                    <h3><span class="category-badge badge-hispanic">Hispanic/Latino</span> Top 10 Surnames</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Surname</th>
+                                <th>Properties</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>HERNANDEZ</td><td>73</td></tr>
+                            <tr><td>2</td><td>RODRIGUEZ</td><td>67</td></tr>
+                            <tr><td>3</td><td>LOPEZ</td><td>46</td></tr>
+                            <tr><td>4</td><td>MARTINEZ</td><td>42</td></tr>
+                            <tr><td>5</td><td>GARCIA</td><td>34</td></tr>
+                            <tr><td>6</td><td>DIAZ</td><td>32</td></tr>
+                            <tr><td>7</td><td>GONZALEZ</td><td>29</td></tr>
+                            <tr><td>8</td><td>PEREZ</td><td>28</td></tr>
+                            <tr><td>9</td><td>SANCHEZ</td><td>26</td></tr>
+                            <tr><td>10</td><td>GUZMAN</td><td>25</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-card">
+                    <h3><span class="category-badge badge-asian">Asian</span> Top 10 Surnames</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Surname</th>
+                                <th>Properties</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>LEE</td><td>56</td></tr>
+                            <tr><td>2</td><td>NGUYEN</td><td>32</td></tr>
+                            <tr><td>3</td><td>SINGH</td><td>31</td></tr>
+                            <tr><td>4</td><td>TRUONG</td><td>24</td></tr>
+                            <tr><td>5</td><td>CHEN</td><td>22</td></tr>
+                            <tr><td>6</td><td>PARK</td><td>21</td></tr>
+                            <tr><td>7</td><td>PATEL</td><td>21</td></tr>
+                            <tr><td>8</td><td>TRAN</td><td>18</td></tr>
+                            <tr><td>9</td><td>WANG</td><td>18</td></tr>
+                            <tr><td>10</td><td>GUPTA</td><td>17</td></tr>
+                        </tbody>
+                    </table>
+                    <p style="margin-top: 12px; font-size: 0.85rem; color: var(--gray-600);">
+                        Includes East Asian (Lee, Chen, Wang, Park), Vietnamese (Nguyen, Truong, Tran), and South Asian (Singh, Patel, Gupta) surnames.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Notes -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Data Notes</h2>
+            </div>
+            <div class="table-card">
+                <h3>Classification Statistics</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Total Property Records (2025)</td><td>48,532</td></tr>
+                        <tr><td>Business Entities (excluded)</td><td>12,768 (26.3%)</td></tr>
+                        <tr><td>Individual Properties Analyzed</td><td>35,764</td></tr>
+                        <tr><td>Unique Surnames</td><td>11,695</td></tr>
+                        <tr><td>Successfully Classified</td><td>10,939 (93.5%)</td></tr>
+                        <tr><td>Classification Model</td><td>llama3.2:3b (local)</td></tr>
+                        <tr><td>Analysis Date</td><td>January 30, 2026</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Data source: <a href="https://www.fcva.us/departments/commissioner-of-the-revenue" target="_blank">Frederick County Commissioner of Revenue</a> - Real Estate Tax Book 2025</p>
+        <p style="margin-top: 10px;">Analysis performed using local LLM classification | <a href="about.html">Learn more about this project</a></p>
+    </footer>
+
+    <script>
+        // Color palette
+        const colors = {
+            anglo: '#1e40af',
+            hispanic: '#d97706',
+            asian: '#059669',
+            mena: '#7c3aed',
+            other: '#6b7280',
+            unknown: '#d1d5db'
+        };
+
+        // Property ownership data
+        const ownershipData = {
+            labels: ['Anglo-American', 'Other European', 'Hispanic/Latino', 'Asian', 'MENA', 'Unclassified'],
+            values: [65.09, 18.89, 6.50, 2.60, 0.85, 6.07],
+            colors: [colors.anglo, colors.other, colors.hispanic, colors.asian, colors.mena, colors.unknown]
+        };
+
+        // Unique surnames data
+        const surnameData = {
+            labels: ['Anglo-American', 'Other European', 'Hispanic/Latino', 'Asian', 'MENA', 'Unknown'],
+            values: [5949, 3492, 892, 419, 187, 756],
+            colors: [colors.anglo, colors.other, colors.hispanic, colors.asian, colors.mena, colors.unknown]
+        };
+
+        // Pie Chart - Property Ownership
+        new Chart(document.getElementById('ownershipPieChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ownershipData.labels,
+                datasets: [{
+                    data: ownershipData.values,
+                    backgroundColor: ownershipData.colors,
+                    borderWidth: 2,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            padding: 15,
+                            usePointStyle: true
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => `${ctx.label}: ${ctx.raw}%`
+                        }
+                    }
+                }
+            }
+        });
+
+        // Bar Chart - Unique Surnames
+        new Chart(document.getElementById('surnameBarChart'), {
+            type: 'bar',
+            data: {
+                labels: surnameData.labels,
+                datasets: [{
+                    label: 'Unique Surnames',
+                    data: surnameData.values,
+                    backgroundColor: surnameData.colors,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => `${ctx.raw.toLocaleString()} surnames`
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Unique Surnames'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+    <!-- Nostr Feedback Widget -->
+    <script type="module">
+        import { initFeedbackWidget } from './feedback.js';
+        initFeedbackWidget({ pageType: 'demographics' });
+    </script>
+</body>
+</html>
