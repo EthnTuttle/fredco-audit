@@ -473,9 +473,99 @@
     </div>
 
     <footer>
+        <div class="support-section">
+            <span class="support-label">Support this project</span>
+            <a href="https://strike.me/virginiafreedomtech" target="_blank" rel="noopener" class="coffee-btn">
+                <span class="coffee-icon">☕</span><span class="lightning-icon">⚡</span> Buy Me a Coffee
+            </a>
+            <div class="lightning-address">
+                <code id="ln-address">virginiafreedomtech@strike.me</code>
+                <button onclick="copyLightningAddress()" class="copy-btn" id="copy-btn">Copy</button>
+            </div>
+        </div>
         <p>Open Frederick | Public Data for Frederick County, Virginia</p>
         <p style="margin-top: 8px;">Data updated January 2026 | FY2020-FY2025</p>
     </footer>
+
+    <style>
+        .support-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .support-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .coffee-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .coffee-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+        }
+        .coffee-icon { font-size: 1.2rem; }
+        .lightning-icon { font-size: 1.1rem; }
+        .lightning-address {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.1);
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+        .lightning-address code {
+            font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.9);
+        }
+        .copy-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: background 0.2s;
+        }
+        .copy-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .copy-btn.copied {
+            background: #10b981;
+        }
+    </style>
+
+    <script>
+        function copyLightningAddress() {
+            const address = document.getElementById('ln-address').textContent;
+            navigator.clipboard.writeText(address).then(() => {
+                const btn = document.getElementById('copy-btn');
+                btn.textContent = 'Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Copy';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
 
     <!-- Nostr Feedback Widget -->
     <script type="module">
