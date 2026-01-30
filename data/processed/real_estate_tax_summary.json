@@ -1,0 +1,3276 @@
+{
+  "metadata": {
+    "source": "Frederick County Commissioner of Revenue",
+    "source_url": "https://www.fcva.us/departments/commissioner-of-the-revenue",
+    "description": "Real Estate Tax Assessment Data",
+    "years": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "districts": [
+      "Back Creek",
+      "Back Creek",
+      "Gainesboro",
+      "Opequon",
+      "Red Bud",
+      "Red Bud",
+      "Shawnee",
+      "Stonewall",
+      "Stephens City",
+      "Stephens City",
+      "Middletown"
+    ],
+    "property_classes": {
+      "1": "Residential",
+      "2": "Agricultural/Undeveloped",
+      "3": "Multi-Family",
+      "4": "Commercial",
+      "5": "Industrial",
+      "6": "Land Use (Deferred)",
+      "7": "Public Service",
+      "8": "Exempt",
+      "9": "Mineral"
+    },
+    "processed_date": "2026-01-29T23:42:13.856369",
+    "total_records": 235666
+  },
+  "annual_summaries": [
+    {
+      "year": 2021,
+      "tax_rate": 0.61,
+      "commissioner": "Seth T. Thatcher",
+      "source_file": "Real Estate 2021 Tax Book.pdf",
+      "total_records": 45718,
+      "totals": {
+        "land_value": 3759564738,
+        "improvement_value": 8334234100,
+        "total_value": 12093691800,
+        "tax_amount": 73771519.97999927,
+        "deferred_value": 501310000
+      },
+      "by_district": {
+        "Shawnee": {
+          "property_count": 5990,
+          "land_value": 563800966,
+          "improvement_value": 1362212500,
+          "total_value": 1926007400,
+          "tax_amount": 11748645.140000034,
+          "deferred_value": 23374900,
+          "total_acreage": 9236712.742999997,
+          "by_class": {
+            "1": {
+              "count": 4071,
+              "total_value": 1118924700,
+              "tax": 6825440.670000004
+            },
+            "2": {
+              "count": 1516,
+              "total_value": 266583300,
+              "tax": 1626158.1300000015
+            },
+            "4": {
+              "count": 315,
+              "total_value": 447393700,
+              "tax": 2729101.5700000008
+            },
+            "5": {
+              "count": 61,
+              "total_value": 27144200,
+              "tax": 165579.62000000002
+            },
+            "6": {
+              "count": 23,
+              "total_value": 30099500,
+              "tax": 183606.95
+            },
+            "3": {
+              "count": 4,
+              "total_value": 35862000,
+              "tax": 218758.2
+            }
+          },
+          "pct_of_county_value": 15.93,
+          "pct_of_county_tax": 15.93,
+          "avg_property_value": 321537
+        },
+        "Gainesboro": {
+          "property_count": 8719,
+          "land_value": 727547765,
+          "improvement_value": 1251754000,
+          "total_value": 1979272800,
+          "tax_amount": 12073564.079999829,
+          "deferred_value": 174067300,
+          "total_acreage": 3270627.569999998,
+          "by_class": {
+            "2": {
+              "count": 6584,
+              "total_value": 1188011900,
+              "tax": 7246872.589999853
+            },
+            "1": {
+              "count": 1112,
+              "total_value": 334960700,
+              "tax": 2043260.27
+            },
+            "5": {
+              "count": 745,
+              "total_value": 219741900,
+              "tax": 1340425.59
+            },
+            "6": {
+              "count": 185,
+              "total_value": 117237500,
+              "tax": 715148.7499999999
+            },
+            "4": {
+              "count": 93,
+              "total_value": 119320800,
+              "tax": 727856.8800000001
+            }
+          },
+          "pct_of_county_value": 16.37,
+          "pct_of_county_tax": 16.37,
+          "avg_property_value": 227007
+        },
+        "Back Creek": {
+          "property_count": 11338,
+          "land_value": 761730784,
+          "improvement_value": 1411721700,
+          "total_value": 2173392200,
+          "tax_amount": 13257692.420000305,
+          "deferred_value": 185121300,
+          "total_acreage": 10524239.34199993,
+          "by_class": {
+            "2": {
+              "count": 10001,
+              "total_value": 1390132000,
+              "tax": 8479805.199999882
+            },
+            "1": {
+              "count": 254,
+              "total_value": 66161800,
+              "tax": 403586.9800000003
+            },
+            "5": {
+              "count": 695,
+              "total_value": 211395500,
+              "tax": 1289512.5499999993
+            },
+            "4": {
+              "count": 208,
+              "total_value": 389937200,
+              "tax": 2378616.9200000004
+            },
+            "6": {
+              "count": 174,
+              "total_value": 113102300,
+              "tax": 689924.0299999998
+            },
+            "3": {
+              "count": 6,
+              "total_value": 2663400,
+              "tax": 16246.739999999998
+            }
+          },
+          "pct_of_county_value": 17.97,
+          "pct_of_county_tax": 17.97,
+          "avg_property_value": 191691
+        },
+        "Stephens City": {
+          "property_count": 1154,
+          "land_value": 56720021,
+          "improvement_value": 136252900,
+          "total_value": 192970100,
+          "tax_amount": 1177117.6100000013,
+          "deferred_value": 1412200,
+          "total_acreage": 3179231.009999998,
+          "by_class": {
+            "1": {
+              "count": 610,
+              "total_value": 124322900,
+              "tax": 758369.6900000005
+            },
+            "2": {
+              "count": 447,
+              "total_value": 32040900,
+              "tax": 195449.48999999935
+            },
+            "4": {
+              "count": 76,
+              "total_value": 22303200,
+              "tax": 136049.52
+            },
+            "6": {
+              "count": 2,
+              "total_value": 2152500,
+              "tax": 13130.25
+            },
+            "3": {
+              "count": 15,
+              "total_value": 10248400,
+              "tax": 62515.24
+            },
+            "5": {
+              "count": 4,
+              "total_value": 1902200,
+              "tax": 11603.42
+            }
+          },
+          "pct_of_county_value": 1.6,
+          "pct_of_county_tax": 1.6,
+          "avg_property_value": 167218
+        },
+        "Opequon": {
+          "property_count": 6255,
+          "land_value": 511234276,
+          "improvement_value": 1349637500,
+          "total_value": 1860869900,
+          "tax_amount": 11351306.38999996,
+          "deferred_value": 30289100,
+          "total_acreage": 8217933.954999999,
+          "by_class": {
+            "1": {
+              "count": 4160,
+              "total_value": 1230576200,
+              "tax": 7506514.820000004
+            },
+            "2": {
+              "count": 1832,
+              "total_value": 446297800,
+              "tax": 2722416.5799999926
+            },
+            "5": {
+              "count": 129,
+              "total_value": 45092400,
+              "tax": 275063.6400000001
+            },
+            "4": {
+              "count": 104,
+              "total_value": 120193200,
+              "tax": 733178.5199999998
+            },
+            "6": {
+              "count": 23,
+              "total_value": 16148900,
+              "tax": 98508.29000000001
+            },
+            "3": {
+              "count": 7,
+              "total_value": 2561400,
+              "tax": 15624.539999999999
+            }
+          },
+          "pct_of_county_value": 15.39,
+          "pct_of_county_tax": 15.39,
+          "avg_property_value": 297501
+        },
+        "Stonewall": {
+          "property_count": 6080,
+          "land_value": 697580420,
+          "improvement_value": 1689152300,
+          "total_value": 2386727200,
+          "tax_amount": 14559035.9199999,
+          "deferred_value": 80418800,
+          "total_acreage": 5569683.047999992,
+          "by_class": {
+            "4": {
+              "count": 683,
+              "total_value": 1013612500,
+              "tax": 6183036.2500000335
+            },
+            "2": {
+              "count": 3222,
+              "total_value": 772426300,
+              "tax": 4711800.4300000025
+            },
+            "1": {
+              "count": 1967,
+              "total_value": 471727600,
+              "tax": 2877538.3599999985
+            },
+            "5": {
+              "count": 162,
+              "total_value": 78200000,
+              "tax": 477019.9999999998
+            },
+            "6": {
+              "count": 40,
+              "total_value": 39708000,
+              "tax": 242218.80000000002
+            },
+            "3": {
+              "count": 6,
+              "total_value": 11052800,
+              "tax": 67422.08
+            }
+          },
+          "pct_of_county_value": 19.74,
+          "pct_of_county_tax": 19.74,
+          "avg_property_value": 392554
+        },
+        "Red Bud": {
+          "property_count": 5531,
+          "land_value": 398947176,
+          "improvement_value": 1044058400,
+          "total_value": 1443004800,
+          "tax_amount": 8802329.279999966,
+          "deferred_value": 6408500,
+          "total_acreage": 16911147.949999977,
+          "by_class": {
+            "1": {
+              "count": 4766,
+              "total_value": 1228175300,
+              "tax": 7491869.329999989
+            },
+            "2": {
+              "count": 666,
+              "total_value": 132269600,
+              "tax": 806844.5599999998
+            },
+            "4": {
+              "count": 65,
+              "total_value": 53956200,
+              "tax": 329132.82
+            },
+            "5": {
+              "count": 26,
+              "total_value": 15186500,
+              "tax": 92637.64999999998
+            },
+            "6": {
+              "count": 4,
+              "total_value": 4284000,
+              "tax": 26132.4
+            },
+            "3": {
+              "count": 4,
+              "total_value": 9133200,
+              "tax": 55712.52
+            }
+          },
+          "pct_of_county_value": 11.93,
+          "pct_of_county_tax": 11.93,
+          "avg_property_value": 260894
+        },
+        "Middletown": {
+          "property_count": 590,
+          "land_value": 39156521,
+          "improvement_value": 83345900,
+          "total_value": 122501700,
+          "tax_amount": 747260.3699999999,
+          "deferred_value": 217900,
+          "total_acreage": 1633351.4300000004,
+          "by_class": {
+            "2": {
+              "count": 186,
+              "total_value": 31166700,
+              "tax": 190116.86999999994
+            },
+            "1": {
+              "count": 369,
+              "total_value": 73003900,
+              "tax": 445323.78999999975
+            },
+            "4": {
+              "count": 28,
+              "total_value": 12950600,
+              "tax": 78998.65999999997
+            },
+            "3": {
+              "count": 5,
+              "total_value": 4580000,
+              "tax": 27938.0
+            },
+            "0": {
+              "count": 1,
+              "total_value": 161300,
+              "tax": 983.93
+            },
+            "5": {
+              "count": 1,
+              "total_value": 639200,
+              "tax": 3899.12
+            }
+          },
+          "pct_of_county_value": 1.01,
+          "pct_of_county_tax": 1.01,
+          "avg_property_value": 207630
+        },
+        "Unknown": {
+          "property_count": 61,
+          "land_value": 2846809,
+          "improvement_value": 6098900,
+          "total_value": 8945700,
+          "tax_amount": 54568.770000000026,
+          "deferred_value": 0,
+          "total_acreage": 49.94,
+          "by_class": {
+            "0": {
+              "count": 61,
+              "total_value": 8945700,
+              "tax": 54568.770000000026
+            }
+          },
+          "pct_of_county_value": 0.07,
+          "pct_of_county_tax": 0.07,
+          "avg_property_value": 146651
+        }
+      },
+      "by_class": {
+        "1": {
+          "count": 17309,
+          "total_value": 4647853100,
+          "tax": 28351903.910000067,
+          "class_name": "Residential",
+          "pct_of_total": 38.43
+        },
+        "2": {
+          "count": 24454,
+          "total_value": 4258928500,
+          "tax": 25979463.84999981,
+          "class_name": "Agricultural/Undeveloped",
+          "pct_of_total": 35.22
+        },
+        "4": {
+          "count": 1572,
+          "total_value": 2179667400,
+          "tax": 13295971.140000034,
+          "class_name": "Commercial",
+          "pct_of_total": 18.02
+        },
+        "5": {
+          "count": 1823,
+          "total_value": 599301900,
+          "tax": 3655741.5900000026,
+          "class_name": "Industrial",
+          "pct_of_total": 4.96
+        },
+        "0": {
+          "count": 62,
+          "total_value": 9107000,
+          "tax": 55552.700000000026,
+          "class_name": "Class 0",
+          "pct_of_total": 0.08
+        },
+        "6": {
+          "count": 451,
+          "total_value": 322732700,
+          "tax": 1968669.4700000004,
+          "class_name": "Land Use (Deferred)",
+          "pct_of_total": 2.67
+        },
+        "3": {
+          "count": 47,
+          "total_value": 76101200,
+          "tax": 464217.31999999995,
+          "class_name": "Multi-Family",
+          "pct_of_total": 0.63
+        }
+      },
+      "by_zone": {
+        "RP": {
+          "count": 16308,
+          "total_value": 4250965900
+        },
+        "RA": {
+          "count": 17074,
+          "total_value": 4007941400
+        },
+        "R5": {
+          "count": 7957,
+          "total_value": 1041197300
+        },
+        "B1": {
+          "count": 125,
+          "total_value": 34184700
+        },
+        "M1": {
+          "count": 382,
+          "total_value": 993035600
+        },
+        "B1B2": {
+          "count": 1,
+          "total_value": 394400
+        },
+        "B3": {
+          "count": 109,
+          "total_value": 115366200
+        },
+        "R4": {
+          "count": 1073,
+          "total_value": 338666100
+        },
+        "MTND": {
+          "count": 113,
+          "total_value": 25153400
+        },
+        "R3": {
+          "count": 242,
+          "total_value": 41505000
+        },
+        "Unknown": {
+          "count": 68,
+          "total_value": 19213100
+        },
+        "R": {
+          "count": 395,
+          "total_value": 77031200
+        },
+        "R2": {
+          "count": 209,
+          "total_value": 38198600
+        },
+        "M2": {
+          "count": 88,
+          "total_value": 84422500
+        },
+        "B2": {
+          "count": 630,
+          "total_value": 791997200
+        },
+        "I1": {
+          "count": 11,
+          "total_value": 2390300
+        },
+        "RAB2": {
+          "count": 3,
+          "total_value": 2870400
+        },
+        "NDD": {
+          "count": 410,
+          "total_value": 47647000
+        },
+        "RO": {
+          "count": 44,
+          "total_value": 9272500
+        },
+        "EM": {
+          "count": 50,
+          "total_value": 19837900
+        },
+        "B": {
+          "count": 105,
+          "total_value": 25981500
+        },
+        "M1B2": {
+          "count": 3,
+          "total_value": 8130300
+        },
+        "MH1": {
+          "count": 209,
+          "total_value": 41098600
+        },
+        "I2": {
+          "count": 3,
+          "total_value": 836200
+        },
+        "B2RA": {
+          "count": 2,
+          "total_value": 577600
+        },
+        "QTND": {
+          "count": 1,
+          "total_value": 301900
+        },
+        "I": {
+          "count": 6,
+          "total_value": 1331200
+        },
+        "AK": {
+          "count": 2,
+          "total_value": 781800
+        },
+        "R1": {
+          "count": 44,
+          "total_value": 6326600
+        },
+        "B2RP": {
+          "count": 4,
+          "total_value": 9958400
+        },
+        "B2B3": {
+          "count": 9,
+          "total_value": 18071200
+        },
+        "LC": {
+          "count": 1,
+          "total_value": 150200
+        },
+        "NDI1": {
+          "count": 1,
+          "total_value": 81900
+        },
+        "B2M1": {
+          "count": 2,
+          "total_value": 1747300
+        },
+        "RPB2": {
+          "count": 11,
+          "total_value": 10864400
+        },
+        "ICK": {
+          "count": 2,
+          "total_value": 1550500
+        },
+        "B3M1": {
+          "count": 1,
+          "total_value": 643400
+        },
+        "RPM1": {
+          "count": 1,
+          "total_value": 271300
+        },
+        "EAR": {
+          "count": 1,
+          "total_value": 70400
+        },
+        "ARAN": {
+          "count": 1,
+          "total_value": 280800
+        },
+        "M2RA": {
+          "count": 1,
+          "total_value": 1002400
+        },
+        "QA": {
+          "count": 1,
+          "total_value": 453100
+        },
+        "ER": {
+          "count": 3,
+          "total_value": 401200
+        },
+        "MHRA": {
+          "count": 1,
+          "total_value": 260600
+        },
+        "RAEM": {
+          "count": 1,
+          "total_value": 3024500
+        },
+        "IAK": {
+          "count": 2,
+          "total_value": 779500
+        },
+        "OM": {
+          "count": 2,
+          "total_value": 5130300
+        },
+        "B3I1": {
+          "count": 1,
+          "total_value": 1304700
+        },
+        "RPB1": {
+          "count": 1,
+          "total_value": 1800600
+        },
+        "Y": {
+          "count": 1,
+          "total_value": 233700
+        },
+        "MHB1": {
+          "count": 1,
+          "total_value": 1583400
+        },
+        "B2MS": {
+          "count": 1,
+          "total_value": 4475500
+        },
+        "RAM2": {
+          "count": 1,
+          "total_value": 2896100
+        }
+      }
+    },
+    {
+      "year": 2022,
+      "tax_rate": 0.61,
+      "commissioner": "Seth T. Thatcher",
+      "source_file": "Real Estate 2022 Tax Book.pdf",
+      "total_records": 46412,
+      "totals": {
+        "land_value": 3802736671,
+        "improvement_value": 8576011900,
+        "total_value": 12378524300,
+        "tax_amount": 75508998.2299994,
+        "deferred_value": 495404400
+      },
+      "by_district": {
+        "Shawnee": {
+          "property_count": 6204,
+          "land_value": 579814592,
+          "improvement_value": 1407746900,
+          "total_value": 1987546700,
+          "tax_amount": 12124034.870000038,
+          "deferred_value": 23679600,
+          "total_acreage": 9147130.322999995,
+          "by_class": {
+            "1": {
+              "count": 4259,
+              "total_value": 1152615200,
+              "tax": 7030952.720000005
+            },
+            "2": {
+              "count": 1539,
+              "total_value": 281136600,
+              "tax": 1714933.2600000026
+            },
+            "4": {
+              "count": 318,
+              "total_value": 448566000,
+              "tax": 2736252.6
+            },
+            "5": {
+              "count": 62,
+              "total_value": 27522700,
+              "tax": 167888.47
+            },
+            "6": {
+              "count": 22,
+              "total_value": 36326500,
+              "tax": 221591.65
+            },
+            "3": {
+              "count": 4,
+              "total_value": 41379700,
+              "tax": 252416.16999999998
+            }
+          },
+          "pct_of_county_value": 16.06,
+          "pct_of_county_tax": 16.06,
+          "avg_property_value": 320365
+        },
+        "Gainesboro": {
+          "property_count": 8751,
+          "land_value": 729030343,
+          "improvement_value": 1268702900,
+          "total_value": 1997704900,
+          "tax_amount": 12185999.889999803,
+          "deferred_value": 173926600,
+          "total_acreage": 3340495.1699999967,
+          "by_class": {
+            "2": {
+              "count": 6615,
+              "total_value": 1204465900,
+              "tax": 7347241.98999986
+            },
+            "1": {
+              "count": 1112,
+              "total_value": 335008300,
+              "tax": 2043550.6300000006
+            },
+            "5": {
+              "count": 750,
+              "total_value": 222259300,
+              "tax": 1355781.73
+            },
+            "6": {
+              "count": 180,
+              "total_value": 115565700,
+              "tax": 704950.7699999999
+            },
+            "4": {
+              "count": 94,
+              "total_value": 120405700,
+              "tax": 734474.7700000001
+            }
+          },
+          "pct_of_county_value": 16.14,
+          "pct_of_county_tax": 16.14,
+          "avg_property_value": 228283
+        },
+        "Back Creek": {
+          "property_count": 11340,
+          "land_value": 767474087,
+          "improvement_value": 1448202400,
+          "total_value": 2215616900,
+          "tax_amount": 13515263.090000309,
+          "deferred_value": 184859600,
+          "total_acreage": 11127817.22199989,
+          "by_class": {
+            "2": {
+              "count": 9994,
+              "total_value": 1421066100,
+              "tax": 8668503.209999926
+            },
+            "1": {
+              "count": 251,
+              "total_value": 64687400,
+              "tax": 394593.1400000003
+            },
+            "4": {
+              "count": 210,
+              "total_value": 401383900,
+              "tax": 2448441.7899999996
+            },
+            "5": {
+              "count": 707,
+              "total_value": 214521700,
+              "tax": 1308582.3699999999
+            },
+            "6": {
+              "count": 172,
+              "total_value": 111294400,
+              "tax": 678895.8399999996
+            },
+            "3": {
+              "count": 6,
+              "total_value": 2663400,
+              "tax": 16246.739999999998
+            }
+          },
+          "pct_of_county_value": 17.9,
+          "pct_of_county_tax": 17.9,
+          "avg_property_value": 195381
+        },
+        "Stephens City": {
+          "property_count": 1169,
+          "land_value": 58206829,
+          "improvement_value": 149127700,
+          "total_value": 207332800,
+          "tax_amount": 1264730.0800000017,
+          "deferred_value": 1305500,
+          "total_acreage": 2947194.109999998,
+          "by_class": {
+            "1": {
+              "count": 628,
+              "total_value": 127962700,
+              "tax": 780572.4700000001
+            },
+            "2": {
+              "count": 444,
+              "total_value": 43171600,
+              "tax": 263346.7600000009
+            },
+            "4": {
+              "count": 76,
+              "total_value": 21895400,
+              "tax": 133561.93999999997
+            },
+            "6": {
+              "count": 2,
+              "total_value": 2152500,
+              "tax": 13130.25
+            },
+            "3": {
+              "count": 15,
+              "total_value": 10248400,
+              "tax": 62515.240000000005
+            },
+            "5": {
+              "count": 4,
+              "total_value": 1902200,
+              "tax": 11603.42
+            }
+          },
+          "pct_of_county_value": 1.67,
+          "pct_of_county_tax": 1.67,
+          "avg_property_value": 177359
+        },
+        "Opequon": {
+          "property_count": 6470,
+          "land_value": 522033247,
+          "improvement_value": 1405121200,
+          "total_value": 1927153100,
+          "tax_amount": 11755633.909999961,
+          "deferred_value": 30148900,
+          "total_acreage": 8234648.814999996,
+          "by_class": {
+            "1": {
+              "count": 4161,
+              "total_value": 1236208900,
+              "tax": 7540874.290000005
+            },
+            "2": {
+              "count": 2047,
+              "total_value": 507975600,
+              "tax": 3098651.159999993
+            },
+            "5": {
+              "count": 128,
+              "total_value": 45094100,
+              "tax": 275074.01
+            },
+            "4": {
+              "count": 105,
+              "total_value": 120693600,
+              "tax": 736230.9600000001
+            },
+            "6": {
+              "count": 22,
+              "total_value": 14619500,
+              "tax": 89178.95000000001
+            },
+            "3": {
+              "count": 7,
+              "total_value": 2561400,
+              "tax": 15624.539999999999
+            }
+          },
+          "pct_of_county_value": 15.57,
+          "pct_of_county_tax": 15.57,
+          "avg_property_value": 297860
+        },
+        "Stonewall": {
+          "property_count": 6238,
+          "land_value": 701789696,
+          "improvement_value": 1745656000,
+          "total_value": 2447328400,
+          "tax_amount": 14928703.240000052,
+          "deferred_value": 74857800,
+          "total_acreage": 5697682.462999992,
+          "by_class": {
+            "4": {
+              "count": 684,
+              "total_value": 1021171400,
+              "tax": 6229145.540000031
+            },
+            "2": {
+              "count": 3228,
+              "total_value": 808760700,
+              "tax": 4933440.269999997
+            },
+            "1": {
+              "count": 2121,
+              "total_value": 492490100,
+              "tax": 3004189.609999999
+            },
+            "5": {
+              "count": 158,
+              "total_value": 71821500,
+              "tax": 438111.1499999999
+            },
+            "6": {
+              "count": 41,
+              "total_value": 42031900,
+              "tax": 256394.59
+            },
+            "3": {
+              "count": 6,
+              "total_value": 11052800,
+              "tax": 67422.08
+            }
+          },
+          "pct_of_county_value": 19.77,
+          "pct_of_county_tax": 19.77,
+          "avg_property_value": 392326
+        },
+        "Red Bud": {
+          "property_count": 5584,
+          "land_value": 399910582,
+          "improvement_value": 1056994300,
+          "total_value": 1456904000,
+          "tax_amount": 8887114.399999963,
+          "deferred_value": 6408500,
+          "total_acreage": 16759403.239999987,
+          "by_class": {
+            "1": {
+              "count": 4767,
+              "total_value": 1229514200,
+              "tax": 7500036.619999987
+            },
+            "2": {
+              "count": 717,
+              "total_value": 143615900,
+              "tax": 876056.9899999994
+            },
+            "4": {
+              "count": 65,
+              "total_value": 54246000,
+              "tax": 330900.6
+            },
+            "5": {
+              "count": 27,
+              "total_value": 16110700,
+              "tax": 98275.26999999997
+            },
+            "6": {
+              "count": 4,
+              "total_value": 4284000,
+              "tax": 26132.4
+            },
+            "3": {
+              "count": 4,
+              "total_value": 9133200,
+              "tax": 55712.52
+            }
+          },
+          "pct_of_county_value": 11.77,
+          "pct_of_county_tax": 11.77,
+          "avg_property_value": 260907
+        },
+        "Middletown": {
+          "property_count": 594,
+          "land_value": 41457086,
+          "improvement_value": 87928400,
+          "total_value": 129385200,
+          "tax_amount": 789249.7199999994,
+          "deferred_value": 217900,
+          "total_acreage": 1690479.1700000006,
+          "by_class": {
+            "2": {
+              "count": 187,
+              "total_value": 37672500,
+              "tax": 229802.2500000001
+            },
+            "1": {
+              "count": 372,
+              "total_value": 73381600,
+              "tax": 447627.75999999995
+            },
+            "4": {
+              "count": 28,
+              "total_value": 12950600,
+              "tax": 78998.65999999997
+            },
+            "3": {
+              "count": 5,
+              "total_value": 4580000,
+              "tax": 27938.0
+            },
+            "0": {
+              "count": 1,
+              "total_value": 161300,
+              "tax": 983.93
+            },
+            "5": {
+              "count": 1,
+              "total_value": 639200,
+              "tax": 3899.12
+            }
+          },
+          "pct_of_county_value": 1.05,
+          "pct_of_county_tax": 1.05,
+          "avg_property_value": 217820
+        },
+        "Unknown": {
+          "property_count": 62,
+          "land_value": 3020209,
+          "improvement_value": 6532100,
+          "total_value": 9552300,
+          "tax_amount": 58269.03000000001,
+          "deferred_value": 0,
+          "total_acreage": 23.96,
+          "by_class": {
+            "0": {
+              "count": 62,
+              "total_value": 9552300,
+              "tax": 58269.03000000001
+            }
+          },
+          "pct_of_county_value": 0.08,
+          "pct_of_county_tax": 0.08,
+          "avg_property_value": 154069
+        }
+      },
+      "by_class": {
+        "1": {
+          "count": 17671,
+          "total_value": 4711868400,
+          "tax": 28742397.240000103,
+          "class_name": "Residential",
+          "pct_of_total": 38.06
+        },
+        "2": {
+          "count": 24771,
+          "total_value": 4447864900,
+          "tax": 27131975.8899998,
+          "class_name": "Agricultural/Undeveloped",
+          "pct_of_total": 35.93
+        },
+        "4": {
+          "count": 1580,
+          "total_value": 2201312600,
+          "tax": 13428006.860000027,
+          "class_name": "Commercial",
+          "pct_of_total": 17.78
+        },
+        "5": {
+          "count": 1837,
+          "total_value": 599871400,
+          "tax": 3659215.5400000047,
+          "class_name": "Industrial",
+          "pct_of_total": 4.85
+        },
+        "0": {
+          "count": 63,
+          "total_value": 9713600,
+          "tax": 59252.960000000014,
+          "class_name": "Class 0",
+          "pct_of_total": 0.08
+        },
+        "6": {
+          "count": 443,
+          "total_value": 326274500,
+          "tax": 1990274.4500000002,
+          "class_name": "Land Use (Deferred)",
+          "pct_of_total": 2.64
+        },
+        "3": {
+          "count": 47,
+          "total_value": 81618900,
+          "tax": 497875.29000000004,
+          "class_name": "Multi-Family",
+          "pct_of_total": 0.66
+        }
+      },
+      "by_zone": {
+        "RP": {
+          "count": 16466,
+          "total_value": 4311743000
+        },
+        "RA": {
+          "count": 16882,
+          "total_value": 4055686700
+        },
+        "R5": {
+          "count": 8402,
+          "total_value": 1107515700
+        },
+        "B1": {
+          "count": 124,
+          "total_value": 33910400
+        },
+        "M1": {
+          "count": 386,
+          "total_value": 1020784900
+        },
+        "B1B2": {
+          "count": 1,
+          "total_value": 394400
+        },
+        "R4": {
+          "count": 1215,
+          "total_value": 368209900
+        },
+        "MTND": {
+          "count": 113,
+          "total_value": 31658200
+        },
+        "B3": {
+          "count": 110,
+          "total_value": 115426500
+        },
+        "Unknown": {
+          "count": 91,
+          "total_value": 23657100
+        },
+        "R": {
+          "count": 388,
+          "total_value": 76033200
+        },
+        "RATR": {
+          "count": 82,
+          "total_value": 20207000
+        },
+        "M2": {
+          "count": 89,
+          "total_value": 92378700
+        },
+        "B2": {
+          "count": 634,
+          "total_value": 795925000
+        },
+        "I1": {
+          "count": 11,
+          "total_value": 2390300
+        },
+        "RAB2": {
+          "count": 3,
+          "total_value": 2870400
+        },
+        "NDD": {
+          "count": 410,
+          "total_value": 52222300
+        },
+        "EM": {
+          "count": 50,
+          "total_value": 19837900
+        },
+        "R3": {
+          "count": 236,
+          "total_value": 40914400
+        },
+        "R2": {
+          "count": 204,
+          "total_value": 37179000
+        },
+        "MHRA": {
+          "count": 1,
+          "total_value": 260600
+        },
+        "MH1": {
+          "count": 207,
+          "total_value": 40685500
+        },
+        "RO": {
+          "count": 43,
+          "total_value": 9024500
+        },
+        "B": {
+          "count": 104,
+          "total_value": 25835900
+        },
+        "R1": {
+          "count": 94,
+          "total_value": 17353400
+        },
+        "M1B2": {
+          "count": 3,
+          "total_value": 8130300
+        },
+        "B2RA": {
+          "count": 2,
+          "total_value": 577600
+        },
+        "QTND": {
+          "count": 1,
+          "total_value": 301900
+        },
+        "I": {
+          "count": 6,
+          "total_value": 1331200
+        },
+        "AK": {
+          "count": 2,
+          "total_value": 781800
+        },
+        "B2RP": {
+          "count": 4,
+          "total_value": 9958400
+        },
+        "B2B3": {
+          "count": 9,
+          "total_value": 18361000
+        },
+        "LC": {
+          "count": 1,
+          "total_value": 151200
+        },
+        "NDI1": {
+          "count": 1,
+          "total_value": 81900
+        },
+        "B2M1": {
+          "count": 2,
+          "total_value": 1747300
+        },
+        "RPB2": {
+          "count": 11,
+          "total_value": 10864400
+        },
+        "ICK": {
+          "count": 2,
+          "total_value": 1550500
+        },
+        "B3M1": {
+          "count": 1,
+          "total_value": 643400
+        },
+        "RPM1": {
+          "count": 1,
+          "total_value": 271300
+        },
+        "EAR": {
+          "count": 1,
+          "total_value": 70400
+        },
+        "ARAN": {
+          "count": 1,
+          "total_value": 280800
+        },
+        "M2RA": {
+          "count": 1,
+          "total_value": 1002400
+        },
+        "QA": {
+          "count": 1,
+          "total_value": 453100
+        },
+        "ER": {
+          "count": 3,
+          "total_value": 401200
+        },
+        "RAEM": {
+          "count": 1,
+          "total_value": 3024500
+        },
+        "R4B2": {
+          "count": 2,
+          "total_value": 2598900
+        },
+        "IAK": {
+          "count": 2,
+          "total_value": 779500
+        },
+        "B3I1": {
+          "count": 1,
+          "total_value": 1304700
+        },
+        "RPB1": {
+          "count": 1,
+          "total_value": 1800600
+        },
+        "Y": {
+          "count": 1,
+          "total_value": 233700
+        },
+        "I2": {
+          "count": 2,
+          "total_value": 762400
+        },
+        "MHB1": {
+          "count": 1,
+          "total_value": 1583400
+        },
+        "B2MS": {
+          "count": 1,
+          "total_value": 4475500
+        },
+        "RAM2": {
+          "count": 1,
+          "total_value": 2896100
+        }
+      }
+    },
+    {
+      "year": 2023,
+      "tax_rate": 0.51,
+      "commissioner": "Seth T. Thatcher",
+      "source_file": "RE 2023 Book.pdf",
+      "total_records": 46964,
+      "totals": {
+        "land_value": 4326783540,
+        "improvement_value": 10849206100,
+        "total_value": 15175808700,
+        "tax_amount": 77396624.37000042,
+        "deferred_value": 551285900
+      },
+      "by_district": {
+        "Shawnee": {
+          "property_count": 6370,
+          "land_value": 655219379,
+          "improvement_value": 1862321300,
+          "total_value": 2517532300,
+          "tax_amount": 12839414.730000036,
+          "deferred_value": 28165300,
+          "total_acreage": 10626611.76299999,
+          "by_class": {
+            "1": {
+              "count": 4751,
+              "total_value": 1641137500,
+              "tax": 8369801.2500000065
+            },
+            "2": {
+              "count": 1244,
+              "total_value": 274006900,
+              "tax": 1397435.1899999985
+            },
+            "4": {
+              "count": 304,
+              "total_value": 492348100,
+              "tax": 2510975.309999999
+            },
+            "5": {
+              "count": 49,
+              "total_value": 27932700,
+              "tax": 142456.77000000002
+            },
+            "6": {
+              "count": 18,
+              "total_value": 25582300,
+              "tax": 130469.73
+            },
+            "3": {
+              "count": 4,
+              "total_value": 56524800,
+              "tax": 288276.48000000004
+            }
+          },
+          "pct_of_county_value": 16.59,
+          "pct_of_county_tax": 16.59,
+          "avg_property_value": 395217
+        },
+        "Gainesboro": {
+          "property_count": 9347,
+          "land_value": 931665762,
+          "improvement_value": 1951733100,
+          "total_value": 2883370700,
+          "tax_amount": 14705190.57000003,
+          "deferred_value": 231397900,
+          "total_acreage": 3055851.076999998,
+          "by_class": {
+            "2": {
+              "count": 7269,
+              "total_value": 1730600100,
+              "tax": 8826060.509999981
+            },
+            "4": {
+              "count": 174,
+              "total_value": 402140000,
+              "tax": 2050913.9999999998
+            },
+            "1": {
+              "count": 927,
+              "total_value": 323506400,
+              "tax": 1649882.6399999994
+            },
+            "5": {
+              "count": 781,
+              "total_value": 273745900,
+              "tax": 1396104.0899999996
+            },
+            "6": {
+              "count": 196,
+              "total_value": 153378300,
+              "tax": 782229.3300000001
+            }
+          },
+          "pct_of_county_value": 19.0,
+          "pct_of_county_tax": 19.0,
+          "avg_property_value": 308481
+        },
+        "Back Creek": {
+          "property_count": 11689,
+          "land_value": 926600495,
+          "improvement_value": 1934250500,
+          "total_value": 2860793200,
+          "tax_amount": 14590045.320000373,
+          "deferred_value": 196444800,
+          "total_acreage": 10406380.811999934,
+          "by_class": {
+            "2": {
+              "count": 10112,
+              "total_value": 1798754800,
+              "tax": 9173649.48000022
+            },
+            "1": {
+              "count": 460,
+              "total_value": 170141000,
+              "tax": 867719.0999999992
+            },
+            "4": {
+              "count": 226,
+              "total_value": 489907700,
+              "tax": 2498529.27
+            },
+            "5": {
+              "count": 709,
+              "total_value": 258840900,
+              "tax": 1320088.5900000012
+            },
+            "6": {
+              "count": 172,
+              "total_value": 139949200,
+              "tax": 713740.9199999997
+            },
+            "3": {
+              "count": 10,
+              "total_value": 3199600,
+              "tax": 16317.960000000001
+            }
+          },
+          "pct_of_county_value": 18.85,
+          "pct_of_county_tax": 18.85,
+          "avg_property_value": 244742
+        },
+        "Stephens City": {
+          "property_count": 1229,
+          "land_value": 73915392,
+          "improvement_value": 202123300,
+          "total_value": 276037000,
+          "tax_amount": 1407788.6999999993,
+          "deferred_value": 635000,
+          "total_acreage": 3261933.6499999976,
+          "by_class": {
+            "1": {
+              "count": 738,
+              "total_value": 173694600,
+              "tax": 885842.4599999987
+            },
+            "2": {
+              "count": 392,
+              "total_value": 59832900,
+              "tax": 305147.7900000003
+            },
+            "4": {
+              "count": 78,
+              "total_value": 24868600,
+              "tax": 126829.86000000002
+            },
+            "6": {
+              "count": 2,
+              "total_value": 2476900,
+              "tax": 12632.19
+            },
+            "3": {
+              "count": 15,
+              "total_value": 11657400,
+              "tax": 59452.74
+            },
+            "5": {
+              "count": 4,
+              "total_value": 3506600,
+              "tax": 17883.66
+            }
+          },
+          "pct_of_county_value": 1.82,
+          "pct_of_county_tax": 1.82,
+          "avg_property_value": 224603
+        },
+        "Opequon": {
+          "property_count": 6138,
+          "land_value": 558396177,
+          "improvement_value": 1668835600,
+          "total_value": 2227231000,
+          "tax_amount": 11358878.099999996,
+          "deferred_value": 34838500,
+          "total_acreage": 6421090.314999997,
+          "by_class": {
+            "2": {
+              "count": 1517,
+              "total_value": 414824200,
+              "tax": 2115603.4199999995
+            },
+            "1": {
+              "count": 4366,
+              "total_value": 1602706800,
+              "tax": 8173804.6799999885
+            },
+            "4": {
+              "count": 105,
+              "total_value": 136853200,
+              "tax": 697951.3199999998
+            },
+            "5": {
+              "count": 125,
+              "total_value": 51797800,
+              "tax": 264168.78000000014
+            },
+            "6": {
+              "count": 22,
+              "total_value": 18627900,
+              "tax": 95002.29
+            },
+            "3": {
+              "count": 3,
+              "total_value": 2421100,
+              "tax": 12347.61
+            }
+          },
+          "pct_of_county_value": 14.68,
+          "pct_of_county_tax": 14.68,
+          "avg_property_value": 362859
+        },
+        "Red Bud": {
+          "property_count": 6133,
+          "land_value": 481636548,
+          "improvement_value": 1439883100,
+          "total_value": 1921503300,
+          "tax_amount": 9799666.829999968,
+          "deferred_value": 9370800,
+          "total_acreage": 17466169.40999998,
+          "by_class": {
+            "1": {
+              "count": 5332,
+              "total_value": 1627229200,
+              "tax": 8298868.919999985
+            },
+            "4": {
+              "count": 86,
+              "total_value": 100175400,
+              "tax": 510894.54000000004
+            },
+            "2": {
+              "count": 669,
+              "total_value": 159334100,
+              "tax": 812603.9100000003
+            },
+            "5": {
+              "count": 37,
+              "total_value": 19162200,
+              "tax": 97727.22
+            },
+            "6": {
+              "count": 5,
+              "total_value": 5368300,
+              "tax": 27378.33
+            },
+            "3": {
+              "count": 4,
+              "total_value": 10234100,
+              "tax": 52193.909999999996
+            }
+          },
+          "pct_of_county_value": 12.66,
+          "pct_of_county_tax": 12.66,
+          "avg_property_value": 313306
+        },
+        "Stonewall": {
+          "property_count": 5251,
+          "land_value": 641427693,
+          "improvement_value": 1667978300,
+          "total_value": 2309338700,
+          "tax_amount": 11777627.370000025,
+          "deferred_value": 50198300,
+          "total_acreage": 5399169.233000007,
+          "by_class": {
+            "1": {
+              "count": 2702,
+              "total_value": 814942700,
+              "tax": 4156207.7700000033
+            },
+            "4": {
+              "count": 603,
+              "total_value": 915640200,
+              "tax": 4669765.020000034
+            },
+            "2": {
+              "count": 1807,
+              "total_value": 482716700,
+              "tax": 2461855.169999998
+            },
+            "6": {
+              "count": 21,
+              "total_value": 23278400,
+              "tax": 118719.83999999998
+            },
+            "5": {
+              "count": 112,
+              "total_value": 61470300,
+              "tax": 313498.5299999999
+            },
+            "3": {
+              "count": 6,
+              "total_value": 11290400,
+              "tax": 57581.04
+            }
+          },
+          "pct_of_county_value": 15.22,
+          "pct_of_county_tax": 15.22,
+          "avg_property_value": 439790
+        },
+        "Middletown": {
+          "property_count": 747,
+          "land_value": 54229276,
+          "improvement_value": 114017800,
+          "total_value": 168246600,
+          "tax_amount": 858057.6599999998,
+          "deferred_value": 235300,
+          "total_acreage": 1818103.6700000006,
+          "by_class": {
+            "2": {
+              "count": 172,
+              "total_value": 45304800,
+              "tax": 231054.4799999999
+            },
+            "1": {
+              "count": 532,
+              "total_value": 101854400,
+              "tax": 519457.4399999994
+            },
+            "4": {
+              "count": 35,
+              "total_value": 15317700,
+              "tax": 78120.27
+            },
+            "3": {
+              "count": 6,
+              "total_value": 4955100,
+              "tax": 25271.01
+            },
+            "0": {
+              "count": 1,
+              "total_value": 186000,
+              "tax": 948.6
+            },
+            "5": {
+              "count": 1,
+              "total_value": 628600,
+              "tax": 3205.86
+            }
+          },
+          "pct_of_county_value": 1.11,
+          "pct_of_county_tax": 1.11,
+          "avg_property_value": 225230
+        },
+        "Unknown": {
+          "property_count": 60,
+          "land_value": 3692818,
+          "improvement_value": 8063100,
+          "total_value": 11755900,
+          "tax_amount": 59955.090000000004,
+          "deferred_value": 0,
+          "total_acreage": 30.76,
+          "by_class": {
+            "0": {
+              "count": 60,
+              "total_value": 11755900,
+              "tax": 59955.090000000004
+            }
+          },
+          "pct_of_county_value": 0.08,
+          "pct_of_county_tax": 0.08,
+          "avg_property_value": 195932
+        }
+      },
+      "by_class": {
+        "1": {
+          "count": 19808,
+          "total_value": 6455212600,
+          "tax": 32921584.26000011,
+          "class_name": "Residential",
+          "pct_of_total": 42.54
+        },
+        "2": {
+          "count": 23182,
+          "total_value": 4965374500,
+          "tax": 25323409.949999437,
+          "class_name": "Agricultural/Undeveloped",
+          "pct_of_total": 32.72
+        },
+        "4": {
+          "count": 1611,
+          "total_value": 2577250900,
+          "tax": 13143979.59000003,
+          "class_name": "Commercial",
+          "pct_of_total": 16.98
+        },
+        "5": {
+          "count": 1818,
+          "total_value": 697085000,
+          "tax": 3555133.499999998,
+          "class_name": "Industrial",
+          "pct_of_total": 4.59
+        },
+        "6": {
+          "count": 436,
+          "total_value": 368661300,
+          "tax": 1880172.6299999987,
+          "class_name": "Land Use (Deferred)",
+          "pct_of_total": 2.43
+        },
+        "0": {
+          "count": 61,
+          "total_value": 11941900,
+          "tax": 60903.689999999995,
+          "class_name": "Class 0",
+          "pct_of_total": 0.08
+        },
+        "3": {
+          "count": 48,
+          "total_value": 100282500,
+          "tax": 511440.75,
+          "class_name": "Multi-Family",
+          "pct_of_total": 0.66
+        }
+      },
+      "by_zone": {
+        "RP": {
+          "count": 16736,
+          "total_value": 5358444700
+        },
+        "RA": {
+          "count": 16869,
+          "total_value": 4900835200
+        },
+        "R5": {
+          "count": 8503,
+          "total_value": 1434604100
+        },
+        "B1": {
+          "count": 126,
+          "total_value": 39325900
+        },
+        "M1": {
+          "count": 381,
+          "total_value": 1212181400
+        },
+        "B1B2": {
+          "count": 1,
+          "total_value": 471200
+        },
+        "R4": {
+          "count": 1246,
+          "total_value": 487883700
+        },
+        "MTND": {
+          "count": 246,
+          "total_value": 51135600
+        },
+        "B3": {
+          "count": 109,
+          "total_value": 135529000
+        },
+        "R": {
+          "count": 394,
+          "total_value": 94442200
+        },
+        "RATR": {
+          "count": 82,
+          "total_value": 23829200
+        },
+        "M2": {
+          "count": 88,
+          "total_value": 109569200
+        },
+        "B2": {
+          "count": 641,
+          "total_value": 900064000
+        },
+        "I1": {
+          "count": 8,
+          "total_value": 2523300
+        },
+        "RAB2": {
+          "count": 2,
+          "total_value": 2362500
+        },
+        "B2RA": {
+          "count": 4,
+          "total_value": 3106100
+        },
+        "R2": {
+          "count": 210,
+          "total_value": 47269200
+        },
+        "NDD": {
+          "count": 410,
+          "total_value": 64989300
+        },
+        "EM": {
+          "count": 48,
+          "total_value": 23066800
+        },
+        "Unknown": {
+          "count": 62,
+          "total_value": 18199800
+        },
+        "MHRA": {
+          "count": 1,
+          "total_value": 270300
+        },
+        "MH1": {
+          "count": 207,
+          "total_value": 45459200
+        },
+        "R3": {
+          "count": 244,
+          "total_value": 49984600
+        },
+        "RO": {
+          "count": 44,
+          "total_value": 10684100
+        },
+        "R1": {
+          "count": 111,
+          "total_value": 41809700
+        },
+        "B": {
+          "count": 131,
+          "total_value": 31129500
+        },
+        "M1B2": {
+          "count": 2,
+          "total_value": 5166800
+        },
+        "I1I2": {
+          "count": 1,
+          "total_value": 1911800
+        },
+        "QTND": {
+          "count": 1,
+          "total_value": 374400
+        },
+        "I": {
+          "count": 6,
+          "total_value": 1539700
+        },
+        "AK": {
+          "count": 2,
+          "total_value": 965100
+        },
+        "B2RP": {
+          "count": 4,
+          "total_value": 10819100
+        },
+        "B2B3": {
+          "count": 9,
+          "total_value": 20030200
+        },
+        "B2M1": {
+          "count": 4,
+          "total_value": 6657500
+        },
+        "RPB2": {
+          "count": 11,
+          "total_value": 12129900
+        },
+        "B3M1": {
+          "count": 1,
+          "total_value": 749100
+        },
+        "RPM1": {
+          "count": 1,
+          "total_value": 317700
+        },
+        "M1B3": {
+          "count": 1,
+          "total_value": 2767900
+        },
+        "EAR": {
+          "count": 1,
+          "total_value": 545300
+        },
+        "M2RA": {
+          "count": 1,
+          "total_value": 1120200
+        },
+        "QA": {
+          "count": 1,
+          "total_value": 544800
+        },
+        "ER": {
+          "count": 1,
+          "total_value": 310600
+        },
+        "RAEM": {
+          "count": 1,
+          "total_value": 3294200
+        },
+        "IAK": {
+          "count": 2,
+          "total_value": 975900
+        },
+        "ICK": {
+          "count": 1,
+          "total_value": 1395200
+        },
+        "B3I1": {
+          "count": 1,
+          "total_value": 1571400
+        },
+        "RPB1": {
+          "count": 1,
+          "total_value": 1913300
+        },
+        "NDI1": {
+          "count": 1,
+          "total_value": 100100
+        },
+        "Y": {
+          "count": 1,
+          "total_value": 288000
+        },
+        "I2": {
+          "count": 2,
+          "total_value": 926400
+        },
+        "MHB1": {
+          "count": 1,
+          "total_value": 1743400
+        },
+        "B2MS": {
+          "count": 1,
+          "total_value": 5471100
+        },
+        "RAM2": {
+          "count": 1,
+          "total_value": 3009800
+        }
+      }
+    },
+    {
+      "year": 2024,
+      "tax_rate": 0.51,
+      "commissioner": "Tonya Sibert",
+      "source_file": "RE_Book_2024.pdf",
+      "total_records": 48040,
+      "totals": {
+        "land_value": 4399925735,
+        "improvement_value": 11214255700,
+        "total_value": 15614062900,
+        "tax_amount": 79631720.79000042,
+        "deferred_value": 543621800
+      },
+      "by_district": {
+        "Gainesboro": {
+          "property_count": 9291,
+          "land_value": 934490506,
+          "improvement_value": 1970945300,
+          "total_value": 2905422000,
+          "tax_amount": 14817652.200000029,
+          "deferred_value": 230488200,
+          "total_acreage": 2844787.396999998,
+          "by_class": {
+            "2": {
+              "count": 7151,
+              "total_value": 1723404900,
+              "tax": 8789364.989999978
+            },
+            "4": {
+              "count": 173,
+              "total_value": 404055900,
+              "tax": 2060685.0899999999
+            },
+            "1": {
+              "count": 988,
+              "total_value": 348510800,
+              "tax": 1777405.0799999994
+            },
+            "5": {
+              "count": 784,
+              "total_value": 277339700,
+              "tax": 1414432.4699999997
+            },
+            "6": {
+              "count": 195,
+              "total_value": 152110700,
+              "tax": 775764.57
+            }
+          },
+          "pct_of_county_value": 18.61,
+          "pct_of_county_tax": 18.61,
+          "avg_property_value": 312714
+        },
+        "Back Creek": {
+          "property_count": 11616,
+          "land_value": 928345339,
+          "improvement_value": 1994114000,
+          "total_value": 2922402600,
+          "tax_amount": 14904253.260000367,
+          "deferred_value": 190858000,
+          "total_acreage": 10423200.32199992,
+          "by_class": {
+            "2": {
+              "count": 10039,
+              "total_value": 1829481900,
+              "tax": 9330357.6900002
+            },
+            "1": {
+              "count": 460,
+              "total_value": 170413400,
+              "tax": 869108.3399999994
+            },
+            "4": {
+              "count": 223,
+              "total_value": 521161600,
+              "tax": 2657924.1599999997
+            },
+            "5": {
+              "count": 713,
+              "total_value": 259256400,
+              "tax": 1322207.640000001
+            },
+            "6": {
+              "count": 171,
+              "total_value": 138889700,
+              "tax": 708337.4699999997
+            },
+            "3": {
+              "count": 10,
+              "total_value": 3199600,
+              "tax": 16317.960000000001
+            }
+          },
+          "pct_of_county_value": 18.72,
+          "pct_of_county_tax": 18.72,
+          "avg_property_value": 251584
+        },
+        "Stephens City": {
+          "property_count": 1518,
+          "land_value": 97793473,
+          "improvement_value": 240617600,
+          "total_value": 338409900,
+          "tax_amount": 1725890.4899999988,
+          "deferred_value": 691600,
+          "total_acreage": 2383812.4300000076,
+          "by_class": {
+            "1": {
+              "count": 1155,
+              "total_value": 235565000,
+              "tax": 1201381.4999999993
+            },
+            "2": {
+              "count": 270,
+              "total_value": 60815800,
+              "tax": 310160.58
+            },
+            "4": {
+              "count": 73,
+              "total_value": 24953300,
+              "tax": 127261.83000000002
+            },
+            "6": {
+              "count": 1,
+              "total_value": 1911800,
+              "tax": 9750.18
+            },
+            "3": {
+              "count": 15,
+              "total_value": 11657400,
+              "tax": 59452.74
+            },
+            "5": {
+              "count": 4,
+              "total_value": 3506600,
+              "tax": 17883.66
+            }
+          },
+          "pct_of_county_value": 2.17,
+          "pct_of_county_tax": 2.17,
+          "avg_property_value": 222931
+        },
+        "Opequon": {
+          "property_count": 6598,
+          "land_value": 568738800,
+          "improvement_value": 1779341900,
+          "total_value": 2348075200,
+          "tax_amount": 11975183.519999996,
+          "deferred_value": 34072100,
+          "total_acreage": 7720679.074999996,
+          "by_class": {
+            "2": {
+              "count": 1501,
+              "total_value": 414363900,
+              "tax": 2113255.889999999
+            },
+            "1": {
+              "count": 4844,
+              "total_value": 1698605500,
+              "tax": 8662888.050000006
+            },
+            "4": {
+              "count": 104,
+              "total_value": 160861100,
+              "tax": 820391.61
+            },
+            "5": {
+              "count": 124,
+              "total_value": 50866000,
+              "tax": 259416.6000000001
+            },
+            "6": {
+              "count": 22,
+              "total_value": 20957600,
+              "tax": 106883.76
+            },
+            "3": {
+              "count": 3,
+              "total_value": 2421100,
+              "tax": 12347.61
+            }
+          },
+          "pct_of_county_value": 15.04,
+          "pct_of_county_tax": 15.04,
+          "avg_property_value": 355877
+        },
+        "Shawnee": {
+          "property_count": 6414,
+          "land_value": 659323498,
+          "improvement_value": 1884836500,
+          "total_value": 2544153400,
+          "tax_amount": 12975182.34000002,
+          "deferred_value": 27749300,
+          "total_acreage": 10640903.912999991,
+          "by_class": {
+            "2": {
+              "count": 1223,
+              "total_value": 271148000,
+              "tax": 1382854.7999999984
+            },
+            "1": {
+              "count": 4771,
+              "total_value": 1662175700,
+              "tax": 8477096.07
+            },
+            "4": {
+              "count": 305,
+              "total_value": 496367300,
+              "tax": 2531473.229999999
+            },
+            "0": {
+              "count": 43,
+              "total_value": 315900,
+              "tax": 1611.0900000000006
+            },
+            "5": {
+              "count": 51,
+              "total_value": 31204800,
+              "tax": 159144.48
+            },
+            "6": {
+              "count": 17,
+              "total_value": 23244800,
+              "tax": 118548.48
+            },
+            "3": {
+              "count": 4,
+              "total_value": 59696900,
+              "tax": 304454.19
+            }
+          },
+          "pct_of_county_value": 16.29,
+          "pct_of_county_tax": 16.29,
+          "avg_property_value": 396656
+        },
+        "Red Bud": {
+          "property_count": 6221,
+          "land_value": 489170142,
+          "improvement_value": 1499557800,
+          "total_value": 1988720300,
+          "tax_amount": 10142473.529999996,
+          "deferred_value": 9054100,
+          "total_acreage": 17879216.829999976,
+          "by_class": {
+            "1": {
+              "count": 5463,
+              "total_value": 1708973500,
+              "tax": 8715764.849999959
+            },
+            "4": {
+              "count": 86,
+              "total_value": 100175400,
+              "tax": 510894.5399999999
+            },
+            "2": {
+              "count": 631,
+              "total_value": 147398000,
+              "tax": 751729.8000000003
+            },
+            "5": {
+              "count": 33,
+              "total_value": 15787800,
+              "tax": 80517.78
+            },
+            "6": {
+              "count": 3,
+              "total_value": 2738400,
+              "tax": 13965.84
+            },
+            "3": {
+              "count": 5,
+              "total_value": 13647200,
+              "tax": 69600.72
+            }
+          },
+          "pct_of_county_value": 12.74,
+          "pct_of_county_tax": 12.74,
+          "avg_property_value": 319679
+        },
+        "Stonewall": {
+          "property_count": 5445,
+          "land_value": 660630409,
+          "improvement_value": 1703691900,
+          "total_value": 2364309300,
+          "tax_amount": 12057977.430000031,
+          "deferred_value": 50530300,
+          "total_acreage": 6181756.6830000095,
+          "by_class": {
+            "1": {
+              "count": 2949,
+              "total_value": 842315600,
+              "tax": 4295809.560000009
+            },
+            "4": {
+              "count": 608,
+              "total_value": 948871700,
+              "tax": 4839245.6700000325
+            },
+            "2": {
+              "count": 1748,
+              "total_value": 479645900,
+              "tax": 2446194.0899999966
+            },
+            "6": {
+              "count": 22,
+              "total_value": 23567400,
+              "tax": 120193.74
+            },
+            "5": {
+              "count": 112,
+              "total_value": 58618300,
+              "tax": 298953.3300000001
+            },
+            "3": {
+              "count": 6,
+              "total_value": 11290400,
+              "tax": 57581.04
+            }
+          },
+          "pct_of_county_value": 15.14,
+          "pct_of_county_tax": 15.14,
+          "avg_property_value": 434217
+        },
+        "Middletown": {
+          "property_count": 789,
+          "land_value": 58860899,
+          "improvement_value": 132646300,
+          "total_value": 191506900,
+          "tax_amount": 976685.19,
+          "deferred_value": 178200,
+          "total_acreage": 1785955.4300000004,
+          "by_class": {
+            "2": {
+              "count": 169,
+              "total_value": 45010000,
+              "tax": 229550.99999999994
+            },
+            "1": {
+              "count": 576,
+              "total_value": 124826300,
+              "tax": 636614.13
+            },
+            "4": {
+              "count": 37,
+              "total_value": 16529500,
+              "tax": 84300.45000000001
+            },
+            "3": {
+              "count": 6,
+              "total_value": 4955100,
+              "tax": 25271.01
+            },
+            "0": {
+              "count": 1,
+              "total_value": 186000,
+              "tax": 948.6
+            }
+          },
+          "pct_of_county_value": 1.23,
+          "pct_of_county_tax": 1.23,
+          "avg_property_value": 242721
+        },
+        "Unknown": {
+          "property_count": 148,
+          "land_value": 2572669,
+          "improvement_value": 8504400,
+          "total_value": 11063300,
+          "tax_amount": 56422.83000000002,
+          "deferred_value": 0,
+          "total_acreage": 20.54,
+          "by_class": {
+            "0": {
+              "count": 148,
+              "total_value": 11063300,
+              "tax": 56422.83000000002
+            }
+          },
+          "pct_of_county_value": 0.07,
+          "pct_of_county_tax": 0.07,
+          "avg_property_value": 74752
+        }
+      },
+      "by_class": {
+        "2": {
+          "count": 22732,
+          "total_value": 4971268400,
+          "tax": 25353468.839999493,
+          "class_name": "Agricultural/Undeveloped",
+          "pct_of_total": 31.84
+        },
+        "1": {
+          "count": 21206,
+          "total_value": 6791385800,
+          "tax": 34636067.58,
+          "class_name": "Residential",
+          "pct_of_total": 43.5
+        },
+        "4": {
+          "count": 1609,
+          "total_value": 2672975800,
+          "tax": 13632176.580000041,
+          "class_name": "Commercial",
+          "pct_of_total": 17.12
+        },
+        "5": {
+          "count": 1821,
+          "total_value": 696579600,
+          "tax": 3552555.9600000014,
+          "class_name": "Industrial",
+          "pct_of_total": 4.46
+        },
+        "6": {
+          "count": 431,
+          "total_value": 363420400,
+          "tax": 1853444.0399999984,
+          "class_name": "Land Use (Deferred)",
+          "pct_of_total": 2.33
+        },
+        "0": {
+          "count": 192,
+          "total_value": 11565200,
+          "tax": 58982.52000000002,
+          "class_name": "Class 0",
+          "pct_of_total": 0.07
+        },
+        "3": {
+          "count": 49,
+          "total_value": 106867700,
+          "tax": 545025.2700000001,
+          "class_name": "Multi-Family",
+          "pct_of_total": 0.68
+        }
+      },
+      "by_zone": {
+        "RA": {
+          "count": 16917,
+          "total_value": 4946763600
+        },
+        "R5": {
+          "count": 8395,
+          "total_value": 1501977500
+        },
+        "B1": {
+          "count": 125,
+          "total_value": 38542700
+        },
+        "M1": {
+          "count": 381,
+          "total_value": 1269961700
+        },
+        "B1B2": {
+          "count": 1,
+          "total_value": 471200
+        },
+        "RP": {
+          "count": 17162,
+          "total_value": 5501593500
+        },
+        "R4": {
+          "count": 1495,
+          "total_value": 514900500
+        },
+        "MTND": {
+          "count": 287,
+          "total_value": 69165100
+        },
+        "B3": {
+          "count": 109,
+          "total_value": 135601200
+        },
+        "R": {
+          "count": 393,
+          "total_value": 94858300
+        },
+        "RATR": {
+          "count": 82,
+          "total_value": 23829200
+        },
+        "M2": {
+          "count": 89,
+          "total_value": 111046200
+        },
+        "B2": {
+          "count": 635,
+          "total_value": 911017100
+        },
+        "B": {
+          "count": 129,
+          "total_value": 34844900
+        },
+        "Unknown": {
+          "count": 195,
+          "total_value": 17947900
+        },
+        "I1": {
+          "count": 8,
+          "total_value": 2523300
+        },
+        "RAB2": {
+          "count": 2,
+          "total_value": 2362500
+        },
+        "B2RA": {
+          "count": 3,
+          "total_value": 1368500
+        },
+        "R2": {
+          "count": 208,
+          "total_value": 47092000
+        },
+        "NDD": {
+          "count": 711,
+          "total_value": 123115900
+        },
+        "EM": {
+          "count": 48,
+          "total_value": 23066800
+        },
+        "MHRA": {
+          "count": 1,
+          "total_value": 270300
+        },
+        "MH1": {
+          "count": 207,
+          "total_value": 45601300
+        },
+        "R3": {
+          "count": 244,
+          "total_value": 49984600
+        },
+        "R1": {
+          "count": 108,
+          "total_value": 45932100
+        },
+        "RO": {
+          "count": 44,
+          "total_value": 10684100
+        },
+        "M1B2": {
+          "count": 2,
+          "total_value": 5166800
+        },
+        "I1I2": {
+          "count": 1,
+          "total_value": 1911800
+        },
+        "QTND": {
+          "count": 1,
+          "total_value": 374400
+        },
+        "I": {
+          "count": 6,
+          "total_value": 1539700
+        },
+        "AK": {
+          "count": 2,
+          "total_value": 965100
+        },
+        "B2RP": {
+          "count": 4,
+          "total_value": 10819100
+        },
+        "B2B3": {
+          "count": 9,
+          "total_value": 20030200
+        },
+        "RPB2": {
+          "count": 11,
+          "total_value": 12129900
+        },
+        "B3M1": {
+          "count": 1,
+          "total_value": 749100
+        },
+        "RPM1": {
+          "count": 1,
+          "total_value": 317700
+        },
+        "M1B3": {
+          "count": 1,
+          "total_value": 3611500
+        },
+        "EAR": {
+          "count": 1,
+          "total_value": 545300
+        },
+        "B2M1": {
+          "count": 4,
+          "total_value": 6657500
+        },
+        "M2RA": {
+          "count": 1,
+          "total_value": 1120200
+        },
+        "QA": {
+          "count": 1,
+          "total_value": 544800
+        },
+        "ER": {
+          "count": 1,
+          "total_value": 310600
+        },
+        "RAEM": {
+          "count": 1,
+          "total_value": 3294200
+        },
+        "IAK": {
+          "count": 2,
+          "total_value": 975900
+        },
+        "RPB1": {
+          "count": 1,
+          "total_value": 2780200
+        },
+        "M1RA": {
+          "count": 1,
+          "total_value": 1191500
+        },
+        "ICK": {
+          "count": 1,
+          "total_value": 1395200
+        },
+        "B3I1": {
+          "count": 1,
+          "total_value": 1571400
+        },
+        "Y": {
+          "count": 1,
+          "total_value": 288000
+        },
+        "I2": {
+          "count": 2,
+          "total_value": 926400
+        },
+        "MHB1": {
+          "count": 1,
+          "total_value": 1743400
+        },
+        "B2MS": {
+          "count": 1,
+          "total_value": 5471100
+        },
+        "RAM2": {
+          "count": 1,
+          "total_value": 3009800
+        },
+        "NDI1": {
+          "count": 1,
+          "total_value": 100100
+        }
+      }
+    },
+    {
+      "year": 2025,
+      "tax_rate": 0.48,
+      "commissioner": "Tonya Sibert",
+      "source_file": "RE_2025_Book.pdf",
+      "total_records": 48532,
+      "totals": {
+        "land_value": 5521641636,
+        "improvement_value": 13576954469,
+        "total_value": 19081249569,
+        "tax_amount": 91589997.94000258,
+        "deferred_value": 609609200
+      },
+      "by_district": {
+        "Gainesboro": {
+          "property_count": 9312,
+          "land_value": 1144609088,
+          "improvement_value": 2372030620,
+          "total_value": 3516591620,
+          "tax_amount": 16879639.780000016,
+          "deferred_value": 252935400,
+          "total_acreage": 2812712.289999998,
+          "by_class": {
+            "4": {
+              "count": 172,
+              "total_value": 532724700,
+              "tax": 2557078.5600000005
+            },
+            "2": {
+              "count": 6998,
+              "total_value": 2065794720,
+              "tax": 9915814.660000041
+            },
+            "1": {
+              "count": 1164,
+              "total_value": 426748900,
+              "tax": 2048394.719999995
+            },
+            "5": {
+              "count": 783,
+              "total_value": 327984900,
+              "tax": 1574327.5200000019
+            },
+            "6": {
+              "count": 195,
+              "total_value": 163338400,
+              "tax": 784024.3199999997
+            }
+          },
+          "pct_of_county_value": 18.43,
+          "pct_of_county_tax": 18.43,
+          "avg_property_value": 377641
+        },
+        "Shawnee": {
+          "property_count": 6402,
+          "land_value": 814991260,
+          "improvement_value": 2209960800,
+          "total_value": 3024947100,
+          "tax_amount": 14519746.079999996,
+          "deferred_value": 29721800,
+          "total_acreage": 11016038.172999995,
+          "by_class": {
+            "2": {
+              "count": 1042,
+              "total_value": 248617000,
+              "tax": 1193361.6
+            },
+            "1": {
+              "count": 4961,
+              "total_value": 2048826900,
+              "tax": 9834369.119999992
+            },
+            "4": {
+              "count": 309,
+              "total_value": 594266100,
+              "tax": 2852477.2799999975
+            },
+            "0": {
+              "count": 20,
+              "total_value": 190400,
+              "tax": 913.9200000000001
+            },
+            "5": {
+              "count": 48,
+              "total_value": 31237900,
+              "tax": 149941.92
+            },
+            "6": {
+              "count": 17,
+              "total_value": 27006300,
+              "tax": 129630.24000000002
+            },
+            "3": {
+              "count": 5,
+              "total_value": 74802500,
+              "tax": 359052.0
+            }
+          },
+          "pct_of_county_value": 15.85,
+          "pct_of_county_tax": 15.85,
+          "avg_property_value": 472500
+        },
+        "Back Creek": {
+          "property_count": 11962,
+          "land_value": 1169671511,
+          "improvement_value": 2419119120,
+          "total_value": 3571509220,
+          "tax_amount": 17143244.259999752,
+          "deferred_value": 218173800,
+          "total_acreage": 10800731.9719999,
+          "by_class": {
+            "2": {
+              "count": 10079,
+              "total_value": 2232867220,
+              "tax": 10717762.659999978
+            },
+            "1": {
+              "count": 765,
+              "total_value": 229509400,
+              "tax": 1101645.1200000006
+            },
+            "4": {
+              "count": 224,
+              "total_value": 636936700,
+              "tax": 3057296.1599999988
+            },
+            "5": {
+              "count": 713,
+              "total_value": 308266700,
+              "tax": 1479680.1600000006
+            },
+            "6": {
+              "count": 170,
+              "total_value": 158974600,
+              "tax": 763078.08
+            },
+            "3": {
+              "count": 11,
+              "total_value": 4954600,
+              "tax": 23782.08
+            }
+          },
+          "pct_of_county_value": 18.72,
+          "pct_of_county_tax": 18.72,
+          "avg_property_value": 298571
+        },
+        "Red Bud": {
+          "property_count": 6302,
+          "land_value": 609474943,
+          "improvement_value": 1805478089,
+          "total_value": 2414952489,
+          "tax_amount": 11591771.949999979,
+          "deferred_value": 9137300,
+          "total_acreage": 17598462.439999983,
+          "by_class": {
+            "1": {
+              "count": 5616,
+              "total_value": 2118110900,
+              "tax": 10166932.31999998
+            },
+            "2": {
+              "count": 563,
+              "total_value": 144488800,
+              "tax": 693546.2400000001
+            },
+            "4": {
+              "count": 82,
+              "total_value": 116764189,
+              "tax": 560468.11
+            },
+            "5": {
+              "count": 33,
+              "total_value": 17971100,
+              "tax": 86261.28000000001
+            },
+            "6": {
+              "count": 3,
+              "total_value": 2568100,
+              "tax": 12326.880000000001
+            },
+            "3": {
+              "count": 5,
+              "total_value": 15049400,
+              "tax": 72237.12
+            }
+          },
+          "pct_of_county_value": 12.66,
+          "pct_of_county_tax": 12.66,
+          "avg_property_value": 383204
+        },
+        "Stonewall": {
+          "property_count": 5524,
+          "land_value": 837376281,
+          "improvement_value": 2126880300,
+          "total_value": 2964255900,
+          "tax_amount": 14228428.320000086,
+          "deferred_value": 53693300,
+          "total_acreage": 5669546.20300001,
+          "by_class": {
+            "1": {
+              "count": 3019,
+              "total_value": 1042737600,
+              "tax": 5005140.479999994
+            },
+            "2": {
+              "count": 1749,
+              "total_value": 564649000,
+              "tax": 2710315.200000003
+            },
+            "4": {
+              "count": 619,
+              "total_value": 1247143800,
+              "tax": 5986290.239999982
+            },
+            "6": {
+              "count": 22,
+              "total_value": 33848000,
+              "tax": 162470.40000000002
+            },
+            "5": {
+              "count": 109,
+              "total_value": 62160900,
+              "tax": 298372.32
+            },
+            "3": {
+              "count": 6,
+              "total_value": 13716600,
+              "tax": 65839.68000000001
+            }
+          },
+          "pct_of_county_value": 15.53,
+          "pct_of_county_tax": 15.53,
+          "avg_property_value": 536614
+        },
+        "Middletown": {
+          "property_count": 790,
+          "land_value": 75590540,
+          "improvement_value": 190116300,
+          "total_value": 265706700,
+          "tax_amount": 1275392.1599999988,
+          "deferred_value": 314500,
+          "total_acreage": 2020628.5000000005,
+          "by_class": {
+            "1": {
+              "count": 675,
+              "total_value": 224695100,
+              "tax": 1078536.4799999988
+            },
+            "2": {
+              "count": 70,
+              "total_value": 14883000,
+              "tax": 71438.4
+            },
+            "4": {
+              "count": 39,
+              "total_value": 20413600,
+              "tax": 97985.28
+            },
+            "3": {
+              "count": 6,
+              "total_value": 5715000,
+              "tax": 27432.000000000004
+            }
+          },
+          "pct_of_county_value": 1.39,
+          "pct_of_county_tax": 1.39,
+          "avg_property_value": 336338
+        },
+        "Opequon": {
+          "property_count": 6599,
+          "land_value": 730178330,
+          "improvement_value": 2115373340,
+          "total_value": 2845546940,
+          "tax_amount": 13658625.31,
+          "deferred_value": 43351000,
+          "total_acreage": 8276809.675,
+          "by_class": {
+            "1": {
+              "count": 4879,
+              "total_value": 2099804700,
+              "tax": 10079062.56000002
+            },
+            "2": {
+              "count": 1466,
+              "total_value": 489221240,
+              "tax": 2348261.9500000044
+            },
+            "4": {
+              "count": 105,
+              "total_value": 165352700,
+              "tax": 793692.9600000001
+            },
+            "5": {
+              "count": 125,
+              "total_value": 64686300,
+              "tax": 310494.24000000005
+            },
+            "6": {
+              "count": 21,
+              "total_value": 23556600,
+              "tax": 113071.67999999998
+            },
+            "3": {
+              "count": 3,
+              "total_value": 2925400,
+              "tax": 14041.92
+            }
+          },
+          "pct_of_county_value": 14.91,
+          "pct_of_county_tax": 14.91,
+          "avg_property_value": 431209
+        },
+        "Stephens City": {
+          "property_count": 1520,
+          "land_value": 135232651,
+          "improvement_value": 330380500,
+          "total_value": 465612600,
+          "tax_amount": 2234940.480000006,
+          "deferred_value": 2282100,
+          "total_acreage": 2034338.890000001,
+          "by_class": {
+            "1": {
+              "count": 1271,
+              "total_value": 368298200,
+              "tax": 1767831.360000001
+            },
+            "2": {
+              "count": 157,
+              "total_value": 47636400,
+              "tax": 228654.72000000003
+            },
+            "4": {
+              "count": 71,
+              "total_value": 28868400,
+              "tax": 138568.32
+            },
+            "6": {
+              "count": 1,
+              "total_value": 2193200,
+              "tax": 10527.36
+            },
+            "5": {
+              "count": 4,
+              "total_value": 5605400,
+              "tax": 26905.92
+            },
+            "3": {
+              "count": 16,
+              "total_value": 13011000,
+              "tax": 62452.8
+            }
+          },
+          "pct_of_county_value": 2.44,
+          "pct_of_county_tax": 2.44,
+          "avg_property_value": 306324
+        },
+        "Unknown": {
+          "property_count": 121,
+          "land_value": 4517032,
+          "improvement_value": 7615400,
+          "total_value": 12127000,
+          "tax_amount": 58209.59999999999,
+          "deferred_value": 0,
+          "total_acreage": 17.35,
+          "by_class": {
+            "0": {
+              "count": 121,
+              "total_value": 12127000,
+              "tax": 58209.59999999999
+            }
+          },
+          "pct_of_county_value": 0.06,
+          "pct_of_county_tax": 0.06,
+          "avg_property_value": 100223
+        }
+      },
+      "by_class": {
+        "4": {
+          "count": 1621,
+          "total_value": 3342470189,
+          "tax": 16043856.910000073,
+          "class_name": "Commercial",
+          "pct_of_total": 17.52
+        },
+        "2": {
+          "count": 22124,
+          "total_value": 5808157380,
+          "tax": 27879155.429999128,
+          "class_name": "Agricultural/Undeveloped",
+          "pct_of_total": 30.44
+        },
+        "1": {
+          "count": 22350,
+          "total_value": 8558731700,
+          "tax": 41081912.16000002,
+          "class_name": "Residential",
+          "pct_of_total": 44.85
+        },
+        "5": {
+          "count": 1815,
+          "total_value": 817913200,
+          "tax": 3925983.360000006,
+          "class_name": "Industrial",
+          "pct_of_total": 4.29
+        },
+        "6": {
+          "count": 429,
+          "total_value": 411485200,
+          "tax": 1975128.9600000007,
+          "class_name": "Land Use (Deferred)",
+          "pct_of_total": 2.16
+        },
+        "0": {
+          "count": 141,
+          "total_value": 12317400,
+          "tax": 59123.51999999999,
+          "class_name": "Class 0",
+          "pct_of_total": 0.06
+        },
+        "3": {
+          "count": 52,
+          "total_value": 130174500,
+          "tax": 624837.6000000002,
+          "class_name": "Multi-Family",
+          "pct_of_total": 0.68
+        }
+      },
+      "by_zone": {
+        "M1": {
+          "count": 386,
+          "total_value": 1692632400
+        },
+        "RA": {
+          "count": 16951,
+          "total_value": 5931970640
+        },
+        "B1B2": {
+          "count": 1,
+          "total_value": 553800
+        },
+        "R5": {
+          "count": 8428,
+          "total_value": 1862470500
+        },
+        "RP": {
+          "count": 17542,
+          "total_value": 6617165040
+        },
+        "R4": {
+          "count": 1565,
+          "total_value": 643037600
+        },
+        "MTND": {
+          "count": 287,
+          "total_value": 113080000
+        },
+        "NDD": {
+          "count": 711,
+          "total_value": 201640600
+        },
+        "B3": {
+          "count": 108,
+          "total_value": 168269100
+        },
+        "R": {
+          "count": 393,
+          "total_value": 116100300
+        },
+        "RATR": {
+          "count": 82,
+          "total_value": 27661300
+        },
+        "M2": {
+          "count": 89,
+          "total_value": 142771600
+        },
+        "B2": {
+          "count": 636,
+          "total_value": 1053996389
+        },
+        "B": {
+          "count": 130,
+          "total_value": 45154100
+        },
+        "Unknown": {
+          "count": 143,
+          "total_value": 19930600
+        },
+        "I1": {
+          "count": 8,
+          "total_value": 3734200
+        },
+        "RAB2": {
+          "count": 2,
+          "total_value": 2737400
+        },
+        "B2RA": {
+          "count": 4,
+          "total_value": 1907400
+        },
+        "R2": {
+          "count": 211,
+          "total_value": 58885100
+        },
+        "B1": {
+          "count": 126,
+          "total_value": 46298800
+        },
+        "EM": {
+          "count": 65,
+          "total_value": 29386600
+        },
+        "R3": {
+          "count": 244,
+          "total_value": 61523000
+        },
+        "MHRA": {
+          "count": 1,
+          "total_value": 328600
+        },
+        "MH1": {
+          "count": 207,
+          "total_value": 57729000
+        },
+        "R1": {
+          "count": 108,
+          "total_value": 54746000
+        },
+        "RO": {
+          "count": 44,
+          "total_value": 13563800
+        },
+        "M1RA": {
+          "count": 1,
+          "total_value": 1387600
+        },
+        "M1B2": {
+          "count": 2,
+          "total_value": 7500300
+        },
+        "I1I2": {
+          "count": 1,
+          "total_value": 2193200
+        },
+        "QTND": {
+          "count": 1,
+          "total_value": 451800
+        },
+        "I": {
+          "count": 6,
+          "total_value": 2033900
+        },
+        "AK": {
+          "count": 2,
+          "total_value": 1185000
+        },
+        "B2RP": {
+          "count": 3,
+          "total_value": 10227300
+        },
+        "B2B3": {
+          "count": 11,
+          "total_value": 27120100
+        },
+        "RPB2": {
+          "count": 11,
+          "total_value": 22892400
+        },
+        "B3M1": {
+          "count": 1,
+          "total_value": 954700
+        },
+        "RPM1": {
+          "count": 1,
+          "total_value": 393800
+        },
+        "M1B3": {
+          "count": 1,
+          "total_value": 6526100
+        },
+        "EAR": {
+          "count": 1,
+          "total_value": 640600
+        },
+        "B2M1": {
+          "count": 4,
+          "total_value": 7573700
+        },
+        "M2RA": {
+          "count": 1,
+          "total_value": 1247700
+        },
+        "ER": {
+          "count": 1,
+          "total_value": 367400
+        },
+        "RAEM": {
+          "count": 1,
+          "total_value": 3081900
+        },
+        "IAK": {
+          "count": 2,
+          "total_value": 1124500
+        },
+        "ICK": {
+          "count": 1,
+          "total_value": 1584100
+        },
+        "I2": {
+          "count": 2,
+          "total_value": 1305200
+        },
+        "B3I1": {
+          "count": 1,
+          "total_value": 1844700
+        },
+        "Y": {
+          "count": 1,
+          "total_value": 341500
+        },
+        "MHB1": {
+          "count": 1,
+          "total_value": 2158800
+        },
+        "B2MS": {
+          "count": 1,
+          "total_value": 6296200
+        },
+        "RAM2": {
+          "count": 1,
+          "total_value": 3428000
+        },
+        "NDI1": {
+          "count": 1,
+          "total_value": 115200
+        }
+      }
+    }
+  ]
+}
