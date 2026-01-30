@@ -1,74 +1,188 @@
 {
-  "download_date": "2026-01-28T22:46:42.847592",
-  "status": "blocked - using NCES alternative",
-  "reason": "VDOE website (doe.virginia.gov) uses Akamai enterprise bot protection that blocks automated access",
-  "attempted_methods": [
-    "curl with browser user-agent",
-    "Python requests library",
-    "Playwright with headless Chrome",
-    "Playwright with Firefox",
-    "Wayback Machine (rate limited)",
-    "Tor proxy (connection refused)"
-  ],
-  "alternative_data_source": {
-    "name": "NCES Common Core of Data",
-    "url": "https://nces.ed.gov/ccd/districtsearch/",
-    "status": "successfully downloaded",
-    "data_files_location": "../nces/",
-    "data_years": {
-      "enrollment_staffing": "2024-2025",
-      "fiscal": "2021-2022"
-    }
-  },
-  "vdoe_tables_needed_for_time_series": {
-    "table_3": {
-      "description": "Enrollment (ADM) by division",
-      "years_needed": [
-        "2019-20",
-        "2020-21",
-        "2021-22",
-        "2022-23",
-        "2023-24"
-      ],
-      "manual_download_url": "https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report"
+  "source": "vdoe",
+  "downloaded_date": "2026-01-28T23:13:48.012028",
+  "files": [
+    {
+      "filename": "table8_2024-25.xlsx",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/74065/639004519261330000",
+      "table": "table-8",
+      "year": "2024-25",
+      "description": "Number of Days Taught, ADA, ADM - 2024-25"
     },
-    "table_13": {
-      "description": "Instructional staff counts and salaries",
-      "years_needed": [
-        "2019-20",
-        "2020-21",
-        "2021-22",
-        "2022-23",
-        "2023-24"
-      ],
-      "manual_download_url": "https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report"
+    {
+      "filename": "table8_2023-24.xlsx",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/57636/638629416751370000",
+      "table": "table-8",
+      "year": "2023-24",
+      "description": "Number of Days Taught, ADA, ADM - 2023-24"
     },
-    "table_15": {
-      "description": "Per pupil expenditures by source",
-      "years_needed": [
-        "2019-20",
-        "2020-21",
-        "2021-22",
-        "2022-23",
-        "2023-24"
-      ],
-      "manual_download_url": "https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report"
+    {
+      "filename": "table8_2022-23.xlsx",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/50076/638321092834370000",
+      "table": "table-8",
+      "year": "2022-23",
+      "description": "Number of Days Taught, ADA, ADM - 2022-23"
+    },
+    {
+      "filename": "table8_2021-22.xlsx",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/19287/638042787714630000",
+      "table": "table-8",
+      "year": "2021-22",
+      "description": "Number of Days Taught, ADA, ADM - 2021-22"
+    },
+    {
+      "filename": "table8_2020-21.xlsx",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/19301/638042791091270000",
+      "table": "table-8",
+      "year": "2020-21",
+      "description": "Number of Days Taught, ADA, ADM - 2020-21"
+    },
+    {
+      "filename": "table8_2019-20.xlsx",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/19323/638042793435930000",
+      "table": "table-8",
+      "year": "2019-20",
+      "description": "Number of Days Taught, ADA, ADM - 2019-20"
+    },
+    {
+      "filename": "table15_2023-24.xlsm",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/60388/638809985334430000",
+      "table": "table-15",
+      "year": "2023-24",
+      "description": "Per Pupil Expenditures - 2023-24"
+    },
+    {
+      "filename": "table15_2022-23.zip",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/54399/638562109182270000",
+      "table": "table-15",
+      "year": "2022-23",
+      "description": "Per Pupil Expenditures - 2022-23"
+    },
+    {
+      "filename": "table15_2021-22.zip",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/44327/638180142004800000",
+      "table": "table-15",
+      "year": "2021-22",
+      "description": "Per Pupil Expenditures - 2021-22"
+    },
+    {
+      "filename": "table15_2020-21.xlsm",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/39444/638066222557500000",
+      "table": "table-15",
+      "year": "2020-21",
+      "description": "Per Pupil Expenditures - 2020-21"
+    },
+    {
+      "filename": "table15_2019-20.xlsm",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/42861/638133561521670000",
+      "table": "table-15",
+      "year": "2019-20",
+      "description": "Per Pupil Expenditures - 2019-20"
+    },
+    {
+      "filename": "table17_2023-24.xlsx",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/60288/638774664072470000",
+      "table": "table-17",
+      "year": "2023-24",
+      "description": "Pupil-to-Teacher Ratios - 2023-24"
+    },
+    {
+      "filename": "table17_2022-23.xlsx",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/54195/638503230223070000",
+      "table": "table-17",
+      "year": "2022-23",
+      "description": "Pupil-to-Teacher Ratios - 2022-23"
+    },
+    {
+      "filename": "table17_2021-22.xlsx",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/44373/638185291091570000",
+      "table": "table-17",
+      "year": "2021-22",
+      "description": "Pupil-to-Teacher Ratios - 2021-22"
+    },
+    {
+      "filename": "table17_2020-21.xlsx",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/19315/638042791125000000",
+      "table": "table-17",
+      "year": "2020-21",
+      "description": "Pupil-to-Teacher Ratios - 2020-21"
+    },
+    {
+      "filename": "table17_2019-20.xlsx",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/19341/638042793500770000",
+      "table": "table-17",
+      "year": "2019-20",
+      "description": "Pupil-to-Teacher Ratios - 2019-20"
+    },
+    {
+      "filename": "table18_2023-24.xlsx",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/60290/638774664079170000",
+      "table": "table-18",
+      "year": "2023-24",
+      "description": "Administrative Personnel Positions - 2023-24"
+    },
+    {
+      "filename": "table18_2022-23.xlsx",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/54227/638507556129670000",
+      "table": "table-18",
+      "year": "2022-23",
+      "description": "Administrative Personnel Positions - 2022-23"
+    },
+    {
+      "filename": "table18_2021-22.xlsx",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/44339/638180976020370000",
+      "table": "table-18",
+      "year": "2021-22",
+      "description": "Administrative Personnel Positions - 2021-22"
+    },
+    {
+      "filename": "table18_2020-21.xlsx",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/19317/638042791130170000",
+      "table": "table-18",
+      "year": "2020-21",
+      "description": "Administrative Personnel Positions - 2020-21"
+    },
+    {
+      "filename": "table18_2019-20.xlsx",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/19343/638042793508570000",
+      "table": "table-18",
+      "year": "2019-20",
+      "description": "Administrative Personnel Positions - 2019-20"
+    },
+    {
+      "filename": "table19_2023-24.xlsx",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/60304/638774758522230000",
+      "table": "table-19",
+      "year": "2023-24",
+      "description": "Instructional Positions and Salaries - 2023-24"
+    },
+    {
+      "filename": "table19_2022-23.xlsx",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/54229/638507556136330000",
+      "table": "table-19",
+      "year": "2022-23",
+      "description": "Instructional Positions and Salaries - 2022-23"
+    },
+    {
+      "filename": "table19_2021-22.xlsx",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/44341/638180976025200000",
+      "table": "table-19",
+      "year": "2021-22",
+      "description": "Instructional Positions and Salaries - 2021-22"
+    },
+    {
+      "filename": "table19_2020-21.xlsx",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/19319/638042791136400000",
+      "table": "table-19",
+      "year": "2020-21",
+      "description": "Instructional Positions and Salaries - 2020-21"
+    },
+    {
+      "filename": "table19_2019-20.xlsx",
+      "url": "https://www.doe.virginia.gov/home/showpublisheddocument/19345/638042793515470000",
+      "table": "table-19",
+      "year": "2019-20",
+      "description": "Instructional Positions and Salaries - 2019-20"
     }
-  },
-  "target_divisions": {
-    "069": "Frederick County",
-    "043": "Clarke County",
-    "061": "Fauquier County",
-    "171": "Shenandoah County",
-    "187": "Warren County",
-    "107": "Loudoun County"
-  },
-  "nces_district_ids": {
-    "Frederick County": "5101470",
-    "Clarke County": "5100540",
-    "Fauquier County": "5101440",
-    "Shenandoah County": "5103510",
-    "Warren County": "5104080",
-    "Loudoun County": "5102250"
-  }
+  ]
 }

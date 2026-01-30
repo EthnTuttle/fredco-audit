@@ -1,0 +1,569 @@
+File name = sdf20_1a.sas7bdat, Fiscal year 2020
+Number of variables = 302
+Number of observations = 19,672
+Release: Provisional Version 1a, December 2022
+
+Name        Order          Type          Label
+LEAID           1          Character     NATIONAL CENTER FOR EDUCATION STATISTICS 
+                                            (NCES) 7-DIGIT LOCAL EDUCATION AGENCY ID
+CENSUSID        2          Character     CENSUS BUREAU 14-DIGIT GOVERNMENT ID 
+FIPST           3          Character     AMERICAN NATIONAL STANDARDS INSTITUTE 
+                                            (ANSI) STATE CODE
+CONUM           4          Character     AMERICAN NATIONAL STANDARDS INSTITUTE 
+                                            (ANSI) COUNTY CODE 
+CSA             5          Character     CONSOLIDATED STATISTICAL AREA
+CBSA            6          Character     CORE-BASED STATISTICAL AREA
+NAME            7          Character     NAME OF LOCAL EDUCATION AGENCY
+STNAME          8          Character     STATE NAME
+STABBR          9          Character     STATE ABBREVIATION 
+SCHLEV         10          Character     SCHOOL-LEVEL CODE
+                                         01 = Elementary school system only
+                                         02 = Secondary school system only
+                                         03 = Elementary/secondary school 
+                                                 system
+                                         05 = Vocational or special education 
+                                                 school system
+                                         06 = Nonoperating school system
+                                         07 = Education service agency
+AGCHRT         11          Character     AGENCY CHARTER CODE
+                                         1 = All associated schools are charter schools
+                                         2 = Some but not all associated schools are 
+                                                 charter schools
+                                         3 = No associated schools are charter schools
+                                         N = Not applicable or code could not 
+                                                 be determined
+YEAR           12          Character     YEAR OF DATA 
+CCDNF          13          Character     COMMON CORE OF DATA (CCD) AGENCY NONFISCAL 
+                                           FILE MATCH 
+                                           0 = Does not match CCD Local Education Agency 
+                                                 Universe file
+                                           1 = Matches CCD Local Education Agency
+                                                 Universe file
+CENFILE        14          Character     CENSUS BUREAU FISCAL FILE MATCH
+                                           0 = Does not match Census Bureau 
+                                                 fiscal file
+                                           1 = Matches Census Bureau fiscal 
+                                                 file
+GSLO           15          Character   AGENCY LOW GRADE OFFERED
+GSHI           16          Character   AGENCY HIGH GRADE OFFERED 
+V33            17          Numeric     FALL MEMBERSHIP
+MEMBERSCH      18          Numeric     FALL MEMBERSHIP - SCHOOL UNIVERSE
+TOTALREV       19          Numeric     TOTAL REVENUE 
+                                         (equals TFEDREV + TSTREV + TLOCREV)
+TFEDREV        20          Numeric     TOTAL FEDERAL REVENUE 
+                                         (equals C14 + C15 + C19 + C22 + C23 
+                                         + C26 + C27 + B11 + C20 + C25 + C36 
+                                         + B10 + B12 + B14 + B13)
+C14            21          Numeric     FEDERAL REVENUE - THRU STATE - TITLE I
+C15            22          Numeric     FEDERAL REVENUE - THRU STATE - 
+                                         INDIVIDUALS WITH DISABILITIES EDUCATION 
+                                         ACT (IDEA) 
+C19            23          Numeric     FEDERAL REVENUE - THRU STATE - 
+                                          VOCATIONAL AND TECH EDUCATION
+C22            24          Numeric     FEDERAL REVENUE - THRU STATE - SUPPORTING 
+                                          EFFECTIVE INSTRUCTION
+C23            25          Numeric     FEDERAL REVENUE - THRU STATE - STUDENT 
+                                          SUPPORT AND ACADEMIC ENRICHMENT
+C26            26          Numeric     FEDERAL REVENUE - THRU STATE - 21ST 
+                                          CENTURY LEARNING CENTERS
+C27            27          Numeric     FEDERAL REVENUE - THRU STATE - RURAL 
+                                          AND LOW-INCOME SCHOOL PROGRAM
+B11            28          Numeric     FEDERAL REVENUE - THRU STATE - 
+                                          BILINGUAL EDUCATION
+C20            29          Numeric     FEDERAL REVENUE - THRU STATE - OTHER
+C25            30          Numeric     FEDERAL REVENUE - THRU STATE - CHILD 
+                                          NUTRITION ACT
+C36            31          Numeric     FEDERAL REVENUE - NONSPECIFIED
+B10            32          Numeric     FEDERAL REVENUE - DIRECT - IMPACT AID
+B12            33          Numeric     FEDERAL REVENUE - DIRECT - INDIAN 
+                                          EDUCATION
+B14            34          Numeric     FEDERAL REVENUE - DIRECT - SMALL, RURAL 
+                                          SCHOOL ACHIEVEMENT PROGRAM
+B13            35          Numeric     FEDERAL REVENUE - DIRECT - OTHER
+TSTREV         36          Numeric     TOTAL STATE REVENUE 
+                                       (equals C01 + C04 + C05 + C06 + C07 
+                                        + C08 + C09 + C10 + C11 + C12  
+                                        + C13 + C35 + C38 + C39) 
+C01            37          Numeric     STATE REVENUE - GENERAL FORMULA 
+                                         ASSISTANCE
+C04            38          Numeric     STATE REVENUE - STAFF IMPROVEMENT 
+                                         PROGRAMS
+C05            39          Numeric     STATE REVENUE - SPECIAL EDUCATION 
+                                         PROGRAMS 
+C06            40          Numeric     STATE REVENUE - COMPENSATORY AND BASIC 
+                                         SKILLS PROGRAMS
+C07            41          Numeric     STATE REVENUE - BILINGUAL EDUCATION 
+                                         PROGRAMS
+C08            42          Numeric     STATE REVENUE - GIFTED AND TALENTED 
+                                         PROGRAMS
+C09            43          Numeric     STATE REVENUE - VOCATIONAL EDUCATION 
+                                         PROGRAMS
+C10            44          Numeric     STATE REVENUE - SCHOOL LUNCH PROGRAMS
+C11            45          Numeric     STATE REVENUE - CAPITAL OUTLAY AND 
+                                         DEBT SERVICES PROGRAMS
+C12            46          Numeric     STATE REVENUE - TRANSPORTATION 
+                                         PROGRAMS
+C13            47          Numeric     STATE REVENUE - OTHER PROGRAMS
+C35            48          Numeric     STATE REVENUE - NONSPECIFIED
+C38            49          Numeric     STATE REVENUE ON BEHALF - EMPLOYEE 
+                                         BENEFITS
+C39            50          Numeric     STATE REVENUE ON BEHALF - NOT EMPLOYEE 
+                                         BENEFITS
+TLOCREV        51          Numeric     TOTAL LOCAL REVENUE 
+                                         (equals T02 + T06 + T09 + T15 + T40 
+                                         + T99 + D11 + D23 + A07 + A08 
+                                         + A09 + A11 + A13 + A15 + A20 + A40 
+                                         + U11 + U22 + U30 + U50 + U97 + C24)
+T02            52          Numeric     LOCAL REVENUE - PARENT GOVERNMENT 
+                                         CONTRIBUTIONS (DEPENDENT SCHOOL 
+                                         SYSTEMS)
+T06            53          Numeric     LOCAL REVENUE - PROPERTY TAXES
+T09            54          Numeric     LOCAL REVENUE - GENERAL SALES TAXES
+T15            55          Numeric     LOCAL REVENUE - PUBLIC UTILITY TAXES
+T40            56          Numeric     LOCAL REVENUE - INDIVIDUAL AND 
+                                         CORPORATE INCOME TAXES
+T99            57          Numeric     LOCAL REVENUE - ALL OTHER TAXES
+D11            58          Numeric     LOCAL REVENUE - FROM OTHER SCHOOL 
+                                         SYSTEMS
+D23            59          Numeric     LOCAL REVENUE - FROM CITIES AND 
+                                         COUNTIES
+A07            60          Numeric     LOCAL REVENUE - TUITION FEES FROM 
+                                         PUPILS AND PARENTS
+A08            61          Numeric     LOCAL REVENUE - TRANSPORTATION FEES 
+                                         FROM PUPILS AND PARENTS
+A09            62          Numeric     LOCAL REVENUE - SCHOOL LUNCH
+A11            63          Numeric     LOCAL REVENUE - TEXTBOOK SALES AND 
+                                         RENTALS
+A13            64          Numeric     LOCAL REVENUE - DISTRICT ACTIVITY 
+                                         RECEIPTS
+A15            65          Numeric     LOCAL REVENUE - STUDENTS FEES, 
+                                         NONSPECIFIED
+A20            66          Numeric     LOCAL REVENUE - OTHER SALES AND 
+                                         SERVICES
+A40            67          Numeric     LOCAL REVENUE - RENTS AND ROYALTIES
+U11            68          Numeric     LOCAL REVENUE - SALE OF PROPERTY
+U22            69          Numeric     LOCAL REVENUE - INTEREST EARNINGS
+U30            70          Numeric     LOCAL REVENUE - FINES AND FORFEITS
+U50            71          Numeric     LOCAL REVENUE - PRIVATE CONTRIBUTIONS
+U97            72          Numeric     LOCAL REVENUE - MISCELLANEOUS
+C24            73          Numeric     NCES LOCAL REVENUE, CENSUS BUREAU 
+                                         STATE REVENUE 
+TOTALEXP       74          Numeric     TOTAL EXPENDITURES 
+                                         (equals TCURELSC + TNONELSE + 
+                                            TCAPOUT + L12 + M12 + Q11 + I86 + V91 + V92)
+TCURELSC       75          Numeric     TOTAL CURRENT EXPENDITURES FOR 
+                                        ELEMENTARY/SECONDARY EDUCATION
+                                       (equals TCURINST + TCURSSVC + TCUROTH)
+TCURINST       76          Numeric     TOTAL CURRENT EXPENDITURES - 
+                                            INSTRUCTION (equals E13)
+E13            77          Numeric     CURRENT EXPENDITURES - INSTRUCTION
+V91            78          Numeric     PAYMENTS TO PRIVATE SCHOOLS
+V92            79          Numeric     PAYMENTS TO CHARTER SCHOOLS
+TCURSSVC       80          Numeric     TOTAL CURRENT EXPENDITURES - SUPPORT 
+                                            SERVICES (equals E17 + E07 + E08 
+                                            + E09 + V40 + V45 + V90 + V85)
+E17            81          Numeric     CURRENT EXPENDITURES - SUPPORT 
+                                            SERVICES - PUPILS
+E07            82          Numeric     CURRENT EXPENDITURES - SUPPORT 
+                                            SERVICES - INSTRUCTIONAL STAFF
+E08            83          Numeric     CURRENT EXPENDITURES - SUPPORT 
+                                            SERVICES - GENERAL ADMINISTRATION
+E09            84          Numeric     CURRENT EXPENDITURES - SUPPORT 
+                                            SERVICES - SCHOOL ADMINISTRATION
+V40            85          Numeric     CURRENT EXPENDITURES - SUPPORT 
+                                            SERVICES - OPERATION AND 
+                                            MAINTENANCE OF PLANT 
+V45            86          Numeric     CURRENT EXPENDITURES - SUPPORT 
+                                            SERVICES - STUDENT TRANSPORTATION
+V90            87          Numeric     CURRENT EXPENDITURES - SUPPORT 
+                                            SERVICES BUSINESS/CENTRAL/OTHER
+V85            88          Numeric     CURRENT EXPENDITURES - SUPPORT 
+                                            SERVICES NONSPECIFIED
+TCUROTH        89          Numeric     TOTAL CURRENT EXPENDITURES - OTHER 
+                                            ELEMENTARY/SECONDARY
+                                            (equals E11 + V60 + V65)
+E11            90          Numeric     CURRENT EXPENDITURES - FOOD SERVICES 
+V60            91          Numeric     CURRENT EXPENDITURES - ENTERPRISE 
+                                            OPERATIONS
+V65            92          Numeric     CURRENT EXPENDITURES - OTHER ELEMENTARY/SECONDARY
+TNONELSE       93          Numeric     TOTAL NON-ELEMENTARY/SECONDARY 
+                                            EXPENDITURES
+                                            (equals V70 + V75 + V80)
+V70            94          Numeric     NON- ELEMENTARY/SECONDARY EXPENDITURES 
+                                            - COMMUNITY SERVICES 
+V75            95          Numeric     NON- ELEMENTARY/SECONDARY EXPENDITURES 
+                                            - ADULT EDUCATION 
+V80            96          Numeric     NON- ELEMENTARY/SECONDARY EXPENDITURES 
+                                            - OTHER
+TCAPOUT        97          Numeric     TOTAL CAPITAL OUTLAY EXPENDITURES
+                                         (equals F12 + G15 + K09 + K10 + K11)
+F12            98          Numeric     CAPITAL OUTLAY - CONSTRUCTION
+G15            99          Numeric     CAPITAL OUTLAY - LAND AND EXISTING 
+                                            STRUCTURES
+K09            100          Numeric     CAPITAL OUTLAY - INSTRUCTIONAL 
+                                            EQUIPMENT
+K10            101          Numeric     CAPITAL OUTLAY - OTHER EQUIPMENT
+K11            102          Numeric     CAPITAL OUTLAY - NONSPECIFIED 
+                                            EQUIPMENT
+L12           103          Numeric     PAYMENTS TO STATE GOVERNMENTS
+M12           104          Numeric     PAYMENTS TO LOCAL GOVERNMENTS
+Q11           105          Numeric     PAYMENTS TO OTHER SCHOOL SYSTEMS 
+I86           106          Numeric     INTEREST ON DEBT
+Z32           107          Numeric     TOTAL SALARIES
+Z33           108          Numeric     SALARIES - INSTRUCTION
+Z35           109          Numeric     TEACHER SALARIES - REGULAR EDUCATION 
+                                            PROGRAMS
+Z36           110          Numeric     TEACHER SALARIES - SPECIAL EDUCATION 
+                                            PROGRAMS
+Z37           111          Numeric     TEACHER SALARIES - VOCATIONAL 
+                                            EDUCATION PROGRAMS
+Z38           112          Numeric     TEACHER SALARIES - OTHER EDUCATION 
+                                            PROGRAMS
+V11           113          Numeric     SALARIES - SUPPORT SERVICES - PUPILS
+V13           114          Numeric     SALARIES - SUPPORT SERVICES - 
+                                            INSTRUCTIONAL STAFF
+V15           115          Numeric     SALARIES - SUPPORT SERVICES - GENERAL 
+                                            ADMINISTRATION
+V17           116          Numeric     SALARIES - SUPPORT SERVICES - SCHOOL 
+                                            ADMINISTRATION
+V21           117          Numeric     SALARIES - SUPPORT SERVICES - 
+                                           OPERATION AND MAINTENANCE OF PLANT
+V23           118          Numeric     SALARIES - SUPPORT SERVICES - STUDENT 
+                                            TRANSPORTATION
+V37           119          Numeric     SALARIES - SUPPORT SERVICES –
+                                            BUSINESS/CENTRAL/OTHER
+V29           120          Numeric     SALARIES - FOOD SERVICES
+Z34           121          Numeric     TOTAL EMPLOYEE BENEFITS
+V10           122          Numeric     EMPLOYEE BENEFITS - INSTRUCTION
+V12           123          Numeric     EMPLOYEE BENEFITS - SUPPORT SERVICES - 
+                                           PUPILS
+V14           124          Numeric     EMPLOYEE BENEFITS - SUPPORT SERVICES - 
+                                           INSTRUCTIONAL STAFF 
+V16           125          Numeric     EMPLOYEE BENEFITS - SUPPORT SERVICES - 
+                                           GENERAL ADMINISTRATION
+V18           126          Numeric     EMPLOYEE BENEFITS - SUPPORT SERVICES -
+                                            SCHOOL ADMINISTRATION
+V22           127          Numeric     EMPLOYEE BENEFITS - SUPPORT SERVICES - 
+                                           OPERATION AND MAINTENANCE OF PLANT
+V24           128          Numeric     EMPLOYEE BENEFITS - SUPPORT SERVICES - 
+                                           STUDENT TRANSPORTATION
+V38           129          Numeric     EMPLOYEE BENEFITS - SUPPORT SERVICES - 
+                                           BUSINESS/CENTRAL/OTHER
+V30           130          Numeric     EMPLOYEE BENEFITS - FOOD SERVICES
+V32           131          Numeric     EMPLOYEE BENEFITS - ENTERPRISE 
+                                           OPERATIONS
+V93           132          Numeric     TEXTBOOKS
+_19H          133          Numeric     LONG TERM DEBT - OUTSTANDING AT 
+                                           BEGINNING OF FISCAL YEAR
+_21F          134          Numeric     LONG TERM DEBT - ISSUED DURING FISCAL 
+                                           YEAR
+_31F          135          Numeric     LONG TERM DEBT - RETIRED DURING FISCAL 
+                                           YEAR
+_41F          136          Numeric     LONG TERM DEBT - OUTSTANDING AT END OF 
+                                           FISCAL YEAR 
+_61V          137          Numeric     SHORT TERM DEBT - OUTSTANDING AT 
+                                           BEGINNING OF FISCAL YEAR 
+_66V          138          Numeric     SHORT TERM DEBT - OUTSTANDING AT 
+                                           END OF FISCAL YEAR 
+W01           139          Numeric       ASSETS - SINKING FUND
+W31           140          Numeric       ASSETS - BOND FUND 
+W61           141          Numeric       ASSETS - OTHER FUNDS 
+V95           142          Numeric       UTILITIES AND ENERGY SERVICES 
+V02           143          Numeric       TECHNOLOGY-RELATED SUPPLIES AND PURCHASED SERVICES 
+K14           144          Numeric       TECHNOLOGY-RELATED EQUIPMENT
+CE1           145          Numeric       CURRENT EXPENDITURES - STATE AND LOCAL FUNDS
+CE2           146          Numeric       CURRENT EXPENDITURES - FEDERAL FUNDS 
+CE3           147          Numeric       CURRENT EXPENDITURES - REGIONAL EDUCATION SERVICE AGENCY
+                                           (RESA) CURRENT EXPENDITURES ON BEHALF OF THE LEA
+SE1           148          Numeric       SPECIAL EDUCATION EXPENDITURE - CURRENT
+SE2           149          Numeric       SPECIAL EDUCATION EXPENDITURE - INSTRUCTIONAL
+SE3           150          Numeric       SPECIAL EDUCATION EXPENDITURE - PUPIL SUPPORT 
+                                           SERVICES
+SE4           151          Numeric       SPECIAL EDUCATION EXPENDITURE - INSTRUCTIONAL 
+                                           STAFF SUPPORT SERVICES
+SE5           152          Numeric       SPECIAL EDUCATION EXPENDITURE - STUDENT 
+                                           TRANSPORTATION SUPPORT SERVICES
+AR1           153          Numeric       CARES ACT FUNDS - REVENUE - ELEMENTARY AND 
+                                           SECONDARY SCHOOL EMERGENCY RELIEF (ESSER) FUND
+AR2           154          Numeric       CARES ACT FUNDS - REVENUE - GOVERNOR EMERGENCY 
+                                           EDUCATION RELIEF (GEER) FUND
+AR3           155          Numeric       CARES ACT FUNDS - REVENUE - EDUCATION STABILIZATION 
+                                           FUND - REIMAGINE WORKFORCE PREPERATION (ESF-RWP) 
+                                           DISCRETIONARY GRANT
+AR4           156          Numeric       CARES ACT FUNDS - REVENUE - EDUCATION STABILIZATION 
+                                           FUND - RETHINK K-12 EDUCATION MODELS (ESF-REM) 
+                                           DISCRETIONARY GRANT
+AR5           157          Numeric       CARES ACT FUNDS - REVENUE - PROJECT SCHOOL EMERGENCY 
+                                           RESPONSE TO VIOLENCE (PROJECT SERV)
+AR6           158          Numeric       CARES ACT FUNDS - REVENUE - CORONAVIRUS RELIEF 
+                                           FUND (CRF)
+AE1           159          Numeric       CARES ACT FUNDS - EXPENDITURE - CURRENT
+AE2           160          Numeric       CARES ACT FUNDS - EXPENDITURE - INSTRUCTIONAL
+AE3           161          Numeric       CARES ACT FUNDS - EXPENDITURE - SUPPORT SERVICES
+AE4           162          Numeric       CARES ACT FUNDS - EXPENDITURE - CAPITAL OUTLAY
+AE5           163          Numeric       CARES ACT FUNDS - EXPENDITURE - TECHNOLOGY-RELATED 
+                                           SUPPLIES AND PURCHASED SERVICES
+AE6           164          Numeric       CARES ACT FUNDS - EXPENDITURE - TECHNOLOGY-RELATED 
+                                           EQUIPMENT
+WEIGHT        165          Numeric       WEIGHT
+FL_V33        166          Character     FLAG - FALL MEMBERSHIP
+FL_MEMBERSCH  167          Character     FLAG - FALL MEMBERSHIP - SCHOOL UNIVERSE
+FL_C14        168          Character     FLAG - FEDERAL REVENUE - THRU STATE 
+                                           - TITLE I 
+FL_C15        169          Character     FLAG - FEDERAL REVENUE - THRU STATE 
+                                           - INDIVIDUALS WITH DISABILITIES 
+                                           EDUCATION ACT (IDEA)
+FL_C19        170          Character     FLAG - FEDERAL REVENUE - THRU STATE 
+                                           - VOCATIONAL AND TECH EDUCATION
+FL_C22        171          Character     FLAG - FEDERAL REVENUE - THRU STATE - SUPPORTING 
+                                          EFFECTIVE INSTRUCTION
+FL_C23        172          Character     FLAG - FEDERAL REVENUE - THRU STATE - STUDENT 
+                                          SUPPORT AND ACADEMIC ENRICHMENT
+FL_C26        173          Character     FLAG - FEDERAL REVENUE - THRU STATE - 21ST 
+                                          CENTURY LEARNING CENTERS
+FL_C27        174          Character     FLAG - FEDERAL REVENUE - THRU STATE - RURAL 
+                                          AND LOW-INCOME SCHOOL PROGRAM
+FL_B11        175          Character     FLAG - FEDERAL REVENUE - THRU STATE 
+                                           - BILINGUAL EDUCATION
+FL_C20        176          Character     FLAG - FEDERAL REVENUE - THRU STATE 
+                                           - OTHER
+FL_C25        177          Character     FLAG - FEDERAL REVENUE - THRU STATE 
+                                           - CHILD NUTRITION ACT
+FL_C36        178          Character     FLAG - FEDERAL REVENUE - NONSPECIFIED
+FL_B10        179          Character     FLAG - FEDERAL REVENUE - DIRECT - 
+                                           IMPACT AID
+FL_B12        180          Character     FLAG - FEDERAL REVENUE - DIRECT - 
+                                           INDIAN EDUCATION
+FL_B14        181          Character     FLAG - FEDERAL REVENUE - DIRECT - SMALL, 
+                                           RURAL SCHOOL ACHIEVEMENT PROGRAM
+FL_B13        182          Character     FLAG - FEDERAL REVENUE - DIRECT - 
+                                           OTHER
+FL_C01        183          Character     FLAG - STATE REVENUE - GENERAL 
+                                           FORMULA ASSISTANCE
+FL_C04        184          Character     FLAG - STATE REVENUE - STAFF 
+                                           IMPROVEMENT PROGRAMS
+FL_C05        185          Character     FLAG - STATE REVENUE - SPECIAL 
+                                           EDUCATION PROGRAMS
+FL_C06        186          Character     FLAG - STATE REVENUE - COMPENSATORY 
+                                           AND BASIC SKILLS PROGRAMS
+FL_C07        187          Character     FLAG - STATE REVENUE - BILINGUAL 
+                                           EDUCATION PROGRAMS
+FL_C08        188          Character     FLAG - STATE REVENUE - GIFTED AND 
+                                           TALENTED PROGRAMS
+FL_C09        189          Character     FLAG - STATE REVENUE - VOCATIONAL 
+                                           EDUCATION PROGRAMS
+FL_C10        190          Character     FLAG - STATE REVENUE - SCHOOL LUNCH 
+                                           PROGRAMS
+FL_C11        191          Character     FLAG - STATE REVENUE - CAPITAL 
+                                           OUTLAY AND DEBT SERVICES PROGRAMS
+FL_C12        192          Character     FLAG - STATE REVENUE - 
+                                           TRANSPORTATION PROGRAMS
+FL_C13        193          Character     FLAG - STATE REVENUE - OTHER 
+                                           PROGRAMS
+FL_C35        194          Character     FLAG - STATE REVENUE - NONSPECIFIED
+FL_C38        195          Character     FLAG - STATE REVENUE ON BEHALF - 
+                                           EMPLOYEE BENEFITS
+FL_C39        196          Character     FLAG - STATE REVENUE ON BEHALF - 
+                                           NOT EMPLOYEE BENEFITS
+FL_T02        197          Character     FLAG - LOCAL REVENUE - PARENT 
+                                           GOVERNMENT CONTRIBUTIONS 
+                                           (DEPENDENT SCHOOL SYSTEMS)
+FL_T06        198          Character     FLAG - LOCAL REVENUE - PROPERTY 
+                                           TAXES
+FL_T09        199          Character     FLAG - LOCAL REVENUE - GENERAL 
+                                           SALES TAXES
+FL_T15        200          Character     FLAG - LOCAL REVENUE - PUBLIC 
+                                           UTILITY TAXES
+FL_T40        201          Character     FLAG - LOCAL REVENUE - INDIVIDUAL 
+                                           AND CORPORATE INCOME TAXES
+FL_T99        202          Character     FLAG - LOCAL REVENUE - ALL OTHER 
+                                           TAXES
+FL_D11        203          Character     FLAG - LOCAL REVENUE - FROM OTHER 
+                                           SCHOOL SYSTEMS
+FL_D23        204          Character     FLAG - LOCAL REVENUE - FROM CITIES 
+                                           AND COUNTIES
+FL_A07        205          Character     FLAG - LOCAL REVENUE - TUITION FEES 
+                                           FROM PUPILS AND PARENTS
+FL_A08        206          Character     FLAG - LOCAL REVENUE - 
+                                           TRANSPORTATION FEES FROM PUPILS 
+                                           AND PARENTS
+FL_A09        207          Character     FLAG - LOCAL REVENUE - SCHOOL LUNCH
+FL_A11        208          Character     FLAG - LOCAL REVENUE - TEXTBOOK 
+                                           SALES AND RENTALS
+FL_A13        209          Character     FLAG - LOCAL REVENUE - DISTRICT 
+                                           ACTIVITY RECEIPTS
+FL_A15        210          Character     FLAG - LOCAL REVENUE - STUDENT 
+                                           FEES, NONSPECIFIED
+FL_A20        211          Character     FLAG - LOCAL REVENUE - OTHER SALES 
+                                           AND SERVICES
+FL_A40        212          Character     FLAG - LOCAL REVENUE - RENTS AND 
+                                           ROYALTIES
+FL_U11        213          Character     FLAG - LOCAL REVENUE - SALE OF 
+                                           PROPERTY
+FL_U22        214          Character     FLAG - LOCAL REVENUE - INTEREST 
+                                           EARNINGS
+FL_U30        215          Character     FLAG - LOCAL REVENUE - FINES AND 
+                                           FORFEITS
+FL_U50        216          Character     FLAG - LOCAL REVENUE - PRIVATE 
+                                           CONTRIBUTIONS
+FL_U97        217          Character     FLAG - LOCAL REVENUE - 
+                                           MISCELLANEOUS
+FL_C24        218          Character     FLAG - NCES LOCAL REVENUE, CENSUS 
+                                           BUREAU STATE REVENUE 
+FL_E13        219          Character     FLAG - CURRENT EXPENDITURES - 
+                                           INSTRUCTION
+FL_V91        220          Character     FLAG - PAYMENTS TO PRIVATE SCHOOLS
+FL_V92        221          Character     FLAG - PAYMENTS TO CHARTER SCHOOLS
+FL_E17        222          Character     FLAG - CURRENT EXPENDITURES - 
+                                           SUPPORT SERVICES - PUPILS
+FL_E07        223          Character     FLAG - CURRENT EXPENDITURES - 
+                                           SUPPORT SERVICES - INSTRUCTIONAL 
+                                           STAFF
+FL_E08        224          Character     FLAG - CURRENT EXPENDITURES - 
+                                           SUPPORT SERVICES - GENERAL 
+                                           ADMININSTRATION
+FL_E09        225          Character     FLAG - CURRENT EXPENDITURES - 
+                                           SUPPORT SERVICES - SCHOOL 
+                                           ADMINISTRATION
+FL_V40        226          Character     FLAG - CURRENT EXPENDITURES - 
+                                           SUPPORT SERVICES - OPERATION AND 
+                                           MAINTENANCE OF PLANT
+FL_V45        227          Character     FLAG - CURRENT EXPENDITURES - 
+                                           SUPPORT SERVICES - STUDENT 
+                                           TRANSPORT
+FL_V90        228          Character     FLAG - CURRENT EXPENDITURES - 
+                                           SUPPORT SERVICES 
+                                           BUSINESS/CENTRAL/ OTHER
+FL_V85        229          Character     FLAG - CURRENT EXPENDITURES - 
+                                           SUPPORT SERVICES NONSPECIFIED
+FL_E11        230          Character     FLAG - CURRENT EXPENDITURES - FOOD 
+                                           SERVICES
+FL_V60        231          Character     FLAG - CURRENT EXPENDITURES - 
+                                           ENTERPRISE OPERATIONS
+FL_V65        232          Character     FLAG - CURRENT EXPENDITURES - OTHER 
+                                           ELEMENTARY/SECONDARY
+FL_V70        233          Character     FLAG - NON-ELEMENTARY/SECONDARY 
+                                           EXPENDITURES - COMMUNITY SERVICES
+FL_V75        234          Character     FLAG - NON-ELEMENTARY/SECONDARY 
+                                           EXPENDITURES - ADULT EDUCATION
+FL_V80        235          Character     FLAG - NON-ELEMENTARY/SECONDARY 
+                                           EXPENDITURES - OTHER
+FL_F12        236          Character     FLAG - CAPITAL OUTLAY - 
+                                           CONSTRUCTION
+FL_G15        237          Character     FLAG - CAPITAL OUTLAY - LAND AND 
+                                           EXISTING STRUCTURES
+FL_K09        238          Character     FLAG - CAPITAL OUTLAY - 
+                                           INSTRUCTIONAL EQUIPMENT
+FL_K10        239          Character     FLAG - CAPITAL OUTLAY - OTHER 
+                                           EQUIPMENT
+FL_K11        240          Character     FLAG - CAPITAL OUTLAY - 
+                                           NONSPECIFIED EQUIPMENT
+FL_L12        241          Character     FLAG - PAYMENTS TO STATE 
+                                           GOVERNMENTS
+FL_M12        242          Character     FLAG - PAYMENTS TO LOCAL 
+                                           GOVERNMENTS
+FL_Q11        243          Character     FLAG - PAYMENTS TO OTHER SCHOOL 
+                                           SYSTEMS
+FL_I86        244          Character     FLAG - INTEREST ON DEBT
+FL_Z32        245          Character     FLAG - TOTAL SALARIES
+FL_Z33        246          Character     FLAG - SALARIES - INSTRUCTION
+FL_Z35        247          Character     FLAG - TEACHER SALARIES - REGULAR 
+                                           EDUCATION PROGRAMS
+FL_Z36        248          Character     FLAG - TEACHER SALARIES - SPECIAL 
+                                           EDUCATION PROGRAMS
+FL_Z37        249          Character     FLAG - TEACHER SALARIES - 
+                                           VOCATIONAL EDUCATION PROGRAMS
+FL_Z38        250          Character     FLAG - TEACHER SALARIES - OTHER 
+                                           EDUCATION PROGRAMS
+FL_V11        251          Character     FLAG - SALARIES - SUPPORT SERVICES 
+                                           - PUPILS
+FL_V13        252          Character     FLAG - SALARIES - SUPPORT SERVICES 
+                                           - INSTRUCTIONAL STAFF
+FL_V15        253          Character     FLAG - SALARIES - SUPPORT SERVICES 
+                                           - GENERAL ADMINISTRATION
+FL_V17        254          Character     FLAG - SALARIES - SUPPORT SERVICES 
+                                           - SCHOOL ADMINISTRATION
+FL_V21        255          Character     FLAG - SALARIES - SUPPORT SERVICES 
+                                           - OPERATION AND MAINTENANCE OF 
+                                           PLANT
+FL_V23        256          Character     FLAG - SALARIES - SUPPORT SERVICES 
+                                           - STUDENT TRANSPORTATION
+FL_V37        257          Character     FLAG - SALARIES - SUPPORT SERVICES 
+                                           - BUSINESS/CENTRAL/ OTHER
+FL_V29        258          Character     FLAG - SALARIES - FOOD SERVICE
+FL_Z34        259          Character     FLAG - TOTAL EMPLOYEE BENEFITS
+FL_V10        260          Character     FLAG - EMPLOYEE BENEFITS - 
+                                           INSTRUCTION
+FL_V12        261          Character     FLAG - EMPLOYEE BENEFITS - SUPPORT 
+                                           SERVICES - PUPILS  
+FL_V14        262          Character     FLAG - EMPLOYEE BENEFITS - SUPPORT 
+                                           SERVICES – INSTRUCTION STAFF
+FL_V16        263          Character     FLAG - EMPLOYEE BENEFITS - SUPPORT 
+                                           SERVICES - GEN ADMIN
+FL_V18        264          Character     FLAG - EMPLOYEE BENEFITS - SUPPORT 
+                                           SERVICES - SCHOOL ADMINISTRATION
+FL_V22        265          Character     FLAG - EMPLOYEE BENEFITS - SUPPORT 
+                                           SERVICES - OPERATION AND 
+                                           MAINTENANCE OF PLANT
+FL_V24        266          Character     FLAG - EMPLOYEE BENEFITS - SUPPORT 
+                                           SERVICES - STUDENT TRANSPORTATION
+FL_V38        267          Character     FLAG - EMPLOYEE BENEFITS - SUPPORT 
+                                           SERVICES - BUSINESS/CENTRAL/ 
+                                           OTHER
+FL_V30        268          Character     FLAG - EMPLOYEE BENEFITS - FOOD 
+                                           SERVICES
+FL_V32        269          Character     FLAG - EMPLOYEE BENEFITS - 
+                                           ENTERPRISE OPERATIONS
+FL_V93        270          Character     FLAG - TEXTBOOKS 
+FL_19H        271          Character     FLAG - LONG TERM DEBT - OUTSTANDING 
+                                           AT BEGINNING OF FISCAL YEAR
+FL_21F        272          Character     FLAG - LONG TERM DEBT - ISSUED 
+                                           DURING FISCAL YEAR
+FL_31F        273          Character     FLAG - LONG TERM DEBT - RETIRED 
+                                           DURING FISCAL YEAR
+FL_41F        274          Character     FLAG - LONG TERM DEBT - OUTSTANDING 
+                                           AT END OF FISCAL YEAR
+FL_61V        275          Character     FLAG - SHORT TERM DEBT - OUTSTANDING 
+                                           AT BEGINNING OF FISCAL YEAR
+FL_66V        276          Character     FLAG - SHORT TERM DEBT – 
+                                           OUTSTANDING AT END OF FISCAL YEAR
+FL_W01        277          Character     FLAG - ASSETS - SINKING FUND
+FL_W31        278          Character     FLAG - ASSETS - BOND FUND
+FL_W61        279          Character     FLAG - ASSETS - OTHER FUNDS
+FL_V95        280          Character     FLAG - UTILITIES AND ENERGY SERVICES 
+FL_V02        281          Character     FLAG - TECHNOLOGY-RELATED SUPPLIES AND PURCHASED SERVICES
+FL_K14        282          Character     FLAG - TECHNOLOGY-RELATED EQUIPMENT
+FL_CE1        283          Character     FLAG - CURRENT EXPENDITURES - STATE AND LOCAL FUNDS
+FL_CE2        284          Character     FLAG - CURRENT EXPENDITURES - FEDERAL FUNDS
+FL_CE3        285          Character     FLAG - CURRENT EXPENDITURES - REGIONAL EDUCATION SERVICE 
+                                           AGENCY (RESA) CURRENT EXPENDITURES ON BEHALF OF THE LEA
+FL_SE1        286          Character     FLAG - SPECIAL EDUCATION EXPENDITURE - CURRENT
+FL_SE2        287          Character     FLAG - SPECIAL EDUCATION EXPENDITURE - INSTRUCTIONAL
+FL_SE3        288          Character     FLAG - SPECIAL EDUCATION EXPENDITURE - PUPIL SUPPORT 
+                                           SERVICES
+FL_SE4        289          Character     FLAG - SPECIAL EDUCATION EXPENDITURE - INSTRUCTIONAL 
+                                           STAFF SUPPORT SERVICES
+FL_SE5        290          Character     FLAG - SPECIAL EDUCATION EXPENDITURE - STUDENT 
+                                           TRANSPORTATION SUPPORT SERVICES
+FL_AR1        291          Character     FLAG - CARES ACT FUNDS - REVENUE - ELEMENTARY AND 
+                                           SECONDARY SCHOOL EMERGENCY RELIEF (ESSER) FUND
+FL_AR2        292          Character     FLAG - CARES ACT FUNDS - REVENUE - GOVERNOR EMERGENCY 
+                                           EDUCATION RELIEF (GEER) FUND
+FL_AR3        293          Character     FLAG - CARES ACT FUNDS - REVENUE - EDUCATION STABILIZATION 
+                                           FUND - REIMAGINE WORKFORCE PREPERATION (ESF-RWP) 
+                                           DISCRETIONARY GRANT
+FL_AR4        294          Character     FLAG - CARES ACT FUNDS - REVENUE - EDUCATION STABILIZATION 
+                                           FUND - RETHINK K-12 EDUCATION MODELS (ESF-REM) 
+                                           DISCRETIONARY GRANT
+FL_AR5        295          Character     FLAG - CARES ACT FUNDS - REVENUE - PROJECT SCHOOL 
+                                           EMERGENCY RESPONSE TO VIOLENCE (PROJECT SERV)
+FL_AR6        296          Character     FLAG - CARES ACT FUNDS - REVENUE - CORONAVIRUS RELIEF 
+                                           FUND (CRF)
+FL_AE1        297          Character     FLAG - CARES ACT FUNDS - EXPENDITURE - CURRENT
+FL_AE2        298          Character     FLAG - CARES ACT FUNDS - EXPENDITURE - INSTRUCTIONAL
+FL_AE3        299          Character     FLAG - CARES ACT FUNDS - EXPENDITURE - SUPPORT SERVICES
+FL_AE4        300          Character     FLAG - CARES ACT FUNDS - EXPENDITURE - CAPITAL OUTLAY
+FL_AE5        301          Character     FLAG - CARES ACT FUNDS - EXPENDITURE - TECHNOLOGY-RELATED 
+                                           SUPPLIES AND PURCHASED SERVICES
+FL_AE6        302          Character     FLAG - CARES ACT FUNDS - EXPENDITURE - TECHNOLOGY-RELATED 
+                                           EQUIPMENT

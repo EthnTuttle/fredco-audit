@@ -28,14 +28,10 @@ data/raw/**/*.html
 !data/raw/**/metadata.json
 !data/raw/**/.gitkeep
 
-# Processed data (can be regenerated)
-data/processed/*.json
-data/processed/*.csv
-!data/processed/.gitkeep
+# Processed data - temp files only
+data/processed/temp/*.json
 
-# Analysis outputs (can be regenerated)
-data/analysis/*.json
-data/analysis/dashboards/*.html
+# Analysis outputs
 !data/analysis/.gitkeep
 !data/analysis/dashboards/.gitkeep
 

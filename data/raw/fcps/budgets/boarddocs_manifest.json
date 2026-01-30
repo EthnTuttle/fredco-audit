@@ -1,0 +1,118 @@
+{
+  "scrape_date": "2026-01-29",
+  "source": "BoardDocs - Frederick County Public Schools (VA)",
+  "base_url": "https://go.boarddocs.com/va/fcpsva/Board.nsf/",
+  "search_url": "https://go.boarddocs.com/va/fcpsva/Board.nsf/files?SearchView&Query=budget%20approved&Count=50",
+  "documents_found": {
+    "FY25": {
+      "status": "downloaded",
+      "document_id": "D8HHMH49291A",
+      "filename": "FY25_APPROVED_BUDGET.pdf",
+      "original_filename": "FY25 APPROVED BUDGET with Addendum for Website.pdf",
+      "download_url": "https://go.boarddocs.com/va/fcpsva/Board.nsf/files/D8HHMH49291A/$file/FY25%20APPROVED%20BUDGET%20with%20Addendum%20for%20Website.pdf",
+      "file_size_bytes": 39181625,
+      "notes": "Complete approved budget document with addendum"
+    },
+    "FY24": {
+      "status": "downloaded",
+      "document_id": "CVFQ7Z67EFBB",
+      "filename": "FY24_APPROVED_BUDGET.pdf",
+      "original_filename": "Budget Document FY24-FINAL-with Line-Item.pdf",
+      "download_url": "https://go.boarddocs.com/va/fcpsva/Board.nsf/files/CVFQ7Z67EFBB/$file/Budget%20Document%20FY24-FINAL-with%20Line-Item.pdf",
+      "file_size_bytes": 13243754,
+      "notes": "Complete approved budget document with line items"
+    },
+    "FY23": {
+      "status": "downloaded",
+      "document_id": "CJMRF268DDD0",
+      "filename": "FY23_APPROVED_BUDGET.pdf",
+      "original_filename": "Budget Document FY23 with Appendix (gridlines).pdf",
+      "download_url": "https://go.boarddocs.com/va/fcpsva/Board.nsf/files/CJMRF268DDD0/$file/Budget%20Document%20FY23%20with%20Appendix%20(gridlines).pdf",
+      "file_size_bytes": 8605150,
+      "notes": "Complete approved budget document with appendix"
+    },
+    "FY22": {
+      "status": "not_found_in_boarddocs",
+      "filename": null,
+      "notes": "Full approved budget document not available in BoardDocs. Year-end financial report downloaded as FY22_YearEnd_Financial.pdf. May need to retrieve from FCPS website archives or via FOIA request.",
+      "year_end_report": {
+        "document_id": "CJMQTA6638AD",
+        "filename": "FY22_YearEnd_Financial.pdf",
+        "original_filename": "FCPS Yearend Financial Reports FY 2022.pdf",
+        "download_url": "https://go.boarddocs.com/va/fcpsva/Board.nsf/files/CJMQTA6638AD/$file/FCPS%20Yearend%20Financial%20Reports%20FY%202022.pdf"
+      }
+    },
+    "FY21": {
+      "status": "not_found_in_boarddocs",
+      "filename": null,
+      "notes": "Full approved budget document not available in BoardDocs. BoardDocs records for this period may not include full budget documents. May need to retrieve from FCPS website archives or via FOIA request."
+    },
+    "FY20": {
+      "status": "not_found_in_boarddocs",
+      "filename": null,
+      "notes": "Full approved budget document not available in BoardDocs. BoardDocs records for this period may not include full budget documents. May need to retrieve from FCPS website archives or via FOIA request."
+    }
+  },
+  "supplementary_documents_found": {
+    "FY26_Approved_Budget": {
+      "document_id": "various",
+      "filename": "FY26_Approved_Budget_with_Addendum.pdf",
+      "notes": "Already in repository from previous download"
+    },
+    "Year_End_Financial_Reports": {
+      "FY25": "FY25_YearEnd_Financial.pdf",
+      "FY24": "FY24_YearEnd_Financial.pdf",
+      "FY23": "FY23_YearEnd_Financial.pdf",
+      "FY22": "FY22_YearEnd_Financial.pdf"
+    },
+    "Capital_Asset_Plans": {
+      "FY25": "FY25_Capital_Asset_Plan.pdf",
+      "FY26-29": "FY26-29_Capital_Asset_Plan.pdf"
+    }
+  },
+  "search_queries_attempted": [
+    "budget approved",
+    "FY25 approved budget",
+    "FY24 approved budget",
+    "FY23 approved budget",
+    "FY22 approved budget",
+    "FY21 approved budget",
+    "FY20 approved budget",
+    "Budget Document FY",
+    "Budget FINAL",
+    "Budget Document FY23",
+    "Budget Document FY22",
+    "Budget Document FY21",
+    "Budget Document FY20",
+    "FY2022 budget document",
+    "FY2023 Budget Document"
+  ],
+  "boarddocs_structure_notes": {
+    "file_url_pattern": "https://go.boarddocs.com/va/fcpsva/Board.nsf/files/{DOCUMENT_ID}/$file/{URL_ENCODED_FILENAME}",
+    "search_returns": "Document IDs that can be used to fetch file details",
+    "document_detail_url": "https://go.boarddocs.com/va/fcpsva/Board.nsf/c4cf1644198dfd9986257503000d636f/{LONG_ID}?OpenDocument",
+    "note": "BoardDocs uses JavaScript heavily - direct API/search works better than page scraping"
+  },
+  "manual_steps_required": {
+    "FY22_budget": [
+      "Check FCPS website at https://www.frederickcountyschoolsva.net/about/budget",
+      "Look for archived budget documents from 2021-2022",
+      "If not available online, file FOIA request to FCPS Finance Department"
+    ],
+    "FY21_budget": [
+      "Check FCPS website at https://www.frederickcountyschoolsva.net/about/budget",
+      "Look for archived budget documents from 2020-2021",
+      "If not available online, file FOIA request to FCPS Finance Department"
+    ],
+    "FY20_budget": [
+      "Check FCPS website at https://www.frederickcountyschoolsva.net/about/budget",
+      "Look for archived budget documents from 2019-2020",
+      "If not available online, file FOIA request to FCPS Finance Department"
+    ],
+    "alternative_data_sources": [
+      "VDOE Superintendent's Annual Report tables contain per-pupil expenditure data",
+      "Virginia APA Comparative Report contains education expenditure summaries",
+      "FCPS Annual Comprehensive Financial Reports (ACFR) contain audited financial data"
+    ]
+  }
+}
