@@ -1,0 +1,64 @@
+{
+  "source_file": "FY24_Activity_Fund_Audit.pdf",
+  "source_path": "data/raw/fcps/acfr/FY24_Activity_Fund_Audit.pdf",
+  "processed_date": "2026-01-28T22:52:59.379278",
+  "fiscal_year": "Unknown",
+  "tables_found": 3,
+  "expenditure_tables": 0,
+  "expenditures": {},
+  "raw_tables": [
+    {
+      "page": 9,
+      "table_index": 0,
+      "columns": [
+        "6) The effects of uncorrected misstatements are immaterial, both individually and in the aggregate, to the",
+        "col_1",
+        "col_2"
+      ],
+      "rows": 2,
+      "data": [
+        {
+          "6) The effects of uncorrected misstatements are immaterial, both individually and in the aggregate, to the": null,
+          "col_1": "financial statement as a whole. A list of the uncorrected misstatements are noted below:",
+          "col_2": "[REMOVE IF NO"
+        },
+        {
+          "6) The effects of uncorrected misstatements are immaterial, both individually and in the aggregate, to the": null,
+          "col_1": "PAJE\u2019s]",
+          "col_2": null
+        }
+      ]
+    },
+    {
+      "page": 10,
+      "table_index": 0,
+      "columns": [
+        "17) We have taken timely and appropriate steps to remedy identified and suspected fraud or noncompliance",
+        "col_1"
+      ],
+      "rows": 1,
+      "data": [
+        {
+          "17) We have taken timely and appropriate steps to remedy identified and suspected fraud or noncompliance": null,
+          "col_1": "with provisions of laws, regulations, contracts, and grant agreements that you have reported to us."
+        }
+      ]
+    },
+    {
+      "page": 10,
+      "table_index": 1,
+      "columns": [
+        "We have identified and disclosed to you all instances of identified and suspected fraud and noncompliance"
+      ],
+      "rows": 2,
+      "data": [
+        {
+          "We have identified and disclosed to you all instances of identified and suspected fraud and noncompliance": "with provisions of laws, regulations, contracts, and grant agreements that we believe have a material effect"
+        },
+        {
+          "We have identified and disclosed to you all instances of identified and suspected fraud and noncompliance": "on the financial statement."
+        }
+      ]
+    }
+  ]
+}

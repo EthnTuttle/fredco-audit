@@ -1,0 +1,127 @@
+{
+  "source_file": "FY25_Year-End_Financial_Reports.pdf",
+  "source_path": "data/raw/fcps/acfr/FY25_Year-End_Financial_Reports.pdf",
+  "processed_date": "2026-01-28T22:53:07.289185",
+  "fiscal_year": "Unknown",
+  "tables_found": 4,
+  "expenditure_tables": 0,
+  "expenditures": {},
+  "raw_tables": [
+    {
+      "page": 1,
+      "table_index": 0,
+      "columns": [
+        "col_0"
+      ],
+      "rows": 16,
+      "data": [
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        }
+      ]
+    },
+    {
+      "page": 1,
+      "table_index": 1,
+      "columns": [
+        "1415 Amherst Street, Winchester, Virginia 22601"
+      ],
+      "rows": 1,
+      "data": [
+        {
+          "1415 Amherst Street, Winchester, Virginia 22601": "www.FrederickCountySchoolsVA.net / 540-662-3888"
+        }
+      ]
+    },
+    {
+      "page": 21,
+      "table_index": 0,
+      "columns": [
+        "NORTHWESTERN REGIONAL EDUCATIONAL"
+      ],
+      "rows": 1,
+      "data": [
+        {
+          "NORTHWESTERN REGIONAL EDUCATIONAL": "PROGRAMS (NREP) FUNDS"
+        }
+      ]
+    },
+    {
+      "page": 28,
+      "table_index": 0,
+      "columns": [
+        "[a] [b]\nActual Actual\n2022-23 2023-24",
+        "[c] [d]\nExpected\nActivity Actual\n2024-25 2024-25",
+        "[e]\nExpected\nActivity\n2025-26"
+      ],
+      "rows": 4,
+      "data": [
+        {
+          "[a] [b]\nActual Actual\n2022-23 2023-24": null,
+          "[c] [d]\nExpected\nActivity Actual\n2024-25 2024-25": "$ 9,135,418 $ 9,135,418\n$ 400,000 $ 731,145\n24,178,800 24,543,659\n500 5 ,549",
+          "[e]\nExpected\nActivity\n2025-26": null
+        },
+        {
+          "[a] [b]\nActual Actual\n2022-23 2023-24": null,
+          "[c] [d]\nExpected\nActivity Actual\n2024-25 2024-25": "$ 24,579,300 $ 25,133,353\n$ 250,000 $ 78,700\n9 ,000 9 ,249\n- 3 ,657\n725,000 639,730\n23,700,000 24,897,411\n1 ,450,000 1 ,135,765",
+          "[e]\nExpected\nActivity\n2025-26": null
+        },
+        {
+          "[a] [b]\nActual Actual\n2022-23 2023-24": null,
+          "[c] [d]\nExpected\nActivity Actual\n2024-25 2024-25": "$ 26,134,000 $ 26,764,511\n$ (1,554,700) $ (1,631,158)",
+          "[e]\nExpected\nActivity\n2025-26": null
+        },
+        {
+          "[a] [b]\nActual Actual\n2022-23 2023-24": null,
+          "[c] [d]\nExpected\nActivity Actual\n2024-25 2024-25": "$ 7,580,718 $ 7,504,260",
+          "[e]\nExpected\nActivity\n2025-26": null
+        }
+      ]
+    }
+  ]
+}

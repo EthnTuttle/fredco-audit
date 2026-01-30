@@ -1,0 +1,215 @@
+{
+  "source_file": "FY25_Approved_Budget_with_Addendum.pdf",
+  "source_path": "data/raw/fcps/budgets/FY25_Approved_Budget_with_Addendum.pdf",
+  "processed_date": "2026-01-28T22:47:50.775776",
+  "fiscal_year": "Unknown",
+  "tables_found": 621,
+  "expenditure_tables": 297,
+  "expenditures": {
+    "instruction": 0,
+    "administration": 0,
+    "attendance_health": 0,
+    "pupil_transportation": 0,
+    "operations_maintenance": 0,
+    "facilities": 0,
+    "debt_service": 0,
+    "technology": 0,
+    "other": 0,
+    "total": 0
+  },
+  "raw_tables": [
+    {
+      "page": 1,
+      "table_index": 0,
+      "columns": [
+        "Frederick County Public Schools\nSchool Board Approved Budget, FY 2025\nFinal Version -7/01/2024\nFrederick County Public Schools, Winchester, VA | FY 2025 Approved Budget Page 1"
+      ],
+      "rows": 1,
+      "data": [
+        {
+          "Frederick County Public Schools\nSchool Board Approved Budget, FY 2025\nFinal Version -7/01/2024\nFrederick County Public Schools, Winchester, VA | FY 2025 Approved Budget Page 1": ""
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "table_index": 0,
+      "columns": [
+        "col_0",
+        "col_1",
+        "col_2"
+      ],
+      "rows": 2,
+      "data": [
+        {
+          "col_0": "",
+          "col_1": "INTRODUCTION\nFrederick County Public Schools, Winchester, VA | FY 2025 Approved Budget Page 4",
+          "col_2": ""
+        },
+        {
+          "col_0": null,
+          "col_1": "",
+          "col_2": null
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "table_index": 0,
+      "columns": [
+        "col_0",
+        "col_1",
+        "col_2"
+      ],
+      "rows": 2,
+      "data": [
+        {
+          "col_0": "",
+          "col_1": "School Board Approved Budget, Fiscal Year 2024-2025\nBuilding Connections with Students and Families\nIdentifying Unique Interests of Our Learners\nNurturing All Learners to Realize Their Dreams & Aspirations\nFrederick County Public Schools, 1415 Amherst Street, Winchester, Virginia 22601 ~ 540-662-3888\nwww.FrederickCountySchoolsVA.net\uf35d\nFrederick County Public Schools, Winchester, VA | FY 2025 Approved Budget Page 5",
+          "col_2": ""
+        },
+        {
+          "col_0": null,
+          "col_1": "",
+          "col_2": null
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "table_index": 0,
+      "columns": [
+        "col_0",
+        "col_1",
+        "col_2"
+      ],
+      "rows": 2,
+      "data": [
+        {
+          "col_0": "",
+          "col_1": "Notice of Non-Discrimination\nFrederick County Public Schools shall not discriminate on the basis of race, color, national origin, ancestry, religion, sex, sexual\norientation, gender, gender identity, age, political af\u0000liation, disability, military status, marital status, pregnancy, childbirth or related\nmedical conditions, genetic information or any other characteristic protected by law in the education program and activities, or\nemployment and provides equal access to the Boy Scouts and other designated youth groups.\nQuestions concerning the application of this nondiscrimination policy may be made to: Title IX Coordinator (Adults), Katie Freakley,\nExecutive Director of Human Resources; Title IX Coordinator (Students) and Section 504 Coordinator, Teresa Ritenour, Director of\nStudent Support Services.\nFor further information on notice of nondiscrimination, see list of OCR enforcement of\u0000ces for the addresses and phone numbers of\nthe of\u0000ce that serves your area, or call 1-800-421-3481.\nPictured Below: 2024 James Wood High graduates visit Gainesboro Elementary\nFrederick County Public Schools, Winchester, VA | FY 2025 Approved Budget Page 6",
+          "col_2": ""
+        },
+        {
+          "col_0": null,
+          "col_1": "",
+          "col_2": null
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "table_index": 1,
+      "columns": [
+        "col_0"
+      ],
+      "rows": 2,
+      "data": [
+        {
+          "col_0": "Frederick County Public Schools, Winchester, VA | FY 2025 Approved Budget Page"
+        },
+        {
+          "col_0": ""
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "table_index": 0,
+      "columns": [
+        "col_0",
+        "col_1",
+        "col_2"
+      ],
+      "rows": 2,
+      "data": [
+        {
+          "col_0": "",
+          "col_1": "How to Navigate this Budget Document\nThe School Board Approved Budget describes the school division\u2019s budget development, management, and processes. It includes \u0000nancial\ninformation for the current budget year as well as comparison data for previous \u0000scal years. The document\u2019s format follows the standards set forth\nby the Association of School Business Of\u0000cials International Meritorious Budget Award Program, as well as the Government Finance Of\u0000cers\nAssociation Distinguished Budget Presentation Awards Program. The purpose of this budget document is to provide policy information, to serve as\nan operational guide and \u0000nancial plan, and to communicate \u0000scal practices with the school division\u2019s stakeholders, including parents, students,\nstaff, constituents, and elected of\u0000cials. Throughout this document, Frederick County Public Schools is referenced by the abbreviation FCPS. Due to\nrounding, numbers in charts and tables may not add precisely.\nThe Superintendent's Proposed Budget for Fiscal Year 2024-2025 is divided into four sections:\n\u0000. The EXECUTIVE SUMMARY provides a comprehensive overview of the leadership and organization, as well as a \u0000nancial picture of the school\ndistrict's budget for FY25, and can be presented separately as a highlight of the entire budget document. Information in this summary is\nincluded in and expanded upon in the following major sections: Organizational, Financial, and Informational.\n\u0000. The ORGANIZATIONAL SECTION explains the direction, management and regulatory structure, strategic plans, and the budget process of the\nschool division. The leadership team is introduced, along with an overview of FCPS' mission and goals, especially as connected to costs. The\nschool district's major goals and objectives are explained, with a description of the budget process and timeline. The division's accounting\nstructure and \u0000nancial practices are addressed, to include a description of revenue sources.\n\u0000. The FINANCIAL SECTION presents budget data district-wide and by fund, in summary and by detail. Three years of historical \u0000nancial data,\nthe current year\u2019s budget, and next year\u2019s proposed budget, as well as a three-year forecast of projected revenues and expenditures are\npresented. Trends and initiatives are explained. An overview of each department\u2019s contributions is provided.\n\u0000. The INFORMATIONAL SECTION shares student enrollment analysis and projection methodology and the resulting impact on the number of\npositions FCPS needs to operate. This section also provides information on local taxes and economy, cost of education, and school division\naccountability. A glossary of terms and acronyms is included at the end.\nThese sections are shown at the top of the webpage. To access the detailed information in each section, click on the title for each page. You must\nmanually click on each section, as the full budget document is not available by scrolling. Obtain a printed copy by clicking on the PDF icon; once\ncompiled, the printed version will be sent to an email address as provided.\nFor additional information, visit the \"About - Budget\" page of the Frederick County Public Schools' website at www.frederickcountyschoolssva.net\uf35d.\nFrederick County Public Schools, Winchester, VA | FY 2025 Approved Budget Page 7",
+          "col_2": ""
+        },
+        {
+          "col_0": null,
+          "col_1": "",
+          "col_2": null
+        }
+      ],
+      "keyword_matches": 3
+    },
+    {
+      "page": 7,
+      "table_index": 1,
+      "columns": [
+        "col_0"
+      ],
+      "rows": 1,
+      "data": [
+        {
+          "col_0": "How to Navigate this Budget Document\nThe School Board Approved Budget describes the school division\u2019s budget development, management, and processes. It includes \u0000nancial\ninformation for the current budget year as well as comparison data for previous \u0000scal years. The document\u2019s format follows the standards set forth\nby the Association of School Business Of\u0000cials International Meritorious Budget Award Program, as well as the Government Finance Of\u0000cers\nAssociation Distinguished Budget Presentation Awards Program. The purpose of this budget document is to provide policy information, to serve as\nan operational guide and \u0000nancial plan, and to communicate \u0000scal practices with the school division\u2019s stakeholders, including parents, students,\nstaff, constituents, and elected of\u0000cials. Throughout this document, Frederick County Public Schools is referenced by the abbreviation FCPS. Due to\nrounding, numbers in charts and tables may not add precisely.\nThe Superintendent's Proposed Budget for Fiscal Year 2024-2025 is divided into four sections:\n\u0000. The EXECUTIVE SUMMARY provides a comprehensive overview of the leadership and organization, as well as a \u0000nancial picture of the school\ndistrict's budget for FY25, and can be presented separately as a highlight of the entire budget document. Information in this summary is\nincluded in and expanded upon in the following major sections: Organizational, Financial, and Informational.\n\u0000. The ORGANIZATIONAL SECTION explains the direction, management and regulatory structure, strategic plans, and the budget process of the\nschool division. The leadership team is introduced, along with an overview of FCPS' mission and goals, especially as connected to costs. The\nschool district's major goals and objectives are explained, with a description of the budget process and timeline. The division's accounting\nstructure and \u0000nancial practices are addressed, to include a description of revenue sources.\n\u0000. The FINANCIAL SECTION presents budget data district-wide and by fund, in summary and by detail. Three years of historical \u0000nancial data,\nthe current year\u2019s budget, and next year\u2019s proposed budget, as well as a three-year forecast of projected revenues and expenditures are\npresented. Trends and initiatives are explained. An overview of each department\u2019s contributions is provided.\n\u0000. The INFORMATIONAL SECTION shares student enrollment analysis and projection methodology and the resulting impact on the number of\npositions FCPS needs to operate. This section also provides information on local taxes and economy, cost of education, and school division\naccountability. A glossary of terms and acronyms is included at the end.\nThese sections are shown at the top of the webpage. To access the detailed information in each section, click on the title for each page. You must\nmanually click on each section, as the full budget document is not available by scrolling. Obtain a printed copy by clicking on the PDF icon; once\ncompiled, the printed version will be sent to an email address as provided.\nFor additional information, visit the \"About - Budget\" page of the Frederick County Public Schools' website at www.frederickcountyschoolssva.net\uf35d."
+        }
+      ],
+      "keyword_matches": 3
+    },
+    {
+      "page": 8,
+      "table_index": 0,
+      "columns": [
+        "col_0",
+        "col_1",
+        "col_2"
+      ],
+      "rows": 2,
+      "data": [
+        {
+          "col_0": "",
+          "col_1": "Frederick County Public Schools Budget Awards\nFrederick County Public Schools is proud to be recognized for accuracy and transparency in our budget process and \u0000scal\nresponsibility. Upon our \u0000rst submission to the Government Finance Of\u0000cers Association of the United States and Canada\n(GFOA), FCPS was presented a Distinguished Budget Presentation Award for the Annual Budget for the \u0000scal year ending\nJune 30, 2024. To receive this award, a governmental unit must publish a budget document that meets program criteria as a\npolicy document, \u0000nancial plan, operations guide, and communications device. The GFOA award is the highest form of\nrecognition in governmental budgeting.\nAdditionally, Frederick County Public Schools was awarded the Meritorious Budget Award for excellence in the preparation\nand issuance of the Fiscal Year 2023-2024 budget, presented by the Association of School Business Of\u0000cials International\n(ASBO). ASBO International\u2019s MBA and Pathway to the MBA promote and recognize best budget presentation practices in\nschool districts. Participants submit their applications and budget documents to a panel of school \u0000nancial professionals who\nreview the materials for compliance with the MBA Criteria Checklist and other requirements and provide expert feedback that\ndistricts can use to improve their budget documents. \u201cDistricts that apply to the MBA or Pathway to the MBA programs\nrecognize the importance of presenting a high-quality, easy-to-understand budget internally and to the community,\u201d ASBO\nInternational Executive Director David J. Lewis explains. The Frederick County Public Schools Annual Budget has continuously\nreceived this award for the past 11 years.\nPictured Below: Dr. Hummer, Superintendent, meets with the Student Advisory Committee in February 2024.\nFrederick County Public Schools, Winchester, VA | FY 2025 Approved Budget Page 8",
+          "col_2": ""
+        },
+        {
+          "col_0": null,
+          "col_1": "",
+          "col_2": null
+        }
+      ],
+      "keyword_matches": 2
+    },
+    {
+      "page": 8,
+      "table_index": 1,
+      "columns": [
+        "col_0"
+      ],
+      "rows": 2,
+      "data": [
+        {
+          "col_0": "Frederick County Public Schools, Winchester, VA | FY 2025 Approved Budget Page"
+        },
+        {
+          "col_0": ""
+        }
+      ]
+    },
+    {
+      "page": 9,
+      "table_index": 0,
+      "columns": [
+        "col_0",
+        "col_1",
+        "col_2"
+      ],
+      "rows": 2,
+      "data": [
+        {
+          "col_0": "",
+          "col_1": "Government Finance Of\u0000cers Association of the United States and\nCanada Distinguished Budget Presentation Award\nFrederick County Public Schools, Winchester, VA | FY 2025 Approved Budget Page 9",
+          "col_2": ""
+        },
+        {
+          "col_0": null,
+          "col_1": "",
+          "col_2": null
+        }
+      ]
+    }
+  ]
+}

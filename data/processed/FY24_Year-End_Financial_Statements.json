@@ -1,0 +1,386 @@
+{
+  "source_file": "FY24_Year-End_Financial_Statements.pdf",
+  "source_path": "data/raw/fcps/acfr/FY24_Year-End_Financial_Statements.pdf",
+  "processed_date": "2026-01-28T22:52:57.108170",
+  "fiscal_year": "Unknown",
+  "tables_found": 5,
+  "expenditure_tables": 0,
+  "expenditures": {},
+  "raw_tables": [
+    {
+      "page": 1,
+      "table_index": 0,
+      "columns": [
+        "col_0"
+      ],
+      "rows": 16,
+      "data": [
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        },
+        {
+          "col_0": ""
+        }
+      ]
+    },
+    {
+      "page": 1,
+      "table_index": 1,
+      "columns": [
+        "1415 Amherst Street, Winchester, Virginia 22601"
+      ],
+      "rows": 1,
+      "data": [
+        {
+          "1415 Amherst Street, Winchester, Virginia 22601": "www.FrederickCountySchoolsVA.net / 540-662-3888"
+        }
+      ]
+    },
+    {
+      "page": 17,
+      "table_index": 0,
+      "columns": [
+        "Indian Hollow Elementary",
+        "col_1",
+        "col_2",
+        "col_3",
+        "James Wood High School",
+        "col_5",
+        "col_6"
+      ],
+      "rows": 27,
+      "data": [
+        {
+          "Indian Hollow Elementary": "Beginning project amount",
+          "col_1": "$",
+          "col_2": "12,020,000.00",
+          "col_3": "",
+          "James Wood High School": "Beginning project amount",
+          "col_5": "$",
+          "col_6": "7 2,844,000.00"
+        },
+        {
+          "Indian Hollow Elementary": "Expenditures through June 30, 2024",
+          "col_1": "$",
+          "col_2": "( 11,451,900.56)",
+          "col_3": "",
+          "James Wood High School": "Expenditures through June 30, 2024",
+          "col_5": "$",
+          "col_6": "( 57,252,318.69)"
+        },
+        {
+          "Indian Hollow Elementary": "O/S Encumbrances @ June 30, 2024",
+          "col_1": "$",
+          "col_2": "(406,559.29)",
+          "col_3": "",
+          "James Wood High School": "O/S Encumbrances @ June 30, 2024",
+          "col_5": "$",
+          "col_6": "( 12,951,882.44)"
+        },
+        {
+          "Indian Hollow Elementary": "Remaining project balance",
+          "col_1": "$",
+          "col_2": "161,540.15",
+          "col_3": "",
+          "James Wood High School": "Remaining project balance",
+          "col_5": "$",
+          "col_6": "2 ,639,798.87"
+        },
+        {
+          "Indian Hollow Elementary": "",
+          "col_1": "",
+          "col_2": "",
+          "col_3": "",
+          "James Wood High School": "",
+          "col_5": "",
+          "col_6": ""
+        },
+        {
+          "Indian Hollow Elementary": "Cash received \u2013 bond proceeds",
+          "col_1": "$",
+          "col_2": "10,370,000.00",
+          "col_3": "",
+          "James Wood High School": "Cash received \u2013 bond proceeds",
+          "col_5": "$",
+          "col_6": "6 2,170,000.00"
+        },
+        {
+          "Indian Hollow Elementary": "Cash received \u2013 premium proceeds",
+          "col_1": "$",
+          "col_2": "1,440,560.73",
+          "col_3": "",
+          "James Wood High School": "Cash received \u2013 premium proceeds",
+          "col_5": "$",
+          "col_6": "6 ,048,312.70"
+        },
+        {
+          "Indian Hollow Elementary": "Cash received \u2013 interest earnings",
+          "col_1": "$",
+          "col_2": "295,754.36",
+          "col_3": "",
+          "James Wood High School": "Cash received \u2013 interest earnings",
+          "col_5": "$",
+          "col_6": "1 ,037,755.99"
+        },
+        {
+          "Indian Hollow Elementary": "Cash disbursed for project",
+          "col_1": "$",
+          "col_2": "( 11,446,051.06)",
+          "col_3": "",
+          "James Wood High School": "Cash transferred from other projects",
+          "col_5": "$",
+          "col_6": "1 79,394.65"
+        },
+        {
+          "Indian Hollow Elementary": "Accounts Payable @ June 30, 2024",
+          "col_1": "$",
+          "col_2": "(5,849.50)",
+          "col_3": "",
+          "James Wood High School": "Cash disbursed for project",
+          "col_5": "$",
+          "col_6": "( 54,955,927.72)"
+        },
+        {
+          "Indian Hollow Elementary": "Cash/A/P balance @June 30, 2024",
+          "col_1": "$",
+          "col_2": "654,414.53",
+          "col_3": "",
+          "James Wood High School": "Accounts Payable @ June 30, 2024",
+          "col_5": "$",
+          "col_6": "( 2,296,390.97)"
+        },
+        {
+          "Indian Hollow Elementary": "",
+          "col_1": "",
+          "col_2": "",
+          "col_3": "",
+          "James Wood High School": "Cash/ A/P balance as of June 30, 2024",
+          "col_5": "$",
+          "col_6": "12,183,144.65"
+        },
+        {
+          "Indian Hollow Elementary": "",
+          "col_1": "",
+          "col_2": "",
+          "col_3": "",
+          "James Wood High School": "",
+          "col_5": "",
+          "col_6": ""
+        },
+        {
+          "Indian Hollow Elementary": "Armel Addition:",
+          "col_1": "",
+          "col_2": "",
+          "col_3": "",
+          "James Wood High School": "Fourth High School:",
+          "col_5": "",
+          "col_6": ""
+        },
+        {
+          "Indian Hollow Elementary": "Beginning project amount",
+          "col_1": "$",
+          "col_2": "500,000.00",
+          "col_3": "",
+          "James Wood High School": "Beginning project amount",
+          "col_5": "$",
+          "col_6": "6 ,000,000.00"
+        },
+        {
+          "Indian Hollow Elementary": "Expenditures through June 30, 2024",
+          "col_1": "$",
+          "col_2": "(474,563.00)",
+          "col_3": "",
+          "James Wood High School": "Expenditures through June 30, 2024",
+          "col_5": "$",
+          "col_6": "( 5,376,281.60)"
+        },
+        {
+          "Indian Hollow Elementary": "O/S Encumbrances @ June 30, 2024",
+          "col_1": "$",
+          "col_2": "-",
+          "col_3": "",
+          "James Wood High School": "O/S Encumbrances @ June 30, 2024",
+          "col_5": "$",
+          "col_6": "-"
+        },
+        {
+          "Indian Hollow Elementary": "Remaining project balance",
+          "col_1": "$",
+          "col_2": "25,437.00",
+          "col_3": "",
+          "James Wood High School": "Remaining project balance",
+          "col_5": "$",
+          "col_6": "6 23,718.40"
+        },
+        {
+          "Indian Hollow Elementary": "",
+          "col_1": "",
+          "col_2": "",
+          "col_3": "",
+          "James Wood High School": "",
+          "col_5": "",
+          "col_6": ""
+        },
+        {
+          "Indian Hollow Elementary": "Cash received \u2013 bond proceeds",
+          "col_1": "$",
+          "col_2": "-",
+          "col_3": "",
+          "James Wood High School": "Cash received \u2013 bond proceeds",
+          "col_5": "$",
+          "col_6": "2 ,734,850.00"
+        },
+        {
+          "Indian Hollow Elementary": "Cash received \u2013 premium proceeds",
+          "col_1": "$",
+          "col_2": "-",
+          "col_3": "",
+          "James Wood High School": "Cash received \u2013 premium proceeds",
+          "col_5": "$",
+          "col_6": "2 09,216.97"
+        },
+        {
+          "Indian Hollow Elementary": "Cash received \u2013 interest earnings",
+          "col_1": "$",
+          "col_2": "-",
+          "col_3": "",
+          "James Wood High School": "Cash received \u2013 interest earnings",
+          "col_5": "$",
+          "col_6": "4 ,733.58"
+        },
+        {
+          "Indian Hollow Elementary": "Cash transferred \u2013 undesignated fund",
+          "col_1": "$",
+          "col_2": "-",
+          "col_3": "",
+          "James Wood High School": "Cash transferred \u2013 undesignated fund",
+          "col_5": "$",
+          "col_6": "2 ,500,000.00"
+        },
+        {
+          "Indian Hollow Elementary": "Cash received from other projects",
+          "col_1": "$",
+          "col_2": "500,000.00",
+          "col_3": "",
+          "James Wood High School": "Cash received from other projects",
+          "col_5": "$",
+          "col_6": "2 30,199.17"
+        },
+        {
+          "Indian Hollow Elementary": "Cash disbursed for project",
+          "col_1": "$",
+          "col_2": "(474,563.00)",
+          "col_3": "",
+          "James Wood High School": "Cash disbursed for project",
+          "col_5": "$",
+          "col_6": "( 5,376,281.60)"
+        },
+        {
+          "Indian Hollow Elementary": "Accounts Payable @ June 30, 2024",
+          "col_1": "$",
+          "col_2": "-",
+          "col_3": "",
+          "James Wood High School": "Accounts Payable @ June 30, 2024",
+          "col_5": "$",
+          "col_6": "-"
+        },
+        {
+          "Indian Hollow Elementary": "Cash/ A/P balance as of June 30, 2024",
+          "col_1": "$",
+          "col_2": "25,437.00",
+          "col_3": "",
+          "James Wood High School": "Cash/A/P balance @June 30, 2024",
+          "col_5": "$",
+          "col_6": "3 02,718.12"
+        }
+      ]
+    },
+    {
+      "page": 21,
+      "table_index": 0,
+      "columns": [
+        "NORTHWESTERN REGIONAL EDUCATIONAL"
+      ],
+      "rows": 1,
+      "data": [
+        {
+          "NORTHWESTERN REGIONAL EDUCATIONAL": "PROGRAMS (NREP) FUNDS"
+        }
+      ]
+    },
+    {
+      "page": 28,
+      "table_index": 0,
+      "columns": [
+        "[a] [b]\nActual Actual\n2021-22 2022-23",
+        "[c] [d]\nExpected\nActivity Actual\n2023-24 2023-24",
+        "[e]\nExpected\nActivity\n2024-25"
+      ],
+      "rows": 4,
+      "data": [
+        {
+          "[a] [b]\nActual Actual\n2021-22 2022-23": null,
+          "[c] [d]\nExpected\nActivity Actual\n2023-24 2023-24": "$ 9,563,182 $ 9,563,182\n$ 200,000 $ 660,103\n23,055,000 22,086,746\n500 10,977",
+          "[e]\nExpected\nActivity\n2024-25": null
+        },
+        {
+          "[a] [b]\nActual Actual\n2021-22 2022-23": null,
+          "[c] [d]\nExpected\nActivity Actual\n2023-24 2023-24": "$ 23,255,500 $ 22,757,826\n$ 400,000 $ 214,844\n8 ,500 8 ,469\n37,000 36,354\n700,000 643,443\n23,720,000 20,861,863\n1 ,366,000 1 ,420,616",
+          "[e]\nExpected\nActivity\n2024-25": null
+        },
+        {
+          "[a] [b]\nActual Actual\n2021-22 2022-23": null,
+          "[c] [d]\nExpected\nActivity Actual\n2023-24 2023-24": "$ 26,231,500 $ 23,185,589\n$ (2,976,000) $ (427,764)",
+          "[e]\nExpected\nActivity\n2024-25": null
+        },
+        {
+          "[a] [b]\nActual Actual\n2021-22 2022-23": null,
+          "[c] [d]\nExpected\nActivity Actual\n2023-24 2023-24": "$ 6,587,182 $ 9,135,418",
+          "[e]\nExpected\nActivity\n2024-25": null
+        }
+      ]
+    }
+  ]
+}

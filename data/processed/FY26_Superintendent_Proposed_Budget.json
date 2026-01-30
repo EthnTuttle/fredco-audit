@@ -1,0 +1,568 @@
+{
+  "source_file": "FY26_Superintendent_Proposed_Budget.pdf",
+  "source_path": "data/raw/fcps/budgets/FY26_Superintendent_Proposed_Budget.pdf",
+  "processed_date": "2026-01-28T22:50:36.498277",
+  "fiscal_year": "Unknown",
+  "tables_found": 486,
+  "expenditure_tables": 424,
+  "expenditures": {
+    "instruction": 190900172.0,
+    "administration": 11554015.0,
+    "attendance_health": 0,
+    "pupil_transportation": 15702602.0,
+    "operations_maintenance": 20962899.0,
+    "facilities": 8112484.0,
+    "debt_service": 0,
+    "technology": 12353845.0,
+    "other": 2083234.0,
+    "total": 255846846.0
+  },
+  "raw_tables": [
+    {
+      "page": 9,
+      "table_index": 1,
+      "columns": [
+        "Dr. George C. Hum\n(Appointed by t",
+        "mer, Superintendent\nhe School Board)"
+      ],
+      "rows": 1,
+      "data": [
+        {
+          "Dr. George C. Hum\n(Appointed by t": null,
+          "mer, Superintendent\nhe School Board)": ""
+        }
+      ]
+    },
+    {
+      "page": 12,
+      "table_index": 0,
+      "columns": [
+        "FREDERICK COUNTY SCHOOL BOARD BUDGET PRIORITIES"
+      ],
+      "rows": 1,
+      "data": [
+        {
+          "FREDERICK COUNTY SCHOOL BOARD BUDGET PRIORITIES": "FOR SCHOOL YEAR 2025-2026 (FY26)"
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "table_index": 0,
+      "columns": [
+        "4.6%"
+      ],
+      "rows": 2,
+      "data": [
+        {
+          "4.6%": "46.2%"
+        },
+        {
+          "4.6%": "48.6%"
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "table_index": 1,
+      "columns": [
+        "7.5%"
+      ],
+      "rows": 2,
+      "data": [
+        {
+          "7.5%": "46.2%"
+        },
+        {
+          "7.5%": "45.9%"
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "table_index": 2,
+      "columns": [
+        "5.2%"
+      ],
+      "rows": 2,
+      "data": [
+        {
+          "5.2%": "47.2%"
+        },
+        {
+          "5.2%": "47.1%"
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "table_index": 3,
+      "columns": [
+        "3.6%"
+      ],
+      "rows": 2,
+      "data": [
+        {
+          "3.6%": "49.9%"
+        },
+        {
+          "3.6%": "46.0%"
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "table_index": 4,
+      "columns": [
+        "3.1%"
+      ],
+      "rows": 2,
+      "data": [
+        {
+          "3.1%": "49.8%"
+        },
+        {
+          "3.1%": "46.3%"
+        }
+      ]
+    },
+    {
+      "page": 15,
+      "table_index": 0,
+      "columns": [
+        "col_0",
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5",
+        "col_6",
+        "col_7",
+        "col_8",
+        "col_9",
+        "col_10",
+        "col_11",
+        "col_12",
+        "col_13",
+        "col_14",
+        "col_15",
+        "col_16",
+        "col_17",
+        "col_18"
+      ],
+      "rows": 8,
+      "data": [
+        {
+          "col_0": "",
+          "col_1": "",
+          "col_2": "",
+          "col_3": "",
+          "col_4": "",
+          "col_5": "",
+          "col_6": "",
+          "col_7": "",
+          "col_8": "",
+          "col_9": null,
+          "col_10": null,
+          "col_11": null,
+          "col_12": null,
+          "col_13": null,
+          "col_14": null,
+          "col_15": null,
+          "col_16": null,
+          "col_17": null,
+          "col_18": null
+        },
+        {
+          "col_0": null,
+          "col_1": null,
+          "col_2": null,
+          "col_3": null,
+          "col_4": null,
+          "col_5": null,
+          "col_6": null,
+          "col_7": null,
+          "col_8": null,
+          "col_9": null,
+          "col_10": "",
+          "col_11": null,
+          "col_12": null,
+          "col_13": null,
+          "col_14": null,
+          "col_15": null,
+          "col_16": null,
+          "col_17": null,
+          "col_18": null
+        },
+        {
+          "col_0": "",
+          "col_1": "",
+          "col_2": "",
+          "col_3": "",
+          "col_4": "",
+          "col_5": "",
+          "col_6": "",
+          "col_7": "",
+          "col_8": "",
+          "col_9": "",
+          "col_10": "",
+          "col_11": null,
+          "col_12": null,
+          "col_13": null,
+          "col_14": null,
+          "col_15": null,
+          "col_16": null,
+          "col_17": null,
+          "col_18": null
+        },
+        {
+          "col_0": "",
+          "col_1": "",
+          "col_2": "",
+          "col_3": "",
+          "col_4": "",
+          "col_5": "",
+          "col_6": "",
+          "col_7": "",
+          "col_8": "",
+          "col_9": "",
+          "col_10": "",
+          "col_11": "45.9%",
+          "col_12": null,
+          "col_13": null,
+          "col_14": "",
+          "col_15": null,
+          "col_16": null,
+          "col_17": null,
+          "col_18": null
+        },
+        {
+          "col_0": null,
+          "col_1": null,
+          "col_2": null,
+          "col_3": null,
+          "col_4": null,
+          "col_5": null,
+          "col_6": null,
+          "col_7": null,
+          "col_8": null,
+          "col_9": null,
+          "col_10": null,
+          "col_11": null,
+          "col_12": null,
+          "col_13": null,
+          "col_14": null,
+          "col_15": null,
+          "col_16": null,
+          "col_17": null,
+          "col_18": ""
+        },
+        {
+          "col_0": "",
+          "col_1": "",
+          "col_2": "",
+          "col_3": "",
+          "col_4": "",
+          "col_5": "",
+          "col_6": "",
+          "col_7": "",
+          "col_8": "",
+          "col_9": "",
+          "col_10": "",
+          "col_11": "",
+          "col_12": "",
+          "col_13": "",
+          "col_14": "",
+          "col_15": "",
+          "col_16": "",
+          "col_17": "",
+          "col_18": ""
+        },
+        {
+          "col_0": "",
+          "col_1": "",
+          "col_2": "",
+          "col_3": "",
+          "col_4": "",
+          "col_5": "",
+          "col_6": "",
+          "col_7": "",
+          "col_8": "",
+          "col_9": "",
+          "col_10": "",
+          "col_11": "",
+          "col_12": "",
+          "col_13": "",
+          "col_14": "",
+          "col_15": "",
+          "col_16": "",
+          "col_17": "",
+          "col_18": ""
+        },
+        {
+          "col_0": "",
+          "col_1": "",
+          "col_2": "",
+          "col_3": "",
+          "col_4": "",
+          "col_5": "",
+          "col_6": "",
+          "col_7": "",
+          "col_8": "",
+          "col_9": "",
+          "col_10": "",
+          "col_11": "",
+          "col_12": "",
+          "col_13": "",
+          "col_14": "",
+          "col_15": "",
+          "col_16": "",
+          "col_17": "",
+          "col_18": ""
+        }
+      ]
+    },
+    {
+      "page": 16,
+      "table_index": 0,
+      "columns": [
+        "col_0",
+        "col_1",
+        "col_2",
+        "col_3",
+        "col_4",
+        "col_5",
+        "col_6",
+        "col_7",
+        "col_8",
+        "col_9",
+        "col_10",
+        "col_11",
+        "col_12",
+        "col_13",
+        "col_14",
+        "col_15",
+        "col_16",
+        "col_17",
+        "col_18"
+      ],
+      "rows": 8,
+      "data": [
+        {
+          "col_0": null,
+          "col_1": null,
+          "col_2": null,
+          "col_3": null,
+          "col_4": null,
+          "col_5": null,
+          "col_6": null,
+          "col_7": null,
+          "col_8": null,
+          "col_9": null,
+          "col_10": null,
+          "col_11": null,
+          "col_12": null,
+          "col_13": null,
+          "col_14": null,
+          "col_15": null,
+          "col_16": "",
+          "col_17": "",
+          "col_18": ""
+        },
+        {
+          "col_0": null,
+          "col_1": null,
+          "col_2": null,
+          "col_3": null,
+          "col_4": null,
+          "col_5": null,
+          "col_6": null,
+          "col_7": null,
+          "col_8": null,
+          "col_9": null,
+          "col_10": null,
+          "col_11": null,
+          "col_12": null,
+          "col_13": null,
+          "col_14": null,
+          "col_15": null,
+          "col_16": "",
+          "col_17": "",
+          "col_18": ""
+        },
+        {
+          "col_0": null,
+          "col_1": null,
+          "col_2": null,
+          "col_3": null,
+          "col_4": null,
+          "col_5": null,
+          "col_6": "",
+          "col_7": "46.2% 46.2%",
+          "col_8": null,
+          "col_9": null,
+          "col_10": null,
+          "col_11": null,
+          "col_12": null,
+          "col_13": null,
+          "col_14": "",
+          "col_15": "",
+          "col_16": "",
+          "col_17": "",
+          "col_18": ""
+        },
+        {
+          "col_0": "",
+          "col_1": null,
+          "col_2": null,
+          "col_3": null,
+          "col_4": "",
+          "col_5": null,
+          "col_6": null,
+          "col_7": null,
+          "col_8": null,
+          "col_9": null,
+          "col_10": null,
+          "col_11": null,
+          "col_12": null,
+          "col_13": null,
+          "col_14": null,
+          "col_15": null,
+          "col_16": null,
+          "col_17": null,
+          "col_18": null
+        },
+        {
+          "col_0": "",
+          "col_1": "",
+          "col_2": "",
+          "col_3": "",
+          "col_4": "",
+          "col_5": "",
+          "col_6": "",
+          "col_7": "45.5%",
+          "col_8": null,
+          "col_9": null,
+          "col_10": "",
+          "col_11": "",
+          "col_12": "",
+          "col_13": "",
+          "col_14": "",
+          "col_15": "",
+          "col_16": "",
+          "col_17": "",
+          "col_18": ""
+        },
+        {
+          "col_0": null,
+          "col_1": null,
+          "col_2": null,
+          "col_3": null,
+          "col_4": null,
+          "col_5": null,
+          "col_6": null,
+          "col_7": null,
+          "col_8": "",
+          "col_9": null,
+          "col_10": null,
+          "col_11": null,
+          "col_12": null,
+          "col_13": null,
+          "col_14": null,
+          "col_15": null,
+          "col_16": null,
+          "col_17": null,
+          "col_18": null
+        },
+        {
+          "col_0": "",
+          "col_1": "",
+          "col_2": "",
+          "col_3": "",
+          "col_4": "",
+          "col_5": "",
+          "col_6": "",
+          "col_7": "",
+          "col_8": "",
+          "col_9": "",
+          "col_10": "",
+          "col_11": "",
+          "col_12": "",
+          "col_13": "",
+          "col_14": "",
+          "col_15": "",
+          "col_16": "",
+          "col_17": "",
+          "col_18": ""
+        },
+        {
+          "col_0": "",
+          "col_1": "",
+          "col_2": "",
+          "col_3": "",
+          "col_4": "",
+          "col_5": "",
+          "col_6": "",
+          "col_7": "",
+          "col_8": "",
+          "col_9": "",
+          "col_10": "",
+          "col_11": "",
+          "col_12": "",
+          "col_13": "",
+          "col_14": "",
+          "col_15": "",
+          "col_16": "",
+          "col_17": "",
+          "col_18": ""
+        }
+      ]
+    },
+    {
+      "page": 16,
+      "table_index": 1,
+      "columns": [
+        "col_0",
+        "FY17",
+        "FY18",
+        "FY19",
+        "FY20",
+        "FY21",
+        "FY22",
+        "FY23",
+        "FY24",
+        "FY25",
+        "FY26"
+      ],
+      "rows": 2,
+      "data": [
+        {
+          "col_0": "Membership",
+          "FY17": "13,246",
+          "FY18": "13,567",
+          "FY19": "13,645",
+          "FY20": "13,915",
+          "FY21": "13,610",
+          "FY22": "13,899",
+          "FY23": "13,968",
+          "FY24": "14,178",
+          "FY25": "14,474",
+          "FY26": "14,825"
+        },
+        {
+          "col_0": "LCI",
+          "FY17": "38.89%",
+          "FY18": "38.89%",
+          "FY19": "38.98%",
+          "FY20": "38.98%",
+          "FY21": "41.20%",
+          "FY22": "41.20%",
+          "FY23": "41.41%",
+          "FY24": "41.41%",
+          "FY25": "41.51%",
+          "FY26": "41.51%"
+        }
+      ]
+    }
+  ]
+}

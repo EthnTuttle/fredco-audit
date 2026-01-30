@@ -1,0 +1,37 @@
+{
+  "source_file": "FY26_Aug25_Monthly_Financial_Report.pdf",
+  "source_path": "data/raw/fcps/acfr/FY26_Aug25_Monthly_Financial_Report.pdf",
+  "processed_date": "2026-01-28T22:53:00.738971",
+  "fiscal_year": "Unknown",
+  "tables_found": 2,
+  "expenditure_tables": 0,
+  "expenditures": {},
+  "raw_tables": [
+    {
+      "page": 1,
+      "table_index": 0,
+      "columns": [
+        "2024-25 2025-26 2025-26 Percent\n8/31/2024 Appropriated 8/31/2025 Collected or\nActual* Actual* Obligated"
+      ],
+      "rows": 1,
+      "data": [
+        {
+          "2024-25 2025-26 2025-26 Percent\n8/31/2024 Appropriated 8/31/2025 Collected or\nActual* Actual* Obligated": "Revenues"
+        }
+      ]
+    },
+    {
+      "page": 9,
+      "table_index": 0,
+      "columns": [
+        "2024-25 2025-26 2025-26 Percent\n8/31/2024 Appropriated 8/31/2025 Collected or\nActual* Actual* Obligated"
+      ],
+      "rows": 1,
+      "data": [
+        {
+          "2024-25 2025-26 2025-26 Percent\n8/31/2024 Appropriated 8/31/2025 Collected or\nActual* Actual* Obligated": "OPERATING FUND"
+        }
+      ]
+    }
+  ]
+}
