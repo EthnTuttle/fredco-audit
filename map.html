@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frederick County - District Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="feedback.css">
+    <style>
+        :root {
+            --primary: #1e40af;
+            --primary-light: #3b82f6;
+            --success: #059669;
+            --warning: #d97706;
+            --danger: #dc2626;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--gray-100);
+            color: var(--gray-800);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #047857 0%, #10b981 100%);
+            color: white;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        /* Navigation */
+        .nav-bar {
+            background: white;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-bar a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .nav-bar a:hover {
+            background: var(--gray-100);
+        }
+
+        .nav-bar a.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Map Container */
+        #map {
+            height: 600px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        /* Controls Panel */
+        .controls-panel {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .controls-panel h3 {
+            margin-bottom: 15px;
+            color: var(--gray-800);
+        }
+
+        .control-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .control-group label {
+            font-weight: 500;
+            color: var(--gray-700);
+        }
+
+        .control-group select {
+            padding: 8px 12px;
+            border: 1px solid var(--gray-300);
+            border-radius: 6px;
+            font-size: 14px;
+            min-width: 200px;
+        }
+
+        .year-slider {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .year-slider input[type="range"] {
+            width: 200px;
+        }
+
+        .year-display {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--primary);
+            min-width: 50px;
+        }
+
+        .play-btn {
+            padding: 8px 16px;
+            background: var(--success);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .play-btn:hover {
+            background: #047857;
+        }
+
+        /* Legend */
+        .legend {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            max-width: 200px;
+        }
+
+        .legend h4 {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            font-size: 12px;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            border-radius: 3px;
+        }
+
+        /* Info Panel */
+        .info-panel {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .info-panel h3 {
+            margin-bottom: 15px;
+            color: var(--gray-800);
+        }
+
+        .district-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .district-card {
+            background: var(--gray-50);
+            border-radius: 8px;
+            padding: 15px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .district-card h4 {
+            margin-bottom: 10px;
+            color: var(--gray-800);
+        }
+
+        .district-card .stat {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .district-card .stat-label {
+            color: var(--gray-600);
+        }
+
+        .district-card .stat-value {
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+
+        /* Leaflet popup styling */
+        .leaflet-popup-content-wrapper {
+            border-radius: 8px;
+        }
+
+        .popup-content h4 {
+            margin-bottom: 10px;
+            color: var(--gray-800);
+            border-bottom: 1px solid var(--gray-200);
+            padding-bottom: 8px;
+        }
+
+        .popup-content .stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-size: 13px;
+        }
+
+        .popup-content .stat-row .label {
+            color: var(--gray-600);
+        }
+
+        .popup-content .stat-row .value {
+            font-weight: 600;
+        }
+
+        .popup-content .section-title {
+            font-weight: 600;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: var(--gray-700);
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Frederick County District Map</h1>
+            <p>Population, Tax Revenue & Property Values by Magisterial District</p>
+            <p class="subtitle">Data: US Census ACS 2010-2022, Frederick County Commissioner of Revenue 2021-2025</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="index.html">County Government</a>
+            <a href="schools.html">School District</a>
+            <a href="map.html" class="active">District Map</a>
+            <a href="real_estate.html">Real Estate</a>
+        </nav>
+
+        <div class="controls-panel">
+            <h3>Map Controls</h3>
+            <div class="control-group">
+                <label for="metric-select">Color By:</label>
+                <select id="metric-select">
+                    <option value="pop_density">Population Density (people/sq mi)</option>
+                    <option value="pop_growth">Population Growth 2010-2022 (%)</option>
+                    <option value="population">Total Population (2022)</option>
+                    <option value="total_value">Assessed Property Value</option>
+                    <option value="tax_amount">Tax Revenue</option>
+                    <option value="property_count">Number of Properties</option>
+                    <option value="avg_value">Average Property Value</option>
+                    <option value="tax_per_capita">Tax Revenue Per Capita</option>
+                    <optgroup label="Ownership Analysis">
+                        <option value="llc_pct">LLC Ownership % (Properties)</option>
+                        <option value="llc_value_pct">LLC Ownership % (Value)</option>
+                        <option value="individual_pct">Individual Ownership %</option>
+                    </optgroup>
+                </select>
+
+                <label for="year-select">Tax Year:</label>
+                <div class="year-slider">
+                    <input type="range" id="year-slider" min="2021" max="2025" value="2025" step="1">
+                    <span class="year-display" id="year-display">2025</span>
+                    <button class="play-btn" id="play-btn">Animate</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="map"></div>
+
+        <div class="info-panel">
+            <h3>District Summary (<span id="summary-year">2025</span>)</h3>
+            <div class="district-grid" id="district-grid">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // District data (embedded from processed GeoJSON)
+        let districtData = null;
+        let map = null;
+        let geojsonLayer = null;
+        let currentYear = 2025;
+        let currentMetric = 'pop_density';
+        let animationInterval = null;
+
+        // Color scales for different metrics
+        const colorScales = {
+            pop_density: ['#f7fbff', '#deebf7', '#c6dbef', '#9ecae1', '#6baed6', '#4292c6', '#2171b5', '#084594'],
+            pop_growth: ['#f7fcf5', '#e5f5e0', '#c7e9c0', '#a1d99b', '#74c476', '#41ab5d', '#238b45', '#005a32'],
+            population: ['#fff5eb', '#fee6ce', '#fdd0a2', '#fdae6b', '#fd8d3c', '#f16913', '#d94801', '#8c2d04'],
+            total_value: ['#f7f4f9', '#e7e1ef', '#d4b9da', '#c994c7', '#df65b0', '#e7298a', '#ce1256', '#91003f'],
+            tax_amount: ['#f7f4f9', '#e7e1ef', '#d4b9da', '#c994c7', '#df65b0', '#e7298a', '#ce1256', '#91003f'],
+            property_count: ['#fff7ec', '#fee8c8', '#fdd49e', '#fdbb84', '#fc8d59', '#ef6548', '#d7301f', '#990000'],
+            avg_value: ['#ffffd9', '#edf8b1', '#c7e9b4', '#7fcdbb', '#41b6c4', '#1d91c0', '#225ea8', '#0c2c84'],
+            tax_per_capita: ['#fff7f3', '#fde0dd', '#fcc5c0', '#fa9fb5', '#f768a1', '#dd3497', '#ae017e', '#7a0177'],
+            llc_pct: ['#faf5ff', '#f3e8ff', '#e9d5ff', '#d8b4fe', '#c084fc', '#a855f7', '#9333ea', '#7c3aed'],
+            llc_value_pct: ['#faf5ff', '#f3e8ff', '#e9d5ff', '#d8b4fe', '#c084fc', '#a855f7', '#9333ea', '#7c3aed'],
+            individual_pct: ['#f0fdf4', '#dcfce7', '#bbf7d0', '#86efac', '#4ade80', '#22c55e', '#16a34a', '#15803d']
+        };
+
+        // Metric display names
+        const metricNames = {
+            pop_density: 'Population Density',
+            pop_growth: 'Population Growth',
+            population: 'Population',
+            total_value: 'Assessed Value',
+            tax_amount: 'Tax Revenue',
+            property_count: 'Properties',
+            avg_value: 'Avg Property Value',
+            tax_per_capita: 'Tax Per Capita',
+            llc_pct: 'LLC Ownership %',
+            llc_value_pct: 'LLC Value %',
+            individual_pct: 'Individual Ownership %'
+        };
+
+        // Format numbers
+        function formatNumber(num, type) {
+            if (type === 'currency') {
+                if (num >= 1e9) return '$' + (num / 1e9).toFixed(1) + 'B';
+                if (num >= 1e6) return '$' + (num / 1e6).toFixed(1) + 'M';
+                if (num >= 1e3) return '$' + (num / 1e3).toFixed(0) + 'K';
+                return '$' + num.toFixed(0);
+            }
+            if (type === 'percent') return num.toFixed(1) + '%';
+            if (num >= 1e6) return (num / 1e6).toFixed(1) + 'M';
+            if (num >= 1e3) return (num / 1e3).toFixed(1) + 'K';
+            return num.toLocaleString();
+        }
+
+        // Get metric value for a district
+        function getMetricValue(props, metric, year) {
+            const taxData = props.tax_data ? props.tax_data[year] : null;
+            const ownership = taxData ? taxData.ownership : null;
+            
+            switch(metric) {
+                case 'pop_density':
+                    return props.pop_density_2022 || 0;
+                case 'pop_growth':
+                    return props.pop_growth_pct || 0;
+                case 'population':
+                    return props.pop_2022 || 0;
+                case 'total_value':
+                    return taxData ? taxData.total_value : 0;
+                case 'tax_amount':
+                    return taxData ? taxData.tax_amount : 0;
+                case 'property_count':
+                    return taxData ? taxData.property_count : 0;
+                case 'avg_value':
+                    return taxData ? taxData.avg_property_value : 0;
+                case 'tax_per_capita':
+                    if (!taxData || !props.pop_2022) return 0;
+                    return taxData.tax_amount / props.pop_2022;
+                case 'llc_pct':
+                    return ownership ? ownership.llc_pct_records : 0;
+                case 'llc_value_pct':
+                    return ownership ? ownership.llc_pct_value : 0;
+                case 'individual_pct':
+                    return ownership ? ownership.individual_pct : 0;
+                default:
+                    return 0;
+            }
+        }
+
+        // Get color for a value
+        function getColor(value, metric) {
+            const scale = colorScales[metric];
+            let thresholds;
+            
+            switch(metric) {
+                case 'pop_density':
+                    thresholds = [0, 100, 200, 400, 600, 1000, 1500, 2000];
+                    break;
+                case 'pop_growth':
+                    thresholds = [0, 5, 10, 15, 20, 25, 30, 35];
+                    break;
+                case 'population':
+                    thresholds = [0, 12000, 13000, 14000, 15000, 16000, 17000, 18000];
+                    break;
+                case 'total_value':
+                    thresholds = [0, 2e9, 2.5e9, 3e9, 3.5e9, 4e9, 4.5e9, 5e9];
+                    break;
+                case 'tax_amount':
+                    thresholds = [0, 15e6, 17e6, 19e6, 20e6, 21e6, 22e6, 23e6];
+                    break;
+                case 'property_count':
+                    thresholds = [0, 3000, 5000, 7000, 8000, 9000, 10000, 12000];
+                    break;
+                case 'avg_value':
+                    thresholds = [0, 300000, 350000, 400000, 450000, 500000, 550000, 600000];
+                    break;
+                case 'tax_per_capita':
+                    thresholds = [0, 1000, 1100, 1200, 1300, 1400, 1500, 1600];
+                    break;
+                case 'llc_pct':
+                    thresholds = [0, 5, 7, 9, 11, 13, 15, 17];
+                    break;
+                case 'llc_value_pct':
+                    thresholds = [0, 8, 10, 12, 15, 18, 22, 26];
+                    break;
+                case 'individual_pct':
+                    thresholds = [0, 70, 74, 78, 80, 82, 84, 86];
+                    break;
+                default:
+                    thresholds = [0, 1, 2, 3, 4, 5, 6, 7];
+            }
+            
+            for (let i = thresholds.length - 1; i >= 0; i--) {
+                if (value >= thresholds[i]) return scale[i];
+            }
+            return scale[0];
+        }
+
+        // Style function for GeoJSON
+        function style(feature) {
+            const value = getMetricValue(feature.properties, currentMetric, currentYear);
+            return {
+                fillColor: getColor(value, currentMetric),
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                fillOpacity: 0.7
+            };
+        }
+
+        // Highlight on hover
+        function highlightFeature(e) {
+            const layer = e.target;
+            layer.setStyle({
+                weight: 4,
+                color: '#333',
+                fillOpacity: 0.9
+            });
+            layer.bringToFront();
+        }
+
+        // Reset highlight
+        function resetHighlight(e) {
+            geojsonLayer.resetStyle(e.target);
+        }
+
+        // Create popup content
+        function createPopupContent(props) {
+            const taxData = props.tax_data ? props.tax_data[currentYear] : null;
+            const ownership = taxData ? taxData.ownership : null;
+            const llcNetworks = taxData ? taxData.llc_networks : null;
+            const taxPerCapita = taxData && props.pop_2022 ? taxData.tax_amount / props.pop_2022 : 0;
+            
+            let ownershipHtml = '';
+            if (ownership) {
+                const topOwner = ownership.top_owners && ownership.top_owners[0] ? ownership.top_owners[0] : null;
+                ownershipHtml = `
+                    <div class="section-title">Ownership (${currentYear})</div>
+                    <div class="stat-row"><span class="label">Individual</span><span class="value">${ownership.individual_pct}%</span></div>
+                    <div class="stat-row"><span class="label">LLC (count)</span><span class="value">${ownership.llc_pct_records}%</span></div>
+                    <div class="stat-row"><span class="label">LLC (value)</span><span class="value">${ownership.llc_pct_value}%</span></div>
+                    <div class="stat-row"><span class="label">LLCs</span><span class="value">${formatNumber(ownership.llc_count)}</span></div>
+                    ${topOwner ? `<div class="stat-row"><span class="label">Top Owner</span><span class="value" style="font-size:11px">${topOwner.name.substring(0,25)}...</span></div>` : ''}
+                `;
+            }
+            
+            let networkHtml = '';
+            if (llcNetworks && llcNetworks.count > 0) {
+                networkHtml = `
+                    <div class="section-title">LLC Networks</div>
+                    <div class="stat-row"><span class="label">Networks (3+ LLCs)</span><span class="value">${llcNetworks.count}</span></div>
+                    <div class="stat-row"><span class="label">Network Value</span><span class="value">${formatNumber(llcNetworks.total_value, 'currency')}</span></div>
+                    ${llcNetworks.top_networks && llcNetworks.top_networks[0] ? `<div class="stat-row"><span class="label">Top Network</span><span class="value" style="font-size:10px">${llcNetworks.top_networks[0].address.substring(0,20)}... (${llcNetworks.top_networks[0].llc_count} LLCs)</span></div>` : ''}
+                `;
+            }
+            
+            return `
+                <div class="popup-content">
+                    <h4>${props.NAME.replace(' district', '')}</h4>
+                    <div class="section-title">Population</div>
+                    <div class="stat-row"><span class="label">2022 Population</span><span class="value">${formatNumber(props.pop_2022 || 0)}</span></div>
+                    <div class="stat-row"><span class="label">Density</span><span class="value">${formatNumber(props.pop_density_2022 || 0)} /sq mi</span></div>
+                    <div class="stat-row"><span class="label">Growth 2010-2022</span><span class="value">${formatNumber(props.pop_growth_pct || 0, 'percent')}</span></div>
+                    <div class="stat-row"><span class="label">Land Area</span><span class="value">${(props.land_area_sqmi || 0).toFixed(1)} sq mi</span></div>
+                    ${taxData ? `
+                    <div class="section-title">Property Tax (${currentYear})</div>
+                    <div class="stat-row"><span class="label">Properties</span><span class="value">${formatNumber(taxData.property_count)}</span></div>
+                    <div class="stat-row"><span class="label">Assessed Value</span><span class="value">${formatNumber(taxData.total_value, 'currency')}</span></div>
+                    <div class="stat-row"><span class="label">Tax Revenue</span><span class="value">${formatNumber(taxData.tax_amount, 'currency')}</span></div>
+                    <div class="stat-row"><span class="label">Avg Property</span><span class="value">${formatNumber(taxData.avg_property_value, 'currency')}</span></div>
+                    <div class="stat-row"><span class="label">Tax Per Capita</span><span class="value">${formatNumber(taxPerCapita, 'currency')}</span></div>
+                    ` : ''}
+                    ${ownershipHtml}
+                    ${networkHtml}
+                </div>
+            `;
+        }
+
+        // Feature interaction
+        function onEachFeature(feature, layer) {
+            layer.on({
+                mouseover: highlightFeature,
+                mouseout: resetHighlight,
+                click: function(e) {
+                    layer.bindPopup(createPopupContent(feature.properties)).openPopup();
+                }
+            });
+        }
+
+        // Update district summary panel
+        function updateSummaryPanel() {
+            const grid = document.getElementById('district-grid');
+            document.getElementById('summary-year').textContent = currentYear;
+            
+            if (!districtData) return;
+            
+            let html = '';
+            const features = districtData.features.sort((a, b) => {
+                const valA = getMetricValue(a.properties, currentMetric, currentYear);
+                const valB = getMetricValue(b.properties, currentMetric, currentYear);
+                return valB - valA;
+            });
+            
+            for (const feature of features) {
+                const props = feature.properties;
+                const taxData = props.tax_data ? props.tax_data[currentYear] : null;
+                const name = props.NAME.replace(' district', '');
+                
+                html += `
+                    <div class="district-card">
+                        <h4>${name}</h4>
+                        <div class="stat"><span class="stat-label">Population (2022)</span><span class="stat-value">${formatNumber(props.pop_2022 || 0)}</span></div>
+                        <div class="stat"><span class="stat-label">Density</span><span class="stat-value">${formatNumber(props.pop_density_2022 || 0)} /sq mi</span></div>
+                        <div class="stat"><span class="stat-label">Growth</span><span class="stat-value">${formatNumber(props.pop_growth_pct || 0, 'percent')}</span></div>
+                        ${taxData ? `
+                        <div class="stat"><span class="stat-label">Assessed Value</span><span class="stat-value">${formatNumber(taxData.total_value, 'currency')}</span></div>
+                        <div class="stat"><span class="stat-label">Tax Revenue</span><span class="stat-value">${formatNumber(taxData.tax_amount, 'currency')}</span></div>
+                        ` : ''}
+                    </div>
+                `;
+            }
+            
+            grid.innerHTML = html;
+        }
+
+        // Update legend
+        function updateLegend() {
+            const scale = colorScales[currentMetric];
+            let thresholds, format;
+            
+            switch(currentMetric) {
+                case 'pop_density':
+                    thresholds = ['< 100', '100-200', '200-400', '400-600', '600-1000', '1000-1500', '1500-2000', '> 2000'];
+                    break;
+                case 'pop_growth':
+                    thresholds = ['< 5%', '5-10%', '10-15%', '15-20%', '20-25%', '25-30%', '30-35%', '> 35%'];
+                    break;
+                case 'population':
+                    thresholds = ['< 12K', '12-13K', '13-14K', '14-15K', '15-16K', '16-17K', '17-18K', '> 18K'];
+                    break;
+                case 'total_value':
+                    thresholds = ['< $2B', '$2-2.5B', '$2.5-3B', '$3-3.5B', '$3.5-4B', '$4-4.5B', '$4.5-5B', '> $5B'];
+                    break;
+                case 'tax_amount':
+                    thresholds = ['< $15M', '$15-17M', '$17-19M', '$19-20M', '$20-21M', '$21-22M', '$22-23M', '> $23M'];
+                    break;
+                case 'property_count':
+                    thresholds = ['< 3K', '3-5K', '5-7K', '7-8K', '8-9K', '9-10K', '10-12K', '> 12K'];
+                    break;
+                case 'avg_value':
+                    thresholds = ['< $300K', '$300-350K', '$350-400K', '$400-450K', '$450-500K', '$500-550K', '$550-600K', '> $600K'];
+                    break;
+                case 'tax_per_capita':
+                    thresholds = ['< $1000', '$1000-1100', '$1100-1200', '$1200-1300', '$1300-1400', '$1400-1500', '$1500-1600', '> $1600'];
+                    break;
+                case 'llc_pct':
+                    thresholds = ['< 5%', '5-7%', '7-9%', '9-11%', '11-13%', '13-15%', '15-17%', '> 17%'];
+                    break;
+                case 'llc_value_pct':
+                    thresholds = ['< 8%', '8-10%', '10-12%', '12-15%', '15-18%', '18-22%', '22-26%', '> 26%'];
+                    break;
+                case 'individual_pct':
+                    thresholds = ['< 70%', '70-74%', '74-78%', '78-80%', '80-82%', '82-84%', '84-86%', '> 86%'];
+                    break;
+                default:
+                    thresholds = ['1', '2', '3', '4', '5', '6', '7', '8'];
+            }
+            
+            let html = `<h4>${metricNames[currentMetric]}</h4>`;
+            for (let i = scale.length - 1; i >= 0; i--) {
+                html += `<div class="legend-item"><div class="legend-color" style="background:${scale[i]}"></div>${thresholds[i]}</div>`;
+            }
+            
+            document.querySelector('.legend').innerHTML = html;
+        }
+
+        // Update map
+        function updateMap() {
+            if (geojsonLayer) {
+                geojsonLayer.setStyle(style);
+            }
+            updateLegend();
+            updateSummaryPanel();
+        }
+
+        // Initialize map
+        async function initMap() {
+            // Load district data
+            const response = await fetch('data/processed/districts_enriched.geojson');
+            districtData = await response.json();
+            
+            // Create map
+            map = L.map('map').setView([39.2, -78.2], 10);
+            
+            // Add tile layer
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+            
+            // Add GeoJSON layer
+            geojsonLayer = L.geoJSON(districtData, {
+                style: style,
+                onEachFeature: onEachFeature
+            }).addTo(map);
+            
+            // Fit bounds to districts
+            map.fitBounds(geojsonLayer.getBounds());
+            
+            // Add legend
+            const legend = L.control({position: 'bottomright'});
+            legend.onAdd = function(map) {
+                const div = L.DomUtil.create('div', 'legend');
+                return div;
+            };
+            legend.addTo(map);
+            
+            // Initial updates
+            updateLegend();
+            updateSummaryPanel();
+            
+            // Event listeners
+            document.getElementById('metric-select').addEventListener('change', function(e) {
+                currentMetric = e.target.value;
+                updateMap();
+            });
+            
+            document.getElementById('year-slider').addEventListener('input', function(e) {
+                currentYear = parseInt(e.target.value);
+                document.getElementById('year-display').textContent = currentYear;
+                updateMap();
+            });
+            
+            document.getElementById('play-btn').addEventListener('click', function() {
+                if (animationInterval) {
+                    clearInterval(animationInterval);
+                    animationInterval = null;
+                    this.textContent = 'Animate';
+                } else {
+                    this.textContent = 'Stop';
+                    let year = 2021;
+                    animationInterval = setInterval(() => {
+                        document.getElementById('year-slider').value = year;
+                        document.getElementById('year-display').textContent = year;
+                        currentYear = year;
+                        updateMap();
+                        year++;
+                        if (year > 2025) {
+                            year = 2021;
+                        }
+                    }, 1500);
+                }
+            });
+        }
+        
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', initMap);
+    </script>
+
+    <!-- Feedback Widget -->
+    <script type="module">
+        import { initFeedbackWidget } from './feedback.js';
+        initFeedbackWidget({ theme: 'county' });
+    </script>
+</body>
+</html>

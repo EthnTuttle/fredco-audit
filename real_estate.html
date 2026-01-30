@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frederick County - Real Estate Ownership Analysis</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="feedback.css">
+    <style>
+        :root {
+            --primary: #1e40af;
+            --primary-light: #3b82f6;
+            --success: #059669;
+            --warning: #d97706;
+            --danger: #dc2626;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--gray-100);
+            color: var(--gray-800);
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+
+        header {
+            background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+            color: white;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+        }
+
+        header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 10px; }
+        header p { font-size: 1.1rem; opacity: 0.9; }
+        .subtitle { font-size: 0.9rem; opacity: 0.8; margin-top: 5px; }
+
+        .nav-bar {
+            background: white;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-bar a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .nav-bar a:hover { background: var(--gray-100); }
+        .nav-bar a.active { background: #7c3aed; color: white; }
+        .nav-bar span { color: var(--gray-300); }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .stat-card.highlight { border-left: 4px solid var(--success); }
+        .stat-card.warning { border-left: 4px solid var(--warning); }
+        .stat-card.info { border-left: 4px solid var(--primary-light); }
+        .stat-card.purple { border-left: 4px solid #7c3aed; }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .stat-value { font-size: 2rem; font-weight: 700; color: var(--gray-900); }
+        .stat-detail { font-size: 0.85rem; color: var(--gray-600); margin-top: 8px; }
+
+        .section { margin-bottom: 40px; }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--gray-200);
+        }
+
+        .section-header h2 { font-size: 1.5rem; color: var(--gray-800); }
+
+        .year-select {
+            padding: 8px 16px;
+            border: 1px solid var(--gray-300);
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 24px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .chart-grid { grid-template-columns: 1fr; }
+        }
+
+        .chart-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .chart-card h3 {
+            font-size: 1.1rem;
+            color: var(--gray-700);
+            margin-bottom: 20px;
+        }
+
+        .chart-container { position: relative; height: 300px; }
+        .chart-container.tall { height: 400px; }
+
+        .table-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow-x: auto;
+            margin-bottom: 24px;
+        }
+
+        .table-card h3 { margin-bottom: 15px; color: var(--gray-800); }
+
+        table { width: 100%; border-collapse: collapse; }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        th {
+            background: var(--gray-50);
+            font-weight: 600;
+            color: var(--gray-700);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        tr:hover { background: var(--gray-50); }
+        tr.highlight { background: #f5f3ff; }
+
+        .analysis-box {
+            background: #f5f3ff;
+            border: 1px solid #c4b5fd;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .analysis-box h4 { color: #5b21b6; margin-bottom: 10px; }
+        .analysis-box p { color: #4c1d95; font-size: 0.95rem; }
+
+        .analysis-box.warning {
+            background: #fffbeb;
+            border-color: #fcd34d;
+        }
+        .analysis-box.warning h4 { color: #92400e; }
+        .analysis-box.warning p { color: #78350f; }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .badge-purple { background: #ede9fe; color: #5b21b6; }
+        .badge-green { background: #d1fae5; color: #065f46; }
+        .badge-yellow { background: #fef3c7; color: #92400e; }
+        .badge-red { background: #fee2e2; color: #991b1b; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--gray-200);
+            margin-top: 40px;
+        }
+
+        footer a { color: var(--primary); }
+
+        .findings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .finding-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .finding-card.ok { border-left: 4px solid var(--success); }
+        .finding-card.warning { border-left: 4px solid var(--warning); }
+        .finding-card.info { border-left: 4px solid #7c3aed; }
+
+        .finding-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .finding-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .finding-icon.ok { background: #d1fae5; color: #065f46; }
+        .finding-icon.warning { background: #fef3c7; color: #92400e; }
+        .finding-icon.info { background: #ede9fe; color: #5b21b6; }
+
+        .finding-title { font-weight: 600; color: var(--gray-800); }
+        .finding-description { color: var(--gray-600); font-size: 0.95rem; }
+
+        /* Search/Filter Styles */
+        .search-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .search-input {
+            flex: 1;
+            min-width: 200px;
+            padding: 10px 15px;
+            border: 1px solid var(--gray-300);
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #7c3aed;
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+        }
+
+        .filter-select {
+            padding: 10px 15px;
+            border: 1px solid var(--gray-300);
+            border-radius: 6px;
+            font-size: 14px;
+            min-width: 150px;
+        }
+
+        .result-count {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            margin-bottom: 10px;
+        }
+
+        /* Network Cards */
+        .network-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border-left: 4px solid #7c3aed;
+        }
+
+        .network-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .network-address {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--gray-800);
+        }
+
+        .network-stats {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .network-stat {
+            text-align: center;
+        }
+
+        .network-stat-value {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #7c3aed;
+        }
+
+        .network-stat-label {
+            font-size: 0.75rem;
+            color: var(--gray-600);
+            text-transform: uppercase;
+        }
+
+        .network-llcs {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 10px;
+        }
+
+        .llc-item {
+            background: var(--gray-50);
+            padding: 10px 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        .llc-name {
+            font-weight: 500;
+            color: var(--gray-800);
+            margin-bottom: 4px;
+        }
+
+        .llc-details {
+            color: var(--gray-600);
+            font-size: 0.8rem;
+        }
+
+        /* Investigation Cards */
+        .investigation-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .investigation-card.featured {
+            border: 2px solid #f59e0b;
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+        }
+
+        .investigation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .investigation-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--gray-800);
+        }
+
+        .investigation-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #7c3aed;
+        }
+
+        .investigation-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .investigation-detail {
+            background: rgba(255,255,255,0.7);
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .investigation-detail-label {
+            font-size: 0.75rem;
+            color: var(--gray-600);
+            text-transform: uppercase;
+        }
+
+        .investigation-detail-value {
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+
+        .investigation-notes {
+            background: rgba(124, 58, 237, 0.1);
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            color: #5b21b6;
+        }
+
+        /* Trend Comparison */
+        .trend-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .trend-table th, .trend-table td {
+            padding: 10px;
+            text-align: right;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .trend-table th:first-child, .trend-table td:first-child {
+            text-align: left;
+        }
+
+        .trend-table .positive { color: #059669; }
+        .trend-table .negative { color: #dc2626; }
+
+        .expand-btn {
+            background: none;
+            border: 1px solid var(--gray-300);
+            padding: 5px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            color: var(--gray-600);
+        }
+
+        .expand-btn:hover {
+            background: var(--gray-100);
+        }
+
+        .hidden { display: none; }
+
+        /* Tabs */
+        .tab-nav {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--gray-200);
+            padding-bottom: 0;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--gray-600);
+            border-bottom: 2px solid transparent;
+            margin-bottom: -2px;
+            transition: all 0.2s;
+        }
+
+        .tab-btn:hover {
+            color: var(--gray-800);
+        }
+
+        .tab-btn.active {
+            color: #7c3aed;
+            border-bottom-color: #7c3aed;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Real Estate Ownership Analysis</h1>
+            <p>Property Ownership Patterns, Entity Types & Concentration Analysis</p>
+            <p class="subtitle">Data: Frederick County Commissioner of Revenue - Real Estate Tax Book 2021-2025</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="index.html">County Government</a>
+            <span>|</span>
+            <a href="schools.html">School District</a>
+            <span>|</span>
+            <a href="map.html">District Map</a>
+            <span>|</span>
+            <a href="real_estate.html" class="active">Real Estate</a>
+        </nav>
+
+        <!-- Key Stats -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Key Metrics (2025)</h2>
+                <select id="year-select" class="year-select">
+                    <option value="2025" selected>2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                </select>
+            </div>
+            <div class="stats-grid" id="stats-grid">
+                <!-- Populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Findings -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Key Findings</h2>
+            </div>
+            <div class="findings-grid">
+                <div class="finding-card info">
+                    <div class="finding-header">
+                        <div class="finding-icon info">i</div>
+                        <div class="finding-title">LLC Ownership Growing</div>
+                    </div>
+                    <div class="finding-description">
+                        Unique LLCs increased 28% from 1,853 (2021) to 2,373 (2025). LLC-held property value grew 63% vs 60% overall growth.
+                    </div>
+                </div>
+                <div class="finding-card warning">
+                    <div class="finding-header">
+                        <div class="finding-icon warning">!</div>
+                        <div class="finding-title">Stonewall District Concentration</div>
+                    </div>
+                    <div class="finding-description">
+                        Stonewall has 17.1% LLC ownership (vs 5-9% elsewhere) and 26.8% of property value held by LLCs - primarily commercial/industrial corridor along I-81.
+                    </div>
+                </div>
+                <div class="finding-card info">
+                    <div class="finding-header">
+                        <div class="finding-icon info">i</div>
+                        <div class="finding-title">Commercial Property Dominated by LLCs</div>
+                    </div>
+                    <div class="finding-description">
+                        60% of commercial properties (Class 4) and 58% of multi-family (Class 3) are owned by LLCs, compared to only 7.6% of residential.
+                    </div>
+                </div>
+                <div class="finding-card ok">
+                    <div class="finding-header">
+                        <div class="finding-icon ok">&#10003;</div>
+                        <div class="finding-title">Individual Ownership Remains Dominant</div>
+                    </div>
+                    <div class="finding-description">
+                        81% of properties and 73% of total assessed value is still held by individuals, indicating a healthy mix of local ownership.
+                    </div>
+                </div>
+                <div class="finding-card warning">
+                    <div class="finding-header">
+                        <div class="finding-icon warning">?</div>
+                        <div class="finding-title">Data Anomaly Detected</div>
+                    </div>
+                    <div class="finding-description">
+                        One residential property (parcel 18A-06-6A) shows a $99.4M assessed value in official records, but satellite imagery shows a standard home. See Property Investigations for details.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Entity Type Charts -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Ownership Entity Distribution</h2>
+            </div>
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h3>Properties by Entity Type (<span class="current-year">2025</span>)</h3>
+                    <div class="chart-container">
+                        <canvas id="entityCountChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Assessed Value by Entity Type (<span class="current-year">2025</span>)</h3>
+                    <div class="chart-container">
+                        <canvas id="entityValueChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h3>LLC Ownership Trend (2021-2025)</h3>
+                    <div class="chart-container">
+                        <canvas id="llcTrendChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Total Assessed Value Growth</h3>
+                    <div class="chart-container">
+                        <canvas id="valueGrowthChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Property Class Analysis -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Entity Distribution by Property Class</h2>
+            </div>
+            <div class="analysis-box">
+                <h4>Why This Matters</h4>
+                <p>
+                    Different property classes show distinct ownership patterns. LLCs dominate commercial and multi-family properties 
+                    where liability protection is crucial, while individuals predominantly own residential and agricultural land. 
+                    Understanding these patterns helps identify investment trends and potential tax base concentration risks.
+                </p>
+            </div>
+            <div class="chart-card">
+                <h3>LLC Ownership % by Property Class (<span class="current-year">2025</span>)</h3>
+                <div class="chart-container tall">
+                    <canvas id="classLlcChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Owners Tables -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Top Property Owners</h2>
+            </div>
+            <div class="table-card">
+                <h3>Top 20 Owners by Assessed Value (<span class="current-year">2025</span>)</h3>
+                <table id="topOwnersTable">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Owner</th>
+                            <th>Entity Type</th>
+                            <th>Properties</th>
+                            <th>Total Value</th>
+                        </tr>
+                    </thead>
+                    <tbody id="topOwnersBody">
+                        <!-- Populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-card">
+                <h3>Top Multi-Property Owners (10+ Properties)</h3>
+                <table id="multiOwnerTable">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Owner</th>
+                            <th>Entity Type</th>
+                            <th>Properties</th>
+                            <th>Total Value</th>
+                            <th>Avg Value</th>
+                        </tr>
+                    </thead>
+                    <tbody id="multiOwnerBody">
+                        <!-- Populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Common Last Names -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Most Common Family Names (Individual Owners)</h2>
+            </div>
+            <div class="chart-card">
+                <h3>Top 15 Last Names by Property Count</h3>
+                <div class="chart-container tall">
+                    <canvas id="lastNamesChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Out of State -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Out-of-State Ownership</h2>
+            </div>
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h3>Property Ownership by State</h3>
+                    <div class="chart-container">
+                        <canvas id="stateChart"></canvas>
+                    </div>
+                </div>
+                <div class="table-card" style="box-shadow: none; padding: 0;">
+                    <h3>Top Out-of-State Owners by Value</h3>
+                    <table id="outOfStateTable">
+                        <thead>
+                            <tr>
+                                <th>Owner</th>
+                                <th>State</th>
+                                <th>Properties</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody id="outOfStateBody">
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- LLC Deep Dive -->
+        <section class="section">
+            <div class="section-header">
+                <h2>LLC Analysis</h2>
+            </div>
+            <div class="analysis-box warning">
+                <h4>Understanding LLC Ownership</h4>
+                <p>
+                    LLCs (Limited Liability Companies) are commonly used for real estate investment due to liability protection and tax flexibility.
+                    While legitimate for business purposes, high LLC concentration can indicate institutional investment, 
+                    out-of-state ownership, or rental property consolidation. Frederick County has 2,373 unique LLCs owning 
+                    4,206 properties (8.8%) worth $2.93B (13.8% of total value).
+                </p>
+            </div>
+            <div class="chart-grid">
+                <div class="table-card" style="box-shadow: none; padding: 0;">
+                    <h3>Top LLCs by Property Count</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>LLC Name</th>
+                                <th>Properties</th>
+                                <th>Total Value</th>
+                                <th>Classes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="llcCountBody">
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-card" style="box-shadow: none; padding: 0;">
+                    <h3>Top LLCs by Total Value</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>LLC Name</th>
+                                <th>Properties</th>
+                                <th>Total Value</th>
+                            </tr>
+                        </thead>
+                        <tbody id="llcValueBody">
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- District Comparison -->
+        <section class="section">
+            <div class="section-header">
+                <h2>LLC Ownership by District</h2>
+            </div>
+            <div class="chart-card">
+                <h3>LLC % of Properties by District (<span class="current-year">2025</span>)</h3>
+                <div class="chart-container">
+                    <canvas id="districtLlcChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- LLC OWNERSHIP NETWORKS - NEW SECTION -->
+        <section class="section" id="llc-networks-section">
+            <div class="section-header">
+                <h2>LLC Ownership Networks</h2>
+            </div>
+            <div class="analysis-box">
+                <h4>What Are LLC Networks?</h4>
+                <p>
+                    When multiple LLCs share the same mailing address, it often indicates common ownership or management.
+                    This analysis identifies addresses where 3 or more distinct LLCs receive their tax bills, 
+                    revealing potential real estate investment groups, property management companies, or family holding structures.
+                    The top network controls <strong>$88.3M</strong> in property across 11 different LLCs.
+                </p>
+            </div>
+            <div class="search-box">
+                <input type="text" id="network-search" class="search-input" placeholder="Search by address or LLC name...">
+                <select id="network-sort" class="filter-select">
+                    <option value="value">Sort by Total Value</option>
+                    <option value="llcs">Sort by # of LLCs</option>
+                    <option value="properties">Sort by # of Properties</option>
+                </select>
+            </div>
+            <div class="result-count" id="network-count">Showing 50 networks</div>
+            <div id="networks-container">
+                <!-- Populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- PROPERTY INVESTIGATIONS - NEW SECTION -->
+        <section class="section" id="investigations-section">
+            <div class="section-header">
+                <h2>Property Investigations</h2>
+            </div>
+            
+            <!-- Tabs -->
+            <div class="tab-nav">
+                <button class="tab-btn active" data-tab="featured">Top Property</button>
+                <button class="tab-btn" data-tab="agricultural">High-Value Agricultural</button>
+                <button class="tab-btn" data-tab="individuals">Top Individuals</button>
+                <button class="tab-btn" data-tab="landowners">Largest Landowners</button>
+            </div>
+
+            <!-- Featured Property Tab -->
+            <div class="tab-content active" id="tab-featured">
+                <div class="investigation-card featured">
+                    <div class="investigation-header">
+                        <div>
+                            <div class="investigation-title">TREX Company - Highest Value Single Property</div>
+                            <div style="color: var(--gray-600); margin-top: 5px;">Parcel 63--A--11062, Back Creek District (Clearbrook Industrial)</div>
+                        </div>
+                        <div class="investigation-value">$44.69M</div>
+                    </div>
+                    <div class="investigation-details">
+                        <div class="investigation-detail">
+                            <div class="investigation-detail-label">Land Value</div>
+                            <div class="investigation-detail-value">$3,440,100</div>
+                        </div>
+                        <div class="investigation-detail">
+                            <div class="investigation-detail-label">Improvements</div>
+                            <div class="investigation-detail-value">$41,249,300</div>
+                        </div>
+                        <div class="investigation-detail">
+                            <div class="investigation-detail-label">Classification</div>
+                            <div class="investigation-detail-value">Class 4 (Industrial)</div>
+                        </div>
+                        <div class="investigation-detail">
+                            <div class="investigation-detail-label">Zone</div>
+                            <div class="investigation-detail-value">M2 (General Industrial)</div>
+                        </div>
+                        <div class="investigation-detail">
+                            <div class="investigation-detail-label">Annual Tax</div>
+                            <div class="investigation-detail-value">$214,509</div>
+                        </div>
+                        <div class="investigation-detail">
+                            <div class="investigation-detail-label">Acreage</div>
+                            <div class="investigation-detail-value">62.32 acres</div>
+                        </div>
+                    </div>
+                    <div class="investigation-notes" style="background: #ecfdf5; color: #065f46;">
+                        <strong>About TREX:</strong> TREX Company Inc. is a leading manufacturer of composite decking and railing products, 
+                        headquartered in Winchester, VA. This facility in the Clearbrook Industrial Park represents the county's highest 
+                        value single property, reflecting the significant industrial presence in Frederick County.
+                    </div>
+                </div>
+                
+                <div class="analysis-box" style="margin-top: 20px;">
+                    <h4>Top Properties Summary</h4>
+                    <p>
+                        The county's highest-value properties are dominated by industrial and commercial facilities along the I-81 corridor.
+                        TREX Company leads with $44.7M, followed by Blackburn Commerce Center ($43.1M), SNH Clear Brook ($42.4M), 
+                        and Ponte Gadea Compass ($42.3M). These top 10 properties together represent approximately <strong>2% of total 
+                        county assessed value</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- High-Value Agricultural Tab -->
+            <div class="tab-content" id="tab-agricultural">
+                <div class="search-box">
+                    <input type="text" id="agri-search" class="search-input" placeholder="Search agricultural properties...">
+                </div>
+                <div class="table-card" style="box-shadow: none; padding: 0;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Parcel</th>
+                                <th>Owner</th>
+                                <th>Land Value</th>
+                                <th>Improvements</th>
+                                <th>Total Value</th>
+                                <th>District</th>
+                            </tr>
+                        </thead>
+                        <tbody id="agri-table-body">
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Top Individuals Tab -->
+            <div class="tab-content" id="tab-individuals">
+                <div class="search-box">
+                    <input type="text" id="individual-search" class="search-input" placeholder="Search individual owners...">
+                </div>
+                <div class="table-card" style="box-shadow: none; padding: 0;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Owner</th>
+                                <th>Properties</th>
+                                <th>Total Value</th>
+                                <th>Avg Value</th>
+                            </tr>
+                        </thead>
+                        <tbody id="individual-table-body">
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Largest Landowners Tab -->
+            <div class="tab-content" id="tab-landowners">
+                <div class="search-box">
+                    <input type="text" id="landowner-search" class="search-input" placeholder="Search landowners...">
+                </div>
+                <div class="table-card" style="box-shadow: none; padding: 0;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Owner</th>
+                                <th>Total Acreage</th>
+                                <th>Properties</th>
+                                <th>Total Value</th>
+                                <th>$/Acre</th>
+                            </tr>
+                        </thead>
+                        <tbody id="landowner-table-body">
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- MULTI-YEAR TRENDS - NEW SECTION -->
+        <section class="section" id="trends-section">
+            <div class="section-header">
+                <h2>5-Year Entity Trends (2021-2025)</h2>
+            </div>
+            <div class="analysis-box">
+                <h4>Key Trend: Trust Ownership Exploding</h4>
+                <p>
+                    Trust-held property value grew <strong>+120%</strong> from 2021 to 2025, far outpacing 
+                    LLC growth (+65%) and individual growth (+57%). This likely reflects estate planning 
+                    strategies and intergenerational wealth transfer. Meanwhile, individual ownership share 
+                    declined from 84.4% to 81.6% of properties.
+                </p>
+            </div>
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h3>Entity % of Properties (2021-2025)</h3>
+                    <div class="chart-container">
+                        <canvas id="entityTrendCountChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Entity % of Value (2021-2025)</h3>
+                    <div class="chart-container">
+                        <canvas id="entityTrendValueChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="table-card">
+                <h3>Growth Rates by Entity Type (2021-2025)</h3>
+                <table class="trend-table">
+                    <thead>
+                        <tr>
+                            <th>Entity Type</th>
+                            <th>2021 Value</th>
+                            <th>2025 Value</th>
+                            <th>Absolute Change</th>
+                            <th>% Growth</th>
+                        </tr>
+                    </thead>
+                    <tbody id="growth-table-body">
+                        <!-- Populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="chart-card">
+                <h3>Year-over-Year Value Changes</h3>
+                <div class="chart-container">
+                    <canvas id="yoyChart"></canvas>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Data Source: <a href="https://www.fcva.us/departments/commissioner-of-the-revenue" target="_blank">Frederick County Commissioner of Revenue</a></p>
+        <p>Real Estate Tax Book 2021-2025 | Analysis generated <span id="gen-date"></span></p>
+    </footer>
+
+    <script>
+        let analysisData = null;
+        let currentYear = '2025';
+
+        // Color palette
+        const colors = {
+            individual: '#10b981',
+            llc: '#7c3aed',
+            trust: '#f59e0b',
+            corporation: '#3b82f6',
+            estate: '#6b7280',
+            other: '#94a3b8'
+        };
+
+        function formatCurrency(num) {
+            if (num >= 1e9) return '$' + (num / 1e9).toFixed(2) + 'B';
+            if (num >= 1e6) return '$' + (num / 1e6).toFixed(1) + 'M';
+            if (num >= 1e3) return '$' + (num / 1e3).toFixed(0) + 'K';
+            return '$' + num.toLocaleString();
+        }
+
+        function formatNumber(num) {
+            return num.toLocaleString();
+        }
+
+        function getEntityType(name) {
+            const upper = name.toUpperCase();
+            if (/\bLLC\b/.test(upper)) return 'LLC';
+            if (/ INC| CORP| COMPANY/.test(upper)) return 'Corporation';
+            if (/TRUST|TRUSTEE/.test(upper)) return 'Trust';
+            if (/ESTATE|HEIRS/.test(upper)) return 'Estate';
+            if (/LP\b|LIMITED PARTNERSHIP/.test(upper)) return 'LP';
+            return 'Individual';
+        }
+
+        function updateStats(yearData) {
+            const html = `
+                <div class="stat-card purple">
+                    <div class="stat-label">Total Properties</div>
+                    <div class="stat-value">${formatNumber(yearData.total_records)}</div>
+                    <div class="stat-detail">Real estate parcels</div>
+                </div>
+                <div class="stat-card info">
+                    <div class="stat-label">Total Assessed Value</div>
+                    <div class="stat-value">${formatCurrency(yearData.total_value)}</div>
+                    <div class="stat-detail">Land + improvements</div>
+                </div>
+                <div class="stat-card highlight">
+                    <div class="stat-label">Individual Ownership</div>
+                    <div class="stat-value">${yearData.summary.individual_pct}%</div>
+                    <div class="stat-detail">${formatCurrency(yearData.summary.individual_value)} in value</div>
+                </div>
+                <div class="stat-card warning">
+                    <div class="stat-label">LLC Ownership</div>
+                    <div class="stat-value">${yearData.summary.llc_pct}%</div>
+                    <div class="stat-detail">${yearData.summary.unique_llcs} unique LLCs</div>
+                </div>
+                <div class="stat-card info">
+                    <div class="stat-label">LLC Property Value</div>
+                    <div class="stat-value">${formatCurrency(yearData.summary.llc_value)}</div>
+                    <div class="stat-detail">${((yearData.summary.llc_value / yearData.total_value) * 100).toFixed(1)}% of total</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Land vs Improvements</div>
+                    <div class="stat-value">${yearData.summary.land_pct}% / ${yearData.summary.improvement_pct}%</div>
+                    <div class="stat-detail">Land / Buildings</div>
+                </div>
+            `;
+            document.getElementById('stats-grid').innerHTML = html;
+        }
+
+        function updateEntityCharts(yearData) {
+            // Entity count pie chart
+            const entityData = yearData.entity_breakdown;
+            const labels = entityData.map(e => e.type);
+            const counts = entityData.map(e => e.count);
+            const values = entityData.map(e => e.total_value);
+
+            new Chart(document.getElementById('entityCountChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        data: counts,
+                        backgroundColor: ['#10b981', '#7c3aed', '#f59e0b', '#3b82f6', '#6b7280', '#94a3b8', '#ec4899', '#14b8a6', '#f97316', '#8b5cf6', '#06b6d4', '#84cc16']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'right' }
+                    }
+                }
+            });
+
+            new Chart(document.getElementById('entityValueChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        data: values,
+                        backgroundColor: ['#10b981', '#7c3aed', '#f59e0b', '#3b82f6', '#6b7280', '#94a3b8', '#ec4899', '#14b8a6', '#f97316', '#8b5cf6', '#06b6d4', '#84cc16']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'right' },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': ' + formatCurrency(context.raw);
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function updateTrendCharts() {
+            const trends = analysisData.trends;
+
+            // LLC trend
+            new Chart(document.getElementById('llcTrendChart'), {
+                type: 'line',
+                data: {
+                    labels: trends.years,
+                    datasets: [
+                        {
+                            label: 'LLC % of Value',
+                            data: trends.llc_pct,
+                            borderColor: '#7c3aed',
+                            backgroundColor: 'rgba(124, 58, 237, 0.1)',
+                            fill: true,
+                            yAxisID: 'y'
+                        },
+                        {
+                            label: 'Unique LLCs',
+                            data: trends.unique_llcs,
+                            borderColor: '#f59e0b',
+                            borderDash: [5, 5],
+                            fill: false,
+                            yAxisID: 'y1'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            type: 'linear',
+                            position: 'left',
+                            title: { display: true, text: 'LLC % of Value' }
+                        },
+                        y1: {
+                            type: 'linear',
+                            position: 'right',
+                            title: { display: true, text: 'Unique LLCs' },
+                            grid: { drawOnChartArea: false }
+                        }
+                    }
+                }
+            });
+
+            // Value growth
+            new Chart(document.getElementById('valueGrowthChart'), {
+                type: 'bar',
+                data: {
+                    labels: trends.years,
+                    datasets: [{
+                        label: 'Total Assessed Value',
+                        data: trends.total_value,
+                        backgroundColor: '#3b82f6'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return formatCurrency(context.raw);
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return formatCurrency(value);
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function updatePropertyClassChart(yearData) {
+            const classes = yearData.property_classes;
+            const labels = classes.map(c => c.name);
+            const llcPcts = classes.map(c => {
+                const llc = c.entity_breakdown.find(e => e.type === 'LLC');
+                return llc ? llc.pct : 0;
+            });
+
+            new Chart(document.getElementById('classLlcChart'), {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'LLC Ownership %',
+                        data: llcPcts,
+                        backgroundColor: '#7c3aed'
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 70,
+                            title: { display: true, text: '% of Properties Owned by LLCs' }
+                        }
+                    }
+                }
+            });
+        }
+
+        function updateTables(yearData) {
+            // Top owners by value
+            let html = '';
+            yearData.top_owners_by_value.forEach((owner, i) => {
+                const type = getEntityType(owner.owner);
+                const badgeClass = type === 'LLC' ? 'badge-purple' : type === 'Corporation' ? 'badge-green' : 'badge-yellow';
+                html += `<tr>
+                    <td>${i + 1}</td>
+                    <td>${owner.owner}</td>
+                    <td><span class="badge ${badgeClass}">${type}</span></td>
+                    <td>${owner.properties}</td>
+                    <td>${formatCurrency(owner.total_value)}</td>
+                </tr>`;
+            });
+            document.getElementById('topOwnersBody').innerHTML = html;
+
+            // Multi-property owners
+            html = '';
+            yearData.multi_property_owners.forEach((owner, i) => {
+                const type = getEntityType(owner.owner);
+                const badgeClass = type === 'LLC' ? 'badge-purple' : type === 'Corporation' ? 'badge-green' : 'badge-yellow';
+                const avg = owner.total_value / owner.properties;
+                html += `<tr>
+                    <td>${i + 1}</td>
+                    <td>${owner.owner}</td>
+                    <td><span class="badge ${badgeClass}">${type}</span></td>
+                    <td>${owner.properties}</td>
+                    <td>${formatCurrency(owner.total_value)}</td>
+                    <td>${formatCurrency(avg)}</td>
+                </tr>`;
+            });
+            document.getElementById('multiOwnerBody').innerHTML = html;
+
+            // Out of state
+            html = '';
+            yearData.top_out_of_state.slice(0, 10).forEach(owner => {
+                html += `<tr>
+                    <td>${owner.owner}</td>
+                    <td><span class="badge badge-red">${owner.state}</span></td>
+                    <td>${owner.properties}</td>
+                    <td>${formatCurrency(owner.total_value)}</td>
+                </tr>`;
+            });
+            document.getElementById('outOfStateBody').innerHTML = html;
+
+            // LLC by count
+            html = '';
+            yearData.llc_analysis.top_by_count.forEach(llc => {
+                html += `<tr>
+                    <td>${llc.name}</td>
+                    <td>${llc.properties}</td>
+                    <td>${formatCurrency(llc.total_value)}</td>
+                    <td>${llc.classes.join(', ')}</td>
+                </tr>`;
+            });
+            document.getElementById('llcCountBody').innerHTML = html;
+
+            // LLC by value
+            html = '';
+            yearData.llc_analysis.top_by_value.forEach(llc => {
+                html += `<tr>
+                    <td>${llc.name}</td>
+                    <td>${llc.properties}</td>
+                    <td>${formatCurrency(llc.total_value)}</td>
+                </tr>`;
+            });
+            document.getElementById('llcValueBody').innerHTML = html;
+        }
+
+        function updateLastNamesChart(yearData) {
+            const names = yearData.top_last_names.slice(0, 15);
+            
+            new Chart(document.getElementById('lastNamesChart'), {
+                type: 'bar',
+                data: {
+                    labels: names.map(n => n.name),
+                    datasets: [{
+                        label: 'Properties',
+                        data: names.map(n => n.properties),
+                        backgroundColor: '#10b981'
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+        }
+
+        function updateStateChart(yearData) {
+            const states = yearData.state_distribution.slice(0, 10);
+            
+            new Chart(document.getElementById('stateChart'), {
+                type: 'pie',
+                data: {
+                    labels: states.map(s => s.state),
+                    datasets: [{
+                        data: states.map(s => s.count),
+                        backgroundColor: ['#10b981', '#3b82f6', '#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4', '#f97316', '#84cc16', '#ec4899', '#6b7280']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'right' }
+                    }
+                }
+            });
+        }
+
+        async function loadDistrictData() {
+            try {
+                const response = await fetch('data/processed/districts_enriched.geojson');
+                const geojson = await response.json();
+                
+                const districts = geojson.features.map(f => ({
+                    name: f.properties.NAME.replace(' district', ''),
+                    llc_pct: f.properties.tax_data?.['2025']?.ownership?.llc_pct_records || 0
+                })).sort((a, b) => b.llc_pct - a.llc_pct);
+
+                new Chart(document.getElementById('districtLlcChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: districts.map(d => d.name),
+                        datasets: [{
+                            label: 'LLC % of Properties',
+                            data: districts.map(d => d.llc_pct),
+                            backgroundColor: districts.map(d => d.llc_pct > 15 ? '#dc2626' : d.llc_pct > 10 ? '#f59e0b' : '#10b981')
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: { display: true, text: '% LLC Ownership' }
+                            }
+                        }
+                    }
+                });
+            } catch (e) {
+                console.error('Failed to load district data:', e);
+            }
+        }
+
+        function updateYear(year) {
+            currentYear = year;
+            const yearData = analysisData.annual_data.find(d => d.year == year);
+            if (!yearData) return;
+
+            document.querySelectorAll('.current-year').forEach(el => el.textContent = year);
+            
+            // Clear existing charts
+            Chart.helpers.each(Chart.instances, function(instance) {
+                instance.destroy();
+            });
+
+            updateStats(yearData);
+            updateEntityCharts(yearData);
+            updateTrendCharts();
+            updatePropertyClassChart(yearData);
+            updateTables(yearData);
+            updateLastNamesChart(yearData);
+            updateStateChart(yearData);
+            loadDistrictData();
+        }
+
+        async function init() {
+            try {
+                const response = await fetch('data/processed/real_estate_ownership_analysis.json');
+                analysisData = await response.json();
+                
+                document.getElementById('gen-date').textContent = new Date(analysisData.metadata.generated).toLocaleDateString();
+                
+                updateYear(currentYear);
+
+                document.getElementById('year-select').addEventListener('change', function(e) {
+                    updateYear(e.target.value);
+                });
+            } catch (e) {
+                console.error('Failed to load data:', e);
+                document.getElementById('stats-grid').innerHTML = '<p>Error loading data. Please ensure data files are available.</p>';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+
+        // ============================================
+        // LLC NETWORKS FUNCTIONALITY
+        // ============================================
+        function renderNetworks(networks, filter = '') {
+            const container = document.getElementById('networks-container');
+            const filterLower = filter.toLowerCase();
+            
+            let filtered = networks;
+            if (filter) {
+                filtered = networks.filter(n => 
+                    n.address.toLowerCase().includes(filterLower) ||
+                    n.llcs.some(l => l.name.toLowerCase().includes(filterLower))
+                );
+            }
+            
+            document.getElementById('network-count').textContent = `Showing ${filtered.length} networks`;
+            
+            let html = '';
+            filtered.forEach(network => {
+                html += `
+                    <div class="network-card">
+                        <div class="network-header">
+                            <div class="network-address">${network.address}</div>
+                            <div class="network-stats">
+                                <div class="network-stat">
+                                    <div class="network-stat-value">${network.llc_count}</div>
+                                    <div class="network-stat-label">LLCs</div>
+                                </div>
+                                <div class="network-stat">
+                                    <div class="network-stat-value">${network.property_count}</div>
+                                    <div class="network-stat-label">Properties</div>
+                                </div>
+                                <div class="network-stat">
+                                    <div class="network-stat-value">${formatCurrency(network.total_value)}</div>
+                                    <div class="network-stat-label">Total Value</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="network-llcs">
+                            ${network.llcs.slice(0, 8).map(llc => `
+                                <div class="llc-item">
+                                    <div class="llc-name">${llc.name}</div>
+                                    <div class="llc-details">${llc.properties} props - ${formatCurrency(llc.value)}</div>
+                                </div>
+                            `).join('')}
+                            ${network.llcs.length > 8 ? `<div class="llc-item" style="text-align:center;color:var(--gray-500);">+${network.llcs.length - 8} more LLCs</div>` : ''}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html || '<p>No networks match your search.</p>';
+        }
+
+        function initNetworks() {
+            if (!analysisData.llc_networks) return;
+            
+            let networks = [...analysisData.llc_networks];
+            renderNetworks(networks);
+            
+            document.getElementById('network-search').addEventListener('input', function(e) {
+                renderNetworks(getSortedNetworks(), e.target.value);
+            });
+            
+            document.getElementById('network-sort').addEventListener('change', function() {
+                renderNetworks(getSortedNetworks(), document.getElementById('network-search').value);
+            });
+        }
+
+        function getSortedNetworks() {
+            const sort = document.getElementById('network-sort').value;
+            let networks = [...analysisData.llc_networks];
+            
+            if (sort === 'llcs') {
+                networks.sort((a, b) => b.llc_count - a.llc_count);
+            } else if (sort === 'properties') {
+                networks.sort((a, b) => b.property_count - a.property_count);
+            } else {
+                networks.sort((a, b) => b.total_value - a.total_value);
+            }
+            
+            return networks;
+        }
+
+        // ============================================
+        // PROPERTY INVESTIGATIONS FUNCTIONALITY
+        // ============================================
+        function initInvestigations() {
+            if (!analysisData.property_investigations) return;
+            
+            const inv = analysisData.property_investigations;
+            
+            // High-value agricultural
+            renderAgriTable(inv.high_value_agricultural);
+            document.getElementById('agri-search').addEventListener('input', function(e) {
+                const filter = e.target.value.toLowerCase();
+                const filtered = inv.high_value_agricultural.filter(p => 
+                    p.owner.toLowerCase().includes(filter) || 
+                    p.parcel.toLowerCase().includes(filter) ||
+                    p.district.toLowerCase().includes(filter)
+                );
+                renderAgriTable(filtered);
+            });
+            
+            // Top individuals
+            renderIndividualTable(inv.high_value_individuals);
+            document.getElementById('individual-search').addEventListener('input', function(e) {
+                const filter = e.target.value.toLowerCase();
+                const filtered = inv.high_value_individuals.filter(p => 
+                    p.owner.toLowerCase().includes(filter)
+                );
+                renderIndividualTable(filtered);
+            });
+            
+            // Largest landowners
+            renderLandownerTable(inv.largest_landowners);
+            document.getElementById('landowner-search').addEventListener('input', function(e) {
+                const filter = e.target.value.toLowerCase();
+                const filtered = inv.largest_landowners.filter(p => 
+                    p.owner.toLowerCase().includes(filter)
+                );
+                renderLandownerTable(filtered);
+            });
+            
+            // Tab switching
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                    document.getElementById('tab-' + this.dataset.tab).classList.add('active');
+                });
+            });
+        }
+
+        function renderAgriTable(data) {
+            let html = '';
+            data.forEach(p => {
+                html += `<tr>
+                    <td>${p.parcel}</td>
+                    <td>${p.owner}</td>
+                    <td>${formatCurrency(p.land_value)}</td>
+                    <td>${formatCurrency(p.improvement_value)}</td>
+                    <td><strong>${formatCurrency(p.total_value)}</strong></td>
+                    <td>${p.district}</td>
+                </tr>`;
+            });
+            document.getElementById('agri-table-body').innerHTML = html || '<tr><td colspan="6">No results</td></tr>';
+        }
+
+        function renderIndividualTable(data) {
+            let html = '';
+            data.forEach((p, i) => {
+                const avg = p.property_count > 0 ? p.total_value / p.property_count : 0;
+                html += `<tr>
+                    <td>${i + 1}</td>
+                    <td>${p.owner}</td>
+                    <td>${p.property_count}</td>
+                    <td>${formatCurrency(p.total_value)}</td>
+                    <td>${formatCurrency(avg)}</td>
+                </tr>`;
+            });
+            document.getElementById('individual-table-body').innerHTML = html || '<tr><td colspan="5">No results</td></tr>';
+        }
+
+        function renderLandownerTable(data) {
+            let html = '';
+            data.forEach((p, i) => {
+                html += `<tr>
+                    <td>${i + 1}</td>
+                    <td>${p.owner}</td>
+                    <td>${p.total_acreage.toLocaleString()} ac</td>
+                    <td>${p.property_count}</td>
+                    <td>${formatCurrency(p.total_value)}</td>
+                    <td>${formatCurrency(p.value_per_acre)}</td>
+                </tr>`;
+            });
+            document.getElementById('landowner-table-body').innerHTML = html || '<tr><td colspan="6">No results</td></tr>';
+        }
+
+        // ============================================
+        // MULTI-YEAR TRENDS FUNCTIONALITY
+        // ============================================
+        function initTrends() {
+            if (!analysisData.multi_year_comparison) return;
+            
+            const comp = analysisData.multi_year_comparison;
+            
+            // Entity trend by count
+            new Chart(document.getElementById('entityTrendCountChart'), {
+                type: 'line',
+                data: {
+                    labels: comp.years,
+                    datasets: [
+                        {
+                            label: 'Individual',
+                            data: comp.entity_by_count.Individual,
+                            borderColor: '#10b981',
+                            backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                            fill: false
+                        },
+                        {
+                            label: 'LLC',
+                            data: comp.entity_by_count.LLC,
+                            borderColor: '#7c3aed',
+                            backgroundColor: 'rgba(124, 58, 237, 0.1)',
+                            fill: false
+                        },
+                        {
+                            label: 'Trust',
+                            data: comp.entity_by_count.Trust,
+                            borderColor: '#f59e0b',
+                            backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                            fill: false
+                        },
+                        {
+                            label: 'Corporation',
+                            data: comp.entity_by_count.Corporation,
+                            borderColor: '#3b82f6',
+                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            title: { display: true, text: '% of Properties' }
+                        }
+                    }
+                }
+            });
+            
+            // Entity trend by value
+            new Chart(document.getElementById('entityTrendValueChart'), {
+                type: 'line',
+                data: {
+                    labels: comp.years,
+                    datasets: [
+                        {
+                            label: 'Individual',
+                            data: comp.entity_by_value.Individual,
+                            borderColor: '#10b981',
+                            fill: false
+                        },
+                        {
+                            label: 'LLC',
+                            data: comp.entity_by_value.LLC,
+                            borderColor: '#7c3aed',
+                            fill: false
+                        },
+                        {
+                            label: 'Trust',
+                            data: comp.entity_by_value.Trust,
+                            borderColor: '#f59e0b',
+                            fill: false
+                        },
+                        {
+                            label: 'Corporation',
+                            data: comp.entity_by_value.Corporation,
+                            borderColor: '#3b82f6',
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            title: { display: true, text: '% of Value' }
+                        }
+                    }
+                }
+            });
+            
+            // Growth rates table
+            let html = '';
+            const rates = comp.growth_rates;
+            const order = ['Trust', 'LLC', 'Individual', 'Corporation'];
+            order.forEach(entity => {
+                if (rates[entity]) {
+                    const r = rates[entity];
+                    const changeClass = r.growth_pct >= 0 ? 'positive' : 'negative';
+                    html += `<tr>
+                        <td><strong>${entity}</strong></td>
+                        <td>${formatCurrency(r.first_year_value)}</td>
+                        <td>${formatCurrency(r.last_year_value)}</td>
+                        <td class="${changeClass}">${r.absolute_change >= 0 ? '+' : ''}${formatCurrency(r.absolute_change)}</td>
+                        <td class="${changeClass}"><strong>${r.growth_pct >= 0 ? '+' : ''}${r.growth_pct}%</strong></td>
+                    </tr>`;
+                }
+            });
+            document.getElementById('growth-table-body').innerHTML = html;
+            
+            // Year-over-year chart
+            if (comp.year_over_year) {
+                new Chart(document.getElementById('yoyChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: comp.year_over_year.map(y => `${y.from_year}-${y.to_year}`),
+                        datasets: [{
+                            label: 'Value Change',
+                            data: comp.year_over_year.map(y => y.value_change),
+                            backgroundColor: comp.year_over_year.map(y => y.value_change >= 0 ? '#10b981' : '#ef4444')
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        const yoy = comp.year_over_year[context.dataIndex];
+                                        return [
+                                            `Change: ${formatCurrency(yoy.value_change)}`,
+                                            `Growth: ${yoy.value_change_pct}%`,
+                                            `New Properties: ${yoy.record_change}`,
+                                            `New LLCs: ${yoy.llc_count_change}`
+                                        ];
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                ticks: {
+                                    callback: function(value) {
+                                        return formatCurrency(value);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        // Initialize new sections after data loads
+        const originalInit = init;
+        init = async function() {
+            await originalInit();
+            initNetworks();
+            initInvestigations();
+            initTrends();
+        };
+    </script>
+
+    <!-- Feedback Widget -->
+    <script type="module">
+        import { initFeedbackWidget } from './feedback.js';
+        initFeedbackWidget({ theme: 'county' });
+    </script>
+</body>
+</html>
