@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "Frederick County Commissioner of Revenue - Real Estate Tax Book",
-    "generated": "2026-01-29T23:45:06.013376",
+    "generated": "2026-01-31T08:18:43.888925",
     "years_analyzed": [
       2021,
       2022,
@@ -391,8 +391,8 @@
           "properties": 2,
           "value": 385200,
           "districts": [
-            "Shawnee",
-            "Red Bud"
+            "Red Bud",
+            "Shawnee"
           ]
         },
         {
@@ -858,8 +858,8 @@
           "properties": 11,
           "value": 3307900,
           "districts": [
-            "Shawnee",
-            "Red Bud"
+            "Red Bud",
+            "Shawnee"
           ]
         },
         {
@@ -867,8 +867,8 @@
           "properties": 3,
           "value": 2817600,
           "districts": [
-            "Shawnee",
-            "Red Bud"
+            "Red Bud",
+            "Shawnee"
           ]
         },
         {
@@ -910,9 +910,9 @@
           "properties": 7,
           "value": 799400,
           "districts": [
-            "Shawnee",
             "Back Creek",
-            "Red Bud"
+            "Red Bud",
+            "Shawnee"
           ]
         },
         {
@@ -920,8 +920,8 @@
           "properties": 2,
           "value": 615000,
           "districts": [
-            "Shawnee",
-            "Opequon"
+            "Opequon",
+            "Shawnee"
           ]
         },
         {
@@ -1019,8 +1019,8 @@
           "value": 8776900,
           "districts": [
             "Opequon",
-            "Stonewall",
-            "Red Bud"
+            "Red Bud",
+            "Stonewall"
           ]
         },
         {
@@ -1076,9 +1076,9 @@
           "properties": 16,
           "value": 9921400,
           "districts": [
-            "Stonewall",
             "Back Creek",
-            "Gainesboro"
+            "Gainesboro",
+            "Stonewall"
           ]
         },
         {
@@ -1102,8 +1102,8 @@
           "properties": 4,
           "value": 515700,
           "districts": [
-            "Stonewall",
-            "Gainesboro"
+            "Gainesboro",
+            "Stonewall"
           ]
         },
         {
@@ -1256,8 +1256,8 @@
           "properties": 4,
           "value": 5926200,
           "districts": [
-            "Shawnee",
-            "Back Creek"
+            "Back Creek",
+            "Shawnee"
           ]
         },
         {
@@ -1363,9 +1363,9 @@
           "properties": 7,
           "value": 7898800,
           "districts": [
+            "Gainesboro",
             "Stonewall",
-            "Shawnee",
-            "Gainesboro"
+            "Shawnee"
           ]
         },
         {
@@ -1373,10 +1373,10 @@
           "properties": 7,
           "value": 1709900,
           "districts": [
-            "Stonewall",
-            "Red Bud",
-            "Opequon",
             "Gainesboro",
+            "Red Bud",
+            "Stonewall",
+            "Opequon",
             "Back Creek"
           ]
         },
@@ -1393,8 +1393,8 @@
           "properties": 2,
           "value": 510000,
           "districts": [
-            "Shawnee",
-            "Opequon"
+            "Opequon",
+            "Shawnee"
           ]
         },
         {
@@ -1660,8 +1660,8 @@
           "properties": 2,
           "value": 962700,
           "districts": [
-            "Stonewall",
-            "Red Bud"
+            "Red Bud",
+            "Stonewall"
           ]
         },
         {
@@ -1837,10 +1837,10 @@
           "properties": 12,
           "value": 2380300,
           "districts": [
-            "Shawnee",
-            "Stephens City",
             "Opequon",
-            "Red Bud"
+            "Stephens City",
+            "Red Bud",
+            "Shawnee"
           ]
         },
         {
@@ -1848,10 +1848,10 @@
           "properties": 11,
           "value": 2186100,
           "districts": [
-            "Shawnee",
-            "Stephens City",
             "Opequon",
-            "Red Bud"
+            "Stephens City",
+            "Red Bud",
+            "Shawnee"
           ]
         },
         {
@@ -1899,12 +1899,12 @@
           "properties": 18,
           "value": 5362100,
           "districts": [
-            "Stonewall",
             "Red Bud",
+            "Stonewall",
             "Shawnee",
             "Opequon",
-            "Stephens City",
-            "Back Creek"
+            "Back Creek",
+            "Stephens City"
           ]
         },
         {
@@ -1912,8 +1912,8 @@
           "properties": 2,
           "value": 704800,
           "districts": [
-            "Shawnee",
-            "Opequon"
+            "Opequon",
+            "Shawnee"
           ]
         },
         {
@@ -2273,10 +2273,10 @@
           "properties": 14,
           "value": 3960300,
           "districts": [
-            "Shawnee",
             "Opequon",
             "Stonewall",
-            "Red Bud"
+            "Red Bud",
+            "Shawnee"
           ]
         },
         {
@@ -2292,8 +2292,8 @@
           "properties": 2,
           "value": 580900,
           "districts": [
-            "Shawnee",
-            "Opequon"
+            "Opequon",
+            "Shawnee"
           ]
         },
         {
@@ -2373,10 +2373,10 @@
           "properties": 10,
           "value": 2762700,
           "districts": [
-            "Middletown",
-            "Shawnee",
             "Opequon",
-            "Red Bud"
+            "Middletown",
+            "Red Bud",
+            "Shawnee"
           ]
         },
         {
@@ -2529,9 +2529,9 @@
           "properties": 10,
           "value": 3178400,
           "districts": [
+            "Opequon",
             "Middletown",
-            "Shawnee",
-            "Opequon"
+            "Shawnee"
           ]
         },
         {
@@ -2852,8 +2852,8 @@
           "properties": 9,
           "value": 2187200,
           "districts": [
-            "Back Creek",
             "Opequon",
+            "Back Creek",
             "Gainesboro",
             "Stephens City"
           ]
@@ -2863,8 +2863,8 @@
           "properties": 5,
           "value": 1710700,
           "districts": [
-            "Middletown",
-            "Opequon"
+            "Opequon",
+            "Middletown"
           ]
         },
         {
@@ -3048,9 +3048,9 @@
           "properties": 40,
           "value": 3029000,
           "districts": [
-            "Stonewall",
             "Back Creek",
-            "Gainesboro"
+            "Gainesboro",
+            "Stonewall"
           ]
         },
         {
@@ -3162,8 +3162,8 @@
           "properties": 8,
           "value": 1859200,
           "districts": [
-            "Stonewall",
-            "Red Bud"
+            "Red Bud",
+            "Stonewall"
           ]
         },
         {
@@ -3171,8 +3171,8 @@
           "properties": 5,
           "value": 1140200,
           "districts": [
-            "Shawnee",
-            "Opequon"
+            "Opequon",
+            "Shawnee"
           ]
         },
         {
@@ -5628,8 +5628,8 @@
               "C1"
             ],
             "districts": [
-              "Shawnee",
-              "Opequon"
+              "Opequon",
+              "Shawnee"
             ]
           },
           {
@@ -5653,8 +5653,8 @@
             ],
             "districts": [
               "Opequon",
-              "Stonewall",
-              "Red Bud"
+              "Red Bud",
+              "Stonewall"
             ]
           },
           {
@@ -5761,9 +5761,9 @@
               "C1"
             ],
             "districts": [
-              "Shawnee",
               "Opequon",
-              "Stephens City"
+              "Stephens City",
+              "Shawnee"
             ]
           },
           {
@@ -5775,12 +5775,12 @@
               "C2"
             ],
             "districts": [
-              "Stonewall",
-              "Red Bud",
-              "Opequon",
               "Gainesboro",
-              "Stephens City",
-              "Back Creek"
+              "Red Bud",
+              "Stonewall",
+              "Opequon",
+              "Back Creek",
+              "Stephens City"
             ]
           },
           {
@@ -5824,8 +5824,8 @@
               "C1"
             ],
             "districts": [
-              "Shawnee",
-              "Opequon"
+              "Opequon",
+              "Shawnee"
             ]
           }
         ],
@@ -6343,8 +6343,8 @@
           "total_value": 22116000,
           "entity_type": "Corporation",
           "districts": [
-            "Shawnee",
-            "Red Bud"
+            "Red Bud",
+            "Shawnee"
           ]
         },
         {
@@ -7638,8 +7638,8 @@
             ],
             "districts": [
               "Back Creek",
-              "Stonewall",
-              "Red Bud"
+              "Red Bud",
+              "Stonewall"
             ]
           },
           {
@@ -7652,8 +7652,8 @@
             ],
             "districts": [
               "Opequon",
-              "Stonewall",
-              "Red Bud"
+              "Red Bud",
+              "Stonewall"
             ]
           },
           {
@@ -7782,12 +7782,12 @@
               "C4"
             ],
             "districts": [
-              "Stonewall",
               "Red Bud",
+              "Stonewall",
               "Shawnee",
               "Opequon",
-              "Stephens City",
-              "Back Creek"
+              "Back Creek",
+              "Stephens City"
             ]
           },
           {
@@ -7799,12 +7799,12 @@
               "C2"
             ],
             "districts": [
-              "Stonewall",
-              "Red Bud",
-              "Opequon",
               "Gainesboro",
-              "Stephens City",
-              "Back Creek"
+              "Red Bud",
+              "Stonewall",
+              "Opequon",
+              "Back Creek",
+              "Stephens City"
             ]
           },
           {
@@ -7815,9 +7815,9 @@
               "C1"
             ],
             "districts": [
-              "Shawnee",
               "Opequon",
-              "Stephens City"
+              "Stephens City",
+              "Shawnee"
             ]
           },
           {
@@ -7850,8 +7850,8 @@
               "C1"
             ],
             "districts": [
-              "Shawnee",
-              "Opequon"
+              "Opequon",
+              "Shawnee"
             ]
           }
         ],
@@ -8396,8 +8396,8 @@
           "total_value": 23457200,
           "entity_type": "Corporation",
           "districts": [
-            "Shawnee",
-            "Red Bud"
+            "Red Bud",
+            "Shawnee"
           ]
         },
         {
@@ -9688,10 +9688,10 @@
               "C1"
             ],
             "districts": [
-              "Stonewall",
+              "Red Bud",
               "Back Creek",
               "Gainesboro",
-              "Red Bud"
+              "Stonewall"
             ]
           },
           {
@@ -9704,10 +9704,10 @@
               "C4"
             ],
             "districts": [
-              "Back Creek",
               "Opequon",
-              "Stonewall",
-              "Red Bud"
+              "Back Creek",
+              "Red Bud",
+              "Stonewall"
             ]
           },
           {
@@ -9801,12 +9801,12 @@
               "C4"
             ],
             "districts": [
-              "Stonewall",
               "Red Bud",
+              "Stonewall",
               "Shawnee",
               "Opequon",
-              "Stephens City",
-              "Back Creek"
+              "Back Creek",
+              "Stephens City"
             ]
           },
           {
@@ -9818,12 +9818,12 @@
               "C2"
             ],
             "districts": [
-              "Stonewall",
-              "Red Bud",
-              "Opequon",
               "Gainesboro",
-              "Stephens City",
-              "Back Creek"
+              "Red Bud",
+              "Stonewall",
+              "Opequon",
+              "Back Creek",
+              "Stephens City"
             ]
           },
           {
@@ -9856,8 +9856,8 @@
               "C1"
             ],
             "districts": [
-              "Shawnee",
-              "Opequon"
+              "Opequon",
+              "Shawnee"
             ]
           },
           {
@@ -9879,10 +9879,10 @@
               "C1"
             ],
             "districts": [
-              "Shawnee",
-              "Stephens City",
               "Opequon",
-              "Red Bud"
+              "Stephens City",
+              "Red Bud",
+              "Shawnee"
             ]
           }
         ],
@@ -10636,8 +10636,8 @@
           "total_value": 16293200,
           "entity_type": "Corporation",
           "districts": [
-            "Shawnee",
-            "Red Bud"
+            "Red Bud",
+            "Shawnee"
           ]
         },
         {
@@ -11747,10 +11747,10 @@
               "C4"
             ],
             "districts": [
-              "Back Creek",
               "Opequon",
-              "Stonewall",
-              "Red Bud"
+              "Back Creek",
+              "Red Bud",
+              "Stonewall"
             ]
           },
           {
@@ -11831,12 +11831,12 @@
               "C4"
             ],
             "districts": [
-              "Stonewall",
-              "Red Bud",
-              "Opequon",
               "Gainesboro",
-              "Stephens City",
-              "Back Creek"
+              "Red Bud",
+              "Stonewall",
+              "Opequon",
+              "Back Creek",
+              "Stephens City"
             ]
           },
           {
@@ -11861,12 +11861,12 @@
               "C4"
             ],
             "districts": [
-              "Stonewall",
               "Red Bud",
+              "Stonewall",
               "Shawnee",
               "Opequon",
-              "Stephens City",
-              "Back Creek"
+              "Back Creek",
+              "Stephens City"
             ]
           },
           {
@@ -11897,8 +11897,8 @@
               "C1"
             ],
             "districts": [
-              "Shawnee",
-              "Opequon"
+              "Opequon",
+              "Shawnee"
             ]
           },
           {
@@ -11909,10 +11909,10 @@
               "C1"
             ],
             "districts": [
-              "Shawnee",
-              "Stephens City",
               "Opequon",
-              "Red Bud"
+              "Stephens City",
+              "Red Bud",
+              "Shawnee"
             ]
           }
         ],
@@ -12774,8 +12774,8 @@
           "total_value": 16849100,
           "entity_type": "Individual",
           "districts": [
-            "Back Creek",
             "Opequon",
+            "Back Creek",
             "Stephens City"
           ]
         },
@@ -13726,9 +13726,9 @@
               "C1"
             ],
             "districts": [
-              "Stonewall",
               "Back Creek",
-              "Gainesboro"
+              "Gainesboro",
+              "Stonewall"
             ]
           },
           {
@@ -13741,8 +13741,8 @@
             ],
             "districts": [
               "Opequon",
-              "Stonewall",
-              "Red Bud"
+              "Red Bud",
+              "Stonewall"
             ]
           },
           {
@@ -13814,12 +13814,12 @@
               "C4"
             ],
             "districts": [
-              "Stonewall",
               "Red Bud",
+              "Stonewall",
               "Shawnee",
               "Opequon",
-              "Stephens City",
-              "Back Creek"
+              "Back Creek",
+              "Stephens City"
             ]
           },
           {
@@ -13843,12 +13843,12 @@
               "C4"
             ],
             "districts": [
-              "Stonewall",
-              "Red Bud",
-              "Opequon",
               "Gainesboro",
-              "Stephens City",
-              "Back Creek"
+              "Red Bud",
+              "Stonewall",
+              "Opequon",
+              "Back Creek",
+              "Stephens City"
             ]
           },
           {
@@ -13883,8 +13883,8 @@
               "C1"
             ],
             "districts": [
-              "Shawnee",
-              "Opequon"
+              "Opequon",
+              "Shawnee"
             ]
           },
           {
@@ -13895,10 +13895,10 @@
               "C1"
             ],
             "districts": [
-              "Shawnee",
-              "Stephens City",
               "Opequon",
-              "Red Bud"
+              "Stephens City",
+              "Red Bud",
+              "Shawnee"
             ]
           },
           {
@@ -13920,8 +13920,8 @@
               "C1"
             ],
             "districts": [
-              "Stonewall",
               "Red Bud",
+              "Stonewall",
               "Shawnee",
               "Opequon",
               "Stephens City"
@@ -13935,10 +13935,10 @@
               "C1"
             ],
             "districts": [
-              "Shawnee",
               "Opequon",
               "Stonewall",
-              "Red Bud"
+              "Red Bud",
+              "Shawnee"
             ]
           },
           {

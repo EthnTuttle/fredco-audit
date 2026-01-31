@@ -575,7 +575,7 @@ def analyze_year(records, year):
     }
 
 def main():
-    output_dir = Path('/home/ethan/code/fredco-schools/data/processed')
+    output_dir = Path('/home/ethan/code/fredco-audit/data/processed')
     
     # Load main real estate tax file (contains all years)
     main_tax_file = output_dir / 'real_estate_tax.json'

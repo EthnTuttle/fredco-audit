@@ -45,8 +45,8 @@ def classify_entity(name):
                                       'INC C/O', '501']):
         return 'Non-Profit/Organization'
     
-    # LLC
-    if re.search(r'\bLLC\b|\bL\.?L\.?C\.?\b', name_upper):
+    # LLC or LC (Limited Company)
+    if re.search(r'\bLLC\b|\bL\.?L\.?C\.?\b|\bLC\b', name_upper):
         return 'LLC'
     
     # Corporations
@@ -95,7 +95,7 @@ def extract_last_name(name):
     
     # Skip if clearly not an individual
     entity_keywords = ['LLC', 'INC', 'CORP', 'TRUST', 'CHURCH', 'BANK', 
-                       'COUNTY', 'ESTATE', 'FOUNDATION', 'ASSOC']
+                       'COUNTY', 'ESTATE', 'FOUNDATION', 'ASSOC', ' LC', ' LP']
     if any(kw in name.upper() for kw in entity_keywords):
         return None
     
@@ -321,7 +321,7 @@ def find_oddities(records):
     return oddities
 
 def main():
-    data_dir = Path('/home/ethan/code/fredco-schools/data/processed/temp')
+    data_dir = Path('/home/ethan/code/fredco-audit/data/processed/temp')
     
     # Load 2025 data (most recent)
     tax_file = data_dir / 'tax_2025.json'

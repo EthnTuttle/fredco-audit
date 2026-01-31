@@ -14,15 +14,16 @@ from datetime import datetime
 import time
 
 # Business indicators to filter out
+# Note: ' LC' (with space) to avoid matching substrings like "FALCON"
 BUSINESS_INDICATORS = [
-    'LLC', 'INC', 'CORP', 'CO', 'LTD', 'LP', 'LLP', 'TRUST', 'TRUSTEE', 'ESTATE',
+    'LLC', ' LC', 'INC', 'CORP', 'CO ', 'LTD', ' LP', 'LLP', 'TRUST', 'TRUSTEE', 'ESTATE',
     'CHURCH', 'BANK', 'COUNTY', 'CITY', 'STATE', 'FEDERAL', 'PROPERTIES', 'PROPERTY',
     'INVESTMENTS', 'HOLDINGS', 'DEVELOPMENT', 'ENTERPRISES', 'ASSOCIATES', 'PARTNERS',
     'MANAGEMENT', 'SERVICES', 'COMPANY', 'FOUNDATION', 'ASSOCIATION', 'HOSPITAL',
     'SCHOOL', 'UNIVERSITY', 'CEMETERY', 'MINISTRY', 'BAPTIST', 'METHODIST',
     'LUTHERAN', 'PRESBYTERIAN', 'CATHOLIC', 'REALTY', 'RENTALS', 'STORAGE',
     'FARM', 'FARMS', 'RANCH', 'BUILDERS', 'CONSTRUCTION', 'ELECTRIC', 'UTILITY',
-    'MORTGAGE', 'FINANCIAL', 'CAPITAL', 'ET AL', 'ETAL', 'ETALS'
+    'MORTGAGE', 'FINANCIAL', 'CAPITAL', 'ET AL', 'ETAL', 'ETALS', ' GROUP'
 ]
 
 

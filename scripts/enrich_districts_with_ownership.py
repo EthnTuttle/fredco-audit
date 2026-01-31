@@ -36,7 +36,8 @@ def classify_entity(name):
                                       'CLUB', 'LEGION', 'VFW', 'LIONS', 'ROTARY']):
         return 'Non-Profit'
     
-    if re.search(r'\bLLC\b|\bL\.?L\.?C\.?\b', name_upper):
+    # LLC or LC (Limited Company)
+    if re.search(r'\bLLC\b|\bL\.?L\.?C\.?\b|\bLC\b', name_upper):
         return 'LLC'
     
     if any(x in name_upper for x in [' INC', ' CORP', ' CO ', ' COMPANY', 
@@ -122,7 +123,7 @@ def analyze_district_ownership(records):
     }
 
 def main():
-    data_dir = Path('/home/ethan/code/fredco-schools/data/processed')
+    data_dir = Path('/home/ethan/code/fredco-audit/data/processed')
     
     # Load existing GeoJSON
     geojson_path = data_dir / 'districts_enriched.geojson'
