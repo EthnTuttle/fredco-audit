@@ -1469,9 +1469,11 @@
             });
         }
 
+        const DATA_VERSION = 'v20260131';  // Update to bust cache
+        
         async function loadDistrictData() {
             try {
-                const response = await fetch('data/processed/districts_enriched.geojson');
+                const response = await fetch(`data/processed/districts_enriched.geojson?${DATA_VERSION}`);
                 const geojson = await response.json();
                 
                 const districts = geojson.features.map(f => ({
@@ -1529,7 +1531,7 @@
 
         async function init() {
             try {
-                const response = await fetch('data/processed/real_estate_ownership_analysis.json');
+                const response = await fetch(`data/processed/real_estate_ownership_analysis.json?${DATA_VERSION}`);
                 analysisData = await response.json();
                 
                 const genDateEl = document.getElementById('gen-date');
