@@ -1144,9 +1144,12 @@
             return num.toLocaleString();
         }
 
-        function getEntityType(name) {
+        // Use entity_type from data when available, fallback to classification
+        function getEntityType(name, dataEntityType) {
+            if (dataEntityType) return dataEntityType;
+            // Fallback for data without entity_type field
             const upper = name.toUpperCase();
-            if (/\bLLC\b|\bLC\b/.test(upper)) return 'LLC';  // LC = Limited Company
+            if (/\bLLC\b|\bLC\b/.test(upper)) return 'LLC';
             if (/ INC| CORP| COMPANY/.test(upper)) return 'Corporation';
             if (/TRUST|TRUSTEE/.test(upper)) return 'Trust';
             if (/ESTATE|HEIRS/.test(upper)) return 'Estate';
@@ -1361,7 +1364,7 @@
             // Top owners by value
             let html = '';
             yearData.top_owners_by_value.forEach((owner, i) => {
-                const type = getEntityType(owner.owner);
+                const type = owner.entity_type || getEntityType(owner.owner);
                 const badgeClass = type === 'LLC' ? 'badge-purple' : type === 'Corporation' ? 'badge-green' : 'badge-yellow';
                 html += `<tr>
                     <td>${i + 1}</td>
@@ -1376,7 +1379,7 @@
             // Multi-property owners
             html = '';
             yearData.multi_property_owners.forEach((owner, i) => {
-                const type = getEntityType(owner.owner);
+                const type = owner.entity_type || getEntityType(owner.owner);
                 const badgeClass = type === 'LLC' ? 'badge-purple' : type === 'Corporation' ? 'badge-green' : 'badge-yellow';
                 const avg = owner.total_value / owner.properties;
                 html += `<tr>
@@ -1469,7 +1472,7 @@
             });
         }
 
-        const DATA_VERSION = 'v20260131b';  // Update to bust cache
+        const DATA_VERSION = 'v20260131c';  // Update to bust cache
         
         async function loadDistrictData() {
             try {
