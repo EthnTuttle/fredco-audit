@@ -46,3 +46,4 @@ Thumbs.db
 *.tmp
 *.temp
 playground/node_modules/
+playground/target/
