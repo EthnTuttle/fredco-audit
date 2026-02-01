@@ -8,7 +8,7 @@
 import { initDataEngine, executeQuery, getLoadedTables, getTableSchema, type QueryResult } from './engines/data';
 import { getChartEngine, type ChartType, type ChartOptions } from './engines/chart';
 import { editorEngine } from './engines/editor';
-import { notesEngine } from './engines/notes';
+import { getNotesEngine, isNostrAvailable } from './engines/notes';
 
 // Application state
 interface AppState {
@@ -107,7 +107,7 @@ function render(container: HTMLElement): void {
       break;
 
     case 'ready':
-      const nostrAvailable = notesEngine.isExtensionAvailable();
+      const nostrAvailable = isNostrAvailable();
       container.innerHTML = `
         <header style="padding: 1rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
           <h1 style="margin: 0; font-size: 1.2rem;">FCPS Data Playground v2</h1>
@@ -254,12 +254,13 @@ function setupEventListeners(): void {
   nostrConnectBtn?.addEventListener('click', async () => {
     try {
       nostrConnectBtn.textContent = 'Connecting...';
+      const notesEngine = getNotesEngine();
       await notesEngine.connect();
-      const pubkey = await notesEngine.getPublicKey();
+      await notesEngine.getPublicKey();
       state.nostrConnected = true;
       
       nostrConnectBtn.textContent = 'Connected';
-      nostrConnectBtn.disabled = true;
+      (nostrConnectBtn as HTMLButtonElement).disabled = true;
       
       const pubkeyDiv = document.getElementById('nostr-pubkey');
       if (pubkeyDiv) {
@@ -294,12 +295,12 @@ function setupEventListeners(): void {
     try {
       publishBtn.textContent = 'Publishing...';
       const summary = `${state.lastResult.rowCount} rows in ${state.lastResult.executionTimeMs.toFixed(1)}ms`;
-      const eventId = await notesEngine.publishQueryNote(state.lastQuery, summary, comment);
+      const result = await getNotesEngine().publishQueryNote(state.lastQuery, summary, comment);
       publishBtn.textContent = 'Published!';
       setTimeout(() => {
         publishBtn.textContent = 'Publish to Nostr';
       }, 2000);
-      console.log('Published note:', eventId);
+      console.log('Published note:', result.eventId);
     } catch (error) {
       publishBtn.textContent = 'Publish to Nostr';
       alert('Failed to publish: ' + (error instanceof Error ? error.message : String(error)));

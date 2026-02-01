@@ -1,0 +1,14 @@
+/home/ethan/code/fredco-audit/playground/target/wasm32-unknown-unknown/release/deps/serde-aee76d342c413c76.d: /home/ethan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /home/ethan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /home/ethan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /home/ethan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /home/ethan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /home/ethan/code/fredco-audit/playground/target/wasm32-unknown-unknown/release/build/serde-f4b22e202d01eeac/out/private.rs
+
+/home/ethan/code/fredco-audit/playground/target/wasm32-unknown-unknown/release/deps/libserde-aee76d342c413c76.rlib: /home/ethan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /home/ethan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /home/ethan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /home/ethan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /home/ethan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /home/ethan/code/fredco-audit/playground/target/wasm32-unknown-unknown/release/build/serde-f4b22e202d01eeac/out/private.rs
+
+/home/ethan/code/fredco-audit/playground/target/wasm32-unknown-unknown/release/deps/libserde-aee76d342c413c76.rmeta: /home/ethan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /home/ethan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /home/ethan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /home/ethan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /home/ethan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /home/ethan/code/fredco-audit/playground/target/wasm32-unknown-unknown/release/build/serde-f4b22e202d01eeac/out/private.rs
+
+/home/ethan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs:
+/home/ethan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs:
+/home/ethan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs:
+/home/ethan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs:
+/home/ethan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs:
+/home/ethan/code/fredco-audit/playground/target/wasm32-unknown-unknown/release/build/serde-f4b22e202d01eeac/out/private.rs:
+
+# env-dep:OUT_DIR=/home/ethan/code/fredco-audit/playground/target/wasm32-unknown-unknown/release/build/serde-f4b22e202d01eeac/out
