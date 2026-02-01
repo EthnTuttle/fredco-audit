@@ -33,7 +33,7 @@ All raw data has been parsed into structured JSON with full source references.
 ## Directory Structure
 
 ```
-fredco-schools/
+fredco-audit/
 ├── CLAUDE.md                    # This file - AI agent instructions
 ├── ROADMAP.md                   # Project roadmap and methodology
 ├── requirements.txt             # Python dependencies
@@ -66,7 +66,42 @@ fredco-schools/
 │   │   ├── county_budget_schools.json  # County appropriations to schools
 │   │   ├── ratios.json          # Calculated audit metrics
 │   │   └── *.json               # Other processed data
+│   ├── parquet/                 # Parquet files for Data Playground
+│   │   ├── real_estate_tax.parquet    # 22 MB (from 212 MB JSON)
+│   │   └── *.parquet            # Other converted files
 │   └── analysis/                # Analysis results (to be generated)
+├── specs/                       # Data Playground v2 specifications
+│   ├── 00-architecture.md       # Overall system design
+│   ├── 01-ui-shell.md           # UI orchestration layer
+│   ├── 02-data-engine.md        # DuckDB-WASM integration
+│   ├── 03-chart-engine.md       # Chart types and config
+│   ├── 04-editor-engine.md      # Monaco editor setup
+│   ├── 05-notes-engine.md       # Nostr integration
+│   ├── 06-storage-engine.md     # IndexedDB caching
+│   └── 07-integration.md        # Build pipeline
+├── playground/                  # Data Playground v2 (DuckDB-WASM)
+│   ├── Cargo.toml               # Rust workspace
+│   ├── package.json             # NPM dependencies
+│   ├── vite.config.ts           # Vite build configuration
+│   ├── tsconfig.json            # TypeScript configuration
+│   ├── index.html               # Entry point
+│   ├── types/                   # Rust shared types crate
+│   │   └── src/
+│   │       ├── lib.rs           # Module exports
+│   │       ├── messages.rs      # Request/Response types
+│   │       ├── data.rs          # DataEngine types
+│   │       ├── chart.rs         # ChartEngine types
+│   │       ├── editor.rs        # EditorEngine types
+│   │       ├── notes.rs         # NotesEngine types
+│   │       └── storage.rs       # StorageEngine types
+│   ├── data-engine/             # DuckDB integration crate
+│   │   └── src/lib.rs
+│   └── src/                     # TypeScript source
+│       ├── main.ts              # Application entry
+│       ├── engines/
+│       │   └── data.ts          # DuckDB-WASM wrapper
+│       ├── ui/                  # UI components (pending)
+│       └── wasm/                # WASM output directory
 └── schemas/                     # JSON schema definitions
 ```
 
@@ -456,4 +491,162 @@ If you need to re-parse the raw data, the parsing logic used:
 | data/raw/fcps/ | 25 | ~250 MB |
 | data/processed/vdoe/ | 5 | ~165 KB |
 | data/processed/*.json | 15 | ~200 KB |
-| **Total** | ~100 | ~375 MB |
+| data/parquet/ | 16 | ~27 MB |
+| playground/ | 20+ | ~5 KB (source) |
+| specs/ | 8 | ~50 KB |
+| **Total** | ~120 | ~400 MB |
+
+---
+
+## Data Playground v2
+
+### Overview
+
+The Data Playground v2 is an interactive browser-based tool for exploring audit data using SQL queries. It uses DuckDB-WASM for fast analytical queries against Parquet data files.
+
+### Key Features
+
+**Working Now:**
+- **DuckDB-WASM**: In-browser SQL engine for analytical queries
+- **Parquet Data**: 16 files, 27 MB total (8x smaller than JSON)
+- **SQL Query Execution**: Run queries with Ctrl+Enter
+- **Results Tables**: Paginated table display (up to 1000 rows)
+- **Table Browser**: Click tables to generate SELECT queries
+
+**Planned:**
+- **Notebook Interface**: SQL + Markdown cells like Jupyter
+- **Charts**: Bar, line, pie, scatter, choropleth maps (Chart.js)
+- **Monaco Editor**: SQL syntax highlighting and autocomplete
+- **Nostr Notes**: Publish findings to decentralized network
+- **Offline Support**: IndexedDB caching for offline use
+
+### Architecture
+
+```
+┌─────────────────────────────────────────────────┐
+│               Browser (WASM)                    │
+├─────────────────────────────────────────────────┤
+│  DuckDB-WASM ──► SQL Queries ──► Results        │
+│       │                              │          │
+│       ▼                              ▼          │
+│  Parquet Files              Chart.js / Tables   │
+│  (from /data/parquet/)                          │
+└─────────────────────────────────────────────────┘
+```
+
+### Running the Playground
+
+```bash
+# From playground/ directory
+cd playground
+
+# Install dependencies (first time)
+npm install
+
+# Start development server
+npm run dev
+# Opens at http://localhost:3001
+
+# Build for production
+npm run build
+```
+
+### Available Data Tables
+
+When loaded, the playground creates views for Parquet files:
+
+| Table Name | Description | Size |
+|------------|-------------|------|
+| `real_estate_tax` | Property tax records (45K+ records) | 22 MB |
+| `county_department_detail` | County budget line items by department | 4 MB |
+| `districts` | District geographic boundaries | 306 KB |
+| `ownership_analysis` | Property ownership statistics | 112 KB |
+| `county_budget_schools` | County transfers to schools FY2020-2025 | 37 KB |
+| `county_government_analysis` | Government spending analysis | 37 KB |
+| `vdoe_table18_admin` | Admin personnel by division/year | 30 KB |
+| `vdoe_table19_instructional` | Instructional staff by division/year | 30 KB |
+| `tax_summary` | Tax summary statistics | 31 KB |
+| `expenditures` | FCPS expenditure data | 16 KB |
+| `apa_data` | APA comparative data all localities | 14 KB |
+| `vdoe_table15_expenditures` | Per-pupil expenditures by division | 13 KB |
+| `vdoe_table8_enrollment` | Enrollment (ADM) by division/year | 12 KB |
+| `apa_education_expenditures` | Education spending by locality | 10 KB |
+| `vdoe_table17_ratios` | Pupil-teacher ratios | 9 KB |
+| `enrollment` | Enrollment summary | 6 KB |
+
+**Total: 16 tables, 27 MB Parquet data**
+
+### Example Queries
+
+```sql
+-- Count records
+SELECT COUNT(*) FROM real_estate_tax;
+
+-- Get unique values
+SELECT DISTINCT owner_type FROM real_estate_tax;
+
+-- Aggregate by category
+SELECT 
+  entity_type,
+  COUNT(*) as count,
+  SUM(assessed_value) as total_value
+FROM real_estate_tax
+GROUP BY entity_type
+ORDER BY total_value DESC;
+```
+
+### Rust Types
+
+The playground uses Rust types compiled to WASM for type safety. Types are defined in `playground/types/src/`:
+
+| Module | Purpose |
+|--------|---------|
+| `messages.rs` | Request/Response envelope types |
+| `data.rs` | DataEngine query types |
+| `chart.rs` | Chart configuration types |
+| `editor.rs` | Notebook cell types |
+| `notes.rs` | Nostr integration types |
+| `storage.rs` | IndexedDB persistence types |
+
+### Build Commands
+
+```bash
+# Build Rust types (from playground/)
+cargo build
+
+# Build WASM modules
+npm run build:wasm
+
+# TypeScript type check
+npm run typecheck
+
+# Full production build
+npm run build
+```
+
+### Implementation Status
+
+| Component | Status | Notes |
+|-----------|--------|-------|
+| Rust Types | **Complete** | All type definitions in `playground/types/` |
+| DuckDB Engine | **Complete** | Query execution working |
+| Basic UI | **Complete** | SQL input, results table, table browser |
+| Parquet Data | **Complete** | 16 files generated in `data/parquet/` |
+| Vite Build | **Complete** | Dev server on port 3001 |
+| Chart Engine | Pending | Chart.js integration |
+| Editor Engine | Pending | Monaco integration |
+| Notes Engine | Pending | Nostr integration |
+| Storage Engine | Pending | IndexedDB caching |
+
+### Specifications
+
+Detailed specifications are in `specs/`:
+
+- `00-architecture.md` - System architecture
+- `01-ui-shell.md` - UI component design
+- `02-data-engine.md` - DuckDB-WASM setup
+- `03-chart-engine.md` - Chart types (including choropleth)
+- `04-editor-engine.md` - Monaco editor config
+- `05-notes-engine.md` - Nostr NIP-07/NIP-46 support
+- `06-storage-engine.md` - IndexedDB schema
+- `07-integration.md` - Build and deploy pipeline

@@ -177,6 +177,122 @@ data/
 
 ---
 
+## Phase 6: Data Playground v2
+
+### 6.1 Overview
+
+Interactive browser-based data exploration tool using DuckDB-WASM for SQL queries against Parquet data files. Replaces the original Pyodide/AlaSQL playground with a more performant architecture.
+
+### 6.2 Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                     Data Playground v2                       │
+├─────────────────────────────────────────────────────────────┤
+│  UI Shell (TypeScript)                                       │
+│  ├── Notebook Interface (SQL + Markdown cells)              │
+│  ├── Chart Visualizations (Chart.js)                        │
+│  └── Nostr Notes Integration                                │
+├─────────────────────────────────────────────────────────────┤
+│  Engines                                                     │
+│  ├── DataEngine (DuckDB-WASM + Parquet)                     │
+│  ├── ChartEngine (Bar, Line, Pie, Choropleth maps)          │
+│  ├── EditorEngine (Monaco + SQL autocomplete)               │
+│  ├── NotesEngine (Nostr NIP-07/NIP-46)                      │
+│  └── StorageEngine (IndexedDB caching)                      │
+├─────────────────────────────────────────────────────────────┤
+│  Rust Types (WASM)                                           │
+│  └── Shared type definitions → TypeScript via tsify         │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### 6.3 Technology Stack
+
+| Component | Technology | Purpose |
+|-----------|------------|---------|
+| SQL Engine | DuckDB-WASM | Fast analytical queries |
+| Data Format | Parquet | Compressed columnar storage |
+| UI Framework | Vanilla TypeScript | Lightweight, no React |
+| Build Tool | Vite | Fast bundling with WASM support |
+| Type Safety | Rust + tsify | Rust types → TypeScript |
+| Charts | Chart.js | Visualization |
+| Editor | Monaco | SQL editing with autocomplete |
+| Notes | Nostr | Decentralized public notes |
+| Caching | IndexedDB | Offline data persistence |
+
+### 6.4 Data Files
+
+JSON data converted to Parquet format for efficient browser loading:
+
+| File | Size | Description |
+|------|------|-------------|
+| real_estate_tax.parquet | 22 MB | Property tax records |
+| county_department_detail.parquet | 4 MB | County budget line items |
+| districts.parquet | 306 KB | District boundaries |
+| ownership_analysis.parquet | 112 KB | Property ownership stats |
+| county_budget_schools.parquet | 37 KB | County transfers to schools |
+| county_government_analysis.parquet | 37 KB | Government spending analysis |
+| vdoe_table18_admin.parquet | 30 KB | Admin personnel data |
+| vdoe_table19_instructional.parquet | 30 KB | Instructional staff data |
+| tax_summary.parquet | 31 KB | Tax summary statistics |
+| expenditures.parquet | 16 KB | FCPS expenditure data |
+| apa_data.parquet | 14 KB | APA comparative data |
+| vdoe_table15_expenditures.parquet | 13 KB | Per-pupil expenditures |
+| vdoe_table8_enrollment.parquet | 12 KB | Enrollment (ADM) data |
+| apa_education_expenditures.parquet | 10 KB | Education spending by locality |
+| vdoe_table17_ratios.parquet | 9 KB | Pupil-teacher ratios |
+| enrollment.parquet | 6 KB | Enrollment summary |
+| **Total** | **27 MB** | 16 Parquet files |
+
+**Compression:** ~8x smaller than original JSON files
+
+### 6.5 Implementation Status
+
+| Component | Status | Location |
+|-----------|--------|----------|
+| Rust Types Workspace | **Complete** | `playground/types/` |
+| Storage Types | **Complete** | `playground/types/src/storage.rs` |
+| TypeScript Project | **Complete** | `playground/src/` |
+| Vite Configuration | **Complete** | `playground/vite.config.ts` |
+| DuckDB Engine | **Complete** | `playground/src/engines/data.ts` |
+| Basic UI Shell | **Complete** | `playground/src/main.ts` |
+| Parquet Data Files | **Complete** | `data/parquet/` (16 files, 27 MB) |
+| Chart Engine | Pending | - |
+| Editor Engine | Pending | - |
+| Notes Engine | Pending | - |
+| Storage Engine | Pending | - |
+
+**Core Functionality Working:**
+- DuckDB-WASM initializes and loads Parquet files
+- SQL query execution with results table rendering
+- Table list sidebar with click-to-query
+- Error handling and loading states
+
+### 6.6 Development Commands
+
+```bash
+# From playground/ directory
+npm install              # Install dependencies
+npm run dev              # Start dev server (port 3001)
+npm run build            # Build for production
+npm run build:wasm       # Build Rust WASM modules
+```
+
+### 6.7 Specifications
+
+Detailed specifications in `specs/`:
+
+- `00-architecture.md` - Overall system design
+- `01-ui-shell.md` - UI orchestration layer
+- `02-data-engine.md` - DuckDB-WASM integration
+- `03-chart-engine.md` - Visualization types
+- `04-editor-engine.md` - Monaco editor setup
+- `05-notes-engine.md` - Nostr integration
+- `06-storage-engine.md` - IndexedDB caching
+- `07-integration.md` - Build and deploy pipeline
+
+---
+
 ## Implementation Scripts
 
 | Script | Purpose |
@@ -191,15 +307,30 @@ data/
 
 ## Timeline (One-Time Analysis)
 
-| Phase | Duration | Dependencies |
-|-------|----------|--------------|
-| Phase 1: Data Collection | 3-5 days | Internet access |
-| Phase 2: Data Organization | 2-3 days | Phase 1 complete |
-| Phase 3: Metrics Calculation | 2-3 days | Phase 2 complete |
-| Phase 4: Peer Benchmarking | 2-3 days | Phase 3 complete |
-| Phase 5: Analysis & Reporting | 3-5 days | Phase 4 complete |
+| Phase | Duration | Dependencies | Status |
+|-------|----------|--------------|--------|
+| Phase 1: Data Collection | 3-5 days | Internet access | **Complete** |
+| Phase 2: Data Organization | 2-3 days | Phase 1 complete | **Complete** |
+| Phase 3: Metrics Calculation | 2-3 days | Phase 2 complete | **Complete** |
+| Phase 4: Peer Benchmarking | 2-3 days | Phase 3 complete | In Progress |
+| Phase 5: Analysis & Reporting | 3-5 days | Phase 4 complete | In Progress |
+| Phase 6: Data Playground v2 | 1-2 weeks | Phase 2 complete | **Core Complete** |
 
-**Total Estimated Time**: 2-3 weeks
+**Total Estimated Time**: 3-4 weeks
+
+### Completed Work (as of Jan 2026)
+
+**Data Collection & Processing:**
+- 90+ raw files downloaded (VDOE, FCPS, County, APA, NCES, VPAP)
+- All VDOE tables (8, 15, 17, 18, 19) parsed to JSON
+- County budget data extracted for FY2020-FY2026
+- 16 Parquet files generated for Playground (27 MB total, 8x compression)
+
+**Data Playground v2:**
+- DuckDB-WASM engine fully operational
+- Basic notebook UI with SQL execution
+- Query results displayed as tables
+- Ctrl+Enter keyboard shortcut for running queries
 
 ---
 

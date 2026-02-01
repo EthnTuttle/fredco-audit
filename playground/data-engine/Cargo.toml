@@ -1,0 +1,23 @@
+[package]
+name = "data-engine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+playground-types = { path = "../types" }
+serde.workspace = true
+serde_json.workspace = true
+wasm-bindgen.workspace = true
+wasm-bindgen-futures.workspace = true
+tsify.workspace = true
+js-sys.workspace = true
+web-sys.workspace = true
+futures.workspace = true
+thiserror.workspace = true
+log.workspace = true
+console_log.workspace = true
+console_error_panic_hook.workspace = true
