@@ -650,3 +650,55 @@ Detailed specifications are in `specs/`:
 - `05-notes-engine.md` - Nostr NIP-07/NIP-46 support
 - `06-storage-engine.md` - IndexedDB schema
 - `07-integration.md` - Build and deploy pipeline
+
+---
+
+## Git Worktrees for Parallel Development
+
+The project uses git worktrees for parallel feature development:
+
+```
+/home/ethan/code/
+├── fredco-audit/              # master - Main development, analysis work
+├── fredco-audit-chart/        # feature/chart-engine - Chart.js integration
+├── fredco-audit-editor/       # feature/editor-engine - Monaco SQL editor
+└── fredco-audit-notes/        # feature/notes-engine - Nostr publishing
+```
+
+### Worktree Commands
+
+```bash
+# List all worktrees
+git worktree list
+
+# Switch to a worktree
+cd ../fredco-audit-chart
+
+# After completing work, rebase onto master before merging
+git fetch origin master
+git rebase origin/master
+git checkout master
+git merge feature/chart-engine
+
+# Remove a worktree when done
+git worktree remove ../fredco-audit-chart
+git branch -d feature/chart-engine
+```
+
+### Work Assignment
+
+| Worktree | Branch | Focus | Key Files |
+|----------|--------|-------|-----------|
+| `fredco-audit` | master | Analysis, coordination | `data/analysis/` |
+| `fredco-audit-chart` | feature/chart-engine | Chart.js visualizations | `playground/src/engines/chart.ts` |
+| `fredco-audit-editor` | feature/editor-engine | Monaco SQL editor | `playground/src/engines/editor.ts` |
+| `fredco-audit-notes` | feature/notes-engine | Nostr publishing | `playground/src/engines/notes.ts` |
+
+### Development Workflow
+
+1. Work in the appropriate worktree for your feature
+2. Each worktree needs its own `npm install` in `playground/`
+3. Run `npm run dev` to test changes
+4. Commit frequently to feature branch
+5. Before merging: `git rebase master` to incorporate latest changes
+6. Merge to master with regular merge (not squash) to preserve history
