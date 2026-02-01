@@ -2,11 +2,13 @@
  * FCPS Data Playground v2
  * 
  * Entry point for the data playground application.
- * Initializes DuckDB-WASM and sets up the notebook interface with chart support.
+ * Integrates DuckDB-WASM, Chart.js, Monaco editor, and Nostr.
  */
 
-import { initDataEngine, executeQuery, getLoadedTables, type QueryResult } from './engines/data';
+import { initDataEngine, executeQuery, getLoadedTables, getTableSchema, type QueryResult } from './engines/data';
 import { getChartEngine, type ChartType, type ChartOptions } from './engines/chart';
+import { editorEngine } from './engines/editor';
+import { notesEngine } from './engines/notes';
 
 // Application state
 interface AppState {
@@ -15,6 +17,8 @@ interface AppState {
   viewMode: 'table' | 'chart';
   chartType: ChartType;
   lastResult: QueryResult | null;
+  lastQuery: string;
+  nostrConnected: boolean;
 }
 
 const state: AppState = {
@@ -22,6 +26,8 @@ const state: AppState = {
   viewMode: 'table',
   chartType: 'bar',
   lastResult: null,
+  lastQuery: '',
+  nostrConnected: false,
 };
 
 /**
@@ -37,6 +43,11 @@ async function init(): Promise<void> {
     await initDataEngine();
     console.log('[Playground] Data engine ready');
 
+    // Initialize Monaco editor engine with schema provider
+    console.log('[Playground] Initializing editor engine...');
+    await editorEngine.init(getSchemaForAutocomplete);
+    console.log('[Playground] Editor engine ready');
+
     state.status = 'ready';
     render(app);
   } catch (error) {
@@ -44,6 +55,28 @@ async function init(): Promise<void> {
     state.status = 'error';
     state.error = error instanceof Error ? error.message : String(error);
     render(app);
+  }
+}
+
+/**
+ * Get schema information for autocomplete
+ */
+async function getSchemaForAutocomplete(): Promise<{ tables: { name: string; columns: { name: string; type: string }[] }[] }> {
+  try {
+    const tableNames = await getLoadedTables();
+    const tables = await Promise.all(
+      tableNames.map(async (name) => {
+        try {
+          const columns = await getTableSchema(name);
+          return { name, columns };
+        } catch {
+          return { name, columns: [] };
+        }
+      })
+    );
+    return { tables };
+  } catch {
+    return { tables: [] };
   }
 }
 
@@ -74,33 +107,51 @@ function render(container: HTMLElement): void {
       break;
 
     case 'ready':
+      const nostrAvailable = notesEngine.isExtensionAvailable();
       container.innerHTML = `
         <header style="padding: 1rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
           <h1 style="margin: 0; font-size: 1.2rem;">FCPS Data Playground v2</h1>
-          <div style="font-size: 0.8rem; color: var(--success);">DuckDB Ready</div>
+          <div style="display: flex; gap: 1rem; align-items: center;">
+            <span id="nostr-status" style="font-size: 0.75rem; color: ${nostrAvailable ? 'var(--text-secondary)' : 'var(--text-secondary)'};">
+              ${nostrAvailable ? 'Nostr: Ready' : 'Nostr: No extension'}
+            </span>
+            <span style="font-size: 0.8rem; color: var(--success);">DuckDB Ready</span>
+          </div>
         </header>
         <main style="flex: 1; display: flex; min-height: 0;">
           <aside id="sidebar" style="width: 250px; border-right: 1px solid var(--border); padding: 1rem; overflow-y: auto;">
             <h3 style="margin-top: 0;">Data Files</h3>
             <div id="data-list" style="font-size: 0.85rem;">Loading...</div>
+            ${nostrAvailable ? `
+            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+              <h4 style="margin: 0 0 0.5rem 0; font-size: 0.9rem;">Nostr</h4>
+              <button id="nostr-connect-btn" style="width: 100%; padding: 0.4rem; background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border); cursor: pointer; border-radius: 4px; font-size: 0.8rem;">
+                Connect
+              </button>
+              <div id="nostr-pubkey" style="margin-top: 0.5rem; font-size: 0.7rem; word-break: break-all; color: var(--text-secondary);"></div>
+            </div>
+            ` : ''}
           </aside>
           <section id="editor" style="flex: 1; display: flex; flex-direction: column; min-width: 0;">
             <div id="query-panel" style="padding: 1rem; border-bottom: 1px solid var(--border);">
-              <div class="cell">
-                <textarea id="sql-input" placeholder="Enter SQL query... (e.g., SELECT division_name, total_per_pupil FROM vdoe_table15_expenditures WHERE fiscal_year = '2023-24' ORDER BY total_per_pupil DESC)" style="width: 100%; min-height: 80px; background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border); padding: 0.5rem; font-family: 'Fira Code', monospace; font-size: 0.9rem; resize: vertical; box-sizing: border-box;"></textarea>
-                <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem; flex-wrap: wrap; align-items: center;">
-                  <button id="run-btn" style="padding: 0.5rem 1rem; background: var(--accent); color: white; border: none; cursor: pointer; border-radius: 4px;">
-                    Run Query (Ctrl+Enter)
+              <div id="monaco-container" style="height: 120px; border: 1px solid var(--border); border-radius: 4px;"></div>
+              <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem; flex-wrap: wrap; align-items: center;">
+                <button id="run-btn" style="padding: 0.5rem 1rem; background: var(--accent); color: white; border: none; cursor: pointer; border-radius: 4px;">
+                  Run Query (Ctrl+Enter)
+                </button>
+                ${nostrAvailable ? `
+                <button id="publish-btn" style="padding: 0.5rem 1rem; background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border); cursor: pointer; border-radius: 4px;" disabled>
+                  Publish to Nostr
+                </button>
+                ` : ''}
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-left: auto;">
+                  <span style="color: var(--text-secondary); font-size: 0.85rem;">View:</span>
+                  <button id="view-table-btn" class="view-btn active" style="padding: 0.4rem 0.75rem; background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border); cursor: pointer; border-radius: 4px 0 0 4px;">
+                    Table
                   </button>
-                  <div style="display: flex; align-items: center; gap: 0.5rem; margin-left: auto;">
-                    <span style="color: var(--text-secondary); font-size: 0.85rem;">View:</span>
-                    <button id="view-table-btn" class="view-btn active" style="padding: 0.4rem 0.75rem; background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border); cursor: pointer; border-radius: 4px 0 0 4px;">
-                      Table
-                    </button>
-                    <button id="view-chart-btn" class="view-btn" style="padding: 0.4rem 0.75rem; background: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border); border-left: none; cursor: pointer; border-radius: 0 4px 4px 0;">
-                      Chart
-                    </button>
-                  </div>
+                  <button id="view-chart-btn" class="view-btn" style="padding: 0.4rem 0.75rem; background: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border); border-left: none; cursor: pointer; border-radius: 0 4px 4px 0;">
+                    Chart
+                  </button>
                 </div>
               </div>
             </div>
@@ -134,10 +185,23 @@ function render(container: HTMLElement): void {
           </section>
         </main>
       `;
-      setupEventListeners();
-      loadDataFileList();
+      setupUI();
       break;
   }
+}
+
+/**
+ * Set up UI after render
+ */
+function setupUI(): void {
+  // Create Monaco editor
+  editorEngine.createEditor('monaco-container', '-- Enter SQL query here\nSELECT division_name, total_per_pupil \nFROM vdoe_table15_expenditures \nWHERE fiscal_year = \'2023-24\' \nORDER BY total_per_pupil DESC');
+  
+  // Register Ctrl+Enter handler
+  editorEngine.onExecute(runQuery);
+
+  setupEventListeners();
+  loadDataFileList();
 }
 
 /**
@@ -145,22 +209,15 @@ function render(container: HTMLElement): void {
  */
 function setupEventListeners(): void {
   const runBtn = document.getElementById('run-btn');
-  const sqlInput = document.getElementById('sql-input') as HTMLTextAreaElement;
   const viewTableBtn = document.getElementById('view-table-btn');
   const viewChartBtn = document.getElementById('view-chart-btn');
   const chartTypeSelect = document.getElementById('chart-type-select') as HTMLSelectElement;
   const downloadChartBtn = document.getElementById('download-chart-btn');
+  const nostrConnectBtn = document.getElementById('nostr-connect-btn');
+  const publishBtn = document.getElementById('publish-btn');
 
   // Run query
-  runBtn?.addEventListener('click', runQuery);
-
-  // Ctrl+Enter to run
-  sqlInput?.addEventListener('keydown', (e) => {
-    if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
-      e.preventDefault();
-      runQuery();
-    }
-  });
+  runBtn?.addEventListener('click', () => runQuery(editorEngine.getValue()));
 
   // View mode toggle
   viewTableBtn?.addEventListener('click', () => {
@@ -192,6 +249,62 @@ function setupEventListeners(): void {
     const engine = getChartEngine();
     engine.downloadAsPng('chart-container', `fcps-chart-${Date.now()}.png`);
   });
+
+  // Nostr connect
+  nostrConnectBtn?.addEventListener('click', async () => {
+    try {
+      nostrConnectBtn.textContent = 'Connecting...';
+      await notesEngine.connect();
+      const pubkey = await notesEngine.getPublicKey();
+      state.nostrConnected = true;
+      
+      nostrConnectBtn.textContent = 'Connected';
+      nostrConnectBtn.disabled = true;
+      
+      const pubkeyDiv = document.getElementById('nostr-pubkey');
+      if (pubkeyDiv) {
+        const npub = await notesEngine.getPublicKeyBech32();
+        pubkeyDiv.textContent = npub.slice(0, 20) + '...' + npub.slice(-8);
+      }
+      
+      const statusSpan = document.getElementById('nostr-status');
+      if (statusSpan) {
+        statusSpan.textContent = 'Nostr: Connected';
+        statusSpan.style.color = 'var(--success)';
+      }
+
+      if (publishBtn) {
+        publishBtn.removeAttribute('disabled');
+      }
+    } catch (error) {
+      nostrConnectBtn.textContent = 'Connect';
+      alert('Failed to connect: ' + (error instanceof Error ? error.message : String(error)));
+    }
+  });
+
+  // Publish to Nostr
+  publishBtn?.addEventListener('click', async () => {
+    if (!state.nostrConnected || !state.lastResult) {
+      alert('Connect to Nostr and run a query first');
+      return;
+    }
+
+    const comment = prompt('Add a comment (optional):') || '';
+    
+    try {
+      publishBtn.textContent = 'Publishing...';
+      const summary = `${state.lastResult.rowCount} rows in ${state.lastResult.executionTimeMs.toFixed(1)}ms`;
+      const eventId = await notesEngine.publishQueryNote(state.lastQuery, summary, comment);
+      publishBtn.textContent = 'Published!';
+      setTimeout(() => {
+        publishBtn.textContent = 'Publish to Nostr';
+      }, 2000);
+      console.log('Published note:', eventId);
+    } catch (error) {
+      publishBtn.textContent = 'Publish to Nostr';
+      alert('Failed to publish: ' + (error instanceof Error ? error.message : String(error)));
+    }
+  });
 }
 
 /**
@@ -220,11 +333,11 @@ function updateViewModeUI(): void {
 /**
  * Run the SQL query
  */
-async function runQuery(): Promise<void> {
-  const sqlInput = document.getElementById('sql-input') as HTMLTextAreaElement;
-  const query = sqlInput?.value.trim();
+async function runQuery(sql: string): Promise<void> {
+  const query = sql.trim();
   if (!query) return;
 
+  state.lastQuery = query;
   const results = document.getElementById('results');
   if (results) {
     results.innerHTML = '<em style="color: var(--text-secondary);">Running query...</em>';
@@ -373,10 +486,19 @@ async function loadDataFileList(): Promise<void> {
         <div class="table-item" style="padding: 0.4rem 0.5rem; cursor: pointer; border-radius: 4px; margin-bottom: 0.25rem; transition: background 0.15s;" 
              onmouseover="this.style.background='var(--bg-secondary)'" 
              onmouseout="this.style.background='transparent'"
-             onclick="document.getElementById('sql-input').value = 'SELECT * FROM ${t} LIMIT 100'; document.getElementById('sql-input').focus();">
+             data-table="${t}">
           <span style="color: var(--accent);">&#9632;</span> ${t}
         </div>
       `).join('');
+
+      // Add click handlers for table names
+      dataList.querySelectorAll('[data-table]').forEach(el => {
+        el.addEventListener('click', () => {
+          const tableName = el.getAttribute('data-table');
+          editorEngine.setValue(`SELECT * FROM ${tableName} LIMIT 100`);
+          editorEngine.focus();
+        });
+      });
     }
   } catch {
     dataList.innerHTML = '<em style="color: var(--text-secondary);">Failed to load tables</em>';

@@ -20,8 +20,9 @@
   },
   "dependencies": {
     "@duckdb/duckdb-wasm": "^1.28.0",
+    "chart.js": "^4.4.0",
     "monaco-editor": "^0.45.0",
-    "chart.js": "^4.4.0"
+    "nostr-tools": "^2.22.1"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",

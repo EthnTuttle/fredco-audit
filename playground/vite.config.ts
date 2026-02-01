@@ -32,6 +32,10 @@ export default defineConfig({
           }
           return 'assets/[name]-[hash][extname]';
         },
+        // Manual chunks for Monaco editor workers
+        manualChunks: {
+          'monaco-editor': ['monaco-editor'],
+        },
       },
     },
   },
@@ -46,9 +50,10 @@ export default defineConfig({
     },
   },
   
-  // Handle WASM MIME type
+  // Handle WASM MIME type and Monaco editor
   optimizeDeps: {
     exclude: ['@duckdb/duckdb-wasm'],
+    include: ['monaco-editor'],
   },
   
   // Worker configuration for WASM
