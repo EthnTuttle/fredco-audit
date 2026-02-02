@@ -3,13 +3,113 @@
  * 
  * Interactive SQL playground for exploring Frederick County, Virginia public data.
  * Includes: Schools, County Budget, Property Tax, Government Spending.
- * Features: DuckDB-WASM queries, Chart.js visualizations, human-readable query templates.
+ * Features: DuckDB-WASM queries, Chart.js visualizations, shareable query links.
  */
 
 import { initDataEngine, executeQuery, getLoadedTables, getTableSchema, type QueryResult } from './engines/data';
 import { getChartEngine, type ChartType, type ChartOptions } from './engines/chart';
 import { editorEngine } from './engines/editor';
 import { getCacheStats, getStorageQuota, clearCache } from './engines/storage';
+
+// ============================================================================
+// Shareable Query State
+// ============================================================================
+
+interface ShareableState {
+  v: number;        // version for future compatibility
+  q: string;        // SQL query
+  t?: string;       // view type: table|bar|line|pie|doughnut|scatter
+  n?: string;       // optional title/name
+}
+
+/**
+ * Encode state to URL-safe base64
+ */
+function encodeShareableState(state: ShareableState): string {
+  const json = JSON.stringify(state);
+  // Use base64url encoding (URL-safe)
+  const base64 = btoa(unescape(encodeURIComponent(json)));
+  return base64.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+
+/**
+ * Decode state from URL-safe base64
+ */
+function decodeShareableState(encoded: string): ShareableState | null {
+  try {
+    // Restore standard base64
+    let base64 = encoded.replace(/-/g, '+').replace(/_/g, '/');
+    // Add padding if needed
+    while (base64.length % 4) base64 += '=';
+    const json = decodeURIComponent(escape(atob(base64)));
+    const state = JSON.parse(json) as ShareableState;
+    // Validate
+    if (typeof state.v !== 'number' || typeof state.q !== 'string') {
+      return null;
+    }
+    return state;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Get shareable state from current app state
+ */
+function getCurrentShareableState(): ShareableState {
+  return {
+    v: 1,
+    q: editorEngine.getValue(),
+    t: state.viewMode === 'chart' ? state.chartType : 'table',
+  };
+}
+
+/**
+ * Generate a shareable URL for the current query
+ */
+function generateShareUrl(): string {
+  const shareState = getCurrentShareableState();
+  const encoded = encodeShareableState(shareState);
+  const url = new URL(window.location.href);
+  url.hash = `share=${encoded}`;
+  return url.toString();
+}
+
+/**
+ * Load shared state from URL hash
+ */
+function loadFromUrlHash(): ShareableState | null {
+  const hash = window.location.hash;
+  if (!hash.startsWith('#share=')) return null;
+  const encoded = hash.slice(7); // Remove '#share='
+  return decodeShareableState(encoded);
+}
+
+/**
+ * Copy text to clipboard with fallback
+ */
+async function copyToClipboard(text: string): Promise<boolean> {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    // Fallback for older browsers
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+    try {
+      document.execCommand('copy');
+      return true;
+    } catch {
+      return false;
+    } finally {
+      document.body.removeChild(textarea);
+    }
+  }
+}
 
 // ============================================================================
 // Query Templates - Human-readable presets for common analyses
@@ -365,11 +465,15 @@ function render(container: HTMLElement): void {
                   Run Query
                   <span class="shortcut">Ctrl+Enter</span>
                 </button>
+                <button id="share-btn" class="btn btn-secondary" title="Copy shareable link">
+                  Share
+                </button>
                 <div class="view-toggle">
                   <button id="view-table-btn" class="btn btn-toggle active">Table</button>
                   <button id="view-chart-btn" class="btn btn-toggle">Chart</button>
                 </div>
               </div>
+              <div id="share-toast" class="share-toast">Link copied to clipboard!</div>
             </div>
             
             <div id="chart-controls" class="chart-controls" style="display: none;">
@@ -643,6 +747,28 @@ function addStyles(): void {
       font-size: 0.8rem;
       opacity: 0.7;
     }
+    
+    /* Share toast notification */
+    .share-toast {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--success);
+      color: #000;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      z-index: 1000;
+      pointer-events: none;
+    }
+    .share-toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
   `;
   document.head.appendChild(style);
 }
@@ -652,8 +778,11 @@ function addStyles(): void {
 // ============================================================================
 
 function setupUI(): void {
-  // Initialize Monaco editor with a helpful default
-  editorEngine.createEditor('monaco-container', `-- Welcome to Open Frederick Data Playground!
+  // Check for shared query in URL
+  const sharedState = loadFromUrlHash();
+  
+  // Default SQL if no shared query
+  const defaultSQL = `-- Welcome to Open Frederick Data Playground!
 -- Select a Quick Query from the sidebar, or write your own SQL.
 -- Press Ctrl+Enter to run.
 
@@ -663,7 +792,20 @@ SELECT
   county_transfers_total_county_to_schools AS to_schools,
   county_transfers_pct_of_general_fund AS pct_of_budget
 FROM county_budget_schools
-ORDER BY fiscal_year`);
+ORDER BY fiscal_year`;
+
+  // Initialize Monaco editor
+  editorEngine.createEditor('monaco-container', sharedState?.q || defaultSQL);
+  
+  // Apply shared view mode if present
+  if (sharedState?.t) {
+    if (sharedState.t === 'table') {
+      state.viewMode = 'table';
+    } else {
+      state.viewMode = 'chart';
+      state.chartType = sharedState.t as ChartType;
+    }
+  }
   
   editorEngine.onExecute(runQuery);
   editorEngine.onChange(highlightMatchingTemplate);
@@ -672,6 +814,18 @@ ORDER BY fiscal_year`);
   renderQueryTemplates();
   loadDataFileList();
   updateCacheStatus();
+  
+  // Update UI to reflect loaded state
+  updateViewMode();
+  
+  // If we loaded a shared query, run it automatically
+  if (sharedState?.q) {
+    highlightMatchingTemplate(sharedState.q);
+    // Small delay to ensure UI is ready
+    setTimeout(() => {
+      runQuery(sharedState.q);
+    }, 100);
+  }
 }
 
 /**
@@ -809,12 +963,31 @@ async function updateCacheStatus(): Promise<void> {
 
 function setupEventListeners(): void {
   const runBtn = document.getElementById('run-btn');
+  const shareBtn = document.getElementById('share-btn');
+  const shareToast = document.getElementById('share-toast');
   const viewTableBtn = document.getElementById('view-table-btn');
   const viewChartBtn = document.getElementById('view-chart-btn');
   const chartTypeSelect = document.getElementById('chart-type-select') as HTMLSelectElement;
   const downloadChartBtn = document.getElementById('download-chart-btn');
 
   runBtn?.addEventListener('click', () => runQuery(editorEngine.getValue()));
+
+  // Share button - copy link to clipboard
+  shareBtn?.addEventListener('click', async () => {
+    const url = generateShareUrl();
+    const success = await copyToClipboard(url);
+    
+    if (success && shareToast) {
+      // Show toast notification
+      shareToast.classList.add('show');
+      setTimeout(() => {
+        shareToast.classList.remove('show');
+      }, 2500);
+    } else {
+      // Fallback: show URL in prompt
+      prompt('Copy this shareable link:', url);
+    }
+  });
 
   viewTableBtn?.addEventListener('click', () => {
     state.viewMode = 'table';
@@ -844,11 +1017,16 @@ function updateViewMode(): void {
   const tableBtn = document.getElementById('view-table-btn');
   const chartBtn = document.getElementById('view-chart-btn');
   const chartControls = document.getElementById('chart-controls');
+  const chartTypeSelect = document.getElementById('chart-type-select') as HTMLSelectElement | null;
 
   tableBtn?.classList.toggle('active', state.viewMode === 'table');
   chartBtn?.classList.toggle('active', state.viewMode === 'chart');
   if (chartControls) {
     chartControls.style.display = state.viewMode === 'chart' ? 'flex' : 'none';
+  }
+  // Sync chart type select with state
+  if (chartTypeSelect && chartTypeSelect.value !== state.chartType) {
+    chartTypeSelect.value = state.chartType;
   }
 }
 
