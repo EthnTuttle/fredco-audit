@@ -328,8 +328,10 @@ export async function cacheParquet(
       
       metaRequest.onsuccess = () => {
         // Store actual data in a separate key
+        // Convert ArrayBuffer to Uint8Array for proper IndexedDB cloning
         const dataStore = getStore(STORES.PARQUET_CACHE, 'readwrite');
-        dataStore.put({ url: `${url}:data`, data });
+        const dataArray = new Uint8Array(data);
+        dataStore.put({ url: `${url}:data`, data: dataArray });
         console.log(`[StorageEngine] Cached: ${url} (${formatBytes(data.byteLength)})`);
         resolve();
       };
@@ -351,8 +353,16 @@ export async function getCachedParquet(url: string): Promise<ArrayBuffer | null>
       const request = store.get(`${url}:data`);
       
       request.onsuccess = () => {
-        const result = request.result as { data: ArrayBuffer } | undefined;
-        resolve(result?.data ?? null);
+        const result = request.result as { data: Uint8Array } | undefined;
+        // Convert Uint8Array back to ArrayBuffer
+        if (result?.data) {
+          // Create a new ArrayBuffer copy to avoid SharedArrayBuffer issues
+          const buffer = new ArrayBuffer(result.data.byteLength);
+          new Uint8Array(buffer).set(result.data);
+          resolve(buffer);
+        } else {
+          resolve(null);
+        }
       };
       
       request.onerror = () => reject(request.error);

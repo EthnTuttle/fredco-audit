@@ -1,16 +1,244 @@
 /**
- * FCPS Data Playground v2
+ * Open Frederick Data Playground
  * 
- * Entry point for the data playground application.
- * Integrates DuckDB-WASM, Chart.js, Monaco editor, and Nostr.
+ * Interactive SQL playground for exploring Frederick County, Virginia public data.
+ * Includes: Schools, County Budget, Property Tax, Government Spending.
+ * Features: DuckDB-WASM queries, Chart.js visualizations, human-readable query templates.
  */
 
 import { initDataEngine, executeQuery, getLoadedTables, getTableSchema, type QueryResult } from './engines/data';
 import { getChartEngine, type ChartType, type ChartOptions } from './engines/chart';
 import { editorEngine } from './engines/editor';
-import { getNotesEngine, isNostrAvailable } from './engines/notes';
+import { getCacheStats, getStorageQuota, clearCache } from './engines/storage';
 
-// Application state
+// ============================================================================
+// Query Templates - Human-readable presets for common analyses
+// ============================================================================
+
+interface QueryTemplate {
+  name: string;
+  description: string;
+  sql: string;
+  category: 'budget' | 'schools' | 'property' | 'government';
+}
+
+const QUERY_TEMPLATES: QueryTemplate[] = [
+  // County Budget
+  {
+    name: 'County Budget Overview',
+    description: 'Total county budget by year',
+    category: 'budget',
+    sql: `-- Frederick County budget overview
+SELECT 
+  fiscal_year AS "Year",
+  total_county_budget_all_funds_net AS "Total Budget",
+  county_transfers_total_county_to_schools AS "To Schools",
+  county_transfers_pct_of_general_fund AS "Schools %"
+FROM county_budget_schools
+ORDER BY fiscal_year`
+  },
+  {
+    name: 'County vs Schools Funding',
+    description: 'How county funding to schools has changed',
+    category: 'budget',
+    sql: `-- County transfers to schools over time
+SELECT 
+  fiscal_year AS "Year",
+  county_transfers_to_school_operating AS "Operating",
+  county_transfers_to_school_debt AS "Debt Service", 
+  county_transfers_to_school_capital AS "Capital",
+  county_transfers_total_county_to_schools AS "Total"
+FROM county_budget_schools
+ORDER BY fiscal_year`
+  },
+  {
+    name: 'General Fund Breakdown',
+    description: 'Where general fund money goes',
+    category: 'budget',
+    sql: `-- General fund expenditures by category
+SELECT 
+  fiscal_year AS "Year",
+  general_fund_expenditures_public_safety AS "Public Safety",
+  general_fund_expenditures_school_transfers AS "Schools",
+  general_fund_expenditures_health_welfare AS "Health/Welfare",
+  general_fund_expenditures_public_works AS "Public Works"
+FROM county_budget_schools
+ORDER BY fiscal_year`
+  },
+
+  // Schools
+  {
+    name: 'School Spending Comparison',
+    description: 'Per-pupil spending across districts',
+    category: 'schools',
+    sql: `-- Per-pupil spending by district (2023-24)
+SELECT 
+  division_name AS "District",
+  metrics_total_per_pupil AS "$/Student",
+  metrics_local_per_pupil AS "Local",
+  metrics_state_per_pupil AS "State"
+FROM vdoe_table15_expenditures 
+WHERE fiscal_year = '2023-24'
+ORDER BY metrics_total_per_pupil DESC`
+  },
+  {
+    name: 'Enrollment Trends',
+    description: 'Frederick County student enrollment over time',
+    category: 'schools',
+    sql: `-- Frederick enrollment trend
+SELECT 
+  fiscal_year AS "Year",
+  metrics_adm_total AS "Students",
+  metrics_adm_elementary AS "Elementary",
+  metrics_adm_secondary AS "Secondary"
+FROM vdoe_table8_enrollment
+WHERE division_name = 'Frederick County'
+ORDER BY fiscal_year`
+  },
+  {
+    name: 'Teacher Ratios',
+    description: 'Students per teacher by district',
+    category: 'schools',
+    sql: `-- Pupil-teacher ratios by district
+SELECT 
+  division_name AS "District",
+  metrics_pupil_teacher_ratio_k7 AS "K-7 Ratio",
+  metrics_pupil_teacher_ratio_8_12 AS "8-12 Ratio"
+FROM vdoe_table17_ratios
+WHERE fiscal_year = '2023-24'
+ORDER BY metrics_pupil_teacher_ratio_k7`
+  },
+  {
+    name: 'Admin Staff Counts',
+    description: 'Administrative positions by district',
+    category: 'schools',
+    sql: `-- Admin staff by district
+SELECT 
+  division_name AS "District",
+  metrics_instruction_administrative AS "Instruction Admin",
+  metrics_admin_health_administrative AS "Admin/Health",
+  metrics_technology_administrative AS "Technology"
+FROM vdoe_table18_admin
+WHERE fiscal_year = '2023-24'
+ORDER BY metrics_instruction_administrative DESC`
+  },
+  {
+    name: 'Peer District Comparison',
+    description: 'Frederick vs similar rural counties',
+    category: 'schools',
+    sql: `-- Compare Frederick to peer districts
+SELECT 
+  e.division_name AS "District",
+  e.metrics_adm_total AS "Students",
+  x.metrics_total_per_pupil AS "$/Student",
+  r.metrics_pupil_teacher_ratio_k7 AS "K-7 Ratio"
+FROM vdoe_table8_enrollment e
+JOIN vdoe_table15_expenditures x 
+  ON e.division_name = x.division_name AND e.fiscal_year = x.fiscal_year
+JOIN vdoe_table17_ratios r 
+  ON e.division_name = r.division_name AND e.fiscal_year = r.fiscal_year
+WHERE e.fiscal_year = '2023-24'
+  AND e.division_name IN ('Frederick County', 'Clarke County', 'Shenandoah County', 'Warren County', 'Fauquier County')
+ORDER BY x.metrics_total_per_pupil DESC`
+  },
+
+  // Property Tax
+  {
+    name: 'Top Property Owners',
+    description: 'Largest landowners by assessed value',
+    category: 'property',
+    sql: `-- Top 25 property owners
+SELECT * FROM ownership_analysis
+ORDER BY total_value DESC
+LIMIT 25`
+  },
+  {
+    name: 'Tax Summary',
+    description: 'Overall property tax statistics',
+    category: 'property',
+    sql: `-- Property tax summary
+SELECT * FROM tax_summary`
+  },
+
+  // Government
+  {
+    name: 'County Budget Trends',
+    description: 'Frederick County budget by year (FY2020-FY2025)',
+    category: 'government',
+    sql: `-- County government budget trends
+SELECT 
+  fiscal_year AS "Year",
+  total_budget_net / 1e6 AS "Total Budget (M)",
+  general_fund_total / 1e6 AS "General Fund (M)",
+  school_to_operating / 1e6 AS "School Operating (M)",
+  tax_real_estate_per_100 AS "RE Tax Rate"
+FROM county_govt_time_series
+ORDER BY fiscal_year`
+  },
+  {
+    name: 'Budget by Category',
+    description: 'Spending breakdown by category and year',
+    category: 'government',
+    sql: `-- Budget expenditures by category
+SELECT 
+  fiscal_year AS "Year",
+  category AS "Category",
+  adopted / 1e6 AS "Adopted (M)",
+  prior_actual / 1e6 AS "Prior Actual (M)"
+FROM county_govt_budget_detail
+WHERE category NOT IN ('total')
+ORDER BY fiscal_year, adopted DESC`
+  },
+  {
+    name: 'APA Education Comparison',
+    description: 'Education spending by district (APA data)',
+    category: 'government',
+    sql: `-- APA education expenditures by division
+SELECT 
+  division_name AS "District",
+  exp_instruction / 1e6 AS "Instruction (M)",
+  exp_admin_attendance_health / 1e6 AS "Admin (M)",
+  exp_total / 1e6 AS "Total (M)",
+  pct_state_avg_instruction AS "% of State Avg"
+FROM apa_education_by_division
+WHERE exp_total > 0
+ORDER BY exp_total DESC`
+  },
+  {
+    name: 'Local Revenue Sources',
+    description: 'Property taxes and other local revenue (APA Exhibit B)',
+    category: 'government',
+    sql: `-- Local revenue by locality (APA Exhibit B)
+SELECT 
+  locality AS "Locality",
+  total_general_property_taxes / 1e6 AS "Property Tax (M)",
+  total_local_revenue / 1e6 AS "Total Revenue (M)",
+  population AS "Population",
+  per_capita AS "Per Capita"
+FROM apa_exhibit_b
+WHERE population > 0
+ORDER BY total_local_revenue DESC`
+  },
+  {
+    name: 'State & Federal Aid',
+    description: 'Commonwealth and federal aid by locality (APA Exhibit B1)',
+    category: 'government',
+    sql: `-- State and federal aid (APA Exhibit B1)
+SELECT 
+  locality AS "Locality",
+  total_from_the_commonwealth / 1e6 AS "State Aid (M)",
+  total_from_the_federal_government / 1e6 AS "Federal Aid (M)",
+  categorical_state_aid / 1e6 AS "State Categorical (M)"
+FROM apa_exhibit_b1
+WHERE total_from_the_commonwealth > 0
+ORDER BY total_from_the_commonwealth DESC`
+  },
+];
+
+// ============================================================================
+// Application State
+// ============================================================================
+
 interface AppState {
   status: 'loading' | 'ready' | 'error';
   error?: string;
@@ -18,7 +246,6 @@ interface AppState {
   chartType: ChartType;
   lastResult: QueryResult | null;
   lastQuery: string;
-  nostrConnected: boolean;
 }
 
 const state: AppState = {
@@ -27,29 +254,24 @@ const state: AppState = {
   chartType: 'bar',
   lastResult: null,
   lastQuery: '',
-  nostrConnected: false,
 };
 
-/**
- * Initialize the application
- */
+// ============================================================================
+// Initialization
+// ============================================================================
+
 async function init(): Promise<void> {
   const app = document.getElementById('app');
   if (!app) throw new Error('App container not found');
 
   try {
-    // Initialize DuckDB-WASM data engine
-    console.log('[Playground] Initializing data engine...');
+    console.log('[Playground] Initializing...');
     await initDataEngine();
-    console.log('[Playground] Data engine ready');
-
-    // Initialize Monaco editor engine with schema provider
-    console.log('[Playground] Initializing editor engine...');
     await editorEngine.init(getSchemaForAutocomplete);
-    console.log('[Playground] Editor engine ready');
-
+    
     state.status = 'ready';
     render(app);
+    console.log('[Playground] Ready');
   } catch (error) {
     console.error('[Playground] Initialization failed:', error);
     state.status = 'error';
@@ -58,9 +280,6 @@ async function init(): Promise<void> {
   }
 }
 
-/**
- * Get schema information for autocomplete
- */
 async function getSchemaForAutocomplete(): Promise<{ tables: { name: string; columns: { name: string; type: string }[] }[] }> {
   try {
     const tableNames = await getLoadedTables();
@@ -80,9 +299,10 @@ async function getSchemaForAutocomplete(): Promise<{ tables: { name: string; col
   }
 }
 
-/**
- * Render the application
- */
+// ============================================================================
+// Rendering
+// ============================================================================
+
 function render(container: HTMLElement): void {
   switch (state.status) {
     case 'loading':
@@ -90,6 +310,9 @@ function render(container: HTMLElement): void {
         <div class="loading">
           <div class="loading-spinner"></div>
           <div>Loading Data Playground...</div>
+          <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">
+            Initializing DuckDB and loading data files...
+          </div>
         </div>
       `;
       break;
@@ -97,382 +320,432 @@ function render(container: HTMLElement): void {
     case 'error':
       container.innerHTML = `
         <div class="loading">
-          <div style="color: var(--accent);">Initialization Error</div>
-          <div style="color: var(--text-secondary); font-size: 0.9rem;">${state.error}</div>
-          <button onclick="location.reload()" style="margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer;">
-            Retry
+          <div style="color: var(--accent); font-size: 1.2rem;">Failed to Load</div>
+          <div style="color: var(--text-secondary); font-size: 0.9rem; margin: 1rem 0;">${state.error}</div>
+          <button onclick="location.reload()" style="padding: 0.5rem 1rem; cursor: pointer; background: var(--accent); color: white; border: none; border-radius: 4px;">
+            Try Again
           </button>
         </div>
       `;
       break;
 
     case 'ready':
-      const nostrAvailable = isNostrAvailable();
       container.innerHTML = `
-        <header style="padding: 1rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
-          <h1 style="margin: 0; font-size: 1.2rem;">FCPS Data Playground v2</h1>
-          <div style="display: flex; gap: 1rem; align-items: center;">
-            <span id="nostr-status" style="font-size: 0.75rem; color: ${nostrAvailable ? 'var(--text-secondary)' : 'var(--text-secondary)'};">
-              ${nostrAvailable ? 'Nostr: Ready' : 'Nostr: No extension'}
-            </span>
-            <span style="font-size: 0.8rem; color: var(--success);">DuckDB Ready</span>
+        <header class="header">
+          <div class="header-left">
+            <h1>Open Frederick Data Playground</h1>
+            <span class="header-subtitle">Explore Frederick County, VA public data with SQL</span>
+          </div>
+          <div class="header-right">
+            <span id="cache-status" class="status-badge" title="Data cache status">Loading...</span>
+            <span class="status-badge status-ready">Ready</span>
           </div>
         </header>
-        <main style="flex: 1; display: flex; min-height: 0;">
-          <aside id="sidebar" style="width: 250px; border-right: 1px solid var(--border); padding: 1rem; overflow-y: auto;">
-            <h3 style="margin-top: 0;">Data Files</h3>
-            <div id="data-list" style="font-size: 0.85rem;">Loading...</div>
-            ${nostrAvailable ? `
-            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border);">
-              <h4 style="margin: 0 0 0.5rem 0; font-size: 0.9rem;">Nostr</h4>
-              <button id="nostr-connect-btn" style="width: 100%; padding: 0.4rem; background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border); cursor: pointer; border-radius: 4px; font-size: 0.8rem;">
-                Connect
-              </button>
-              <div id="nostr-pubkey" style="margin-top: 0.5rem; font-size: 0.7rem; word-break: break-all; color: var(--text-secondary);"></div>
+        
+        <main class="main-content">
+          <aside class="sidebar">
+            <div class="sidebar-section">
+              <h3>Quick Queries</h3>
+              <p class="sidebar-hint">Click to load a pre-built analysis</p>
+              <div id="query-templates"></div>
             </div>
-            ` : ''}
+            
+            <div class="sidebar-section">
+              <h3>Data Tables</h3>
+              <p class="sidebar-hint">Click to explore table contents</p>
+              <div id="data-list">Loading...</div>
+            </div>
           </aside>
-          <section id="editor" style="flex: 1; display: flex; flex-direction: column; min-width: 0;">
-            <div id="query-panel" style="padding: 1rem; border-bottom: 1px solid var(--border);">
-              <div id="monaco-container" style="height: 120px; border: 1px solid var(--border); border-radius: 4px;"></div>
-              <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem; flex-wrap: wrap; align-items: center;">
-                <button id="run-btn" style="padding: 0.5rem 1rem; background: var(--accent); color: white; border: none; cursor: pointer; border-radius: 4px;">
-                  Run Query (Ctrl+Enter)
+          
+          <section class="editor-section">
+            <div class="query-panel">
+              <div id="monaco-container" class="editor-container"></div>
+              <div class="query-controls">
+                <button id="run-btn" class="btn btn-primary">
+                  Run Query
+                  <span class="shortcut">Ctrl+Enter</span>
                 </button>
-                ${nostrAvailable ? `
-                <button id="publish-btn" style="padding: 0.5rem 1rem; background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border); cursor: pointer; border-radius: 4px;" disabled>
-                  Publish to Nostr
-                </button>
-                ` : ''}
-                <div style="display: flex; align-items: center; gap: 0.5rem; margin-left: auto;">
-                  <span style="color: var(--text-secondary); font-size: 0.85rem;">View:</span>
-                  <button id="view-table-btn" class="view-btn active" style="padding: 0.4rem 0.75rem; background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border); cursor: pointer; border-radius: 4px 0 0 4px;">
-                    Table
-                  </button>
-                  <button id="view-chart-btn" class="view-btn" style="padding: 0.4rem 0.75rem; background: var(--bg-secondary); color: var(--text-secondary); border: 1px solid var(--border); border-left: none; cursor: pointer; border-radius: 0 4px 4px 0;">
-                    Chart
-                  </button>
+                <div class="view-toggle">
+                  <button id="view-table-btn" class="btn btn-toggle active">Table</button>
+                  <button id="view-chart-btn" class="btn btn-toggle">Chart</button>
                 </div>
               </div>
             </div>
-            <div id="chart-controls" style="display: none; padding: 0.75rem 1rem; background: var(--bg-secondary); border-bottom: 1px solid var(--border);">
-              <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
-                <label style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-secondary); font-size: 0.85rem;">
-                  Chart Type:
-                  <select id="chart-type-select" style="padding: 0.3rem 0.5rem; background: var(--bg-primary); color: var(--text-primary); border: 1px solid var(--border); border-radius: 4px;">
-                    <option value="bar">Bar</option>
-                    <option value="line">Line</option>
-                    <option value="pie">Pie</option>
-                    <option value="scatter">Scatter</option>
-                    <option value="doughnut">Doughnut</option>
-                    <option value="radar">Radar</option>
-                    <option value="polarArea">Polar Area</option>
-                  </select>
-                </label>
-                <button id="download-chart-btn" style="padding: 0.4rem 0.75rem; background: var(--bg-primary); color: var(--text-primary); border: 1px solid var(--border); cursor: pointer; border-radius: 4px; font-size: 0.85rem;">
-                  Download PNG
-                </button>
-                <span id="chart-hint" style="color: var(--text-secondary); font-size: 0.8rem; font-style: italic;">
-                  Tip: First column = labels, remaining columns = data series
-                </span>
-              </div>
+            
+            <div id="chart-controls" class="chart-controls" style="display: none;">
+              <label class="chart-select-label">
+                Chart Type:
+                <select id="chart-type-select" class="chart-select">
+                  <option value="bar">Bar Chart</option>
+                  <option value="line">Line Chart</option>
+                  <option value="pie">Pie Chart</option>
+                  <option value="doughnut">Doughnut</option>
+                  <option value="scatter">Scatter Plot</option>
+                </select>
+              </label>
+              <button id="download-chart-btn" class="btn btn-secondary">Download PNG</button>
+              <span class="chart-hint">First column = labels, other columns = data series</span>
             </div>
-            <div id="results-panel" style="flex: 1; padding: 1rem; overflow: auto; min-height: 0;">
-              <div id="results" style="height: 100%;">
-                <em style="color: var(--text-secondary);">Results will appear here</em>
+            
+            <div class="results-panel">
+              <div id="results" class="results-container">
+                <div class="results-placeholder">
+                  <p>Select a query template or write your own SQL above</p>
+                  <p class="hint">Press Ctrl+Enter or click "Run Query" to execute</p>
+                </div>
               </div>
             </div>
           </section>
         </main>
       `;
+      addStyles();
       setupUI();
       break;
   }
 }
 
-/**
- * Set up UI after render
- */
-function setupUI(): void {
-  // Create Monaco editor
-  editorEngine.createEditor('monaco-container', '-- Enter SQL query here\nSELECT division_name, total_per_pupil \nFROM vdoe_table15_expenditures \nWHERE fiscal_year = \'2023-24\' \nORDER BY total_per_pupil DESC');
+function addStyles(): void {
+  if (document.getElementById('playground-styles')) return;
   
-  // Register Ctrl+Enter handler
-  editorEngine.onExecute(runQuery);
-
-  setupEventListeners();
-  loadDataFileList();
-}
-
-/**
- * Set up event listeners
- */
-function setupEventListeners(): void {
-  const runBtn = document.getElementById('run-btn');
-  const viewTableBtn = document.getElementById('view-table-btn');
-  const viewChartBtn = document.getElementById('view-chart-btn');
-  const chartTypeSelect = document.getElementById('chart-type-select') as HTMLSelectElement;
-  const downloadChartBtn = document.getElementById('download-chart-btn');
-  const nostrConnectBtn = document.getElementById('nostr-connect-btn');
-  const publishBtn = document.getElementById('publish-btn');
-
-  // Run query
-  runBtn?.addEventListener('click', () => runQuery(editorEngine.getValue()));
-
-  // View mode toggle
-  viewTableBtn?.addEventListener('click', () => {
-    state.viewMode = 'table';
-    updateViewModeUI();
-    if (state.lastResult) {
-      displayResults(state.lastResult);
+  const style = document.createElement('style');
+  style.id = 'playground-styles';
+  style.textContent = `
+    .header {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-secondary);
     }
-  });
-
-  viewChartBtn?.addEventListener('click', () => {
-    state.viewMode = 'chart';
-    updateViewModeUI();
-    if (state.lastResult) {
-      displayResults(state.lastResult);
-    }
-  });
-
-  // Chart type change
-  chartTypeSelect?.addEventListener('change', () => {
-    state.chartType = chartTypeSelect.value as ChartType;
-    if (state.viewMode === 'chart' && state.lastResult) {
-      displayChart(state.lastResult);
-    }
-  });
-
-  // Download chart
-  downloadChartBtn?.addEventListener('click', () => {
-    const engine = getChartEngine();
-    engine.downloadAsPng('chart-container', `fcps-chart-${Date.now()}.png`);
-  });
-
-  // Nostr connect
-  nostrConnectBtn?.addEventListener('click', async () => {
-    try {
-      nostrConnectBtn.textContent = 'Connecting...';
-      const notesEngine = getNotesEngine();
-      await notesEngine.connect();
-      await notesEngine.getPublicKey();
-      state.nostrConnected = true;
-      
-      nostrConnectBtn.textContent = 'Connected';
-      (nostrConnectBtn as HTMLButtonElement).disabled = true;
-      
-      const pubkeyDiv = document.getElementById('nostr-pubkey');
-      if (pubkeyDiv) {
-        const npub = await notesEngine.getPublicKeyBech32();
-        pubkeyDiv.textContent = npub.slice(0, 20) + '...' + npub.slice(-8);
-      }
-      
-      const statusSpan = document.getElementById('nostr-status');
-      if (statusSpan) {
-        statusSpan.textContent = 'Nostr: Connected';
-        statusSpan.style.color = 'var(--success)';
-      }
-
-      if (publishBtn) {
-        publishBtn.removeAttribute('disabled');
-      }
-    } catch (error) {
-      nostrConnectBtn.textContent = 'Connect';
-      alert('Failed to connect: ' + (error instanceof Error ? error.message : String(error)));
-    }
-  });
-
-  // Publish to Nostr
-  publishBtn?.addEventListener('click', async () => {
-    if (!state.nostrConnected || !state.lastResult) {
-      alert('Connect to Nostr and run a query first');
-      return;
-    }
-
-    const comment = prompt('Add a comment (optional):') || '';
+    .header-left { display: flex; align-items: baseline; gap: 1rem; }
+    .header h1 { margin: 0; font-size: 1.1rem; font-weight: 600; }
+    .header-subtitle { font-size: 0.8rem; color: var(--text-secondary); }
+    .header-right { display: flex; gap: 0.75rem; align-items: center; }
     
-    try {
-      publishBtn.textContent = 'Publishing...';
-      const summary = `${state.lastResult.rowCount} rows in ${state.lastResult.executionTimeMs.toFixed(1)}ms`;
-      const result = await getNotesEngine().publishQueryNote(state.lastQuery, summary, comment);
-      publishBtn.textContent = 'Published!';
-      setTimeout(() => {
-        publishBtn.textContent = 'Publish to Nostr';
-      }, 2000);
-      console.log('Published note:', result.eventId);
-    } catch (error) {
-      publishBtn.textContent = 'Publish to Nostr';
-      alert('Failed to publish: ' + (error instanceof Error ? error.message : String(error)));
+    .status-badge {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      background: var(--bg-tertiary);
+      color: var(--text-secondary);
+      cursor: default;
+    }
+    .status-ready { background: rgba(0, 217, 255, 0.15); color: var(--success); }
+    .status-cached { background: rgba(0, 217, 255, 0.15); color: var(--success); cursor: pointer; }
+    
+    .main-content {
+      flex: 1;
+      display: flex;
+      min-height: 0;
+    }
+    
+    .sidebar {
+      width: 280px;
+      border-right: 1px solid var(--border);
+      overflow-y: auto;
+      background: var(--bg-secondary);
+    }
+    .sidebar-section {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .sidebar-section h3 {
+      margin: 0 0 0.25rem 0;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .sidebar-hint {
+      margin: 0 0 0.75rem 0;
+      font-size: 0.7rem;
+      color: var(--text-secondary);
+    }
+    
+    .template-category {
+      margin-bottom: 0.75rem;
+    }
+    .template-category-title {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 0.25rem;
+      padding-left: 0.25rem;
+    }
+    .template-item {
+      padding: 0.4rem 0.5rem;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-bottom: 2px;
+      font-size: 0.8rem;
+      transition: background 0.15s, border-color 0.15s;
+      border-left: 3px solid transparent;
+    }
+    .template-item:hover {
+      background: var(--bg-tertiary);
+    }
+    .template-item.active {
+      background: rgba(0, 217, 255, 0.1);
+      border-left-color: var(--accent);
+    }
+    .template-item .template-name {
+      color: var(--text-primary);
+    }
+    .template-item.active .template-name {
+      color: var(--accent);
+    }
+    .template-item .template-desc {
+      font-size: 0.7rem;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+    
+    .table-item {
+      padding: 0.3rem 0.5rem;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-family: monospace;
+      transition: background 0.15s;
+    }
+    .table-item:hover {
+      background: var(--bg-tertiary);
+    }
+    .table-item::before {
+      content: '\\25A0';
+      color: var(--accent);
+      margin-right: 0.4rem;
+      font-size: 0.6rem;
+    }
+    
+    .editor-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    
+    .query-panel {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .editor-container {
+      height: 140px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .query-controls {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      align-items: center;
+    }
+    
+    .btn {
+      padding: 0.4rem 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      transition: all 0.15s;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+    .btn-primary:hover {
+      filter: brightness(1.1);
+    }
+    .btn-secondary {
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+    }
+    .btn-secondary:hover {
+      background: var(--bg-tertiary);
+    }
+    .btn .shortcut {
+      font-size: 0.65rem;
+      opacity: 0.7;
+      margin-left: 0.5rem;
+    }
+    
+    .view-toggle {
+      display: flex;
+      margin-left: auto;
+    }
+    .btn-toggle {
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      border-radius: 0;
+    }
+    .btn-toggle:first-child {
+      border-radius: 4px 0 0 4px;
+    }
+    .btn-toggle:last-child {
+      border-radius: 0 4px 4px 0;
+      border-left: none;
+    }
+    .btn-toggle.active {
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
+    }
+    
+    .chart-controls {
+      padding: 0.5rem 1rem;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+    .chart-select-label {
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .chart-select {
+      padding: 0.25rem 0.5rem;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+    .chart-hint {
+      color: var(--text-secondary);
+      font-size: 0.7rem;
+      font-style: italic;
+      margin-left: auto;
+    }
+    
+    .results-panel {
+      flex: 1;
+      padding: 1rem;
+      overflow: auto;
+      min-height: 0;
+    }
+    .results-container {
+      height: 100%;
+    }
+    .results-placeholder {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--text-secondary);
+    }
+    .results-placeholder p {
+      margin: 0.5rem 0;
+    }
+    .results-placeholder .hint {
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+  `;
+  document.head.appendChild(style);
+}
+
+// ============================================================================
+// UI Setup
+// ============================================================================
+
+function setupUI(): void {
+  // Initialize Monaco editor with a helpful default
+  editorEngine.createEditor('monaco-container', `-- Welcome to Open Frederick Data Playground!
+-- Select a Quick Query from the sidebar, or write your own SQL.
+-- Press Ctrl+Enter to run.
+
+-- Example: County budget to schools over time
+SELECT 
+  fiscal_year,
+  county_transfers_total_county_to_schools AS to_schools,
+  county_transfers_pct_of_general_fund AS pct_of_budget
+FROM county_budget_schools
+ORDER BY fiscal_year`);
+  
+  editorEngine.onExecute(runQuery);
+  editorEngine.onChange(highlightMatchingTemplate);
+  
+  setupEventListeners();
+  renderQueryTemplates();
+  loadDataFileList();
+  updateCacheStatus();
+}
+
+/**
+ * Normalize SQL for comparison (remove extra whitespace, lowercase)
+ */
+function normalizeSQL(sql: string): string {
+  return sql.trim().replace(/\s+/g, ' ').toLowerCase();
+}
+
+/**
+ * Highlight the sidebar template that matches the current editor content
+ */
+function highlightMatchingTemplate(sql: string): void {
+  const normalizedCurrent = normalizeSQL(sql);
+  const container = document.getElementById('query-templates');
+  if (!container) return;
+
+  // Remove all active states
+  container.querySelectorAll('.template-item.active').forEach(el => {
+    el.classList.remove('active');
+  });
+
+  // Find and highlight matching template
+  container.querySelectorAll('.template-item').forEach(el => {
+    const templateSQL = decodeURIComponent(el.getAttribute('data-sql') || '');
+    if (normalizeSQL(templateSQL) === normalizedCurrent) {
+      el.classList.add('active');
+      // Scroll into view if needed
+      el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
     }
   });
 }
 
-/**
- * Update view mode UI
- */
-function updateViewModeUI(): void {
-  const viewTableBtn = document.getElementById('view-table-btn');
-  const viewChartBtn = document.getElementById('view-chart-btn');
-  const chartControls = document.getElementById('chart-controls');
+function renderQueryTemplates(): void {
+  const container = document.getElementById('query-templates');
+  if (!container) return;
 
-  if (state.viewMode === 'table') {
-    viewTableBtn?.classList.add('active');
-    viewTableBtn!.style.color = 'var(--text-primary)';
-    viewChartBtn?.classList.remove('active');
-    viewChartBtn!.style.color = 'var(--text-secondary)';
-    if (chartControls) chartControls.style.display = 'none';
-  } else {
-    viewTableBtn?.classList.remove('active');
-    viewTableBtn!.style.color = 'var(--text-secondary)';
-    viewChartBtn?.classList.add('active');
-    viewChartBtn!.style.color = 'var(--text-primary)';
-    if (chartControls) chartControls.style.display = 'block';
-  }
-}
-
-/**
- * Run the SQL query
- */
-async function runQuery(sql: string): Promise<void> {
-  const query = sql.trim();
-  if (!query) return;
-
-  state.lastQuery = query;
-  const results = document.getElementById('results');
-  if (results) {
-    results.innerHTML = '<em style="color: var(--text-secondary);">Running query...</em>';
-  }
-
-  try {
-    const result = await executeQuery(query);
-    state.lastResult = result;
-    displayResults(result);
-  } catch (error) {
-    state.lastResult = null;
-    if (results) {
-      results.innerHTML = `<div style="color: var(--accent);">Error: ${error instanceof Error ? error.message : String(error)}</div>`;
-    }
-  }
-}
-
-/**
- * Display results based on current view mode
- */
-function displayResults(result: QueryResult): void {
-  if (state.viewMode === 'table') {
-    displayTable(result);
-  } else {
-    displayChart(result);
-  }
-}
-
-/**
- * Display results as a table
- */
-function displayTable(result: QueryResult): void {
-  const results = document.getElementById('results');
-  if (!results) return;
-
-  // Destroy any existing chart
-  getChartEngine().destroyChart('chart-container');
-
-  if (result.rows.length === 0) {
-    results.innerHTML = '<em style="color: var(--text-secondary);">Query returned no results</em>';
-    return;
-  }
-
-  results.innerHTML = renderTable(result.columns, result.rows, result.executionTimeMs);
-}
-
-/**
- * Display results as a chart
- */
-function displayChart(result: QueryResult): void {
-  const results = document.getElementById('results');
-  if (!results) return;
-
-  if (result.rows.length === 0) {
-    results.innerHTML = '<em style="color: var(--text-secondary);">Query returned no results</em>';
-    return;
-  }
-
-  // Create chart container
-  results.innerHTML = `
-    <div style="margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.85rem;">
-      ${result.rowCount} row(s) | ${result.executionTimeMs.toFixed(1)}ms
-    </div>
-    <div id="chart-container" style="height: calc(100% - 2rem); min-height: 300px; position: relative;"></div>
-  `;
-
-  // Render chart
-  const engine = getChartEngine();
-  const options: ChartOptions = {
-    showLegend: result.columns.length > 2 || state.chartType === 'pie' || state.chartType === 'doughnut',
-    beginAtZero: true,
+  const categories: Record<string, string> = {
+    budget: 'County Budget',
+    schools: 'Schools',
+    property: 'Property Tax',
+    government: 'Government Data',
   };
 
-  engine.renderChart('chart-container', state.chartType, result, options);
-}
+  const byCategory = QUERY_TEMPLATES.reduce((acc, t) => {
+    if (!acc[t.category]) acc[t.category] = [];
+    acc[t.category].push(t);
+    return acc;
+  }, {} as Record<string, QueryTemplate[]>);
 
-/**
- * Render a table from query results
- */
-function renderTable(columns: string[], rows: unknown[][], executionTimeMs?: number): string {
-  if (columns.length === 0) return '<em>No columns</em>';
-
-  const headerHtml = columns.map(col => 
-    `<th style="padding: 0.5rem; text-align: left; border-bottom: 2px solid var(--border); background: var(--bg-secondary); position: sticky; top: 0;">${escapeHtml(col)}</th>`
-  ).join('');
-  
-  const rowsHtml = rows.slice(0, 1000).map(row => {
-    const cells = row.map(cell => 
-      `<td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">${escapeHtml(formatCell(cell))}</td>`
-    ).join('');
-    return `<tr>${cells}</tr>`;
-  }).join('');
-
-  const truncated = rows.length > 1000 
-    ? `<div style="margin-top: 0.5rem; color: var(--text-secondary);">Showing 1000 of ${rows.length} rows</div>` 
-    : '';
-
-  const timing = executionTimeMs !== undefined
-    ? ` | ${executionTimeMs.toFixed(1)}ms`
-    : '';
-
-  return `
-    <div style="margin-bottom: 0.5rem; color: var(--text-secondary);">${rows.length} row(s)${timing}</div>
-    <div style="overflow: auto; max-height: calc(100% - 2rem);">
-      <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
-        <thead><tr>${headerHtml}</tr></thead>
-        <tbody>${rowsHtml}</tbody>
-      </table>
+  container.innerHTML = Object.entries(byCategory).map(([cat, templates]) => `
+    <div class="template-category">
+      <div class="template-category-title">${categories[cat] || cat}</div>
+      ${templates.map(t => `
+        <div class="template-item" data-sql="${encodeURIComponent(t.sql)}" title="${t.description}">
+          <div class="template-name">${t.name}</div>
+          <div class="template-desc">${t.description}</div>
+        </div>
+      `).join('')}
     </div>
-    ${truncated}
-  `;
+  `).join('');
+
+  // Add click handlers
+  container.querySelectorAll('.template-item').forEach(el => {
+    el.addEventListener('click', () => {
+      const sql = decodeURIComponent(el.getAttribute('data-sql') || '');
+      editorEngine.setValue(sql);
+      editorEngine.focus();
+      highlightMatchingTemplate(sql); // Immediately highlight
+      runQuery(sql);
+    });
+  });
 }
 
-/**
- * Format a cell value for display
- */
-function formatCell(value: unknown): string {
-  if (value === null || value === undefined) return 'NULL';
-  if (typeof value === 'number') {
-    // Format large numbers with commas
-    if (Number.isInteger(value) && Math.abs(value) >= 1000) {
-      return value.toLocaleString();
-    }
-    // Format decimals to reasonable precision
-    if (!Number.isInteger(value)) {
-      return value.toLocaleString(undefined, { maximumFractionDigits: 4 });
-    }
-  }
-  return String(value);
-}
-
-/**
- * Load and display available data files
- */
 async function loadDataFileList(): Promise<void> {
   const dataList = document.getElementById('data-list');
   if (!dataList) return;
@@ -484,16 +757,10 @@ async function loadDataFileList(): Promise<void> {
       dataList.innerHTML = '<em style="color: var(--text-secondary);">No data loaded</em>';
     } else {
       dataList.innerHTML = tables.map(t => `
-        <div class="table-item" style="padding: 0.4rem 0.5rem; cursor: pointer; border-radius: 4px; margin-bottom: 0.25rem; transition: background 0.15s;" 
-             onmouseover="this.style.background='var(--bg-secondary)'" 
-             onmouseout="this.style.background='transparent'"
-             data-table="${t}">
-          <span style="color: var(--accent);">&#9632;</span> ${t}
-        </div>
+        <div class="table-item" data-table="${t}">${t}</div>
       `).join('');
 
-      // Add click handlers for table names
-      dataList.querySelectorAll('[data-table]').forEach(el => {
+      dataList.querySelectorAll('.table-item').forEach(el => {
         el.addEventListener('click', () => {
           const tableName = el.getAttribute('data-table');
           editorEngine.setValue(`SELECT * FROM ${tableName} LIMIT 100`);
@@ -506,14 +773,208 @@ async function loadDataFileList(): Promise<void> {
   }
 }
 
-/**
- * Escape HTML special characters
- */
+async function updateCacheStatus(): Promise<void> {
+  const cacheStatus = document.getElementById('cache-status');
+  if (!cacheStatus) return;
+
+  try {
+    const stats = await getCacheStats();
+    const quota = await getStorageQuota();
+    
+    if (stats.fileCount > 0) {
+      const sizeMB = (stats.totalSize / 1024 / 1024).toFixed(1);
+      cacheStatus.textContent = `Cached: ${sizeMB} MB`;
+      cacheStatus.className = 'status-badge status-cached';
+      cacheStatus.title = `${stats.fileCount} files cached (${sizeMB} MB). Click to manage.`;
+    } else {
+      cacheStatus.textContent = 'Not cached';
+      cacheStatus.title = 'Data will be cached after first query';
+    }
+
+    cacheStatus.onclick = async () => {
+      const action = confirm(
+        `Cache: ${stats.fileCount} files (${(stats.totalSize / 1024 / 1024).toFixed(1)} MB)\n` +
+        `Storage: ${quota.usagePercent?.toFixed(0) ?? '?'}% used\n\n` +
+        `Clear cache?`
+      );
+      if (action) {
+        await clearCache();
+        updateCacheStatus();
+      }
+    };
+  } catch {
+    cacheStatus.textContent = 'Cache unavailable';
+  }
+}
+
+function setupEventListeners(): void {
+  const runBtn = document.getElementById('run-btn');
+  const viewTableBtn = document.getElementById('view-table-btn');
+  const viewChartBtn = document.getElementById('view-chart-btn');
+  const chartTypeSelect = document.getElementById('chart-type-select') as HTMLSelectElement;
+  const downloadChartBtn = document.getElementById('download-chart-btn');
+
+  runBtn?.addEventListener('click', () => runQuery(editorEngine.getValue()));
+
+  viewTableBtn?.addEventListener('click', () => {
+    state.viewMode = 'table';
+    updateViewMode();
+    if (state.lastResult) displayResults(state.lastResult);
+  });
+
+  viewChartBtn?.addEventListener('click', () => {
+    state.viewMode = 'chart';
+    updateViewMode();
+    if (state.lastResult) displayResults(state.lastResult);
+  });
+
+  chartTypeSelect?.addEventListener('change', () => {
+    state.chartType = chartTypeSelect.value as ChartType;
+    if (state.viewMode === 'chart' && state.lastResult) {
+      displayChart(state.lastResult);
+    }
+  });
+
+  downloadChartBtn?.addEventListener('click', () => {
+    getChartEngine().downloadAsPng('chart-container', `fcps-chart-${Date.now()}.png`);
+  });
+}
+
+function updateViewMode(): void {
+  const tableBtn = document.getElementById('view-table-btn');
+  const chartBtn = document.getElementById('view-chart-btn');
+  const chartControls = document.getElementById('chart-controls');
+
+  tableBtn?.classList.toggle('active', state.viewMode === 'table');
+  chartBtn?.classList.toggle('active', state.viewMode === 'chart');
+  if (chartControls) {
+    chartControls.style.display = state.viewMode === 'chart' ? 'flex' : 'none';
+  }
+}
+
+// ============================================================================
+// Query Execution & Results
+// ============================================================================
+
+async function runQuery(sql: string): Promise<void> {
+  const query = sql.trim();
+  if (!query) return;
+
+  state.lastQuery = query;
+  const results = document.getElementById('results');
+  if (results) {
+    results.innerHTML = '<div class="results-placeholder"><p>Running query...</p></div>';
+  }
+
+  try {
+    const result = await executeQuery(query);
+    state.lastResult = result;
+    displayResults(result);
+  } catch (error) {
+    state.lastResult = null;
+    if (results) {
+      results.innerHTML = `
+        <div style="color: var(--accent); padding: 1rem;">
+          <strong>Query Error</strong>
+          <pre style="margin-top: 0.5rem; font-size: 0.85rem; white-space: pre-wrap;">${
+            error instanceof Error ? error.message : String(error)
+          }</pre>
+        </div>
+      `;
+    }
+  }
+}
+
+function displayResults(result: QueryResult): void {
+  if (state.viewMode === 'table') {
+    displayTable(result);
+  } else {
+    displayChart(result);
+  }
+}
+
+function displayTable(result: QueryResult): void {
+  const container = document.getElementById('results');
+  if (!container) return;
+
+  getChartEngine().destroyChart('chart-container');
+
+  if (result.rows.length === 0) {
+    container.innerHTML = '<div class="results-placeholder"><p>Query returned no results</p></div>';
+    return;
+  }
+
+  const headerHtml = result.columns.map(col => 
+    `<th style="padding: 0.5rem; text-align: left; border-bottom: 2px solid var(--border); background: var(--bg-secondary); position: sticky; top: 0; font-weight: 600;">${escapeHtml(col)}</th>`
+  ).join('');
+  
+  const rowsHtml = result.rows.slice(0, 1000).map(row => 
+    `<tr>${row.map(cell => 
+      `<td style="padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border);">${escapeHtml(formatCell(cell))}</td>`
+    ).join('')}</tr>`
+  ).join('');
+
+  container.innerHTML = `
+    <div style="margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.8rem;">
+      ${result.rowCount.toLocaleString()} row${result.rowCount !== 1 ? 's' : ''} 
+      <span style="opacity: 0.7;">| ${result.executionTimeMs.toFixed(1)}ms</span>
+      ${result.rows.length > 1000 ? ' | Showing first 1,000' : ''}
+    </div>
+    <div style="overflow: auto; max-height: calc(100% - 2rem);">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.8rem;">
+        <thead><tr>${headerHtml}</tr></thead>
+        <tbody>${rowsHtml}</tbody>
+      </table>
+    </div>
+  `;
+}
+
+function displayChart(result: QueryResult): void {
+  const container = document.getElementById('results');
+  if (!container) return;
+
+  if (result.rows.length === 0) {
+    container.innerHTML = '<div class="results-placeholder"><p>Query returned no results</p></div>';
+    return;
+  }
+
+  container.innerHTML = `
+    <div style="margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.8rem;">
+      ${result.rowCount.toLocaleString()} row${result.rowCount !== 1 ? 's' : ''}
+      <span style="opacity: 0.7;">| ${result.executionTimeMs.toFixed(1)}ms</span>
+    </div>
+    <div id="chart-container" style="height: calc(100% - 2rem); min-height: 300px;"></div>
+  `;
+
+  const options: ChartOptions = {
+    showLegend: result.columns.length > 2 || ['pie', 'doughnut'].includes(state.chartType),
+    beginAtZero: true,
+  };
+
+  getChartEngine().renderChart('chart-container', state.chartType, result, options);
+}
+
+function formatCell(value: unknown): string {
+  if (value === null || value === undefined) return 'NULL';
+  if (typeof value === 'number') {
+    if (Number.isInteger(value) && Math.abs(value) >= 1000) {
+      return value.toLocaleString();
+    }
+    if (!Number.isInteger(value)) {
+      return value.toLocaleString(undefined, { maximumFractionDigits: 2 });
+    }
+  }
+  return String(value);
+}
+
 function escapeHtml(text: string): string {
   const div = document.createElement('div');
   div.textContent = text;
   return div.innerHTML;
 }
 
-// Start the application
+// ============================================================================
+// Start Application
+// ============================================================================
+
 init();

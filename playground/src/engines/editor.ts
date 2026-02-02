@@ -9,6 +9,7 @@ import * as monaco from 'monaco-editor';
 // Monaco editor instance
 let editor: monaco.editor.IStandaloneCodeEditor | null = null;
 let executeCallback: ((sql: string) => void) | null = null;
+let changeCallback: ((sql: string) => void) | null = null;
 
 // SQL keywords for autocomplete
 const SQL_KEYWORDS = [
@@ -266,6 +267,21 @@ export class EditorEngine {
       }
     });
 
+    // Register content change handler (debounced)
+    let changeTimeout: ReturnType<typeof setTimeout> | null = null;
+    editor.onDidChangeModelContent(() => {
+      if (changeCallback) {
+        // Debounce to avoid excessive calls
+        if (changeTimeout !== null) {
+          clearTimeout(changeTimeout);
+        }
+        const cb = changeCallback; // Capture callback
+        changeTimeout = setTimeout(() => {
+          cb(this.getValue());
+        }, 150);
+      }
+    });
+
     console.log('[EditorEngine] Editor created in', containerId);
   }
 
@@ -291,6 +307,13 @@ export class EditorEngine {
   }
 
   /**
+   * Register a callback for content changes (debounced)
+   */
+  onChange(callback: (sql: string) => void): void {
+    changeCallback = callback;
+  }
+
+  /**
    * Focus the editor
    */
   focus(): void {
@@ -313,6 +336,7 @@ export class EditorEngine {
       editor = null;
     }
     executeCallback = null;
+    changeCallback = null;
     console.log('[EditorEngine] Disposed');
   }
 }

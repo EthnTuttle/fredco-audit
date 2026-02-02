@@ -1,0 +1,106 @@
+{
+  "apa_data.parquet": {
+    "size": 14296,
+    "sha256": "e30c0ec1730190da5c99f6acb10741ae92c78f58f20439c69f20507166206889"
+  },
+  "apa_education_by_division.parquet": {
+    "size": 23691,
+    "sha256": "cc884f1776afd74ca41edd0abf20e5846f4ed061387be389c634bcdd14e7c30e"
+  },
+  "apa_education_expenditures.parquet": {
+    "size": 9991,
+    "sha256": "2fbff8cdbfdd337c1b22d299ddc46d84b2d9b87ad9ad41c3990df93d1742a6a0"
+  },
+  "apa_exhibit_b1.parquet": {
+    "size": 11098,
+    "sha256": "6603376d809e1c0a79ea844c1cb23a35ac00404d836f6399cd4af4aace11a671"
+  },
+  "apa_exhibit_b2.parquet": {
+    "size": 14446,
+    "sha256": "129671845fc51593a2e2391b3ed8af82bb7fae6421fae4ac095c1f634f710344"
+  },
+  "apa_exhibit_b.parquet": {
+    "size": 25296,
+    "sha256": "61eb1dccd5fedaa0d1f04e4069997c3db38968088cd76daf29fa9f6ebb825fc2"
+  },
+  "apa_exhibit_d.parquet": {
+    "size": 13479,
+    "sha256": "a9762aa25915671beebe6641006065fc20903c91f5287d95d2562c72164a5bf3"
+  },
+  "apa_exhibit_e.parquet": {
+    "size": 14356,
+    "sha256": "5614ea0f2bf1517fbe025980d1fb33e4be394869db88caa85b456d87667afb19"
+  },
+  "apa_exhibit_g.parquet": {
+    "size": 11789,
+    "sha256": "55ae3a2453308b2adb237d434d001befb34b70679bbce1e0cf7739aa9b9eaef2"
+  },
+  "apa_exhibit_h.parquet": {
+    "size": 10709,
+    "sha256": "4a28fef967a559489aa5c3d93c7ee63032ffe4653ea579776b5013a360c7c589"
+  },
+  "county_budget_schools.parquet": {
+    "size": 38723,
+    "sha256": "576a55a638a27b401eec208d4d9996177a6263cc050bd4010139fda87190fc11"
+  },
+  "county_department_detail.parquet": {
+    "size": 4133890,
+    "sha256": "f911864d8815dc90871dd171674cb01c7fe526b3558ccfda271861a82f312cef"
+  },
+  "county_government_analysis.parquet": {
+    "size": 37321,
+    "sha256": "58eb916dbccc5760154791ca6e5cf16bca8b12292eaf99794362e4f53cc8ab23"
+  },
+  "county_govt_budget_detail.parquet": {
+    "size": 7384,
+    "sha256": "5cf49fbb0b7a8d89f3dbefad216695d81e8e833da92f55cd249301410b25282b"
+  },
+  "county_govt_time_series.parquet": {
+    "size": 15087,
+    "sha256": "11652e10d60979c12f5960a618f4f5a7dee589a6bcf3926ef293e9a326927716"
+  },
+  "districts.parquet": {
+    "size": 305773,
+    "sha256": "ba6b315662b05ba0b46bb847ae9beb0ccc1f44a9234ec687506a92a4eefc9342"
+  },
+  "enrollment.parquet": {
+    "size": 6461,
+    "sha256": "c2b1903a849b087cb714e28efc7f6a229ff980b0d5a2547c22b1ec42e7a02bb9"
+  },
+  "expenditures.parquet": {
+    "size": 15976,
+    "sha256": "cb95cf1f25d3c2ce2b95d6f92d17e5aefd4c5e9004c425b97279ba9e37ce50b3"
+  },
+  "ownership_analysis.parquet": {
+    "size": 111694,
+    "sha256": "ca3874ac75cc290f454a7ad85f83dc034a228ec0d844bebb15a712bf997ef25b"
+  },
+  "real_estate_tax.parquet": {
+    "size": 23246016,
+    "sha256": "d70fdfb79d2f8ac88a5afcc8bdb86c0d504e54d8d0077fac6e2fa9ee646a2785"
+  },
+  "tax_summary.parquet": {
+    "size": 30880,
+    "sha256": "4ee42259d384b5555ed18f268b5a463665eb8d0ef743e9616705def1b7ec88ee"
+  },
+  "vdoe_table15_expenditures.parquet": {
+    "size": 13398,
+    "sha256": "31167bfa3890ea45728ba190a719c32e7a1308cc994d403e63f1d53047dc011b"
+  },
+  "vdoe_table17_ratios.parquet": {
+    "size": 9498,
+    "sha256": "b6bc103ad326fa35ef8abd49f2f60410f72b0bd224e2b0e290c14d7fa5cd0d38"
+  },
+  "vdoe_table18_admin.parquet": {
+    "size": 30380,
+    "sha256": "8f3279e853326193c2eb6c1e4474155dc9ff6d44563f871296e9190ddbec0814"
+  },
+  "vdoe_table19_instructional.parquet": {
+    "size": 30495,
+    "sha256": "763ec69b854e0f1ab439d098646d9e612e791f7b7ea58145da67a4d394973edd"
+  },
+  "vdoe_table8_enrollment.parquet": {
+    "size": 12161,
+    "sha256": "10f42d3ec9545ced2225a6af92c1111b2984bf97e58e4d369350281b45fa9c1c"
+  }
+}
