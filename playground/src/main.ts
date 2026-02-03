@@ -952,6 +952,20 @@ function addStyles(): void {
       color: var(--accent);
       opacity: 0.8;
     }
+    .schema-column.geometry-col .schema-column-name {
+      color: var(--success);
+    }
+    .schema-table-name .map-icon {
+      color: var(--success);
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    .schema-table.mappable > .schema-table-name {
+      padding-right: 0.5rem;
+    }
+    .schema-table-name .expand-icon {
+      flex-shrink: 0;
+    }
   `;
   document.head.appendChild(style);
 }
@@ -1084,6 +1098,19 @@ function renderQueryTemplates(): void {
   });
 }
 
+// Geometry column patterns to detect mappable tables
+const GEOMETRY_PATTERNS = ['geometry', 'geom', 'wkt', 'wkb', 'shape', 'the_geom', 'geo'];
+
+function hasGeometryColumn(columns: { name: string; type: string }[]): boolean {
+  return columns.some(col => 
+    GEOMETRY_PATTERNS.some(pattern => 
+      col.name.toLowerCase().includes(pattern) ||
+      col.type.toLowerCase().includes('geometry') ||
+      col.type.toLowerCase().includes('blob')
+    )
+  );
+}
+
 async function loadSchemaExplorer(): Promise<void> {
   const schemaList = document.getElementById('schema-list');
   if (!schemaList) return;
@@ -1096,17 +1123,41 @@ async function loadSchemaExplorer(): Promise<void> {
       return;
     }
 
+    // Pre-fetch all schemas to detect geometry columns
+    const tableSchemas = await Promise.all(
+      tables.map(async (tableName) => {
+        try {
+          const columns = await getTableSchema(tableName);
+          return { tableName, columns, hasGeometry: hasGeometryColumn(columns) };
+        } catch {
+          return { tableName, columns: [], hasGeometry: false };
+        }
+      })
+    );
+
     // Build schema HTML with expandable tables
-    const schemaHtml = tables.map(tableName => `
-      <div class="schema-table" data-table="${tableName}">
+    const schemaHtml = tableSchemas.map(({ tableName, columns, hasGeometry }) => `
+      <div class="schema-table${hasGeometry ? ' mappable' : ''}" data-table="${tableName}">
         <div class="schema-table-name">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg class="expand-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
           <span>${tableName}</span>
+          ${hasGeometry ? `
+            <svg class="map-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" title="Has geometry - mappable">
+              <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+              <line x1="8" y1="2" x2="8" y2="18"></line>
+              <line x1="16" y1="6" x2="16" y2="22"></line>
+            </svg>
+          ` : ''}
         </div>
-        <div class="schema-columns" data-columns-for="${tableName}">
-          <div class="schema-column"><em>Loading...</em></div>
+        <div class="schema-columns" data-loaded="true">
+          ${columns.length > 0 ? columns.map(col => `
+            <div class="schema-column${GEOMETRY_PATTERNS.some(p => col.name.toLowerCase().includes(p)) ? ' geometry-col' : ''}">
+              <span class="schema-column-name">${col.name}</span>
+              <span class="schema-column-type">${col.type}</span>
+            </div>
+          `).join('') : '<div class="schema-column"><em>No columns</em></div>'}
         </div>
       </div>
     `).join('');
@@ -1120,27 +1171,7 @@ async function loadSchemaExplorer(): Promise<void> {
       
       tableNameEl?.addEventListener('click', async (e) => {
         e.stopPropagation();
-        
-        // Toggle expanded state
-        const isExpanded = el.classList.toggle('expanded');
-        
-        // Load columns if expanding and not already loaded
-        if (isExpanded && tableName) {
-          const columnsContainer = el.querySelector('.schema-columns');
-          if (columnsContainer?.innerHTML.includes('Loading...')) {
-            try {
-              const columns = await getTableSchema(tableName);
-              columnsContainer.innerHTML = columns.map(col => `
-                <div class="schema-column">
-                  <span class="schema-column-name">${col.name}</span>
-                  <span class="schema-column-type">${col.type}</span>
-                </div>
-              `).join('');
-            } catch {
-              columnsContainer.innerHTML = '<div class="schema-column"><em>Failed to load</em></div>';
-            }
-          }
-        }
+        el.classList.toggle('expanded');
       });
 
       // Double-click to generate SELECT query
