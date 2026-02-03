@@ -9,8 +9,8 @@ export default defineConfig({
     topLevelAwait(),
   ],
   
-  // GitHub Pages deployment base path
-  base: '/fredco-audit/playground/',
+  // Deployment base path for audit.virginiafreedom.tech/playground/
+  base: '/playground/',
   
   resolve: {
     alias: {

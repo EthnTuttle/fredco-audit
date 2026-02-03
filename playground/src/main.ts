@@ -10,6 +10,7 @@ import { initDataEngine, executeQuery, getLoadedTables, getTableSchema, type Que
 import { getChartEngine, type ChartType, type ChartOptions } from './engines/chart';
 import { editorEngine } from './engines/editor';
 import { getCacheStats, getStorageQuota, clearCache } from './engines/storage';
+import { COLOR_RAMPS } from './engines/map';
 
 // ============================================================================
 // Shareable Query State
@@ -119,7 +120,7 @@ interface QueryTemplate {
   name: string;
   description: string;
   sql: string;
-  category: 'budget' | 'schools' | 'property' | 'government';
+  category: 'budget' | 'schools' | 'property' | 'government' | 'gis';
 }
 
 const QUERY_TEMPLATES: QueryTemplate[] = [
@@ -333,6 +334,112 @@ FROM apa_exhibit_b1
 WHERE total_from_the_commonwealth > 0
 ORDER BY total_from_the_commonwealth DESC`
   },
+
+  // GIS / Map Queries
+  {
+    name: 'Fire Stations',
+    description: 'Fire station locations with response districts',
+    category: 'gis',
+    sql: `-- Fire station locations (for map view)
+SELECT 
+  geometry,
+  name AS "Station",
+  number AS "Number"
+FROM fire_stations
+ORDER BY number`
+  },
+  {
+    name: 'Fire Districts',
+    description: 'Fire response district boundaries',
+    category: 'gis',
+    sql: `-- Fire district boundaries (for map view)
+SELECT 
+  geometry,
+  name AS "District",
+  number AS "Number"
+FROM fire_districts
+ORDER BY number`
+  },
+  {
+    name: 'Public Schools',
+    description: 'School locations',
+    category: 'gis',
+    sql: `-- School locations (for map view)
+SELECT 
+  geometry,
+  name AS "School"
+FROM public_schools
+ORDER BY name`
+  },
+  {
+    name: 'School Districts',
+    description: 'Elementary school attendance zones',
+    category: 'gis',
+    sql: `-- School attendance districts (for map view)
+SELECT 
+  geometry,
+  name AS "District"
+FROM school_districts
+ORDER BY name`
+  },
+  {
+    name: 'Magisterial Districts',
+    description: 'Board of Supervisors district boundaries',
+    category: 'gis',
+    sql: `-- Supervisor districts (for map view)
+SELECT 
+  geometry,
+  dist_name AS "District"
+FROM magisterial_districts
+ORDER BY dist_id`
+  },
+  {
+    name: 'Eastern Road Plan',
+    description: 'Planned future roads in eastern Frederick',
+    category: 'gis',
+    sql: `-- Eastern Road Plan (for map view)
+SELECT 
+  geometry,
+  road_name AS "Road",
+  status AS "Status"
+FROM eastern_road_plan
+WHERE road_name IS NOT NULL
+LIMIT 200`
+  },
+  {
+    name: 'Future Route 37 Bypass',
+    description: 'Planned Route 37 bypass alignment',
+    category: 'gis',
+    sql: `-- Future Route 37 Bypass (for map view)
+SELECT 
+  geometry,
+  feature AS "Feature"
+FROM future_rt37_bypass`
+  },
+  {
+    name: 'Zoning Map',
+    description: 'Current zoning districts',
+    category: 'gis',
+    sql: `-- Zoning districts (for map view)
+SELECT 
+  geometry,
+  zone AS "Zone",
+  descriptio AS "Description",
+  acres AS "Acres"
+FROM zoning
+LIMIT 500`
+  },
+  {
+    name: 'Conservation Easements',
+    description: 'Protected land under conservation easement',
+    category: 'gis',
+    sql: `-- Conservation easements (for map view)
+SELECT 
+  geometry,
+  label AS "Name"
+FROM conservation_easements
+ORDER BY label`
+  },
 ];
 
 // ============================================================================
@@ -342,10 +449,12 @@ ORDER BY total_from_the_commonwealth DESC`
 interface AppState {
   status: 'loading' | 'ready' | 'error';
   error?: string;
-  viewMode: 'table' | 'chart';
+  viewMode: 'table' | 'chart' | 'map';
   chartType: ChartType;
   lastResult: QueryResult | null;
   lastQuery: string;
+  mapColorProperty: string;
+  mapColorRamp: keyof typeof COLOR_RAMPS;
 }
 
 const state: AppState = {
@@ -354,6 +463,8 @@ const state: AppState = {
   chartType: 'bar',
   lastResult: null,
   lastQuery: '',
+  mapColorProperty: 'total_value',
+  mapColorRamp: 'blues',
 };
 
 // ============================================================================
@@ -471,6 +582,7 @@ function render(container: HTMLElement): void {
                 <div class="view-toggle">
                   <button id="view-table-btn" class="btn btn-toggle active">Table</button>
                   <button id="view-chart-btn" class="btn btn-toggle">Chart</button>
+                  <button id="view-map-btn" class="btn btn-toggle">Map</button>
                 </div>
               </div>
               <div id="share-toast" class="share-toast">Link copied to clipboard!</div>
@@ -489,6 +601,31 @@ function render(container: HTMLElement): void {
               </label>
               <button id="download-chart-btn" class="btn btn-secondary">Download PNG</button>
               <span class="chart-hint">First column = labels, other columns = data series</span>
+            </div>
+            
+            <div id="map-controls" class="map-controls" style="display: none;">
+              <label class="map-select-label">
+                Color By:
+                <select id="map-color-property" class="map-select">
+                  <option value="">None (uniform)</option>
+                  <option value="total_value">Total Value</option>
+                  <option value="land_value">Land Value</option>
+                  <option value="acreage">Acreage</option>
+                  <option value="tax_amount">Tax Amount</option>
+                </select>
+              </label>
+              <label class="map-select-label">
+                Color Ramp:
+                <select id="map-color-ramp" class="map-select">
+                  <option value="blues">Blues</option>
+                  <option value="greens">Greens</option>
+                  <option value="reds">Reds</option>
+                  <option value="purples">Purples</option>
+                  <option value="value">Value (Yellow-Blue)</option>
+                </select>
+              </label>
+              <button id="zoom-county-btn" class="btn btn-secondary">Zoom to County</button>
+              <span class="map-hint">Query must include a 'geometry' column for map display</span>
             </div>
             
             <div class="results-panel">
