@@ -472,12 +472,6 @@ function render(container: HTMLElement): void {
               <p class="sidebar-hint">Click to load a pre-built analysis</p>
               <div id="query-templates"></div>
             </div>
-            
-            <div class="sidebar-section">
-              <h3>Data Tables</h3>
-              <p class="sidebar-hint">Click to explore table contents</p>
-              <div id="data-list">Loading...</div>
-            </div>
           </aside>
           
           <section class="editor-section">
@@ -549,6 +543,21 @@ function render(container: HTMLElement): void {
               </div>
             </div>
           </section>
+          
+          <aside id="schema-panel" class="schema-panel">
+            <div class="schema-header">
+              <span class="schema-title">Data Tables</span>
+              <button id="schema-toggle" class="schema-toggle" title="Collapse panel">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+            <p class="schema-hint">Click to expand, double-click to query</p>
+            <div class="schema-content">
+              <div id="schema-list">Loading...</div>
+            </div>
+          </aside>
         </main>
       `;
       addStyles();
@@ -832,6 +841,117 @@ function addStyles(): void {
       transform: translateX(-50%) translateY(0);
       opacity: 1;
     }
+    
+    /* Schema Panel */
+    .schema-panel {
+      width: 280px;
+      border-left: 1px solid var(--border);
+      background: var(--bg-secondary);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: width 0.2s ease, min-width 0.2s ease;
+    }
+    .schema-panel.collapsed {
+      width: 40px;
+      min-width: 40px;
+    }
+    .schema-header {
+      padding: 0.75rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .schema-toggle {
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      cursor: pointer;
+      padding: 0.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.15s, transform 0.2s;
+    }
+    .schema-toggle:hover {
+      color: var(--text-primary);
+    }
+    .schema-panel.collapsed .schema-toggle {
+      transform: rotate(180deg);
+    }
+    .schema-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .schema-panel.collapsed .schema-title,
+    .schema-panel.collapsed .schema-hint {
+      display: none;
+    }
+    .schema-hint {
+      padding: 0 0.75rem 0.5rem;
+      margin: 0;
+      font-size: 0.7rem;
+      color: var(--text-secondary);
+    }
+    .schema-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0.5rem;
+    }
+    .schema-panel.collapsed .schema-content {
+      display: none;
+    }
+    .schema-table {
+      margin-bottom: 0.75rem;
+    }
+    .schema-table-name {
+      padding: 0.4rem 0.5rem;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: background 0.15s;
+    }
+    .schema-table-name:hover {
+      background: var(--bg-tertiary);
+    }
+    .schema-table-name svg {
+      color: var(--text-secondary);
+      transition: transform 0.15s;
+    }
+    .schema-table.expanded .schema-table-name svg {
+      transform: rotate(90deg);
+    }
+    .schema-columns {
+      display: none;
+      padding-left: 1.25rem;
+      margin-top: 0.25rem;
+    }
+    .schema-table.expanded .schema-columns {
+      display: block;
+    }
+    .schema-column {
+      padding: 0.2rem 0.4rem;
+      font-size: 0.7rem;
+      font-family: monospace;
+      color: var(--text-secondary);
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    .schema-column-name {
+      color: var(--text-primary);
+    }
+    .schema-column-type {
+      color: var(--accent);
+      opacity: 0.8;
+    }
   `;
   document.head.appendChild(style);
 }
@@ -874,8 +994,9 @@ ORDER BY fiscal_year`;
   editorEngine.onChange(highlightMatchingTemplate);
   
   setupEventListeners();
+  setupSchemaPanel();
   renderQueryTemplates();
-  loadDataFileList();
+  loadSchemaExplorer();
   updateCacheStatus();
   
   // Update UI to reflect loaded state
@@ -963,31 +1084,88 @@ function renderQueryTemplates(): void {
   });
 }
 
-async function loadDataFileList(): Promise<void> {
-  const dataList = document.getElementById('data-list');
-  if (!dataList) return;
+async function loadSchemaExplorer(): Promise<void> {
+  const schemaList = document.getElementById('schema-list');
+  if (!schemaList) return;
 
   try {
     const tables = await getLoadedTables();
     
     if (tables.length === 0) {
-      dataList.innerHTML = '<em style="color: var(--text-secondary);">No data loaded</em>';
-    } else {
-      dataList.innerHTML = tables.map(t => `
-        <div class="table-item" data-table="${t}">${t}</div>
-      `).join('');
+      schemaList.innerHTML = '<em style="color: var(--text-secondary);">No data loaded</em>';
+      return;
+    }
 
-      dataList.querySelectorAll('.table-item').forEach(el => {
-        el.addEventListener('click', () => {
-          const tableName = el.getAttribute('data-table');
+    // Build schema HTML with expandable tables
+    const schemaHtml = tables.map(tableName => `
+      <div class="schema-table" data-table="${tableName}">
+        <div class="schema-table-name">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+          <span>${tableName}</span>
+        </div>
+        <div class="schema-columns" data-columns-for="${tableName}">
+          <div class="schema-column"><em>Loading...</em></div>
+        </div>
+      </div>
+    `).join('');
+
+    schemaList.innerHTML = schemaHtml;
+
+    // Add click handlers for table names
+    schemaList.querySelectorAll('.schema-table').forEach(el => {
+      const tableNameEl = el.querySelector('.schema-table-name');
+      const tableName = el.getAttribute('data-table');
+      
+      tableNameEl?.addEventListener('click', async (e) => {
+        e.stopPropagation();
+        
+        // Toggle expanded state
+        const isExpanded = el.classList.toggle('expanded');
+        
+        // Load columns if expanding and not already loaded
+        if (isExpanded && tableName) {
+          const columnsContainer = el.querySelector('.schema-columns');
+          if (columnsContainer?.innerHTML.includes('Loading...')) {
+            try {
+              const columns = await getTableSchema(tableName);
+              columnsContainer.innerHTML = columns.map(col => `
+                <div class="schema-column">
+                  <span class="schema-column-name">${col.name}</span>
+                  <span class="schema-column-type">${col.type}</span>
+                </div>
+              `).join('');
+            } catch {
+              columnsContainer.innerHTML = '<div class="schema-column"><em>Failed to load</em></div>';
+            }
+          }
+        }
+      });
+
+      // Double-click to generate SELECT query
+      tableNameEl?.addEventListener('dblclick', (e) => {
+        e.stopPropagation();
+        if (tableName) {
           editorEngine.setValue(`SELECT * FROM ${tableName} LIMIT 100`);
           editorEngine.focus();
-        });
+          runQuery(`SELECT * FROM ${tableName} LIMIT 100`);
+        }
       });
-    }
+    });
+
   } catch {
-    dataList.innerHTML = '<em style="color: var(--text-secondary);">Failed to load tables</em>';
+    schemaList.innerHTML = '<em style="color: var(--text-secondary);">Failed to load tables</em>';
   }
+}
+
+function setupSchemaPanel(): void {
+  const panel = document.getElementById('schema-panel');
+  const toggle = document.getElementById('schema-toggle');
+  
+  toggle?.addEventListener('click', () => {
+    panel?.classList.toggle('collapsed');
+  });
 }
 
 async function updateCacheStatus(): Promise<void> {
