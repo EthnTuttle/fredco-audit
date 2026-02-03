@@ -43,9 +43,12 @@ jobs:
           # Copy static files from repo root
           cp -r data _site/ 2>/dev/null || true
           cp -r schemas _site/ 2>/dev/null || true
-          cp index.html _site/ 2>/dev/null || true
+          
+          # Copy all HTML pages
+          cp *.html _site/ 2>/dev/null || true
+          
+          # Copy markdown files
           cp ROADMAP.md _site/ 2>/dev/null || true
-          cp playground-old.html _site/ 2>/dev/null || true
           
           # Copy built playground to /playground/
           cp -r playground/dist/* _site/playground/
