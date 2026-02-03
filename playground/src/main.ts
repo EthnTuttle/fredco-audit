@@ -220,7 +220,7 @@ SELECT
   metrics_admin_health_administrative AS "Admin/Health",
   metrics_technology_administrative AS "Technology"
 FROM vdoe_table18_admin
-WHERE fiscal_year = '2023-24'
+WHERE fiscal_year = 'FY2024'
 ORDER BY metrics_instruction_administrative DESC`
   },
   {
