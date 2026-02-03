@@ -10,7 +10,7 @@ import { initDataEngine, executeQuery, getLoadedTables, getTableSchema, getAvail
 import { getChartEngine, type ChartType, type ChartOptions } from './engines/chart';
 import { editorEngine } from './engines/editor';
 import { getCacheStats, getStorageQuota, clearCache } from './engines/storage';
-import { COLOR_RAMPS } from './engines/map';
+import { getMapEngine, queryResultToGeoJSON, COLOR_RAMPS } from './engines/map';
 
 // ============================================================================
 // Shareable Query State
@@ -808,6 +808,35 @@ function addStyles(): void {
       margin-left: auto;
     }
     
+    .map-controls {
+      padding: 0.5rem 1rem;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+    .map-select-label {
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .map-select {
+      padding: 0.25rem 0.5rem;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+    .map-hint {
+      color: var(--text-secondary);
+      font-size: 0.7rem;
+      font-style: italic;
+      margin-left: auto;
+    }
+    
     .results-panel {
       flex: 1;
       padding: 1rem;
@@ -1404,8 +1433,12 @@ function setupEventListeners(): void {
   const shareToast = document.getElementById('share-toast');
   const viewTableBtn = document.getElementById('view-table-btn');
   const viewChartBtn = document.getElementById('view-chart-btn');
+  const viewMapBtn = document.getElementById('view-map-btn');
   const chartTypeSelect = document.getElementById('chart-type-select') as HTMLSelectElement;
   const downloadChartBtn = document.getElementById('download-chart-btn');
+  const mapColorProperty = document.getElementById('map-color-property') as HTMLSelectElement;
+  const mapColorRamp = document.getElementById('map-color-ramp') as HTMLSelectElement;
+  const zoomCountyBtn = document.getElementById('zoom-county-btn');
 
   runBtn?.addEventListener('click', () => runQuery(editorEngine.getValue()));
 
@@ -1438,6 +1471,12 @@ function setupEventListeners(): void {
     if (state.lastResult) displayResults(state.lastResult);
   });
 
+  viewMapBtn?.addEventListener('click', () => {
+    state.viewMode = 'map';
+    updateViewMode();
+    if (state.lastResult) displayResults(state.lastResult);
+  });
+
   chartTypeSelect?.addEventListener('change', () => {
     state.chartType = chartTypeSelect.value as ChartType;
     if (state.viewMode === 'chart' && state.lastResult) {
@@ -1448,19 +1487,45 @@ function setupEventListeners(): void {
   downloadChartBtn?.addEventListener('click', () => {
     getChartEngine().downloadAsPng('chart-container', `fcps-chart-${Date.now()}.png`);
   });
+
+  mapColorProperty?.addEventListener('change', () => {
+    state.mapColorProperty = mapColorProperty.value;
+    if (state.viewMode === 'map' && state.lastResult) {
+      displayMap(state.lastResult);
+    }
+  });
+
+  mapColorRamp?.addEventListener('change', () => {
+    state.mapColorRamp = mapColorRamp.value as keyof typeof COLOR_RAMPS;
+    if (state.viewMode === 'map' && state.lastResult) {
+      displayMap(state.lastResult);
+    }
+  });
+
+  zoomCountyBtn?.addEventListener('click', () => {
+    getMapEngine().zoomToCounty();
+  });
 }
 
 function updateViewMode(): void {
   const tableBtn = document.getElementById('view-table-btn');
   const chartBtn = document.getElementById('view-chart-btn');
+  const mapBtn = document.getElementById('view-map-btn');
   const chartControls = document.getElementById('chart-controls');
+  const mapControls = document.getElementById('map-controls');
   const chartTypeSelect = document.getElementById('chart-type-select') as HTMLSelectElement | null;
 
   tableBtn?.classList.toggle('active', state.viewMode === 'table');
   chartBtn?.classList.toggle('active', state.viewMode === 'chart');
+  mapBtn?.classList.toggle('active', state.viewMode === 'map');
+  
   if (chartControls) {
     chartControls.style.display = state.viewMode === 'chart' ? 'flex' : 'none';
   }
+  if (mapControls) {
+    mapControls.style.display = state.viewMode === 'map' ? 'flex' : 'none';
+  }
+  
   // Sync chart type select with state
   if (chartTypeSelect && chartTypeSelect.value !== state.chartType) {
     chartTypeSelect.value = state.chartType;
@@ -1503,8 +1568,10 @@ async function runQuery(sql: string): Promise<void> {
 function displayResults(result: QueryResult): void {
   if (state.viewMode === 'table') {
     displayTable(result);
-  } else {
+  } else if (state.viewMode === 'chart') {
     displayChart(result);
+  } else if (state.viewMode === 'map') {
+    displayMap(result);
   }
 }
 
@@ -1567,6 +1634,94 @@ function displayChart(result: QueryResult): void {
   };
 
   getChartEngine().renderChart('chart-container', state.chartType, result, options);
+}
+
+function displayMap(result: QueryResult): void {
+  const container = document.getElementById('results');
+  if (!container) return;
+
+  // Destroy any existing chart
+  getChartEngine().destroyChart('chart-container');
+
+  if (result.rows.length === 0) {
+    container.innerHTML = '<div class="results-placeholder"><p>Query returned no results</p></div>';
+    return;
+  }
+
+  // Find geometry column
+  const geomColIndex = result.columns.findIndex(col => 
+    GEOMETRY_PATTERNS.some(p => col.toLowerCase().includes(p))
+  );
+
+  if (geomColIndex === -1) {
+    container.innerHTML = `
+      <div class="results-placeholder">
+        <p>No geometry column found in query results</p>
+        <p class="hint">Include a column named 'geometry', 'geom', or 'wkt' in your query</p>
+        <p class="hint">Example: SELECT *, geometry FROM fire_districts LIMIT 100</p>
+      </div>
+    `;
+    return;
+  }
+
+  // Update map color property dropdown with available numeric columns
+  const mapColorSelect = document.getElementById('map-color-property') as HTMLSelectElement;
+  if (mapColorSelect) {
+    const numericCols = result.columns.filter((col, i) => {
+      if (i === geomColIndex) return false;
+      // Check if first non-null value is numeric
+      const firstVal = result.rows.find(row => row[i] !== null)?.[i];
+      return typeof firstVal === 'number';
+    });
+    
+    mapColorSelect.innerHTML = `
+      <option value="">None (uniform)</option>
+      ${numericCols.map(col => `<option value="${col}">${col}</option>`).join('')}
+    `;
+    
+    // Restore previous selection if still valid
+    if (numericCols.includes(state.mapColorProperty)) {
+      mapColorSelect.value = state.mapColorProperty;
+    }
+  }
+
+  container.innerHTML = `
+    <div style="margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.8rem;">
+      ${result.rowCount.toLocaleString()} feature${result.rowCount !== 1 ? 's' : ''}
+      <span style="opacity: 0.7;">| ${result.executionTimeMs.toFixed(1)}ms</span>
+    </div>
+    <div id="map-container" style="height: calc(100% - 2rem); min-height: 400px; border-radius: 4px; overflow: hidden;"></div>
+  `;
+
+  // Initialize map
+  const mapEngine = getMapEngine();
+  mapEngine.init('map-container');
+
+  try {
+    // Convert query results to GeoJSON
+    const geojson = queryResultToGeoJSON(result.rows, result.columns, result.columns[geomColIndex]);
+    
+    // Add layer to map
+    mapEngine.addGeoJSONLayer('query-results', geojson, { fitBounds: true });
+
+    // Apply choropleth if a color property is selected
+    if (state.mapColorProperty && result.columns.includes(state.mapColorProperty)) {
+      const colorRamp = COLOR_RAMPS[state.mapColorRamp] || COLOR_RAMPS.blues;
+      mapEngine.applyChoropleth('query-results', {
+        property: state.mapColorProperty,
+        scale: 'quantile',
+        colors: colorRamp,
+      });
+    }
+  } catch (error) {
+    console.error('Failed to render map:', error);
+    container.innerHTML = `
+      <div class="results-placeholder">
+        <p>Failed to render map</p>
+        <p class="hint">${error instanceof Error ? error.message : String(error)}</p>
+      </div>
+    `;
+  }
 }
 
 function formatCell(value: unknown): string {
