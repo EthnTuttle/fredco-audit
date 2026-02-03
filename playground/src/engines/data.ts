@@ -140,6 +140,52 @@ export const PARQUET_MANIFEST: Record<string, { size: number; sha256: string }> 
 
 const PARQUET_FILES = Object.keys(PARQUET_MANIFEST);
 
+/**
+ * Optional GIS datasets that can be loaded on demand.
+ * These are larger files stored in data/processed/gis/
+ */
+export interface GISDataset {
+  name: string;
+  filename: string;
+  description: string;
+  size: number;
+}
+
+export const GIS_DATASETS: GISDataset[] = [
+  { name: 'airport_overlay', filename: 'airport_overlay.parquet', description: 'Airport overlay zones', size: 57724 },
+  { name: 'comp_plan_applications', filename: 'comp_plan_applications.parquet', description: 'Comprehensive plan applications', size: 20770 },
+  { name: 'conservation_easements', filename: 'conservation_easements.parquet', description: 'Protected lands', size: 282312 },
+  { name: 'county_parcels', filename: 'county_parcels.parquet', description: 'County parcels', size: 49689929 },
+  { name: 'county_parcels_raw', filename: 'county_parcels_raw.parquet', description: 'County parcels (raw)', size: 45445339 },
+  { name: 'eastern_road_plan', filename: 'eastern_road_plan.parquet', description: 'Eastern road plan', size: 948607 },
+  { name: 'fire_districts', filename: 'fire_districts.parquet', description: 'Fire & rescue districts', size: 633399 },
+  { name: 'fire_stations', filename: 'fire_stations.parquet', description: 'Fire station locations', size: 15184 },
+  { name: 'frederick_parcels', filename: 'frederick_parcels.parquet', description: 'Frederick parcels with geometry', size: 43791373 },
+  { name: 'frederick_parcels_raw', filename: 'frederick_parcels_raw.parquet', description: 'Frederick parcels (raw)', size: 42858290 },
+  { name: 'future_rt37_bypass', filename: 'future_rt37_bypass.parquet', description: 'Future RT-37 bypass route', size: 468376 },
+  { name: 'growth_area_parcels', filename: 'growth_area_parcels.parquet', description: 'Parcels in growth areas', size: 6015505 },
+  { name: 'growth_areas', filename: 'growth_areas.parquet', description: 'Urban growth areas', size: 750667 },
+  { name: 'interstate_overlay', filename: 'interstate_overlay.parquet', description: 'Interstate overlay zones', size: 59357 },
+  { name: 'long_range_land_use', filename: 'long_range_land_use.parquet', description: 'Future land use plan', size: 1450160 },
+  { name: 'magisterial_districts', filename: 'magisterial_districts.parquet', description: 'Magisterial voting districts', size: 182533 },
+  { name: 'parcels_growth_analysis', filename: 'parcels_growth_analysis.parquet', description: 'Parcels with growth analysis', size: 49706515 },
+  { name: 'parcels_with_growth_analysis', filename: 'parcels_with_growth_analysis.parquet', description: 'Parcels with growth data', size: 43787674 },
+  { name: 'proffer_points', filename: 'proffer_points.parquet', description: 'Proffer locations', size: 76637 },
+  { name: 'public_schools', filename: 'public_schools.parquet', description: 'School locations', size: 17583 },
+  { name: 'rezonings', filename: 'rezonings.parquet', description: 'Rezoning applications', size: 28092 },
+  { name: 'school_districts', filename: 'school_districts.parquet', description: 'School attendance zones', size: 147672 },
+  { name: 'streets', filename: 'streets.parquet', description: 'Street centerlines', size: 7333494 },
+  { name: 'swsa', filename: 'swsa.parquet', description: 'Sewer/water service areas', size: 57217 },
+  { name: 'uda', filename: 'uda.parquet', description: 'Urban development areas', size: 51740 },
+  { name: 'zoning', filename: 'zoning.parquet', description: 'Zoning districts', size: 1246798 },
+];
+
+// GIS files are served from data/processed/gis/ via GitHub Pages
+const GIS_BASE_URL = '../data/processed/gis';
+
+// Track which GIS datasets are loaded
+const loadedGISDatasets: Set<string> = new Set();
+
 // Cache settings
 const CACHE_ENABLED = true;
 const VERIFY_INTEGRITY = true;
@@ -430,6 +476,86 @@ export async function loadParquetUrl(url: string, tableName: string): Promise<vo
   await conn.query(`CREATE VIEW IF NOT EXISTS ${tableName} AS SELECT * FROM parquet_scan('${filename}')`);
   
   console.log(`[DataEngine] Loaded custom table: ${tableName}`);
+}
+
+/**
+ * Get list of available GIS datasets
+ */
+export function getAvailableGISDatasets(): GISDataset[] {
+  return GIS_DATASETS;
+}
+
+/**
+ * Check if a GIS dataset is loaded
+ */
+export function isGISDatasetLoaded(name: string): boolean {
+  return loadedGISDatasets.has(name);
+}
+
+/**
+ * Load a GIS dataset on demand
+ */
+export async function loadGISDataset(name: string): Promise<void> {
+  if (!db || !conn) throw new Error('DuckDB not initialized');
+  
+  const dataset = GIS_DATASETS.find(d => d.name === name);
+  if (!dataset) throw new Error(`Unknown GIS dataset: ${name}`);
+  
+  if (loadedGISDatasets.has(name)) {
+    console.log(`[DataEngine] GIS dataset already loaded: ${name}`);
+    return;
+  }
+
+  const url = `${GIS_BASE_URL}/${dataset.filename}`;
+  console.log(`[DataEngine] Loading GIS dataset: ${name} from ${url}`);
+
+  try {
+    // Fetch the file
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    }
+    
+    const data = await response.arrayBuffer();
+    
+    // Cache it if caching is enabled
+    if (CACHE_ENABLED) {
+      const cacheData = data.slice(0);
+      cacheParquet(url, cacheData).catch(err => {
+        console.warn(`[DataEngine] Failed to cache GIS ${name}:`, err);
+      });
+    }
+    
+    // Register with DuckDB
+    await db.registerFileBuffer(dataset.filename, new Uint8Array(data));
+    await conn.query(`CREATE VIEW IF NOT EXISTS ${name} AS SELECT * FROM parquet_scan('${dataset.filename}')`);
+    
+    loadedGISDatasets.add(name);
+    console.log(`[DataEngine] Loaded GIS dataset: ${name}`);
+  } catch (error) {
+    console.error(`[DataEngine] Failed to load GIS dataset ${name}:`, error);
+    throw error;
+  }
+}
+
+/**
+ * Unload a GIS dataset to free memory
+ */
+export async function unloadGISDataset(name: string): Promise<void> {
+  if (!conn) throw new Error('DuckDB not initialized');
+  
+  if (!loadedGISDatasets.has(name)) {
+    return;
+  }
+
+  try {
+    await conn.query(`DROP VIEW IF EXISTS ${name}`);
+    loadedGISDatasets.delete(name);
+    console.log(`[DataEngine] Unloaded GIS dataset: ${name}`);
+  } catch (error) {
+    console.error(`[DataEngine] Failed to unload GIS dataset ${name}:`, error);
+    throw error;
+  }
 }
 
 /**

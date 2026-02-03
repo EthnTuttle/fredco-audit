@@ -6,7 +6,7 @@
  * Features: DuckDB-WASM queries, Chart.js visualizations, shareable query links.
  */
 
-import { initDataEngine, executeQuery, getLoadedTables, getTableSchema, type QueryResult } from './engines/data';
+import { initDataEngine, executeQuery, getLoadedTables, getTableSchema, getAvailableGISDatasets, isGISDatasetLoaded, loadGISDataset, type QueryResult } from './engines/data';
 import { getChartEngine, type ChartType, type ChartOptions } from './engines/chart';
 import { editorEngine } from './engines/editor';
 import { getCacheStats, getStorageQuota, clearCache } from './engines/storage';
@@ -555,7 +555,17 @@ function render(container: HTMLElement): void {
             </div>
             <p class="schema-hint">Click to expand, double-click to query</p>
             <div class="schema-content">
-              <div id="schema-list">Loading...</div>
+              <div class="schema-section">
+                <div class="schema-section-title">Loaded Tables</div>
+                <div id="schema-list">Loading...</div>
+              </div>
+              <div class="schema-section">
+                <div class="schema-section-title">
+                  GIS Datasets
+                  <span class="schema-section-hint">(click to load)</span>
+                </div>
+                <div id="gis-list">Loading...</div>
+              </div>
             </div>
           </aside>
         </main>
@@ -966,6 +976,79 @@ function addStyles(): void {
     .schema-table-name .expand-icon {
       flex-shrink: 0;
     }
+    
+    /* Schema sections */
+    .schema-section {
+      margin-bottom: 1rem;
+    }
+    .schema-section-title {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      padding: 0.5rem 0.25rem 0.25rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .schema-section-hint {
+      font-weight: 400;
+      text-transform: none;
+      opacity: 0.7;
+    }
+    
+    /* GIS dataset items */
+    .gis-item {
+      padding: 0.4rem 0.5rem;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background 0.15s;
+    }
+    .gis-item:hover {
+      background: var(--bg-tertiary);
+    }
+    .gis-item.loading {
+      opacity: 0.6;
+      pointer-events: none;
+    }
+    .gis-item.loaded {
+      background: rgba(0, 217, 255, 0.1);
+    }
+    .gis-item .gis-icon {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+    .gis-item .gis-name {
+      flex: 1;
+      color: var(--text-primary);
+    }
+    .gis-item.loaded .gis-name {
+      color: var(--success);
+    }
+    .gis-item .gis-size {
+      font-size: 0.65rem;
+      color: var(--text-secondary);
+    }
+    .gis-item .gis-status {
+      font-size: 0.65rem;
+      color: var(--success);
+    }
+    .gis-item .gis-spinner {
+      width: 12px;
+      height: 12px;
+      border: 2px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
   `;
   document.head.appendChild(style);
 }
@@ -1011,6 +1094,7 @@ ORDER BY fiscal_year`;
   setupSchemaPanel();
   renderQueryTemplates();
   loadSchemaExplorer();
+  renderGISDatasets();
   updateCacheStatus();
   
   // Update UI to reflect loaded state
@@ -1196,6 +1280,87 @@ function setupSchemaPanel(): void {
   
   toggle?.addEventListener('click', () => {
     panel?.classList.toggle('collapsed');
+  });
+}
+
+function formatSize(bytes: number): string {
+  if (bytes < 1024) return `${bytes} B`;
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(0)} KB`;
+  return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
+}
+
+function renderGISDatasets(): void {
+  const gisList = document.getElementById('gis-list');
+  if (!gisList) return;
+
+  const datasets = getAvailableGISDatasets();
+  
+  gisList.innerHTML = datasets.map(ds => {
+    const loaded = isGISDatasetLoaded(ds.name);
+    return `
+      <div class="gis-item${loaded ? ' loaded' : ''}" data-gis="${ds.name}" title="${ds.description}">
+        <svg class="gis-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+          <line x1="8" y1="2" x2="8" y2="18"></line>
+          <line x1="16" y1="6" x2="16" y2="22"></line>
+        </svg>
+        <span class="gis-name">${ds.name}</span>
+        ${loaded 
+          ? '<span class="gis-status">loaded</span>' 
+          : `<span class="gis-size">${formatSize(ds.size)}</span>`
+        }
+      </div>
+    `;
+  }).join('');
+
+  // Add click handlers
+  gisList.querySelectorAll('.gis-item').forEach(el => {
+    el.addEventListener('click', async () => {
+      const name = el.getAttribute('data-gis');
+      if (!name) return;
+      
+      // If already loaded, just generate a query
+      if (isGISDatasetLoaded(name)) {
+        editorEngine.setValue(`SELECT * FROM ${name} LIMIT 100`);
+        editorEngine.focus();
+        runQuery(`SELECT * FROM ${name} LIMIT 100`);
+        return;
+      }
+      
+      // Show loading state
+      el.classList.add('loading');
+      const sizeSpan = el.querySelector('.gis-size');
+      if (sizeSpan) {
+        sizeSpan.innerHTML = '<div class="gis-spinner"></div>';
+      }
+      
+      try {
+        await loadGISDataset(name);
+        
+        // Update UI
+        el.classList.remove('loading');
+        el.classList.add('loaded');
+        if (sizeSpan) {
+          sizeSpan.outerHTML = '<span class="gis-status">loaded</span>';
+        }
+        
+        // Refresh the schema list to include the new table
+        await loadSchemaExplorer();
+        
+        // Generate a query for it
+        editorEngine.setValue(`SELECT * FROM ${name} LIMIT 100`);
+        editorEngine.focus();
+        runQuery(`SELECT * FROM ${name} LIMIT 100`);
+        
+      } catch (error) {
+        el.classList.remove('loading');
+        if (sizeSpan) {
+          sizeSpan.textContent = 'failed';
+          sizeSpan.style.color = 'var(--accent)';
+        }
+        console.error(`Failed to load GIS dataset ${name}:`, error);
+      }
+    });
   });
 }
 
