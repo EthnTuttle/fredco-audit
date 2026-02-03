@@ -1130,12 +1130,12 @@ function displayTable(result: QueryResult): void {
   }
 
   const headerHtml = result.columns.map(col => 
-    `<th style="padding: 0.5rem; text-align: left; border-bottom: 2px solid var(--border); background: var(--bg-secondary); position: sticky; top: 0; font-weight: 600;">${escapeHtml(col)}</th>`
+    `<th style="padding: 0.5rem; text-align: left; border-bottom: 2px solid var(--border); background: var(--bg-secondary); position: sticky; top: 0; font-weight: 600; white-space: nowrap;">${escapeHtml(col)}</th>`
   ).join('');
   
   const rowsHtml = result.rows.slice(0, 1000).map(row => 
     `<tr>${row.map(cell => 
-      `<td style="padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border);">${escapeHtml(formatCell(cell))}</td>`
+      `<td style="padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); white-space: nowrap;">${escapeHtml(formatCell(cell))}</td>`
     ).join('')}</tr>`
   ).join('');
 
@@ -1146,7 +1146,7 @@ function displayTable(result: QueryResult): void {
       ${result.rows.length > 1000 ? ' | Showing first 1,000' : ''}
     </div>
     <div style="overflow: auto; max-height: calc(100% - 2rem);">
-      <table style="width: 100%; border-collapse: collapse; font-size: 0.8rem;">
+      <table style="min-width: 100%; width: max-content; border-collapse: collapse; font-size: 0.8rem;">
         <thead><tr>${headerHtml}</tr></thead>
         <tbody>${rowsHtml}</tbody>
       </table>
