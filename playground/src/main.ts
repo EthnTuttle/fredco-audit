@@ -585,6 +585,7 @@ function addStyles(): void {
       flex: 1;
       display: flex;
       min-height: 0;
+      overflow: hidden;
     }
     
     .sidebar {
@@ -592,6 +593,16 @@ function addStyles(): void {
       border-right: 1px solid var(--border);
       overflow-y: auto;
       background: var(--bg-secondary);
+      height: 100%;
+    }
+    
+    .editor-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      height: 100%;
+      overflow: hidden;
     }
     .sidebar-section {
       padding: 1rem;
@@ -664,13 +675,6 @@ function addStyles(): void {
       color: var(--accent);
       margin-right: 0.4rem;
       font-size: 0.6rem;
-    }
-    
-    .editor-section {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
     }
     
     .query-panel {
