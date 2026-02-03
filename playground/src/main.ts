@@ -450,6 +450,12 @@ function render(container: HTMLElement): void {
       container.innerHTML = `
         <header class="header">
           <div class="header-left">
+            <a href="../" class="home-btn" title="Back to Home">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </a>
             <h1>Open Frederick Data Playground</h1>
             <span class="header-subtitle">Explore Frederick County, VA public data with SQL</span>
           </div>
@@ -565,8 +571,18 @@ function addStyles(): void {
       align-items: center;
       background: var(--bg-secondary);
     }
-    .header-left { display: flex; align-items: baseline; gap: 1rem; }
+    .header-left { display: flex; align-items: center; gap: 0.75rem; }
     .header h1 { margin: 0; font-size: 1.1rem; font-weight: 600; }
+    .home-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      transition: color 0.15s;
+    }
+    .home-btn:hover {
+      color: var(--accent);
+    }
     .header-subtitle { font-size: 0.8rem; color: var(--text-secondary); }
     .header-right { display: flex; gap: 0.75rem; align-items: center; }
     
