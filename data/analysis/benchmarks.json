@@ -11,6 +11,7 @@
   },
   "comparison_matrix": {
     "latest_year": "FY2024",
+    "note": "FY2024 data from VPAP only includes instruction vs other breakdown. Admin spending detail from FY2022 NCES data.",
     "divisions": [
       "Frederick County",
       "Clarke County",
@@ -24,74 +25,90 @@
         "division_code": "069",
         "division_name": "Frederick County",
         "fiscal_year": "FY2024",
-        "enrollment": 0,
+        "enrollment": 14121,
         "per_pupil_total": 16719,
         "per_pupil_instruction": 12731,
-        "per_pupil_admin": 0,
+        "per_pupil_admin": 1457,
+        "per_pupil_admin_note": "FY2022 NCES data",
         "instruction_ratio": 76.1,
-        "admin_ratio": 0
+        "admin_ratio": 10.4,
+        "admin_ratio_note": "FY2022 NCES data"
       },
       {
         "division_code": "043",
         "division_name": "Clarke County",
         "fiscal_year": "FY2024",
-        "enrollment": 0,
+        "enrollment": 1885,
         "per_pupil_total": 15935,
         "per_pupil_instruction": 11829,
-        "per_pupil_admin": 0,
+        "per_pupil_admin": 1370,
+        "per_pupil_admin_note": "FY2022 NCES data",
         "instruction_ratio": 74.2,
-        "admin_ratio": 0
+        "admin_ratio": 9.2,
+        "admin_ratio_note": "FY2022 NCES data"
       },
       {
         "division_code": "061",
         "division_name": "Fauquier County",
         "fiscal_year": "FY2024",
-        "enrollment": 0,
+        "enrollment": 10658,
         "per_pupil_total": 16992,
         "per_pupil_instruction": 12199,
-        "per_pupil_admin": 0,
+        "per_pupil_admin": 1236,
+        "per_pupil_admin_note": "FY2022 NCES data",
         "instruction_ratio": 71.8,
-        "admin_ratio": 0
+        "admin_ratio": 8.8,
+        "admin_ratio_note": "FY2022 NCES data"
       },
       {
         "division_code": "171",
         "division_name": "Shenandoah County",
         "fiscal_year": "FY2024",
-        "enrollment": 0,
+        "enrollment": 5495,
         "per_pupil_total": 16539,
         "per_pupil_instruction": 11357,
-        "per_pupil_admin": 0,
+        "per_pupil_admin": 1265,
+        "per_pupil_admin_note": "FY2022 NCES data",
         "instruction_ratio": 68.7,
-        "admin_ratio": 0
+        "admin_ratio": 9.3,
+        "admin_ratio_note": "FY2022 NCES data"
       },
       {
         "division_code": "187",
         "division_name": "Warren County",
         "fiscal_year": "FY2024",
-        "enrollment": 0,
-        "per_pupil_total": 0,
+        "enrollment": 4984,
+        "per_pupil_total": 15042,
         "per_pupil_instruction": null,
-        "per_pupil_admin": 0,
-        "instruction_ratio": 0,
-        "admin_ratio": 0
+        "per_pupil_admin": 841,
+        "per_pupil_admin_note": "FY2022 NCES data",
+        "instruction_ratio": null,
+        "instruction_ratio_note": "FY2024 VPAP data unavailable",
+        "admin_ratio": 7.2,
+        "admin_ratio_note": "FY2022 NCES data"
       },
       {
         "division_code": "107",
         "division_name": "Loudoun County",
         "fiscal_year": "FY2024",
-        "enrollment": 0,
+        "enrollment": 81274,
         "per_pupil_total": 21837,
         "per_pupil_instruction": 15875,
-        "per_pupil_admin": 0,
+        "per_pupil_admin": 1949,
+        "per_pupil_admin_note": "FY2022 NCES data",
         "instruction_ratio": 72.7,
-        "admin_ratio": 0
+        "admin_ratio": 10.3,
+        "admin_ratio_note": "FY2022 NCES data"
       }
     ],
     "peer_average": {
-      "division_name": "Peer Average",
-      "per_pupil_total": 17604.4,
-      "per_pupil_instruction": 12798.2,
-      "instruction_ratio": 72.7
+      "division_name": "Peer Average (excl. Frederick)",
+      "enrollment": 20859,
+      "per_pupil_total": 17469,
+      "per_pupil_instruction": 12798,
+      "per_pupil_admin": 1332,
+      "instruction_ratio": 71.7,
+      "admin_ratio": 8.96
     }
   },
   "red_flags": [

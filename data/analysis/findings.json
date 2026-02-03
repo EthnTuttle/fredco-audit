@@ -1,0 +1,226 @@
+{
+  "report_title": "Frederick County Public Schools Administrative Efficiency Audit",
+  "report_subtitle": "Final Findings and Recommendations",
+  "generated_date": "2026-02-02",
+  "audit_period": "FY2020-FY2025",
+  "target_division": {
+    "code": "069",
+    "name": "Frederick County Public Schools",
+    "state": "Virginia"
+  },
+  "peer_divisions": [
+    {"code": "043", "name": "Clarke County", "type": "peer"},
+    {"code": "061", "name": "Fauquier County", "type": "peer"},
+    {"code": "171", "name": "Shenandoah County", "type": "peer"},
+    {"code": "187", "name": "Warren County", "type": "peer"},
+    {"code": "107", "name": "Loudoun County", "type": "peer_larger"}
+  ],
+  "executive_summary": {
+    "overall_assessment": "FAVORABLE - No Evidence of Over-Administration",
+    "key_finding": "Frederick County Public Schools demonstrates the BEST administrative staffing efficiency among all peer districts. The district has the lowest ratio of administrators to students and the lowest percentage of administrative staff.",
+    "summary_points": [
+      "FCPS has 1.73 administrators per 1,000 students - the LOWEST among all peers (peer avg: 3.97)",
+      "Only 1.26% of FCPS staff are administrators - the LOWEST among all peers (peer avg: 3.13%)",
+      "Per-pupil spending is $15,734, which is 10.8% BELOW the Virginia state average of $17,636",
+      "Enrollment grew 2.8% over 4 years while admin positions grew only 4.8% (within acceptable range)",
+      "One area of concern: Admin SPENDING ratio at 10.4% of expenditures (FY2022 NCES) slightly exceeds 10% threshold"
+    ],
+    "conclusion": "Based on staffing data, FCPS is NOT over-administered. The district runs a lean administrative operation compared to peers. However, per-position administrative costs should be monitored."
+  },
+  "detailed_findings": {
+    "finding_1": {
+      "title": "Administrative Staffing Efficiency - EXCELLENT",
+      "status": "GREEN",
+      "metric": "Admin Staff as % of Total Staff",
+      "fcps_value": "1.26%",
+      "peer_average": "3.13%",
+      "state_benchmark": "5-10%",
+      "analysis": "Frederick County has the lowest administrative staffing ratio of any peer district. With only 24.36 admin positions for 14,121 students, FCPS maintains a remarkably lean administrative structure.",
+      "peer_comparison": [
+        {"division": "Frederick County", "value": 1.26, "rank": 1},
+        {"division": "Fauquier County", "value": 2.11, "rank": 2},
+        {"division": "Warren County", "value": 2.43, "rank": 3},
+        {"division": "Shenandoah County", "value": 3.15, "rank": 4},
+        {"division": "Loudoun County", "value": 3.39, "rank": 5},
+        {"division": "Clarke County", "value": 4.33, "rank": 6}
+      ],
+      "data_source": "VDOE Table 18 - Admin Personnel (FY2024)"
+    },
+    "finding_2": {
+      "title": "Students per Administrator - EXCELLENT",
+      "status": "GREEN",
+      "metric": "Students per Admin Position",
+      "fcps_value": "579.7",
+      "peer_average": "248.8",
+      "target": ">250",
+      "analysis": "FCPS has the highest students-per-admin ratio, meaning each administrator serves more students than any peer district. This indicates efficient administrative resource allocation.",
+      "peer_comparison": [
+        {"division": "Frederick County", "value": 579.7, "rank": 1},
+        {"division": "Fauquier County", "value": 327.9, "rank": 2},
+        {"division": "Warren County", "value": 325.8, "rank": 3},
+        {"division": "Shenandoah County", "value": 224.3, "rank": 4},
+        {"division": "Loudoun County", "value": 213.9, "rank": 5},
+        {"division": "Clarke County", "value": 152.3, "rank": 6}
+      ],
+      "data_source": "VDOE Tables 8, 18 (FY2024)"
+    },
+    "finding_3": {
+      "title": "Per-Pupil Spending - BELOW STATE AVERAGE",
+      "status": "YELLOW",
+      "metric": "Total Per-Pupil Expenditure",
+      "fcps_value": "$15,734",
+      "state_average": "$17,636",
+      "variance": "-10.8%",
+      "analysis": "FCPS spends 10.8% less per student than the Virginia state average. This indicates fiscal conservatism but also suggests the district may be under-resourced compared to state norms. Local funding ($7,383/pupil) is below the state average ($8,403/pupil).",
+      "peer_comparison": [
+        {"division": "Warren County", "value": 15042, "rank": 1},
+        {"division": "Clarke County", "value": 15165, "rank": 2},
+        {"division": "Frederick County", "value": 15734, "rank": 3},
+        {"division": "Shenandoah County", "value": 16081, "rank": 4},
+        {"division": "Fauquier County", "value": 16351, "rank": 5},
+        {"division": "Loudoun County", "value": 21183, "rank": 6}
+      ],
+      "data_source": "VDOE Table 15 (FY2024)"
+    },
+    "finding_4": {
+      "title": "Administrative Spending Ratio - BORDERLINE",
+      "status": "YELLOW",
+      "metric": "Admin Expenditures as % of Total Current Expenditures",
+      "fcps_value": "10.4%",
+      "peer_average": "8.96%",
+      "threshold": "10%",
+      "analysis": "While FCPS has the fewest admin POSITIONS, admin SPENDING as a percentage of total expenditures is slightly elevated at 10.4%. This suggests that per-position admin costs (salary, benefits) may be higher than average. This metric should be monitored.",
+      "context": "This data is from FY2022 NCES. More recent detailed expenditure breakdowns are not yet available. The discrepancy between excellent staffing ratios and borderline spending ratios suggests high per-position compensation.",
+      "peer_comparison": [
+        {"division": "Warren County", "value": 7.2, "rank": 1},
+        {"division": "Fauquier County", "value": 8.8, "rank": 2},
+        {"division": "Clarke County", "value": 9.2, "rank": 3},
+        {"division": "Shenandoah County", "value": 9.3, "rank": 4},
+        {"division": "Loudoun County", "value": 10.3, "rank": 5},
+        {"division": "Frederick County", "value": 10.4, "rank": 6}
+      ],
+      "data_source": "NCES Common Core of Data (FY2022)"
+    },
+    "finding_5": {
+      "title": "Enrollment vs. Admin Growth - ACCEPTABLE",
+      "status": "GREEN",
+      "metric": "4-Year Growth Rate Comparison",
+      "enrollment_growth": "+2.8% (CAGR 0.69%)",
+      "admin_growth": "+4.8% (CAGR 1.18%)",
+      "ratio": "1.7x",
+      "threshold": "Admin growth should not exceed 2x enrollment growth",
+      "analysis": "Admin position growth has outpaced enrollment growth by 1.7x over 4 years. This is within the acceptable range (<2x). The growth is minimal in absolute terms: from 23.24 to 24.36 positions (only 1.12 additional positions).",
+      "trend_data": {
+        "years": ["2019-20", "2020-21", "2021-22", "2022-23", "2023-24"],
+        "enrollment": [13736, 13131, 13747, 13441, 14121],
+        "admin_positions": [23.24, 24.0, 24.0, 24.08, 24.36]
+      },
+      "data_source": "VDOE Tables 8, 18 (FY2020-FY2024)"
+    },
+    "finding_6": {
+      "title": "County Budget Share - DECLINING",
+      "status": "YELLOW",
+      "metric": "School Funds as % of Total County Budget",
+      "fy2020_value": "60.8%",
+      "fy2025_value": "57.0%",
+      "change": "-3.8 percentage points",
+      "analysis": "The school system's share of the total county budget has declined from 60.8% in FY2020 to 57.0% in FY2025. While county transfers to schools have increased in absolute dollars ($106.7M to $133.5M), other county spending has grown faster.",
+      "note": "This is a county budget allocation issue, not a school administration issue.",
+      "data_source": "Frederick County Adopted Budgets (FY2020-FY2025)"
+    },
+    "finding_7": {
+      "title": "Instruction Spending Ratio - GOOD",
+      "status": "GREEN",
+      "metric": "Instructional Expenditures as % of Total",
+      "fcps_value": "76.1%",
+      "peer_average": "72.7%",
+      "target": ">65%",
+      "analysis": "FCPS directs 76.1% of spending to instruction, which is above the peer average and well above the 65% target. This is a strong indicator that resources are prioritized for classroom activities.",
+      "note": "FY2024 VPAP data uses a broader 'instruction' category than NCES.",
+      "data_source": "VPAP (FY2024)"
+    }
+  },
+  "red_flags_summary": {
+    "critical_flags": [],
+    "warning_flags": [
+      {
+        "flag": "Admin spending ratio at 10.4%",
+        "severity": "WARNING",
+        "explanation": "Slightly exceeds 10% threshold. Driven by per-position costs, not headcount.",
+        "recommendation": "Review admin compensation benchmarks and consider if positions can be consolidated."
+      },
+      {
+        "flag": "Declining school share of county budget",
+        "severity": "INFO",
+        "explanation": "Schools' share declined from 60.8% to 57.0% of county budget.",
+        "recommendation": "This is a county policy decision, not a school efficiency issue. Advocate for maintained funding levels."
+      }
+    ],
+    "favorable_indicators": [
+      "Lowest admin-to-student ratio among peers (1.73 per 1,000)",
+      "Lowest admin staff percentage (1.26%)",
+      "Highest students-per-admin ratio (579.7)",
+      "Strong instruction spending ratio (76.1%)",
+      "Below-average total per-pupil spending (fiscally conservative)"
+    ]
+  },
+  "recommendations": [
+    {
+      "priority": "LOW",
+      "area": "Admin Compensation",
+      "recommendation": "Conduct a salary benchmarking study to understand why admin SPENDING is borderline despite excellent admin STAFFING ratios. This may reveal opportunities for cost optimization without reducing positions."
+    },
+    {
+      "priority": "MEDIUM",
+      "area": "County Funding Advocacy",
+      "recommendation": "Present this audit data to the Board of Supervisors to demonstrate efficient school operations and advocate for maintained or increased funding share."
+    },
+    {
+      "priority": "LOW",
+      "area": "Continued Monitoring",
+      "recommendation": "Monitor admin position growth vs. enrollment. Current trajectory is acceptable but should not accelerate."
+    }
+  ],
+  "data_sources": [
+    {
+      "source": "VDOE Superintendent's Annual Report",
+      "tables_used": ["Table 8 (Enrollment)", "Table 15 (Expenditures)", "Table 17 (Ratios)", "Table 18 (Admin Personnel)", "Table 19 (Instructional Staff)"],
+      "years": "FY2020-FY2024",
+      "url": "https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/superintendent-s-annual-report"
+    },
+    {
+      "source": "Frederick County Adopted Budgets",
+      "years": "FY2020-FY2025",
+      "url": "https://fcva.us/departments/finance/budget"
+    },
+    {
+      "source": "NCES Common Core of Data",
+      "years": "FY2022",
+      "url": "https://nces.ed.gov/ccd/"
+    },
+    {
+      "source": "Virginia Public Access Project (VPAP)",
+      "years": "FY2024",
+      "url": "https://www.vpap.org/visuals/visual/back-to-school-spending-on-teaching-fy2024"
+    },
+    {
+      "source": "Virginia Auditor of Public Accounts (APA)",
+      "document": "Comparative Report",
+      "years": "FY2024",
+      "url": "https://www.apa.virginia.gov"
+    }
+  ],
+  "methodology_notes": [
+    "Admin staffing ratios calculated from VDOE Table 18 administrative positions divided by total staff and enrollment.",
+    "Per-pupil spending from VDOE Table 15 includes local, state, federal, and sales tax funding sources.",
+    "Admin spending percentage (10.4%) is from FY2022 NCES data, the most recent available with detailed expenditure breakdown.",
+    "VPAP FY2024 data uses a simplified 'instruction vs. other' categorization that does not break out admin separately.",
+    "Peer average calculations exclude Frederick County to provide an external benchmark."
+  ],
+  "limitations": [
+    "NCES detailed expenditure data is 2 years delayed (FY2022 most recent).",
+    "VDOE FY2025 expenditure data not yet released; enrollment data is current.",
+    "Warren County FY2024 VPAP data was unavailable.",
+    "Different data sources use different categorization schemes, requiring careful interpretation."
+  ]
+}

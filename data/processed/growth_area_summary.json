@@ -1,0 +1,172 @@
+{
+  "total_parcels": 50442,
+  "matched_with_tax": 48357,
+  "in_uda": 21793,
+  "in_lrlu": 21559,
+  "total_assessed_value": 19057221158.0,
+  "uda_value": 9066782918.0,
+  "lrlu_value": 9225473829.0,
+  "by_land_use": [
+    {
+      "land_use_plan": "Residential",
+      "parcels": 14238,
+      "total_value": 5355442440.0,
+      "acres": 30149399.0,
+      "avg_value": 376137.0
+    },
+    {
+      "land_use_plan": "PUD",
+      "parcels": 2651,
+      "total_value": 1334313100.0,
+      "acres": 2472866.0,
+      "avg_value": 503324.0
+    },
+    {
+      "land_use_plan": "Industrial",
+      "parcels": 373,
+      "total_value": 945830400.0,
+      "acres": 137209.0,
+      "avg_value": 2535738.0
+    },
+    {
+      "land_use_plan": "Community Center",
+      "parcels": 1085,
+      "total_value": 398883500.0,
+      "acres": 551085.0,
+      "avg_value": 367635.0
+    },
+    {
+      "land_use_plan": "Urban Center",
+      "parcels": 970,
+      "total_value": 387094389.0,
+      "acres": 1764271.0,
+      "avg_value": 399066.0
+    },
+    {
+      "land_use_plan": "High-Density Re*",
+      "parcels": 787,
+      "total_value": 203496600.0,
+      "acres": 1757003.0,
+      "avg_value": 258573.0
+    },
+    {
+      "land_use_plan": "Business",
+      "parcels": 199,
+      "total_value": 194839600.0,
+      "acres": 21303.0,
+      "avg_value": 979093.0
+    },
+    {
+      "land_use_plan": "B2 / B3",
+      "parcels": 186,
+      "total_value": 189972100.0,
+      "acres": 3369109.0,
+      "avg_value": 1021355.0
+    },
+    {
+      "land_use_plan": "Airport Support",
+      "parcels": 148,
+      "total_value": 107275900.0,
+      "acres": 54366.0,
+      "avg_value": 724837.0
+    },
+    {
+      "land_use_plan": "SNA",
+      "parcels": 118,
+      "total_value": 40708600.0,
+      "acres": 879.0,
+      "avg_value": 344988.0
+    },
+    {
+      "land_use_plan": "MUIO",
+      "parcels": 60,
+      "total_value": 31814600.0,
+      "acres": 1876.0,
+      "avg_value": 530243.0
+    },
+    {
+      "land_use_plan": "Neighborhood Vi*",
+      "parcels": 29,
+      "total_value": 11163600.0,
+      "acres": 21101.0,
+      "avg_value": 384952.0
+    },
+    {
+      "land_use_plan": "Mixed-Use",
+      "parcels": 28,
+      "total_value": 5791000.0,
+      "acres": 68253.0,
+      "avg_value": 206821.0
+    },
+    {
+      "land_use_plan": "Employment",
+      "parcels": 14,
+      "total_value": 3377700.0,
+      "acres": 50.0,
+      "avg_value": 241264.0
+    },
+    {
+      "land_use_plan": "Planned Unit Dev",
+      "parcels": 4,
+      "total_value": 3347000.0,
+      "acres": 26.0,
+      "avg_value": 836750.0
+    },
+    {
+      "land_use_plan": "Interstate Buf*",
+      "parcels": 13,
+      "total_value": 2513700.0,
+      "acres": 12327.0,
+      "avg_value": 193362.0
+    },
+    {
+      "land_use_plan": "MUCO",
+      "parcels": 10,
+      "total_value": 2305500.0,
+      "acres": 29.0,
+      "avg_value": 230550.0
+    },
+    {
+      "land_use_plan": "Institutional",
+      "parcels": 12,
+      "total_value": 2230100.0,
+      "acres": 18749.0,
+      "avg_value": 185842.0
+    },
+    {
+      "land_use_plan": "Extractive Minin",
+      "parcels": 12,
+      "total_value": 1826200.0,
+      "acres": 62.0,
+      "avg_value": 152183.0
+    },
+    {
+      "land_use_plan": "Park",
+      "parcels": 6,
+      "total_value": 1520900.0,
+      "acres": 49.0,
+      "avg_value": 253483.0
+    },
+    {
+      "land_use_plan": "Heavy Industrial",
+      "parcels": 10,
+      "total_value": 1023300.0,
+      "acres": 46.0,
+      "avg_value": 102330.0
+    },
+    {
+      "land_use_plan": "Commercial Rec",
+      "parcels": 2,
+      "total_value": 440400.0,
+      "acres": 4.0,
+      "avg_value": 220200.0
+    },
+    {
+      "land_use_plan": "Recreation",
+      "parcels": 1,
+      "total_value": 263200.0,
+      "acres": 4.0,
+      "avg_value": 263200.0
+    }
+  ]
+}

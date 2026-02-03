@@ -1,5 +1,10 @@
 {
   "processed_date": "2026-01-28T22:55:19.396409",
+  "note": "Admin spending % data is from FY2022 NCES. VPAP FY2024 data only includes instruction vs other breakdown, not detailed admin. FY2024 admin_pct values of 0 indicate data not available from VPAP source.",
+  "data_sources": {
+    "FY2022": "NCES Common Core of Data - detailed expenditure breakdown",
+    "FY2024": "VPAP - instruction vs other only, no admin detail"
+  },
   "divisions": [
     {
       "division_code": "069",

@@ -1,0 +1,839 @@
+[
+  {
+    "project_name": "Fourth High School",
+    "project_type": "school",
+    "cost_estimate": 149104825,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: This new high school project is proposed to serve students in grades 9-12 with a program capacity of 1,285 students and a core capacity of 1,600 students, and will address overcrowding and anticipated growth in high school student enrollment in the school division. The site is located at the end of Justes Drive behind Admiral Byrd MS. This school will be designed similar to the renovations at James Wood HS, with a variety of learning spaces to meet the needs of a variety of learning"
+  },
+  {
+    "project_name": "Middletown Elementary School Expansion",
+    "project_type": "school",
+    "cost_estimate": 22400000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: Middletown ES opened in 1989 and has served continuously as a K-5 elementary school since that time. The school contains 70,281 square feet and has a program capacity of 527 students. As of November 8, 2024, the school has 640 students. Ten general education classrooms, 1 special education classroom, a teacher planning room, and a gymnasium will be added. The existing gym will be renovated into additional art and music classrooms, and the cafeteria will be expanded. Planning and des"
+  },
+  {
+    "project_name": "Bass-Hoover Elementary School Renovation",
+    "project_type": "school",
+    "cost_estimate": 20621715,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: Bass-Hoover ES opened in 1975 and serves as a K-5 elementary school. The school contains 75,257 square feet and has a program capacity of 580 students. As of November 8, 2024, the school has 610 students. A school specific renovation is proposed, which would include a mixture of light and heavy renovations to the entire facility except recent work done by Facilities Services. No renovation will be done to the kindergarten addition.\n\nCapital Cost: $20,621,715\n \nJustification: Bass-Ho"
+  },
+  {
+    "project_name": "Apple Pie Ridge Elementary School Renovation",
+    "project_type": "school",
+    "cost_estimate": 19024121,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: Apple Pie Ridge ES opened in 1974 and serves as a K-5 elementary school.  The school contains 65,120 square feet and has a program capacity of 509 students. As of November 8, 2024, the school has 388 students.  A school specific renovation is proposed, which would include a mixture of light and heavy renovations to the entire facility except recent work done by Facilities Services and the kindergarten area, which was renovated in 2008. Planning and design should take 9 months. Const"
+  },
+  {
+    "project_name": "Jordan Springs Elementary School Expansion",
+    "project_type": "school",
+    "cost_estimate": 13600000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: Jordan Springs ES opened in 2020 and serves as a K-5 elementary school. The school contains 84,375 square feet and has a program capacity of 500 students. As of November 8, 2024, the school has 660 students. Twelve general education classrooms and a gym expansion will be added. Two resource rooms will be relocated, and the dining area expanded. Planning and design should take 9 months. Construction should take 24 months. This project should be complete and the expansion open in Augu"
+  },
+  {
+    "project_name": "Onsite Traffic Safety Improvements",
+    "project_type": "school",
+    "cost_estimate": 2364184,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: AES, GES, IHES and GMES are experiencing ongoing traffic safety concerns that require more than operational funds allow. Proposed improvements include driveway queuing capacity, efficient site arrangement, and safe access to public roads. Planning and design should take 9 months.  Construction work that would block traffic flows would ideally occur during summer breaks, with other work occurring in between. If done 2 sites at a time, construction should take 2 summers.\n\nCapital Cost"
+  },
+  {
+    "project_name": "New Station 22",
+    "project_type": "fire_rescue_station",
+    "cost_estimate": 9300000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: Fire Station 22 will be a three-bay drive through fire station that will house upon opening an Engine, Ambulance, and Tanker. It will also allow for the expansion of apparatus to include brush fire apparatus and other potential needed apparatus for the area as growth will determine. The fire station will provide 24-hour coverage and will require living quarters for up to 12 firefighters. The living quarters will provide a physical training area, laundry/decontamination facilities, k"
+  },
+  {
+    "project_name": "Station 16 Replacement",
+    "project_type": "fire_rescue_station",
+    "cost_estimate": 8800000,
+    "fiscal_years": [
+      "FY27",
+      "FY30"
+    ],
+    "status": "planned",
+    "description": "Description: This would be a total replacement of the current Station 17. This project would require land acquisition, and a new 12,000 square foot station built on the site. The station would be moved due to the current stream that runs through the property and to allow for more efficient response times to the citizens. In FY 27 a site study would be completed to locate the best area for the station and then the acquisition of the land.  The station design and build would not take place until a"
+  },
+  {
+    "project_name": "Station 11 Renovation",
+    "project_type": "fire_rescue_station",
+    "cost_estimate": 1810000,
+    "fiscal_years": [
+      "FY26"
+    ],
+    "status": "funded",
+    "description": "Description: The original fire station buildings are structurally deficient and will need to be demolished to make way for the construction of a new addition. This addition will allow for new living facilities to be added along with upgrades to the current kitchen facilities and replacement of the existing roof on the existing station. This will project will coincide with approved increase in assigned staffing for the station. This project, if funded, would move forward with an architect to deve"
+  },
+  {
+    "project_name": "Station 12 Renovation",
+    "project_type": "fire_rescue_station",
+    "cost_estimate": 1700500,
+    "fiscal_years": [
+      "FY28"
+    ],
+    "status": "planned",
+    "description": "Description: This project will include the construction of two additions. The first addition would be for new modern apparatus bays to house the apparatus. This station is limited to the apparatus that can be bought or station there due to the height of the bay doors and the length of the station. The second addition would be to address additional living quarters to assist with the future planned increase in staffing needed at the station. This project would go to design and construction in FY 2"
+  },
+  {
+    "project_name": "New Station 23",
+    "project_type": "fire_rescue_station",
+    "cost_estimate": 1500000,
+    "fiscal_years": [
+      "FY26",
+      "FY30"
+    ],
+    "status": "planned",
+    "description": "Description: Fire Station 23 will be a three-bay drive through fire station that will house upon opening an Engine, Ambulance. It will also allow for the expansion of apparatus to include brush fire apparatus and other potentially needed apparatus for the area as growth will determine. The fire station will provide 24-hour coverage and will require living quarters for up to 12 firefighters. The living quarters will provide a physical training area, laundry/decontamination facilities, kitchen/din"
+  },
+  {
+    "project_name": "Station 17 Replacement",
+    "project_type": "fire_rescue_station",
+    "cost_estimate": 1500000,
+    "fiscal_years": [
+      "FY27",
+      "FY30"
+    ],
+    "status": "planned",
+    "description": "Description: This would be a total replacement of the current Station 17. This project would require land acquisition, and a new 12,000 square foot station built on the site. The station would be moved due to the current stream that runs through the property and to allow for more efficient response times to the citizens. In FY 27 a site study would be completed to locate the best area for the station and then the acquisition of the land.  The station design and build would not take place until a"
+  },
+  {
+    "project_name": "Station 14 Renovation",
+    "project_type": "fire_rescue_station",
+    "cost_estimate": 1005000,
+    "fiscal_years": [
+      "FY30"
+    ],
+    "status": "planned",
+    "description": "Description: This project would be an addition for living quarters. This will expand on the kitchen area, showers/bathrooms, locker rooms and sleeping areas. The project will also address the replacement of the entire roof covering on the existing station. This project would be started in FY 30 with design and construction.\n    \nCapital Cost: $1,005,000\n\nJustification: The stations in the Frederick County Fire and Rescue System were evaluated by a contracted architect to evaluate each individual"
+  },
+  {
+    "project_name": "Station 19 Renovation",
+    "project_type": "fire_rescue_station",
+    "cost_estimate": 945600,
+    "fiscal_years": [
+      "FY29"
+    ],
+    "status": "planned",
+    "description": "Description: This project includes the construction of a new living quarters addition to house additional volunteer and career staffing. This would address bathrooms, showers, locker rooms and sleeping quarters. The station had a recent addition of apparatus space financed by the volunteers leadership. In this addition process we will also address upgrades to the apron area and parking lot improvements needed. The design and construction of this project would start in FY 29.\n    \nCapital Cost: $"
+  },
+  {
+    "project_name": "Station 20 Renovation",
+    "project_type": "fire_rescue_station",
+    "cost_estimate": 945600,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": null
+  },
+  {
+    "project_name": "Tower 16 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 2300000,
+    "fiscal_years": [
+      "FY27",
+      "FY29"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be an NFPA 1901 approved aerial device to replace the current Tower 16. The aerial apparatus will have a minimum 95ft aerial device on the apparatus. The aerial device will carry a large complement of ground ladders and other specialized tools for firefighting operations. The aerial device will be on a custom chassis and hold five firefighters. This apparatus order would be placed in FY 27 and delivered during FY29/30. The current fire apparatus construction market"
+  },
+  {
+    "project_name": "Rescue Squad 20 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 1590710,
+    "fiscal_years": [
+      "FY28",
+      "FY30",
+      "FY31"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a NFPA 1901 approved rescue engine to replace the current Rescue Engine 20. The rescue squad will carry a large compliment specialized rescue tools for vehicle extrication, technical rescues, hazardous materials equipment, and specialized tools for firefighting operations. This apparatus order would be placed in FY 28 with construction on the vehicle would not be started until FY30 and delivered during FY31. The current fire apparatus construction market is seei"
+  },
+  {
+    "project_name": "Rescue Squad 21 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 1500000,
+    "fiscal_years": [
+      "FY23",
+      "FY27",
+      "FY29"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a NFPA 1901 approved rescue squad to replace the current Rescue Squad 21. The rescue will carry a large compliment specialized rescue tools for vehicle extrication, technical rescues, hazardous materials equipment, and specialized tools for firefighting operations. This apparatus order would be placed in FY 27 with construction on the vehicle would not be started until FY29 and delivered during FY23. The current fire apparatus construction market is seeing 24 to"
+  },
+  {
+    "project_name": "Engine 21 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 1450000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": null
+  },
+  {
+    "project_name": "Engine 13 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 1430000,
+    "fiscal_years": [
+      "FY26",
+      "FY27",
+      "FY29"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a NFPA 1901 approved fire Engine to be placed in Station 13. The fire engine will be a custom-built fire engine on a single axle with the minimum fire pump of 1,500 gpm and 750 gallons of water. This fire engine will be designed to hold five firefighters and be equipped with a class A foam system along with many other firefighting equipment. This will be replacing their current engine that is need of replacement due to age and condition. This apparatus order wou"
+  },
+  {
+    "project_name": "Engine 22 (New Station 22 Apparatus)",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 1395000,
+    "fiscal_years": [
+      "FY26",
+      "FY28",
+      "FY29"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a NFPA 1901 approved fire Engine to be placed in Station 22. The fire engine will be a custom-built fire engine on a single axle with the minimum fire pump of 1,500 gpm and 750 gallons of water. This fire engine will be designed to hold five firefighters and be equipped with a class A foam system along with many other firefighting tools and equipment. This apparatus order would be placed in FY 26 with construction on the vehicle would not be started until FY28 a"
+  },
+  {
+    "project_name": "Engine 12 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 1390000,
+    "fiscal_years": [
+      "FY28",
+      "FY30",
+      "FY31"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a NFPA 1901 approved fire Engine to be placed in Station 12. The fire engine will be a custom-built fire engine on a single axle with the minimum fire pump of 1,500 gpm and 1,500 gallons of water. This fire engine will be designed to hold five firefighters and be equipped with a class A foam system along with many other firefighting equipment. This will be replacing their current engine that is need of replacement due to age and condition. This apparatus order w"
+  },
+  {
+    "project_name": "Engine 15 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 1320000,
+    "fiscal_years": [
+      "FY28",
+      "FY30",
+      "FY31"
+    ],
+    "status": "planned",
+    "description": "Description: The current Engine 15 needs replacement as it has met the criteria set forth in the Frederick County Fire and Rescue Apparatus Replacement Plan. This plan addresses the age, mileage, engine hours, out of service time, and repair costs over the life of the apparatus. This apparatus order would be placed in FY 28 with construction on the vehicle would not be started until FY30 and delivered during FY31. The current fire apparatus construction market is seeing 24 to 36 months for compl"
+  },
+  {
+    "project_name": "Attack 14 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 808500,
+    "fiscal_years": [
+      "FY28"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a NFPA 1901 approved Brush Unit. This vehicle will serve a special purpose in the fire and rescue system. This apparatus will be constructed on a standard single axle vehicle with four-wheel drive capabilities. This apparatus will have a minimum 75gpm pump with a minimum of 100 gallons of water and a class A foam system for fire suppression efforts. This apparatus will be specially designed to respond to wildland incidents. The Fire and Rescue system has many ar"
+  },
+  {
+    "project_name": "Attack 16 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 808500,
+    "fiscal_years": [
+      "FY28"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a NFPA 1901 approved Brush Unit. This vehicle will serve a special purpose in the fire and rescue system. This apparatus will be constructed on a standard single axle vehicle with four-wheel drive capabilities. This apparatus will have a minimum 75gpm pump with a minimum of 100 gallons of water and a class A foam system for fire suppression efforts. This apparatus will be specially designed to respond to wildland incidents. The Fire and Rescue system has many ar"
+  },
+  {
+    "project_name": "Tanker 20 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 805750,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": null
+  },
+  {
+    "project_name": "Tanker 17 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 770000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": null
+  },
+  {
+    "project_name": "Tanker 13 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 770000,
+    "fiscal_years": [
+      "FY28",
+      "FY29",
+      "FY30"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be to purchase an NFPA 1901 compliant Tanker with a commercial cab to serve the district protected by Fire Station 13. This tanker would be a tandem axle commercial cab apparatus that would have a minimum of 2,500 gallons of water and a 1250 gallons per minute fire pump on the apparatus. This piece of apparatus serves the vital fire ground function of bringing water to the areas that are not served by fire hydrants for firefighting operations. The current tanker as"
+  },
+  {
+    "project_name": "Attack 19 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 735000,
+    "fiscal_years": [
+      "FY28"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a NFPA 1901 approved Brush Unit. This vehicle will serve a special purpose in the fire and rescue system. This apparatus will be constructed on a standard single axle vehicle with four-wheel drive capabilities. This apparatus will have a minimum 75gpm pump with a minimum of 100 gallons of water and a class A foam system for fire suppression efforts. This apparatus will be specially designed to respond to wildland incidents. The Fire and Rescue system has many ar"
+  },
+  {
+    "project_name": "Tanker 14 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 700000,
+    "fiscal_years": [
+      "FY26",
+      "FY27",
+      "FY28"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be to purchase an NFPA 1901 compliant Tanker with a commercial cab to serve the district protected by Fire Station 14. This tanker would be a tandem axle commercial cab apparatus that would have a minimum of 2,500 gallons of water and a 1250 gallons per minute fire pump on the apparatus. This piece of apparatus serves the vital fire ground function of bringing water to the areas that are not served by fire hydrants for firefighting operations. The current tanker as"
+  },
+  {
+    "project_name": "Tanker 16 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 700000,
+    "fiscal_years": [
+      "FY26",
+      "FY27",
+      "FY28"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be to purchase an NFPA 1901 compliant Tanker with a commercial cab to serve the district protected by Fire Station 16. This tanker would be a tandem axle commercial cab apparatus that would have a minimum of 2,500 gallons of water and a 1,250 gallons per minute fire pump on the apparatus. This piece of apparatus serves the vital fire ground function of bringing water to the areas that are not served by fire hydrants for firefighting operations. The current tanker a"
+  },
+  {
+    "project_name": "Tanker 19 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 700000,
+    "fiscal_years": [
+      "FY26",
+      "FY27",
+      "FY28"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be to purchase an NFPA 1901 compliant Tanker with a commercial cab to serve the district protected by Fire Station 19. This tanker would be a tandem axle commercial cab apparatus that would have a minimum of 2,500 gallons of water and a 1,250 gallons per minute fire pump on the apparatus. This piece of apparatus serves the vital fire ground function of bringing water to the areas that are not served by fire hydrants for firefighting operations. The current tanker a"
+  },
+  {
+    "project_name": "Ambulance 10-1 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 603750,
+    "fiscal_years": [
+      "FY30",
+      "FY31",
+      "FY32"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a Type I Custom Advanced Life Support Ambulance for station 10. This will be a four wheeled drive ambulance with Advance Life Support capabilities and equipment for the transport of acutely ill patients. This will be replacing their current Ambulance 10-1 that is need of replacement due to age and condition. This apparatus order would be placed in FY 30 with construction on the vehicle would not be started until FY31 and delivered during FY32. The current fire a"
+  },
+  {
+    "project_name": "Ambulance 11-2 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 603750,
+    "fiscal_years": [
+      "FY30",
+      "FY31",
+      "FY32"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a Type I Custom Advanced Life Support Ambulance for station 11. This will be a four wheeled drive ambulance with Advance Life Support capabilities and equipment for the transport of acutely ill patients. This will be replacing their current Ambulance 11-2 that is need of replacement due to age and condition. This apparatus order would be placed in FY 30 with construction on the vehicle would not be started until FY31 and delivered during FY32. The current fire a"
+  },
+  {
+    "project_name": "Ambulance 14-1 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 603750,
+    "fiscal_years": [
+      "FY30",
+      "FY31",
+      "FY32"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a Type I Custom Advanced Life Support Ambulance for station 14. This will be a four wheeled drive ambulance with Advance Life Support capabilities and equipment for the transport of acutely ill patients. This will be replacing their current Ambulance 14-1 that is need of replacement due to age and condition. This apparatus order would be placed in FY30 with construction on the vehicle would not be started until FY31 and delivered during FY32. The current fire ap"
+  },
+  {
+    "project_name": "Ambulance 15-1 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 603750,
+    "fiscal_years": [
+      "FY30",
+      "FY31",
+      "FY32"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a Type I Custom Advanced Life Support Ambulance for station 15. This will be a four wheeled drive ambulance with Advance Life Support capabilities and equipment for the transport of acutely ill patients. This will be replacing their current Ambulance 15-1 that is need of replacement due to age and condition. This apparatus order would be placed in FY 30 with construction on the vehicle would not be started until FY31 and delivered during FY32. The current fire a"
+  },
+  {
+    "project_name": "Ambulance 13-2 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 575000,
+    "fiscal_years": [
+      "FY27",
+      "FY28",
+      "FY29"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a Type I Custom Advanced Life Support Ambulance for station 13. This will be a four wheeled drive ambulance with Advance Life Support capabilities and equipment for the transport of acutely ill patients. This will be replacing their current Ambulance 13-2 that is need of replacement due to age and condition. This apparatus order would be placed in FY 27 with construction on the vehicle would not be started until FY28 and delivered during FY29. The current fire a"
+  },
+  {
+    "project_name": "Ambulance 16-1 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 575000,
+    "fiscal_years": [
+      "FY29",
+      "FY30",
+      "FY31"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a Type I Custom Advanced Life Support Ambulance for station 16. This will be a four wheeled drive ambulance with Advance Life Support capabilities and equipment for the transport of acutely ill patients. This will be replacing their current Ambulance 16-1 that is need of replacement due to age and condition. This apparatus order would be placed in FY29 with construction on the vehicle would not be started until FY30 and delivered during FY31. The current fire ap"
+  },
+  {
+    "project_name": "Ambulance 17-1 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 575000,
+    "fiscal_years": [
+      "FY29",
+      "FY30",
+      "FY31"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a Type I Custom Advanced Life Support Ambulance for station 17. This will be a four wheeled drive ambulance with Advance Life Support capabilities and equipment for the transport of acutely ill patients. This will be replacing their current Ambulance 17-1 that is need of replacement due to age and condition. This apparatus order would be placed in FY 29 with construction on the vehicle would not be started until FY30 and delivered during FY31. The current fire a"
+  },
+  {
+    "project_name": "Ambulance 18-2 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 575000,
+    "fiscal_years": [
+      "FY29",
+      "FY30",
+      "FY31"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a Type I Custom Advanced Life Support Ambulance for station 18. This will be a four wheeled drive ambulance with Advance Life Support capabilities and equipment for the transport of acutely ill patients. This will be replacing their current Ambulance 18-2 that is need of replacement due to age and condition. This apparatus order would be placed in FY 29 with construction on the vehicle would not be started until FY30 and delivered during FY31. The current fire a"
+  },
+  {
+    "project_name": "Ambulance 21-1 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 550000,
+    "fiscal_years": [
+      "FY28",
+      "FY29",
+      "FY30"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a Type I Custom Advanced Life Support Ambulance for station 21. This will be a four wheeled drive ambulance with Advance Life Support capabilities and equipment for the transport of acutely ill patients. This will be replacing their current Ambulance 21-1 that is need of replacement due to age and condition. This apparatus order would be placed in FY 28 with construction on the vehicle would not be started until FY29 and delivered during FY30. The current fire a"
+  },
+  {
+    "project_name": "Ambulance 19-1 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 525000,
+    "fiscal_years": [
+      "FY27",
+      "FY28",
+      "FY29"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a Type I Custom Advanced Life Support Ambulance for station 19. This will be a four wheeled drive ambulance with Advance Life Support capabilities and equipment for the transport of acutely ill patients. This will be replacing their current Ambulance 19-1 that is need of replacement due to age and condition. This apparatus order would be placed in FY 27 with construction on the vehicle would not be started until FY28 and delivered during FY29. The current fire a"
+  },
+  {
+    "project_name": "Ambulance 20-2 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 525000,
+    "fiscal_years": [
+      "FY27",
+      "FY28",
+      "FY29"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a Type I Custom Advanced Life Support Ambulance for station 20. This will be a four wheeled drive ambulance with Advance Life Support capabilities and equipment for the transport of acutely ill patients. This will be replacing their current Ambulance 20-2 that is need of replacement due to age and condition. This apparatus order would be placed in FY 27 with construction on the vehicle would not be started until FY28 and delivered during FY29. The current fire a"
+  },
+  {
+    "project_name": "Ambulance 16-2 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 500000,
+    "fiscal_years": [
+      "FY26",
+      "FY27",
+      "FY28"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a Type I Custom Advanced Life Support Ambulance for station 16. This will be a four wheeled drive ambulance with Advance Life Support capabilities and equipment for the transport of acutely ill patients. This will be replacing their current Ambulance 16-2 that is need of replacement due to age and condition. This apparatus order would be placed in FY 26 with construction on the vehicle would not be started until FY27 and delivered during FY28. The current fire a"
+  },
+  {
+    "project_name": "Brush 19 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 236250,
+    "fiscal_years": [
+      "FY28"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a NFPA 1901 approved Brush Unit. This vehicle will serve a special purpose in the fire and rescue system. This apparatus will be constructed on a standard single axle vehicle with four-wheel drive capabilities. This apparatus will have a minimum 75gpm pump with a minimum of 100 gallons of water and a class A foam system for fire suppression efforts. This apparatus will be specially designed to respond to wildland incidents. The Fire and Rescue system has many ar"
+  },
+  {
+    "project_name": "Brush 20 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 236250,
+    "fiscal_years": [
+      "FY28"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a NFPA 1901 approved Brush Unit. This vehicle will serve a special purpose in the fire and rescue system. This apparatus will be constructed on a standard single axle vehicle with four-wheel drive capabilities. This apparatus will have a minimum 75gpm pump with a minimum of 100 gallons of water and a class A foam system for fire suppression efforts. This apparatus will be specially designed to respond to wildland incidents. The Fire and Rescue system has many ar"
+  },
+  {
+    "project_name": "Brush 11 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 225000,
+    "fiscal_years": [
+      "FY28"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a NFPA 1901 approved Brush Unit. This vehicle will serve a special purpose in the fire and rescue system. This apparatus will be constructed on a standard single axle vehicle with four-wheel drive capabilities. This apparatus will have a minimum 75gpm pump with a minimum of 100 gallons of water and a class A foam system for fire suppression efforts. This apparatus will be specially designed to respond to wildland incidents. The Fire and Rescue system has many ar"
+  },
+  {
+    "project_name": "Brush 16 Replacement",
+    "project_type": "fire_rescue_apparatus",
+    "cost_estimate": 225000,
+    "fiscal_years": [
+      "FY28"
+    ],
+    "status": "planned",
+    "description": "Description: This project will be a NFPA 1901 approved Brush Unit. This vehicle will serve a special purpose in the fire and rescue system. This apparatus will be constructed on a standard single axle vehicle with four-wheel drive capabilities. This apparatus will have a minimum 75gpm pump with a minimum of 100 gallons of water and a class A foam system for fire suppression efforts. This apparatus will be specially designed to respond to wildland incidents. The Fire and Rescue system has many ar"
+  },
+  {
+    "project_name": "Exit 313 Interchange Bridge Replacement",
+    "project_type": "road",
+    "cost_estimate": 63353000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: Replace the structurally deficient bridge at Exit 313 and add limited capacity improvements.\n    \nCapital Cost: $63,353,000\n\nJustification: The bridge on Route 17/50/522 (Millwood Pike) over Interstate 81 at Exit 313 is reaching the end of its service life and needs to be replaced. The new bridge will feature design elements that will accommodate future improvements to the Route 17/50/522 corridor and future improvements to I-81. The interchange configuration will not change with th"
+  },
+  {
+    "project_name": "Exit 317 Interchange Upgrade",
+    "project_type": "road",
+    "cost_estimate": 37590000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: This project seeks to upgrade the existing interchange configuration from a traditional diamond interchange to a diverging diamond interchange. This project will work in coordination with the Exit 317 interchange ramp realignment and the Redbud Road realignment projects for the overall upgrades to the operations of Exit 317. NOTE: VDOT has combined this project with the Exit 317 NB Ramp realignment project so this will be done concurrently.\n    \nCapital Cost: $37,590,000\n\nJustificat"
+  },
+  {
+    "project_name": "Hopewell Road and Brucetown Road Realignment",
+    "project_type": "road",
+    "cost_estimate": 10000000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: This project would align Hopewell Road and Brucetown Road to intersect with each other at Route 11. \n    \nCapital Cost: $10,000,000\n\nJustification: Hopewell Road and Brucetown Road intersect at Route 11 and are currently offset by roughly 150', which creates significant safety challenges at the intersection as well as slows down the movement of vehicles. Aligning these two roads would greatly improve the operational efficiency of the intersection and mitigate safety concerns."
+  },
+  {
+    "project_name": "Gainesboro Road at Route 522 Intersection Upgrade",
+    "project_type": "road",
+    "cost_estimate": 7100000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: This project seeks to upgrade the entrance points into Frederick County Middle School and Gainesboro Elementary School where they access the state road system and improve the intersection of Gainesboro Road and Route 522 to accommodate the traffic shift that will be involved as the schools relocate their primary access point to Gainesboro Road.  \n    \nCapital Cost: $7,100,000 \n\nJustification: This project will improve the safety of traffic in the vicinity of the schools as well as s"
+  },
+  {
+    "project_name": "Warrior Drive Extension (South) including Brandy Lane Upgrade",
+    "project_type": "road",
+    "cost_estimate": 6515527,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: The Warrior Drive extension would add a north-south connection in the vicinity of Sherando High School and provide upgrades to Brandy Lane. NOTE: Staff intends, with Board approval, to submit an additional revenue sharing application to seek more State funds in the summer of 2025. \n    \nCapital Cost: $6,515,527\n\nJustification: This project would provide a key connection between the residential areas east of Stephens City to the existing Warrior Drive segment."
+  },
+  {
+    "project_name": "Route 11 at Old Charlestown Road Roundabout",
+    "project_type": "road",
+    "cost_estimate": 6357000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: Upgrade the temporary signal that is currently in place to the roundabout design that VDOT has identified for this intersection. \n    \nCapital Cost: $6,357,000\n\nJustification: This improvement will improve traffic flow and safety at this intersection while minimizing the impact to traffic throughout north and south on Route 11."
+  },
+  {
+    "project_name": "Redbud Road Realignment",
+    "project_type": "road",
+    "cost_estimate": 5988146,
+    "fiscal_years": null,
+    "status": "under_construction",
+    "description": "Description: The funding of the Exit 317 ramp realignment makes this realignment critical for trips that currently use Redbud Road, which total nearly 3,000 vehicles per day. VDOT requires the Redbud Road realignment in order for the Exit 317 interchange ramp realignment to move forward.  \n    \nCapital Cost: $5,988,146  \n\nJustification: This project is required to be underway in conjunction with or prior to the Exit 317 ramp realignment."
+  },
+  {
+    "project_name": "Exit 317 Interchange Ramp Realignment",
+    "project_type": "road",
+    "cost_estimate": 5874205,
+    "fiscal_years": null,
+    "status": "under_construction",
+    "description": "Description: The funding of the Exit 317 ramp realignment makes this realignment critical for trips that currently use Redbud Road, which total nearly 3,000 vehicles per day. VDOT requires the Redbud Road realignment in order for the Exit 317 interchange ramp realignment to move forward.  \n    \nCapital Cost: $5,988,146  \n\nJustification: This project is required to be underway in conjunction with or prior to the Exit 317 ramp realignment."
+  },
+  {
+    "project_name": "Route 522 and Costello Drive Intersection Upgrade",
+    "project_type": "road",
+    "cost_estimate": 3750000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: This project will implement a double left turn onto Costello Drive from Route 522 southbound as well as reduce conflicting movements from the hotel at that intersection.  \n    \nCapital Cost: $6,673,000 \n\nJustification: This project will increase capacity, reduce backups, and improve safety."
+  },
+  {
+    "project_name": "Warrior Drive Pedestrian Upgrades",
+    "project_type": "road",
+    "cost_estimate": 1590710,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": null
+  },
+  {
+    "project_name": "Route 50 at Back Mountain Road R-Cut Intersection",
+    "project_type": "road",
+    "cost_estimate": 1238000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": null
+  },
+  {
+    "project_name": "Valley Mill Road Pedestrian Upgrades",
+    "project_type": "road",
+    "cost_estimate": 739697,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: Add pedestrian accommodations along Valley Mill Road for approximately 0.11 miles. Funding to come from VDOT Transportation Alternatives Program (TAP).  \n    \nCapital Cost: $739,697\n\nJustification: This project will significantly increase connectivity in the area by filling in key gaps."
+  },
+  {
+    "project_name": "Inverlee Way Pedestrian Upgrades",
+    "project_type": "road",
+    "cost_estimate": 572172,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: Add pedestrian accommodations along Inverlee Way for approximately 0.15 miles from Millwood Pike to Kinross Drive. Funding to come from VDOT Transportation Alternatives Program (TAP). \n    \nCapital Cost: $572,172\n\nJustification: This project will significantly increase connectivity in the area by filling in key gaps."
+  },
+  {
+    "project_name": "Route 277 Right Turn Lane Extension at Warrior Drive",
+    "project_type": "road",
+    "cost_estimate": 570000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: Extend right-turn lane for eastbound Route 277 at the intersection of Route 277 and Warrior Drive. Installation of sidewalk for pedestrian safety and installation of pedestrian pedestal. \n    \nCapital Cost: $570,000\n\nJustification: This improvement would be a significant safety upgrade to this intersection."
+  },
+  {
+    "project_name": "Route 522 Pedestrian Crossing",
+    "project_type": "road",
+    "cost_estimate": 200000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": null
+  },
+  {
+    "project_name": "Recreation Center",
+    "project_type": "park",
+    "cost_estimate": 13210000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: The Recreation Center would be approximately 44,000 square feet and include an indoor area large enough to accommodate a minimum of two basketball courts and an indoor turf field. The court area would also be designed for utilization by indoor soccer, baseball, softball, wrestling, volleyball, pickleball, and badminton with the installation of in-floor sleeves and drop curtains or partitions. This area could also be used for special events such as dances, proms, music events, or cra"
+  },
+  {
+    "project_name": "Old Charlestown Road Park Development",
+    "project_type": "park",
+    "cost_estimate": 5581400,
+    "fiscal_years": [
+      "FY26"
+    ],
+    "status": "planned",
+    "description": "Description: Old Charlestown Road Park is planned for a 24-acre parcel situated on land proffered by the Snowden Bridge development located adjacent to the development and Jordan Springs Elementary School. The park is to include three rectangular athletic fields suitable for league play. Fields, restroom, shelter, playground, hard surface courts, and parking are part of the park concept. Site plan is currently being finalized. LWCF grant (50/50 award) anticipated through DCR grant program. Const"
+  },
+  {
+    "project_name": "Abrams Creek Trail",
+    "project_type": "park",
+    "cost_estimate": 4448236,
+    "fiscal_years": [
+      "FY26",
+      "FY28",
+      "FY30"
+    ],
+    "status": "partially_funded",
+    "description": "Description: 10' wide, asphalt, shared-use trail along Abrams Creek. From Senseny Road to Channing Drive. It is estimated the trail will have six bridge stream crossings and will be approximately 3 miles in length. As outlined below, the project is envisioned in three phases of approximately 1 mile each. Each phase will have logical beginning and ending points and be usable trail sections in themselves. Phase 1 from Senseny Road to Woodstock Lane is funded and underway. Phase 2 from Woodstock La"
+  },
+  {
+    "project_name": "Sherando Park Area 3 Development",
+    "project_type": "park",
+    "cost_estimate": 4140430,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: This project completes the development vision for the SW area of Sherando Park located north of Rt 277. This vision is outlined in the 2016 North Sherando Park Master Plan update. Included are rectangular play fields, a shared use trail segment, roadway and parking, playground, and restroom. The project also includes completion of the Sherando Park Softball Complex.\n \nCapital Cost: $4,140,430 \n \nJustification: This facility would provide recreational opportunities for the entire Fre"
+  },
+  {
+    "project_name": "Spray-ground Sherando Park",
+    "project_type": "park",
+    "cost_estimate": 700000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: Spray-ground addition to Sherando Park is envisioned as a 10-15 feature pad. Intended to supplement existing playgrounds and other recreation-based activities at the parks, the spray-ground would similarly be free to the public. Location at the park would be separate from the existing pool and dictated by infrastructure availability including but not limited to, parking, water, sewer, and electricity. \n \nCapital Cost: $700,000\n \nJustification: Spray-grounds are a popular summer acti"
+  },
+  {
+    "project_name": "Sherando Park Soccer Restroom",
+    "project_type": "park",
+    "cost_estimate": 424000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: Addition of a restroom at the soccer complex at Sherando Park. Restroom is planned to provide facilities to support the restrooms currently being used at the pool complex. Restroom is anticipated to include two female and two male stalls with the entire building being approximately 12\u2019 x 20\u2019 in size.\n \nCapital Cost: $424,000\n \nJustification: The proposed restroom would be placed adjacent to soccer fields at the Sherando Park soccer complex. The addition of the restroom facility in t"
+  },
+  {
+    "project_name": "Bowman Playground",
+    "project_type": "park",
+    "cost_estimate": 420000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: The proposed playground near the Amphitheater on the Bowman Library campus. The playground would accommodate play for children aged 2-12 in an area of approximately 4,000 square feet. Design to be completed in first year of funding with construction award to occur in the following fiscal year.\n \nCapital Cost: $420,000\n \nJustification: The location for the proposed playground would be across the trail to the east of the amphitheater. The playground is envisioned to be well suited for"
+  },
+  {
+    "project_name": "Sherando Lake Trail",
+    "project_type": "park",
+    "cost_estimate": 405000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: This project would add approximately 3,200 linear feet of trail around the Sherando Park lake to create a lake loop trail. The trail would be 8\u2019 in width and asphalt paved. Design to be completed in first year of funding with construction award to occur in the following fiscal year.\n \nCapital Cost: $405,000\n \nJustification: Walking is identified as the top recreational activity and need in the community. The addition of access to more areas along the Sherando Park lake would also pr"
+  },
+  {
+    "project_name": "Playground Replacements - Clearbrook and Frederick Heights Park",
+    "project_type": "park",
+    "cost_estimate": 355000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: This project would replace older existing playgrounds at Clearbrook and Frederick Heights Parks. The playgrounds would accommodate play for children aged 2-12 in an area of approximately 4,000 square feet. Design and construction award to occur in one fiscal year.\n \nCapital Cost: $355,000\n \nJustification: The proposed project would replace the oldest playgrounds in the Parks and Recreation inventory. These playgrounds are nearing the end of their useful lives, are increasingly in ne"
+  },
+  {
+    "project_name": "Sherando NW Parking Expansion",
+    "project_type": "park",
+    "cost_estimate": 300000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: Parking expansion at the main Clearbrook Park parking lot to include the addition of 129 parking spaces. Cost estimate and preliminary design work completed. Site plan/construction document completion and construction award anticipated to occur in one fiscal year. Cost estimate and preliminary design work completed. Site plan/construction document completion and construction award anticipated to occur in one fiscal year.\n \nCapital Cost: $330,000\n \nJustification: The addition is plan"
+  },
+  {
+    "project_name": "Clearbrook Park Parking Expansion",
+    "project_type": "park",
+    "cost_estimate": 300000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: Parking expansion at the main Clearbrook Park parking lot to include the addition of 129 parking spaces. Cost estimate and preliminary design work completed. Site plan/construction document completion and construction award anticipated to occur in one fiscal year. Cost estimate and preliminary design work completed. Site plan/construction document completion and construction award anticipated to occur in one fiscal year.\n \nCapital Cost: $330,000\n \nJustification: The addition is plan"
+  },
+  {
+    "project_name": "Abrams Creek Trailhead Parking",
+    "project_type": "park",
+    "cost_estimate": 300000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: This project is in support of the Abrams Creek Trail and provides a trailhead and parking along Meade Drive to access the Abrams Creek Trail. Parking is envisioned to have 21 spaces including handicap parking.  \n \nCapital Cost: $300,000 \n \nJustification: Access to the Abrams Creek Trail is necessary for trail users to enjoy the trail. Additionally, having a \u201clogical termini\u201d for the Abrams Creek Trail is a necessary component to receive VDOT funding and support."
+  },
+  {
+    "project_name": "Taxiway A Relocation",
+    "project_type": "airport",
+    "cost_estimate": 28000000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: This project will relocate taxiway \u201cA\u201d (approximately 5,500\u2019 long by 35\u2019 wide) within airport owned property to help achieve the overall goal to meet Federal Aviation Administration (FAA) airport standards for weather minimums and airport design criteria.   \n    \nCapital Cost: $28,000,000 \n\nJustification: This project would bring the airport into compliance with current design standards for runway/taxiway separation distances, thereby enhancing the safety of airport operations."
+  },
+  {
+    "project_name": "Northside Site Prep",
+    "project_type": "airport",
+    "cost_estimate": 1800000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: This project involves site preparation for roughly 30 acres of land approved for aeronautical use.\n    \nCapital Cost: $1,800,000    \n\nJustification: The approved Airport Master Plan designates this area for development."
+  },
+  {
+    "project_name": "BIL Eligible Projects",
+    "project_type": "airport",
+    "cost_estimate": 1180000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: The funds will be used to support development projects on the airport's approved master plan, including an environmental assessment, taxiway lighting, and other applications.\n    \nCapital Cost: $1,180,000    \n\nJustification: The Bipartisan Infrastructure Law (BIL) provides funding to public airports that must be fully allocated within a 5-year period."
+  },
+  {
+    "project_name": "Master Plan Update",
+    "project_type": "airport",
+    "cost_estimate": 800000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: The Master Plan update will include future development, aviation forecasts, community impact, and needs assessment. The airport Master Plan was last updated in 2005.\n    \nCapital Cost: $800,000 \n\nJustification: The Master Plan update will ensure continued compliance with the Comprehensive Plan, Regional Development Plans, and the Statewide Aviation System Plan. The Master Plan includes an approved Airport Layout Plan (ALP), which is a requirement under the Federal Aviation Administr"
+  },
+  {
+    "project_name": "Runway 14/32 Rehabilitation",
+    "project_type": "airport",
+    "cost_estimate": 600000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: This project includes the asphalt rehabilitation for the airport's sole 5,500' x 100' runway. The project will likely entail a mill and overlay of the entire surface. Runway was last rehabilitated in 2011. Work will be programmed over two years to include a design phase and construction phase. Routine operation & maintenance will be akin to other airport pavements. Asphalt runways typically have useful life around 20 years.\n    \nCapital Cost: $600,000   \n\nJustification: The project "
+  },
+  {
+    "project_name": "CDD Landfill Area 2 Cell A Expansion",
+    "project_type": "landfill",
+    "cost_estimate": 12500000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: The project will provide Construction/Demolition Debris (CDD) refuse disposal capacity for the next 10 - 15 years. The area of development is approximately 10 acres. Rough grading must be done, which involves removing over 500,000 cubic yards of rock and soil. Then, an approved bottom liner containment system will be constructed in conformance with approved DEQ plans. This project will take 3 years to complete. The project will be funding by the Landfill Enterprise budget. Funding i"
+  },
+  {
+    "project_name": "Tire Recycling Building",
+    "project_type": "landfill",
+    "cost_estimate": 600000,
+    "fiscal_years": null,
+    "status": "funded",
+    "description": "Description: Public Works is currently working with the Northern Shenandoah Valley Regional Commission (NSVRC) and the Regional Tire program (RTOP) in purchasing a tire shredding machine. It may require the construction of a 20,000 square foot building. Once tire processing equipment is purchased, it would be stored in a building at the landfill. The building would be funded by Landfill Enterprise fund or other arrangement with NSVRC. The anticipated ongoing maintenance and operations costs for "
+  },
+  {
+    "project_name": "MSW Landfill Gas Wellfield Expansion, Cell 3A",
+    "project_type": "landfill",
+    "cost_estimate": 350000,
+    "fiscal_years": null,
+    "status": "funded",
+    "description": "Description: This project is for expansion of the landfill methane gas wellfield collection system. As waste decays, it emits gases. Methane gas is collected to manage odors coming from landfill and also to provide a source of fuel for our Landfill Gas Energy Plant that generates 2 megawatts (MW) of power that is sold on the PGM power grid. Funding is available in the Landfill Enterprise fund. Construction of the gas wellfield is anticipated in 2026. Landfill gas must be collected to comply with"
+  },
+  {
+    "project_name": "Project 25 Public Safety Radio Network",
+    "project_type": "communications",
+    "cost_estimate": 10003717,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: Purchase, construction, and deployment of Association of Public-Safety Communications Officials (APCO) Project 25 (P25) radio communications system will support mission-critical public safety communications within the County. This system will provide radio and paging communications for the Frederick County Sheriff's Department, Frederick County Fire & Rescue, volunteer fire & rescue companies, and the Department of Public Safety Communications. Frederick County's current public safe"
+  },
+  {
+    "project_name": "Frederick County Library Branch - Gainesboro",
+    "project_type": "library",
+    "cost_estimate": 969903,
+    "fiscal_years": [
+      "FY24",
+      "FY29"
+    ],
+    "status": "planned",
+    "description": "Description: Proposed new 2,000 square foot (SF) to 4,000 SF library branch with initial parking for at least 10 vehicles in the Gainesboro Magisterial District near Route 50 or Route 522. The library would contain a small commuter collection, books on hold for easy pick up, rental laptops/hotspots, internet stations, notary services, fax/scan/remote printing, a meeting room, and more. The new library would serve a sizeable population of Frederick County that is not being served. The library wil"
+  },
+  {
+    "project_name": "General Government Capital Expenditures",
+    "project_type": "government_building",
+    "cost_estimate": 1000000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: This project consists of a revolving fund in the amount of $1,000,000 for the benefit of General Government Capital Expenditures for purchasing capital equipment for governmental agencies and to allow for improvements to general government facilities. Such expenditure may be less than the established $100,000 departmental threshold. It was determined that the inclusion of such a project would be beneficial in ensuring that the significant capital expense is identified in the County'"
+  },
+  {
+    "project_name": "Sunnyside Office Building",
+    "project_type": "government_building",
+    "cost_estimate": 1000000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: This project entails the demolition of the mostly vacant Sunnyside shopping center, which is roughly 30 years old, has 64,000 SF of floor area, and is located on approximately 10 acres that the County owns. The construction of a new building (size to be determined) would accommodate the relocation of certain county departments from the 107 N. Kent Street complex to address existing and future space needs of county departments. \n\nCapital Cost: $1,000,000 \n \nJustification: This capita"
+  },
+  {
+    "project_name": "Pole Barn Storage Building",
+    "project_type": "sheriff",
+    "cost_estimate": 200000,
+    "fiscal_years": null,
+    "status": "planned",
+    "description": "Description: Approximately 4,500 SF pole barn for storage of specialty vehicles and equipment. \n    \nCapital Cost: $200,000  \n\nJustification: The storage pole barn would help maintain the quality of the vehicles and equipment by protecting them from sunlight and other extreme weather conditions when not in use."
+  }
+]
+
+// Total projects: 88
