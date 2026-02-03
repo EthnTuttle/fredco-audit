@@ -248,10 +248,19 @@ ORDER BY x.metrics_total_per_pupil DESC`
     name: 'Top Property Owners',
     description: 'Largest landowners by assessed value',
     category: 'property',
-    sql: `-- Top 25 property owners
-SELECT * FROM ownership_analysis
-ORDER BY total_value DESC
-LIMIT 25`
+    sql: `-- Top 25 property owners (2024)
+WITH owners AS (
+  SELECT json(top_owners_by_value) as arr
+  FROM ownership_analysis WHERE year = 2024
+)
+SELECT 
+  json_extract_string(json_extract(arr, '$[' || i || ']'), '$.owner') AS "Owner",
+  json_extract(json_extract(arr, '$[' || i || ']'), '$.total_value')::BIGINT AS "Total Value",
+  json_extract(json_extract(arr, '$[' || i || ']'), '$.properties')::INTEGER AS "Properties",
+  json_extract_string(json_extract(arr, '$[' || i || ']'), '$.entity_type') AS "Type"
+FROM owners, generate_series(0, 24) AS t(i)
+WHERE json_extract(arr, '$[' || i || ']') IS NOT NULL
+ORDER BY "Total Value" DESC`
   },
   {
     name: 'Tax Summary',
@@ -335,111 +344,8 @@ WHERE total_from_the_commonwealth > 0
 ORDER BY total_from_the_commonwealth DESC`
   },
 
-  // GIS / Map Queries
-  {
-    name: 'Fire Stations',
-    description: 'Fire station locations with response districts',
-    category: 'gis',
-    sql: `-- Fire station locations (for map view)
-SELECT 
-  geometry,
-  name AS "Station",
-  number AS "Number"
-FROM fire_stations
-ORDER BY number`
-  },
-  {
-    name: 'Fire Districts',
-    description: 'Fire response district boundaries',
-    category: 'gis',
-    sql: `-- Fire district boundaries (for map view)
-SELECT 
-  geometry,
-  name AS "District",
-  number AS "Number"
-FROM fire_districts
-ORDER BY number`
-  },
-  {
-    name: 'Public Schools',
-    description: 'School locations',
-    category: 'gis',
-    sql: `-- School locations (for map view)
-SELECT 
-  geometry,
-  name AS "School"
-FROM public_schools
-ORDER BY name`
-  },
-  {
-    name: 'School Districts',
-    description: 'Elementary school attendance zones',
-    category: 'gis',
-    sql: `-- School attendance districts (for map view)
-SELECT 
-  geometry,
-  name AS "District"
-FROM school_districts
-ORDER BY name`
-  },
-  {
-    name: 'Magisterial Districts',
-    description: 'Board of Supervisors district boundaries',
-    category: 'gis',
-    sql: `-- Supervisor districts (for map view)
-SELECT 
-  geometry,
-  dist_name AS "District"
-FROM magisterial_districts
-ORDER BY dist_id`
-  },
-  {
-    name: 'Eastern Road Plan',
-    description: 'Planned future roads in eastern Frederick',
-    category: 'gis',
-    sql: `-- Eastern Road Plan (for map view)
-SELECT 
-  geometry,
-  road_name AS "Road",
-  status AS "Status"
-FROM eastern_road_plan
-WHERE road_name IS NOT NULL
-LIMIT 200`
-  },
-  {
-    name: 'Future Route 37 Bypass',
-    description: 'Planned Route 37 bypass alignment',
-    category: 'gis',
-    sql: `-- Future Route 37 Bypass (for map view)
-SELECT 
-  geometry,
-  feature AS "Feature"
-FROM future_rt37_bypass`
-  },
-  {
-    name: 'Zoning Map',
-    description: 'Current zoning districts',
-    category: 'gis',
-    sql: `-- Zoning districts (for map view)
-SELECT 
-  geometry,
-  zone AS "Zone",
-  descriptio AS "Description",
-  acres AS "Acres"
-FROM zoning
-LIMIT 500`
-  },
-  {
-    name: 'Conservation Easements',
-    description: 'Protected land under conservation easement',
-    category: 'gis',
-    sql: `-- Conservation easements (for map view)
-SELECT 
-  geometry,
-  label AS "Name"
-FROM conservation_easements
-ORDER BY label`
-  },
+  // GIS / Map Queries - TODO: Add GIS parquet files to data engine
+  // GIS data is available in data/processed/gis/ but not yet integrated
 ];
 
 // ============================================================================
