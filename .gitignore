@@ -31,6 +31,9 @@ data/raw/**/*.html
 # Processed data - temp files only
 data/processed/temp/*.json
 
+# OCR output (large - ~164MB for all years)
+data/processed/ocr/
+
 # Analysis outputs
 !data/analysis/.gitkeep
 !data/analysis/dashboards/.gitkeep

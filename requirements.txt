@@ -24,6 +24,13 @@ kaleido>=0.2.1
 # JSON schema validation
 jsonschema>=4.17.0
 
+# Anthropic API (OCR via Batch API)
+anthropic>=0.40.0
+
+# PDF to image conversion (for OCR pipeline)
+pdf2image>=1.16.0
+Pillow>=10.0.0
+
 # Utilities
 python-dateutil>=2.8.0
 tqdm>=4.65.0
