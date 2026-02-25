@@ -81,16 +81,110 @@ def lookup_owner_from_gis(account_number: str) -> Optional[dict]:
 
 # Known districts in Frederick County (including common OCR errors)
 DISTRICT_MAPPING = {
+    # Back Creek
     "BACK CREEK": "Back Creek",
-    "BACK CREEN": "Back Creek",  # OCR error
+    "BACK CREEN": "Back Creek",
+    "BACK CHECK": "Back Creek",
+    "BACK ORDER": "Back Creek",
+    "BACK CROSS": "Back Creek",
+    "BACK CLOSER": "Back Creek",
+    "BACK CKEER": "Back Creek",
+    "BACK CRDER": "Back Creek",
+    "BACK CREDIT": "Back Creek",
+    "BACK CHKBK": "Back Creek",
+    "HACK CREEK": "Back Creek",
+    "HACK CHECK": "Back Creek",
+    "SACS CREEK": "Back Creek",
+    "SACK CREEK": "Back Creek",
+    "SACI CREEK": "Back Creek",
+    "RACE CREEK": "Back Creek",
+    # Gainesboro
     "GAINESBORO": "Gainesboro",
+    "GAINSBORO": "Gainesboro",
+    "GAISERSBORG": "Gainesboro",
+    "GAISBORO": "Gainesboro",
+    "GAIESBURG": "Gainesboro",
+    "GATHERSBURG": "Gainesboro",
+    "GAUDENSESKO": "Gainesboro",
+    "GAUDERSBO": "Gainesboro",
+    "GUNPOWDERKO": "Gainesboro",
+    "GUNSBORO": "Gainesboro",
+    "GUESSBORO": "Gainesboro",
+    "GUEESSBORO": "Gainesboro",
+    "GUENESBORO": "Gainesboro",
+    "GUNNESBORO": "Gainesboro",
+    "GUNDESBURO": "Gainesboro",
+    "GUNDESSKO": "Gainesboro",
+    "GUTTERSCKO": "Gainesboro",
+    "GAUZESBORO": "Gainesboro",
+    "GAINESVILLE": "Gainesboro",
+    "GAINSBOROUGH": "Gainesboro",
+    "GAUNDEBORO": "Gainesboro",
+    "GATNESBSRO": "Gainesboro",
+    "GAINSSESKO": "Gainesboro",
+    "GENBDGDN": "Gainesboro",
+    "GEOSCIN": "Gainesboro",
+    "GEOSYND": "Gainesboro",
+    "GUESTHOUSE": "Gainesboro",
+    "GUESSHOUS": "Gainesboro",
+    "GUESSBORRO": "Gainesboro",
+    "GUESSHORO": "Gainesboro",
+    "GREENHOUSE": "Gainesboro",
+    "GERBUYIN": "Gainesboro",
+    "GRVGRDN": "Gainesboro",
+    "GUNSSBSRO": "Gainesboro",
+    "GUNNESS": "Gainesboro",
+    # Opequon
     "OPEQUON": "Opequon",
+    "OREGON": "Opequon",
+    "OREGOUN": "Opequon",
+    "CREQUIN": "Opequon",
+    "OREOUIM": "Opequon",
+    "OPTIONAL": "Opequon",
+    "CERULEAN": "Opequon",
+    # Redbud
     "RED BUD": "Redbud",
     "REDBUD": "Redbud",
+    # Shawnee
     "SHAWNEE": "Shawnee",
-    "SHANNEE": "Shawnee",  # OCR error
+    "SHANNEE": "Shawnee",
+    "SHAWEE": "Shawnee",
+    "SRAWHEE": "Shawnee",
+    "SAWNEE": "Shawnee",
+    "SWANEE": "Shawnee",
+    "BRANHEE": "Shawnee",
+    "SENABEE": "Shawnee",
+    "SHANDER": "Shawnee",
+    "SHOUSE": "Shawnee",
+    "HAWKEE": "Shawnee",
+    "SPRINGER": "Shawnee",
+    # Stonewall
     "STONEWALL": "Stonewall",
+    "STATEWALL": "Stonewall",
+    "OTHERWALL": "Stonewall",
+    "OTHERSALL": "Stonewall",
+    "OTHERSOLL": "Stonewall",
+    "OTHERSMALL": "Stonewall",
+    "OTHERALL": "Stonewall",
+    "STUESVALL": "Stonewall",
+    "ROSENBLL": "Stonewall",
+    "FIREWALL": "Stonewall",
+    "SITESALL": "Stonewall",
+    "STORESALE": "Stonewall",
+    "STATEMAIL": "Stonewall",
+    "SITEMAIL": "Stonewall",
+    "STITTSVILLE": "Stonewall",
+    "KERNEL": "Stonewall",
+    "SKENESE": "Stonewall",
+    "SKENSGALL": "Stonewall",
+    "STEPHESALL": "Stonewall",
+    # Stephens City
     "STEPHENS CITY": "Stephens City",
+    "STEPHENS": "Stephens City",
+    "STEPHEN": "Stephens City",
+    "STEPHEN CITY": "Stephens City",
+    "STEVENS CITY": "Stephens City",
+    "STERNESS CITY": "Stephens City",
 }
 
 # Property class descriptions
@@ -258,7 +352,11 @@ def extract_owner_details(text: str) -> dict:
     """
     Extract owner details (acreage, class, zone, deed) from text.
     Pattern: AC X.XX CL N ZN XX [DEED]
-    Note: ZN sometimes appears as EN or IN due to OCR errors
+    
+    OCR variants found in Anthropic output:
+    - AC prefix: AC (96%), AZ (4%), AG, AY, AD (rare)
+    - CL prefix: CL (90%), C1./C1 (7%), CI./CI (2%), C./CS/CC (1%)
+    - ZN prefix: 2N (60%), 2R (10%), 1R (5%), ZN (5%), 1B/TR/IR/18/2M/LR/IN/TN/IM/IS... (rest)
     """
     result = {
         "acreage": None,
@@ -267,8 +365,15 @@ def extract_owner_details(text: str) -> dict:
         "deed_reference": None,
     }
     
-    # Pattern for AC CL ZN
-    pattern = r'AC\s+([\d\.]+)\s+CL\s+(\d+)\s+(?:ZN|EN|IN)\s+(\w+)'
+    # Comprehensive pattern for AC/AZ CL/C1 ZN/2N and all OCR variants
+    # AC variants: AC, AZ (most common misread)
+    # CL variants: CL, C1, C1., CI, CI., C., CS, CC, CL.
+    # ZN variants: ZN, 2N, 2R, 1R, 1B, TR, IR, 18, 2M, LR, IN, TN, IM, IS, 1S, IB, ER, I8, 2B, 2W, EN, etc.
+    ac_pattern = r'(?:AC|AZ|AG|AY|AD)'
+    cl_pattern = r'(?:CL\.?|C1\.?|CI\.?|C\.|CS|CC|CCL|CT|CR|CM|CE)'
+    zn_pattern = r'(?:ZN|2N|2R|1R|1B|TR|IR|18|2M|LR|IN|TN|IM|IS|1S|IB|ER|I8|2B|2W|EN|JR|LB|FR|78|7R|LS|EB|1W|TA|TB)'
+    
+    pattern = rf'{ac_pattern}\s+([\d\.]+)\s+{cl_pattern}\s+(\d+)\s+{zn_pattern}\s+(\w+)'
     match = re.search(pattern, text, re.IGNORECASE)
     if match:
         try:
@@ -279,16 +384,59 @@ def extract_owner_details(text: str) -> dict:
             result["property_class"] = int(match.group(2))
         except ValueError:
             pass
-        result["zone"] = match.group(3).upper()
+        zone_val = match.group(3).upper()
+        # Normalize common zone misreads
+        zone_val = normalize_zone(zone_val)
+        result["zone"] = zone_val
         
         # Look for deed reference after zone
         after_zone = text[match.end():].strip()
-        # Deed patterns: "2013 0001596 00" or "DB 961/1376"
-        deed_match = re.match(r'^((?:DB\s+)?\d+[\s/]\d+(?:\s+\d+)?)', after_zone)
+        # Deed patterns: "2013 0001596 00" or "DB 961/1376" or "IB 734/ 651"
+        deed_match = re.match(r'^((?:[DI]B\s+)?\d+[\s/]\d+(?:\s+\d+)?)', after_zone)
         if deed_match:
             result["deed_reference"] = deed_match.group(1).strip()
     
     return result
+
+
+def normalize_zone(zone: str) -> str:
+    """Normalize OCR-garbled zone codes to standard Frederick County zones."""
+    # Known Frederick County zones:
+    # RA (Rural Area), RP (Residential Performance), RS (Residential Suburban)
+    # R4, R5 (Residential)
+    # B1, B2, B3 (Business), MH1 (Mobile Home), M1, M2 (Industrial)
+    # MS (Medical Support), HE (Higher Education), EM (Extractive Mining)
+    # OM (Office-Manufacturing), BP (Business Park)
+    
+    zone_map = {
+        # Common OCR misreads for RA
+        "8A": "RA", "BA": "RA", "SA": "RA", "KA": "RA", "AA": "RA",
+        # Common OCR misreads for RP
+        "8P": "RP", "SP": "RP",
+        # Common OCR misreads for RS
+        "8S": "RS", "BS": "RS",
+        # Common OCR misreads for R4
+        "84": "R4", "B4": "R4",
+        # Common OCR misreads for R5
+        "85": "R5", "B5": "R5",
+        # Common OCR misreads for R2
+        "82": "R2", "B2": "R2", "R2": "R2",
+        # Common OCR misreads for R3
+        "83": "R3", "B3": "R3", "R3": "R3",
+        # Common OCR misreads for B1
+        "8J": "B1",
+        # Common OCR misreads for B2
+        "87": "B2",
+        # Common OCR misreads for MH1/MHL
+        "MHL": "MH1", "MI": "MH1",
+        # Misread of M1
+        "M1": "M1",
+        # Misread of M2
+        "M2": "M2",
+        # MMND -> likely RP or R5 (common in newer subdivisions)
+        "MMND": "RP",
+    }
+    return zone_map.get(zone, zone)
 
 
 def parse_owner_line(line: str) -> dict:
@@ -306,8 +454,11 @@ def parse_owner_line(line: str) -> dict:
         "deed_reference": None,
     }
     
-    # First, find the AC CL ZN pattern to split the line
-    ac_match = re.search(r'\s+AC\s+([\d\.]+)\s+CL\s+(\d+)\s+(?:ZN|EN|IN)\s+(\w+)\s*(.*?)$', line, re.IGNORECASE)
+    # First, find the AC CL ZN pattern to split the line (using comprehensive OCR variant patterns)
+    ac_pat = r'(?:AC|AZ|AG|AY|AD)'
+    cl_pat = r'(?:CL\.?|C1\.?|CI\.?|C\.|CS|CC|CCL|CT|CR|CM|CE)'
+    zn_pat = r'(?:ZN|2N|2R|1R|1B|TR|IR|18|2M|LR|IN|TN|IM|IS|1S|IB|ER|I8|2B|2W|EN|JR|LB|FR|78|7R|LS|EB|1W|TA|TB)'
+    ac_match = re.search(rf'\s+{ac_pat}\s+([\d\.]+)\s+{cl_pat}\s+(\d+)\s+{zn_pat}\s+(\w+)\s*(.*?)$', line, re.IGNORECASE)
     if ac_match:
         try:
             result["acreage"] = float(ac_match.group(1))
@@ -317,7 +468,7 @@ def parse_owner_line(line: str) -> dict:
             result["property_class"] = int(ac_match.group(2))
         except ValueError:
             pass
-        result["zone"] = ac_match.group(3).upper()
+        result["zone"] = normalize_zone(ac_match.group(3).upper())
         deed_ref = ac_match.group(4).strip()
         if deed_ref and not deed_ref.startswith(('Land', 'LAND')):
             result["deed_reference"] = deed_ref
@@ -522,9 +673,9 @@ def parse_format1_record(lines: list[str], record_num: int, page_num: int, year:
     # Extract after ACCT- for FH/SH/district
     after_acct = full_text[acct_match.end():]
     
-    # Parse FH/SH taxes
-    fh_match = re.search(r'(?:FH|PH)\s+([\d,\.]+)', after_acct)
-    sh_match = re.search(r'SH\s+([\d,\.]+)', after_acct)
+    # Parse FH/SH taxes (OCR variants: FH, PH, FA, FB for first half; SH, SS, SE, S8 for second half)
+    fh_match = re.search(r'(?:FH|PH|FA|FB)\s+([\d,\.]+)', after_acct)
+    sh_match = re.search(r'(?:SH|SS|SE|S8)\s+([\d,\.]+)', after_acct)
     first_half = float(fh_match.group(1).replace(',', '')) if fh_match else None
     second_half = float(sh_match.group(1).replace(',', '')) if sh_match else None
     
@@ -543,7 +694,8 @@ def parse_format1_record(lines: list[str], record_num: int, page_num: int, year:
             continue
         
         # Check if this has owner details (AC CL ZN) - use comprehensive parser
-        if ' AC ' in line.upper():
+        # Also check for AZ variant (common OCR misread of AC)
+        if re.search(r'\b(?:AC|AZ)\s+[\d\.]', line, re.IGNORECASE):
             parsed = parse_owner_line(line)
             if parsed["owner_name"]:
                 owner_name = parsed["owner_name"]
@@ -636,8 +788,8 @@ def parse_format2_record(text: str, record_num: int, page_num: int, year: int) -
     
     # Extract after ACCT- for FH/SH/district
     after_acct = text[acct_match.end():]
-    fh_match = re.search(r'(?:FH|PH)\s+([\d,\.]+)', after_acct)
-    sh_match = re.search(r'SH\s+([\d,\.]+)', after_acct)
+    fh_match = re.search(r'(?:FH|PH|FA|FB)\s+([\d,\.]+)', after_acct)
+    sh_match = re.search(r'(?:SH|SS|SE|S8)\s+([\d,\.]+)', after_acct)
     first_half = float(fh_match.group(1).replace(',', '')) if fh_match else None
     second_half = float(sh_match.group(1).replace(',', '')) if sh_match else None
     district = find_district(after_acct) or find_district(text)
@@ -796,9 +948,234 @@ def parse_single_record(record_text: str, record_num: int, page_num: int, year: 
     return result
 
 
+def parse_anthropic_page(text: str, page_num: int, year: int, use_gis: bool = True) -> list[dict]:
+    """
+    Parse a page of Anthropic OCR text into property records.
+    
+    Anthropic OCR preserves the two-column tabular layout of the original document,
+    which requires a different parsing strategy than the compact glm-ocr format.
+    
+    Strategy: Flatten the text into a single string, then anchor on ACCT- markers
+    and extract surrounding context for each record.
+    """
+    records = []
+    
+    # Flatten multi-line text into single line (collapse whitespace but preserve separators)
+    # This handles the two-column layout by merging everything
+    flat = re.sub(r'\n+', ' ', text)
+    flat = re.sub(r'\s{2,}', ' ', flat)
+    
+    # Remove header/footer content
+    # Strip everything before first parcel code pattern
+    first_parcel = re.search(r'\b(\d{1,3}\s*[A-Z]?\s*-\s*[A-Z]?\s*-)', flat)
+    if first_parcel:
+        flat = flat[first_parcel.start():]
+    
+    # Remove page totals at end
+    totals_match = re.search(r'CLASS\s+1\s+CLASS\s+2', flat)
+    if totals_match:
+        flat = flat[:totals_match.start()]
+    
+    # Find all ACCT- markers as record anchors
+    acct_matches = list(re.finditer(r'ACCT-\s*(\d+)', flat))
+    
+    if not acct_matches:
+        return records
+    
+    # Find record number markers (# NNNNN) that follow ACCT- entries
+    record_num_markers = {m.start(): int(m.group(1)) for m in re.finditer(r'#\s*(\d{3,6})\b', flat)}
+    
+    for i, acct_match in enumerate(acct_matches):
+        account_number = acct_match.group(1)
+        
+        # Define the region for this record:
+        # From previous ACCT end (or start of text) to current ACCT
+        if i == 0:
+            region_start = 0
+        else:
+            # Start after previous record's ACCT and trailing info (PH, SH, district, #)
+            region_start = acct_matches[i-1].end()
+            # Skip past PH/SH/district/# info
+            after_prev = flat[region_start:acct_match.start()]
+            # Find where the next parcel code starts
+            next_parcel = re.search(r'\b(\d{1,3}\s*[A-Z]?\s*-\s*(?:[A-Z]?\s*-|\s*\d))', after_prev)
+            if next_parcel:
+                region_start = region_start + next_parcel.start()
+        
+        # Region extends past ACCT to capture PH/SH/district/#
+        if i < len(acct_matches) - 1:
+            region_end = acct_matches[i+1].start()
+        else:
+            region_end = len(flat)
+        
+        region = flat[region_start:region_end].strip()
+        
+        if not region or len(region) < 20:
+            continue
+        
+        # Extract values before ACCT-
+        before_acct = flat[region_start:acct_match.start()].strip()
+        after_acct = flat[acct_match.end():region_end].strip()
+        
+        # Find record number from after ACCT
+        record_num = 0
+        rec_num_match = re.search(r'#\s*(\d{3,6})\b', after_acct)
+        if rec_num_match:
+            record_num = int(rec_num_match.group(1))
+        
+        # Extract values: look for pattern LAND IMP TOTAL TAX before ACCT
+        values_match = re.search(r'([\d,]+)\s+([\d,]+)\s+([\d,]+)\s+([\d,\.]+)\s*$', before_acct)
+        if not values_match:
+            # Try 2-value pattern (land only, no improvements)
+            values_match = re.search(r'(\d[\d,]*)\s+(\d[\d,]*)\s+([\d,\.]+)\s*$', before_acct)
+            if values_match:
+                land_value = int(values_match.group(1).replace(',', ''))
+                improvement_value = 0
+                total_value = int(values_match.group(2).replace(',', ''))
+                try:
+                    tax_amount = float(values_match.group(3).replace(',', ''))
+                except ValueError:
+                    continue
+            else:
+                continue
+        else:
+            land_value = int(values_match.group(1).replace(',', ''))
+            improvement_value = int(values_match.group(2).replace(',', ''))
+            total_value = int(values_match.group(3).replace(',', ''))
+            try:
+                tax_amount = float(values_match.group(4).replace(',', ''))
+            except ValueError:
+                continue
+        
+        # Everything before values = parcel + description + owner info
+        before_values = before_acct[:values_match.start()].strip()
+        
+        # Extract parcel code (starts with digits, has dashes)
+        parcel_match = re.match(r'^([\dA-Z][\dA-Z\s-]*?-[\s\dA-Z-]*?\d+(?:-[A-Z])?)', before_values)
+        if not parcel_match:
+            # Simpler pattern
+            parcel_match = re.match(r'^([\dA-Z][\dA-Z\s-]+\d)', before_values)
+        
+        if not parcel_match:
+            continue
+        
+        parcel_raw = parcel_match.group(1).strip()
+        parcel_code = normalize_parcel_code(parcel_raw)
+        
+        if not parcel_code or not re.match(r'^\d', parcel_code):
+            continue
+        
+        # After parcel: description + owner info
+        after_parcel = before_values[parcel_match.end():].strip()
+        
+        # Extract AC CL ZN - search BOTH after_parcel AND after_acct
+        # In the Anthropic two-column format, AC/CL/ZN often appears in after_acct
+        # (on the owner's city/state/zip line which gets placed after ACCT in the layout)
+        owner_details = extract_owner_details(after_parcel)
+        if owner_details["acreage"] is None:
+            # Try after_acct - this is where AC/CL/ZN usually is in Anthropic OCR
+            owner_details_acct = extract_owner_details(after_acct)
+            if owner_details_acct["acreage"] is not None:
+                owner_details = owner_details_acct
+        
+        # Extract owner info from BOTH regions
+        owner_name = None
+        owner_address = None
+        owner_city_state_zip = None
+        description = ""
+        
+        # First try after_parcel (description region before ACCT)
+        csz = extract_city_state_zip(after_parcel)
+        if csz:
+            owner_city_state_zip = csz
+        
+        addr = extract_address(after_parcel)
+        if addr:
+            owner_address = addr
+            addr_pos = after_parcel.find(addr)
+            if addr_pos > 0:
+                potential_name = after_parcel[:addr_pos].strip()
+                desc_match = re.search(r'(?:\d+\.\d+\s+ACRES?|[A-Z]+ (?:L\d+|LOT|UNIT|SEC|REPL))', potential_name)
+                if desc_match:
+                    description = potential_name[:desc_match.end()].strip()
+                    potential_name = potential_name[desc_match.end():].strip()
+                
+                if potential_name and re.match(r'^[A-Z][A-Z\s&\',\.\-]+$', potential_name):
+                    if not any(kw in potential_name for kw in ['LOT', 'ACRE', 'UNIT', 'BLDG', 'CONDO', 'RETIRED']):
+                        owner_name = potential_name
+        else:
+            owner_name = extract_owner_name(after_parcel)
+        
+        # Also try after_acct for owner info (common in Anthropic two-column format)
+        # The owner name, address, and city/state/zip often appear after ACCT
+        if not owner_name or not owner_address:
+            acct_csz = extract_city_state_zip(after_acct)
+            if acct_csz and not owner_city_state_zip:
+                owner_city_state_zip = acct_csz
+            
+            acct_addr = extract_address(after_acct)
+            if acct_addr and not owner_address:
+                owner_address = acct_addr
+            
+            if not owner_name:
+                acct_owner = extract_owner_name(after_acct)
+                if acct_owner:
+                    owner_name = acct_owner
+        
+        # Parse FH/SH taxes and district from after ACCT
+        fh_match = re.search(r'(?:FH|PH|FB|FA)\s+([\d,\.]+)', after_acct)
+        sh_match = re.search(r'(?:SH|SS|SE|S8)\s+([\d,\.]+)', after_acct)
+        first_half = float(fh_match.group(1).replace(',', '')) if fh_match else None
+        second_half = float(sh_match.group(1).replace(',', '')) if sh_match else None
+        district = find_district(after_acct) or find_district(region)
+        
+        # GIS fallback for owner
+        owner_source = "ocr" if owner_name else None
+        if use_gis and not owner_name:
+            gis_owner = lookup_owner_from_gis(account_number)
+            if gis_owner:
+                if gis_owner.get("owner_name"):
+                    owner_name = gis_owner["owner_name"]
+                    owner_source = "gis"
+                if not owner_address and gis_owner.get("owner_address"):
+                    owner_address = gis_owner["owner_address"]
+                if not owner_city_state_zip and gis_owner.get("owner_city_state_zip"):
+                    owner_city_state_zip = gis_owner["owner_city_state_zip"]
+        
+        record = {
+            "year": year,
+            "page_number": page_num,
+            "record_number": record_num,
+            "parcel_code": parcel_code,
+            "parcel_code_raw": parcel_raw,
+            "description": description,
+            "owner_name": owner_name,
+            "owner_address": owner_address,
+            "owner_city_state_zip": owner_city_state_zip,
+            "land_value": land_value,
+            "improvement_value": improvement_value,
+            "total_value": total_value,
+            "tax_amount": tax_amount,
+            "first_half_tax": first_half,
+            "second_half_tax": second_half,
+            "account_number": account_number,
+            "district": district,
+            "acreage": owner_details["acreage"],
+            "property_class": owner_details["property_class"],
+            "zone": owner_details["zone"],
+            "deed_reference": owner_details["deed_reference"],
+            "owner_source": owner_source,
+        }
+        
+        records.append(record)
+    
+    return records
+
+
 def parse_ocr_page(text: str, page_num: int, year: int, use_gis: bool = True) -> list[dict]:
     """
     Parse a single page of OCR text into property records.
+    Uses the original # marker approach (for glm-ocr output).
     """
     records = []
     
@@ -889,6 +1266,10 @@ def parse_ocr_file(ocr_json_path: Path, use_gis: bool = True) -> dict[str, Any]:
         print(f"  Warning: Could not extract year from {source_file}")
         year = 2025
     
+    # Detect OCR source to choose parser
+    model = ocr_data.get("model", "")
+    is_anthropic = ocr_json_path.name.startswith("anthropic_") or "claude" in model.lower()
+    
     all_records = []
     pages_processed = 0
     errors = []
@@ -902,7 +1283,10 @@ def parse_ocr_file(ocr_json_path: Path, use_gis: bool = True) -> dict[str, Any]:
             continue
         
         try:
-            records = parse_ocr_page(text, page_num, year, use_gis=use_gis)
+            if is_anthropic:
+                records = parse_anthropic_page(text, page_num, year, use_gis=use_gis)
+            else:
+                records = parse_ocr_page(text, page_num, year, use_gis=use_gis)
             all_records.extend(records)
             pages_processed += 1
         except Exception as e:
@@ -922,11 +1306,13 @@ def parse_ocr_file(ocr_json_path: Path, use_gis: bool = True) -> dict[str, Any]:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Parse GLM-OCR output into structured records")
+    parser = argparse.ArgumentParser(description="Parse OCR output into structured records")
     parser.add_argument("--input", "-i", type=Path, required=True, help="Input OCR JSON file or directory")
     parser.add_argument("--output", "-o", type=Path, default=PROCESSED_DIR / "real_estate_ocr.json", help="Output JSON file")
     parser.add_argument("--verbose", "-v", action="store_true", help="Print detailed progress")
     parser.add_argument("--no-gis", action="store_true", help="Disable GIS lookup fallback for owner data")
+    parser.add_argument("--source", choices=["anthropic", "glm", "all"], default="anthropic",
+                       help="Which OCR source to parse: anthropic (default), glm, or all")
     
     args = parser.parse_args()
     use_gis = not args.no_gis
@@ -938,7 +1324,17 @@ def main():
     if args.input.is_file():
         ocr_files = [args.input]
     else:
-        ocr_files = sorted(args.input.glob("*_ocr.json")) + sorted(args.input.glob("*_pages_*.json"))
+        if args.source == "anthropic":
+            ocr_files = sorted(args.input.glob("anthropic_*_pages_*.json"))
+        elif args.source == "glm":
+            # GLM files: match *_pages_*.json but NOT anthropic_ prefix
+            all_pages = sorted(args.input.glob("*_pages_*.json"))
+            ocr_files = [f for f in all_pages if not f.name.startswith("anthropic_")]
+        else:  # all
+            ocr_files = sorted(args.input.glob("*_ocr.json")) + sorted(args.input.glob("*_pages_*.json"))
+        
+        # Exclude tracking/metadata files
+        ocr_files = [f for f in ocr_files if "batches" not in f.name]
     
     if not ocr_files:
         print(f"No OCR JSON files found in {args.input}")
@@ -979,7 +1375,7 @@ def main():
     
     output_data = {
         "metadata": {
-            "source": "GLM-OCR extracted real estate tax records",
+            "source": f"OCR extracted real estate tax records (source: {args.source})",
             "processed_date": datetime.now().isoformat(),
             "files_processed": len(ocr_files),
             "total_records": len(combined_records),
@@ -1014,11 +1410,37 @@ def main():
         from_gis = sum(1 for r in combined_records if r.get('owner_source') == 'gis')
         no_owner = sum(1 for r in combined_records if not r.get('owner_source'))
         
+        with_acreage = sum(1 for r in combined_records if r.get('acreage') is not None)
+        with_class = sum(1 for r in combined_records if r.get('property_class') is not None)
+        with_district = sum(1 for r in combined_records if r.get('district'))
+        with_fh = sum(1 for r in combined_records if r.get('first_half_tax') is not None)
+        with_deed = sum(1 for r in combined_records if r.get('deed_reference'))
+        
         print(f"\nExtraction rates:")
-        print(f"  owner_name:      {with_owner}/{len(combined_records)} ({100*with_owner/len(combined_records):.1f}%)")
-        print(f"  owner_address:   {with_address}/{len(combined_records)} ({100*with_address/len(combined_records):.1f}%)")
-        print(f"  city_state_zip:  {with_city}/{len(combined_records)} ({100*with_city/len(combined_records):.1f}%)")
-        print(f"  zone:            {with_zone}/{len(combined_records)} ({100*with_zone/len(combined_records):.1f}%)")
+        print(f"  owner_name:      {with_owner:>7}/{len(combined_records)} ({100*with_owner/len(combined_records):.1f}%)")
+        print(f"  owner_address:   {with_address:>7}/{len(combined_records)} ({100*with_address/len(combined_records):.1f}%)")
+        print(f"  city_state_zip:  {with_city:>7}/{len(combined_records)} ({100*with_city/len(combined_records):.1f}%)")
+        print(f"  zone:            {with_zone:>7}/{len(combined_records)} ({100*with_zone/len(combined_records):.1f}%)")
+        print(f"  acreage:         {with_acreage:>7}/{len(combined_records)} ({100*with_acreage/len(combined_records):.1f}%)")
+        print(f"  property_class:  {with_class:>7}/{len(combined_records)} ({100*with_class/len(combined_records):.1f}%)")
+        print(f"  district:        {with_district:>7}/{len(combined_records)} ({100*with_district/len(combined_records):.1f}%)")
+        print(f"  first_half_tax:  {with_fh:>7}/{len(combined_records)} ({100*with_fh/len(combined_records):.1f}%)")
+        print(f"  deed_reference:  {with_deed:>7}/{len(combined_records)} ({100*with_deed/len(combined_records):.1f}%)")
+        
+        # Zone value distribution
+        from collections import Counter
+        zone_counts = Counter(r.get('zone') for r in combined_records if r.get('zone'))
+        if zone_counts:
+            print(f"\nZone distribution (top 15):")
+            for zone, count in zone_counts.most_common(15):
+                print(f"  {zone:>5}: {count:>6} ({100*count/len(combined_records):.1f}%)")
+        
+        # District distribution
+        district_counts = Counter(r.get('district') for r in combined_records if r.get('district'))
+        if district_counts:
+            print(f"\nDistrict distribution:")
+            for dist, count in district_counts.most_common():
+                print(f"  {dist:>15}: {count:>6} ({100*count/len(combined_records):.1f}%)")
         
         print(f"\nOwner source breakdown:")
         print(f"  from OCR:        {from_ocr}/{len(combined_records)} ({100*from_ocr/len(combined_records):.1f}%)")
