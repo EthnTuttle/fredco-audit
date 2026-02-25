@@ -1017,38 +1017,71 @@ def parse_anthropic_page(text: str, page_num: int, year: int, use_gis: bool = Tr
         before_acct = flat[region_start:acct_match.start()].strip()
         after_acct = flat[acct_match.end():region_end].strip()
         
-        # Find record number from after ACCT
+        # Extract values: look for pattern LAND IMP TOTAL TAX before ACCT
+        # Strategy: Try end-anchored first (most reliable), then fall back to
+        # finding the LAST occurrence of a 4-number pattern anywhere in before_acct.
+        # In the Anthropic two-column format, owner/AC/CL/ZN data often appears
+        # AFTER the values in the flattened text, so end-anchored fails ~30% of the time.
+        after_values_text = ""  # Text between values and ACCT (owner/zone data)
+        
+        values_match = re.search(r'([\d,]+)\s+([\d,]+)\s+([\d,]+)\s+([\d,]+\.\d{2})\s*$', before_acct)
+        if not values_match:
+            # Try 2-value end-anchored
+            values_match = re.search(r'(\d[\d,]*)\s+(\d[\d,]*)\s+([\d,]+\.\d{2})\s*$', before_acct)
+        
+        if not values_match:
+            # Fall back: find ALL 4-number patterns (tax must have .XX) and take the LAST one
+            # This handles cases where AC/CL/ZN or owner data follows the values
+            all_4val = list(re.finditer(
+                r'(\d[\d,]*)\s+(\d[\d,]*)\s+(\d[\d,]*)\s+(\d[\d,]*\.\d{2})\b',
+                before_acct
+            ))
+            if all_4val:
+                values_match = all_4val[-1]  # Take the last (closest to ACCT)
+                after_values_text = before_acct[values_match.end():].strip()
+            else:
+                # Try 3-number pattern (no improvements) non-anchored
+                all_3val = list(re.finditer(
+                    r'(\d[\d,]*)\s+(\d[\d,]*)\s+(\d[\d,]*\.\d{2})\b',
+                    before_acct
+                ))
+                if all_3val:
+                    values_match = all_3val[-1]
+                    after_values_text = before_acct[values_match.end():].strip()
+        
+        if not values_match:
+            continue
+        
+        # Parse the matched values
+        groups = values_match.groups()
+        try:
+            if len(groups) == 4:
+                land_value = int(groups[0].replace(',', ''))
+                improvement_value = int(groups[1].replace(',', ''))
+                total_value = int(groups[2].replace(',', ''))
+                tax_amount = float(groups[3].replace(',', ''))
+            elif len(groups) == 3:
+                land_value = int(groups[0].replace(',', ''))
+                improvement_value = 0
+                total_value = int(groups[1].replace(',', ''))
+                tax_amount = float(groups[2].replace(',', ''))
+            else:
+                continue
+        except (ValueError, IndexError):
+            continue
+        
+        # Everything before values = parcel + description + owner info
+        before_values = before_acct[:values_match.start()].strip()
+        
+        # Find record number from after ACCT, or from after_values_text
         record_num = 0
         rec_num_match = re.search(r'#\s*(\d{3,6})\b', after_acct)
         if rec_num_match:
             record_num = int(rec_num_match.group(1))
-        
-        # Extract values: look for pattern LAND IMP TOTAL TAX before ACCT
-        values_match = re.search(r'([\d,]+)\s+([\d,]+)\s+([\d,]+)\s+([\d,\.]+)\s*$', before_acct)
-        if not values_match:
-            # Try 2-value pattern (land only, no improvements)
-            values_match = re.search(r'(\d[\d,]*)\s+(\d[\d,]*)\s+([\d,\.]+)\s*$', before_acct)
-            if values_match:
-                land_value = int(values_match.group(1).replace(',', ''))
-                improvement_value = 0
-                total_value = int(values_match.group(2).replace(',', ''))
-                try:
-                    tax_amount = float(values_match.group(3).replace(',', ''))
-                except ValueError:
-                    continue
-            else:
-                continue
-        else:
-            land_value = int(values_match.group(1).replace(',', ''))
-            improvement_value = int(values_match.group(2).replace(',', ''))
-            total_value = int(values_match.group(3).replace(',', ''))
-            try:
-                tax_amount = float(values_match.group(4).replace(',', ''))
-            except ValueError:
-                continue
-        
-        # Everything before values = parcel + description + owner info
-        before_values = before_acct[:values_match.start()].strip()
+        elif after_values_text:
+            rec_num_match = re.search(r'#\s*(\d{3,6})\b', after_values_text)
+            if rec_num_match:
+                record_num = int(rec_num_match.group(1))
         
         # Extract parcel code (starts with digits, has dashes)
         parcel_match = re.match(r'^([\dA-Z][\dA-Z\s-]*?-[\s\dA-Z-]*?\d+(?:-[A-Z])?)', before_values)
@@ -1057,7 +1090,14 @@ def parse_anthropic_page(text: str, page_num: int, year: int, use_gis: bool = Tr
             parcel_match = re.match(r'^([\dA-Z][\dA-Z\s-]+\d)', before_values)
         
         if not parcel_match:
-            continue
+            # Boundary bleed: before_values starts with previous record's owner data.
+            # Try to find a parcel code pattern ANYWHERE in before_values
+            # (the owner text from prev record would precede the actual parcel code)
+            inner_parcel = re.search(r'(?:^|\s)(\d{1,3}\s*[A-Z]?\s*-\s*[\s\dA-Z-]*?\d+(?:-[A-Z])?)', before_values)
+            if inner_parcel:
+                parcel_match = inner_parcel
+            else:
+                continue
         
         parcel_raw = parcel_match.group(1).strip()
         parcel_code = normalize_parcel_code(parcel_raw)
@@ -1068,30 +1108,44 @@ def parse_anthropic_page(text: str, page_num: int, year: int, use_gis: bool = Tr
         # After parcel: description + owner info
         after_parcel = before_values[parcel_match.end():].strip()
         
-        # Extract AC CL ZN - search BOTH after_parcel AND after_acct
-        # In the Anthropic two-column format, AC/CL/ZN often appears in after_acct
-        # (on the owner's city/state/zip line which gets placed after ACCT in the layout)
+        # Extract AC CL ZN - search after_parcel, after_values_text, and after_acct
+        # In the Anthropic two-column format, AC/CL/ZN often appears:
+        # 1. In after_values_text (when values are NOT at end of before_acct)
+        # 2. In after_acct (on the owner's city/state/zip line)
         owner_details = extract_owner_details(after_parcel)
+        if owner_details["acreage"] is None and after_values_text:
+            # Try the text between values and ACCT (common in two-column format)
+            owner_details_mid = extract_owner_details(after_values_text)
+            if owner_details_mid["acreage"] is not None:
+                owner_details = owner_details_mid
         if owner_details["acreage"] is None:
             # Try after_acct - this is where AC/CL/ZN usually is in Anthropic OCR
             owner_details_acct = extract_owner_details(after_acct)
             if owner_details_acct["acreage"] is not None:
                 owner_details = owner_details_acct
         
-        # Extract owner info from BOTH regions
+        # Extract owner info from ALL regions: after_parcel, after_values_text, after_acct
         owner_name = None
         owner_address = None
         owner_city_state_zip = None
         description = ""
         
-        # First try after_parcel (description region before ACCT)
-        csz = extract_city_state_zip(after_parcel)
+        # Combine after_parcel and after_values_text for searching
+        # after_values_text contains owner/zone data that follows values in flattened text
+        search_regions = [after_parcel]
+        if after_values_text:
+            search_regions.append(after_values_text)
+        combined_before_acct = ' '.join(r for r in search_regions if r)
+        
+        # Try to find city/state/zip, address, and owner name from combined region
+        csz = extract_city_state_zip(combined_before_acct)
         if csz:
             owner_city_state_zip = csz
         
-        addr = extract_address(after_parcel)
+        addr = extract_address(combined_before_acct)
         if addr:
             owner_address = addr
+            # Find owner name before address in after_parcel specifically
             addr_pos = after_parcel.find(addr)
             if addr_pos > 0:
                 potential_name = after_parcel[:addr_pos].strip()
@@ -1103,8 +1157,21 @@ def parse_anthropic_page(text: str, page_num: int, year: int, use_gis: bool = Tr
                 if potential_name and re.match(r'^[A-Z][A-Z\s&\',\.\-]+$', potential_name):
                     if not any(kw in potential_name for kw in ['LOT', 'ACRE', 'UNIT', 'BLDG', 'CONDO', 'RETIRED']):
                         owner_name = potential_name
+            
+            # Also try finding owner name in after_values_text
+            if not owner_name and after_values_text:
+                avt_addr_pos = after_values_text.find(addr)
+                if avt_addr_pos > 0:
+                    potential_name = after_values_text[:avt_addr_pos].strip()
+                    # Remove # NNNN record number markers
+                    potential_name = re.sub(r'#\s*\d+\s*', '', potential_name).strip()
+                    if potential_name and re.match(r'^[A-Z][A-Z\s&\',\.\-]+$', potential_name):
+                        if not any(kw in potential_name for kw in ['LOT', 'ACRE', 'UNIT', 'BLDG', 'CONDO', 'RETIRED']):
+                            owner_name = potential_name
         else:
             owner_name = extract_owner_name(after_parcel)
+            if not owner_name and after_values_text:
+                owner_name = extract_owner_name(after_values_text)
         
         # Also try after_acct for owner info (common in Anthropic two-column format)
         # The owner name, address, and city/state/zip often appear after ACCT
