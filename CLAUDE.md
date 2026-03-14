@@ -453,6 +453,49 @@ Every data point includes source references for auditability:
 
 ---
 
+## Data Quality & Verification
+
+### Real Estate Tax Data
+
+**Source**: Frederick County Commissioner of Revenue real estate tax PDF books (2021-2025)
+
+**Processing Pipeline**:
+1. PDFs downloaded from county website to `data/raw/fcva/real_estate/`
+2. OCR performed using `pdfplumber` fixed-width text extraction
+3. Parsed into `data/processed/real_estate_tax.json` (~235K records, 212 MB)
+4. Converted to Parquet format: `data/parquet/real_estate_tax.parquet` (~22 MB)
+
+**Data Quality Issues (Fixed)**:
+- **Owner name field corruption**: Initial OCR parsing appended lot info and tax amounts to owner names due to fixed-width column misalignment
+- **Fix applied**: `scripts/convert_to_parquet.py` now includes `clean_owner_field()` function that strips:
+  - Tax amounts (`FH xxx.xx`, `SH xxx.xx` patterns)
+  - Lot/section references (`L# S#` patterns)
+  - Trailing garbage after reasonable name length
+
+**Verification Script (Pending)**:
+- `scripts/verify_ocr_with_glm.py` - Uses GLM-OCR vision model to verify parsed data against original PDFs
+- **Requires**: Ollama >= 0.7 with `glm-ocr` model pulled
+- **Status**: Script ready, blocked on Ollama update (current version: 0.6.5)
+
+**To Run Verification** (when Ollama is updated):
+```bash
+# Update Ollama to 0.7+
+sudo curl -fsSL https://ollama.com/install.sh | sh
+
+# Pull the GLM-OCR model
+ollama pull glm-ocr
+
+# Test on small sample first
+python scripts/verify_ocr_with_glm.py --sample 100
+
+# Full verification (235K records, may take hours)
+python scripts/verify_ocr_with_glm.py --all
+```
+
+**Verification Output**: Creates `data/processed/real_estate_ocr_discrepancies.json` listing any records where parsed data differs from GLM-OCR extraction.
+
+---
+
 ## Scripts
 
 ### Download Data
@@ -702,3 +745,231 @@ git branch -d feature/chart-engine
 4. Commit frequently to feature branch
 5. Before merging: `git rebase master` to incorporate latest changes
 6. Merge to master with regular merge (not squash) to preserve history
+
+---
+
+## BoS Meeting Transcription Pipeline
+
+### Overview
+
+`scripts/bos_pipeline.py` builds a searchable database of transcripts from all
+Frederick County Board of Supervisors (and associated committee) meetings
+archived on Granicus since January 2020.
+
+**Source**: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+**Coverage**: 251 meetings scraped (2020-present), all meeting types
+**Transcription engine**: OpenAI Whisper `large-v3` (CPU, ~1.5 GB model)
+**Estimated time**: ~20–40 min per 2-hour meeting on a 24-core CPU at 8 threads
+
+### Architecture: Producer-Consumer
+
+Download (network-bound) and transcription (CPU-bound) run on separate threads
+so neither resource sits idle waiting for the other.
+
+```
+ Download Thread                          Transcribe Thread (main)
+ ──────────────────                       ────────────────────────
+ yt-dlp → clip44.m4a ──► queue[0] ──►   Whisper clip44.m4a → transcript
+ yt-dlp → clip45.m4a ──► queue[1]         (clip45 already downloaded,
+ (blocks until slot free)                  waiting in queue)
+                                          delete clip44.m4a
+                                         Whisper clip45.m4a → transcript
+                                          delete clip45.m4a
+```
+
+Queue depth is controlled by `--prefetch` (default 2), capping staging disk
+use at ~2 × 200 MB = ~400 MB max.
+
+### Data Flow
+
+```
+Granicus archive page
+        │
+        ▼  (scrape subcommand)
+  pipeline.db (SQLite)          ← single source of truth for all state
+        │
+        ▼  (run subcommand)
+  Download thread: yt-dlp → audio (m4a) → .staging/
+        │  (bounded queue, prefetch=2)
+        ▼
+  Transcribe thread: Whisper large-v3 → transcript
+        │
+        ├──► data/bos_transcripts/<date>_clip<id>_<title>/transcript.json
+        ├──► data/bos_transcripts/<date>_clip<id>_<title>/transcript.txt
+        └──► staging audio file DELETED
+```
+
+### Directory Layout
+
+```
+data/bos_transcripts/
+├── pipeline.db                            # SQLite state database
+├── pipeline.log                           # Full run log
+├── pipeline.pid                           # PID of background run (if launched via nohup)
+├── .staging/                              # Temp audio files (auto-deleted after transcription)
+│   └── clip44.m4a                         # ~50–200 MB each, at most --prefetch files at once
+├── 2020-01-08_clip35_Board_of_Supervisors/
+│   ├── transcript.json                    # Structured output with timestamps
+│   └── transcript.txt                     # Plain text for humans / LLMs
+├── 2020-01-22_clip37_Board_of_Supervisors/
+│   └── ...
+└── ...
+```
+
+### Running the Pipeline
+
+```bash
+# Step 1: Populate the meeting index (run once, or to pick up new meetings)
+python scripts/bos_pipeline.py scrape
+
+# Step 2: Process all pending meetings (interruptible — resumes on re-run)
+python scripts/bos_pipeline.py run
+
+# Check progress at any time
+python scripts/bos_pipeline.py status
+
+# Retry failed meetings
+python scripts/bos_pipeline.py run --retry-failed
+
+# Test a single meeting before committing to a full run
+python scripts/bos_pipeline.py run --limit 1 --dry-run
+```
+
+### CLI Reference
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| `--model NAME` | `large-v3` | Whisper model. Options: `tiny.en`, `small.en`, `medium.en`, `large-v3` |
+| `--threads N` | `8` | CPU threads for Whisper/PyTorch. Reduce for lighter system impact |
+| `--prefetch N` | `2` | Audio files to pre-download ahead of transcription (~200 MB per slot) |
+| `--rate-limit RATE` | none | yt-dlp download cap, e.g. `2M` for 2 MB/s |
+| `--limit N` | none | Only process N meetings this session |
+| `--retry-failed` | off | Include previously failed clips in this run |
+| `--dry-run` | off | Print what would run without downloading or transcribing |
+| `-v` / `--verbose` | off | Debug-level logging (before subcommand: `-v scrape`) |
+
+### Transcript Format
+
+**transcript.json**
+```json
+{
+  "meta": {
+    "clip_id": 35,
+    "title": "Board of Supervisors",
+    "meeting_date": "2020-01-08",
+    "meeting_url": "https://fcva.granicus.com/MediaPlayer.php?view_id=1&clip_id=35",
+    "transcribed_at": "2026-03-11T23:00:00",
+    "whisper_language": "en"
+  },
+  "transcript": "Full text of the meeting...",
+  "segments": [
+    { "id": 0, "start": 12.5, "end": 18.2, "text": "The meeting will come to order." },
+    ...
+  ]
+}
+```
+
+**transcript.txt** — plain text with a header block and the full transcript body.
+
+### Pipeline State Machine
+
+Each clip in `pipeline.db` moves through these states:
+
+```
+pending → downloading → transcribing → done
+                 │              │
+                 └──────────────┴──► failed  (retryable with --retry-failed)
+```
+
+If the process is killed mid-transcription, the clip reverts to `transcribing`
+on the next invocation of `run`, which triggers a fresh download and retry
+(the temp audio directory is automatically cleaned up by Python's `tempfile`
+module on process exit).
+
+### Resume Behavior
+
+- Re-running `run` always picks up where the previous run left off.
+- `scrape` can be re-run at any time to add new meetings; existing rows are
+  not overwritten.
+- If `transcript.json` already exists on disk but the DB shows a non-done
+  status, the script detects the file and marks it done without re-transcribing.
+
+### Resource Usage
+
+| Resource | Usage |
+|----------|-------|
+| CPU | 8 threads (configurable via `--threads`) |
+| RAM | ~10 GB peak (Whisper large-v3 model + audio buffer) |
+| Disk (peak) | ~100–200 MB per meeting (audio temp file, auto-deleted) |
+| Disk (final) | ~200–500 KB per meeting (JSON + TXT transcripts only) |
+| Network | ~60–120 MB per 2-hour meeting (audio-only HLS stream) |
+
+### Background Execution
+
+To run the pipeline in the background and keep it running after terminal close:
+
+```bash
+nohup python3 scripts/bos_pipeline.py run > /dev/null 2>&1 &
+echo $! > data/bos_transcripts/pipeline.pid
+echo "Pipeline PID: $(cat data/bos_transcripts/pipeline.pid)"
+
+# Monitor progress
+python3 scripts/bos_pipeline.py status
+tail -f data/bos_transcripts/pipeline.log
+
+# Stop gracefully (finishes current meeting then exits)
+kill -TERM $(cat data/bos_transcripts/pipeline.pid)
+```
+
+### Automatic Weekly Updates (Cron)
+
+A cron job runs every Sunday at 3am to scrape for newly posted meetings and
+process any that are pending. It uses `flock -n` to hold an exclusive lock on
+`data/bos_transcripts/pipeline.lock`, so if the pipeline is already running
+(e.g. still working through the initial backlog), the cron job exits
+immediately without starting a second instance.
+
+**Installed cron entry** (`crontab -l` to verify):
+
+```
+0 3 * * 0  cd /home/ethan/code/fredco-audit && \
+  flock -n data/bos_transcripts/pipeline.lock \
+    python3 scripts/bos_pipeline.py scrape >> data/bos_transcripts/pipeline.log 2>&1 && \
+  flock -n data/bos_transcripts/pipeline.lock \
+    python3 scripts/bos_pipeline.py run >> data/bos_transcripts/pipeline.log 2>&1
+```
+
+**How the overlap guard works:**
+- `flock -n LOCKFILE CMD` acquires an exclusive lock on `LOCKFILE` before running `CMD`
+- If the lock is already held (pipeline running), exits immediately with code 1
+- The shell `&&` means `run` is skipped if `scrape` couldn't acquire the lock
+- The lock releases automatically when the process exits — even on `kill -9`
+- No lockfile cleanup needed; `flock` manages it via the open file descriptor
+
+**To install on a fresh machine** (after cloning the repo):
+```bash
+(crontab -l 2>/dev/null; cat <<'EOF'
+
+# Frederick County BoS pipeline — weekly scrape + process
+0 3 * * 0  cd /home/ethan/code/fredco-audit && flock -n data/bos_transcripts/pipeline.lock python3 scripts/bos_pipeline.py scrape >> data/bos_transcripts/pipeline.log 2>&1 && flock -n data/bos_transcripts/pipeline.lock python3 scripts/bos_pipeline.py run >> data/bos_transcripts/pipeline.log 2>&1
+EOF
+) | crontab -
+```
+
+**To remove the cron job:**
+```bash
+crontab -l | grep -v bos_pipeline | crontab -
+```
+
+### Dependencies
+
+All dependencies are already installed in this environment:
+
+| Package | Purpose |
+|---------|---------|
+| `openai-whisper` | Speech-to-text transcription |
+| `yt-dlp` | Audio extraction from Granicus HLS streams |
+| `ffmpeg` | Audio decoding (used by Whisper internally) |
+| `requests` | HTTP for scraping the archive page |
+| `beautifulsoup4` | HTML parsing of the archive page |
+| `torch` | PyTorch backend for Whisper (thread control) |

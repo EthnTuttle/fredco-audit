@@ -1,0 +1,9 @@
+# Runtime files — not committed
+pipeline.db-shm
+pipeline.db-wal
+pipeline.lock
+pipeline.pid
+pipeline.log
+
+# Pre-download staging area (auto-deleted after transcription)
+.staging/
