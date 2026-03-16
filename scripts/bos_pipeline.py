@@ -85,6 +85,7 @@ import re
 import shutil
 import signal
 import sqlite3
+import subprocess
 import sys
 import threading
 import time
@@ -217,6 +218,68 @@ def set_status(conn: sqlite3.Connection, clip_id: int, status: str,
         (status, error, output_dir, now, clip_id),
     )
     conn.commit()
+
+
+def _export_pipeline_status_csv() -> None:
+    """Overwrite pipeline_status.csv with the current state of all meetings."""
+    csv_path = TRANSCRIPT_DIR / "pipeline_status.csv"
+    conn = sqlite3.connect(DB_PATH)
+    try:
+        rows = conn.execute(
+            "SELECT clip_id, meeting_date, title, status, error, output_dir, updated_at "
+            "FROM meetings ORDER BY clip_id"
+        ).fetchall()
+        with open(csv_path, "w", newline="") as f:
+            import csv as csv_mod
+            writer = csv_mod.writer(f)
+            writer.writerow(["clip_id", "meeting_date", "title", "status",
+                              "error", "output_dir", "updated_at"])
+            writer.writerows(rows)
+    finally:
+        conn.close()
+
+
+def _git_commit_transcript(out_dir: Path, clip_id: int,
+                            meeting_date: str, title: str) -> None:
+    """
+    Commit and push the just-completed transcript plus updated pipeline state.
+
+    Failures are logged as warnings but never raised — a git problem must
+    never interrupt the transcription pipeline.
+    """
+    try:
+        _export_pipeline_status_csv()
+
+        files_to_add = [
+            str(out_dir),
+            str(DB_PATH),
+            str(TRANSCRIPT_DIR / "pipeline_status.csv"),
+            str(TRANSCRIPT_DIR / "pipeline.log"),
+        ]
+
+        subprocess.run(
+            ["git", "add"] + files_to_add,
+            cwd=BASE_DIR, check=True, capture_output=True,
+        )
+
+        msg = f"Add BoS transcript: {meeting_date} clip{clip_id} {title}"
+        subprocess.run(
+            ["git", "commit", "-m", msg],
+            cwd=BASE_DIR, check=True, capture_output=True,
+        )
+
+        subprocess.run(
+            ["git", "push"],
+            cwd=BASE_DIR, check=True, capture_output=True,
+        )
+
+        log.info("[git] Committed and pushed: %s", msg)
+
+    except subprocess.CalledProcessError as exc:
+        stderr = exc.stderr.decode(errors="replace").strip() if exc.stderr else ""
+        log.warning("[git] git operation failed (clip %d): %s", clip_id, stderr or exc)
+    except Exception as exc:
+        log.warning("[git] Unexpected error during commit (clip %d): %s", clip_id, exc)
 
 
 def get_pending(conn: sqlite3.Connection,
@@ -582,11 +645,12 @@ def _download_worker(
 
 
 def _transcribe_worker(
-    ready_queue: "queue.Queue[object]",
+    ready_queue: queue.Queue,
     model_name: str,
     threads: int,
     conn: sqlite3.Connection,
     counters: dict,
+    no_git: bool = False,
 ) -> None:
     """
     Transcription thread: pulls (meeting, audio_path) tuples off *ready_queue*,
@@ -658,6 +722,9 @@ def _transcribe_worker(
                        output_dir=str(out_dir.relative_to(BASE_DIR)))
             counters["done"] += 1
             log.info("[transcriber] clip %d done ✓", clip_id)
+
+            if not no_git:
+                _git_commit_transcript(out_dir, clip_id, mdate, title)
 
         except Exception as exc:
             log.error("[transcriber] FAILED clip %d: %s", clip_id, exc, exc_info=True)
@@ -736,7 +803,8 @@ def cmd_run(args) -> None:
 
     # --- Run transcription on the main thread ---
     # (Whisper holds a large model in memory; keeping it on main is cleaner.)
-    _transcribe_worker(ready_queue, args.model, args.threads, conn, counters)
+    _transcribe_worker(ready_queue, args.model, args.threads, conn, counters,
+                       no_git=args.no_git)
 
     # Wait for download thread to finish (it should already be done by now)
     dl_thread.join(timeout=10)
@@ -894,6 +962,10 @@ def build_parser() -> argparse.ArgumentParser:
     p_run.add_argument(
         "--dry-run", action="store_true",
         help="Print what would be processed without downloading or transcribing.",
+    )
+    p_run.add_argument(
+        "--no-git", action="store_true",
+        help="Disable automatic git commit+push after each transcript is saved.",
     )
     p_run.set_defaults(func=cmd_run)
 
