@@ -6,11 +6,12 @@
  * Features: DuckDB-WASM queries, Chart.js visualizations, shareable query links.
  */
 
-import { initDataEngine, executeQuery, getLoadedTables, getTableSchema, getAvailableGISDatasets, isGISDatasetLoaded, loadGISDataset, type QueryResult } from './engines/data';
+import { initDataEngine, executeQuery, getLoadedTables, getTableSchema, getAvailableGISDatasets, isGISDatasetLoaded, loadGISDataset, GIS_DATASETS, type QueryResult } from './engines/data';
 import { getChartEngine, type ChartType, type ChartOptions } from './engines/chart';
 import { editorEngine } from './engines/editor';
 import { getCacheStats, getStorageQuota, clearCache } from './engines/storage';
 import { getMapEngine, queryResultToGeoJSON, COLOR_RAMPS } from './engines/map';
+import { initNostrFeedback, showNostrFeedbackModal } from './engines/feedback';
 
 // ============================================================================
 // Shareable Query State
@@ -344,8 +345,321 @@ WHERE total_from_the_commonwealth > 0
 ORDER BY total_from_the_commonwealth DESC`
   },
 
-  // GIS / Map Queries - TODO: Add GIS parquet files to data engine
-  // GIS data is available in data/processed/gis/ but not yet integrated
+  // GIS / Map Queries
+  {
+    name: 'Airport Overlay Zones',
+    description: 'Airport noise and height restriction zones',
+    category: 'gis',
+    sql: `-- Airport overlay zones
+SELECT 
+  geometry,
+  OVERLAY_TYPE,
+  ZONE_NAME
+FROM airport_overlay`
+  },
+  {
+    name: 'Comp Plan Applications',
+    description: 'Comprehensive plan amendment applications',
+    category: 'gis',
+    sql: `-- Comprehensive plan applications
+SELECT 
+  geometry,
+  APP_NUMBER,
+  STATUS,
+  DESCRIPTION
+FROM comp_plan_applications`
+  },
+  {
+    name: 'Conservation Easements',
+    description: 'Protected conservation lands',
+    category: 'gis',
+    sql: `-- Conservation easements
+SELECT 
+  geometry,
+  NAME,
+  ACRES,
+  EASEMENT_TYPE
+FROM conservation_easements`
+  },
+  {
+    name: 'County Parcels (Sample)',
+    description: 'Property parcels with attributes (limited)',
+    category: 'gis',
+    sql: `-- County parcels (large dataset - limited to 500)
+SELECT 
+  geometry,
+  PARCEL_ID,
+  OWNER_NAME,
+  TOTAL_VALUE,
+  ACREAGE
+FROM county_parcels
+LIMIT 500`
+  },
+  {
+    name: 'County Parcels Raw (Sample)',
+    description: 'Raw parcel geometries (limited)',
+    category: 'gis',
+    sql: `-- County parcels raw (large dataset - limited to 500)
+SELECT 
+  geometry,
+  PARCEL_ID,
+  GPIN
+FROM county_parcels_raw
+LIMIT 500`
+  },
+  {
+    name: 'Eastern Road Plan',
+    description: 'Planned road improvements in eastern county',
+    category: 'gis',
+    sql: `-- Eastern road plan
+SELECT 
+  geometry,
+  ROAD_NAME,
+  PROJECT_TYPE,
+  STATUS
+FROM eastern_road_plan`
+  },
+  {
+    name: 'Fire Districts',
+    description: 'Fire and rescue service districts',
+    category: 'gis',
+    sql: `-- Fire district boundaries
+SELECT 
+  geometry,
+  DISTRICT_NAME,
+  STATION_NUM
+FROM fire_districts`
+  },
+  {
+    name: 'Fire Stations',
+    description: 'Fire station locations',
+    category: 'gis',
+    sql: `-- Fire station locations
+SELECT 
+  geometry,
+  STATION_NAME,
+  STATION_NUM,
+  ADDRESS
+FROM fire_stations`
+  },
+  {
+    name: 'Frederick Parcels (Sample)',
+    description: 'Frederick parcels with geometry (limited)',
+    category: 'gis',
+    sql: `-- Frederick parcels (large dataset - limited to 500)
+SELECT 
+  geometry,
+  parcel_id,
+  owner_name,
+  total_value,
+  acreage
+FROM frederick_parcels
+LIMIT 500`
+  },
+  {
+    name: 'Frederick Parcels Raw (Sample)',
+    description: 'Raw Frederick parcel geometries (limited)',
+    category: 'gis',
+    sql: `-- Frederick parcels raw (large dataset - limited to 500)
+SELECT 
+  geometry,
+  parcel_id
+FROM frederick_parcels_raw
+LIMIT 500`
+  },
+  {
+    name: 'Future RT-37 Bypass',
+    description: 'Planned Route 37 bypass corridor',
+    category: 'gis',
+    sql: `-- Future RT-37 bypass route
+SELECT 
+  geometry,
+  SEGMENT_NAME,
+  LENGTH_MI
+FROM future_rt37_bypass`
+  },
+  {
+    name: 'Growth Area Parcels (Sample)',
+    description: 'Parcels within designated growth areas (limited)',
+    category: 'gis',
+    sql: `-- Parcels in growth areas (limited to 500)
+SELECT 
+  geometry,
+  PARCEL_ID,
+  GROWTH_AREA,
+  ACREAGE
+FROM growth_area_parcels
+LIMIT 500`
+  },
+  {
+    name: 'Growth Areas',
+    description: 'Designated urban growth areas',
+    category: 'gis',
+    sql: `-- Urban growth area boundaries
+SELECT 
+  geometry,
+  NAME,
+  AREA_TYPE,
+  ACRES
+FROM growth_areas`
+  },
+  {
+    name: 'Interstate Overlay',
+    description: 'Interstate corridor overlay zones',
+    category: 'gis',
+    sql: `-- Interstate overlay zones
+SELECT 
+  geometry,
+  INTERSTATE,
+  OVERLAY_TYPE
+FROM interstate_overlay`
+  },
+  {
+    name: 'Long Range Land Use',
+    description: 'Future land use plan designations',
+    category: 'gis',
+    sql: `-- Long range land use plan
+SELECT 
+  geometry,
+  LAND_USE,
+  DESCRIPTION,
+  ACRES
+FROM long_range_land_use`
+  },
+  {
+    name: 'Magisterial Districts',
+    description: 'Voting district boundaries',
+    category: 'gis',
+    sql: `-- Magisterial district boundaries
+SELECT 
+  geometry,
+  DISTRICT_NAME,
+  DISTRICT_NUM
+FROM magisterial_districts`
+  },
+  {
+    name: 'Parcels Growth Analysis (Sample)',
+    description: 'Parcels with growth area analysis (limited)',
+    category: 'gis',
+    sql: `-- Parcels with growth analysis (limited to 500)
+SELECT 
+  geometry,
+  PARCEL_ID,
+  IN_GROWTH_AREA,
+  GROWTH_AREA_NAME
+FROM parcels_growth_analysis
+LIMIT 500`
+  },
+  {
+    name: 'Parcels With Growth (Sample)',
+    description: 'Parcels with growth data overlay (limited)',
+    category: 'gis',
+    sql: `-- Parcels with growth data (limited to 500)
+SELECT 
+  geometry,
+  parcel_id,
+  growth_area,
+  total_value
+FROM parcels_with_growth_analysis
+LIMIT 500`
+  },
+  {
+    name: 'Proffer Points',
+    description: 'Development proffer locations',
+    category: 'gis',
+    sql: `-- Proffer point locations
+SELECT 
+  geometry,
+  CASE_NUMBER,
+  PROFFER_TYPE,
+  AMOUNT
+FROM proffer_points`
+  },
+  {
+    name: 'Public Schools',
+    description: 'School building locations',
+    category: 'gis',
+    sql: `-- Public school locations
+SELECT 
+  geometry,
+  SCHOOL_NAME,
+  SCHOOL_TYPE,
+  ADDRESS
+FROM public_schools`
+  },
+  {
+    name: 'Rezonings',
+    description: 'Rezoning application areas',
+    category: 'gis',
+    sql: `-- Rezoning applications
+SELECT 
+  geometry,
+  CASE_NUMBER,
+  FROM_ZONE,
+  TO_ZONE,
+  STATUS
+FROM rezonings`
+  },
+  {
+    name: 'School Districts',
+    description: 'School attendance zone boundaries',
+    category: 'gis',
+    sql: `-- School district boundaries
+SELECT 
+  geometry,
+  SCHOOL_NAME,
+  SCHOOL_TYPE,
+  DISTRICT_TYPE
+FROM school_districts`
+  },
+  {
+    name: 'Streets (Sample)',
+    description: 'Street centerlines (limited)',
+    category: 'gis',
+    sql: `-- Street centerlines (limited to 1000)
+SELECT 
+  geometry,
+  STREET_NAME,
+  STREET_TYPE,
+  LENGTH_FT
+FROM streets
+LIMIT 1000`
+  },
+  {
+    name: 'SWSA Boundaries',
+    description: 'Sewer and water service areas',
+    category: 'gis',
+    sql: `-- Sewer/water service area boundaries
+SELECT 
+  geometry,
+  SERVICE_TYPE,
+  PROVIDER
+FROM swsa`
+  },
+  {
+    name: 'UDA Boundaries',
+    description: 'Urban development areas',
+    category: 'gis',
+    sql: `-- Urban development area boundaries
+SELECT 
+  geometry,
+  UDA_NAME,
+  AREA_TYPE,
+  ACRES
+FROM uda`
+  },
+  {
+    name: 'Zoning Districts',
+    description: 'Current zoning designations',
+    category: 'gis',
+    sql: `-- Zoning district boundaries
+SELECT 
+  geometry,
+  ZONE_CODE,
+  ZONE_DESC,
+  ACRES
+FROM zoning`
+  },
 ];
 
 // ============================================================================
@@ -385,6 +699,9 @@ async function init(): Promise<void> {
     console.log('[Playground] Initializing...');
     await initDataEngine();
     await editorEngine.init(getSchemaForAutocomplete);
+    
+    // Initialize Nostr feedback in background (non-blocking)
+    initNostrFeedback().catch(e => console.warn('[Playground] Nostr feedback init failed:', e));
     
     state.status = 'ready';
     render(app);
@@ -484,6 +801,9 @@ function render(container: HTMLElement): void {
                 </button>
                 <button id="share-btn" class="btn btn-secondary" title="Copy shareable link">
                   Share
+                </button>
+                <button id="feedback-btn" class="btn btn-secondary" title="Send feedback via Nostr">
+                  Feedback
                 </button>
                 <div class="view-toggle">
                   <button id="view-table-btn" class="btn btn-toggle active">Table</button>
@@ -1078,6 +1398,110 @@ function addStyles(): void {
       border-radius: 50%;
       animation: spin 0.8s linear infinite;
     }
+    
+    /* Greyed-out GIS query templates */
+    .template-item.not-loaded {
+      opacity: 0.6;
+    }
+    .template-item.not-loaded .template-name {
+      color: var(--text-secondary);
+    }
+    .template-item.not-loaded:hover {
+      opacity: 0.8;
+    }
+    .template-item.loading {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .template-item.loading .template-name::after {
+      content: '...';
+      animation: ellipsis 1s infinite;
+    }
+    @keyframes ellipsis {
+      0% { content: '.'; }
+      33% { content: '..'; }
+      66% { content: '...'; }
+    }
+    
+    /* GIS Load Modal */
+    .gis-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      animation: fadeIn 0.15s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .gis-modal {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      max-width: 420px;
+      width: 90%;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+      animation: slideIn 0.2s ease-out;
+    }
+    @keyframes slideIn {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .gis-modal-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+    .gis-modal-content {
+      margin-bottom: 1.5rem;
+    }
+    .gis-modal-content p {
+      margin: 0 0 1rem 0;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+    .gis-modal-content strong {
+      color: var(--accent);
+    }
+    .gis-modal-info {
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.75rem;
+    }
+    .gis-modal-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.35rem 0;
+      font-size: 0.85rem;
+    }
+    .gis-modal-row:not(:last-child) {
+      border-bottom: 1px solid var(--border);
+    }
+    .gis-modal-label {
+      color: var(--text-secondary);
+    }
+    .gis-modal-value {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+    .gis-modal-actions {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: flex-end;
+    }
+    .gis-modal-actions .btn {
+      padding: 0.5rem 1rem;
+    }
   `;
   document.head.appendChild(style);
 }
@@ -1170,6 +1594,100 @@ function highlightMatchingTemplate(sql: string): void {
   });
 }
 
+/**
+ * Extract GIS dataset name from SQL query
+ */
+function getGISDatasetFromSQL(sql: string): string | null {
+  // Match FROM <dataset_name> pattern
+  const match = sql.match(/FROM\s+(\w+)/i);
+  if (!match) return null;
+  
+  const tableName = match[1].toLowerCase();
+  const gisDataset = GIS_DATASETS.find(d => d.name === tableName);
+  return gisDataset ? gisDataset.name : null;
+}
+
+/**
+ * Show confirmation modal for loading a GIS dataset
+ */
+function showGISLoadModal(datasetName: string, onConfirm: () => void, onCancel: () => void): void {
+  const dataset = GIS_DATASETS.find(d => d.name === datasetName);
+  if (!dataset) {
+    onCancel();
+    return;
+  }
+
+  const sizeStr = formatSize(dataset.size);
+  
+  // Create modal overlay
+  const overlay = document.createElement('div');
+  overlay.className = 'gis-modal-overlay';
+  overlay.innerHTML = `
+    <div class="gis-modal">
+      <div class="gis-modal-title">Load GIS Dataset</div>
+      <div class="gis-modal-content">
+        <p>This query requires loading the <strong>${dataset.name}</strong> dataset.</p>
+        <div class="gis-modal-info">
+          <div class="gis-modal-row">
+            <span class="gis-modal-label">Dataset:</span>
+            <span class="gis-modal-value">${dataset.name}</span>
+          </div>
+          <div class="gis-modal-row">
+            <span class="gis-modal-label">Description:</span>
+            <span class="gis-modal-value">${dataset.description}</span>
+          </div>
+          <div class="gis-modal-row">
+            <span class="gis-modal-label">Size:</span>
+            <span class="gis-modal-value">${sizeStr}</span>
+          </div>
+        </div>
+      </div>
+      <div class="gis-modal-actions">
+        <button class="btn btn-secondary gis-modal-cancel">Cancel</button>
+        <button class="btn btn-primary gis-modal-confirm">Load & Run</button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(overlay);
+
+  // Add event listeners
+  const confirmBtn = overlay.querySelector('.gis-modal-confirm');
+  const cancelBtn = overlay.querySelector('.gis-modal-cancel');
+
+  const cleanup = () => {
+    overlay.remove();
+  };
+
+  confirmBtn?.addEventListener('click', () => {
+    cleanup();
+    onConfirm();
+  });
+
+  cancelBtn?.addEventListener('click', () => {
+    cleanup();
+    onCancel();
+  });
+
+  // Close on overlay click
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      cleanup();
+      onCancel();
+    }
+  });
+
+  // Close on Escape key
+  const handleKeydown = (e: KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      cleanup();
+      onCancel();
+      document.removeEventListener('keydown', handleKeydown);
+    }
+  };
+  document.addEventListener('keydown', handleKeydown);
+}
+
 function renderQueryTemplates(): void {
   const container = document.getElementById('query-templates');
   if (!container) return;
@@ -1179,6 +1697,7 @@ function renderQueryTemplates(): void {
     schools: 'Schools',
     property: 'Property Tax',
     government: 'Government Data',
+    gis: 'GIS / Map Data',
   };
 
   const byCategory = QUERY_TEMPLATES.reduce((acc, t) => {
@@ -1190,22 +1709,76 @@ function renderQueryTemplates(): void {
   container.innerHTML = Object.entries(byCategory).map(([cat, templates]) => `
     <div class="template-category">
       <div class="template-category-title">${categories[cat] || cat}</div>
-      ${templates.map(t => `
-        <div class="template-item" data-sql="${encodeURIComponent(t.sql)}" title="${t.description}">
+      ${templates.map(t => {
+        // Check if this is a GIS query and if the dataset is loaded
+        const gisDataset = t.category === 'gis' ? getGISDatasetFromSQL(t.sql) : null;
+        const isLoaded = gisDataset ? isGISDatasetLoaded(gisDataset) : true;
+        const notLoadedClass = !isLoaded ? ' not-loaded' : '';
+        
+        return `
+        <div class="template-item${notLoadedClass}" data-sql="${encodeURIComponent(t.sql)}" data-category="${t.category}" data-gis-dataset="${gisDataset || ''}" title="${t.description}">
           <div class="template-name">${t.name}</div>
-          <div class="template-desc">${t.description}</div>
+          <div class="template-desc">${t.description}${!isLoaded ? ' (click to load)' : ''}</div>
         </div>
-      `).join('')}
+      `}).join('')}
     </div>
   `).join('');
 
   // Add click handlers
   container.querySelectorAll('.template-item').forEach(el => {
-    el.addEventListener('click', () => {
+    el.addEventListener('click', async () => {
       const sql = decodeURIComponent(el.getAttribute('data-sql') || '');
+      const category = el.getAttribute('data-category');
+      const gisDataset = el.getAttribute('data-gis-dataset');
+      
+      // Check if this is an unloaded GIS query
+      if (category === 'gis' && gisDataset && !isGISDatasetLoaded(gisDataset)) {
+        // Show confirmation modal
+        showGISLoadModal(
+          gisDataset,
+          async () => {
+            // Show loading state on the item
+            el.classList.add('loading');
+            const descEl = el.querySelector('.template-desc');
+            const originalDesc = descEl?.textContent || '';
+            if (descEl) descEl.textContent = 'Loading dataset...';
+            
+            try {
+              await loadGISDataset(gisDataset);
+              
+              // Update UI - remove not-loaded class, update description
+              el.classList.remove('not-loaded', 'loading');
+              if (descEl) {
+                descEl.textContent = originalDesc.replace(' (click to load)', '');
+              }
+              
+              // Refresh schema explorer to show new table
+              await loadSchemaExplorer();
+              renderGISDatasets();
+              
+              // Now run the query
+              editorEngine.setValue(sql);
+              editorEngine.focus();
+              highlightMatchingTemplate(sql);
+              runQuery(sql);
+            } catch (error) {
+              el.classList.remove('loading');
+              if (descEl) descEl.textContent = originalDesc;
+              console.error(`Failed to load GIS dataset ${gisDataset}:`, error);
+              alert(`Failed to load dataset: ${error instanceof Error ? error.message : String(error)}`);
+            }
+          },
+          () => {
+            // User cancelled - do nothing
+          }
+        );
+        return;
+      }
+      
+      // Normal query - run immediately
       editorEngine.setValue(sql);
       editorEngine.focus();
-      highlightMatchingTemplate(sql); // Immediately highlight
+      highlightMatchingTemplate(sql);
       runQuery(sql);
     });
   });
@@ -1358,7 +1931,7 @@ function renderGISDatasets(): void {
       
       // Show loading state
       el.classList.add('loading');
-      const sizeSpan = el.querySelector('.gis-size');
+      const sizeSpan = el.querySelector('.gis-size') as HTMLElement | null;
       if (sizeSpan) {
         sizeSpan.innerHTML = '<div class="gis-spinner"></div>';
       }
@@ -1457,6 +2030,12 @@ function setupEventListeners(): void {
       // Fallback: show URL in prompt
       prompt('Copy this shareable link:', url);
     }
+  });
+
+  // Feedback button - show Nostr feedback modal
+  const feedbackBtn = document.getElementById('feedback-btn');
+  feedbackBtn?.addEventListener('click', () => {
+    showNostrFeedbackModal(editorEngine.getValue());
   });
 
   viewTableBtn?.addEventListener('click', () => {
@@ -1667,7 +2246,7 @@ function displayMap(result: QueryResult): void {
   // Update map color property dropdown with available numeric columns
   const mapColorSelect = document.getElementById('map-color-property') as HTMLSelectElement;
   if (mapColorSelect) {
-    const numericCols = result.columns.filter((col, i) => {
+    const numericCols = result.columns.filter((_col, i) => {
       if (i === geomColIndex) return false;
       // Check if first non-null value is numeric
       const firstVal = result.rows.find(row => row[i] !== null)?.[i];

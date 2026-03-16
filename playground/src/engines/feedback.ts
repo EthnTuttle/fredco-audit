@@ -353,3 +353,377 @@ export function getPendingFailures(): IntegrityFailure[] {
 export function hasPendingFailures(): boolean {
   return pendingFailures.length > 0;
 }
+
+// ============================================================================
+// Nostr User Feedback
+// ============================================================================
+
+// Nostr Configuration
+const NOSTR_CONFIG = {
+  targetPubkey: '87ad21b2fffac510fb01f631edc2b3c09c49297a4f65187656c72cf7da04d328',
+  targetNpub: 'npub1s7kjrvhlltz3p7cp7cc7ms4nczwyj2t6faj3sajkcuk00ksy6v5qzrh47t',
+  relays: [
+    'wss://relay.damus.io',
+    'wss://relay.primal.net',
+    'wss://relay.bitcoindistrict.org',
+    'wss://nos.lol',
+    'wss://relay.nostr.band'
+  ],
+  storageKey: 'fredco-feedback:user',
+  clientTag: 'fredco-playground',
+  publishTimeout: 10000
+};
+
+// Feedback Topics
+const FEEDBACK_TOPICS = [
+  { value: 'general', label: 'General Feedback' },
+  { value: 'sql-query', label: 'SQL Query Help' },
+  { value: 'data-issue', label: 'Data Accuracy Issue' },
+  { value: 'gis-maps', label: 'GIS / Maps' },
+  { value: 'charts', label: 'Charts & Visualization' },
+  { value: 'bug-report', label: 'Bug Report' },
+  { value: 'feature-request', label: 'Feature Request' },
+  { value: 'performance', label: 'Performance Issue' }
+];
+
+// Nostr state
+interface NostrFeedbackState {
+  secretKey: Uint8Array | null;
+  publicKey: string | null;
+  name: string;
+  rememberMe: boolean;
+  isReady: boolean;
+}
+
+const nostrState: NostrFeedbackState = {
+  secretKey: null,
+  publicKey: null,
+  name: '',
+  rememberMe: false,
+  isReady: false
+};
+
+let nostrTools: any = null;
+
+/**
+ * Load nostr-tools from CDN
+ */
+async function loadNostrTools(): Promise<any> {
+  if (nostrTools) return nostrTools;
+  
+  try {
+    // Dynamic imports from CDN - use Function constructor to bypass TypeScript module resolution
+    const importModule = (url: string) => Function('url', 'return import(url)')(url);
+    
+    const [pure, poolModule, nip19] = await Promise.all([
+      importModule('https://esm.sh/nostr-tools@2.10.0/pure'),
+      importModule('https://esm.sh/nostr-tools@2.10.0/pool'),
+      importModule('https://esm.sh/nostr-tools@2.10.0/nip19')
+    ]);
+    
+    nostrTools = { ...pure, ...poolModule, ...nip19 };
+    return nostrTools;
+  } catch (error) {
+    console.error('[FeedbackEngine] Failed to load nostr-tools:', error);
+    throw new Error('Failed to load Nostr libraries');
+  }
+}
+
+/**
+ * Load saved user from localStorage
+ */
+function loadSavedNostrUser(): { secretKey: Uint8Array; publicKey: string; name: string } | null {
+  try {
+    const saved = localStorage.getItem(NOSTR_CONFIG.storageKey);
+    if (!saved) return null;
+    
+    const data = JSON.parse(saved);
+    if (data.secretKey && data.name) {
+      const secretKey = new Uint8Array(
+        data.secretKey.match(/.{1,2}/g).map((byte: string) => parseInt(byte, 16))
+      );
+      return { secretKey, publicKey: data.publicKey, name: data.name };
+    }
+  } catch (e) {
+    console.error('[FeedbackEngine] Failed to load saved user:', e);
+  }
+  return null;
+}
+
+/**
+ * Save user to localStorage
+ */
+function saveNostrUser(secretKey: Uint8Array, publicKey: string, name: string): void {
+  const secretKeyHex = Array.from(secretKey)
+    .map(b => b.toString(16).padStart(2, '0'))
+    .join('');
+  
+  localStorage.setItem(NOSTR_CONFIG.storageKey, JSON.stringify({
+    secretKey: secretKeyHex,
+    publicKey,
+    name,
+    savedAt: Date.now()
+  }));
+}
+
+/**
+ * Initialize Nostr feedback
+ */
+export async function initNostrFeedback(): Promise<void> {
+  console.log('[FeedbackEngine] Initializing Nostr feedback...');
+  
+  const saved = loadSavedNostrUser();
+  if (saved) {
+    nostrState.secretKey = saved.secretKey;
+    nostrState.publicKey = saved.publicKey;
+    nostrState.name = saved.name;
+    nostrState.rememberMe = true;
+  }
+  
+  try {
+    await loadNostrTools();
+    nostrState.isReady = true;
+    console.log('[FeedbackEngine] Nostr ready');
+  } catch (e) {
+    console.error('[FeedbackEngine] Nostr init failed:', e);
+  }
+}
+
+/**
+ * Publish feedback to Nostr
+ */
+async function publishNostrFeedback(
+  name: string,
+  comment: string,
+  topic: string,
+  currentQuery?: string
+): Promise<{ success: boolean; relays: number }> {
+  const tools = await loadNostrTools();
+  
+  if (!nostrState.secretKey) {
+    const secretKey = tools.generateSecretKey();
+    const publicKey = tools.getPublicKey(secretKey);
+    nostrState.secretKey = secretKey;
+    nostrState.publicKey = publicKey;
+  }
+  
+  let content = `Feedback for nostr:${NOSTR_CONFIG.targetNpub}
+
+From: ${name}
+Topic: ${topic}
+Page: Data Playground
+URL: ${window.location.href}
+
+${comment}`;
+
+  if (currentQuery && ['sql-query', 'data-issue', 'bug-report'].includes(topic)) {
+    content += `
+
+Current Query:
+\`\`\`sql
+${currentQuery}
+\`\`\``;
+  }
+  
+  const unsignedEvent = {
+    kind: 1,
+    created_at: Math.floor(Date.now() / 1000),
+    tags: [
+      ['p', NOSTR_CONFIG.targetPubkey],
+      ['client', NOSTR_CONFIG.clientTag],
+      ['t', 'feedback-playground'],
+      ['t', `topic-${topic}`]
+    ],
+    content
+  };
+  
+  const signedEvent = tools.finalizeEvent(unsignedEvent, nostrState.secretKey);
+  console.log('[FeedbackEngine] Publishing:', signedEvent.id);
+  
+  const pool = new tools.SimplePool();
+  
+  try {
+    const publishPromises = pool.publish(NOSTR_CONFIG.relays, signedEvent);
+    
+    const results = await Promise.race([
+      Promise.allSettled(publishPromises),
+      new Promise<never>((_, reject) => 
+        setTimeout(() => reject(new Error('Timeout')), NOSTR_CONFIG.publishTimeout)
+      )
+    ]) as PromiseSettledResult<unknown>[];
+    
+    const successful = results.filter(r => r.status === 'fulfilled');
+    
+    if (successful.length === 0) {
+      throw new Error('Failed to publish to any relay');
+    }
+    
+    if (nostrState.rememberMe && nostrState.secretKey && nostrState.publicKey) {
+      saveNostrUser(nostrState.secretKey, nostrState.publicKey, name);
+    }
+    
+    return { success: true, relays: successful.length };
+  } finally {
+    pool.close(NOSTR_CONFIG.relays);
+  }
+}
+
+/**
+ * Show Nostr feedback modal
+ */
+export function showNostrFeedbackModal(currentQuery?: string): void {
+  document.getElementById('nostr-feedback-modal')?.remove();
+  
+  const topicOptions = FEEDBACK_TOPICS
+    .map(t => `<option value="${t.value}">${t.label}</option>`)
+    .join('');
+  
+  const modal = document.createElement('div');
+  modal.id = 'nostr-feedback-modal';
+  modal.className = 'feedback-modal-overlay';
+  modal.innerHTML = `
+    <div class="feedback-modal">
+      <div class="feedback-modal-header">
+        <span>Send Feedback</span>
+        <button class="feedback-close">&times;</button>
+      </div>
+      <div class="feedback-modal-body">
+        <div class="feedback-field">
+          <label>Your Name</label>
+          <input type="text" id="nostr-name" value="${nostrState.name}" placeholder="Enter name">
+        </div>
+        <div class="feedback-field">
+          <label>Topic</label>
+          <select id="nostr-topic">${topicOptions}</select>
+        </div>
+        <div class="feedback-field">
+          <label>Your Feedback</label>
+          <textarea id="nostr-comment" placeholder="Share thoughts, issues, or requests..." rows="4"></textarea>
+        </div>
+        <label class="feedback-checkbox">
+          <input type="checkbox" id="nostr-remember" ${nostrState.rememberMe ? 'checked' : ''}>
+          <span>Remember me</span>
+        </label>
+        <div class="feedback-info">
+          Sent via <a href="https://nostr.com" target="_blank">Nostr</a>
+          ${nostrState.isReady ? ' - Ready' : ' - Loading...'}
+        </div>
+      </div>
+      <div class="feedback-modal-footer">
+        <button class="feedback-btn-cancel">Cancel</button>
+        <button class="feedback-btn-submit" ${!nostrState.isReady ? 'disabled' : ''}>Send</button>
+      </div>
+    </div>
+  `;
+  
+  // Add styles if not present
+  if (!document.getElementById('nostr-feedback-styles')) {
+    const styles = document.createElement('style');
+    styles.id = 'nostr-feedback-styles';
+    styles.textContent = `
+      .feedback-modal-overlay {
+        position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0,0,0,0.7); display: flex;
+        align-items: center; justify-content: center; z-index: 10000;
+      }
+      .feedback-modal {
+        background: var(--bg-secondary, #16213e);
+        border: 1px solid var(--border, #333);
+        border-radius: 8px; width: 90%; max-width: 400px;
+      }
+      .feedback-modal-header {
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 1rem; border-bottom: 1px solid var(--border, #333);
+        font-weight: 600;
+      }
+      .feedback-close {
+        background: none; border: none; color: var(--text-secondary, #aaa);
+        font-size: 1.5rem; cursor: pointer;
+      }
+      .feedback-modal-body { padding: 1rem; }
+      .feedback-field { margin-bottom: 0.75rem; }
+      .feedback-field label {
+        display: block; margin-bottom: 0.25rem;
+        font-size: 0.8rem; color: var(--text-secondary, #aaa);
+      }
+      .feedback-field input, .feedback-field select, .feedback-field textarea {
+        width: 100%; padding: 0.5rem;
+        background: var(--bg-primary, #1a1a2e);
+        border: 1px solid var(--border, #333);
+        border-radius: 4px; color: var(--text-primary, #eee);
+        font-family: inherit;
+      }
+      .feedback-checkbox {
+        display: flex; align-items: center; gap: 0.5rem;
+        font-size: 0.85rem; cursor: pointer; margin-bottom: 0.5rem;
+      }
+      .feedback-checkbox input { width: auto; }
+      .feedback-info {
+        font-size: 0.7rem; color: var(--text-secondary, #aaa); text-align: center;
+      }
+      .feedback-info a { color: var(--success, #00d9ff); }
+      .feedback-modal-footer {
+        display: flex; justify-content: flex-end; gap: 0.5rem;
+        padding: 1rem; border-top: 1px solid var(--border, #333);
+      }
+      .feedback-btn-cancel, .feedback-btn-submit {
+        padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; border: none;
+      }
+      .feedback-btn-cancel {
+        background: transparent; border: 1px solid var(--border, #333);
+        color: var(--text-secondary, #aaa);
+      }
+      .feedback-btn-submit {
+        background: var(--accent, #e94560); color: white;
+      }
+      .feedback-btn-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+      .feedback-success { text-align: center; padding: 2rem; }
+      .feedback-success-icon { font-size: 2.5rem; color: var(--success, #00d9ff); }
+    `;
+    document.head.appendChild(styles);
+  }
+  
+  document.body.appendChild(modal);
+  
+  const close = () => modal.remove();
+  modal.querySelector('.feedback-close')?.addEventListener('click', close);
+  modal.querySelector('.feedback-btn-cancel')?.addEventListener('click', close);
+  modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+  
+  modal.querySelector('.feedback-btn-submit')?.addEventListener('click', async () => {
+    const name = (document.getElementById('nostr-name') as HTMLInputElement).value.trim();
+    const topic = (document.getElementById('nostr-topic') as HTMLSelectElement).value;
+    const comment = (document.getElementById('nostr-comment') as HTMLTextAreaElement).value.trim();
+    const remember = (document.getElementById('nostr-remember') as HTMLInputElement).checked;
+    const btn = modal.querySelector('.feedback-btn-submit') as HTMLButtonElement;
+    
+    if (!name || !comment) { alert('Please enter name and feedback'); return; }
+    
+    nostrState.name = name;
+    nostrState.rememberMe = remember;
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    
+    try {
+      const result = await publishNostrFeedback(name, comment, topic, currentQuery);
+      modal.querySelector('.feedback-modal-body')!.innerHTML = `
+        <div class="feedback-success">
+          <div class="feedback-success-icon">✓</div>
+          <div>Feedback sent to ${result.relays} relay${result.relays !== 1 ? 's' : ''}</div>
+        </div>
+      `;
+      modal.querySelector('.feedback-modal-footer')!.innerHTML = `
+        <button class="feedback-btn-submit" onclick="this.closest('.feedback-modal-overlay').remove()">Close</button>
+      `;
+    } catch (error) {
+      console.error('[FeedbackEngine] Failed:', error);
+      btn.disabled = false;
+      btn.textContent = 'Send';
+      alert('Failed to send. Please try again.');
+    }
+  });
+  
+  setTimeout(() => (document.getElementById('nostr-name') as HTMLInputElement)?.focus(), 100);
+}
+
+export { FEEDBACK_TOPICS };

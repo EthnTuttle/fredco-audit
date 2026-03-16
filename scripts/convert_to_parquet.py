@@ -2,14 +2,91 @@
 """
 Convert JSON data files to Parquet format for efficient browser loading.
 Parquet files are much smaller and faster to query with DuckDB-WASM.
+
+Data Quality Notes:
+- owner_name and owner_address fields are cleaned to remove embedded tax data
+- Cleaning verified via manual spot-checks
+- TODO: Full verification with GLM-OCR when Ollama >= 0.7 is available
 """
 
 import json
 import os
+import re
 from pathlib import Path
 import pyarrow as pa
 import pyarrow.parquet as pq
 import pandas as pd
+
+
+def clean_owner_field(raw_value):
+    """
+    Clean owner_name and owner_address fields that have embedded tax data.
+    
+    The PDF parsing captured fixed-width data where owner info and tax amounts
+    appeared on the same line. This function strips the garbage.
+    
+    Examples of garbage patterns:
+    - "SMITH JOHN                        L7 S1                              FH        506.61"
+    - "123 MAIN ST                       WINCHESTER                         SH        253.30"
+    - "ADAMS DONALD CARSON JR 531,200 DEFERRED 531,200 3,240.32"
+    - "AARAMI JIMAJIMA K S 10" (trailing lot numbers)
+    
+    Returns cleaned string with just the owner name/address.
+    """
+    if not raw_value or not isinstance(raw_value, str):
+        return raw_value
+    
+    # Remove DEFERRED tax patterns (with or without trailing tax amount)
+    # "531,200 DEFERRED 531,200 3,240.32" or "531,200 DEFERRED 531,200"
+    cleaned = re.sub(r'\s+[\d,]+\s+DEFERRED\s+[\d,\.]+(\s+[\d,\.]+)?$', '', raw_value)
+    
+    # Remove FH (first half) tax amounts and everything after
+    # Must not be part of a word (use word boundary)
+    cleaned = re.sub(r'\s+FH\s+[\d,\.]+.*$', '', cleaned)
+    
+    # Remove SH (second half) tax amounts - must be standalone SH, not part of word like "SOUTH"
+    # Look for SH preceded by whitespace and followed by digits
+    cleaned = re.sub(r'(?<!\w)SH\s+[\d,\.]+.*$', '', cleaned)
+    
+    # Remove lot/section info that got appended (L7 S1, L 7 S 1, etc.) anywhere in string
+    cleaned = re.sub(r'\s+L\s*\d+\s+S\s*\d+.*$', '', cleaned)
+    
+    # Remove trailing standalone numbers (lot numbers, etc.)
+    # Match: space + S or L followed by digits at end (but not as part of a word)
+    cleaned = re.sub(r'\s+[SL]\s*\d+\s*$', '', cleaned)
+    
+    # Remove any trailing dollar amounts (just numbers at end)
+    cleaned = re.sub(r'\s+[\d,]+\.\d{2}\s*$', '', cleaned)
+    
+    # Remove address-like data that got mixed in (AC ## CL # ZN pattern)
+    # This catches cases like "1805 BACK MOUNTAIN RD AC 28.41 CL 5 ZN RA..."
+    cleaned = re.sub(r'\s+AC\s+[\d\.]+\s+CL\s+\d.*$', '', cleaned)
+    
+    # Remove trailing acreage patterns like "9.00 ACRES" or "1.12 ACRES"
+    cleaned = re.sub(r'\s+[\d\.]+\s+ACRES?\s*$', '', cleaned, flags=re.IGNORECASE)
+    
+    # Remove lot patterns like "LOT 68" or "3 S3B LOT 68"
+    cleaned = re.sub(r'\s+\d*\s*S\d+[A-Z]?\s+LOT\s+\d+.*$', '', cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r'\s+LOT\s+\d+.*$', '', cleaned, flags=re.IGNORECASE)
+    
+    # Remove trailing whitespace and multiple spaces
+    cleaned = re.sub(r'\s+', ' ', cleaned).strip()
+    
+    return cleaned
+
+
+def clean_real_estate_records(records):
+    """Apply cleaning to real estate tax records."""
+    cleaned = []
+    for record in records:
+        if isinstance(record, dict):
+            record = record.copy()
+            if 'owner_name' in record:
+                record['owner_name'] = clean_owner_field(record['owner_name'])
+            if 'owner_address' in record:
+                record['owner_address'] = clean_owner_field(record['owner_address'])
+        cleaned.append(record)
+    return cleaned
 
 # Directories
 DATA_DIR = Path(__file__).parent.parent / "data" / "processed"
@@ -91,6 +168,11 @@ def convert_file(json_path, parquet_path, record_path=None):
         if not records:
             print(f"  Skipping {json_path.name}: no records found")
             return False
+        
+        # Apply data cleaning for real estate tax records
+        if 'real_estate_tax' in json_path.name.lower():
+            print(f"  Cleaning owner_name and owner_address fields...")
+            records = clean_real_estate_records(records)
         
         # Handle GeoJSON features specially
         if json_path.suffix == '.geojson':

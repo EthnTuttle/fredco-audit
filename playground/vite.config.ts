@@ -1,12 +1,22 @@
 import { defineConfig } from 'vite';
 import wasm from 'vite-plugin-wasm';
 import topLevelAwait from 'vite-plugin-top-level-await';
+import monacoEditorPlugin from 'vite-plugin-monaco-editor';
 import { resolve } from 'path';
+
+// The plugin exports default as an object with .default property in some versions
+const monacoEditor = (monacoEditorPlugin as any).default || monacoEditorPlugin;
 
 export default defineConfig({
   plugins: [
     wasm(),
     topLevelAwait(),
+    monacoEditor({
+      // Languages to include
+      languageWorkers: ['editorWorkerService', 'json', 'typescript'],
+      // Custom languages (SQL is included via customWorkers or as a feature)
+      customWorkers: [],
+    }),
   ],
   
   // Deployment base path for audit.virginiafreedom.tech/playground/
@@ -32,10 +42,7 @@ export default defineConfig({
           }
           return 'assets/[name]-[hash][extname]';
         },
-        // Manual chunks for Monaco editor workers
-        manualChunks: {
-          'monaco-editor': ['monaco-editor'],
-        },
+        // Monaco workers are handled by vite-plugin-monaco-editor
       },
     },
   },
