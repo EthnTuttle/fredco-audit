@@ -3,7 +3,9 @@ pipeline.db-shm
 pipeline.db-wal
 pipeline.lock
 pipeline.pid
-pipeline.log
+
+# Un-ignore pipeline.log (overrides root *.log rule) — committed for failure history
+!pipeline.log
 
 # Pre-download staging area (auto-deleted after transcription)
 .staging/

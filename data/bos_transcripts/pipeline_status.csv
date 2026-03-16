@@ -1,0 +1,422 @@
+clip_id,meeting_date,title,status,error,output_dir,updated_at
+35,2020-01-08,"Board of Supervisors",done,,data/bos_transcripts/2020-01-08_clip35_Board_of_Supervisors,2026-03-12T05:19:43.360543
+37,2020-01-22,"Board of Supervisors",done,,data/bos_transcripts/2020-01-22_clip37_Board_of_Supervisors,2026-03-12T08:07:32.737531
+39,2020-02-12,"Board of Supervisors",done,,data/bos_transcripts/2020-02-12_clip39_Board_of_Supervisors,2026-03-12T15:03:59.870919
+40,2020-02-26,"Board of Supervisors",done,,data/bos_transcripts/2020-02-26_clip40_Board_of_Supervisors,2026-03-12T17:17:20.356320
+42,2020-03-11,"Board of Supervisors",done,,data/bos_transcripts/2020-03-11_clip42_Board_of_Supervisors,2026-03-12T23:41:25.103652
+44,2020-03-25,"Board of Supervisors",done,,data/bos_transcripts/2020-03-25_clip44_Board_of_Supervisors,2026-03-13T04:33:35.885013
+45,2020-04-01,"Board of Supervisors - Work Session",done,,data/bos_transcripts/2020-04-01_clip45_Board_of_Supervisors_-_Work_Session,2026-03-13T06:28:08.498862
+46,2020-04-08,"Board of Supervisors",done,,data/bos_transcripts/2020-04-08_clip46_Board_of_Supervisors,2026-03-13T09:08:24.668594
+48,2020-05-06,"Planning Commission",done,,data/bos_transcripts/2020-05-06_clip48_Planning_Commission,2026-03-13T10:01:54.533823
+50,2020-05-13,"Board of Supervisors",done,,data/bos_transcripts/2020-05-13_clip50_Board_of_Supervisors,2026-03-13T11:26:12.481022
+51,2020-05-27,"Board of Supervisors",done,,data/bos_transcripts/2020-05-27_clip51_Board_of_Supervisors,2026-03-13T13:44:59.498044
+52,2020-06-03,"Planning Commission",done,,data/bos_transcripts/2020-06-03_clip52_Planning_Commission,2026-03-13T17:33:30.612172
+53,2020-06-10,"Board of Supervisors",done,,data/bos_transcripts/2020-06-10_clip53_Board_of_Supervisors,2026-03-13T19:03:40.306555
+54,2020-07-01,"Planning Commission",done,,data/bos_transcripts/2020-07-01_clip54_Planning_Commission,2026-03-13T19:42:45.528457
+55,2020-07-08,"Board of Supervisors",done,,data/bos_transcripts/2020-07-08_clip55_Board_of_Supervisors,2026-03-13T22:11:10.211501
+57,2020-08-05,"Planning Commission",done,,data/bos_transcripts/2020-08-05_clip57_Planning_Commission,2026-03-14T00:28:22.171775
+58,2020-08-12,"Board of Supervisors",done,,data/bos_transcripts/2020-08-12_clip58_Board_of_Supervisors,2026-03-14T02:52:16.417957
+59,2020-08-19,"Planning Commission",done,,data/bos_transcripts/2020-08-19_clip59_Planning_Commission,2026-03-14T03:54:20.858457
+60,2020-09-02,"Planning Commission",done,,data/bos_transcripts/2020-09-02_clip60_Planning_Commission,2026-03-14T06:46:50.605476
+61,2020-09-09,"Board of Supervisors",failed,"download: yt-dlp failed (exit 1): ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries",,2026-03-14T02:04:06.171431
+62,2020-09-23,"Board of Supervisors",done,,data/bos_transcripts/2020-09-23_clip62_Board_of_Supervisors,2026-03-14T09:49:04.313473
+65,2020-10-07,"Planning Commission",done,,data/bos_transcripts/2020-10-07_clip65_Planning_Commission,2026-03-14T11:09:04.209720
+66,2020-10-14,"Board of Supervisors",done,,data/bos_transcripts/2020-10-14_clip66_Board_of_Supervisors,2026-03-14T12:06:34.480027
+67,2020-10-21,"Planning Commission",done,,data/bos_transcripts/2020-10-21_clip67_Planning_Commission,2026-03-14T12:47:17.980042
+68,2020-10-28,"Board of Supervisors",done,,data/bos_transcripts/2020-10-28_clip68_Board_of_Supervisors,2026-03-14T15:25:59.042668
+69,2020-11-04,"Planning Commission",done,,data/bos_transcripts/2020-11-04_clip69_Planning_Commission,2026-03-14T15:30:50.309984
+70,2020-11-12,"Board of Supervisors",done,,data/bos_transcripts/2020-11-12_clip70_Board_of_Supervisors,2026-03-14T17:17:29.834934
+71,2020-11-18,"Planning Commission",done,,data/bos_transcripts/2020-11-18_clip71_Planning_Commission,2026-03-14T17:57:20.942380
+72,2020-12-02,"Planning Commission",done,,data/bos_transcripts/2020-12-02_clip72_Planning_Commission,2026-03-14T18:14:33.824392
+74,2020-12-09,"Board of Supervisors",done,,data/bos_transcripts/2020-12-09_clip74_Board_of_Supervisors,2026-03-14T21:42:04.704826
+75,2020-12-17,"Planning Commission",done,,data/bos_transcripts/2020-12-17_clip75_Planning_Commission,2026-03-14T22:03:43.189176
+76,2021-01-13,"Board of Supervisors",failed,"download: yt-dlp failed (exit 1): ERROR: [generic] Unable to download webpage: [Errno -2] Name or service not known (caused by TransportError('[Errno -2] Name or service not known'))",,2026-03-14T17:57:41.936293
+77,2021-01-20,"Planning Commission",failed,"download: yt-dlp failed (exit 1): ERROR: [generic] Unable to download webpage: [Errno -2] Name or service not known (caused by TransportError('[Errno -2] Name or service not known'))",,2026-03-14T18:14:54.553624
+78,2021-01-27,"Board of Supervisors",done,,data/bos_transcripts/2021-01-27_clip78_Board_of_Supervisors,2026-03-14T23:41:40.978397
+79,2021-02-10,"Board of Supervisors",done,,data/bos_transcripts/2021-02-10_clip79_Board_of_Supervisors,2026-03-15T02:10:44.967877
+80,2021-02-17,"Planning Commission",done,,data/bos_transcripts/2021-02-17_clip80_Planning_Commission,2026-03-15T03:50:02.122112
+81,2021-02-24,"Board of Supervisors",failed,"download: yt-dlp failed (exit 1): ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries",,2026-03-15T01:39:29.820356
+82,2021-03-10,"Board of Supervisors",done,,data/bos_transcripts/2021-03-10_clip82_Board_of_Supervisors,2026-03-15T16:10:12.607837
+86,2021-03-17,"Planning Commission",done,,data/bos_transcripts/2021-03-17_clip86_Planning_Commission,2026-03-15T18:22:04.496604
+87,2021-03-24,"Board of Supervisors",done,,data/bos_transcripts/2021-03-24_clip87_Board_of_Supervisors,2026-03-15T21:17:23.888366
+88,2021-04-14,"Board of Supervisors",done,,data/bos_transcripts/2021-04-14_clip88_Board_of_Supervisors,2026-03-15T23:47:17.326918
+89,2021-04-21,"Planning Commission",done,,data/bos_transcripts/2021-04-21_clip89_Planning_Commission,2026-03-16T00:32:03.051196
+90,2021-04-28,"Board of Supervisors",transcribing,,,2026-03-16T00:32:03.052921
+91,2021-05-05,"Planning Commission",downloading,,,2026-03-15T21:17:23.904958
+92,2021-05-12,"Board of Supervisors",downloading,,,2026-03-15T23:47:17.341028
+93,2021-05-19,"Planning Commission",pending,,,2026-03-12T02:43:29.246261
+94,2021-05-26,"Board of Supervisors",pending,,,2026-03-12T02:43:29.234168
+95,2021-06-02,"Planning Commission",pending,,,2026-03-12T02:43:29.245635
+96,2021-06-09,"Board of Supervisors",pending,,,2026-03-12T02:43:29.233610
+97,2021-06-16,"Planning Commission",pending,,,2026-03-12T02:43:29.245031
+98,2021-06-23,"Board of Supervisors",pending,,,2026-03-12T02:43:29.233009
+99,2021-07-14,"Board of Supervisors",pending,,,2026-03-12T02:43:29.232386
+100,2021-07-21,"Planning Commission",pending,,,2026-03-12T02:43:29.244421
+101,2021-08-11,"Board of Supervisors",pending,,,2026-03-12T02:43:29.231769
+102,2021-09-01,"Planning Commission",pending,,,2026-03-12T02:43:29.243783
+103,2021-09-08,"Board of Supervisors",pending,,,2026-03-12T02:43:29.231169
+105,2021-09-15,"Planning Commission",pending,,,2026-03-12T02:43:29.243170
+106,2021-09-22,"Board of Supervisors",pending,,,2026-03-12T02:43:29.230505
+107,2021-10-13,"Board of Supervisors",pending,,,2026-03-12T02:43:29.229780
+108,2021-10-20,"Planning Commission",pending,,,2026-03-12T02:43:29.242535
+109,2021-10-27,"Board of Supervisors",pending,,,2026-03-12T02:43:29.229078
+110,2021-11-10,"Board of Supervisors",pending,,,2026-03-12T02:43:29.228423
+111,2021-11-17,"Planning Commission",pending,,,2026-03-12T02:43:29.241934
+112,2021-12-01,"Planning Commission",pending,,,2026-03-12T02:43:29.241342
+113,2021-12-08,"Board of Supervisors",pending,,,2026-03-12T02:43:29.227702
+114,2021-12-15,"Planning Commission",pending,,,2026-03-12T02:43:29.240388
+115,2022-01-05,"Planning Commission",pending,,,2026-03-12T02:43:29.227135
+116,2022-01-12,"Board of Supervisors",pending,,,2026-03-12T02:43:29.215076
+117,2022-01-19,"Planning Commission",pending,,,2026-03-12T02:43:29.226429
+118,2022-01-26,"Board of Supervisors",pending,,,2026-03-12T02:43:29.214444
+119,2022-02-09,"Board of Supervisors",pending,,,2026-03-12T02:43:29.213747
+120,2022-02-16,"Planning Commission",pending,,,2026-03-12T02:43:29.225699
+121,2022-02-23,"Board of Supervisors",pending,,,2026-03-12T02:43:29.213132
+122,2022-03-02,"Planning Commission",pending,,,2026-03-12T02:43:29.224853
+123,2022-03-09,"Board of Supervisors",pending,,,2026-03-12T02:43:29.212478
+124,2022-03-16,"Planning Commission",pending,,,2026-03-12T02:43:29.223244
+126,2022-03-23,"Board of Supervisors",pending,,,2026-03-12T02:43:29.211817
+127,2022-04-06,"Planning Commission",pending,,,2026-03-12T02:43:29.222610
+128,2022-04-13,"Board of Supervisors",pending,,,2026-03-12T02:43:29.211153
+129,2022-04-27,"Board of Supervisors",pending,,,2026-03-12T02:43:29.210433
+130,2022-05-04,"Planning Commission",pending,,,2026-03-12T02:43:29.221943
+131,2022-05-11,"Board of Supervisors",pending,,,2026-03-12T02:43:29.209743
+132,2022-05-18,"Planning Commission",pending,,,2026-03-12T02:43:29.221323
+133,2022-05-25,"Board of Supervisors",pending,,,2026-03-12T02:43:29.209060
+134,2022-06-01,"Planning Commission",pending,,,2026-03-12T02:43:29.220662
+135,2022-06-08,"Board of Supervisors",pending,,,2026-03-12T02:43:29.208430
+136,2022-06-15,"Planning Commission",pending,,,2026-03-12T02:43:29.220065
+155,2022-07-13,"Board of Supervisors",pending,,,2026-03-12T02:43:29.207751
+157,2022-07-20,"Planning Commission",pending,,,2026-03-12T02:43:29.219448
+158,2022-08-10,"Board of Supervisors",pending,,,2026-03-12T02:43:29.207118
+159,2022-08-17,"Planning Commission",pending,,,2026-03-12T02:43:29.218855
+160,2022-09-07,"Planning Commission",pending,,,2026-03-12T02:43:29.218291
+161,2022-09-14,"Board of Supervisors",pending,,,2026-03-12T02:43:29.206491
+162,2022-09-21,"Planning Commission",pending,,,2026-03-12T02:43:29.217656
+163,2022-09-28,"Board of Supervisors",pending,,,2026-03-12T02:43:29.205904
+164,2022-10-12,"Board of Supervisors",pending,,,2026-03-12T02:43:29.205288
+165,2022-10-19,"Planning Commission",pending,,,2026-03-12T02:43:29.217030
+166,2022-10-26,"Board of Supervisors",pending,,,2026-03-12T02:43:29.204648
+167,2022-11-09,"Board of Supervisors",pending,,,2026-03-12T02:43:29.204049
+168,2022-12-07,"Planning Commission",pending,,,2026-03-12T02:43:29.215724
+169,2022-12-07,"Planning Commission",pending,,,2026-03-12T02:43:29.216395
+170,2022-12-14,"Board of Supervisors",pending,,,2026-03-12T02:43:29.203449
+171,2023-01-04,"Planning Commission",pending,,,2026-03-12T02:43:29.202911
+172,2023-01-11,"Board of Supervisors",pending,,,2026-03-12T02:43:29.193558
+173,2023-01-18,"Planning Commission",pending,,,2026-03-12T02:43:29.202330
+174,2023-01-25,"Board of Supervisors",pending,,,2026-03-12T02:43:29.193001
+175,2023-02-08,"Board of Supervisors",pending,,,2026-03-12T02:43:29.192357
+176,2023-02-15,"Planning Commission",pending,,,2026-03-12T02:43:29.201793
+177,2023-02-22,"Board of Supervisors",pending,,,2026-03-12T02:43:29.191729
+178,2023-03-01,"Planning Commission",pending,,,2026-03-12T02:43:29.201258
+179,2023-03-08,"Board of Supervisors",pending,,,2026-03-12T02:43:29.191124
+180,2023-03-22,"Board of Supervisors",pending,,,2026-03-12T02:43:29.190426
+181,2023-04-05,"Planning Commission",pending,,,2026-03-12T02:43:29.200568
+182,2023-04-12,"Board of Supervisors",pending,,,2026-03-12T02:43:29.189798
+183,2023-04-19,"Board of Supervisors",pending,,,2026-03-12T02:43:29.189163
+184,2023-04-19,"Planning Commission",pending,,,2026-03-12T02:43:29.199825
+185,2023-04-26,"Board of Supervisors",pending,,,2026-03-12T02:43:29.188484
+186,2023-05-10,"Board of Supervisors",pending,,,2026-03-12T02:43:29.187758
+187,2023-05-15,"Board of Supervisors",pending,,,2026-03-12T02:43:29.187087
+188,2023-05-17,"Planning Commission",pending,,,2026-03-12T02:43:29.199144
+189,2023-05-24,"Board of Supervisors",pending,,,2026-03-12T02:43:29.186387
+190,2023-06-14,"Board of Supervisors",pending,,,2026-03-12T02:43:29.185708
+191,2023-07-05,"Planning Commission",pending,,,2026-03-12T02:43:29.198490
+192,2023-07-12,"Board of Supervisors",pending,,,2026-03-12T02:43:29.184998
+193,2023-07-19,"Planning Commission",pending,,,2026-03-12T02:43:29.197902
+194,2023-08-09,"Board of Supervisors",pending,,,2026-03-12T02:43:29.184315
+195,2023-08-16,"Planning Commission",pending,,,2026-03-12T02:43:29.197321
+196,2023-09-06,"Planning Commission",pending,,,2026-03-12T02:43:29.196666
+197,2023-09-20,"Planning Commission",pending,,,2026-03-12T02:43:29.196040
+198,2023-09-27,"Board of Supervisors",pending,,,2026-03-12T02:43:29.183628
+199,2023-10-04,"Planning Commission",pending,,,2026-03-12T02:43:29.195396
+200,2023-10-11,"Board of Supervisors",pending,,,2026-03-12T02:43:29.182950
+201,2023-10-25,"Board of Supervisors",pending,,,2026-03-12T02:43:29.182318
+202,2023-11-01,"Planning Commission",pending,,,2026-03-12T02:43:29.194842
+203,2023-11-08,"Board of Supervisors",pending,,,2026-03-12T02:43:29.181629
+204,2023-12-06,"Planning Commission",pending,,,2026-03-12T02:43:29.194212
+205,2023-12-13,"Board of Supervisors",pending,,,2026-03-12T02:43:29.180920
+206,2024-01-03,"Planning Commission",pending,,,2026-03-12T02:43:29.180246
+207,2024-01-10,"Board of Supervisors",pending,,,2026-03-12T02:43:29.166183
+208,2024-01-24,"Board of Supervisors",pending,,,2026-03-12T02:43:29.165508
+209,2024-02-07,"Board of Supervisors - School Board Joint Session",pending,,,2026-03-12T02:43:29.164766
+212,2024-02-14,"Board of Supervisors",pending,,,2026-03-12T02:43:29.164091
+213,2024-02-21,"Planning Commission",pending,,,2026-03-12T02:43:29.179535
+214,2024-02-28,"Board of Supervisors",pending,,,2026-03-12T02:43:29.163442
+215,2024-03-06,"Planning Commission",pending,,,2026-03-12T02:43:29.178907
+217,2024-03-13,"Board of Supervisors",pending,,,2026-03-12T02:43:29.162731
+218,2024-03-20,"Planning Commission",pending,,,2026-03-12T02:43:29.178116
+219,2024-03-27,"Board of Supervisors",pending,,,2026-03-12T02:43:29.162085
+220,2024-04-10,"Board of Supervisors",pending,,,2026-03-12T02:43:29.161462
+221,2024-04-17,"Planning Commission",pending,,,2026-03-12T02:43:29.176928
+222,2024-04-24,"Board of Supervisors",pending,,,2026-03-12T02:43:29.160754
+223,2024-05-08,"Board of Supervisors",pending,,,2026-03-12T02:43:29.160096
+224,2024-05-15,"Planning Commission",pending,,,2026-03-12T02:43:29.175864
+225,2024-05-22,"Board of Supervisors",pending,,,2026-03-12T02:43:29.158680
+226,2024-05-22,"Board of Supervisors",pending,,,2026-03-12T02:43:29.159433
+227,2024-06-05,"Planning Commission",pending,,,2026-03-12T02:43:29.174838
+228,2024-06-12,"Board of Supervisors",pending,,,2026-03-12T02:43:29.157725
+229,2024-07-03,"Planning Commission",pending,,,2026-03-12T02:43:29.173926
+230,2024-07-10,"Board of Supervisors",pending,,,2026-03-12T02:43:29.157056
+232,2024-08-14,"Board of Supervisors - Planning Commission Joint Work Session",pending,,,2026-03-12T02:43:29.155741
+233,2024-08-14,"Board of Supervisors",pending,,,2026-03-12T02:43:29.156360
+235,2024-09-04,"Planning Commission",pending,,,2026-03-12T02:43:29.172803
+236,2024-09-11,"Board of Supervisors-Public Works & Landfill Oversight Committees Joint Meeting",pending,,,2026-03-12T02:43:29.154536
+237,2024-09-11,"Board of Supervisors",pending,,,2026-03-12T02:43:29.155163
+238,2024-09-18,"Board of Supervisors",pending,,,2026-03-12T02:43:29.153894
+239,2024-09-18,"Planning Commission",pending,,,2026-03-12T02:43:29.171538
+240,2024-09-25,"Board of Supervisors",pending,,,2026-03-12T02:43:29.152607
+241,2024-09-25,"Board of Supervisors",pending,,,2026-03-12T02:43:29.153230
+242,2024-09-25,"Board of Supervisors - Frederick Water Board Joint Meeting",pending,,,2026-03-12T02:43:29.152014
+243,2024-10-02,"Planning Commission",pending,,,2026-03-12T02:43:29.169838
+244,2024-10-09,"Board of Supervisors",pending,,,2026-03-12T02:43:29.151414
+245,2024-10-23,"Board of Supervisors - Economic Development Authority Joint Meeting",pending,,,2026-03-12T02:43:29.150096
+246,2024-10-23,"Board of Supervisors",pending,,,2026-03-12T02:43:29.150799
+247,2024-10-30,"Board of Supervisors",pending,,,2026-03-12T02:43:29.149386
+248,2024-11-06,"Board of Supervisors",pending,,,2026-03-12T02:43:29.148549
+249,2024-11-06,"Planning Commission",pending,,,2026-03-12T02:43:29.169175
+250,2024-11-13,"Board of Supervisors",pending,,,2026-03-12T02:43:29.147147
+251,2024-11-13,"Board of Supervisors",pending,,,2026-03-12T02:43:29.147830
+252,2024-11-20,"Planning Commission",pending,,,2026-03-12T02:43:29.168526
+253,2024-12-04,"Planning Commission",pending,,,2026-03-12T02:43:29.167381
+254,2024-12-04,"Planning Commission",pending,,,2026-03-12T02:43:29.167928
+255,2024-12-11,"Board of Supervisors",pending,,,2026-03-12T02:43:29.146403
+256,2024-12-11,"Board of Supervisors",pending,,,2026-03-12T02:43:29.145709
+258,2024-12-18,"Planning Commission",pending,,,2026-03-12T02:43:29.166775
+259,2025-01-08,"Board of Supervisors",pending,,,2026-03-12T02:43:29.134133
+260,2025-01-08,"Board of Supervisors",pending,,,2026-03-12T02:43:29.134824
+261,2025-01-15,"Planning Commission",pending,,,2026-03-12T02:43:29.144943
+262,2025-01-22,"Board of Supervisors",pending,,,2026-03-12T02:43:29.132774
+263,2025-01-22,"Board of Supervisors",pending,,,2026-03-12T02:43:29.133468
+264,2025-01-24,"Board of Supervisors",pending,,,2026-03-12T02:43:29.132073
+265,2025-02-05,"Board of Supervisors",pending,,,2026-03-12T02:43:29.131489
+266,2025-02-13,"Board of Supervisors",pending,,,2026-03-12T02:43:29.130346
+267,2025-02-13,"Board of Supervisors",pending,,,2026-03-12T02:43:29.130923
+268,2025-02-19,"Board of Supervisors",pending,,,2026-03-12T02:43:29.129721
+269,2025-02-19,"Planning Commission",pending,,,2026-03-12T02:43:29.144206
+270,2025-02-26,"Board of Supervisors",pending,,,2026-03-12T02:43:29.128420
+271,2025-02-26,"Board of Supervisors",pending,,,2026-03-12T02:43:29.129137
+272,2025-03-12,"Board of Supervisors",pending,,,2026-03-12T02:43:29.127205
+273,2025-03-12,"Board of Supervisors",pending,,,2026-03-12T02:43:29.127802
+274,2025-03-19,"Board of Supervisors",pending,,,2026-03-12T02:43:29.126531
+275,2025-03-19,"Planning Commission",pending,,,2026-03-12T02:43:29.143499
+276,2025-03-26,"Board of Supervisors",pending,,,2026-03-12T02:43:29.125926
+277,2025-04-02,"Board of Supervisors",pending,,,2026-03-12T02:43:29.125302
+278,2025-04-02,"Planning Commission",pending,,,2026-03-12T02:43:29.142728
+279,2025-04-09,"Board of Supervisors",pending,,,2026-03-12T02:43:29.124621
+280,2025-04-16,"Planning Commission",pending,,,2026-03-12T02:43:29.141948
+281,2025-04-23,"Board of Supervisors",pending,,,2026-03-12T02:43:29.123970
+282,2025-05-14,"Board of Supervisors",pending,,,2026-03-12T02:43:29.123344
+283,2025-05-21,"Planning Commission",pending,,,2026-03-12T02:43:29.141276
+284,2025-06-04,"Planning Commission",pending,,,2026-03-12T02:43:29.140578
+285,2025-06-11,"Board of Supervisors",pending,,,2026-03-12T02:43:29.122653
+286,2025-06-18,"Board of Supervisors",pending,,,2026-03-12T02:43:29.121340
+287,2025-06-18,"Board of Supervisors",pending,,,2026-03-12T02:43:29.122012
+288,2025-07-02,"Planning Commission",pending,,,2026-03-12T02:43:29.139833
+289,2025-07-09,"Board of Supervisors",pending,,,2026-03-12T02:43:29.120641
+290,2025-08-06,"Planning Commission",pending,,,2026-03-12T02:43:29.139109
+291,2025-08-13,"Board of Supervisors",pending,,,2026-03-12T02:43:29.119964
+292,2025-09-03,"Planning Commission",pending,,,2026-03-12T02:43:29.138402
+293,2025-09-10,"Board of Supervisors",pending,,,2026-03-12T02:43:29.119377
+294,2025-09-24,"Board of Supervisors",pending,,,2026-03-12T02:43:29.118800
+295,2025-10-01,"Board of Supervisors",pending,,,2026-03-12T02:43:29.118247
+297,2025-10-01,"Planning Commission",pending,,,2026-03-12T02:43:29.137648
+299,2025-10-08,"Board of Supervisors",pending,,,2026-03-12T02:43:29.117626
+300,2025-10-22,"Board of Supervisors",pending,,,2026-03-12T02:43:29.116409
+301,2025-10-22,"Board of Supervisors",pending,,,2026-03-12T02:43:29.116991
+302,2025-11-05,"Board of Supervisors",pending,,,2026-03-12T02:43:29.115835
+303,2025-11-05,"Planning Commission",pending,,,2026-03-12T02:43:29.136234
+304,2025-11-05,"Planning Commission",pending,,,2026-03-12T02:43:29.136922
+305,2025-11-12,"Board of Supervisors",pending,,,2026-03-12T02:43:29.115308
+306,2025-12-03,"Planning Commission",pending,,,2026-03-12T02:43:29.135557
+307,2025-12-10,"Board of Supervisors",pending,,,2026-03-12T02:43:29.114151
+308,2025-12-10,"Board of Supervisors",pending,,,2026-03-12T02:43:29.114679
+309,2026-01-07,"Planning Commission",pending,,,2026-03-12T02:43:29.113584
+310,2026-01-14,"Board of Supervisors",pending,,,2026-03-12T02:43:29.109865
+311,2026-01-14,"Board of Supervisors",pending,,,2026-03-12T02:43:29.110510
+312,2026-01-21,"Planning Commission",pending,,,2026-03-12T02:43:29.112981
+313,2026-01-28,"Board of Supervisors",pending,,,2026-03-12T02:43:29.108337
+314,2026-01-28,"Board of Supervisors",pending,,,2026-03-12T02:43:29.109118
+315,2026-02-04,"Board of Supervisors",pending,,,2026-03-12T02:43:29.107545
+316,2026-02-04,"Planning Commission",pending,,,2026-03-12T02:43:29.112425
+317,2026-02-11,"Board of Supervisors",pending,,,2026-03-12T02:43:29.106482
+318,2026-02-11,"Board of Supervisors",pending,,,2026-03-12T02:43:29.106985
+319,2026-02-12,"Board of Supervisors",pending,,,2026-03-12T02:43:29.105242
+320,2026-02-12,"Board of Supervisors",pending,,,2026-03-12T02:43:29.105880
+321,2026-02-18,"Board of Supervisors",pending,,,2026-03-12T02:43:29.104523
+322,2026-02-18,"Planning Commission",pending,,,2026-03-12T02:43:29.111248
+323,2026-02-18,"Planning Commission",pending,,,2026-03-12T02:43:29.111820
+324,2026-02-25,"Board of Supervisors",pending,,,2026-03-12T02:43:29.103158
+325,2026-02-25,"Board of Supervisors",pending,,,2026-03-12T02:43:29.103885
+332,2026-03-11,"Board of Supervisors",pending,,,2026-03-12T02:43:29.100002
+334,2026-03-11,"Board of Supervisors",pending,,,2026-03-12T02:43:29.102411
