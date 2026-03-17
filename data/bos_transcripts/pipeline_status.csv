@@ -43,7 +43,7 @@ clip_id,meeting_date,title,status,error,output_dir,updated_at
 89,2021-04-21,Planning Commission,done,,data/bos_transcripts/2021-04-21_clip89_Planning_Commission,2026-03-16T17:45:14.563200
 90,2021-04-28,Board of Supervisors,done,,data/bos_transcripts/2021-04-28_clip90_Board_of_Supervisors,2026-03-17T09:00:24.743848
 91,2021-05-05,Planning Commission,done,,data/bos_transcripts/2021-05-05_clip91_Planning_Commission,2026-03-17T09:27:21.308755
-92,2021-05-12,Board of Supervisors,downloading,,,2026-03-16T20:50:25.884680
+92,2021-05-12,Board of Supervisors,done,,data/bos_transcripts/2021-05-12_clip92_Board_of_Supervisors,2026-03-17T12:37:54.981245
 93,2021-05-19,Planning Commission,downloading,,,2026-03-16T21:03:35.203872
 94,2021-05-26,Board of Supervisors,downloading,,,2026-03-16T21:14:22.532486
 95,2021-06-02,Planning Commission,downloading,,,2026-03-16T21:49:59.485212
@@ -391,17 +391,18 @@ ERROR:
 134,2022-06-01,Planning Commission,downloading,,,2026-03-17T08:47:39.048775
 135,2022-06-08,Board of Supervisors,downloading,,,2026-03-17T09:10:56.691317
 136,2022-06-15,Planning Commission,downloading,,,2026-03-17T09:15:35.837844
-155,2022-07-13,Board of Supervisors,pending,,,2026-03-16T17:54:28.250596
-157,2022-07-20,Planning Commission,pending,,,2026-03-16T17:54:38.290206
-158,2022-08-10,Board of Supervisors,pending,,,2026-03-16T17:55:01.287377
-159,2022-08-17,Planning Commission,pending,,,2026-03-16T17:55:24.418473
-160,2022-09-07,Planning Commission,pending,,,2026-03-16T17:55:43.742185
-161,2022-09-14,Board of Supervisors,pending,,,2026-03-16T17:55:52.085310
-162,2022-09-21,Planning Commission,pending,,,2026-03-16T17:56:05.152097
-163,2022-09-28,Board of Supervisors,pending,,,2026-03-16T17:56:22.739539
-164,2022-10-12,Board of Supervisors,pending,,,2026-03-16T17:56:35.007181
-165,2022-10-19,Planning Commission,pending,,,2026-03-16T17:56:42.645193
-166,2022-10-26,Board of Supervisors,pending,,,2026-03-16T17:57:09.080454
+155,2022-07-13,Board of Supervisors,downloading,,,2026-03-17T09:45:24.247157
+157,2022-07-20,Planning Commission,downloading,,,2026-03-17T10:04:55.134463
+158,2022-08-10,Board of Supervisors,failed,"download: yt-dlp failed (exit 1): ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries",,2026-03-17T11:19:36.443855
+159,2022-08-17,Planning Commission,downloading,,,2026-03-17T10:27:59.566225
+160,2022-09-07,Planning Commission,downloading,,,2026-03-17T10:47:23.191256
+161,2022-09-14,Board of Supervisors,downloading,,,2026-03-17T11:04:19.638769
+162,2022-09-21,Planning Commission,downloading,,,2026-03-17T11:19:36.480029
+163,2022-09-28,Board of Supervisors,downloading,,,2026-03-17T11:29:31.064995
+164,2022-10-12,Board of Supervisors,downloading,,,2026-03-17T11:51:54.830538
+165,2022-10-19,Planning Commission,downloading,,,2026-03-17T11:53:57.115463
+166,2022-10-26,Board of Supervisors,downloading,,,2026-03-17T12:23:24.822680
 167,2022-11-09,Board of Supervisors,pending,,,2026-03-16T17:57:49.331092
 168,2022-12-07,Planning Commission,pending,,,2026-03-16T17:58:06.046520
 169,2022-12-07,Planning Commission,pending,,,2026-03-16T17:58:12.056304
