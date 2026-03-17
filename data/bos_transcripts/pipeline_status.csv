@@ -41,7 +41,7 @@ clip_id,meeting_date,title,status,error,output_dir,updated_at
 87,2021-03-24,Board of Supervisors,done,,data/bos_transcripts/2021-03-24_clip87_Board_of_Supervisors,2026-03-16T17:45:14.551296
 88,2021-04-14,Board of Supervisors,done,,data/bos_transcripts/2021-04-14_clip88_Board_of_Supervisors,2026-03-16T17:45:14.556791
 89,2021-04-21,Planning Commission,done,,data/bos_transcripts/2021-04-21_clip89_Planning_Commission,2026-03-16T17:45:14.563200
-90,2021-04-28,Board of Supervisors,downloading,,,2026-03-16T20:31:54.878619
+90,2021-04-28,Board of Supervisors,done,,data/bos_transcripts/2021-04-28_clip90_Board_of_Supervisors,2026-03-17T09:00:24.743848
 91,2021-05-05,Planning Commission,downloading,,,2026-03-16T20:32:06.759237
 92,2021-05-12,Board of Supervisors,downloading,,,2026-03-16T20:50:25.884680
 93,2021-05-19,Planning Commission,downloading,,,2026-03-16T21:03:35.203872
@@ -386,9 +386,9 @@ ERROR:
 129,2022-04-27,Board of Supervisors,downloading,,,2026-03-17T07:09:26.871920
 130,2022-05-04,Planning Commission,downloading,,,2026-03-17T07:20:39.326315
 131,2022-05-11,Board of Supervisors,downloading,,,2026-03-17T07:29:22.312298
-132,2022-05-18,Planning Commission,pending,,,2026-03-16T17:53:29.281089
-133,2022-05-25,Board of Supervisors,pending,,,2026-03-16T17:53:47.064665
-134,2022-06-01,Planning Commission,pending,,,2026-03-16T17:53:54.327312
+132,2022-05-18,Planning Commission,downloading,,,2026-03-17T07:51:07.998816
+133,2022-05-25,Board of Supervisors,downloading,,,2026-03-17T08:03:51.307490
+134,2022-06-01,Planning Commission,downloading,,,2026-03-17T08:47:39.048775
 135,2022-06-08,Board of Supervisors,pending,,,2026-03-16T17:54:05.899583
 136,2022-06-15,Planning Commission,pending,,,2026-03-16T17:54:19.740135
 155,2022-07-13,Board of Supervisors,pending,,,2026-03-16T17:54:28.250596
