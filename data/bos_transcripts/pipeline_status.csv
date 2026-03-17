@@ -46,7 +46,7 @@ clip_id,meeting_date,title,status,error,output_dir,updated_at
 92,2021-05-12,Board of Supervisors,done,,data/bos_transcripts/2021-05-12_clip92_Board_of_Supervisors,2026-03-17T12:37:54.981245
 93,2021-05-19,Planning Commission,done,,data/bos_transcripts/2021-05-19_clip93_Planning_Commission,2026-03-17T12:58:34.284200
 94,2021-05-26,Board of Supervisors,done,,data/bos_transcripts/2021-05-26_clip94_Board_of_Supervisors,2026-03-17T15:02:26.706358
-95,2021-06-02,Planning Commission,downloading,,,2026-03-16T21:49:59.485212
+95,2021-06-02,Planning Commission,done,,data/bos_transcripts/2021-06-02_clip95_Planning_Commission,2026-03-17T18:03:17.657596
 96,2021-06-09,Board of Supervisors,downloading,,,2026-03-16T22:10:52.211045
 97,2021-06-16,Planning Commission,downloading,,,2026-03-16T22:28:36.523076
 98,2021-06-23,Board of Supervisors,downloading,,,2026-03-16T22:43:25.750525
@@ -408,19 +408,21 @@ ERROR:
 169,2022-12-07,Planning Commission,downloading,,,2026-03-17T13:18:18.270033
 170,2022-12-14,Board of Supervisors,downloading,,,2026-03-17T13:21:19.877196
 171,2023-01-04,Planning Commission,downloading,,,2026-03-17T14:21:46.195417
-172,2023-01-11,Board of Supervisors,downloading,,,2026-03-17T14:36:57.652190
+172,2023-01-11,Board of Supervisors,failed,"download: yt-dlp failed (exit 1): ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries",,2026-03-17T15:40:19.071892
 173,2023-01-18,Planning Commission,downloading,,,2026-03-17T14:52:20.388379
 174,2023-01-25,Board of Supervisors,downloading,,,2026-03-17T14:53:57.662839
-175,2023-02-08,Board of Supervisors,pending,,,2026-03-16T17:59:15.367503
-176,2023-02-15,Planning Commission,pending,,,2026-03-16T17:59:26.762667
-177,2023-02-22,Board of Supervisors,pending,,,2026-03-16T17:59:36.819099
-178,2023-03-01,Planning Commission,pending,,,2026-03-16T17:59:46.374542
-179,2023-03-08,Board of Supervisors,pending,,,2026-03-16T17:59:57.028692
-180,2023-03-22,Board of Supervisors,pending,,,2026-03-16T18:00:09.936598
-181,2023-04-05,Planning Commission,pending,,,2026-03-16T18:00:18.651385
-182,2023-04-12,Board of Supervisors,pending,,,2026-03-16T18:00:28.217344
-183,2023-04-19,Board of Supervisors,pending,,,2026-03-16T18:00:40.332324
-184,2023-04-19,Planning Commission,pending,,,2026-03-16T18:00:56.652538
+175,2023-02-08,Board of Supervisors,downloading,,,2026-03-17T15:24:07.231004
+176,2023-02-15,Planning Commission,downloading,,,2026-03-17T15:32:54.367105
+177,2023-02-22,Board of Supervisors,failed,"download: yt-dlp failed (exit 1): ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries",,2026-03-17T16:43:17.021191
+178,2023-03-01,Planning Commission,downloading,,,2026-03-17T15:55:45.354477
+179,2023-03-08,Board of Supervisors,downloading,,,2026-03-17T16:13:23.771809
+180,2023-03-22,Board of Supervisors,downloading,,,2026-03-17T16:26:53.984243
+181,2023-04-05,Planning Commission,downloading,,,2026-03-17T16:43:17.051349
+182,2023-04-12,Board of Supervisors,downloading,,,2026-03-17T17:03:12.298399
+183,2023-04-19,Board of Supervisors,downloading,,,2026-03-17T17:21:00.154254
+184,2023-04-19,Planning Commission,downloading,,,2026-03-17T17:53:06.989420
 185,2023-04-26,Board of Supervisors,pending,,,2026-03-16T18:01:10.390124
 186,2023-05-10,Board of Supervisors,pending,,,2026-03-16T18:01:24.226316
 187,2023-05-15,Board of Supervisors,pending,,,2026-03-16T18:01:35.713290
