@@ -8398,3 +8398,1040 @@ RuntimeError: yt-dlp failed (exit 1): ERROR: [generic] Unable to download webpag
   now = datetime.utcnow().isoformat()
 2026-03-18 00:29:51 [INFO] [transcriber] clip 100 done ✓
 2026-03-18 00:29:51 [INFO] [transcriber] clip 100 done ✓
+2026-03-18 00:29:53 [INFO] [git] Committed and pushed: Add BoS transcript: 2021-07-21 clip100 Planning Commission
+2026-03-18 00:29:53 [INFO] [git] Committed and pushed: Add BoS transcript: 2021-07-21 clip100 Planning Commission
+2026-03-18 00:29:53 [INFO] ────────────────────────────────────────────────────────────
+2026-03-18 00:29:53 [INFO] ────────────────────────────────────────────────────────────
+2026-03-18 00:29:53 [INFO] [transcriber] clip 101 | 2021-08-11 | Board of Supervisors
+2026-03-18 00:29:53 [INFO] [transcriber] clip 101 | 2021-08-11 | Board of Supervisors
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:212: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-03-18 00:29:54 [INFO] [transcriber] Transcribing clip101.m4a …
+2026-03-18 00:29:54 [INFO] [transcriber] Transcribing clip101.m4a …
+  0%|          | 0/764825 [00:00<?, ?frames/s]  0%|          | 3000/764825 [00:10<43:08, 294.34frames/s]  1%|          | 6000/764825 [00:20<43:02, 293.80frames/s]  1%|          | 9000/764825 [00:30<43:04, 292.47frames/s]  2%|▏         | 12000/764825 [00:41<42:59, 291.84frames/s]  2%|▏         | 15000/764825 [00:51<42:52, 291.46frames/s]  2%|▏         | 18000/764825 [01:01<42:38, 291.91frames/s]  3%|▎         | 21000/764825 [01:12<42:41, 290.39frames/s]  3%|▎         | 21000/764825 [01:22<42:41, 290.39frames/s]  3%|▎         | 24000/764825 [01:22<42:42, 289.10frames/s]  4%|▎         | 27000/764825 [01:32<42:37, 288.53frames/s]  4%|▎         | 27000/764825 [01:52<42:37, 288.53frames/s]  4%|▍         | 30000/764825 [01:54<56:58, 214.97frames/s]  4%|▍         | 30000/764825 [02:12<56:58, 214.97frames/s]  4%|▍         | 33000/764825 [02:21<1:13:05, 166.88frames/s]  4%|▍         | 33000/764825 [02:32<1:13:05, 166.88frames/s]  5%|▍         | 36000/764825 [02:46<1:21:13, 149.55frames/s]  5%|▍         | 36000/764825 [03:02<1:21:13, 149.55frames/s]  5%|▌         | 38886/764825 [03:14<1:31:20, 132.45frames/s]  5%|▌         | 38886/764825 [03:32<1:31:20, 132.45frames/s]  5%|▌         | 41884/764825 [03:43<1:39:03, 121.63frames/s]  5%|▌         | 41884/764825 [04:02<1:39:03, 121.63frames/s]  6%|▌         | 44884/764825 [04:11<1:42:01, 117.62frames/s]  6%|▌         | 44884/764825 [04:22<1:42:01, 117.62frames/s]  6%|▋         | 47884/764825 [04:39<1:45:23, 113.37frames/s]  6%|▋         | 47884/764825 [04:52<1:45:23, 113.37frames/s]  7%|▋         | 50884/764825 [05:03<1:41:44, 116.95frames/s]  7%|▋         | 50884/764825 [05:22<1:41:44, 116.95frames/s]  7%|▋         | 53884/764825 [07:42<4:19:21, 45.69frames/s]   7%|▋         | 53884/764825 [07:52<4:19:21, 45.69frames/s]  7%|▋         | 56532/764825 [08:00<3:29:44, 56.28frames/s]  7%|▋         | 56532/764825 [08:12<3:29:44, 56.28frames/s]  8%|▊         | 59434/764825 [08:21<2:52:04, 68.32frames/s]  8%|▊         | 59434/764825 [08:32<2:52:04, 68.32frames/s]  8%|▊         | 62434/764825 [08:47<2:29:28, 78.31frames/s]  8%|▊         | 62434/764825 [09:02<2:29:28, 78.31frames/s]  9%|▊         | 65434/764825 [09:19<2:21:27, 82.40frames/s]  9%|▊         | 65434/764825 [09:32<2:21:27, 82.40frames/s]2026-03-18 00:39:48 [INFO] [downloader] ✓ clip 204 saved (99.3 MB) — queued for transcription
+2026-03-18 00:39:48 [INFO] [downloader] ✓ clip 204 saved (99.3 MB) — queued for transcription
+2026-03-18 00:39:48 [INFO] [downloader] ↓ clip 205 | 2023-12-13 | Board of Supervisors
+2026-03-18 00:39:48 [INFO] [downloader] ↓ clip 205 | 2023-12-13 | Board of Supervisors
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:212: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+  9%|▉         | 68434/764825 [09:47<2:10:34, 88.89frames/s]  9%|▉         | 68434/764825 [10:02<2:10:34, 88.89frames/s]  9%|▉         | 71404/764825 [11:36<3:38:03, 53.00frames/s]  9%|▉         | 71404/764825 [11:52<3:38:03, 53.00frames/s] 10%|▉         | 74404/764825 [12:11<3:12:03, 59.92frames/s] 10%|▉         | 74404/764825 [12:22<3:12:03, 59.92frames/s] 10%|█         | 77374/764825 [12:41<2:49:34, 67.57frames/s] 10%|█         | 77374/764825 [12:52<2:49:34, 67.57frames/s] 11%|█         | 80374/764825 [13:12<2:33:01, 74.55frames/s] 11%|█         | 80374/764825 [13:32<2:33:01, 74.55frames/s] 11%|█         | 83374/764825 [13:45<2:23:47, 78.99frames/s] 11%|█         | 83374/764825 [14:02<2:23:47, 78.99frames/s] 11%|█▏        | 86374/764825 [14:16<2:15:54, 83.20frames/s] 11%|█▏        | 86374/764825 [14:32<2:15:54, 83.20frames/s] 12%|█▏        | 89374/764825 [14:45<2:06:38, 88.89frames/s] 12%|█▏        | 89374/764825 [15:02<2:06:38, 88.89frames/s] 12%|█▏        | 92374/764825 [15:19<2:06:32, 88.57frames/s] 12%|█▏        | 92374/764825 [15:32<2:06:32, 88.57frames/s] 12%|█▏        | 95334/764825 [15:52<2:05:13, 89.10frames/s] 12%|█▏        | 95334/764825 [16:02<2:05:13, 89.10frames/s] 13%|█▎        | 98334/764825 [16:23<2:01:38, 91.32frames/s] 13%|█▎        | 98334/764825 [16:42<2:01:38, 91.32frames/s] 13%|█▎        | 101254/764825 [16:54<2:00:11, 92.01frames/s] 13%|█▎        | 101254/764825 [17:12<2:00:11, 92.01frames/s] 14%|█▎        | 104254/764825 [17:24<1:56:33, 94.46frames/s] 14%|█▎        | 104254/764825 [17:42<1:56:33, 94.46frames/s] 14%|█▍        | 107234/764825 [17:49<1:49:43, 99.89frames/s] 14%|█▍        | 107234/764825 [18:02<1:49:43, 99.89frames/s] 14%|█▍        | 110214/764825 [18:14<1:43:28, 105.43frames/s] 14%|█▍        | 110214/764825 [18:32<1:43:28, 105.43frames/s] 15%|█▍        | 113194/764825 [18:33<1:33:03, 116.71frames/s] 15%|█▍        | 113194/764825 [18:52<1:33:03, 116.71frames/s] 15%|█▌        | 116134/764825 [19:01<1:35:13, 113.53frames/s] 15%|█▌        | 116134/764825 [19:12<1:35:13, 113.53frames/s] 16%|█▌        | 119104/764825 [19:29<1:36:42, 111.28frames/s] 16%|█▌        | 119104/764825 [19:42<1:36:42, 111.28frames/s] 16%|█▌        | 122024/764825 [20:36<2:20:53, 76.04frames/s]  16%|█▌        | 122024/764825 [20:52<2:20:53, 76.04frames/s] 16%|█▌        | 123764/764825 [21:18<2:44:35, 64.91frames/s] 16%|█▌        | 123764/764825 [21:32<2:44:35, 64.91frames/s] 17%|█▋        | 126762/764825 [25:26<6:41:05, 26.51frames/s] 17%|█▋        | 128876/764825 [25:41<5:18:32, 33.27frames/s] 17%|█▋        | 128876/764825 [25:52<5:18:32, 33.27frames/s] 17%|█▋        | 131874/764825 [26:00<3:52:44, 45.33frames/s] 17%|█▋        | 131874/764825 [26:12<3:52:44, 45.33frames/s] 18%|█▊        | 134874/764825 [26:30<3:10:34, 55.09frames/s] 18%|█▊        | 134874/764825 [26:42<3:10:34, 55.09frames/s] 18%|█▊        | 137874/764825 [29:50<5:49:45, 29.88frames/s] 18%|█▊        | 137874/764825 [30:02<5:49:45, 29.88frames/s] 18%|█▊        | 140800/764825 [30:12<4:26:03, 39.09frames/s] 18%|█▊        | 140800/764825 [30:32<4:26:03, 39.09frames/s] 19%|█▉        | 143800/764825 [30:38<3:30:29, 49.17frames/s] 19%|█▉        | 143800/764825 [30:52<3:30:29, 49.17frames/s] 19%|█▉        | 146800/764825 [31:00<2:47:42, 61.42frames/s] 19%|█▉        | 146800/764825 [31:12<2:47:42, 61.42frames/s] 20%|█▉        | 149788/764825 [31:26<2:23:43, 71.32frames/s] 20%|█▉        | 149788/764825 [31:42<2:23:43, 71.32frames/s] 20%|█▉        | 152668/764825 [32:50<3:08:40, 54.08frames/s] 20%|█▉        | 152668/764825 [33:02<3:08:40, 54.08frames/s] 20%|██        | 155666/764825 [33:59<3:21:27, 50.40frames/s] 20%|██        | 155666/764825 [34:12<3:21:27, 50.40frames/s] 21%|██        | 158666/764825 [38:01<6:27:04, 26.10frames/s] 21%|██        | 158666/764825 [38:12<6:27:04, 26.10frames/s] 21%|██        | 161666/764825 [38:21<4:49:27, 34.73frames/s] 21%|██        | 161666/764825 [38:32<4:49:27, 34.73frames/s] 22%|██▏       | 164666/764825 [42:13<7:14:13, 23.04frames/s] 22%|██▏       | 164666/764825 [42:32<7:14:13, 23.04frames/s] 22%|██▏       | 167520/764825 [42:39<5:33:16, 29.87frames/s] 22%|██▏       | 167520/764825 [42:52<5:33:16, 29.87frames/s] 22%|██▏       | 170520/764825 [43:06<4:17:49, 38.42frames/s] 22%|██▏       | 170520/764825 [43:22<4:17:49, 38.42frames/s] 23%|██▎       | 173520/764825 [43:34<3:26:17, 47.77frames/s] 23%|██▎       | 173520/764825 [43:52<3:26:17, 47.77frames/s] 23%|██▎       | 176520/764825 [44:03<2:51:43, 57.10frames/s] 23%|██▎       | 176520/764825 [44:22<2:51:43, 57.10frames/s] 23%|██▎       | 179520/764825 [44:28<2:23:49, 67.83frames/s] 23%|██▎       | 179520/764825 [44:42<2:23:49, 67.83frames/s]2026-03-18 01:16:19 [INFO] [downloader] ✓ clip 203 saved (210.4 MB) — queued for transcription
+2026-03-18 01:16:19 [INFO] [downloader] ✓ clip 203 saved (210.4 MB) — queued for transcription
+2026-03-18 01:16:19 [INFO] [downloader] ↓ clip 206 | 2024-01-03 | Planning Commission
+2026-03-18 01:16:19 [INFO] [downloader] ↓ clip 206 | 2024-01-03 | Planning Commission
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:212: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+ 24%|██▍       | 182516/764825 [46:57<4:05:28, 39.54frames/s] 24%|██▍       | 182516/764825 [47:12<4:05:28, 39.54frames/s] 24%|██▍       | 185384/764825 [47:19<3:14:17, 49.70frames/s] 24%|██▍       | 185384/764825 [47:32<3:14:17, 49.70frames/s] 25%|██▍       | 188384/764825 [47:45<2:40:30, 59.86frames/s] 25%|██▍       | 188384/764825 [48:02<2:40:30, 59.86frames/s] 25%|██▌       | 191278/764825 [48:12<2:18:45, 68.89frames/s] 25%|██▌       | 191278/764825 [48:32<2:18:45, 68.89frames/s] 25%|██▌       | 194266/764825 [48:40<2:03:08, 77.23frames/s] 25%|██▌       | 194266/764825 [48:52<2:03:08, 77.23frames/s] 26%|██▌       | 197260/764825 [49:09<1:53:24, 83.41frames/s] 26%|██▌       | 197260/764825 [49:22<1:53:24, 83.41frames/s] 26%|██▌       | 200260/764825 [50:54<2:58:27, 52.73frames/s] 26%|██▌       | 200260/764825 [51:12<2:58:27, 52.73frames/s] 27%|██▋       | 203260/764825 [51:22<2:29:34, 62.58frames/s] 27%|██▋       | 203260/764825 [51:32<2:29:34, 62.58frames/s] 27%|██▋       | 206260/764825 [51:47<2:07:30, 73.01frames/s] 27%|██▋       | 206260/764825 [52:02<2:07:30, 73.01frames/s] 27%|██▋       | 209224/764825 [52:12<1:52:31, 82.29frames/s] 27%|██▋       | 209224/764825 [52:32<1:52:31, 82.29frames/s] 28%|██▊       | 212180/764825 [52:42<1:46:24, 86.56frames/s] 28%|██▊       | 212180/764825 [53:02<1:46:24, 86.56frames/s] 28%|██▊       | 215180/764825 [53:08<1:37:38, 93.82frames/s] 28%|██▊       | 215180/764825 [53:22<1:37:38, 93.82frames/s] 29%|██▊       | 218094/764825 [53:38<1:36:22, 94.55frames/s] 29%|██▊       | 218094/764825 [53:52<1:36:22, 94.55frames/s] 29%|██▉       | 221094/764825 [54:08<1:34:24, 95.98frames/s] 29%|██▉       | 221094/764825 [54:22<1:34:24, 95.98frames/s] 29%|██▉       | 224054/764825 [54:42<1:36:40, 93.23frames/s] 29%|██▉       | 224054/764825 [55:02<1:36:40, 93.23frames/s] 30%|██▉       | 227028/764825 [55:11<1:33:41, 95.68frames/s] 30%|██▉       | 227028/764825 [55:22<1:33:41, 95.68frames/s] 30%|███       | 230028/764825 [55:43<1:33:26, 95.39frames/s] 30%|███       | 230028/764825 [56:02<1:33:26, 95.39frames/s] 30%|███       | 233028/764825 [59:11<4:10:18, 35.41frames/s] 30%|███       | 233028/764825 [59:22<4:10:18, 35.41frames/s] 31%|███       | 235896/764825 [59:34<3:16:34, 44.84frames/s] 31%|███       | 235896/764825 [59:52<3:16:34, 44.84frames/s] 31%|███       | 238896/764825 [1:00:01<2:40:34, 54.59frames/s] 31%|███       | 238896/764825 [1:00:12<2:40:34, 54.59frames/s] 32%|███▏      | 241874/764825 [1:00:35<2:21:17, 61.69frames/s] 32%|███▏      | 241874/764825 [1:00:52<2:21:17, 61.69frames/s] 32%|███▏      | 244852/764825 [1:01:08<2:07:21, 68.05frames/s] 32%|███▏      | 244852/764825 [1:01:22<2:07:21, 68.05frames/s] 32%|███▏      | 247852/764825 [1:01:39<1:54:54, 74.99frames/s] 32%|███▏      | 247852/764825 [1:01:52<1:54:54, 74.99frames/s] 33%|███▎      | 250672/764825 [1:02:13<1:51:01, 77.19frames/s] 33%|███▎      | 250672/764825 [1:02:32<1:51:01, 77.19frames/s] 33%|███▎      | 253618/764825 [1:02:40<1:40:39, 84.64frames/s] 33%|███▎      | 253618/764825 [1:02:52<1:40:39, 84.64frames/s] 34%|███▎      | 256618/764825 [1:03:12<1:37:19, 87.03frames/s] 34%|███▎      | 256618/764825 [1:03:32<1:37:19, 87.03frames/s] 34%|███▍      | 259618/764825 [1:03:47<1:37:30, 86.35frames/s] 34%|███▍      | 259618/764825 [1:04:02<1:37:30, 86.35frames/s] 34%|███▍      | 262618/764825 [1:04:11<1:27:49, 95.31frames/s] 34%|███▍      | 262618/764825 [1:04:22<1:27:49, 95.31frames/s] 35%|███▍      | 265618/764825 [1:04:40<1:24:57, 97.93frames/s] 35%|███▍      | 265618/764825 [1:04:52<1:24:57, 97.93frames/s] 35%|███▌      | 268618/764825 [1:05:11<1:25:03, 97.23frames/s] 35%|███▌      | 268618/764825 [1:05:22<1:25:03, 97.23frames/s] 36%|███▌      | 271518/764825 [1:05:43<1:26:22, 95.20frames/s] 36%|███▌      | 271518/764825 [1:06:02<1:26:22, 95.20frames/s] 36%|███▌      | 274518/764825 [1:06:15<1:25:35, 95.48frames/s] 36%|███▌      | 274518/764825 [1:06:32<1:25:35, 95.48frames/s] 36%|███▋      | 277418/764825 [1:06:44<1:24:03, 96.64frames/s] 36%|███▋      | 277418/764825 [1:07:02<1:24:03, 96.64frames/s] 37%|███▋      | 280318/764825 [1:07:19<1:27:37, 92.16frames/s] 37%|███▋      | 280318/764825 [1:07:32<1:27:37, 92.16frames/s] 37%|███▋      | 283318/764825 [1:10:18<3:26:46, 38.81frames/s] 37%|███▋      | 283318/764825 [1:10:32<3:26:46, 38.81frames/s] 37%|███▋      | 285924/764825 [1:10:38<2:45:37, 48.19frames/s] 37%|███▋      | 285924/764825 [1:10:52<2:45:37, 48.19frames/s] 38%|███▊      | 288924/764825 [1:13:04<3:54:01, 33.89frames/s] 38%|███▊      | 288924/764825 [1:13:22<3:54:01, 33.89frames/s] 38%|███▊      | 291534/764825 [1:13:27<3:06:59, 42.19frames/s] 38%|███▊      | 291534/764825 [1:13:42<3:06:59, 42.19frames/s] 39%|███▊      | 294534/764825 [1:13:56<2:30:56, 51.93frames/s] 39%|███▊      | 294534/764825 [1:14:12<2:30:56, 51.93frames/s] 39%|███▉      | 297534/764825 [1:14:19<2:02:25, 63.61frames/s] 39%|███▉      | 297534/764825 [1:14:32<2:02:25, 63.61frames/s] 39%|███▉      | 300534/764825 [1:14:44<1:43:46, 74.56frames/s] 39%|███▉      | 300534/764825 [1:15:02<1:43:46, 74.56frames/s] 40%|███▉      | 303534/764825 [1:16:40<2:42:22, 47.35frames/s] 40%|███▉      | 303534/764825 [1:16:52<2:42:22, 47.35frames/s] 40%|████      | 306456/764825 [1:17:04<2:12:00, 57.87frames/s] 40%|████      | 306456/764825 [1:17:22<2:12:00, 57.87frames/s] 40%|████      | 309442/764825 [1:20:10<3:54:30, 32.37frames/s] 40%|████      | 309442/764825 [1:20:22<3:54:30, 32.37frames/s] 41%|████      | 312344/764825 [1:20:34<3:02:51, 41.24frames/s] 41%|████      | 312344/764825 [1:20:52<3:02:51, 41.24frames/s] 41%|████      | 315312/764825 [1:20:58<2:25:03, 51.65frames/s] 41%|████      | 315312/764825 [1:21:12<2:25:03, 51.65frames/s] 42%|████▏     | 318296/764825 [1:21:24<2:00:00, 62.01frames/s] 42%|████▏     | 318296/764825 [1:21:42<2:00:00, 62.01frames/s] 42%|████▏     | 321296/764825 [1:21:53<1:45:07, 70.32frames/s] 42%|████▏     | 321296/764825 [1:22:12<1:45:07, 70.32frames/s] 42%|████▏     | 324296/764825 [1:22:23<1:35:00, 77.27frames/s] 42%|████▏     | 324296/764825 [1:22:42<1:35:00, 77.27frames/s] 43%|████▎     | 327296/764825 [1:22:52<1:26:32, 84.27frames/s] 43%|████▎     | 327296/764825 [1:23:02<1:26:32, 84.27frames/s] 43%|████▎     | 330274/764825 [1:23:25<1:24:17, 85.93frames/s] 43%|████▎     | 330274/764825 [1:23:42<1:24:17, 85.93frames/s] 44%|████▎     | 333274/764825 [1:23:52<1:18:06, 92.09frames/s] 44%|████▎     | 333274/764825 [1:24:02<1:18:06, 92.09frames/s] 44%|████▍     | 336256/764825 [1:26:24<2:43:34, 43.66frames/s] 44%|████▍     | 336256/764825 [1:26:42<2:43:34, 43.66frames/s] 44%|████▍     | 339124/764825 [1:26:48<2:12:25, 53.58frames/s] 44%|████▍     | 339124/764825 [1:27:02<2:12:25, 53.58frames/s] 45%|████▍     | 342122/764825 [1:27:11<1:48:08, 65.14frames/s] 45%|████▍     | 342122/764825 [1:27:22<1:48:08, 65.14frames/s] 45%|████▌     | 345122/764825 [1:27:39<1:34:44, 73.83frames/s] 45%|████▌     | 345122/764825 [1:27:52<1:34:44, 73.83frames/s]2026-03-18 02:00:06 [ERROR] [downloader] FAILED download clip 201: yt-dlp failed (exit 1): ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 631, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 484, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+2026-03-18 02:00:06 [ERROR] [downloader] FAILED download clip 201: yt-dlp failed (exit 1): ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 631, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 484, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:212: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-03-18 02:00:06 [INFO] [downloader] ↓ clip 207 | 2024-01-10 | Board of Supervisors
+2026-03-18 02:00:06 [INFO] [downloader] ↓ clip 207 | 2024-01-10 | Board of Supervisors
+ 46%|████▌     | 348004/764825 [1:30:34<3:10:02, 36.55frames/s] 46%|████▌     | 348004/764825 [1:30:52<3:10:02, 36.55frames/s] 46%|████▌     | 351004/764825 [1:30:58<2:28:08, 46.56frames/s] 46%|████▌     | 351004/764825 [1:31:12<2:28:08, 46.56frames/s] 46%|████▋     | 354002/764825 [1:31:33<2:06:33, 54.10frames/s] 46%|████▋     | 354002/764825 [1:31:52<2:06:33, 54.10frames/s] 47%|████▋     | 357002/764825 [1:32:04<1:49:21, 62.15frames/s] 47%|████▋     | 357002/764825 [1:32:22<1:49:21, 62.15frames/s] 47%|████▋     | 359982/764825 [1:32:30<1:33:34, 72.11frames/s] 47%|████▋     | 359982/764825 [1:32:42<1:33:34, 72.11frames/s] 47%|████▋     | 362982/764825 [1:33:46<1:55:51, 57.81frames/s] 47%|████▋     | 362982/764825 [1:34:02<1:55:51, 57.81frames/s] 48%|████▊     | 365980/764825 [1:34:15<1:39:42, 66.67frames/s] 48%|████▊     | 365980/764825 [1:34:32<1:39:42, 66.67frames/s] 48%|████▊     | 368980/764825 [1:34:44<1:28:29, 74.55frames/s] 48%|████▊     | 368980/764825 [1:35:02<1:28:29, 74.55frames/s] 49%|████▊     | 371980/764825 [1:35:09<1:17:31, 84.46frames/s] 49%|████▊     | 371980/764825 [1:35:22<1:17:31, 84.46frames/s] 49%|████▉     | 374980/764825 [1:35:35<1:11:10, 91.29frames/s] 49%|████▉     | 374980/764825 [1:35:52<1:11:10, 91.29frames/s] 49%|████▉     | 377980/764825 [1:36:08<1:10:20, 91.66frames/s] 49%|████▉     | 377980/764825 [1:36:22<1:10:20, 91.66frames/s] 50%|████▉     | 380780/764825 [1:36:32<1:05:29, 97.74frames/s] 50%|████▉     | 380780/764825 [1:36:42<1:05:29, 97.74frames/s] 50%|█████     | 383680/764825 [1:37:03<1:05:45, 96.60frames/s] 50%|█████     | 383680/764825 [1:37:22<1:05:45, 96.60frames/s] 51%|█████     | 386680/764825 [1:37:34<1:05:39, 96.00frames/s] 51%|█████     | 386680/764825 [1:37:52<1:05:39, 96.00frames/s] 51%|█████     | 389580/764825 [1:38:02<1:03:43, 98.14frames/s] 51%|█████     | 389580/764825 [1:38:22<1:03:43, 98.14frames/s] 51%|█████▏    | 392480/764825 [1:38:28<1:00:57, 101.82frames/s] 51%|█████▏    | 392480/764825 [1:38:42<1:00:57, 101.82frames/s] 52%|█████▏    | 395280/764825 [1:38:57<1:01:01, 100.94frames/s] 52%|█████▏    | 395280/764825 [1:39:12<1:01:01, 100.94frames/s] 52%|█████▏    | 398180/764825 [1:40:43<1:49:43, 55.70frames/s]  52%|█████▏    | 398180/764825 [1:41:02<1:49:43, 55.70frames/s] 52%|█████▏    | 401180/764825 [1:41:06<1:29:53, 67.42frames/s] 52%|█████▏    | 401180/764825 [1:41:22<1:29:53, 67.42frames/s] 53%|█████▎    | 404080/764825 [1:43:38<2:36:30, 38.42frames/s] 53%|█████▎    | 404080/764825 [1:43:52<2:36:30, 38.42frames/s] 53%|█████▎    | 406202/764825 [1:43:57<2:11:13, 45.55frames/s] 53%|█████▎    | 406202/764825 [1:44:12<2:11:13, 45.55frames/s] 54%|█████▎    | 409202/764825 [1:44:20<1:42:32, 57.80frames/s] 54%|█████▎    | 409202/764825 [1:44:32<1:42:32, 57.80frames/s] 54%|█████▍    | 412202/764825 [1:44:48<1:27:13, 67.38frames/s] 54%|█████▍    | 412202/764825 [1:45:02<1:27:13, 67.38frames/s] 54%|█████▍    | 415202/764825 [1:45:11<1:13:22, 79.42frames/s] 54%|█████▍    | 415202/764825 [1:45:22<1:13:22, 79.42frames/s] 55%|█████▍    | 418202/764825 [1:45:44<1:09:46, 82.79frames/s] 55%|█████▍    | 418202/764825 [1:46:02<1:09:46, 82.79frames/s] 55%|█████▌    | 421164/764825 [1:46:13<1:05:02, 88.07frames/s] 55%|█████▌    | 421164/764825 [1:46:32<1:05:02, 88.07frames/s] 55%|█████▌    | 424164/764825 [1:46:40<1:00:41, 93.54frames/s] 55%|█████▌    | 424164/764825 [1:46:52<1:00:41, 93.54frames/s] 56%|█████▌    | 427164/764825 [1:47:11<59:13, 95.03frames/s]   56%|█████▌    | 427164/764825 [1:47:22<59:13, 95.03frames/s] 56%|█████▌    | 430164/764825 [1:47:41<58:14, 95.77frames/s] 56%|█████▌    | 430164/764825 [1:47:52<58:14, 95.77frames/s] 57%|█████▋    | 433164/764825 [1:48:11<56:31, 97.79frames/s] 57%|█████▋    | 433164/764825 [1:48:22<56:31, 97.79frames/s] 57%|█████▋    | 436164/764825 [1:48:36<53:11, 102.97frames/s] 57%|█████▋    | 436164/764825 [1:48:52<53:11, 102.97frames/s] 57%|█████▋    | 439164/764825 [1:49:03<51:24, 105.58frames/s] 57%|█████▋    | 439164/764825 [1:49:22<51:24, 105.58frames/s] 58%|█████▊    | 442162/764825 [1:49:33<51:37, 104.18frames/s] 58%|█████▊    | 442162/764825 [1:49:52<51:37, 104.18frames/s] 58%|█████▊    | 445162/764825 [1:50:04<52:36, 101.26frames/s] 58%|█████▊    | 445162/764825 [1:50:22<52:36, 101.26frames/s] 59%|█████▊    | 448162/764825 [1:50:28<49:14, 107.18frames/s] 59%|█████▊    | 448162/764825 [1:50:42<49:14, 107.18frames/s] 59%|█████▉    | 451162/764825 [1:50:55<47:55, 109.08frames/s] 59%|█████▉    | 451162/764825 [1:51:12<47:55, 109.08frames/s] 59%|█████▉    | 454122/764825 [1:51:24<48:26, 106.88frames/s] 59%|█████▉    | 454122/764825 [1:51:42<48:26, 106.88frames/s] 60%|█████▉    | 457122/764825 [1:52:36<1:10:36, 72.63frames/s] 60%|█████▉    | 457122/764825 [1:52:52<1:10:36, 72.63frames/s] 60%|██████    | 460122/764825 [1:53:06<1:04:17, 79.00frames/s] 60%|██████    | 460122/764825 [1:53:22<1:04:17, 79.00frames/s] 61%|██████    | 463122/764825 [1:53:35<59:20, 84.75frames/s]   61%|██████    | 463122/764825 [1:53:52<59:20, 84.75frames/s] 61%|██████    | 466122/764825 [1:53:59<52:45, 94.37frames/s] 61%|██████    | 466122/764825 [1:54:12<52:45, 94.37frames/s] 61%|██████▏   | 469068/764825 [1:56:41<1:57:07, 42.08frames/s] 61%|██████▏   | 469068/764825 [1:56:52<1:57:07, 42.08frames/s] 62%|██████▏   | 471974/764825 [1:57:04<1:33:30, 52.20frames/s] 62%|██████▏   | 471974/764825 [1:57:22<1:33:30, 52.20frames/s] 62%|██████▏   | 474972/764825 [1:57:30<1:17:08, 62.62frames/s] 62%|██████▏   | 474972/764825 [1:57:42<1:17:08, 62.62frames/s]2026-03-18 02:28:37 [ERROR] [downloader] FAILED download clip 205: yt-dlp failed (exit 1): ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 631, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 484, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+2026-03-18 02:28:37 [ERROR] [downloader] FAILED download clip 205: yt-dlp failed (exit 1): ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 631, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 484, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:212: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-03-18 02:28:37 [INFO] [downloader] ↓ clip 208 | 2024-01-24 | Board of Supervisors
+2026-03-18 02:28:37 [INFO] [downloader] ↓ clip 208 | 2024-01-24 | Board of Supervisors
+2026-03-18 02:28:57 [ERROR] [downloader] FAILED download clip 206: yt-dlp failed (exit 1): ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 631, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 484, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+2026-03-18 02:28:57 [ERROR] [downloader] FAILED download clip 206: yt-dlp failed (exit 1): ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 631, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 484, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:212: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-03-18 02:28:57 [INFO] [downloader] ↓ clip 209 | 2024-02-07 | Board of Supervisors - School Board Joint Session
+2026-03-18 02:28:57 [INFO] [downloader] ↓ clip 209 | 2024-02-07 | Board of Supervisors - School Board Joint Session
+ 62%|██████▏   | 477972/764825 [2:01:32<2:49:45, 28.16frames/s] 62%|██████▏   | 477972/764825 [2:01:52<2:49:45, 28.16frames/s] 63%|██████▎   | 480042/764825 [2:01:53<2:20:29, 33.78frames/s] 63%|██████▎   | 480042/764825 [2:02:12<2:20:29, 33.78frames/s] 63%|██████▎   | 483042/764825 [2:02:13<1:44:49, 44.80frames/s] 63%|██████▎   | 483042/764825 [2:02:32<1:44:49, 44.80frames/s] 64%|██████▎   | 486042/764825 [2:02:42<1:24:47, 54.80frames/s] 64%|██████▎   | 486042/764825 [2:02:52<1:24:47, 54.80frames/s] 64%|██████▍   | 489042/764825 [2:03:10<1:11:30, 64.28frames/s] 64%|██████▍   | 489042/764825 [2:03:22<1:11:30, 64.28frames/s] 64%|██████▍   | 492042/764825 [2:03:41<1:03:20, 71.78frames/s] 64%|██████▍   | 492042/764825 [2:03:52<1:03:20, 71.78frames/s] 65%|██████▍   | 495040/764825 [2:04:12<57:42, 77.92frames/s]   65%|██████▍   | 495040/764825 [2:04:32<57:42, 77.92frames/s] 65%|██████▌   | 498040/764825 [2:04:44<54:03, 82.26frames/s] 65%|██████▌   | 498040/764825 [2:05:02<54:03, 82.26frames/s] 66%|██████▌   | 501010/764825 [2:05:14<50:55, 86.35frames/s] 66%|██████▌   | 501010/764825 [2:05:32<50:55, 86.35frames/s] 66%|██████▌   | 503960/764825 [2:05:40<46:42, 93.10frames/s] 66%|██████▌   | 503960/764825 [2:05:52<46:42, 93.10frames/s] 66%|██████▋   | 506910/764825 [2:06:07<44:04, 97.53frames/s] 66%|██████▋   | 506910/764825 [2:06:22<44:04, 97.53frames/s] 67%|██████▋   | 509810/764825 [2:06:37<43:29, 97.73frames/s] 67%|██████▋   | 509810/764825 [2:06:52<43:29, 97.73frames/s] 67%|██████▋   | 512710/764825 [2:07:07<43:06, 97.49frames/s] 67%|██████▋   | 512710/764825 [2:07:22<43:06, 97.49frames/s] 67%|██████▋   | 515610/764825 [2:07:30<40:03, 103.70frames/s] 67%|██████▋   | 515610/764825 [2:07:42<40:03, 103.70frames/s] 68%|██████▊   | 518410/764825 [2:07:59<40:12, 102.13frames/s] 68%|██████▊   | 518410/764825 [2:08:12<40:12, 102.13frames/s] 68%|██████▊   | 521310/764825 [2:08:25<38:54, 104.30frames/s] 68%|██████▊   | 521310/764825 [2:08:42<38:54, 104.30frames/s] 69%|██████▊   | 524310/764825 [2:08:51<37:13, 107.70frames/s] 69%|██████▊   | 524310/764825 [2:09:02<37:13, 107.70frames/s] 69%|██████▉   | 527210/764825 [2:09:20<37:44, 104.94frames/s] 69%|██████▉   | 527210/764825 [2:09:32<37:44, 104.94frames/s] 69%|██████▉   | 530110/764825 [2:09:45<36:03, 108.46frames/s] 69%|██████▉   | 530110/764825 [2:10:02<36:03, 108.46frames/s] 70%|██████▉   | 533010/764825 [2:10:09<34:30, 111.98frames/s] 70%|██████▉   | 533010/764825 [2:10:22<34:30, 111.98frames/s] 70%|███████   | 536010/764825 [2:12:10<1:10:53, 53.80frames/s] 70%|███████   | 536010/764825 [2:12:22<1:10:53, 53.80frames/s] 70%|███████   | 539010/764825 [2:16:07<2:18:59, 27.08frames/s] 70%|███████   | 539010/764825 [2:16:22<2:18:59, 27.08frames/s] 71%|███████   | 541772/764825 [2:16:31<1:47:27, 34.60frames/s] 71%|███████   | 541772/764825 [2:16:42<1:47:27, 34.60frames/s] 71%|███████   | 544766/764825 [2:16:57<1:23:15, 44.05frames/s] 71%|███████   | 544766/764825 [2:17:12<1:23:15, 44.05frames/s] 72%|███████▏  | 547740/764825 [2:17:24<1:06:59, 54.01frames/s] 72%|███████▏  | 547740/764825 [2:17:42<1:06:59, 54.01frames/s] 72%|███████▏  | 550706/764825 [2:20:41<1:57:39, 30.33frames/s] 72%|███████▏  | 550706/764825 [2:20:52<1:57:39, 30.33frames/s] 72%|███████▏  | 553560/764825 [2:21:09<1:32:16, 38.16frames/s] 72%|███████▏  | 553560/764825 [2:21:22<1:32:16, 38.16frames/s] 73%|███████▎  | 556536/764825 [2:21:36<1:12:57, 47.58frames/s] 73%|███████▎  | 556536/764825 [2:21:52<1:12:57, 47.58frames/s] 73%|███████▎  | 559442/764825 [2:24:18<1:47:21, 31.88frames/s] 73%|███████▎  | 559442/764825 [2:24:32<1:47:21, 31.88frames/s] 74%|███████▎  | 562318/764825 [2:24:43<1:23:01, 40.65frames/s] 74%|███████▎  | 562318/764825 [2:25:02<1:23:01, 40.65frames/s] 74%|███████▍  | 565318/764825 [2:25:08<1:05:19, 50.90frames/s] 74%|███████▍  | 565318/764825 [2:25:22<1:05:19, 50.90frames/s] 74%|███████▍  | 568318/764825 [2:28:30<1:52:03, 29.23frames/s] 74%|███████▍  | 568318/764825 [2:28:42<1:52:03, 29.23frames/s] 75%|███████▍  | 570966/764825 [2:28:54<1:27:48, 36.79frames/s] 75%|███████▍  | 570966/764825 [2:29:12<1:27:48, 36.79frames/s] 75%|███████▌  | 573966/764825 [2:29:20<1:08:06, 46.71frames/s] 75%|███████▌  | 573966/764825 [2:29:32<1:08:06, 46.71frames/s] 75%|███████▌  | 576966/764825 [2:29:45<54:39, 57.29frames/s]   75%|███████▌  | 576966/764825 [2:30:02<54:39, 57.29frames/s] 76%|███████▌  | 579858/764825 [2:30:15<47:20, 65.12frames/s] 76%|███████▌  | 579858/764825 [2:30:32<47:20, 65.12frames/s] 76%|███████▌  | 582844/764825 [2:32:19<1:10:38, 42.94frames/s] 76%|███████▌  | 582844/764825 [2:32:32<1:10:38, 42.94frames/s] 77%|███████▋  | 585832/764825 [2:34:57<1:36:18, 30.98frames/s] 77%|███████▋  | 585832/764825 [2:35:12<1:36:18, 30.98frames/s] 77%|███████▋  | 588766/764825 [2:35:25<1:14:57, 39.15frames/s] 77%|███████▋  | 588766/764825 [2:35:42<1:14:57, 39.15frames/s] 77%|███████▋  | 591764/764825 [2:35:55<59:55, 48.13frames/s]   77%|███████▋  | 591764/764825 [2:36:12<59:55, 48.13frames/s] 78%|███████▊  | 594764/764825 [2:36:24<49:30, 57.25frames/s] 78%|███████▊  | 594764/764825 [2:36:42<49:30, 57.25frames/s] 78%|███████▊  | 597764/764825 [2:39:48<1:31:02, 30.58frames/s] 78%|███████▊  | 597764/764825 [2:40:02<1:31:02, 30.58frames/s] 78%|███████▊  | 600196/764825 [2:40:11<1:13:10, 37.50frames/s] 78%|███████▊  | 600196/764825 [2:40:22<1:13:10, 37.50frames/s] 79%|███████▉  | 603196/764825 [2:40:43<58:22, 46.15frames/s]   79%|███████▉  | 603196/764825 [2:41:02<58:22, 46.15frames/s] 79%|███████▉  | 606196/764825 [2:41:12<47:16, 55.93frames/s] 79%|███████▉  | 606196/764825 [2:41:22<47:16, 55.93frames/s] 80%|███████▉  | 609196/764825 [2:41:40<39:46, 65.20frames/s] 80%|███████▉  | 609196/764825 [2:41:52<39:46, 65.20frames/s] 80%|████████  | 612148/764825 [2:42:09<34:36, 73.51frames/s] 80%|████████  | 612148/764825 [2:42:22<34:36, 73.51frames/s] 80%|████████  | 615146/764825 [2:42:41<31:44, 78.60frames/s] 80%|████████  | 615146/764825 [2:42:52<31:44, 78.60frames/s] 81%|████████  | 618146/764825 [2:43:08<28:30, 85.73frames/s] 81%|████████  | 618146/764825 [2:43:22<28:30, 85.73frames/s] 81%|████████  | 621146/764825 [2:43:36<26:10, 91.51frames/s] 81%|████████  | 621146/764825 [2:43:52<26:10, 91.51frames/s] 82%|████████▏ | 624146/764825 [2:44:01<23:46, 98.64frames/s] 82%|████████▏ | 624146/764825 [2:44:12<23:46, 98.64frames/s] 82%|████████▏ | 627146/764825 [2:44:29<22:46, 100.73frames/s] 82%|████████▏ | 627146/764825 [2:44:42<22:46, 100.73frames/s] 82%|████████▏ | 630146/764825 [2:46:12<38:36, 58.13frames/s]  82%|████████▏ | 630146/764825 [2:46:22<38:36, 58.13frames/s] 83%|████████▎ | 633046/764825 [2:46:38<32:35, 67.40frames/s] 83%|████████▎ | 633046/764825 [2:46:52<32:35, 67.40frames/s] 83%|████████▎ | 635946/764825 [2:47:01<27:29, 78.15frames/s] 83%|████████▎ | 635946/764825 [2:47:12<27:29, 78.15frames/s] 84%|████████▎ | 638846/764825 [2:47:25<23:58, 87.55frames/s] 84%|████████▎ | 638846/764825 [2:47:42<23:58, 87.55frames/s] 84%|████████▍ | 641746/764825 [2:47:50<21:47, 94.11frames/s] 84%|████████▍ | 641746/764825 [2:48:02<21:47, 94.11frames/s] 84%|████████▍ | 644546/764825 [2:48:15<20:15, 98.95frames/s] 84%|████████▍ | 644546/764825 [2:48:32<20:15, 98.95frames/s] 85%|████████▍ | 647446/764825 [2:48:41<19:01, 102.82frames/s] 85%|████████▍ | 647446/764825 [2:48:52<19:01, 102.82frames/s] 85%|████████▌ | 650346/764825 [2:49:07<18:08, 105.15frames/s] 85%|████████▌ | 650346/764825 [2:49:22<18:08, 105.15frames/s] 85%|████████▌ | 653346/764825 [2:49:37<18:02, 102.95frames/s] 85%|████████▌ | 653346/764825 [2:49:52<18:02, 102.95frames/s] 86%|████████▌ | 656246/764825 [2:53:14<52:39, 34.37frames/s]  86%|████████▌ | 656246/764825 [2:53:32<52:39, 34.37frames/s] 86%|████████▌ | 659190/764825 [2:53:40<40:28, 43.50frames/s] 86%|████████▌ | 659190/764825 [2:53:52<40:28, 43.50frames/s] 87%|████████▋ | 662190/764825 [2:54:04<31:33, 54.19frames/s] 87%|████████▋ | 662190/764825 [2:54:22<31:33, 54.19frames/s] 87%|████████▋ | 665190/764825 [2:54:30<25:37, 64.81frames/s]2026-03-18 03:24:45 [INFO] [downloader] ✓ clip 209 saved (318.3 MB) — queued for transcription
+2026-03-18 03:24:45 [INFO] [downloader] ✓ clip 209 saved (318.3 MB) — queued for transcription
+2026-03-18 03:24:45 [INFO] [downloader] ↓ clip 212 | 2024-02-14 | Board of Supervisors
+2026-03-18 03:24:45 [INFO] [downloader] ↓ clip 212 | 2024-02-14 | Board of Supervisors
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:212: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+ 87%|████████▋ | 665190/764825 [2:54:42<25:37, 64.81frames/s] 87%|████████▋ | 668152/764825 [2:58:22<55:20, 29.11frames/s] 88%|████████▊ | 670862/764825 [2:58:41<41:37, 37.63frames/s] 88%|████████▊ | 670862/764825 [2:58:52<41:37, 37.63frames/s] 88%|████████▊ | 673860/764825 [2:59:06<31:48, 47.66frames/s] 88%|████████▊ | 673860/764825 [2:59:22<31:48, 47.66frames/s] 88%|████████▊ | 676860/764825 [2:59:34<25:37, 57.20frames/s] 88%|████████▊ | 676860/764825 [2:59:52<25:37, 57.20frames/s] 89%|████████▉ | 679816/764825 [2:59:58<20:40, 68.55frames/s] 89%|████████▉ | 679816/764825 [3:00:12<20:40, 68.55frames/s] 89%|████████▉ | 682816/764825 [3:02:34<35:31, 38.47frames/s] 89%|████████▉ | 682816/764825 [3:02:52<35:31, 38.47frames/s] 90%|████████▉ | 685790/764825 [3:03:01<27:27, 47.97frames/s] 90%|████████▉ | 685790/764825 [3:03:12<27:27, 47.97frames/s] 90%|█████████ | 688790/764825 [3:03:29<22:04, 57.43frames/s] 90%|█████████ | 688790/764825 [3:03:42<22:04, 57.43frames/s] 90%|█████████ | 691788/764825 [3:03:58<18:22, 66.24frames/s] 90%|█████████ | 691788/764825 [3:04:12<18:22, 66.24frames/s] 91%|█████████ | 694786/764825 [3:05:52<25:42, 45.40frames/s] 91%|█████████ | 694786/764825 [3:06:12<25:42, 45.40frames/s]2026-03-18 03:37:12 [INFO] [downloader] ✓ clip 212 saved (21.1 MB) — queued for transcription
+2026-03-18 03:37:12 [INFO] [downloader] ✓ clip 212 saved (21.1 MB) — queued for transcription
+2026-03-18 03:37:12 [INFO] [downloader] ↓ clip 213 | 2024-02-21 | Planning Commission
+2026-03-18 03:37:12 [INFO] [downloader] ↓ clip 213 | 2024-02-21 | Planning Commission
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:212: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+ 91%|█████████ | 697758/764825 [3:07:54<30:52, 36.19frames/s] 91%|█████████ | 697758/764825 [3:08:12<30:52, 36.19frames/s] 92%|█████████▏| 700728/764825 [3:10:31<37:36, 28.41frames/s] 92%|█████████▏| 700728/764825 [3:10:42<37:36, 28.41frames/s] 92%|█████████▏| 703654/764825 [3:10:56<27:51, 36.60frames/s] 92%|█████████▏| 703654/764825 [3:11:12<27:51, 36.60frames/s] 92%|█████████▏| 706654/764825 [3:11:19<20:43, 46.77frames/s] 92%|█████████▏| 706654/764825 [3:11:32<20:43, 46.77frames/s] 93%|█████████▎| 709654/764825 [3:11:47<16:20, 56.24frames/s] 93%|█████████▎| 709654/764825 [3:12:02<16:20, 56.24frames/s] 93%|█████████▎| 712654/764825 [3:12:16<13:16, 65.51frames/s] 93%|█████████▎| 712654/764825 [3:12:32<13:16, 65.51frames/s] 94%|█████████▎| 715652/764825 [3:16:17<28:33, 28.70frames/s] 94%|█████████▎| 715652/764825 [3:16:32<28:33, 28.70frames/s] 94%|█████████▍| 718422/764825 [3:16:41<21:10, 36.52frames/s] 94%|█████████▍| 718422/764825 [3:16:52<21:10, 36.52frames/s] 94%|█████████▍| 721422/764825 [3:17:07<15:43, 46.02frames/s] 94%|█████████▍| 721422/764825 [3:17:22<15:43, 46.02frames/s] 95%|█████████▍| 724422/764825 [3:17:35<12:04, 55.78frames/s] 95%|█████████▍| 724422/764825 [3:17:52<12:04, 55.78frames/s] 95%|█████████▌| 727408/764825 [3:18:03<09:34, 65.11frames/s] 95%|█████████▌| 727408/764825 [3:18:22<09:34, 65.11frames/s] 96%|█████████▌| 730408/764825 [3:18:30<07:42, 74.41frames/s] 96%|█████████▌| 730408/764825 [3:18:42<07:42, 74.41frames/s] 96%|█████████▌| 733408/764825 [3:18:58<06:23, 82.00frames/s] 96%|█████████▌| 733408/764825 [3:19:12<06:23, 82.00frames/s] 96%|█████████▋| 736408/764825 [3:19:25<05:19, 89.07frames/s] 96%|█████████▋| 736408/764825 [3:19:42<05:19, 89.07frames/s] 97%|█████████▋| 739396/764825 [3:19:52<04:28, 94.68frames/s] 97%|█████████▋| 739396/764825 [3:20:02<04:28, 94.68frames/s] 97%|█████████▋| 742396/764825 [3:20:18<03:45, 99.47frames/s] 97%|█████████▋| 742396/764825 [3:20:32<03:45, 99.47frames/s] 97%|█████████▋| 745396/764825 [3:20:46<03:10, 102.07frames/s] 97%|█████████▋| 745396/764825 [3:21:02<03:10, 102.07frames/s] 98%|█████████▊| 748396/764825 [3:21:15<02:40, 102.05frames/s] 98%|█████████▊| 748396/764825 [3:21:32<02:40, 102.05frames/s] 98%|█████████▊| 751364/764825 [3:21:47<02:15, 99.31frames/s]  98%|█████████▊| 751364/764825 [3:22:02<02:15, 99.31frames/s] 99%|█████████▊| 754364/764825 [3:22:19<01:47, 97.59frames/s] 99%|█████████▊| 754364/764825 [3:22:32<01:47, 97.59frames/s] 99%|█████████▉| 757364/764825 [3:22:52<01:18, 95.45frames/s] 99%|█████████▉| 757364/764825 [3:23:02<01:18, 95.45frames/s] 99%|█████████▉| 760364/764825 [3:23:04<00:38, 117.23frames/s]100%|█████████▉| 763364/764825 [3:23:16<00:10, 139.66frames/s]100%|██████████| 764825/764825 [3:23:28<00:00, 136.31frames/s]100%|██████████| 764825/764825 [3:23:28<00:00, 62.65frames/s] 
+2026-03-18 03:53:33 [INFO] [transcriber] ~20271 words transcribed
+2026-03-18 03:53:33 [INFO] [transcriber] ~20271 words transcribed
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:546: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "transcribed_at": datetime.utcnow().isoformat(),
+2026-03-18 03:53:33 [INFO] [transcriber] Saved → data/bos_transcripts/2021-08-11_clip101_Board_of_Supervisors
+2026-03-18 03:53:33 [INFO] [transcriber] Saved → data/bos_transcripts/2021-08-11_clip101_Board_of_Supervisors
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:212: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-03-18 03:53:33 [INFO] [transcriber] clip 101 done ✓
+2026-03-18 03:53:33 [INFO] [transcriber] clip 101 done ✓
