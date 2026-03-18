@@ -51,7 +51,7 @@ clip_id,meeting_date,title,status,error,output_dir,updated_at
 97,2021-06-16,Planning Commission,done,,data/bos_transcripts/2021-06-16_clip97_Planning_Commission,2026-03-17T20:37:25.495792
 98,2021-06-23,Board of Supervisors,done,,data/bos_transcripts/2021-06-23_clip98_Board_of_Supervisors,2026-03-17T20:56:55.156842
 99,2021-07-14,Board of Supervisors,done,,data/bos_transcripts/2021-07-14_clip99_Board_of_Supervisors,2026-03-18T03:53:34.261252
-100,2021-07-21,Planning Commission,downloading,,,2026-03-16T22:56:28.131733
+100,2021-07-21,Planning Commission,done,,data/bos_transcripts/2021-07-21_clip100_Planning_Commission,2026-03-18T04:29:51.092701
 101,2021-08-11,Board of Supervisors,downloading,,,2026-03-16T23:10:09.011379
 102,2021-09-01,Planning Commission,downloading,,,2026-03-16T23:10:21.567443
 103,2021-09-08,Board of Supervisors,downloading,,,2026-03-16T23:38:11.533680
