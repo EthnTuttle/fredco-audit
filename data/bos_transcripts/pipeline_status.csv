@@ -56,7 +56,7 @@ clip_id,meeting_date,title,status,error,output_dir,updated_at
 102,2021-09-01,Planning Commission,done,,data/bos_transcripts/2021-09-01_clip102_Planning_Commission,2026-03-18T08:57:32.439546
 103,2021-09-08,Board of Supervisors,done,,data/bos_transcripts/2021-09-08_clip103_Board_of_Supervisors,2026-03-18T11:44:32.525356
 105,2021-09-15,Planning Commission,done,,data/bos_transcripts/2021-09-15_clip105_Planning_Commission,2026-03-18T12:25:21.142275
-106,2021-09-22,Board of Supervisors,downloading,,,2026-03-17T00:43:42.613147
+106,2021-09-22,Board of Supervisors,done,,data/bos_transcripts/2021-09-22_clip106_Board_of_Supervisors,2026-03-18T15:37:56.329057
 107,2021-10-13,Board of Supervisors,downloading,,,2026-03-17T00:50:34.784321
 108,2021-10-20,Planning Commission,downloading,,,2026-03-17T01:31:40.620252
 109,2021-10-27,Board of Supervisors,downloading,,,2026-03-17T01:51:42.258201
@@ -693,13 +693,13 @@ ERROR:
 222,2024-04-24,Board of Supervisors,downloading,,,2026-03-18T11:42:53.530379
 223,2024-05-08,Board of Supervisors,downloading,,,2026-03-18T12:07:07.052055
 224,2024-05-15,Planning Commission,downloading,,,2026-03-18T12:12:37.356440
-225,2024-05-22,Board of Supervisors,pending,,,2026-03-16T18:08:07.565891
-226,2024-05-22,Board of Supervisors,pending,,,2026-03-16T18:08:21.203762
-227,2024-06-05,Planning Commission,pending,,,2026-03-16T18:08:29.982940
-228,2024-06-12,Board of Supervisors,pending,,,2026-03-16T18:08:42.178557
-229,2024-07-03,Planning Commission,pending,,,2026-03-16T18:08:50.485289
-230,2024-07-10,Board of Supervisors,pending,,,2026-03-16T18:08:58.523849
-232,2024-08-14,Board of Supervisors - Planning Commission Joint Work Session,pending,,,2026-03-16T18:09:07.167018
+225,2024-05-22,Board of Supervisors,downloading,,,2026-03-18T12:59:10.572694
+226,2024-05-22,Board of Supervisors,downloading,,,2026-03-18T13:05:22.582960
+227,2024-06-05,Planning Commission,downloading,,,2026-03-18T13:18:40.966308
+228,2024-06-12,Board of Supervisors,downloading,,,2026-03-18T13:31:49.359170
+229,2024-07-03,Planning Commission,downloading,,,2026-03-18T14:11:18.893487
+230,2024-07-10,Board of Supervisors,downloading,,,2026-03-18T14:34:53.898248
+232,2024-08-14,Board of Supervisors - Planning Commission Joint Work Session,downloading,,,2026-03-18T14:54:38.565171
 233,2024-08-14,Board of Supervisors,pending,,,2026-03-16T18:09:17.493256
 235,2024-09-04,Planning Commission,pending,,,2026-03-16T18:09:28.170411
 236,2024-09-11,Board of Supervisors-Public Works & Landfill Oversight Committees Joint Meeting,pending,,,2026-03-16T18:09:37.860845
