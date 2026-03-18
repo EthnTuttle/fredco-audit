@@ -50,7 +50,7 @@ clip_id,meeting_date,title,status,error,output_dir,updated_at
 96,2021-06-09,Board of Supervisors,done,,data/bos_transcripts/2021-06-09_clip96_Board_of_Supervisors,2026-03-17T19:14:46.115671
 97,2021-06-16,Planning Commission,done,,data/bos_transcripts/2021-06-16_clip97_Planning_Commission,2026-03-17T20:37:25.495792
 98,2021-06-23,Board of Supervisors,done,,data/bos_transcripts/2021-06-23_clip98_Board_of_Supervisors,2026-03-17T20:56:55.156842
-99,2021-07-14,Board of Supervisors,downloading,,,2026-03-16T22:53:09.974331
+99,2021-07-14,Board of Supervisors,done,,data/bos_transcripts/2021-07-14_clip99_Board_of_Supervisors,2026-03-18T03:53:34.261252
 100,2021-07-21,Planning Commission,downloading,,,2026-03-16T22:56:28.131733
 101,2021-08-11,Board of Supervisors,downloading,,,2026-03-16T23:10:09.011379
 102,2021-09-01,Planning Commission,downloading,,,2026-03-16T23:10:21.567443
@@ -430,19 +430,19 @@ ERROR:
 189,2023-05-24,Board of Supervisors,downloading,,,2026-03-17T20:04:56.068366
 190,2023-06-14,Board of Supervisors,downloading,,,2026-03-17T20:09:34.226305
 191,2023-07-05,Planning Commission,downloading,,,2026-03-17T20:40:42.951324
-192,2023-07-12,Board of Supervisors,pending,,,2026-03-16T18:02:21.789255
-193,2023-07-19,Planning Commission,pending,,,2026-03-16T18:02:36.193080
-194,2023-08-09,Board of Supervisors,pending,,,2026-03-16T18:02:48.343898
-195,2023-08-16,Planning Commission,pending,,,2026-03-16T18:02:54.965962
-196,2023-09-06,Planning Commission,pending,,,2026-03-16T18:03:06.525361
-197,2023-09-20,Planning Commission,pending,,,2026-03-16T18:03:18.234913
-198,2023-09-27,Board of Supervisors,pending,,,2026-03-16T18:03:32.925223
-199,2023-10-04,Planning Commission,pending,,,2026-03-16T18:03:43.038999
-200,2023-10-11,Board of Supervisors,pending,,,2026-03-16T18:03:52.085133
-201,2023-10-25,Board of Supervisors,pending,,,2026-03-16T18:04:04.021533
-202,2023-11-01,Planning Commission,pending,,,2026-03-16T18:04:16.021132
-203,2023-11-08,Board of Supervisors,pending,,,2026-03-16T18:04:27.980533
-204,2023-12-06,Planning Commission,pending,,,2026-03-16T18:04:42.950216
+192,2023-07-12,Board of Supervisors,downloading,,,2026-03-17T21:12:54.613913
+193,2023-07-19,Planning Commission,downloading,,,2026-03-17T21:20:48.085117
+194,2023-08-09,Board of Supervisors,downloading,,,2026-03-17T22:01:23.462460
+195,2023-08-16,Planning Commission,downloading,,,2026-03-17T22:21:54.770949
+196,2023-09-06,Planning Commission,failed,download: yt-dlp failed (exit 1): ERROR: [generic] Unable to download webpage: The read operation timed out (caused by TransportError('The read operation timed out')),,2026-03-17T22:35:08.118198
+197,2023-09-20,Planning Commission,downloading,,,2026-03-17T22:35:08.122368
+198,2023-09-27,Board of Supervisors,downloading,,,2026-03-17T22:39:49.011892
+199,2023-10-04,Planning Commission,downloading,,,2026-03-17T23:14:39.358856
+200,2023-10-11,Board of Supervisors,downloading,,,2026-03-18T00:57:12.746488
+201,2023-10-25,Board of Supervisors,downloading,,,2026-03-18T02:21:14.295008
+202,2023-11-01,Planning Commission,downloading,,,2026-03-18T02:22:35.222485
+203,2023-11-08,Board of Supervisors,downloading,,,2026-03-18T02:54:33.186771
+204,2023-12-06,Planning Commission,downloading,,,2026-03-18T03:34:33.965742
 205,2023-12-13,Board of Supervisors,pending,,,2026-03-16T18:04:56.004396
 206,2024-01-03,Planning Commission,pending,,,2026-03-16T18:05:08.035345
 207,2024-01-10,Board of Supervisors,pending,,,2026-03-16T18:05:21.530870
