@@ -15481,3 +15481,52 @@ ERROR:
   now = datetime.utcnow().isoformat()
 2026-03-19 22:06:48 [INFO] [transcriber] clip 122 done ✓
 2026-03-19 22:06:48 [INFO] [transcriber] clip 122 done ✓
+2026-03-19 22:06:51 [INFO] [git] Committed and pushed: Add BoS transcript: 2022-03-02 clip122 Planning Commission
+2026-03-19 22:06:51 [INFO] [git] Committed and pushed: Add BoS transcript: 2022-03-02 clip122 Planning Commission
+2026-03-19 22:06:51 [INFO] ────────────────────────────────────────────────────────────
+2026-03-19 22:06:51 [INFO] ────────────────────────────────────────────────────────────
+2026-03-19 22:06:51 [INFO] [transcriber] clip 123 | 2022-03-09 | Board of Supervisors
+2026-03-19 22:06:51 [INFO] [transcriber] clip 123 | 2022-03-09 | Board of Supervisors
+2026-03-19 22:06:51 [INFO] ────────────────────────────────────────────────────────────
+2026-03-19 22:06:51 [INFO] ────────────────────────────────────────────────────────────
+2026-03-19 22:06:51 [INFO] [transcriber] clip 124 | 2022-03-16 | Planning Commission
+2026-03-19 22:06:51 [INFO] [transcriber] clip 124 | 2022-03-16 | Planning Commission
+2026-03-19 22:06:51 [INFO] ────────────────────────────────────────────────────────────
+2026-03-19 22:06:51 [INFO] ────────────────────────────────────────────────────────────
+2026-03-19 22:06:51 [INFO] [transcriber] clip 126 | 2022-03-23 | Board of Supervisors
+2026-03-19 22:06:51 [INFO] [transcriber] clip 126 | 2022-03-23 | Board of Supervisors
+2026-03-19 22:06:51 [INFO] ────────────────────────────────────────────────────────────
+2026-03-19 22:06:51 [INFO] ────────────────────────────────────────────────────────────
+2026-03-19 22:06:51 [INFO] [transcriber] clip 127 | 2022-04-06 | Planning Commission
+2026-03-19 22:06:51 [INFO] [transcriber] clip 127 | 2022-04-06 | Planning Commission
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:212: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-03-19 22:06:51 [INFO] [transcriber] Transcribing clip127.m4a …
+2026-03-19 22:06:51 [INFO] [transcriber] Transcribing clip127.m4a …
+ 95%|█████████▌| 194042/203214 [1:19:39<03:27, 44.25frames/s]  0%|          | 0/306050 [00:00<?, ?frames/s] 97%|█████████▋| 197042/203214 [1:19:59<01:58, 52.08frames/s]  1%|          | 3000/306050 [00:12<20:57, 240.93frames/s] 97%|█████████▋| 197042/203214 [1:20:09<01:58, 52.08frames/s]  2%|▏         | 6000/306050 [00:25<21:13, 235.54frames/s]  3%|▎         | 9000/306050 [00:40<22:28, 220.30frames/s]  3%|▎         | 9000/306050 [00:51<22:28, 220.30frames/s] 98%|█████████▊| 200042/203214 [1:20:41<00:56, 56.46frames/s]  4%|▍         | 12000/306050 [00:57<24:45, 197.94frames/s]  4%|▍         | 12000/306050 [01:11<24:45, 197.94frames/s] 98%|█████████▊| 200042/203214 [1:20:59<00:56, 56.46frames/s]  5%|▍         | 15000/306050 [01:14<25:41, 188.77frames/s]2026-03-19 22:08:31 [INFO] [downloader] ✓ clip 158 saved (121.6 MB) — queued for transcription
+2026-03-19 22:08:31 [INFO] [downloader] ✓ clip 158 saved (121.6 MB) — queued for transcription
+2026-03-19 22:08:31 [INFO] [downloader] Removing stale staging dir: clip162
+2026-03-19 22:08:31 [INFO] [downloader] Removing stale staging dir: clip162
+2026-03-19 22:08:31 [INFO] [downloader] ↓ clip 162 | 2022-09-21 | Planning Commission
+2026-03-19 22:08:31 [INFO] [downloader] ↓ clip 162 | 2022-09-21 | Planning Commission
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:212: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+  5%|▍         | 15000/306050 [01:31<25:41, 188.77frames/s]  6%|▌         | 18000/306050 [01:35<27:48, 172.69frames/s]  6%|▌         | 18000/306050 [01:51<27:48, 172.69frames/s]  7%|▋         | 21000/306050 [01:52<27:38, 171.84frames/s]2026-03-19 22:09:00 [INFO] [downloader] ✓ clip 160 saved (78.0 MB) — queued for transcription
+2026-03-19 22:09:00 [INFO] [downloader] ✓ clip 160 saved (78.0 MB) — queued for transcription
+2026-03-19 22:09:00 [INFO] [downloader] Removing stale staging dir: clip163
+2026-03-19 22:09:00 [INFO] [downloader] Removing stale staging dir: clip163
+2026-03-19 22:09:00 [INFO] [downloader] ↓ clip 163 | 2022-09-28 | Board of Supervisors
+2026-03-19 22:09:00 [INFO] [downloader] ↓ clip 163 | 2022-09-28 | Board of Supervisors
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:212: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+  8%|▊         | 24000/306050 [02:09<27:02, 173.87frames/s]  8%|▊         | 24000/306050 [02:21<27:02, 173.87frames/s]  9%|▉         | 27000/306050 [02:24<25:47, 180.31frames/s] 10%|▉         | 30000/306050 [02:38<24:04, 191.05frames/s] 10%|▉         | 30000/306050 [02:51<24:04, 191.05frames/s] 11%|█         | 33000/306050 [02:52<22:58, 198.05frames/s] 12%|█▏        | 36000/306050 [03:07<22:33, 199.47frames/s] 13%|█▎        | 39000/306050 [03:20<21:49, 204.00frames/s] 13%|█▎        | 39000/306050 [03:31<21:49, 204.00frames/s] 14%|█▎        | 42000/306050 [03:35<21:34, 204.02frames/s] 15%|█▍        | 45000/306050 [03:50<21:16, 204.56frames/s] 15%|█▍        | 45000/306050 [04:01<21:16, 204.56frames/s] 16%|█▌        | 48000/306050 [04:04<20:45, 207.22frames/s] 17%|█▋        | 51000/306050 [04:18<20:32, 206.88frames/s] 17%|█▋        | 51000/306050 [04:31<20:32, 206.88frames/s] 18%|█▊        | 54000/306050 [04:32<20:01, 209.72frames/s] 19%|█▊        | 57000/306050 [04:46<19:37, 211.46frames/s]100%|█████████▉| 203042/203214 [1:24:45<00:06, 27.21frames/s] 19%|█▊        | 57000/306050 [05:01<19:37, 211.46frames/s]100%|██████████| 203214/203214 [1:24:58<00:00, 26.48frames/s]100%|██████████| 203214/203214 [1:24:58<00:00, 39.85frames/s]
+2026-03-19 22:12:12 [INFO] [transcriber] ~4535 words transcribed
+2026-03-19 22:12:12 [INFO] [transcriber] ~4535 words transcribed
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:549: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "transcribed_at": datetime.utcnow().isoformat(),
+2026-03-19 22:12:12 [INFO] [transcriber] Saved → data/bos_transcripts/2022-03-02_clip122_Planning_Commission
+2026-03-19 22:12:12 [INFO] [transcriber] Saved → data/bos_transcripts/2022-03-02_clip122_Planning_Commission
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:212: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-03-19 22:12:12 [INFO] [transcriber] clip 122 done ✓
+2026-03-19 22:12:12 [INFO] [transcriber] clip 122 done ✓
