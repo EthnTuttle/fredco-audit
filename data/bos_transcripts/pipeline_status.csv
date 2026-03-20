@@ -72,7 +72,7 @@ clip_id,meeting_date,title,status,error,output_dir,updated_at
 119,2022-02-09,Board of Supervisors,done,,data/bos_transcripts/2022-02-09_clip119_Board_of_Supervisors,2026-03-19T20:06:46.401348
 120,2022-02-16,Planning Commission,done,,data/bos_transcripts/2022-02-16_clip120_Planning_Commission,2026-03-19T21:30:27.203756
 121,2022-02-23,Board of Supervisors,done,,data/bos_transcripts/2022-02-23_clip121_Board_of_Supervisors,2026-03-20T00:47:04.416484
-122,2022-03-02,Planning Commission,transcribing,,,2026-03-20T00:42:09.989764
+122,2022-03-02,Planning Commission,done,,data/bos_transcripts/2022-03-02_clip122_Planning_Commission,2026-03-20T02:06:48.572334
 123,2022-03-09,Board of Supervisors,downloading,,,2026-03-19T18:57:00.952746
 124,2022-03-16,Planning Commission,downloading,,,2026-03-19T19:14:12.680147
 126,2022-03-23,Board of Supervisors,downloading,,,2026-03-19T20:06:46.402475
@@ -88,10 +88,10 @@ clip_id,meeting_date,title,status,error,output_dir,updated_at
 136,2022-06-15,Planning Commission,downloading,,,2026-03-19T23:49:55.861871
 155,2022-07-13,Board of Supervisors,downloading,,,2026-03-19T23:55:48.168694
 157,2022-07-20,Planning Commission,downloading,,,2026-03-20T00:23:58.792203
-158,2022-08-10,Board of Supervisors,pending,,,2026-03-17T11:19:36.443855
-159,2022-08-17,Planning Commission,downloading,,,2026-03-17T10:27:59.566225
-160,2022-09-07,Planning Commission,downloading,,,2026-03-17T10:47:23.191256
-161,2022-09-14,Board of Supervisors,downloading,,,2026-03-17T11:04:19.638769
+158,2022-08-10,Board of Supervisors,downloading,,,2026-03-20T00:51:47.358685
+159,2022-08-17,Planning Commission,downloading,,,2026-03-20T01:08:41.033423
+160,2022-09-07,Planning Commission,downloading,,,2026-03-20T01:20:11.528085
+161,2022-09-14,Board of Supervisors,downloading,,,2026-03-20T01:51:19.149251
 162,2022-09-21,Planning Commission,downloading,,,2026-03-17T11:19:36.480029
 163,2022-09-28,Board of Supervisors,downloading,,,2026-03-17T11:29:31.064995
 164,2022-10-12,Board of Supervisors,downloading,,,2026-03-17T11:51:54.830538
@@ -404,7 +404,198 @@ ERROR:
 [download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
 ERROR: 
 [download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries",,2026-03-20T00:23:15.543091
-309,2026-01-07,Planning Commission,downloading,,,2026-03-19T23:52:24.289653
+309,2026-01-07,Planning Commission,failed,"download: yt-dlp failed (exit 1): ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
+ERROR: 
+[download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries",,2026-03-20T02:01:04.853553
 310,2026-01-14,Board of Supervisors,failed,"download: yt-dlp failed (exit 1): ERROR: 
 [download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries
 ERROR: 
@@ -597,9 +788,9 @@ ERROR:
 [download] Got error: HTTP Error 502: Bad Gateway. Giving up after 10 retries",,2026-03-20T00:36:46.662789
 311,2026-01-14,Board of Supervisors,downloading,,,2026-03-20T00:23:15.609138
 312,2026-01-21,Planning Commission,downloading,,,2026-03-20T00:36:46.711381
-313,2026-01-28,Board of Supervisors,pending,,,2026-03-16T18:20:58.578025
-314,2026-01-28,Board of Supervisors,pending,,,2026-03-16T18:21:08.005364
-315,2026-02-04,Board of Supervisors,pending,,,2026-03-16T18:21:15.355924
+313,2026-01-28,Board of Supervisors,downloading,,,2026-03-20T01:29:54.670286
+314,2026-01-28,Board of Supervisors,downloading,,,2026-03-20T01:39:56.332027
+315,2026-02-04,Board of Supervisors,downloading,,,2026-03-20T02:01:04.945641
 316,2026-02-04,Planning Commission,pending,,,2026-03-16T18:21:22.310105
 317,2026-02-11,Board of Supervisors,pending,,,2026-03-16T18:21:28.974824
 318,2026-02-11,Board of Supervisors,pending,,,2026-03-16T18:21:38.178031
