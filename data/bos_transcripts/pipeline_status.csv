@@ -95,7 +95,7 @@ Error opening input files: No such file or directory
 ",data/bos_transcripts/2022-04-06_clip127_Planning_Commission,2026-03-20T12:32:19.080157
 128,2022-04-13,Board of Supervisors,done,,data/bos_transcripts/2022-04-13_clip128_Board_of_Supervisors,2026-03-20T18:54:45.935155
 129,2022-04-27,Board of Supervisors,done,,data/bos_transcripts/2022-04-27_clip129_Board_of_Supervisors,2026-03-21T03:10:50.928567
-130,2022-05-04,Planning Commission,downloading,,,2026-03-19T21:43:31.576024
+130,2022-05-04,Planning Commission,done,,data/bos_transcripts/2022-05-04_clip130_Planning_Commission,2026-03-21T03:28:14.571862
 131,2022-05-11,Board of Supervisors,downloading,,,2026-03-19T21:53:17.704151
 132,2022-05-18,Planning Commission,downloading,,,2026-03-19T22:16:01.381062
 133,2022-05-25,Board of Supervisors,downloading,,,2026-03-19T22:29:55.594915
@@ -174,7 +174,7 @@ Error opening input files: No such file or directory
 228,2024-06-12,Board of Supervisors,downloading,,,2026-03-21T01:52:42.013775
 229,2024-07-03,Planning Commission,downloading,,,2026-03-21T02:45:08.094059
 230,2024-07-10,Board of Supervisors,downloading,,,2026-03-21T03:02:31.210421
-232,2024-08-14,Board of Supervisors - Planning Commission Joint Work Session,downloading,,,2026-03-18T14:54:38.565171
+232,2024-08-14,Board of Supervisors - Planning Commission Joint Work Session,downloading,,,2026-03-21T03:24:31.514644
 233,2024-08-14,Board of Supervisors,downloading,,,2026-03-18T15:43:08.153912
 235,2024-09-04,Planning Commission,downloading,,,2026-03-18T15:56:02.185904
 236,2024-09-11,Board of Supervisors-Public Works & Landfill Oversight Committees Joint Meeting,downloading,,,2026-03-18T16:21:37.671278
