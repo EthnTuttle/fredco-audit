@@ -100,7 +100,7 @@ Error opening input files: No such file or directory
 132,2022-05-18,Planning Commission,done,,data/bos_transcripts/2022-05-18_clip132_Planning_Commission,2026-03-21T04:41:30.284216
 133,2022-05-25,Board of Supervisors,done,,data/bos_transcripts/2022-05-25_clip133_Board_of_Supervisors,2026-03-21T08:26:07.945920
 134,2022-06-01,Planning Commission,done,,data/bos_transcripts/2022-06-01_clip134_Planning_Commission,2026-03-21T09:43:49.819002
-135,2022-06-08,Board of Supervisors,downloading,,,2026-03-19T23:15:12.908994
+135,2022-06-08,Board of Supervisors,done,,data/bos_transcripts/2022-06-08_clip135_Board_of_Supervisors,2026-03-21T11:17:38.400828
 136,2022-06-15,Planning Commission,downloading,,,2026-03-19T23:49:55.861871
 155,2022-07-13,Board of Supervisors,downloading,,,2026-03-19T23:55:48.168694
 157,2022-07-20,Planning Commission,downloading,,,2026-03-20T00:23:58.792203
@@ -190,11 +190,11 @@ Error opening input files: No such file or directory
 246,2024-10-23,Board of Supervisors,downloading,,,2026-03-21T08:53:47.269169
 247,2024-10-30,Board of Supervisors,downloading,,,2026-03-21T08:55:19.548722
 248,2024-11-06,Board of Supervisors,downloading,,,2026-03-21T08:58:24.313048
-249,2024-11-06,Planning Commission,downloading,,,2026-03-18T22:34:50.664716
-250,2024-11-13,Board of Supervisors,downloading,,,2026-03-18T22:35:02.434981
-251,2024-11-13,Board of Supervisors,downloading,,,2026-03-18T23:04:08.920751
-252,2024-11-20,Planning Commission,downloading,,,2026-03-18T23:21:49.140037
-253,2024-12-04,Planning Commission,downloading,,,2026-03-18T23:57:13.383500
+249,2024-11-06,Planning Commission,downloading,,,2026-03-21T09:52:07.328857
+250,2024-11-13,Board of Supervisors,downloading,,,2026-03-21T09:53:28.485971
+251,2024-11-13,Board of Supervisors,downloading,,,2026-03-21T10:16:18.409515
+252,2024-11-20,Planning Commission,downloading,,,2026-03-21T10:32:11.495418
+253,2024-12-04,Planning Commission,downloading,,,2026-03-21T10:57:52.272623
 254,2024-12-04,Planning Commission,downloading,,,2026-03-19T00:28:19.776970
 255,2024-12-11,Board of Supervisors,downloading,,,2026-03-19T00:39:09.508619
 256,2024-12-11,Board of Supervisors,pending,,,2026-03-19T03:09:18.377491
