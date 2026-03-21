@@ -102,7 +102,7 @@ Error opening input files: No such file or directory
 134,2022-06-01,Planning Commission,done,,data/bos_transcripts/2022-06-01_clip134_Planning_Commission,2026-03-21T09:43:49.819002
 135,2022-06-08,Board of Supervisors,done,,data/bos_transcripts/2022-06-08_clip135_Board_of_Supervisors,2026-03-21T11:17:38.400828
 136,2022-06-15,Planning Commission,done,,data/bos_transcripts/2022-06-15_clip136_Planning_Commission,2026-03-21T13:56:05.707078
-155,2022-07-13,Board of Supervisors,downloading,,,2026-03-19T23:55:48.168694
+155,2022-07-13,Board of Supervisors,done,,data/bos_transcripts/2022-07-13_clip155_Board_of_Supervisors,2026-03-21T17:18:05.578538
 157,2022-07-20,Planning Commission,downloading,,,2026-03-20T00:23:58.792203
 158,2022-08-10,Board of Supervisors,downloading,,,2026-03-20T00:51:47.358685
 159,2022-08-17,Planning Commission,downloading,,,2026-03-20T01:08:41.033423
@@ -202,14 +202,14 @@ Error opening input files: No such file or directory
 259,2025-01-08,Board of Supervisors,downloading,,,2026-03-21T12:42:57.594148
 260,2025-01-08,Board of Supervisors,downloading,,,2026-03-21T13:30:39.838737
 261,2025-01-15,Planning Commission,downloading,,,2026-03-21T13:34:57.446810
-262,2025-01-22,Board of Supervisors,downloading,,,2026-03-19T03:09:18.493125
-263,2025-01-22,Board of Supervisors,downloading,,,2026-03-19T03:30:12.997586
-264,2025-01-24,Board of Supervisors,downloading,,,2026-03-19T03:48:45.334338
-265,2025-02-05,Board of Supervisors,downloading,,,2026-03-19T04:50:49.299620
-266,2025-02-13,Board of Supervisors,downloading,,,2026-03-19T04:50:49.347316
-267,2025-02-13,Board of Supervisors,downloading,,,2026-03-19T05:44:39.630492
-268,2025-02-19,Board of Supervisors,downloading,,,2026-03-19T05:45:25.626261
-269,2025-02-19,Planning Commission,downloading,,,2026-03-19T06:28:25.579745
+262,2025-01-22,Board of Supervisors,downloading,,,2026-03-21T14:02:27.280549
+263,2025-01-22,Board of Supervisors,downloading,,,2026-03-21T14:17:26.828917
+264,2025-01-24,Board of Supervisors,downloading,,,2026-03-21T14:43:51.478754
+265,2025-02-05,Board of Supervisors,downloading,,,2026-03-21T15:36:30.556963
+266,2025-02-13,Board of Supervisors,downloading,,,2026-03-21T15:36:36.030500
+267,2025-02-13,Board of Supervisors,downloading,,,2026-03-21T16:26:47.706425
+268,2025-02-19,Board of Supervisors,downloading,,,2026-03-21T16:27:54.474383
+269,2025-02-19,Planning Commission,downloading,,,2026-03-21T17:09:06.878066
 270,2025-02-26,Board of Supervisors,downloading,,,2026-03-19T06:51:57.986174
 271,2025-02-26,Board of Supervisors,downloading,,,2026-03-19T07:31:58.760534
 272,2025-03-12,Board of Supervisors,downloading,,,2026-03-19T07:46:43.192758
