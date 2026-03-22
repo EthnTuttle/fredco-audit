@@ -17432,3 +17432,24 @@ Error opening input files: No such file or directory
   now = datetime.utcnow().isoformat()
 2026-03-22 17:10:16 [INFO] [transcriber] clip 168 done ✓
 2026-03-22 17:10:16 [INFO] [transcriber] clip 168 done ✓
+2026-03-22 17:10:19 [INFO] [git] Committed and pushed: Add BoS transcript: 2022-12-07 clip168 Planning Commission
+2026-03-22 17:10:19 [INFO] [git] Committed and pushed: Add BoS transcript: 2022-12-07 clip168 Planning Commission
+2026-03-22 17:10:19 [INFO] ────────────────────────────────────────────────────────────
+2026-03-22 17:10:19 [INFO] ────────────────────────────────────────────────────────────
+2026-03-22 17:10:19 [INFO] [transcriber] clip 169 | 2022-12-07 | Planning Commission
+2026-03-22 17:10:19 [INFO] [transcriber] clip 169 | 2022-12-07 | Planning Commission
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:212: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-03-22 17:10:19 [INFO] [transcriber] Transcribing clip169.m4a …
+2026-03-22 17:10:19 [INFO] [transcriber] Transcribing clip169.m4a …
+  0%|          | 0/25915 [00:00<?, ?frames/s] 11%|█         | 2726/25915 [00:23<03:17, 117.12frames/s] 11%|█         | 2726/25915 [00:39<03:17, 117.12frames/s] 22%|██▏       | 5724/25915 [00:50<02:58, 112.81frames/s] 22%|██▏       | 5724/25915 [01:09<02:58, 112.81frames/s] 34%|███▎      | 8724/25915 [01:18<02:35, 110.50frames/s] 34%|███▎      | 8724/25915 [01:29<02:35, 110.50frames/s] 45%|████▌     | 11724/25915 [01:45<02:09, 109.79frames/s] 45%|████▌     | 11724/25915 [01:59<02:09, 109.79frames/s] 57%|█████▋    | 14724/25915 [02:14<01:43, 107.99frames/s] 57%|█████▋    | 14724/25915 [02:29<01:43, 107.99frames/s] 68%|██████▊   | 17724/25915 [02:41<01:15, 108.69frames/s] 68%|██████▊   | 17724/25915 [02:59<01:15, 108.69frames/s] 80%|███████▉  | 20680/25915 [03:14<00:51, 101.67frames/s] 80%|███████▉  | 20680/25915 [03:29<00:51, 101.67frames/s] 91%|█████████▏| 23680/25915 [03:47<00:22, 98.27frames/s]  91%|█████████▏| 23680/25915 [03:59<00:22, 98.27frames/s]100%|██████████| 25915/25915 [04:12<00:00, 95.96frames/s]100%|██████████| 25915/25915 [04:12<00:00, 102.74frames/s]
+2026-03-22 17:14:32 [INFO] [transcriber] ~775 words transcribed
+2026-03-22 17:14:32 [INFO] [transcriber] ~775 words transcribed
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:549: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "transcribed_at": datetime.utcnow().isoformat(),
+2026-03-22 17:14:32 [INFO] [transcriber] Saved → data/bos_transcripts/2022-12-07_clip169_Planning_Commission
+2026-03-22 17:14:32 [INFO] [transcriber] Saved → data/bos_transcripts/2022-12-07_clip169_Planning_Commission
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:212: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-03-22 17:14:32 [INFO] [transcriber] clip 169 done ✓
+2026-03-22 17:14:32 [INFO] [transcriber] clip 169 done ✓
