@@ -108,7 +108,7 @@ Error opening input files: No such file or directory
 159,2022-08-17,Planning Commission,done,,data/bos_transcripts/2022-08-17_clip159_Planning_Commission,2026-03-21T23:38:05.873754
 160,2022-09-07,Planning Commission,done,,data/bos_transcripts/2022-09-07_clip160_Planning_Commission,2026-03-22T01:37:25.697326
 161,2022-09-14,Board of Supervisors,done,,data/bos_transcripts/2022-09-14_clip161_Board_of_Supervisors,2026-03-22T03:09:49.325104
-162,2022-09-21,Planning Commission,downloading,,,2026-03-20T02:08:31.311755
+162,2022-09-21,Planning Commission,done,,data/bos_transcripts/2022-09-21_clip162_Planning_Commission,2026-03-22T04:36:46.371358
 163,2022-09-28,Board of Supervisors,downloading,,,2026-03-20T02:09:00.427269
 164,2022-10-12,Board of Supervisors,downloading,,,2026-03-20T02:46:37.903878
 165,2022-10-19,Planning Commission,downloading,,,2026-03-20T02:48:11.821134
@@ -235,9 +235,9 @@ Error opening input files: No such file or directory
 292,2025-09-03,Planning Commission,downloading,,,2026-03-22T02:04:43.145384
 293,2025-09-10,Board of Supervisors,downloading,,,2026-03-22T02:26:54.697567
 294,2025-09-24,Board of Supervisors,downloading,,,2026-03-22T03:04:37.879632
-295,2025-10-01,Board of Supervisors,downloading,,,2026-03-19T19:05:31.979261
-297,2025-10-01,Planning Commission,downloading,,,2026-03-19T20:17:04.420075
-299,2025-10-08,Board of Supervisors,downloading,,,2026-03-19T20:23:38.576655
+295,2025-10-01,Board of Supervisors,downloading,,,2026-03-22T03:32:12.618559
+297,2025-10-01,Planning Commission,downloading,,,2026-03-22T04:23:56.513408
+299,2025-10-08,Board of Supervisors,downloading,,,2026-03-22T04:26:28.728938
 300,2025-10-22,Board of Supervisors,downloading,,,2026-03-19T21:03:59.364146
 301,2025-10-22,Board of Supervisors,downloading,,,2026-03-19T21:27:34.503379
 302,2025-11-05,Board of Supervisors,downloading,,,2026-03-19T21:50:06.684207
