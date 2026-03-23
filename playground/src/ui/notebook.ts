@@ -8,6 +8,10 @@
 import { marked } from 'marked';
 import * as monaco from 'monaco-editor';
 import type { NotebookCell, NotebookEngine, CellType } from '../engines/editor';
+import { getChartEngine, type ChartType } from '../engines/chart';
+
+// Per-cell chart type preference (in-memory, not persisted)
+const cellChartTypes = new Map<string, ChartType>();
 
 // ============================================================================
 // Styles
@@ -308,6 +312,55 @@ export function injectNotebookStyles(): void {
       white-space: pre-wrap;
     }
 
+    /* Output view controls (Table / Chart toggle) */
+    .nb-output-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.7rem;
+      color: var(--text-secondary);
+    }
+    .nb-output-meta-text {
+      margin-right: auto;
+    }
+    .nb-output-view-btn {
+      padding: 0.1rem 0.45rem;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 0.7rem;
+      background: none;
+      border: 1px solid transparent;
+      color: var(--text-secondary);
+      transition: all 0.1s;
+    }
+    .nb-output-view-btn.active {
+      background: var(--bg-tertiary);
+      border-color: var(--border);
+      color: var(--text-primary);
+    }
+    .nb-output-view-btn:hover:not(.active) {
+      border-color: var(--border);
+      color: var(--text-primary);
+    }
+    .nb-chart-type-select {
+      padding: 0.1rem 0.3rem;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      font-size: 0.7rem;
+    }
+    .nb-chart-canvas-wrap {
+      padding: 0.75rem;
+      min-height: 220px;
+      display: none;
+    }
+    .nb-chart-canvas-wrap.visible {
+      display: block;
+    }
+
     /* Between-cell add buttons */
     .nb-add-row {
       display: flex;
@@ -371,6 +424,7 @@ function formatCellValue(v: unknown): string {
 function renderTableOutput(cell: NotebookCell): string {
   if (!cell.output || cell.output.type !== 'table') return '';
   const { columns, rows, rowCount, executionTimeMs } = cell.output;
+  const chartType = cellChartTypes.get(cell.id) ?? 'bar';
 
   const headerHtml = columns
     .map(col => `<th>${escapeHtml(col)}</th>`)
@@ -380,18 +434,92 @@ function renderTableOutput(cell: NotebookCell): string {
     .join('');
 
   return `
-    <div class="nb-output-meta">
-      ${rowCount.toLocaleString()} row${rowCount !== 1 ? 's' : ''}
-      <span style="opacity:0.7;"> | ${executionTimeMs.toFixed(1)}ms</span>
-      ${rows.length > 500 ? ' | Showing first 500' : ''}
+    <div class="nb-output-controls">
+      <span class="nb-output-meta-text">
+        ${rowCount.toLocaleString()} row${rowCount !== 1 ? 's' : ''}
+        <span style="opacity:0.7;"> | ${executionTimeMs.toFixed(1)}ms</span>
+        ${rows.length > 500 ? ' | first 500' : ''}
+      </span>
+      <button class="nb-output-view-btn active" data-view="table" data-cell-id="${cell.id}">Table</button>
+      <button class="nb-output-view-btn" data-view="chart" data-cell-id="${cell.id}">Chart</button>
+      <select class="nb-chart-type-select" data-chart-select="${cell.id}" style="display:none;">
+        <option value="bar"${chartType === 'bar' ? ' selected' : ''}>Bar</option>
+        <option value="line"${chartType === 'line' ? ' selected' : ''}>Line</option>
+        <option value="pie"${chartType === 'pie' ? ' selected' : ''}>Pie</option>
+        <option value="doughnut"${chartType === 'doughnut' ? ' selected' : ''}>Doughnut</option>
+        <option value="scatter"${chartType === 'scatter' ? ' selected' : ''}>Scatter</option>
+        <option value="radar"${chartType === 'radar' ? ' selected' : ''}>Radar</option>
+      </select>
     </div>
-    <div class="nb-output-table-wrap">
+    <div class="nb-output-table-wrap" data-table-body="${cell.id}">
       <table class="nb-output-table">
         <thead><tr>${headerHtml}</tr></thead>
         <tbody>${rowsHtml}</tbody>
       </table>
     </div>
+    <div class="nb-chart-canvas-wrap" data-chart-wrap="${cell.id}">
+      <div id="nb-chart-${cell.id}" style="height:260px;"></div>
+    </div>
   `;
+}
+
+/**
+ * Wire the Table/Chart toggle buttons and chart type selector after
+ * the output HTML has been injected into the DOM.
+ */
+function attachOutputControls(cellId: string, outputArea: HTMLElement, output: NotebookCell['output']): void {
+  if (!output || output.type !== 'table') return;
+
+  const tableBtn = outputArea.querySelector(`[data-view="table"][data-cell-id="${cellId}"]`) as HTMLElement | null;
+  const chartBtn = outputArea.querySelector(`[data-view="chart"][data-cell-id="${cellId}"]`) as HTMLElement | null;
+  const chartSelect = outputArea.querySelector(`[data-chart-select="${cellId}"]`) as HTMLSelectElement | null;
+  const tableBody = outputArea.querySelector(`[data-table-body="${cellId}"]`) as HTMLElement | null;
+  const chartWrap = outputArea.querySelector(`[data-chart-wrap="${cellId}"]`) as HTMLElement | null;
+  const chartContainerId = `nb-chart-${cellId}`;
+
+  const showTable = () => {
+    getChartEngine().destroyChart(chartContainerId);
+    if (tableBody) tableBody.style.display = '';
+    if (chartWrap) chartWrap.classList.remove('visible');
+    if (chartSelect) chartSelect.style.display = 'none';
+    tableBtn?.classList.add('active');
+    chartBtn?.classList.remove('active');
+  };
+
+  const showChart = (type?: ChartType) => {
+    const selectedType = type ?? (cellChartTypes.get(cellId) ?? 'bar');
+    cellChartTypes.set(cellId, selectedType);
+
+    if (tableBody) tableBody.style.display = 'none';
+    if (chartWrap) chartWrap.classList.add('visible');
+    if (chartSelect) {
+      chartSelect.style.display = '';
+      chartSelect.value = selectedType;
+    }
+    chartBtn?.classList.add('active');
+    tableBtn?.classList.remove('active');
+
+    // Build a QueryResult-compatible object from the stored table output
+    const queryResult = {
+      columns: output.columns,
+      rows: output.rows as unknown[][],
+      rowCount: output.rowCount,
+      executionTimeMs: output.executionTimeMs,
+    };
+
+    requestAnimationFrame(() => {
+      getChartEngine().renderChart(chartContainerId, selectedType, queryResult, {
+        showLegend: queryResult.columns.length > 2 || ['pie', 'doughnut'].includes(selectedType),
+        beginAtZero: true,
+      });
+    });
+  };
+
+  tableBtn?.addEventListener('click', showTable);
+  chartBtn?.addEventListener('click', () => showChart());
+  chartSelect?.addEventListener('change', () => {
+    showChart(chartSelect.value as ChartType);
+  });
 }
 
 // ============================================================================
@@ -549,6 +677,7 @@ function renderCell(
     if (cell.output.type === 'table') {
       outputArea.innerHTML = renderTableOutput(cell);
       outputArea.classList.remove('hidden');
+      attachOutputControls(cell.id, outputArea, cell.output);
     } else if (cell.output.type === 'markdown') {
       outputArea.innerHTML = cell.output.html;
       outputArea.classList.remove('hidden');
@@ -582,6 +711,8 @@ function renderCell(
   });
 
   delBtn.addEventListener('click', () => {
+    getChartEngine().destroyChart(`nb-chart-${cell.id}`);
+    cellChartTypes.delete(cell.id);
     engine.deleteCell(cell.id);
     onRerender();
   });
@@ -641,7 +772,9 @@ async function runAndUpdate(
   }
 
   if (cell.output.type === 'table') {
+    getChartEngine().destroyChart(`nb-chart-${cell.id}`);
     outputArea.innerHTML = renderTableOutput(cell);
+    attachOutputControls(cell.id, outputArea, cell.output);
   } else if (cell.output.type === 'error') {
     outputArea.innerHTML = `<div class="nb-error-output">${escapeHtml(cell.output.message)}</div>`;
   }
