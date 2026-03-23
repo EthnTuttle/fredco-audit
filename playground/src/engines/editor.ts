@@ -346,3 +346,176 @@ export const editorEngine = new EditorEngine();
 
 // Export for direct use
 export { monaco };
+
+// ============================================================================
+// NotebookEngine — multi-cell notebook with SQL and Markdown cells
+// ============================================================================
+
+export type CellType = 'sql' | 'markdown';
+export type CellState = 'idle' | 'running' | 'success' | 'error';
+
+export interface TableOutput {
+  type: 'table';
+  columns: string[];
+  rows: unknown[][];
+  rowCount: number;
+  executionTimeMs: number;
+}
+
+export interface MarkdownOutput {
+  type: 'markdown';
+  html: string;
+}
+
+export interface ErrorOutput {
+  type: 'error';
+  message: string;
+}
+
+export type CellOutput = TableOutput | MarkdownOutput | ErrorOutput;
+
+export interface NotebookCell {
+  id: string;
+  type: CellType;
+  content: string;
+  state: CellState;
+  output: CellOutput | null;
+  executionCount: number | null;
+  monacoEditor: monaco.editor.IStandaloneCodeEditor | null;
+}
+
+type ExecuteHandler = (cellId: string, sql: string) => Promise<{ columns: string[]; rows: unknown[][]; rowCount: number; executionTimeMs: number }>;
+
+export class NotebookEngine {
+  private cells: NotebookCell[] = [];
+  private executionCounter = 0;
+  private executeHandler: ExecuteHandler | null = null;
+
+  setExecuteHandler(handler: ExecuteHandler): void {
+    this.executeHandler = handler;
+  }
+
+  addCell(type: CellType, content = '', afterId?: string): NotebookCell {
+    const cell: NotebookCell = {
+      id: `cell-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
+      type,
+      content: content || (type === 'sql' ? '' : ''),
+      state: 'idle',
+      output: null,
+      executionCount: null,
+      monacoEditor: null,
+    };
+
+    if (afterId) {
+      const idx = this.cells.findIndex(c => c.id === afterId);
+      if (idx >= 0) {
+        this.cells.splice(idx + 1, 0, cell);
+        return cell;
+      }
+    }
+    this.cells.push(cell);
+    return cell;
+  }
+
+  deleteCell(id: string): void {
+    const cell = this.cells.find(c => c.id === id);
+    if (cell?.monacoEditor) {
+      cell.monacoEditor.dispose();
+    }
+    this.cells = this.cells.filter(c => c.id !== id);
+  }
+
+  moveCell(id: string, direction: 'up' | 'down'): void {
+    const idx = this.cells.findIndex(c => c.id === id);
+    if (idx === -1) return;
+    const target = direction === 'up' ? idx - 1 : idx + 1;
+    if (target < 0 || target >= this.cells.length) return;
+    [this.cells[idx], this.cells[target]] = [this.cells[target], this.cells[idx]];
+  }
+
+  updateContent(id: string, content: string): void {
+    const cell = this.cells.find(c => c.id === id);
+    if (cell) cell.content = content;
+  }
+
+  async executeCell(id: string): Promise<void> {
+    const cell = this.cells.find(c => c.id === id);
+    if (!cell || !this.executeHandler) return;
+
+    const sql = cell.type === 'sql'
+      ? (cell.monacoEditor?.getValue() ?? cell.content).trim()
+      : cell.content.trim();
+
+    if (!sql) return;
+
+    cell.state = 'running';
+    cell.output = null;
+
+    try {
+      const result = await this.executeHandler(id, sql);
+      cell.executionCount = ++this.executionCounter;
+      cell.state = 'success';
+      cell.output = {
+        type: 'table',
+        columns: result.columns,
+        rows: result.rows,
+        rowCount: result.rowCount,
+        executionTimeMs: result.executionTimeMs,
+      };
+    } catch (error) {
+      cell.state = 'error';
+      cell.output = {
+        type: 'error',
+        message: error instanceof Error ? error.message : String(error),
+      };
+    }
+  }
+
+  getCells(): NotebookCell[] {
+    return this.cells;
+  }
+
+  getCell(id: string): NotebookCell | undefined {
+    return this.cells.find(c => c.id === id);
+  }
+
+  serialize(): object {
+    return {
+      version: 1,
+      cells: this.cells.map(c => ({
+        id: c.id,
+        type: c.type,
+        content: c.monacoEditor?.getValue() ?? c.content,
+        executionCount: c.executionCount,
+      })),
+    };
+  }
+
+  deserialize(data: { cells?: { id?: string; type?: string; content?: string; executionCount?: number | null }[] }): void {
+    for (const cell of this.cells) {
+      cell.monacoEditor?.dispose();
+    }
+    this.cells = [];
+    if (!data.cells) return;
+    for (const raw of data.cells) {
+      this.cells.push({
+        id: raw.id ?? `cell-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
+        type: (raw.type === 'markdown' ? 'markdown' : 'sql') as CellType,
+        content: raw.content ?? '',
+        state: 'idle',
+        output: null,
+        executionCount: raw.executionCount ?? null,
+        monacoEditor: null,
+      });
+    }
+  }
+
+  dispose(): void {
+    for (const cell of this.cells) {
+      cell.monacoEditor?.dispose();
+    }
+    this.cells = [];
+  }
+}
+
+export const notebookEngine = new NotebookEngine();

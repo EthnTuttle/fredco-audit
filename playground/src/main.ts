@@ -8,10 +8,11 @@
 
 import { initDataEngine, executeQuery, getLoadedTables, getTableSchema, getAvailableGISDatasets, isGISDatasetLoaded, loadGISDataset, GIS_DATASETS, type QueryResult } from './engines/data';
 import { getChartEngine, type ChartType, type ChartOptions } from './engines/chart';
-import { editorEngine } from './engines/editor';
-import { getCacheStats, getStorageQuota, clearCache } from './engines/storage';
+import { editorEngine, notebookEngine } from './engines/editor';
+import { getCacheStats, getStorageQuota, clearCache, saveNotebook, loadNotebook } from './engines/storage';
 import { getMapEngine, queryResultToGeoJSON, COLOR_RAMPS } from './engines/map';
 import { initNostrFeedback, showNostrFeedbackModal } from './engines/feedback';
+import { renderNotebook, injectNotebookStyles } from './ui/notebook';
 
 // ============================================================================
 // Shareable Query State
@@ -669,7 +670,7 @@ FROM zoning`
 interface AppState {
   status: 'loading' | 'ready' | 'error';
   error?: string;
-  viewMode: 'table' | 'chart' | 'map';
+  viewMode: 'table' | 'chart' | 'map' | 'notebook';
   chartType: ChartType;
   lastResult: QueryResult | null;
   lastQuery: string;
@@ -809,6 +810,7 @@ function render(container: HTMLElement): void {
                   <button id="view-table-btn" class="btn btn-toggle active">Table</button>
                   <button id="view-chart-btn" class="btn btn-toggle">Chart</button>
                   <button id="view-map-btn" class="btn btn-toggle">Map</button>
+                  <button id="view-notebook-btn" class="btn btn-toggle">Notebook</button>
                 </div>
               </div>
               <div id="share-toast" class="share-toast">Link copied to clipboard!</div>
@@ -861,6 +863,7 @@ function render(container: HTMLElement): void {
                   <p class="hint">Press Ctrl+Enter or click "Run Query" to execute</p>
                 </div>
               </div>
+              <div id="notebook-container" class="notebook-panel" style="display: none; height: 100%;"></div>
             </div>
           </section>
           
@@ -1542,14 +1545,17 @@ ORDER BY fiscal_year`;
   
   editorEngine.onExecute(runQuery);
   editorEngine.onChange(highlightMatchingTemplate);
-  
+
   setupEventListeners();
   setupSchemaPanel();
   renderQueryTemplates();
   loadSchemaExplorer();
   renderGISDatasets();
   updateCacheStatus();
-  
+
+  // Initialize notebook engine
+  initNotebook();
+
   // Update UI to reflect loaded state
   updateViewMode();
   
@@ -1561,6 +1567,68 @@ ORDER BY fiscal_year`;
       runQuery(sharedState.q);
     }, 100);
   }
+}
+
+// ============================================================================
+// Notebook Initialization
+// ============================================================================
+
+const NOTEBOOK_ID = 'default';
+
+function initNotebook(): void {
+  injectNotebookStyles();
+
+  // Wire execute handler
+  notebookEngine.setExecuteHandler(async (_cellId, sql) => {
+    const result = await executeQuery(sql);
+    return {
+      columns: result.columns,
+      rows: result.rows as unknown[][],
+      rowCount: result.rowCount,
+      executionTimeMs: result.executionTimeMs,
+    };
+  });
+
+  // Load saved notebook or create default
+  loadNotebook(NOTEBOOK_ID).then(saved => {
+    if (saved && 'cells' in saved && Array.isArray((saved as { cells: unknown[] }).cells)) {
+      notebookEngine.deserialize(saved as { cells: { id?: string; type?: string; content?: string; executionCount?: number | null }[] });
+    }
+    if (notebookEngine.getCells().length === 0) {
+      // Seed with a welcome SQL cell
+      notebookEngine.addCell('sql', `-- Welcome to the Notebook!\n-- Write SQL here and press Ctrl+Enter (or the ▶ Run button) to execute.\n\nSELECT\n  fiscal_year,\n  county_transfers_total_county_to_schools AS to_schools\nFROM county_budget_schools\nORDER BY fiscal_year`);
+      notebookEngine.addCell('markdown', '## Notes\n\nAdd your analysis here...');
+    }
+    mountNotebook();
+  }).catch(() => {
+    // Storage not yet ready — just start fresh
+    notebookEngine.addCell('sql', `-- Welcome to the Notebook!\n\nSELECT * FROM county_budget_schools ORDER BY fiscal_year`);
+    mountNotebook();
+  });
+}
+
+function mountNotebook(): void {
+  const container = document.getElementById('notebook-container');
+  if (!container) return;
+
+  renderNotebook(container, notebookEngine, saveCurrentNotebook);
+}
+
+function saveCurrentNotebook(): void {
+  const data = notebookEngine.serialize() as { version: number; cells: { id: string; type: string; content: string; executionCount: number | null }[] };
+
+  // Build a full Notebook object for StorageEngine
+  const now = Date.now();
+  const notebookDoc = {
+    id: NOTEBOOK_ID,
+    title: 'Default Notebook',
+    createdAt: now,
+    updatedAt: now,
+    cells: data.cells.map(c => ({ id: c.id, type: c.type as 'sql' | 'markdown', content: c.content })),
+    metadata: { tags: [], dataSources: [], schemaVersion: 1 },
+  };
+
+  saveNotebook(notebookDoc).catch(e => console.warn('[Notebook] Save failed:', e));
 }
 
 /**
@@ -2007,6 +2075,7 @@ function setupEventListeners(): void {
   const viewTableBtn = document.getElementById('view-table-btn');
   const viewChartBtn = document.getElementById('view-chart-btn');
   const viewMapBtn = document.getElementById('view-map-btn');
+  const viewNotebookBtn = document.getElementById('view-notebook-btn');
   const chartTypeSelect = document.getElementById('chart-type-select') as HTMLSelectElement;
   const downloadChartBtn = document.getElementById('download-chart-btn');
   const mapColorProperty = document.getElementById('map-color-property') as HTMLSelectElement;
@@ -2056,6 +2125,11 @@ function setupEventListeners(): void {
     if (state.lastResult) displayResults(state.lastResult);
   });
 
+  viewNotebookBtn?.addEventListener('click', () => {
+    state.viewMode = 'notebook';
+    updateViewMode();
+  });
+
   chartTypeSelect?.addEventListener('change', () => {
     state.chartType = chartTypeSelect.value as ChartType;
     if (state.viewMode === 'chart' && state.lastResult) {
@@ -2090,21 +2164,39 @@ function updateViewMode(): void {
   const tableBtn = document.getElementById('view-table-btn');
   const chartBtn = document.getElementById('view-chart-btn');
   const mapBtn = document.getElementById('view-map-btn');
+  const notebookBtn = document.getElementById('view-notebook-btn');
   const chartControls = document.getElementById('chart-controls');
   const mapControls = document.getElementById('map-controls');
   const chartTypeSelect = document.getElementById('chart-type-select') as HTMLSelectElement | null;
+  const resultsEl = document.getElementById('results');
+  const notebookEl = document.getElementById('notebook-container');
+  const queryPanel = document.querySelector('.query-panel') as HTMLElement | null;
 
   tableBtn?.classList.toggle('active', state.viewMode === 'table');
   chartBtn?.classList.toggle('active', state.viewMode === 'chart');
   mapBtn?.classList.toggle('active', state.viewMode === 'map');
-  
+  notebookBtn?.classList.toggle('active', state.viewMode === 'notebook');
+
+  const isNotebook = state.viewMode === 'notebook';
+
   if (chartControls) {
     chartControls.style.display = state.viewMode === 'chart' ? 'flex' : 'none';
   }
   if (mapControls) {
     mapControls.style.display = state.viewMode === 'map' ? 'flex' : 'none';
   }
-  
+
+  // Show/hide query panel (editor + run button) vs notebook
+  if (queryPanel) {
+    queryPanel.style.display = isNotebook ? 'none' : '';
+  }
+  if (resultsEl) {
+    resultsEl.style.display = isNotebook ? 'none' : '';
+  }
+  if (notebookEl) {
+    notebookEl.style.display = isNotebook ? '' : 'none';
+  }
+
   // Sync chart type select with state
   if (chartTypeSelect && chartTypeSelect.value !== state.chartType) {
     chartTypeSelect.value = state.chartType;

@@ -448,14 +448,22 @@ def _download_audio(clip_id: int, player_url: str, dest: Path,
                     rate_limit: Optional[str]) -> Path:
     """
     Use yt-dlp to extract the best audio stream from a Granicus clip and
-    save it as an m4a file to *dest* directory.
+    save it as an m4a file.
+
+    Each clip gets its own isolated subdirectory inside *dest* so that
+    parallel downloads never share a working directory and their HLS fragment
+    temp files cannot collide.
 
     Returns the path of the downloaded file.
 
-    Raises subprocess.CalledProcessError on failure.
+    Raises RuntimeError on failure.
     """
     import subprocess
-    output_template = str(dest / f"clip{clip_id}.%(ext)s")
+    # Isolate every clip in its own subdir to prevent HLS temp-file collisions
+    # when multiple yt-dlp processes run in parallel.
+    clip_dir = dest / f"clip{clip_id}"
+    clip_dir.mkdir(parents=True, exist_ok=True)
+    output_template = str(clip_dir / f"clip{clip_id}.%(ext)s")
     cmd = [
         "yt-dlp",
         "--no-playlist",
@@ -464,6 +472,9 @@ def _download_audio(clip_id: int, player_url: str, dest: Path,
         "--audio-quality", "0",        # best quality
         "--no-progress",               # clean log output
         "--no-warnings",
+        "--retries", "25",             # retry HTTP errors (default 10)
+        "--fragment-retries", "25",    # retry individual HLS fragment errors
+        "--retry-sleep", "exp=1:30",   # exponential backoff: 1s, 2s, 4s … capped at 30s
         "-o", output_template,
         player_url,
     ]
@@ -478,10 +489,10 @@ def _download_audio(clip_id: int, player_url: str, dest: Path,
         )
 
     # Find the downloaded file (extension may vary)
-    candidates = list(dest.glob(f"clip{clip_id}.*"))
+    candidates = list(clip_dir.glob(f"clip{clip_id}.*"))
     if not candidates:
         raise FileNotFoundError(
-            f"yt-dlp reported success but no audio file found in {dest}"
+            f"yt-dlp reported success but no audio file found in {clip_dir}"
         )
     return candidates[0]
 
@@ -576,71 +587,100 @@ def _download_worker(
     ready_queue: "queue.Queue[object]",
     staging_dir: Path,
     rate_limit: Optional[str],
+    download_workers: int = 1,
 ) -> None:
     """
-    Download thread: iterates *pending* meetings, downloads each as m4a audio
-    into *staging_dir*, and puts (meeting_row, audio_path) tuples onto
-    *ready_queue*.
+    Download thread: dispatches audio downloads using a thread pool
+    (*download_workers* parallel downloads) and puts completed
+    (meeting, audio_path) tuples onto *ready_queue* in chronological order.
 
     The queue is bounded (maxsize = --prefetch), so this thread blocks
-    automatically once N files are queued, keeping disk usage bounded.
+    once the transcriber falls behind, keeping disk usage bounded.
 
     On completion (or if _shutdown is set) puts _QUEUE_DONE as a sentinel
     so the transcribe thread knows to stop.
-
-    Important: this function opens its OWN database connection.
-    Python's sqlite3 module does not allow sharing connections across threads
-    (check_same_thread=True by default), so each thread must have its own.
     """
-    # Own connection for this thread
-    dl_conn = sqlite3.connect(str(DB_PATH), check_same_thread=True)
-    dl_conn.row_factory = sqlite3.Row
-    dl_conn.execute("PRAGMA journal_mode=WAL")
+    from concurrent.futures import ThreadPoolExecutor
 
-    try:
-        for meeting in pending:
-            if _shutdown:
-                log.info("[downloader] Shutdown signal received — stopping downloads.")
-                break
+    def _fetch_one(meeting: sqlite3.Row) -> tuple:
+        """Download one clip in a pool worker; return (meeting, audio_path | None)."""
+        clip_id = meeting["clip_id"]
+        mdate   = meeting["meeting_date"]
+        title   = meeting["title"]
 
-            clip_id = meeting["clip_id"]
-            mdate   = meeting["meeting_date"]
-            title   = meeting["title"]
-
+        # Each worker needs its own DB connection (sqlite3 is not thread-safe)
+        conn = sqlite3.connect(str(DB_PATH), check_same_thread=True)
+        conn.execute("PRAGMA journal_mode=WAL")
+        try:
             # Check if already transcribed (DB may lag after a crash)
             dir_name = f"{mdate}_clip{clip_id}_{_safe_dirname(title)}"
             out_dir  = TRANSCRIPT_DIR / dir_name
             if (out_dir / "transcript.json").exists():
                 log.info("[downloader] clip %d already has transcript — queuing skip", clip_id)
-                ready_queue.put((meeting, None))   # None audio_path → transcribe thread skips
-                continue
+                return (meeting, None)  # None audio_path → transcribe thread skips
 
-            audio_dest = staging_dir / f"clip{clip_id}.m4a"
+            # Each clip uses an isolated subdir; _download_audio returns the file path.
+            clip_staging = staging_dir / f"clip{clip_id}"
 
-            # If a partial file exists from a previous interrupted run, remove it
-            if audio_dest.exists():
-                log.info("[downloader] Removing stale staging file: %s", audio_dest.name)
-                audio_dest.unlink()
+            # If a stale subdir exists from a previous interrupted run, wipe it
+            if clip_staging.exists():
+                log.info("[downloader] Removing stale staging dir: %s", clip_staging.name)
+                shutil.rmtree(clip_staging, ignore_errors=True)
 
             log.info("[downloader] ↓ clip %d | %s | %s", clip_id, mdate, title)
-            set_status(dl_conn, clip_id, "downloading")
+            set_status(conn, clip_id, "downloading")
 
             try:
-                _download_audio(clip_id, meeting["meeting_url"], staging_dir, rate_limit)
-                mb = audio_dest.stat().st_size / 1e6 if audio_dest.exists() else 0
+                audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                                             staging_dir, rate_limit)
+                mb = audio_path.stat().st_size / 1e6
                 log.info("[downloader] ✓ clip %d saved (%.1f MB) — queued for transcription",
                          clip_id, mb)
-                ready_queue.put((meeting, audio_dest))
+                return (meeting, audio_path)
 
             except Exception as exc:
-                log.error("[downloader] FAILED download clip %d: %s", clip_id, exc, exc_info=True)
-                set_status(dl_conn, clip_id, "failed", error=f"download: {exc}")
-                ready_queue.put((meeting, None))   # None → transcribe thread records failure
+                err_str = str(exc)
+                shutil.rmtree(clip_staging, ignore_errors=True)  # clean up partial subdir
+
+                # Transient server errors (502, 503, timeouts) — reset to pending so
+                # the next pipeline run retries automatically without --retry-failed.
+                _TRANSIENT = ("502", "503", "timed out", "time out", "Bad Gateway",
+                              "Service Unavailable", "Connection reset", "Connection refused")
+                if any(t in err_str for t in _TRANSIENT):
+                    log.warning("[downloader] TRANSIENT error clip %d — resetting to pending: %s",
+                                clip_id, err_str.splitlines()[0])
+                    set_status(conn, clip_id, "pending", error=None)
+                else:
+                    log.error("[downloader] FAILED download clip %d: %s", clip_id, exc,
+                              exc_info=True)
+                    set_status(conn, clip_id, "failed", error=f"download: {exc}")
+                return (meeting, None)   # None → transcribe thread records failure
+
+        finally:
+            conn.close()
+
+    try:
+        futures = []
+        with ThreadPoolExecutor(max_workers=download_workers,
+                                thread_name_prefix="downloader") as pool:
+            for meeting in pending:
+                if _shutdown:
+                    log.info("[downloader] Shutdown signal received — stopping downloads.")
+                    pool.shutdown(wait=False, cancel_futures=True)
+                    break
+                futures.append(pool.submit(_fetch_one, meeting))
+
+            # Drain futures in submission order to preserve chronological transcription.
+            # fut.result() blocks until that specific download finishes; ready_queue.put()
+            # then blocks if the queue is full, providing backpressure automatically.
+            for fut in futures:
+                if _shutdown:
+                    break
+                ready_queue.put(fut.result())
 
     finally:
         # Always signal the transcribe thread to stop, even if we crash or are killed
         ready_queue.put(_QUEUE_DONE)
-        dl_conn.close()
         log.info("[downloader] All downloads dispatched.")
 
 
@@ -732,10 +772,11 @@ def _transcribe_worker(
             counters["failed"] += 1
 
         finally:
-            # Always delete the staging audio, success or failure
-            if audio_path and audio_path.exists():
-                audio_path.unlink(missing_ok=True)
-                log.debug("[transcriber] Deleted staging audio: %s", audio_path.name)
+            # Always delete the staging subdir (audio + any leftover fragments)
+            if audio_path:
+                clip_staging = audio_path.parent
+                shutil.rmtree(clip_staging, ignore_errors=True)
+                log.debug("[transcriber] Deleted staging dir: %s", clip_staging.name)
 
 
 def cmd_run(args) -> None:
@@ -768,8 +809,8 @@ def cmd_run(args) -> None:
     prefetch = args.prefetch
 
     log.info(
-        "Starting run: %d meetings | model=%s | threads=%d | prefetch=%d%s%s",
-        len(batch), args.model, args.threads, prefetch,
+        "Starting run: %d meetings | model=%s | threads=%d | dl-workers=%d | prefetch=%d%s%s",
+        len(batch), args.model, args.threads, args.download_workers, prefetch,
         f" | rate-limit={args.rate_limit}" if args.rate_limit else "",
         " | DRY-RUN" if args.dry_run else "",
     )
@@ -794,12 +835,13 @@ def cmd_run(args) -> None:
     # are not thread-safe and cannot be shared between threads.
     dl_thread = threading.Thread(
         target=_download_worker,
-        args=(batch, ready_queue, staging_dir, args.rate_limit),
+        args=(batch, ready_queue, staging_dir, args.rate_limit, args.download_workers),
         name="downloader",
         daemon=True,   # dies if main thread exits unexpectedly
     )
     dl_thread.start()
-    log.info("Download thread started (prefetch queue depth: %d).", prefetch)
+    log.info("Download thread started (workers: %d, prefetch queue depth: %d).",
+             args.download_workers, prefetch)
 
     # --- Run transcription on the main thread ---
     # (Whisper holds a large model in memory; keeping it on main is cleaner.)
@@ -951,12 +993,21 @@ def build_parser() -> argparse.ArgumentParser:
         help="Include previously failed meetings in this run.",
     )
     p_run.add_argument(
-        "--prefetch", type=int, default=2, metavar="N",
+        "--prefetch", type=int, default=4, metavar="N",
         help=(
             "Number of audio files to pre-download ahead of transcription "
-            "(default: 2). Higher values overlap more download/transcribe time "
+            "(default: 4). Higher values overlap more download/transcribe time "
             "at the cost of more staging disk space (~50–200 MB per slot). "
-            "Set to 1 to disable prefetching (sequential behaviour)."
+            "Should be >= --download-workers."
+        ),
+    )
+    p_run.add_argument(
+        "--download-workers", type=int, default=3, metavar="N",
+        dest="download_workers",
+        help=(
+            "Number of parallel audio downloads (default: 3). "
+            "Downloads are network-bound so running several in parallel keeps "
+            "the transcription queue full. Should be <= --prefetch."
         ),
     )
     p_run.add_argument(
