@@ -133,21 +133,31 @@ clip_id,meeting_date,title,status,error,output_dir,updated_at
 200,2023-10-11,Board of Supervisors,done,,data/bos_transcripts/2023-10-11_clip200_Board_of_Supervisors,2026-03-26T04:22:53.030306
 201,2023-10-25,Board of Supervisors,done,,data/bos_transcripts/2023-10-25_clip201_Board_of_Supervisors,2026-03-26T12:13:31.386484
 202,2023-11-01,Planning Commission,done,,data/bos_transcripts/2023-11-01_clip202_Planning_Commission,2026-03-26T13:17:58.522604
-203,2023-11-08,Board of Supervisors,done,,data/bos_transcripts/2023-11-08_clip203_Board_of_Supervisors,2026-03-26T18:36:47.808779
-204,2023-12-06,Planning Commission,downloading,,,2026-03-26T17:59:53.166081
-205,2023-12-13,Board of Supervisors,downloading,,,2026-03-26T17:59:53.166406
-206,2024-01-03,Planning Commission,downloading,,,2026-03-26T17:59:51.148212
-207,2024-01-10,Board of Supervisors,downloading,,,2026-03-26T17:59:51.168011
-208,2024-01-24,Board of Supervisors,downloading,,,2026-03-26T17:59:51.168081
-209,2024-02-07,Board of Supervisors - School Board Joint Session,downloading,,,2026-03-20T19:08:16.836949
-212,2024-02-14,Board of Supervisors,downloading,,,2026-03-20T19:19:49.179206
-213,2024-02-21,Planning Commission,downloading,,,2026-03-20T19:33:30.235983
-214,2024-02-28,Board of Supervisors,downloading,,,2026-03-20T20:01:37.733591
-215,2024-03-06,Planning Commission,downloading,,,2026-03-20T20:41:11.721953
-217,2024-03-13,Board of Supervisors,downloading,,,2026-03-20T20:45:27.648719
-218,2024-03-20,Planning Commission,downloading,,,2026-03-20T20:51:35.417970
-219,2024-03-27,Board of Supervisors,downloading,,,2026-03-20T21:57:34.400033
-220,2024-04-10,Board of Supervisors,downloading,,,2026-03-20T22:11:00.951244
+203,2023-11-08,Board of Supervisors,done,,data/bos_transcripts/2023-11-08_clip203_Board_of_Supervisors,2026-03-26T18:37:23.276323
+204,2023-12-06,Planning Commission,failed,"transcribe: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st",,2026-03-26T19:27:26.022163
+205,2023-12-13,Board of Supervisors,failed,"transcribe: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st",,2026-03-26T20:17:56.131590
+206,2024-01-03,Planning Commission,pending,,,2026-03-26T19:40:53.425671
+207,2024-01-10,Board of Supervisors,pending,,,2026-03-26T21:04:53.517535
+208,2024-01-24,Board of Supervisors,pending,,,2026-03-26T20:01:23.510425
+209,2024-02-07,Board of Supervisors - School Board Joint Session,done,,data/bos_transcripts/2024-02-07_clip209_Board_of_Supervisors_-_School_Board_Joint_Session,2026-03-26T22:33:12.366956
+212,2024-02-14,Board of Supervisors,failed,"transcribe: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st",,2026-03-26T21:04:56.236039
+213,2024-02-21,Planning Commission,failed,"transcribe: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st",,2026-03-26T21:37:25.612142
+214,2024-02-28,Board of Supervisors,failed,download: yt-dlp failed (exit 1): ERROR: The downloaded file is empty,,2026-03-26T21:23:23.691813
+215,2024-03-06,Planning Commission,failed,"download: yt-dlp failed (exit 1): ERROR: Unable to rename file: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip215/clip215.mp4.part-Frag834.part' -> '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip215/clip215.mp4.part-Frag834'
+ERROR: Unable to download video: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip215/clip215.mp4.part-Frag834'",,2026-03-26T21:04:55.266858
+217,2024-03-13,Board of Supervisors,failed,"download: yt-dlp failed (exit 1): ERROR: Unable to rename file: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip217/clip217.mp4.part-Frag1100.part' -> '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip217/clip217.mp4.part-Frag1100'
+ERROR: Unable to download video: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip217/clip217.mp4.part-Frag1100'",,2026-03-26T21:23:24.040046
+218,2024-03-20,Planning Commission,downloading,,,2026-03-26T21:37:23.487424
+219,2024-03-27,Board of Supervisors,downloading,,,2026-03-26T21:22:42.665602
+220,2024-04-10,Board of Supervisors,downloading,,,2026-03-26T21:23:24.070640
 221,2024-04-17,Planning Commission,downloading,,,2026-03-20T22:50:22.646046
 222,2024-04-24,Board of Supervisors,downloading,,,2026-03-20T23:49:01.545100
 223,2024-05-08,Board of Supervisors,downloading,,,2026-03-21T00:37:14.746206
