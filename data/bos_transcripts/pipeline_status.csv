@@ -76,23 +76,7 @@ clip_id,meeting_date,title,status,error,output_dir,updated_at
 123,2022-03-09,Board of Supervisors,done,,data/bos_transcripts/2022-03-09_clip123_Board_of_Supervisors,2026-03-20T05:38:23.245706
 124,2022-03-16,Planning Commission,done,,data/bos_transcripts/2022-03-16_clip124_Planning_Commission,2026-03-20T08:02:30.895137
 126,2022-03-23,Board of Supervisors,done,,data/bos_transcripts/2022-03-23_clip126_Board_of_Supervisors,2026-03-20T12:32:15.572176
-127,2022-04-06,Planning Commission,failed,"transcribe: Failed to load audio: ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
-  built with gcc 13 (Ubuntu 13.2.0-23ubuntu3)
-  configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared
-  WARNING: library configuration mismatch
-  avcodec     configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared --enable-version3 --disable-doc --disable-programs --disable-static --enable-libaribb24 --enable-libopencore_amrnb --enable-libopencore_amrwb --enable-libtesseract --enable-libvo_amrwbenc --enable-libsmbclient
-  libavutil      58. 29.100 / 58. 29.100
-  libavcodec     60. 31.102 / 60. 31.102
-  libavformat    60. 16.100 / 60. 16.100
-  libavdevice    60.  3.100 / 60.  3.100
-  libavfilter     9. 12.100 /  9. 12.100
-  libswscale      7.  5.100 /  7.  5.100
-  libswresample   4. 12.100 /  4. 12.100
-  libpostproc    57.  3.100 / 57.  3.100
-[in#0 @ 0x64be26ee4e00] Error opening input: No such file or directory
-Error opening input file /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip127/clip127.m4a.
-Error opening input files: No such file or directory
-",data/bos_transcripts/2022-04-06_clip127_Planning_Commission,2026-03-20T12:32:19.080157
+127,2022-04-06,Planning Commission,done,,data/bos_transcripts/2022-04-06_clip127_Planning_Commission,2026-03-26T17:59:53.166312
 128,2022-04-13,Board of Supervisors,done,,data/bos_transcripts/2022-04-13_clip128_Board_of_Supervisors,2026-03-20T18:54:45.935155
 129,2022-04-27,Board of Supervisors,done,,data/bos_transcripts/2022-04-27_clip129_Board_of_Supervisors,2026-03-21T03:10:50.928567
 130,2022-05-04,Planning Commission,done,,data/bos_transcripts/2022-05-04_clip130_Planning_Commission,2026-03-21T03:28:14.571862
@@ -149,12 +133,12 @@ Error opening input files: No such file or directory
 200,2023-10-11,Board of Supervisors,done,,data/bos_transcripts/2023-10-11_clip200_Board_of_Supervisors,2026-03-26T04:22:53.030306
 201,2023-10-25,Board of Supervisors,done,,data/bos_transcripts/2023-10-25_clip201_Board_of_Supervisors,2026-03-26T12:13:31.386484
 202,2023-11-01,Planning Commission,done,,data/bos_transcripts/2023-11-01_clip202_Planning_Commission,2026-03-26T13:17:58.522604
-203,2023-11-08,Board of Supervisors,downloading,,,2026-03-20T16:15:39.380998
-204,2023-12-06,Planning Commission,pending,,,2026-03-20T16:29:02.216315
-205,2023-12-13,Board of Supervisors,pending,,,2026-03-20T16:29:26.244349
-206,2024-01-03,Planning Commission,pending,,,2026-03-20T16:29:48.980291
-207,2024-01-10,Board of Supervisors,downloading,,,2026-03-20T16:29:49.087688
-208,2024-01-24,Board of Supervisors,downloading,,,2026-03-20T18:44:16.225658
+203,2023-11-08,Board of Supervisors,done,,data/bos_transcripts/2023-11-08_clip203_Board_of_Supervisors,2026-03-26T18:36:47.808779
+204,2023-12-06,Planning Commission,downloading,,,2026-03-26T17:59:53.166081
+205,2023-12-13,Board of Supervisors,downloading,,,2026-03-26T17:59:53.166406
+206,2024-01-03,Planning Commission,downloading,,,2026-03-26T17:59:51.148212
+207,2024-01-10,Board of Supervisors,downloading,,,2026-03-26T17:59:51.168011
+208,2024-01-24,Board of Supervisors,downloading,,,2026-03-26T17:59:51.168081
 209,2024-02-07,Board of Supervisors - School Board Joint Session,downloading,,,2026-03-20T19:08:16.836949
 212,2024-02-14,Board of Supervisors,downloading,,,2026-03-20T19:19:49.179206
 213,2024-02-21,Planning Commission,downloading,,,2026-03-20T19:33:30.235983
