@@ -445,7 +445,8 @@ def _handle_signal(signum, frame):
 
 
 def _download_audio(clip_id: int, player_url: str, dest: Path,
-                    rate_limit: Optional[str]) -> Path:
+                    rate_limit: Optional[str],
+                    stall_timeout: int = 600) -> Path:
     """
     Use yt-dlp to extract the best audio stream from a Granicus clip and
     save it as an m4a file.
@@ -454,13 +455,16 @@ def _download_audio(clip_id: int, player_url: str, dest: Path,
     parallel downloads never share a working directory and their HLS fragment
     temp files cannot collide.
 
+    Stall detection: polls staging file sizes every 30 s. If total bytes in
+    the clip's staging dir haven't grown for *stall_timeout* seconds the
+    yt-dlp process is killed and a RuntimeError containing "stalled" is raised
+    (which the caller treats as a transient error, resetting the clip to
+    pending for automatic retry).
+
     Returns the path of the downloaded file.
 
     Raises RuntimeError on failure.
     """
-    import subprocess
-    # Isolate every clip in its own subdir to prevent HLS temp-file collisions
-    # when multiple yt-dlp processes run in parallel.
     clip_dir = dest / f"clip{clip_id}"
     clip_dir.mkdir(parents=True, exist_ok=True)
     output_template = str(clip_dir / f"clip{clip_id}.%(ext)s")
@@ -472,9 +476,9 @@ def _download_audio(clip_id: int, player_url: str, dest: Path,
         "--audio-quality", "0",        # best quality
         "--no-progress",               # clean log output
         "--no-warnings",
-        "--retries", "25",             # retry HTTP errors (default 10)
-        "--fragment-retries", "25",    # retry individual HLS fragment errors
-        "--retry-sleep", "exp=1:30",   # exponential backoff: 1s, 2s, 4s … capped at 30s
+        "--retries", "5",
+        "--fragment-retries", "5",
+        "--retry-sleep", "exp=1:15",   # exponential backoff capped at 15 s
         "-o", output_template,
         player_url,
     ]
@@ -482,14 +486,36 @@ def _download_audio(clip_id: int, player_url: str, dest: Path,
         cmd += ["--limit-rate", rate_limit]
 
     log.debug("yt-dlp command: %s", " ".join(cmd))
-    result = subprocess.run(cmd, capture_output=True, text=True)
-    if result.returncode != 0:
+
+    def _staging_bytes() -> int:
+        return sum(f.stat().st_size for f in clip_dir.rglob("*") if f.is_file())
+
+    proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    last_size = _staging_bytes()
+    last_change = time.monotonic()
+    poll_interval = 30  # seconds between size checks
+
+    while proc.poll() is None:
+        time.sleep(poll_interval)
+        current_size = _staging_bytes()
+        if current_size != last_size:
+            last_size = current_size
+            last_change = time.monotonic()
+        elif time.monotonic() - last_change > stall_timeout:
+            proc.kill()
+            proc.wait()
+            raise RuntimeError(
+                f"download stalled for >{stall_timeout}s with no progress — killed"
+            )
+
+    _, stderr_bytes = proc.communicate()
+    if proc.returncode != 0:
         raise RuntimeError(
-            f"yt-dlp failed (exit {result.returncode}): {result.stderr.strip()}"
+            f"yt-dlp failed (exit {proc.returncode}): {stderr_bytes.decode(errors='replace').strip()}"
         )
 
     # Find the downloaded file (extension may vary)
-    candidates = list(clip_dir.glob(f"clip{clip_id}.*"))
+    candidates = [f for f in clip_dir.glob(f"clip{clip_id}.*") if not f.name.endswith((".part", ".ytdl"))]
     if not candidates:
         raise FileNotFoundError(
             f"yt-dlp reported success but no audio file found in {clip_dir}"
@@ -525,6 +551,66 @@ def _transcribe(audio_path: Path, model_name: str, threads: int) -> dict:
         verbose=False,
     )
     return result
+
+
+def _transcribe_cpp(audio_path: Path, model_path: str, whisper_cli: str, threads: int) -> dict:
+    """
+    Transcribe *audio_path* using a whisper.cpp binary and return the same
+    dict format as _transcribe() so the rest of the pipeline is unchanged.
+
+    Requires whisper.cpp built from https://github.com/ggml-org/whisper.cpp
+    and a GGML model file (e.g. ggml-large-v3-q5_0.bin).
+    """
+    import tempfile
+
+    with tempfile.TemporaryDirectory() as tmp:
+        out_base = Path(tmp) / "out"
+        cmd = [
+            whisper_cli,
+            "--model", model_path,
+            "--language", "en",
+            "--threads", str(threads),
+            "--output-json",
+            "--output-file", str(out_base),
+            str(audio_path),
+        ]
+        log.info("[transcriber] whisper.cpp: %s", " ".join(cmd))
+        proc = subprocess.run(cmd, capture_output=True, text=True)
+        if proc.returncode != 0:
+            raise RuntimeError(
+                f"whisper-cli exited {proc.returncode}: {proc.stderr[:500]}"
+            )
+
+        out_json = out_base.with_suffix(".json")
+        if not out_json.exists():
+            candidates = list(Path(tmp).glob("*.json"))
+            if not candidates:
+                raise RuntimeError(
+                    f"whisper-cli produced no JSON. stderr: {proc.stderr[:200]}"
+                )
+            out_json = candidates[0]
+
+        data = json.loads(out_json.read_text(encoding="utf-8"))
+
+    # Normalise to the same shape the rest of the pipeline expects
+    segments = []
+    full_text_parts = []
+    for i, seg in enumerate(data.get("transcription", [])):
+        text = seg.get("text", "").strip()
+        offsets = seg.get("offsets", {})
+        segments.append({
+            "id": i,
+            "start": offsets.get("from", 0) / 1000.0,
+            "end":   offsets.get("to",   0) / 1000.0,
+            "text":  text,
+        })
+        full_text_parts.append(text)
+
+    return {
+        "text":     " ".join(full_text_parts),
+        "segments": segments,
+        "language": data.get("result", {}).get("language", "en"),
+    }
 
 
 def _save_transcript(result: dict, out_dir: Path, meeting: sqlite3.Row) -> None:
@@ -588,6 +674,7 @@ def _download_worker(
     staging_dir: Path,
     rate_limit: Optional[str],
     download_workers: int = 1,
+    stall_timeout: int = 600,
 ) -> None:
     """
     Download thread: dispatches audio downloads using a thread pool
@@ -632,7 +719,8 @@ def _download_worker(
 
             try:
                 audio_path = _download_audio(clip_id, meeting["meeting_url"],
-                                             staging_dir, rate_limit)
+                                             staging_dir, rate_limit,
+                                             stall_timeout=stall_timeout)
                 mb = audio_path.stat().st_size / 1e6
                 log.info("[downloader] ✓ clip %d saved (%.1f MB) — queued for transcription",
                          clip_id, mb)
@@ -645,7 +733,8 @@ def _download_worker(
                 # Transient server errors (502, 503, timeouts) — reset to pending so
                 # the next pipeline run retries automatically without --retry-failed.
                 _TRANSIENT = ("502", "503", "timed out", "time out", "Bad Gateway",
-                              "Service Unavailable", "Connection reset", "Connection refused")
+                              "Service Unavailable", "Connection reset", "Connection refused",
+                              "stalled")
                 if any(t in err_str for t in _TRANSIENT):
                     log.warning("[downloader] TRANSIENT error clip %d — resetting to pending: %s",
                                 clip_id, err_str.splitlines()[0])
@@ -690,6 +779,7 @@ def _transcribe_worker(
     threads: int,
     conn: sqlite3.Connection,
     counters: dict,
+    whisper_cli: Optional[str] = None,
     no_git: bool = False,
 ) -> None:
     """
@@ -701,13 +791,16 @@ def _transcribe_worker(
 
     Stops when it receives the _QUEUE_DONE sentinel.
     """
-    import torch
-    import whisper
-
-    torch.set_num_threads(threads)
-    log.info("[transcriber] Loading Whisper model '%s' …", model_name)
-    model = whisper.load_model(model_name)
-    log.info("[transcriber] Model loaded. Waiting for audio …")
+    if whisper_cli:
+        model = None  # whisper.cpp path — no Python model to load
+        log.info("[transcriber] Backend: whisper.cpp  cli=%s  model=%s", whisper_cli, model_name)
+    else:
+        import torch
+        import whisper as _whisper
+        torch.set_num_threads(threads)
+        log.info("[transcriber] Loading Whisper model '%s' …", model_name)
+        model = _whisper.load_model(model_name)
+        log.info("[transcriber] Model loaded. Waiting for audio …")
 
     while True:
         item = ready_queue.get()
@@ -746,12 +839,15 @@ def _transcribe_worker(
         try:
             set_status(conn, clip_id, "transcribing")
             log.info("[transcriber] Transcribing %s …", audio_path.name)
-            result = model.transcribe(
-                str(audio_path),
-                language="en",
-                fp16=False,
-                verbose=False,
-            )
+            if whisper_cli:
+                result = _transcribe_cpp(audio_path, model_name, whisper_cli, threads)
+            else:
+                result = model.transcribe(
+                    str(audio_path),
+                    language="en",
+                    fp16=False,
+                    verbose=False,
+                )
             word_count = len(str(result["text"]).split())
             log.info("[transcriber] ~%d words transcribed", word_count)
 
@@ -835,7 +931,8 @@ def cmd_run(args) -> None:
     # are not thread-safe and cannot be shared between threads.
     dl_thread = threading.Thread(
         target=_download_worker,
-        args=(batch, ready_queue, staging_dir, args.rate_limit, args.download_workers),
+        args=(batch, ready_queue, staging_dir, args.rate_limit,
+              args.download_workers, args.stall_timeout),
         name="downloader",
         daemon=True,   # dies if main thread exits unexpectedly
     )
@@ -846,7 +943,7 @@ def cmd_run(args) -> None:
     # --- Run transcription on the main thread ---
     # (Whisper holds a large model in memory; keeping it on main is cleaner.)
     _transcribe_worker(ready_queue, args.model, args.threads, conn, counters,
-                       no_git=args.no_git)
+                       no_git=args.no_git, whisper_cli=args.whisper_cli)
 
     # Wait for download thread to finish (it should already be done by now)
     dl_thread.join(timeout=10)
@@ -905,13 +1002,33 @@ def cmd_status(args) -> None:
 
     # Show recent completions
     done = conn.execute(
-        "SELECT clip_id, meeting_date, title, output_dir FROM meetings "
+        "SELECT clip_id, meeting_date, title, output_dir, updated_at FROM meetings "
         "WHERE status = 'done' ORDER BY updated_at DESC LIMIT 5"
     ).fetchall()
     if done:
+        from datetime import datetime, timezone
+        now = datetime.now(timezone.utc)
         print("Recently completed:")
         for row in done:
-            print(f"  ✓ {row['meeting_date']}  clip {row['clip_id']}  {row['title']}")
+            completed_at = row["updated_at"]
+            try:
+                dt = datetime.fromisoformat(completed_at.replace("Z", "+00:00"))
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=timezone.utc)
+                delta = now - dt
+                secs = int(delta.total_seconds())
+                if secs < 60:
+                    age = f"{secs}s ago"
+                elif secs < 3600:
+                    age = f"{secs // 60}m ago"
+                elif secs < 86400:
+                    age = f"{secs // 3600}h {(secs % 3600) // 60}m ago"
+                else:
+                    age = f"{secs // 86400}d {(secs % 86400) // 3600}h ago"
+                time_str = f"  [{completed_at[:16]}  {age}]"
+            except Exception:
+                time_str = f"  [{completed_at[:16]}]"
+            print(f"  ✓ {row['meeting_date']}  clip {row['clip_id']}  {row['title']}{time_str}")
         print()
 
     conn.close()
@@ -1011,12 +1128,33 @@ def build_parser() -> argparse.ArgumentParser:
         ),
     )
     p_run.add_argument(
+        "--stall-timeout", type=int, default=600, metavar="SECS",
+        dest="stall_timeout",
+        help=(
+            "Seconds of no download progress before yt-dlp is killed and the "
+            "clip is reset to pending for automatic retry (default: 600). "
+            "Stalled clips are treated as transient errors and retried on the "
+            "next pass without needing --retry-failed."
+        ),
+    )
+    p_run.add_argument(
         "--dry-run", action="store_true",
         help="Print what would be processed without downloading or transcribing.",
     )
     p_run.add_argument(
         "--no-git", action="store_true",
         help="Disable automatic git commit+push after each transcript is saved.",
+    )
+    p_run.add_argument(
+        "--whisper-cli", default=None, metavar="PATH",
+        dest="whisper_cli",
+        help=(
+            "Path to the whisper-cli binary from whisper.cpp "
+            "(e.g. ~/whisper.cpp/build/bin/whisper-cli). "
+            "When set, --model must be the path to a GGML .bin model file "
+            "(e.g. ~/whisper.cpp/models/ggml-large-v3-q5_0.bin). "
+            "Typically 3-5x faster than the Python backend on CPU."
+        ),
     )
     p_run.set_defaults(func=cmd_run)
 
