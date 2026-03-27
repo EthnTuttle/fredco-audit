@@ -26079,3 +26079,482 @@ whisper_init_with_params_no_st
   now = datetime.utcnow().isoformat()
 2026-03-27 08:39:26 [INFO] [transcriber] clip 262 done ✓
 2026-03-27 08:39:26 [INFO] [transcriber] clip 262 done ✓
+2026-03-27 08:39:30 [INFO] [git] Committed and pushed: Add BoS transcript: 2025-01-22 clip262 Board of Supervisors
+2026-03-27 08:39:30 [INFO] [git] Committed and pushed: Add BoS transcript: 2025-01-22 clip262 Board of Supervisors
+2026-03-27 08:39:30 [INFO] ────────────────────────────────────────────────────────────
+2026-03-27 08:39:30 [INFO] ────────────────────────────────────────────────────────────
+2026-03-27 08:39:30 [INFO] [transcriber] clip 263 | 2025-01-22 | Board of Supervisors
+2026-03-27 08:39:30 [INFO] [transcriber] clip 263 | 2025-01-22 | Board of Supervisors
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:212: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-03-27 08:39:30 [INFO] [transcriber] Transcribing clip263.m4a …
+2026-03-27 08:39:30 [INFO] [transcriber] Transcribing clip263.m4a …
+2026-03-27 08:39:30 [ERROR] [transcriber] FAILED clip 263: Failed to load audio: ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 13 (Ubuntu 13.2.0-23ubuntu3)
+  configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared
+  WARNING: library configuration mismatch
+  avcodec     configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared --enable-version3 --disable-doc --disable-programs --disable-static --enable-libaribb24 --enable-libopencore_amrnb --enable-libopencore_amrwb --enable-libtesseract --enable-libvo_amrwbenc --enable-libsmbclient
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+[in#0 @ 0x57bf3bd9ee00] Error opening input: No such file or directory
+Error opening input file /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip263/clip263.m4a.
+Error opening input files: No such file or directory
+Traceback (most recent call last):
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/whisper/audio.py", line 58, in load_audio
+    out = run(cmd, capture_output=True, check=True).stdout
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['ffmpeg', '-nostdin', '-threads', '0', '-i', '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip263/clip263.m4a', '-f', 's16le', '-ac', '1', '-acodec', 'pcm_s16le', '-ar', '16000', '-']' returned non-zero exit status 254.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 749, in _transcribe_worker
+    conn.close()
+             ^^^
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/whisper/transcribe.py", line 139, in transcribe
+    mel = log_mel_spectrogram(audio, model.dims.n_mels, padding=N_SAMPLES)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/whisper/audio.py", line 140, in log_mel_spectrogram
+    audio = load_audio(audio)
+            ^^^^^^^^^^^^^^^^^
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/whisper/audio.py", line 60, in load_audio
+    raise RuntimeError(f"Failed to load audio: {e.stderr.decode()}") from e
+RuntimeError: Failed to load audio: ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 13 (Ubuntu 13.2.0-23ubuntu3)
+  configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared
+  WARNING: library configuration mismatch
+  avcodec     configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared --enable-version3 --disable-doc --disable-programs --disable-static --enable-libaribb24 --enable-libopencore_amrnb --enable-libopencore_amrwb --enable-libtesseract --enable-libvo_amrwbenc --enable-libsmbclient
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+[in#0 @ 0x57bf3bd9ee00] Error opening input: No such file or directory
+Error opening input file /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip263/clip263.m4a.
+Error opening input files: No such file or directory
+
+2026-03-27 08:39:30 [ERROR] [transcriber] FAILED clip 263: Failed to load audio: ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 13 (Ubuntu 13.2.0-23ubuntu3)
+  configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared
+  WARNING: library configuration mismatch
+  avcodec     configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared --enable-version3 --disable-doc --disable-programs --disable-static --enable-libaribb24 --enable-libopencore_amrnb --enable-libopencore_amrwb --enable-libtesseract --enable-libvo_amrwbenc --enable-libsmbclient
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+[in#0 @ 0x57bf3bd9ee00] Error opening input: No such file or directory
+Error opening input file /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip263/clip263.m4a.
+Error opening input files: No such file or directory
+Traceback (most recent call last):
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/whisper/audio.py", line 58, in load_audio
+    out = run(cmd, capture_output=True, check=True).stdout
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['ffmpeg', '-nostdin', '-threads', '0', '-i', '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip263/clip263.m4a', '-f', 's16le', '-ac', '1', '-acodec', 'pcm_s16le', '-ar', '16000', '-']' returned non-zero exit status 254.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 749, in _transcribe_worker
+    conn.close()
+             ^^^
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/whisper/transcribe.py", line 139, in transcribe
+    mel = log_mel_spectrogram(audio, model.dims.n_mels, padding=N_SAMPLES)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/whisper/audio.py", line 140, in log_mel_spectrogram
+    audio = load_audio(audio)
+            ^^^^^^^^^^^^^^^^^
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/whisper/audio.py", line 60, in load_audio
+    raise RuntimeError(f"Failed to load audio: {e.stderr.decode()}") from e
+RuntimeError: Failed to load audio: ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 13 (Ubuntu 13.2.0-23ubuntu3)
+  configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared
+  WARNING: library configuration mismatch
+  avcodec     configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared --enable-version3 --disable-doc --disable-programs --disable-static --enable-libaribb24 --enable-libopencore_amrnb --enable-libopencore_amrwb --enable-libtesseract --enable-libvo_amrwbenc --enable-libsmbclient
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+[in#0 @ 0x57bf3bd9ee00] Error opening input: No such file or directory
+Error opening input file /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip263/clip263.m4a.
+Error opening input files: No such file or directory
+
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:212: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-03-27 08:39:30 [INFO] ────────────────────────────────────────────────────────────
+2026-03-27 08:39:30 [INFO] ────────────────────────────────────────────────────────────
+2026-03-27 08:39:30 [INFO] [transcriber] clip 264 | 2025-01-24 | Board of Supervisors
+2026-03-27 08:39:30 [INFO] [transcriber] clip 264 | 2025-01-24 | Board of Supervisors
+2026-03-27 08:39:30 [INFO] [transcriber] Transcribing clip264.m4a …
+2026-03-27 08:39:30 [INFO] [transcriber] Transcribing clip264.m4a …
+2026-03-27 08:39:30 [ERROR] [transcriber] FAILED clip 264: Failed to load audio: ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 13 (Ubuntu 13.2.0-23ubuntu3)
+  configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared
+  WARNING: library configuration mismatch
+  avcodec     configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared --enable-version3 --disable-doc --disable-programs --disable-static --enable-libaribb24 --enable-libopencore_amrnb --enable-libopencore_amrwb --enable-libtesseract --enable-libvo_amrwbenc --enable-libsmbclient
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+[in#0 @ 0x5600fcea8e00] Error opening input: No such file or directory
+Error opening input file /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip264/clip264.m4a.
+Error opening input files: No such file or directory
+Traceback (most recent call last):
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/whisper/audio.py", line 58, in load_audio
+    out = run(cmd, capture_output=True, check=True).stdout
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['ffmpeg', '-nostdin', '-threads', '0', '-i', '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip264/clip264.m4a', '-f', 's16le', '-ac', '1', '-acodec', 'pcm_s16le', '-ar', '16000', '-']' returned non-zero exit status 254.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 749, in _transcribe_worker
+    conn.close()
+             ^^^
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/whisper/transcribe.py", line 139, in transcribe
+    mel = log_mel_spectrogram(audio, model.dims.n_mels, padding=N_SAMPLES)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/whisper/audio.py", line 140, in log_mel_spectrogram
+    audio = load_audio(audio)
+            ^^^^^^^^^^^^^^^^^
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/whisper/audio.py", line 60, in load_audio
+    raise RuntimeError(f"Failed to load audio: {e.stderr.decode()}") from e
+RuntimeError: Failed to load audio: ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 13 (Ubuntu 13.2.0-23ubuntu3)
+  configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared
+  WARNING: library configuration mismatch
+  avcodec     configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared --enable-version3 --disable-doc --disable-programs --disable-static --enable-libaribb24 --enable-libopencore_amrnb --enable-libopencore_amrwb --enable-libtesseract --enable-libvo_amrwbenc --enable-libsmbclient
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+[in#0 @ 0x5600fcea8e00] Error opening input: No such file or directory
+Error opening input file /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip264/clip264.m4a.
+Error opening input files: No such file or directory
+
+2026-03-27 08:39:30 [ERROR] [transcriber] FAILED clip 264: Failed to load audio: ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 13 (Ubuntu 13.2.0-23ubuntu3)
+  configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared
+  WARNING: library configuration mismatch
+  avcodec     configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared --enable-version3 --disable-doc --disable-programs --disable-static --enable-libaribb24 --enable-libopencore_amrnb --enable-libopencore_amrwb --enable-libtesseract --enable-libvo_amrwbenc --enable-libsmbclient
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+[in#0 @ 0x5600fcea8e00] Error opening input: No such file or directory
+Error opening input file /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip264/clip264.m4a.
+Error opening input files: No such file or directory
+Traceback (most recent call last):
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/whisper/audio.py", line 58, in load_audio
+    out = run(cmd, capture_output=True, check=True).stdout
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['ffmpeg', '-nostdin', '-threads', '0', '-i', '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip264/clip264.m4a', '-f', 's16le', '-ac', '1', '-acodec', 'pcm_s16le', '-ar', '16000', '-']' returned non-zero exit status 254.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 749, in _transcribe_worker
+    conn.close()
+             ^^^
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/whisper/transcribe.py", line 139, in transcribe
+    mel = log_mel_spectrogram(audio, model.dims.n_mels, padding=N_SAMPLES)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/whisper/audio.py", line 140, in log_mel_spectrogram
+    audio = load_audio(audio)
+            ^^^^^^^^^^^^^^^^^
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/whisper/audio.py", line 60, in load_audio
+    raise RuntimeError(f"Failed to load audio: {e.stderr.decode()}") from e
+RuntimeError: Failed to load audio: ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 13 (Ubuntu 13.2.0-23ubuntu3)
+  configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared
+  WARNING: library configuration mismatch
+  avcodec     configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared --enable-version3 --disable-doc --disable-programs --disable-static --enable-libaribb24 --enable-libopencore_amrnb --enable-libopencore_amrwb --enable-libtesseract --enable-libvo_amrwbenc --enable-libsmbclient
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+[in#0 @ 0x5600fcea8e00] Error opening input: No such file or directory
+Error opening input file /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip264/clip264.m4a.
+Error opening input files: No such file or directory
+
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:212: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-03-27 08:39:30 [INFO] ────────────────────────────────────────────────────────────
+2026-03-27 08:39:30 [INFO] ────────────────────────────────────────────────────────────
+2026-03-27 08:39:30 [INFO] [transcriber] clip 265 | 2025-02-05 | Board of Supervisors
+2026-03-27 08:39:30 [INFO] [transcriber] clip 265 | 2025-02-05 | Board of Supervisors
+2026-03-27 08:39:30 [INFO] [transcriber] Transcribing clip265.m4a …
+2026-03-27 08:39:30 [INFO] [transcriber] Transcribing clip265.m4a …
+  0%|          | 0/522945 [00:00<?, ?frames/s]2026-03-27 08:39:55 [ERROR] [downloader] FAILED download clip 264: yt-dlp failed (exit 1): ERROR: Unable to rename file: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip264/clip264.mp4.part-Frag7236.part' -> '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip264/clip264.mp4.part-Frag7236'
+ERROR: Unable to download video: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip264/clip264.mp4.part-Frag7236'
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 721, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 513, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: Unable to rename file: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip264/clip264.mp4.part-Frag7236.part' -> '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip264/clip264.mp4.part-Frag7236'
+ERROR: Unable to download video: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip264/clip264.mp4.part-Frag7236'
+2026-03-27 08:39:55 [INFO] ────────────────────────────────────────────────────────────
+2026-03-27 08:39:55 [INFO] [transcriber] clip 264 | 2025-01-24 | Board of Supervisors
+2026-03-27 08:39:55 [INFO] ────────────────────────────────────────────────────────────
+2026-03-27 08:39:55 [INFO] [transcriber] clip 265 | 2025-02-05 | Board of Supervisors
+2026-03-27 08:39:55 [INFO] [downloader] Removing stale staging dir: clip270
+2026-03-27 08:39:55 [INFO] [transcriber] Transcribing clip265.m4a …
+2026-03-27 08:39:55 [INFO] [transcriber] whisper.cpp: /home/radio/whisper.cpp/build/bin/whisper-cli --model /home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin --language en --threads 14 --output-json --output-file /tmp/tmpycw6_exl/out /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip265/clip265.m4a
+2026-03-27 08:39:55 [INFO] [downloader] ↓ clip 270 | 2025-02-26 | Board of Supervisors
+2026-03-27 08:39:56 [ERROR] [transcriber] FAILED clip 265: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 843, in _transcribe_worker
+    result = _transcribe_cpp(audio_path, model_name, whisper_cli, threads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 588, in _transcribe_cpp
+    raise RuntimeError(
+RuntimeError: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+2026-03-27 08:39:56 [INFO] ────────────────────────────────────────────────────────────
+2026-03-27 08:39:56 [INFO] [transcriber] clip 266 | 2025-02-13 | Board of Supervisors
+2026-03-27 08:39:56 [INFO] [transcriber] Transcribing clip266.m4a …
+2026-03-27 08:39:56 [INFO] [transcriber] whisper.cpp: /home/radio/whisper.cpp/build/bin/whisper-cli --model /home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin --language en --threads 14 --output-json --output-file /tmp/tmpaps4qzqc/out /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip266/clip266.m4a
+2026-03-27 08:39:58 [ERROR] [transcriber] FAILED clip 266: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 843, in _transcribe_worker
+    result = _transcribe_cpp(audio_path, model_name, whisper_cli, threads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 588, in _transcribe_cpp
+    raise RuntimeError(
+RuntimeError: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+  1%|          | 2674/522945 [00:23<1:16:33, 113.26frames/s]  1%|          | 2674/522945 [00:43<1:16:33, 113.26frames/s]  1%|          | 5674/522945 [00:49<1:15:47, 113.74frames/s]  1%|          | 5674/522945 [01:03<1:15:47, 113.74frames/s]  2%|▏         | 8674/522945 [01:07<1:04:10, 133.54frames/s]  2%|▏         | 8674/522945 [01:23<1:04:10, 133.54frames/s]  2%|▏         | 11674/522945 [01:25<57:57, 147.01frames/s]   2%|▏         | 11674/522945 [01:43<57:57, 147.01frames/s]  3%|▎         | 14674/522945 [01:50<1:02:14, 136.11frames/s]  3%|▎         | 14674/522945 [02:03<1:02:14, 136.11frames/s]  3%|▎         | 17674/522945 [02:14<1:03:42, 132.17frames/s]  3%|▎         | 17674/522945 [02:33<1:03:42, 132.17frames/s]  4%|▍         | 20674/522945 [03:28<1:50:41, 75.63frames/s]   4%|▍         | 20674/522945 [03:43<1:50:41, 75.63frames/s]2026-03-27 08:46:55 [INFO] [downloader] ✓ clip 267 saved (101.9 MB) — queued for transcription
+2026-03-27 08:46:55 [INFO] ────────────────────────────────────────────────────────────
+2026-03-27 08:46:55 [INFO] [transcriber] clip 267 | 2025-02-13 | Board of Supervisors
+2026-03-27 08:46:55 [INFO] [downloader] Removing stale staging dir: clip271
+2026-03-27 08:46:55 [INFO] [downloader] ↓ clip 271 | 2025-02-26 | Board of Supervisors
+2026-03-27 08:46:55 [INFO] [transcriber] Transcribing clip267.m4a …
+2026-03-27 08:46:55 [INFO] [transcriber] whisper.cpp: /home/radio/whisper.cpp/build/bin/whisper-cli --model /home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin --language en --threads 14 --output-json --output-file /tmp/tmpdmury9ay/out /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip267/clip267.m4a
+2026-03-27 08:46:56 [ERROR] [downloader] FAILED download clip 271: yt-dlp failed (exit 1): ERROR: Unable to rename file: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip271/clip271.mp4.part-Frag1483.part' -> '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip271/clip271.mp4.part-Frag1483'
+ERROR: Unable to download video: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip271/clip271.mp4.part-Frag1483'
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 694, in _fetch_one
+    clip_id = meeting["clip_id"]
+                         ^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 487, in _download_audio
+RuntimeError: yt-dlp failed (exit 1): ERROR: Unable to rename file: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip271/clip271.mp4.part-Frag1483.part' -> '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip271/clip271.mp4.part-Frag1483'
+ERROR: Unable to download video: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip271/clip271.mp4.part-Frag1483'
+2026-03-27 08:46:56 [INFO] [downloader] Removing stale staging dir: clip273
+2026-03-27 08:46:56 [INFO] [downloader] ↓ clip 273 | 2025-03-12 | Board of Supervisors
+2026-03-27 08:46:57 [ERROR] [transcriber] FAILED clip 267: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 843, in _transcribe_worker
+    result = _transcribe_cpp(audio_path, model_name, whisper_cli, threads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 588, in _transcribe_cpp
+    raise RuntimeError(
+RuntimeError: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+2026-03-27 08:46:57 [INFO] ────────────────────────────────────────────────────────────
+2026-03-27 08:46:57 [INFO] [transcriber] clip 268 | 2025-02-19 | Board of Supervisors
+2026-03-27 08:46:57 [INFO] [transcriber] Transcribing clip268.m4a …
+2026-03-27 08:46:57 [INFO] [transcriber] whisper.cpp: /home/radio/whisper.cpp/build/bin/whisper-cli --model /home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin --language en --threads 14 --output-json --output-file /tmp/tmpdvko2u4a/out /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip268/clip268.m4a
+2026-03-27 08:46:58 [ERROR] [transcriber] FAILED clip 268: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 843, in _transcribe_worker
+    result = _transcribe_cpp(audio_path, model_name, whisper_cli, threads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 588, in _transcribe_cpp
+    raise RuntimeError(
+RuntimeError: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+  5%|▍         | 23672/522945 [07:26<4:45:51, 29.11frames/s]2026-03-27 08:47:17 [WARNING] [downloader] TRANSIENT error clip 264 — resetting to pending: yt-dlp failed (exit 1): ERROR: unable to open for writing: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip264/clip264.mp4.part-Frag10273.part'
+2026-03-27 08:47:17 [INFO] [downloader] Removing stale staging dir: clip274
+2026-03-27 08:47:17 [INFO] [downloader] ↓ clip 274 | 2025-03-19 | Board of Supervisors
+  5%|▍         | 23672/522945 [07:43<4:45:51, 29.11frames/s]  5%|▍         | 26040/522945 [07:44<3:45:23, 36.74frames/s]  6%|▌         | 29038/522945 [08:03<2:48:32, 48.84frames/s]  6%|▌         | 29038/522945 [08:13<2:48:32, 48.84frames/s]  6%|▌         | 32038/522945 [08:26<2:14:15, 60.94frames/s]  6%|▌         | 32038/522945 [08:43<2:14:15, 60.94frames/s]  7%|▋         | 35038/522945 [08:49<1:51:44, 72.78frames/s]  7%|▋         | 35038/522945 [09:03<1:51:44, 72.78frames/s]  7%|▋         | 38038/522945 [09:10<1:34:06, 85.88frames/s]  7%|▋         | 38038/522945 [09:23<1:34:06, 85.88frames/s]  8%|▊         | 40952/522945 [13:15<4:27:41, 30.01frames/s]  8%|▊         | 40952/522945 [13:33<4:27:41, 30.01frames/s]  8%|▊         | 43200/522945 [13:33<3:36:21, 36.96frames/s]  8%|▊         | 43200/522945 [13:53<3:36:21, 36.96frames/s]  9%|▉         | 46200/522945 [13:55<2:44:24, 48.33frames/s]  9%|▉         | 46200/522945 [14:13<2:44:24, 48.33frames/s]  9%|▉         | 49198/522945 [14:17<2:10:32, 60.48frames/s]  9%|▉         | 49198/522945 [14:33<2:10:32, 60.48frames/s] 10%|▉         | 52182/522945 [18:26<4:51:26, 26.92frames/s] 10%|▉         | 52182/522945 [18:43<4:51:26, 26.92frames/s] 11%|█         | 55138/522945 [18:51<3:41:26, 35.21frames/s] 11%|█         | 55138/522945 [19:03<3:41:26, 35.21frames/s] 11%|█         | 58138/522945 [19:16<2:53:07, 44.75frames/s] 11%|█         | 58138/522945 [19:33<2:53:07, 44.75frames/s] 12%|█▏        | 61138/522945 [19:45<2:21:59, 54.21frames/s] 12%|█▏        | 61138/522945 [20:03<2:21:59, 54.21frames/s] 12%|█▏        | 64028/522945 [20:56<2:34:49, 49.40frames/s] 12%|█▏        | 64028/522945 [21:13<2:34:49, 49.40frames/s] 13%|█▎        | 67028/522945 [21:35<2:17:34, 55.23frames/s] 13%|█▎        | 67028/522945 [21:53<2:17:34, 55.23frames/s] 13%|█▎        | 70004/522945 [25:20<4:26:52, 28.29frames/s] 13%|█▎        | 70004/522945 [25:33<4:26:52, 28.29frames/s] 14%|█▍        | 72656/522945 [25:41<3:28:15, 36.04frames/s] 14%|█▍        | 72656/522945 [25:53<3:28:15, 36.04frames/s] 14%|█▍        | 75656/522945 [26:04<2:40:50, 46.35frames/s] 14%|█▍        | 75656/522945 [26:23<2:40:50, 46.35frames/s] 15%|█▌        | 78608/522945 [26:31<2:11:30, 56.31frames/s] 15%|█▌        | 78608/522945 [26:43<2:11:30, 56.31frames/s] 16%|█▌        | 81608/522945 [27:02<1:54:13, 64.40frames/s] 16%|█▌        | 81608/522945 [27:13<1:54:13, 64.40frames/s] 16%|█▌        | 84508/522945 [28:53<2:43:01, 44.83frames/s] 16%|█▌        | 84508/522945 [29:13<2:43:01, 44.83frames/s] 17%|█▋        | 87408/522945 [29:21<2:14:01, 54.16frames/s] 17%|█▋        | 87408/522945 [29:33<2:14:01, 54.16frames/s] 17%|█▋        | 90308/522945 [29:45<1:51:32, 64.64frames/s] 17%|█▋        | 90308/522945 [30:03<1:51:32, 64.64frames/s] 18%|█▊        | 93308/522945 [30:14<1:38:10, 72.93frames/s] 18%|█▊        | 93308/522945 [30:33<1:38:10, 72.93frames/s] 18%|█▊        | 96208/522945 [30:42<1:28:57, 79.95frames/s] 18%|█▊        | 96208/522945 [30:53<1:28:57, 79.95frames/s] 19%|█▉        | 99108/522945 [31:11<1:23:15, 84.84frames/s] 19%|█▉        | 99108/522945 [31:23<1:23:15, 84.84frames/s] 20%|█▉        | 102008/522945 [31:41<1:19:24, 88.34frames/s] 20%|█▉        | 102008/522945 [31:53<1:19:24, 88.34frames/s] 20%|██        | 104908/522945 [32:13<1:18:00, 89.32frames/s] 20%|██        | 104908/522945 [32:23<1:18:00, 89.32frames/s] 21%|██        | 107808/522945 [32:41<1:14:37, 92.72frames/s] 21%|██        | 107808/522945 [32:53<1:14:37, 92.72frames/s] 21%|██        | 110608/522945 [36:03<3:17:22, 34.82frames/s] 21%|██        | 110608/522945 [36:23<3:17:22, 34.82frames/s] 22%|██▏       | 113420/522945 [36:28<2:35:48, 43.81frames/s] 22%|██▏       | 113420/522945 [36:43<2:35:48, 43.81frames/s] 22%|██▏       | 116418/522945 [36:49<2:01:42, 55.67frames/s] 22%|██▏       | 116418/522945 [37:03<2:01:42, 55.67frames/s] 23%|██▎       | 119418/522945 [37:46<2:02:26, 54.93frames/s] 23%|██▎       | 119418/522945 [38:03<2:02:26, 54.93frames/s] 23%|██▎       | 122362/522945 [38:06<1:38:52, 67.52frames/s] 23%|██▎       | 122362/522945 [38:23<1:38:52, 67.52frames/s] 24%|██▍       | 125286/522945 [38:38<1:30:42, 73.07frames/s] 24%|██▍       | 125286/522945 [38:53<1:30:42, 73.07frames/s] 24%|██▍       | 128010/522945 [39:53<1:55:42, 56.89frames/s] 24%|██▍       | 128010/522945 [40:03<1:55:42, 56.89frames/s] 25%|██▌       | 131010/522945 [40:18<1:36:16, 67.85frames/s] 25%|██▌       | 131010/522945 [40:33<1:36:16, 67.85frames/s] 26%|██▌       | 133966/522945 [40:46<1:25:01, 76.25frames/s] 26%|██▌       | 133966/522945 [41:03<1:25:01, 76.25frames/s] 26%|██▌       | 136954/522945 [41:53<1:42:35, 62.71frames/s] 26%|██▌       | 136954/522945 [42:03<1:42:35, 62.71frames/s]2026-03-27 09:23:08 [INFO] [downloader] ✓ clip 272 saved (85.3 MB) — queued for transcription
+2026-03-27 09:23:08 [INFO] [downloader] Removing stale staging dir: clip275
+2026-03-27 09:23:08 [INFO] [downloader] ↓ clip 275 | 2025-03-19 | Planning Commission
+ 27%|██▋       | 139954/522945 [45:43<3:39:43, 29.05frames/s] 27%|██▋       | 139954/522945 [45:53<3:39:43, 29.05frames/s] 27%|██▋       | 142330/522945 [46:04<2:57:03, 35.83frames/s] 27%|██▋       | 142330/522945 [46:23<2:57:03, 35.83frames/s] 28%|██▊       | 145330/522945 [46:31<2:18:12, 45.54frames/s] 28%|██▊       | 145330/522945 [46:43<2:18:12, 45.54frames/s] 28%|██▊       | 148330/522945 [46:58<1:51:44, 55.87frames/s] 28%|██▊       | 148330/522945 [47:13<1:51:44, 55.87frames/s] 29%|██▉       | 151230/522945 [47:25<1:34:36, 65.48frames/s] 29%|██▉       | 151230/522945 [47:43<1:34:36, 65.48frames/s] 29%|██▉       | 152530/522945 [48:05<1:50:10, 56.03frames/s] 29%|██▉       | 152530/522945 [48:23<1:50:10, 56.03frames/s] 30%|██▉       | 154430/522945 [51:56<4:30:11, 22.73frames/s] 30%|███       | 157228/522945 [52:22<3:14:53, 31.28frames/s] 30%|███       | 157228/522945 [52:33<3:14:53, 31.28frames/s] 31%|███       | 160222/522945 [52:47<2:23:26, 42.14frames/s] 31%|███       | 160222/522945 [53:03<2:23:26, 42.14frames/s] 31%|███       | 163154/522945 [53:12<1:52:48, 53.16frames/s] 31%|███       | 163154/522945 [53:23<1:52:48, 53.16frames/s] 32%|███▏      | 166154/522945 [53:43<1:35:13, 62.45frames/s] 32%|███▏      | 166154/522945 [53:53<1:35:13, 62.45frames/s] 32%|███▏      | 169154/522945 [54:09<1:21:12, 72.61frames/s] 32%|███▏      | 169154/522945 [54:23<1:21:12, 72.61frames/s] 33%|███▎      | 172154/522945 [54:33<1:09:32, 84.08frames/s] 33%|███▎      | 172154/522945 [54:43<1:09:32, 84.08frames/s] 33%|███▎      | 175142/522945 [55:02<1:05:28, 88.52frames/s] 33%|███▎      | 175142/522945 [55:13<1:05:28, 88.52frames/s] 34%|███▍      | 178042/522945 [55:33<1:03:34, 90.42frames/s] 34%|███▍      | 178042/522945 [55:43<1:03:34, 90.42frames/s] 35%|███▍      | 180942/522945 [56:02<1:01:17, 93.01frames/s] 35%|███▍      | 180942/522945 [56:13<1:01:17, 93.01frames/s]2026-03-27 09:35:55 [INFO] [downloader] ✓ clip 269 saved (102.6 MB) — queued for transcription
+2026-03-27 09:35:55 [INFO] ────────────────────────────────────────────────────────────
+2026-03-27 09:35:55 [INFO] [transcriber] clip 269 | 2025-02-19 | Planning Commission
+2026-03-27 09:35:55 [INFO] [downloader] Removing stale staging dir: clip272
+2026-03-27 09:35:55 [INFO] [downloader] ↓ clip 272 | 2025-03-12 | Board of Supervisors
+2026-03-27 09:35:55 [INFO] [transcriber] Transcribing clip269.m4a …
+2026-03-27 09:35:55 [INFO] [transcriber] whisper.cpp: /home/radio/whisper.cpp/build/bin/whisper-cli --model /home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin --language en --threads 14 --output-json --output-file /tmp/tmppicn2sa5/out /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip269/clip269.m4a
+2026-03-27 09:35:55 [INFO] [downloader] ✓ clip 270 saved (86.7 MB) — queued for transcription
+2026-03-27 09:35:55 [INFO] [downloader] Removing stale staging dir: clip273
+2026-03-27 09:35:55 [INFO] [downloader] ↓ clip 273 | 2025-03-12 | Board of Supervisors
+2026-03-27 09:35:55 [ERROR] [downloader] FAILED download clip 273: yt-dlp failed (exit 1): ERROR: Unable to rename file: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip273/clip273.mp4.part-Frag2161.part' -> '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip273/clip273.mp4.part-Frag2161'
+ERROR: Unable to download video: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip273/clip273.mp4.part-Frag2161'
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 694, in _fetch_one
+    clip_id = meeting["clip_id"]
+                         ^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 487, in _download_audio
+RuntimeError: yt-dlp failed (exit 1): ERROR: Unable to rename file: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip273/clip273.mp4.part-Frag2161.part' -> '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip273/clip273.mp4.part-Frag2161'
+ERROR: Unable to download video: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip273/clip273.mp4.part-Frag2161'
+2026-03-27 09:35:55 [INFO] [downloader] Removing stale staging dir: clip276
+2026-03-27 09:35:55 [INFO] [downloader] ↓ clip 276 | 2025-03-26 | Board of Supervisors
+2026-03-27 09:35:56 [ERROR] [transcriber] FAILED clip 269: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 843, in _transcribe_worker
+    result = _transcribe_cpp(audio_path, model_name, whisper_cli, threads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 588, in _transcribe_cpp
+    raise RuntimeError(
+RuntimeError: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+2026-03-27 09:35:56 [INFO] ────────────────────────────────────────────────────────────
+2026-03-27 09:35:56 [INFO] [transcriber] clip 270 | 2025-02-26 | Board of Supervisors
+2026-03-27 09:35:56 [INFO] [transcriber] Transcribing clip270.m4a …
+2026-03-27 09:35:56 [INFO] [transcriber] whisper.cpp: /home/radio/whisper.cpp/build/bin/whisper-cli --model /home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin --language en --threads 14 --output-json --output-file /tmp/tmpaobc9wtu/out /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip270/clip270.m4a
+2026-03-27 09:35:57 [ERROR] [transcriber] FAILED clip 270: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 843, in _transcribe_worker
+    result = _transcribe_cpp(audio_path, model_name, whisper_cli, threads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 588, in _transcribe_cpp
+    raise RuntimeError(
+RuntimeError: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+ 35%|███▌      | 183842/522945 [56:36<1:02:34, 90.31frames/s] 35%|███▌      | 183842/522945 [56:53<1:02:34, 90.31frames/s] 36%|███▌      | 186742/522945 [58:30<1:49:34, 51.13frames/s] 36%|███▌      | 186742/522945 [58:43<1:49:34, 51.13frames/s] 36%|███▌      | 189504/522945 [58:54<1:31:09, 60.97frames/s] 36%|███▌      | 189504/522945 [59:13<1:31:09, 60.97frames/s] 37%|███▋      | 192504/522945 [59:23<1:18:42, 69.97frames/s] 37%|███▋      | 192504/522945 [59:43<1:18:42, 69.97frames/s] 37%|███▋      | 195504/522945 [59:53<1:11:00, 76.86frames/s] 37%|███▋      | 195504/522945 [1:00:13<1:11:00, 76.86frames/s] 38%|███▊      | 198472/522945 [1:00:16<1:01:35, 87.80frames/s] 38%|███▊      | 198472/522945 [1:00:33<1:01:35, 87.80frames/s] 39%|███▊      | 201454/522945 [1:00:44<57:41, 92.86frames/s]   39%|███▊      | 201454/522945 [1:01:03<57:41, 92.86frames/s] 39%|███▉      | 204454/522945 [1:03:42<2:15:13, 39.26frames/s] 39%|███▉      | 204454/522945 [1:03:53<2:15:13, 39.26frames/s] 40%|███▉      | 207354/522945 [1:04:02<1:45:19, 49.94frames/s] 40%|███▉      | 207354/522945 [1:04:13<1:45:19, 49.94frames/s] 40%|████      | 210354/522945 [1:04:26<1:25:24, 60.99frames/s] 40%|████      | 210354/522945 [1:04:43<1:25:24, 60.99frames/s] 41%|████      | 213354/522945 [1:04:54<1:13:29, 70.21frames/s] 41%|████      | 213354/522945 [1:05:13<1:13:29, 70.21frames/s] 41%|████▏     | 216354/522945 [1:05:24<1:06:15, 77.13frames/s] 41%|████▏     | 216354/522945 [1:05:43<1:06:15, 77.13frames/s] 42%|████▏     | 219352/522945 [1:05:50<58:43, 86.17frames/s]   42%|████▏     | 219352/522945 [1:06:03<58:43, 86.17frames/s] 43%|████▎     | 222352/522945 [1:06:16<53:57, 92.86frames/s] 43%|████▎     | 222352/522945 [1:06:33<53:57, 92.86frames/s] 43%|████▎     | 225352/522945 [1:06:43<50:37, 97.96frames/s]2026-03-27 09:46:25 [INFO] [downloader] ✓ clip 271 saved (94.4 MB) — queued for transcription
+2026-03-27 09:46:25 [INFO] ────────────────────────────────────────────────────────────
+2026-03-27 09:46:25 [INFO] [transcriber] clip 271 | 2025-02-26 | Board of Supervisors
+2026-03-27 09:46:25 [INFO] [downloader] Removing stale staging dir: clip274
+2026-03-27 09:46:25 [INFO] [downloader] ↓ clip 274 | 2025-03-19 | Board of Supervisors
+2026-03-27 09:46:25 [INFO] [transcriber] Transcribing clip271.m4a …
+2026-03-27 09:46:25 [INFO] [transcriber] whisper.cpp: /home/radio/whisper.cpp/build/bin/whisper-cli --model /home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin --language en --threads 14 --output-json --output-file /tmp/tmp44qc1zv8/out /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip271/clip271.m4a
+2026-03-27 09:46:26 [ERROR] [transcriber] FAILED clip 271: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 843, in _transcribe_worker
+    result = _transcribe_cpp(audio_path, model_name, whisper_cli, threads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 588, in _transcribe_cpp
+    raise RuntimeError(
+RuntimeError: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+ 43%|████▎     | 225352/522945 [1:06:53<50:37, 97.96frames/s] 44%|████▎     | 228352/522945 [1:07:07<46:59, 104.48frames/s] 44%|████▎     | 228352/522945 [1:07:23<46:59, 104.48frames/s] 44%|████▍     | 229608/522945 [1:07:26<51:00, 95.85frames/s]  44%|████▍     | 232608/522945 [1:07:39<40:03, 120.79frames/s] 44%|████▍     | 232608/522945 [1:07:53<40:03, 120.79frames/s] 45%|████▌     | 235606/522945 [1:08:33<54:56, 87.16frames/s]  45%|████▌     | 235606/522945 [1:08:43<54:56, 87.16frames/s] 46%|████▌     | 238604/522945 [1:12:34<2:38:47, 29.84frames/s] 46%|████▌     | 241604/522945 [1:12:48<1:54:59, 40.77frames/s] 47%|████▋     | 244604/522945 [1:12:58<1:23:17, 55.69frames/s] 47%|████▋     | 244604/522945 [1:13:13<1:23:17, 55.69frames/s] 47%|████▋     | 247604/522945 [1:13:24<1:09:02, 66.47frames/s] 48%|████▊     | 250604/522945 [1:13:38<54:18, 83.59frames/s]   48%|████▊     | 250604/522945 [1:13:53<54:18, 83.59frames/s] 48%|████▊     | 253604/522945 [1:13:59<46:54, 95.71frames/s] 48%|████▊     | 253604/522945 [1:14:13<46:54, 95.71frames/s] 49%|████▉     | 256584/522945 [1:14:21<42:13, 105.15frames/s] 49%|████▉     | 256584/522945 [1:14:33<42:13, 105.15frames/s] 50%|████▉     | 259468/522945 [1:18:22<2:17:08, 32.02frames/s] 50%|████▉     | 259468/522945 [1:18:33<2:17:08, 32.02frames/s] 50%|█████     | 262368/522945 [1:18:47<1:46:26, 40.80frames/s] 50%|█████     | 262368/522945 [1:19:03<1:46:26, 40.80frames/s] 51%|█████     | 265274/522945 [1:19:15<1:26:27, 49.67frames/s] 51%|█████     | 265274/522945 [1:19:33<1:26:27, 49.67frames/s] 51%|█████▏    | 268274/522945 [1:19:48<1:13:36, 57.66frames/s] 51%|█████▏    | 268274/522945 [1:20:03<1:13:36, 57.66frames/s] 52%|█████▏    | 271274/522945 [1:20:17<1:02:46, 66.82frames/s] 52%|█████▏    | 271274/522945 [1:20:33<1:02:46, 66.82frames/s] 52%|█████▏    | 274274/522945 [1:20:46<55:14, 75.02frames/s]   52%|█████▏    | 274274/522945 [1:21:03<55:14, 75.02frames/s] 53%|█████▎    | 277274/522945 [1:21:11<48:32, 84.35frames/s] 53%|█████▎    | 277274/522945 [1:21:23<48:32, 84.35frames/s] 54%|█████▎    | 280274/522945 [1:21:46<47:55, 84.38frames/s] 54%|█████▎    | 280274/522945 [1:22:03<47:55, 84.38frames/s] 54%|█████▍    | 283272/522945 [1:23:20<1:10:36, 56.57frames/s] 54%|█████▍    | 283272/522945 [1:23:33<1:10:36, 56.57frames/s]2026-03-27 10:04:43 [INFO] [downloader] ✓ clip 274 saved (29.0 MB) — queued for transcription
+2026-03-27 10:04:43 [INFO] [downloader] Removing stale staging dir: clip277
+2026-03-27 10:04:43 [INFO] [downloader] ↓ clip 277 | 2025-04-02 | Board of Supervisors
+ 55%|█████▍    | 286268/522945 [1:25:13<1:33:25, 42.22frames/s] 55%|█████▍    | 286268/522945 [1:25:23<1:33:25, 42.22frames/s] 55%|█████▌    | 289268/522945 [1:25:42<1:16:01, 51.23frames/s] 55%|█████▌    | 289268/522945 [1:25:53<1:16:01, 51.23frames/s] 56%|█████▌    | 292268/522945 [1:26:10<1:03:12, 60.82frames/s] 56%|█████▌    | 292268/522945 [1:26:23<1:03:12, 60.82frames/s] 56%|█████▋    | 295168/522945 [1:26:39<55:17, 68.67frames/s]   56%|█████▋    | 295168/522945 [1:26:53<55:17, 68.67frames/s] 57%|█████▋    | 298078/522945 [1:27:11<50:36, 74.07frames/s] 57%|█████▋    | 298078/522945 [1:27:23<50:36, 74.07frames/s] 58%|█████▊    | 301054/522945 [1:27:46<47:45, 77.45frames/s] 58%|█████▊    | 301054/522945 [1:28:03<47:45, 77.45frames/s] 58%|█████▊    | 304054/522945 [1:28:58<59:38, 61.18frames/s] 58%|█████▊    | 304054/522945 [1:29:13<59:38, 61.18frames/s] 58%|█████▊    | 305554/522945 [1:33:07<2:35:22, 23.32frames/s] 59%|█████▉    | 308240/522945 [1:33:28<1:54:17, 31.31frames/s] 59%|█████▉    | 308240/522945 [1:33:43<1:54:17, 31.31frames/s] 60%|█████▉    | 311240/522945 [1:33:51<1:24:23, 41.81frames/s] 60%|█████▉    | 311240/522945 [1:34:03<1:24:23, 41.81frames/s] 60%|██████    | 314240/522945 [1:34:18<1:06:26, 52.35frames/s] 60%|██████    | 314240/522945 [1:34:33<1:06:26, 52.35frames/s] 61%|██████    | 317240/522945 [1:34:43<53:44, 63.78frames/s]   61%|██████    | 317240/522945 [1:34:53<53:44, 63.78frames/s] 61%|██████    | 320240/522945 [1:35:07<45:02, 75.00frames/s] 61%|██████    | 320240/522945 [1:35:23<45:02, 75.00frames/s] 62%|██████▏   | 323240/522945 [1:36:51<1:05:57, 50.46frames/s] 62%|██████▏   | 323240/522945 [1:37:03<1:05:57, 50.46frames/s] 62%|██████▏   | 326238/522945 [1:38:02<1:08:47, 47.65frames/s] 62%|██████▏   | 326238/522945 [1:38:13<1:08:47, 47.65frames/s] 63%|██████▎   | 329236/522945 [1:38:29<56:06, 57.55frames/s]   63%|██████▎   | 329236/522945 [1:38:43<56:06, 57.55frames/s] 64%|██████▎   | 332124/522945 [1:42:19<1:53:34, 28.00frames/s] 64%|██████▎   | 332124/522945 [1:42:33<1:53:34, 28.00frames/s] 64%|██████▍   | 334664/522945 [1:42:41<1:29:20, 35.12frames/s] 64%|██████▍   | 334664/522945 [1:42:53<1:29:20, 35.12frames/s] 65%|██████▍   | 337664/522945 [1:43:03<1:07:24, 45.81frames/s] 65%|██████▍   | 337664/522945 [1:43:23<1:07:24, 45.81frames/s] 65%|██████▌   | 340664/522945 [1:43:31<54:39, 55.58frames/s]   65%|██████▌   | 340664/522945 [1:43:43<54:39, 55.58frames/s] 66%|██████▌   | 343664/522945 [1:44:12<49:44, 60.08frames/s] 66%|██████▌   | 343664/522945 [1:44:23<49:44, 60.08frames/s] 66%|██████▋   | 346662/522945 [1:48:07<1:44:02, 28.24frames/s] 66%|██████▋   | 346662/522945 [1:48:23<1:44:02, 28.24frames/s] 67%|██████▋   | 349158/522945 [1:48:25<1:20:45, 35.87frames/s] 67%|██████▋   | 349158/522945 [1:48:43<1:20:45, 35.87frames/s] 67%|██████▋   | 352158/522945 [1:48:49<1:01:40, 46.15frames/s] 67%|██████▋   | 352158/522945 [1:49:03<1:01:40, 46.15frames/s] 68%|██████▊   | 355158/522945 [1:49:15<49:20, 56.68frames/s]   68%|██████▊   | 355158/522945 [1:49:33<49:20, 56.68frames/s] 68%|██████▊   | 358158/522945 [1:49:43<41:26, 66.27frames/s] 68%|██████▊   | 358158/522945 [1:49:53<41:26, 66.27frames/s]2026-03-27 10:32:55 [INFO] [downloader] ✓ clip 272 saved (85.3 MB) — queued for transcription
+2026-03-27 10:32:55 [INFO] ────────────────────────────────────────────────────────────
+2026-03-27 10:32:55 [INFO] [transcriber] clip 272 | 2025-03-12 | Board of Supervisors
+2026-03-27 10:32:55 [INFO] [downloader] Removing stale staging dir: clip275
+2026-03-27 10:32:55 [INFO] [downloader] ↓ clip 275 | 2025-03-19 | Planning Commission
+2026-03-27 10:32:55 [INFO] [transcriber] Transcribing clip272.m4a …
+2026-03-27 10:32:55 [INFO] [transcriber] whisper.cpp: /home/radio/whisper.cpp/build/bin/whisper-cli --model /home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin --language en --threads 14 --output-json --output-file /tmp/tmpj7e5c7hf/out /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip272/clip272.m4a
+2026-03-27 10:32:56 [ERROR] [transcriber] FAILED clip 272: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 843, in _transcribe_worker
+    result = _transcribe_cpp(audio_path, model_name, whisper_cli, threads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 588, in _transcribe_cpp
+    raise RuntimeError(
+RuntimeError: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+ 69%|██████▉   | 361136/522945 [1:53:29<1:30:32, 29.78frames/s] 69%|██████▉   | 361136/522945 [1:53:43<1:30:32, 29.78frames/s] 69%|██████▉   | 363338/522945 [1:53:45<1:12:16, 36.80frames/s] 69%|██████▉   | 363338/522945 [1:54:03<1:12:16, 36.80frames/s] 70%|███████   | 366338/522945 [1:54:13<55:54, 46.69frames/s]   70%|███████   | 366338/522945 [1:54:23<55:54, 46.69frames/s] 71%|███████   | 369338/522945 [1:54:38<44:21, 57.72frames/s] 71%|███████   | 369338/522945 [1:54:53<44:21, 57.72frames/s] 71%|███████   | 372338/522945 [1:55:05<36:58, 67.87frames/s] 71%|███████   | 372338/522945 [1:55:23<36:58, 67.87frames/s] 72%|███████▏  | 375338/522945 [1:55:32<31:58, 76.94frames/s] 72%|███████▏  | 375338/522945 [1:55:43<31:58, 76.94frames/s] 72%|███████▏  | 378138/522945 [1:59:16<1:18:18, 30.82frames/s] 72%|███████▏  | 378138/522945 [1:59:33<1:18:18, 30.82frames/s] 73%|███████▎  | 380930/522945 [1:59:45<1:01:32, 38.46frames/s] 73%|███████▎  | 380930/522945 [2:00:03<1:01:32, 38.46frames/s] 73%|███████▎  | 383930/522945 [2:00:15<48:48, 47.47frames/s]   73%|███████▎  | 383930/522945 [2:00:33<48:48, 47.47frames/s] 74%|███████▍  | 386922/522945 [2:00:44<39:50, 56.90frames/s] 74%|███████▍  | 386922/522945 [2:01:03<39:50, 56.90frames/s] 75%|███████▍  | 389922/522945 [2:01:11<33:02, 67.10frames/s] 75%|███████▍  | 389922/522945 [2:01:23<33:02, 67.10frames/s] 75%|███████▌  | 392702/522945 [2:03:15<50:57, 42.60frames/s] 75%|███████▌  | 392702/522945 [2:03:33<50:57, 42.60frames/s] 76%|███████▌  | 395702/522945 [2:03:38<39:23, 53.83frames/s] 76%|███████▌  | 395702/522945 [2:03:53<39:23, 53.83frames/s] 76%|███████▌  | 398638/522945 [2:04:18<35:32, 58.30frames/s] 76%|███████▌  | 398638/522945 [2:04:33<35:32, 58.30frames/s]2026-03-27 10:44:55 [INFO] [downloader] ✓ clip 273 saved (112.5 MB) — queued for transcription
+2026-03-27 10:44:55 [INFO] ────────────────────────────────────────────────────────────
+2026-03-27 10:44:55 [INFO] [transcriber] clip 273 | 2025-03-12 | Board of Supervisors
+2026-03-27 10:44:55 [INFO] [downloader] Removing stale staging dir: clip276
+2026-03-27 10:44:55 [INFO] [downloader] ↓ clip 276 | 2025-03-26 | Board of Supervisors
+2026-03-27 10:44:55 [INFO] [transcriber] Transcribing clip273.m4a …
+2026-03-27 10:44:55 [INFO] [transcriber] whisper.cpp: /home/radio/whisper.cpp/build/bin/whisper-cli --model /home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin --language en --threads 14 --output-json --output-file /tmp/tmpg49v2l7l/out /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip273/clip273.m4a
+2026-03-27 10:44:56 [ERROR] [transcriber] FAILED clip 273: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 843, in _transcribe_worker
+    result = _transcribe_cpp(audio_path, model_name, whisper_cli, threads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 588, in _transcribe_cpp
+    raise RuntimeError(
+RuntimeError: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+ 77%|███████▋  | 401638/522945 [2:06:17<48:32, 41.66frames/s] 77%|███████▋  | 401638/522945 [2:06:33<48:32, 41.66frames/s] 77%|███████▋  | 404638/522945 [2:06:43<38:10, 51.64frames/s] 77%|███████▋  | 404638/522945 [2:07:03<38:10, 51.64frames/s] 78%|███████▊  | 407638/522945 [2:07:10<31:12, 61.58frames/s] 78%|███████▊  | 407638/522945 [2:07:23<31:12, 61.58frames/s] 79%|███████▊  | 410538/522945 [2:07:37<26:32, 70.58frames/s] 79%|███████▊  | 410538/522945 [2:07:53<26:32, 70.58frames/s] 79%|███████▉  | 413538/522945 [2:08:06<23:21, 78.04frames/s] 79%|███████▉  | 413538/522945 [2:08:23<23:21, 78.04frames/s] 80%|███████▉  | 416538/522945 [2:08:37<21:26, 82.71frames/s] 80%|███████▉  | 416538/522945 [2:08:53<21:26, 82.71frames/s] 80%|████████  | 419514/522945 [2:09:09<20:04, 85.85frames/s] 80%|████████  | 419514/522945 [2:09:23<20:04, 85.85frames/s] 81%|████████  | 422492/522945 [2:13:13<54:49, 30.54frames/s] 81%|████████  | 422492/522945 [2:13:23<54:49, 30.54frames/s] 81%|████████▏ | 425492/522945 [2:13:36<40:56, 39.68frames/s] 81%|████████▏ | 425492/522945 [2:13:53<40:56, 39.68frames/s] 82%|████████▏ | 428492/522945 [2:14:02<31:52, 49.39frames/s] 82%|████████▏ | 428492/522945 [2:14:13<31:52, 49.39frames/s]2026-03-27 10:53:55 [ERROR] [downloader] FAILED download clip 274: yt-dlp failed (exit 1): ERROR: The downloaded file is empty
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 721, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 513, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: The downloaded file is empty
+2026-03-27 10:53:55 [INFO] ────────────────────────────────────────────────────────────
+2026-03-27 10:53:55 [INFO] [transcriber] clip 274 | 2025-03-19 | Board of Supervisors
+2026-03-27 10:53:55 [INFO] [downloader] Removing stale staging dir: clip277
+2026-03-27 10:53:55 [INFO] [downloader] ↓ clip 277 | 2025-04-02 | Board of Supervisors
+ 83%|████████▎ | 431460/522945 [2:14:28<25:34, 59.62frames/s] 83%|████████▎ | 431460/522945 [2:14:43<25:34, 59.62frames/s] 83%|████████▎ | 434428/522945 [2:14:51<20:44, 71.12frames/s] 83%|████████▎ | 434428/522945 [2:15:03<20:44, 71.12frames/s]2026-03-27 10:56:31 [INFO] [downloader] ✓ clip 275 saved (34.2 MB) — queued for transcription
+2026-03-27 10:56:31 [INFO] [downloader] Removing stale staging dir: clip278
+2026-03-27 10:56:31 [INFO] [downloader] ↓ clip 278 | 2025-04-02 | Planning Commission
+ 84%|████████▎ | 437384/522945 [2:18:22<44:24, 32.11frames/s] 84%|████████▎ | 437384/522945 [2:18:33<44:24, 32.11frames/s] 84%|████████▍ | 439814/522945 [2:18:43<35:09, 39.40frames/s] 84%|████████▍ | 439814/522945 [2:19:03<35:09, 39.40frames/s] 85%|████████▍ | 442814/522945 [2:19:06<26:28, 50.46frames/s] 85%|████████▍ | 442814/522945 [2:19:23<26:28, 50.46frames/s] 85%|████████▌ | 445814/522945 [2:19:25<20:05, 64.00frames/s] 85%|████████▌ | 445814/522945 [2:19:43<20:05, 64.00frames/s] 86%|████████▌ | 448702/522945 [2:22:59<40:58, 30.20frames/s] 86%|████████▌ | 448702/522945 [2:23:13<40:58, 30.20frames/s] 86%|████████▋ | 451232/522945 [2:23:22<31:39, 37.75frames/s] 86%|████████▋ | 451232/522945 [2:23:33<31:39, 37.75frames/s] 87%|████████▋ | 454232/522945 [2:23:44<23:28, 48.79frames/s] 87%|████████▋ | 454232/522945 [2:24:03<23:28, 48.79frames/s] 87%|████████▋ | 457232/522945 [2:24:11<18:33, 59.00frames/s] 87%|████████▋ | 457232/522945 [2:24:23<18:33, 59.00frames/s] 88%|████████▊ | 460226/522945 [2:24:40<15:21, 68.03frames/s] 88%|████████▊ | 460226/522945 [2:24:53<15:21, 68.03frames/s] 89%|████████▊ | 463226/522945 [2:25:07<12:55, 76.97frames/s] 89%|████████▊ | 463226/522945 [2:25:23<12:55, 76.97frames/s] 89%|████████▉ | 466226/522945 [2:25:37<11:24, 82.86frames/s] 89%|████████▉ | 466226/522945 [2:25:53<11:24, 82.86frames/s] 90%|████████▉ | 469126/522945 [2:26:05<10:07, 88.63frames/s] 90%|████████▉ | 469126/522945 [2:26:23<10:07, 88.63frames/s] 90%|█████████ | 472026/522945 [2:26:37<09:32, 88.90frames/s] 90%|█████████ | 472026/522945 [2:26:53<09:32, 88.90frames/s] 91%|█████████ | 475026/522945 [2:27:07<08:42, 91.72frames/s] 91%|█████████ | 475026/522945 [2:27:23<08:42, 91.72frames/s] 91%|█████████▏| 478026/522945 [2:27:40<08:08, 91.94frames/s] 91%|█████████▏| 478026/522945 [2:27:53<08:08, 91.94frames/s] 92%|█████████▏| 480926/522945 [2:28:07<07:16, 96.18frames/s] 92%|█████████▏| 480926/522945 [2:28:23<07:16, 96.18frames/s] 93%|█████████▎| 483926/522945 [2:28:33<06:26, 101.02frames/s] 93%|█████████▎| 483926/522945 [2:28:43<06:26, 101.02frames/s] 93%|█████████▎| 486826/522945 [2:29:00<05:52, 102.41frames/s] 93%|█████████▎| 486826/522945 [2:29:13<05:52, 102.41frames/s] 94%|█████████▎| 489826/522945 [2:29:27<05:14, 105.27frames/s] 94%|█████████▎| 489826/522945 [2:29:43<05:14, 105.27frames/s] 94%|█████████▍| 492726/522945 [2:29:57<04:55, 102.39frames/s] 94%|█████████▍| 492726/522945 [2:30:13<04:55, 102.39frames/s] 95%|█████████▍| 495726/522945 [2:32:56<11:17, 40.16frames/s]  95%|█████████▍| 495726/522945 [2:33:13<11:17, 40.16frames/s] 95%|█████████▌| 498450/522945 [2:33:19<08:17, 49.25frames/s] 95%|█████████▌| 498450/522945 [2:33:33<08:17, 49.25frames/s] 96%|█████████▌| 501450/522945 [2:33:46<06:00, 59.64frames/s] 96%|█████████▌| 501450/522945 [2:34:03<06:00, 59.64frames/s] 96%|█████████▋| 504360/522945 [2:34:12<04:28, 69.19frames/s] 96%|█████████▋| 504360/522945 [2:34:23<04:28, 69.19frames/s] 97%|█████████▋| 507356/522945 [2:34:38<03:17, 78.96frames/s] 97%|█████████▋| 507356/522945 [2:34:53<03:17, 78.96frames/s] 98%|█████████▊| 510356/522945 [2:35:04<02:24, 87.03frames/s] 98%|█████████▊| 510356/522945 [2:35:23<02:24, 87.03frames/s] 98%|█████████▊| 513356/522945 [2:35:32<01:43, 92.74frames/s] 98%|█████████▊| 513356/522945 [2:35:43<01:43, 92.74frames/s] 99%|█████████▊| 516356/522945 [2:35:54<01:04, 102.38frames/s] 99%|█████████▊| 516356/522945 [2:36:13<01:04, 102.38frames/s] 99%|█████████▉| 519356/522945 [2:36:14<00:31, 112.52frames/s]100%|█████████▉| 522356/522945 [2:36:26<00:04, 135.73frames/s]100%|██████████| 522945/522945 [2:36:37<00:00, 120.44frames/s]100%|██████████| 522945/522945 [2:36:37<00:00, 55.64frames/s] 
+2026-03-27 11:16:15 [INFO] [transcriber] ~13986 words transcribed
+2026-03-27 11:16:15 [INFO] [transcriber] ~13986 words transcribed
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:549: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  language="en",
+2026-03-27 11:16:15 [INFO] [transcriber] Saved → data/bos_transcripts/2025-02-05_clip265_Board_of_Supervisors
+2026-03-27 11:16:15 [INFO] [transcriber] Saved → data/bos_transcripts/2025-02-05_clip265_Board_of_Supervisors
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:212: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-03-27 11:16:15 [INFO] [transcriber] clip 265 done ✓
+2026-03-27 11:16:15 [INFO] [transcriber] clip 265 done ✓

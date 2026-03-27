@@ -646,24 +646,54 @@ Error opening input files: No such file or directory
 ",,2026-03-27T10:53:09.743752
 261,2025-01-15,Planning Commission,pending,,,2026-03-27T11:03:25.435501
 262,2025-01-22,Board of Supervisors,done,,data/bos_transcripts/2025-01-22_clip262_Board_of_Supervisors,2026-03-27T12:39:26.334050
-263,2025-01-22,Board of Supervisors,failed,"transcribe: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+263,2025-01-22,Board of Supervisors,failed,"transcribe: Failed to load audio: ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 13 (Ubuntu 13.2.0-23ubuntu3)
+  configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared
+  WARNING: library configuration mismatch
+  avcodec     configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared --enable-version3 --disable-doc --disable-programs --disable-static --enable-libaribb24 --enable-libopencore_amrnb --enable-libopencore_amrwb --enable-libtesseract --enable-libvo_amrwbenc --enable-libsmbclient
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+[in#0 @ 0x57bf3bd9ee00] Error opening input: No such file or directory
+Error opening input file /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip263/clip263.m4a.
+Error opening input files: No such file or directory
+",,2026-03-27T12:39:30.040869
+264,2025-01-24,Board of Supervisors,pending,,,2026-03-27T12:47:17.651788
+265,2025-02-05,Board of Supervisors,done,,data/bos_transcripts/2025-02-05_clip265_Board_of_Supervisors,2026-03-27T15:16:15.144056
+266,2025-02-13,Board of Supervisors,failed,"transcribe: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
 whisper_init_with_params_no_state: use gpu    = 1
-whisper_init_with_params_no_st",,2026-03-27T11:11:56.017147
-264,2025-01-24,Board of Supervisors,downloading,,,2026-03-27T10:31:25.236161
-265,2025-02-05,Board of Supervisors,downloading,,,2026-03-27T11:03:25.441888
-266,2025-02-13,Board of Supervisors,downloading,,,2026-03-27T11:11:54.914773
-267,2025-02-13,Board of Supervisors,downloading,,,2026-03-27T11:47:55.492433
-268,2025-02-19,Board of Supervisors,downloading,,,2026-03-27T11:57:24.969192
-269,2025-02-19,Planning Commission,downloading,,,2026-03-27T12:35:25.008197
-270,2025-02-26,Board of Supervisors,downloading,,,2026-03-27T11:26:15.072200
-271,2025-02-26,Board of Supervisors,downloading,,,2026-03-27T12:16:23.195136
-272,2025-03-12,Board of Supervisors,downloading,,,2026-03-27T12:24:09.103657
-273,2025-03-12,Board of Supervisors,downloading,,,2026-03-21T18:28:02.555162
-274,2025-03-19,Board of Supervisors,downloading,,,2026-03-21T19:04:56.929023
-275,2025-03-19,Planning Commission,downloading,,,2026-03-21T19:16:03.981996
-276,2025-03-26,Board of Supervisors,downloading,,,2026-03-21T19:31:17.267637
-277,2025-04-02,Board of Supervisors,downloading,,,2026-03-21T20:03:38.160998
-278,2025-04-02,Planning Commission,downloading,,,2026-03-21T20:28:18.685396
+whisper_init_with_params_no_st",,2026-03-27T12:39:58.116437
+267,2025-02-13,Board of Supervisors,failed,"transcribe: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st",,2026-03-27T12:46:57.007789
+268,2025-02-19,Board of Supervisors,failed,"transcribe: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st",,2026-03-27T12:46:58.449004
+269,2025-02-19,Planning Commission,failed,"transcribe: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st",,2026-03-27T13:35:56.077732
+270,2025-02-26,Board of Supervisors,failed,"transcribe: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st",,2026-03-27T13:35:57.044792
+271,2025-02-26,Board of Supervisors,failed,"transcribe: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st",,2026-03-27T13:46:26.481546
+272,2025-03-12,Board of Supervisors,failed,"transcribe: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st",,2026-03-27T14:32:56.147408
+273,2025-03-12,Board of Supervisors,failed,"transcribe: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st",,2026-03-27T14:44:56.663164
+274,2025-03-19,Board of Supervisors,failed,download: yt-dlp failed (exit 1): ERROR: The downloaded file is empty,,2026-03-27T14:53:55.692213
+275,2025-03-19,Planning Commission,downloading,,,2026-03-27T14:32:55.121004
+276,2025-03-26,Board of Supervisors,downloading,,,2026-03-27T14:44:55.526889
+277,2025-04-02,Board of Supervisors,downloading,,,2026-03-27T14:53:55.722555
+278,2025-04-02,Planning Commission,downloading,,,2026-03-27T14:56:31.718979
 279,2025-04-09,Board of Supervisors,downloading,,,2026-03-21T21:11:06.012277
 280,2025-04-16,Planning Commission,downloading,,,2026-03-21T21:25:27.456057
 281,2025-04-23,Board of Supervisors,downloading,,,2026-03-21T21:35:30.093381
