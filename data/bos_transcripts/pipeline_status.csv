@@ -819,7 +819,7 @@ Error opening input file /home/radio/code/fredco-audit/data/bos_transcripts/.sta
 Error opening input files: No such file or directory
 ",,2026-03-27T15:16:20.347443
 275,2025-03-19,Planning Commission,done,,data/bos_transcripts/2025-03-19_clip275_Planning_Commission,2026-03-27T16:12:02.456846
-276,2025-03-26,Board of Supervisors,downloading,,,2026-03-27T14:44:55.526889
+276,2025-03-26,Board of Supervisors,done,,data/bos_transcripts/2025-03-26_clip276_Board_of_Supervisors,2026-03-27T19:10:19.681482
 277,2025-04-02,Board of Supervisors,failed,download: yt-dlp failed (exit 1): ERROR: The downloaded file is empty,,2026-03-27T15:49:25.810687
 278,2025-04-02,Planning Commission,downloading,,,2026-03-27T15:49:25.814662
 279,2025-04-09,Board of Supervisors,failed,"download: yt-dlp failed (exit 1): ERROR: Unable to rename file: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip279/clip279.mp4.part-Frag1415.part' -> '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip279/clip279.mp4.part-Frag1415'
