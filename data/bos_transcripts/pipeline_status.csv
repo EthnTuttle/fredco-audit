@@ -199,27 +199,50 @@ Error opening input files: No such file or directory
 217,2024-03-13,Board of Supervisors,failed,"download: yt-dlp failed (exit 1): ERROR: Unable to rename file: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip217/clip217.mp4.part-Frag2410.part' -> '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip217/clip217.mp4.part-Frag2410'
 ERROR: Unable to download video: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip217/clip217.mp4.part-Frag2410'",,2026-03-26T22:33:23.823208
 218,2024-03-20,Planning Commission,done,,data/bos_transcripts/2024-03-20_clip218_Planning_Commission,2026-03-27T00:29:15.626335
-219,2024-03-27,Board of Supervisors,failed,"transcribe: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
-whisper_init_with_params_no_state: use gpu    = 1
-whisper_init_with_params_no_st",,2026-03-27T00:26:27.796041
-220,2024-04-10,Board of Supervisors,downloading,,,2026-03-26T22:43:23.879025
+219,2024-03-27,Board of Supervisors,failed,"transcribe: Failed to load audio: ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 13 (Ubuntu 13.2.0-23ubuntu3)
+  configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared
+  WARNING: library configuration mismatch
+  avcodec     configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared --enable-version3 --disable-doc --disable-programs --disable-static --enable-libaribb24 --enable-libopencore_amrnb --enable-libopencore_amrwb --enable-libtesseract --enable-libvo_amrwbenc --enable-libsmbclient
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+[in#0 @ 0x55fa6a8afe00] Error opening input: No such file or directory
+Error opening input file /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip219/clip219.m4a.
+Error opening input files: No such file or directory
+",,2026-03-27T00:29:19.028195
+220,2024-04-10,Board of Supervisors,done,,data/bos_transcripts/2024-04-10_clip220_Board_of_Supervisors,2026-03-27T04:03:19.563215
 221,2024-04-17,Planning Commission,failed,"download: yt-dlp failed (exit 1): ERROR: Unable to rename file: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip221/clip221.mp4.part-Frag1421.part' -> '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip221/clip221.mp4.part-Frag1421'
 ERROR: Unable to download video: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip221/clip221.mp4.part-Frag1421'",,2026-03-26T23:13:24.192250
-222,2024-04-24,Board of Supervisors,failed,"download: yt-dlp failed (exit 1): ERROR: Unable to rename file: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip222/clip222.mp4.part-Frag1411.part' -> '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip222/clip222.mp4.part-Frag1411'
-ERROR: Unable to download video: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip222/clip222.mp4.part-Frag1411'",,2026-03-26T23:13:24.117886
-223,2024-05-08,Board of Supervisors,downloading,,,2026-03-27T00:26:23.944243
-224,2024-05-15,Planning Commission,downloading,,,2026-03-26T23:13:24.205108
-225,2024-05-22,Board of Supervisors,downloading,,,2026-03-27T00:12:00.025449
-226,2024-05-22,Board of Supervisors,downloading,,,2026-03-27T00:12:17.292827
-227,2024-06-05,Planning Commission,downloading,,,2026-03-27T00:12:55.303595
-228,2024-06-12,Board of Supervisors,downloading,,,2026-03-21T01:52:42.013775
-229,2024-07-03,Planning Commission,downloading,,,2026-03-21T02:45:08.094059
-230,2024-07-10,Board of Supervisors,downloading,,,2026-03-21T03:02:31.210421
-232,2024-08-14,Board of Supervisors - Planning Commission Joint Work Session,downloading,,,2026-03-21T03:24:31.514644
-233,2024-08-14,Board of Supervisors,downloading,,,2026-03-21T03:54:31.316753
-235,2024-09-04,Planning Commission,downloading,,,2026-03-21T04:20:25.725686
-236,2024-09-11,Board of Supervisors-Public Works & Landfill Oversight Committees Joint Meeting,downloading,,,2026-03-21T04:36:51.782946
-237,2024-09-11,Board of Supervisors,downloading,,,2026-03-21T05:34:35.222876
+222,2024-04-24,Board of Supervisors,pending,,,2026-03-27T01:17:23.863244
+223,2024-05-08,Board of Supervisors,pending,,,2026-03-27T01:37:54.106569
+224,2024-05-15,Planning Commission,failed,"transcribe: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st",,2026-03-27T01:46:26.332567
+225,2024-05-22,Board of Supervisors,failed,"transcribe: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st",,2026-03-27T01:46:27.586017
+226,2024-05-22,Board of Supervisors,failed,download: yt-dlp failed (exit 1): ERROR: The downloaded file is empty,,2026-03-27T03:22:54.236234
+227,2024-06-05,Planning Commission,failed,"transcribe: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st",,2026-03-27T03:22:57.030786
+228,2024-06-12,Board of Supervisors,failed,download: yt-dlp failed (exit 1): ERROR: The downloaded file is empty,,2026-03-27T03:41:54.225650
+229,2024-07-03,Planning Commission,failed,"transcribe: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st",,2026-03-27T03:41:56.541219
+230,2024-07-10,Board of Supervisors,failed,"download: yt-dlp failed (exit 1): ERROR: Unable to rename file: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip230/clip230.mp4.part-Frag2691.part' -> '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip230/clip230.mp4.part-Frag2691'
+ERROR: Unable to download video: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip230/clip230.mp4.part-Frag2691'",,2026-03-27T03:22:55.148303
+232,2024-08-14,Board of Supervisors - Planning Commission Joint Work Session,downloading,,,2026-03-27T03:31:54.036599
+233,2024-08-14,Board of Supervisors,failed,"download: yt-dlp failed (exit 1): ERROR: Unable to rename file: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip233/clip233.mp4.part-Frag1105.part' -> '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip233/clip233.mp4.part-Frag1105'
+ERROR: Unable to download video: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip233/clip233.mp4.part-Frag1105'",,2026-03-27T03:41:54.712023
+235,2024-09-04,Planning Commission,downloading,,,2026-03-27T03:22:55.161448
+236,2024-09-11,Board of Supervisors-Public Works & Landfill Oversight Committees Joint Meeting,downloading,,,2026-03-27T03:25:06.241970
+237,2024-09-11,Board of Supervisors,downloading,,,2026-03-27T03:41:54.719808
 238,2024-09-18,Board of Supervisors,downloading,,,2026-03-21T06:00:08.061397
 239,2024-09-18,Planning Commission,downloading,,,2026-03-21T06:06:06.407166
 240,2024-09-25,Board of Supervisors,downloading,,,2026-03-21T06:24:00.646207
