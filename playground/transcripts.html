@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BoS Meeting Transcripts — Open Frederick</title>
+  <style>
+    :root {
+      --bg-primary: #1a1a2e;
+      --bg-secondary: #16213e;
+      --bg-tertiary: #0f3460;
+      --text-primary: #eee;
+      --text-secondary: #aaa;
+      --accent: #e94560;
+      --success: #00d9ff;
+      --border: #333;
+      --highlight-bg: #3a2a00;
+      --highlight-text: #ffd166;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+    }
+
+    a { color: var(--success); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    #app { max-width: 900px; margin: 0 auto; padding: 1.5rem; }
+
+    /* ── Header ── */
+    .site-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .site-header h1 { font-size: 1.2rem; color: var(--accent); }
+    .site-header nav { font-size: 0.8rem; color: var(--text-secondary); }
+    .site-header nav a { color: var(--text-secondary); }
+    .site-header nav a:hover { color: var(--text-primary); }
+
+    /* ── Search bar ── */
+    .search-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--bg-primary);
+      padding: 0.75rem 0;
+      margin-bottom: 1rem;
+    }
+    #search {
+      width: 100%;
+      padding: 0.6rem 1rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    #search:focus { border-color: var(--accent); }
+    #search-status {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      margin-top: 0.4rem;
+      min-height: 1em;
+    }
+
+    /* ── Meeting list ── */
+    .meeting-list { display: flex; flex-direction: column; gap: 0.4rem; }
+
+    .meeting-item {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      padding: 0.55rem 0.8rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .meeting-item:hover { border-color: var(--success); background: var(--bg-tertiary); }
+
+    .meeting-date {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      white-space: nowrap;
+      min-width: 6.5rem;
+    }
+    .meeting-title { font-size: 0.9rem; flex: 1; }
+    .meeting-duration { font-size: 0.75rem; color: var(--text-secondary); white-space: nowrap; }
+
+    /* ── Search results ── */
+    .result-item {
+      padding: 0.7rem 0.8rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: border-color 0.15s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .result-item:hover { border-color: var(--success); }
+    .result-meta { font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.3rem; }
+    .result-excerpt { font-size: 0.85rem; line-height: 1.5; }
+    .result-excerpt mark {
+      background: var(--highlight-bg);
+      color: var(--highlight-text);
+      border-radius: 2px;
+      padding: 0 2px;
+    }
+    .result-overflow { font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; }
+
+    /* ── Loading state ── */
+    .loading-msg {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      padding: 1rem 0;
+    }
+
+    /* ── Reader view ── */
+    .reader { display: none; }
+    .reader.active { display: block; }
+
+    .reader-header {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .reader-back { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem; }
+    .reader-back a { color: var(--text-secondary); }
+    .reader-back a:hover { color: var(--text-primary); }
+    .reader-title { font-size: 1.3rem; margin-bottom: 0.3rem; }
+    .reader-meta { font-size: 0.8rem; color: var(--text-secondary); display: flex; gap: 1.5rem; flex-wrap: wrap; }
+
+    .segment-block { margin-bottom: 1.2rem; }
+    .block-timestamp {
+      font-size: 0.7rem;
+      color: var(--accent);
+      margin-bottom: 0.3rem;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+    }
+    .block-text {
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: var(--text-primary);
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .error-msg {
+      color: var(--accent);
+      padding: 1rem 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <header class="site-header">
+      <h1>Open Frederick</h1>
+      <nav>
+        <a href="/playground/">Data Playground</a>
+        &nbsp;·&nbsp;
+        <span style="color: var(--text-primary)">BoS Transcripts</span>
+      </nav>
+    </header>
+
+    <!-- List / search view -->
+    <div id="list-view">
+      <div class="search-wrap">
+        <input id="search" type="search" placeholder="Search meeting transcripts…" autocomplete="off" spellcheck="false" />
+        <div id="search-status"></div>
+      </div>
+      <div id="results" class="meeting-list"></div>
+    </div>
+
+    <!-- Reader view -->
+    <div id="reader-view" class="reader">
+      <div id="reader-content"></div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/transcripts.ts"></script>
+</body>
+</html>

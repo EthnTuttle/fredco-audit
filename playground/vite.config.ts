@@ -34,6 +34,10 @@ export default defineConfig({
     outDir: 'dist',
     
     rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        transcripts: resolve(__dirname, 'transcripts.html'),
+      },
       output: {
         // Keep WASM files with recognizable names
         assetFileNames: (assetInfo) => {

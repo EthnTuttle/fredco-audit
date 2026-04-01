@@ -51,3 +51,4 @@ Thumbs.db
 playground/node_modules/
 playground/target/
 playground/dist/
+playground/public/transcripts/

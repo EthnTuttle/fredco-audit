@@ -32,6 +32,9 @@ jobs:
         working-directory: playground
         run: npm ci
 
+      - name: Build transcript index
+        run: python3 scripts/build_transcript_index.py
+
       - name: Build playground
         working-directory: playground
         run: npm run build:ts
