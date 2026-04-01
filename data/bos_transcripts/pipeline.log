@@ -29219,3 +29219,154 @@ Error opening input files: No such file or directory
   """Update the status (and optionally error/output_dir) for a meeting."""
 2026-04-01 03:25:27 [INFO] [transcriber] clip 334 done ✓
 2026-04-01 03:25:27 [INFO] [transcriber] clip 334 done ✓
+2026-04-01 03:25:31 [INFO] [git] Committed and pushed: Add BoS transcript: 2026-03-11 clip334 Board of Supervisors
+2026-04-01 03:25:31 [INFO] [git] Committed and pushed: Add BoS transcript: 2026-03-11 clip334 Board of Supervisors
+2026-04-01 03:25:31 [INFO] [transcriber] All meetings processed.
+2026-04-01 03:25:31 [INFO] [transcriber] All meetings processed.
+2026-04-01 03:25:31 [INFO] ────────────────────────────────────────────────────────────
+2026-04-01 03:25:31 [INFO] ────────────────────────────────────────────────────────────
+2026-04-01 03:25:31 [INFO] Run finished: 117 done, 64 failed this session. DB totals: done=188 | failed=50 | pending=13
+2026-04-01 03:25:31 [INFO] Run finished: 117 done, 64 failed this session. DB totals: done=188 | failed=50 | pending=13
+2026-04-01 08:51:39 [INFO] Starting run: 13 meetings | model=large-v3 | threads=8 | dl-workers=3 | prefetch=4 | DRY-RUN
+2026-04-01 08:51:39 [INFO]   [dry-run] clip 206 | 2024-01-03 | Planning Commission
+2026-04-01 08:51:39 [INFO]   [dry-run] clip 207 | 2024-01-10 | Board of Supervisors
+2026-04-01 08:51:39 [INFO]   [dry-run] clip 208 | 2024-01-24 | Board of Supervisors
+2026-04-01 08:51:39 [INFO]   [dry-run] clip 215 | 2024-03-06 | Planning Commission
+2026-04-01 08:51:39 [INFO]   [dry-run] clip 230 | 2024-07-10 | Board of Supervisors
+2026-04-01 08:51:39 [INFO]   [dry-run] clip 232 | 2024-08-14 | Board of Supervisors - Planning Commission Joint Work Session
+2026-04-01 08:51:39 [INFO]   [dry-run] clip 233 | 2024-08-14 | Board of Supervisors
+2026-04-01 08:51:39 [INFO]   [dry-run] clip 235 | 2024-09-04 | Planning Commission
+2026-04-01 08:51:39 [INFO]   [dry-run] clip 246 | 2024-10-23 | Board of Supervisors
+2026-04-01 08:51:39 [INFO]   [dry-run] clip 248 | 2024-11-06 | Board of Supervisors
+2026-04-01 08:51:39 [INFO]   [dry-run] clip 249 | 2024-11-06 | Planning Commission
+2026-04-01 08:51:39 [INFO]   [dry-run] clip 261 | 2025-01-15 | Planning Commission
+2026-04-01 08:51:39 [INFO]   [dry-run] clip 264 | 2025-01-24 | Board of Supervisors
+2026-04-01 08:53:05 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-04-01 08:53:07 [INFO] Scrape complete: 2 new meetings inserted, 251 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-04-01 08:55:38 [INFO] Starting run: 65 meetings | model=/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin | threads=14 | dl-workers=3 | prefetch=4
+2026-04-01 08:55:38 [INFO] Download thread started (workers: 3, prefetch queue depth: 4).
+2026-04-01 08:55:38 [INFO] [transcriber] Backend: whisper.cpp  cli=/home/radio/whisper.cpp/build/bin/whisper-cli  model=/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin
+2026-04-01 08:55:38 [INFO] [downloader] ↓ clip 204 | 2023-12-06 | Planning Commission
+2026-04-01 08:55:38 [INFO] [downloader] ↓ clip 205 | 2023-12-13 | Board of Supervisors
+2026-04-01 08:55:38 [INFO] [downloader] ↓ clip 206 | 2024-01-03 | Planning Commission
+2026-04-01 09:59:39 [INFO] [downloader] ✓ clip 204 saved (99.3 MB) — queued for transcription
+2026-04-01 09:59:39 [INFO] ────────────────────────────────────────────────────────────
+2026-04-01 09:59:39 [INFO] [transcriber] clip 204 | 2023-12-06 | Planning Commission
+2026-04-01 09:59:39 [INFO] [downloader] ↓ clip 207 | 2024-01-10 | Board of Supervisors
+2026-04-01 09:59:39 [INFO] [transcriber] Transcribing clip204.m4a …
+2026-04-01 09:59:39 [INFO] [transcriber] whisper.cpp: /home/radio/whisper.cpp/build/bin/whisper-cli --model /home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin --language en --threads 14 --output-json --output-file /tmp/tmp4y0jpkhi/out /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip204/clip204.m4a
+2026-04-01 09:59:40 [ERROR] [transcriber] FAILED clip 204: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/./scripts/bos_pipeline.py", line 844, in _transcribe_worker
+    result = _transcribe_cpp(audio_path, model_name, whisper_cli, threads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/./scripts/bos_pipeline.py", line 589, in _transcribe_cpp
+    raise RuntimeError(
+RuntimeError: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+2026-04-01 10:07:09 [INFO] [downloader] ✓ clip 206 saved (111.7 MB) — queued for transcription
+2026-04-01 10:07:09 [INFO] [downloader] ↓ clip 208 | 2024-01-24 | Board of Supervisors
+2026-04-01 10:50:39 [INFO] [downloader] ✓ clip 205 saved (165.2 MB) — queued for transcription
+2026-04-01 10:50:39 [INFO] ────────────────────────────────────────────────────────────
+2026-04-01 10:50:39 [INFO] [transcriber] clip 205 | 2023-12-13 | Board of Supervisors
+2026-04-01 10:50:39 [INFO] [downloader] ↓ clip 212 | 2024-02-14 | Board of Supervisors
+2026-04-01 10:50:39 [INFO] [transcriber] Transcribing clip205.m4a …
+2026-04-01 10:50:39 [INFO] [transcriber] whisper.cpp: /home/radio/whisper.cpp/build/bin/whisper-cli --model /home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin --language en --threads 14 --output-json --output-file /tmp/tmpu5zy1lk6/out /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip205/clip205.m4a
+2026-04-01 10:50:40 [ERROR] [transcriber] FAILED clip 205: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/./scripts/bos_pipeline.py", line 844, in _transcribe_worker
+    result = _transcribe_cpp(audio_path, model_name, whisper_cli, threads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/./scripts/bos_pipeline.py", line 589, in _transcribe_cpp
+    raise RuntimeError(
+RuntimeError: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+2026-04-01 10:50:40 [INFO] ────────────────────────────────────────────────────────────
+2026-04-01 10:50:40 [INFO] [transcriber] clip 206 | 2024-01-03 | Planning Commission
+2026-04-01 10:50:40 [INFO] [transcriber] Transcribing clip206.m4a …
+2026-04-01 10:50:40 [INFO] [transcriber] whisper.cpp: /home/radio/whisper.cpp/build/bin/whisper-cli --model /home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin --language en --threads 14 --output-json --output-file /tmp/tmpoxr85ku5/out /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip206/clip206.m4a
+2026-04-01 10:50:41 [ERROR] [transcriber] FAILED clip 206: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/./scripts/bos_pipeline.py", line 844, in _transcribe_worker
+    result = _transcribe_cpp(audio_path, model_name, whisper_cli, threads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/./scripts/bos_pipeline.py", line 589, in _transcribe_cpp
+    raise RuntimeError(
+RuntimeError: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_st
+2026-04-01 11:06:09 [INFO] [downloader] ✓ clip 212 saved (21.1 MB) — queued for transcription
+2026-04-01 11:06:09 [INFO] [downloader] ↓ clip 213 | 2024-02-21 | Planning Commission
+2026-04-01 11:25:34 [WARNING] Interrupt received — finishing current meeting then stopping. Press Ctrl-C again to force-quit.
+2026-04-01 11:25:35 [WARNING] Force-quit requested.
+2026-04-01 11:25:37 [WARNING] Force-quit requested.
+2026-04-01 11:25:40 [INFO] Starting run: 65 meetings | model=/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin | threads=14 | dl-workers=3 | prefetch=4
+2026-04-01 11:25:40 [INFO] Download thread started (workers: 3, prefetch queue depth: 4).
+2026-04-01 11:25:40 [INFO] [transcriber] Backend: whisper.cpp  cli=/home/radio/whisper.cpp/build/bin/whisper-cli  model=/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin
+2026-04-01 11:25:40 [INFO] [downloader] ↓ clip 204 | 2023-12-06 | Planning Commission
+2026-04-01 11:25:40 [INFO] [downloader] ↓ clip 205 | 2023-12-13 | Board of Supervisors
+2026-04-01 11:25:40 [INFO] [downloader] ↓ clip 206 | 2024-01-03 | Planning Commission
+2026-04-01 12:28:40 [INFO] [downloader] ✓ clip 204 saved (99.3 MB) — queued for transcription
+2026-04-01 12:28:40 [INFO] ────────────────────────────────────────────────────────────
+2026-04-01 12:28:40 [INFO] [transcriber] clip 204 | 2023-12-06 | Planning Commission
+2026-04-01 12:28:40 [INFO] [downloader] Removing stale staging dir: clip207
+2026-04-01 12:28:40 [INFO] [transcriber] Transcribing clip204.m4a …
+2026-04-01 12:28:40 [INFO] [transcriber] whisper.cpp: /home/radio/whisper.cpp/build/bin/whisper-cli --model /home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin --language en --threads 14 --no-gpu --output-json --output-file /tmp/tmpqy_tk46n/out /home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip204/clip204.m4a
+2026-04-01 12:28:40 [INFO] [downloader] ↓ clip 207 | 2024-01-10 | Board of Supervisors
+2026-04-01 12:28:42 [ERROR] [transcriber] FAILED clip 204: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 0
+whisper_init_with_params_no_st
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/./scripts/bos_pipeline.py", line 845, in _transcribe_worker
+    result = _transcribe_cpp(audio_path, model_name, whisper_cli, threads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/./scripts/bos_pipeline.py", line 590, in _transcribe_cpp
+    raise RuntimeError(
+RuntimeError: whisper-cli produced no JSON. stderr: whisper_init_from_file_with_params_no_state: loading model from '/home/radio/whisper.cpp/models/ggml-large-v3-q5_0.bin'
+whisper_init_with_params_no_state: use gpu    = 0
+whisper_init_with_params_no_st
+2026-04-01 12:31:40 [INFO] [downloader] ✓ clip 206 saved (111.7 MB) — queued for transcription
+2026-04-01 12:31:40 [INFO] [downloader] Removing stale staging dir: clip208
+2026-04-01 12:31:40 [INFO] [downloader] ↓ clip 208 | 2024-01-24 | Board of Supervisors
+2026-04-01 12:39:37 [WARNING] Interrupt received — finishing current meeting then stopping. Press Ctrl-C again to force-quit.
+2026-04-01 12:39:38 [WARNING] Force-quit requested.
+2026-04-01 12:39:39 [WARNING] Force-quit requested.
+2026-04-01 12:42:40 [INFO] Starting run: 65 meetings | model=large-v3 | threads=14 | dl-workers=3 | prefetch=4
+2026-04-01 12:42:40 [INFO] Download thread started (workers: 3, prefetch queue depth: 4).
+2026-04-01 12:42:40 [INFO] [downloader] Removing stale staging dir: clip206
+2026-04-01 12:42:40 [INFO] [downloader] Removing stale staging dir: clip205
+2026-04-01 12:42:40 [INFO] [downloader] ↓ clip 204 | 2023-12-06 | Planning Commission
+2026-04-01 12:42:40 [INFO] [downloader] ↓ clip 206 | 2024-01-03 | Planning Commission
+2026-04-01 12:42:40 [INFO] [downloader] ↓ clip 205 | 2023-12-13 | Board of Supervisors
+2026-04-01 12:42:41 [INFO] [transcriber] Loading Whisper model 'large-v3' …
+2026-04-01 12:42:56 [INFO] [transcriber] Model loaded. Waiting for audio …
+2026-04-01 13:46:40 [INFO] [downloader] ✓ clip 204 saved (99.3 MB) — queued for transcription
+2026-04-01 13:46:40 [INFO] ────────────────────────────────────────────────────────────
+2026-04-01 13:46:40 [INFO] [transcriber] clip 204 | 2023-12-06 | Planning Commission
+2026-04-01 13:46:40 [INFO] [downloader] Removing stale staging dir: clip207
+2026-04-01 13:46:40 [INFO] [transcriber] Transcribing clip204.m4a …
+2026-04-01 13:46:40 [INFO] [downloader] ↓ clip 207 | 2024-01-10 | Board of Supervisors
+2026-04-01 13:51:40 [INFO] [downloader] ✓ clip 206 saved (111.7 MB) — queued for transcription
+2026-04-01 13:51:40 [INFO] [downloader] Removing stale staging dir: clip208
+2026-04-01 13:51:40 [INFO] [downloader] ↓ clip 208 | 2024-01-24 | Board of Supervisors
+2026-04-01 14:33:10 [INFO] [downloader] ✓ clip 205 saved (165.2 MB) — queued for transcription
+2026-04-01 14:33:10 [INFO] [downloader] Removing stale staging dir: clip212
+2026-04-01 14:33:10 [INFO] [downloader] ↓ clip 212 | 2024-02-14 | Board of Supervisors
+2026-04-01 14:47:40 [INFO] [downloader] ✓ clip 212 saved (21.1 MB) — queued for transcription
+2026-04-01 14:47:40 [INFO] [downloader] Removing stale staging dir: clip213
+2026-04-01 14:47:40 [INFO] [downloader] ↓ clip 213 | 2024-02-21 | Planning Commission
+2026-04-01 15:59:40 [INFO] [downloader] ✓ clip 213 saved (98.3 MB) — queued for transcription
+2026-04-01 15:59:40 [INFO] [downloader] ↓ clip 214 | 2024-02-28 | Board of Supervisors
+2026-04-01 16:02:10 [INFO] [downloader] ✓ clip 208 saved (173.9 MB) — queued for transcription
+2026-04-01 16:02:10 [INFO] [downloader] ↓ clip 215 | 2024-03-06 | Planning Commission
+2026-04-01 16:09:14 [INFO] [transcriber] ~15285 words transcribed
+2026-04-01 16:09:14 [INFO] [transcriber] Saved → data/bos_transcripts/2023-12-06_clip204_Planning_Commission
+2026-04-01 16:09:14 [INFO] [transcriber] clip 204 done ✓
