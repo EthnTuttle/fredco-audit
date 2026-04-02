@@ -29550,3 +29550,22 @@ FileNotFoundError: [Errno 2] No such file or directory: '/home/radio/code/fredco
 2026-04-02 15:14:52 [INFO] [transcriber] ~18135 words transcribed
 2026-04-02 15:14:52 [INFO] [transcriber] Saved → data/bos_transcripts/2024-03-13_clip217_Board_of_Supervisors
 2026-04-02 15:14:52 [INFO] [transcriber] clip 217 done ✓
+2026-04-02 15:14:57 [INFO] [git] Committed and pushed: Add BoS transcript: 2024-03-13 clip217 Board of Supervisors
+2026-04-02 15:14:57 [INFO] ────────────────────────────────────────────────────────────
+2026-04-02 15:14:57 [INFO] [transcriber] clip 219 | 2024-03-27 | Board of Supervisors
+2026-04-02 15:14:57 [INFO] [transcriber] Transcribing clip219.m4a …
+2026-04-02 15:16:43 [INFO] [downloader] ✓ clip 273 saved (112.5 MB) — queued for transcription
+2026-04-02 15:16:43 [INFO] [downloader] ↓ clip 278 | 2025-04-02 | Planning Commission
+2026-04-02 15:55:14 [INFO] [downloader] ✓ clip 274 saved (105.3 MB) — queued for transcription
+2026-04-02 15:55:14 [INFO] [downloader] ↓ clip 279 | 2025-04-09 | Board of Supervisors
+2026-04-02 16:03:43 [INFO] [downloader] ✓ clip 277 saved (115.8 MB) — queued for transcription
+2026-04-02 16:03:43 [INFO] [downloader] ↓ clip 280 | 2025-04-16 | Planning Commission
+2026-04-02 17:03:43 [INFO] [downloader] ✓ clip 278 saved (127.0 MB) — queued for transcription
+2026-04-02 17:03:43 [INFO] [downloader] ↓ clip 281 | 2025-04-23 | Board of Supervisors
+2026-04-02 17:42:44 [INFO] [downloader] ✓ clip 280 saved (112.4 MB) — queued for transcription
+2026-04-02 17:42:44 [INFO] [downloader] ↓ clip 337 | 2026-03-18 | Planning Commission
+2026-04-02 18:03:14 [INFO] [downloader] ✓ clip 279 saved (143.6 MB) — queued for transcription
+2026-04-02 18:03:14 [INFO] [downloader] ↓ clip 338 | 2026-03-25 | Board of Supervisors
+2026-04-02 18:32:34 [INFO] [transcriber] ~24301 words transcribed
+2026-04-02 18:32:34 [INFO] [transcriber] Saved → data/bos_transcripts/2024-03-27_clip219_Board_of_Supervisors
+2026-04-02 18:32:34 [INFO] [transcriber] clip 219 done ✓
