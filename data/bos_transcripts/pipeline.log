@@ -29406,3 +29406,32 @@ whisper_init_with_params_no_st
 2026-04-01 21:29:17 [INFO] [transcriber] ~16171 words transcribed
 2026-04-01 21:29:17 [INFO] [transcriber] Saved → data/bos_transcripts/2024-01-03_clip206_Planning_Commission
 2026-04-01 21:29:17 [INFO] [transcriber] clip 206 done ✓
+2026-04-01 21:29:21 [INFO] [git] Committed and pushed: Add BoS transcript: 2024-01-03 clip206 Planning Commission
+2026-04-01 21:29:21 [INFO] ────────────────────────────────────────────────────────────
+2026-04-01 21:29:21 [INFO] [transcriber] clip 207 | 2024-01-10 | Board of Supervisors
+2026-04-01 21:29:21 [INFO] [transcriber] Transcribing clip207.m4a …
+2026-04-01 21:55:11 [INFO] [downloader] ✓ clip 226 saved (133.2 MB) — queued for transcription
+2026-04-01 21:55:11 [INFO] [downloader] ↓ clip 230 | 2024-07-10 | Board of Supervisors
+2026-04-01 22:07:11 [INFO] [downloader] ✓ clip 229 saved (61.7 MB) — queued for transcription
+2026-04-01 22:07:11 [INFO] [downloader] ↓ clip 232 | 2024-08-14 | Board of Supervisors - Planning Commission Joint Work Session
+2026-04-01 22:58:41 [INFO] [downloader] ✓ clip 228 saved (183.5 MB) — queued for transcription
+2026-04-01 22:58:41 [INFO] [downloader] ↓ clip 233 | 2024-08-14 | Board of Supervisors
+2026-04-01 23:09:41 [INFO] [downloader] ✓ clip 232 saved (86.2 MB) — queued for transcription
+2026-04-01 23:09:41 [INFO] [downloader] ↓ clip 235 | 2024-09-04 | Planning Commission
+2026-04-01 23:36:41 [INFO] [downloader] ✓ clip 230 saved (144.8 MB) — queued for transcription
+2026-04-01 23:36:41 [INFO] [downloader] ↓ clip 236 | 2024-09-11 | Board of Supervisors-Public Works & Landfill Oversight Committees Joint Meeting
+2026-04-02 00:41:11 [INFO] [downloader] ✓ clip 236 saved (93.1 MB) — queued for transcription
+2026-04-02 00:41:11 [INFO] [downloader] ↓ clip 237 | 2024-09-11 | Board of Supervisors
+2026-04-02 00:57:12 [INFO] [downloader] ✓ clip 235 saved (158.5 MB) — queued for transcription
+2026-04-02 00:57:12 [INFO] [downloader] ↓ clip 239 | 2024-09-18 | Planning Commission
+2026-04-02 01:15:12 [INFO] [downloader] ✓ clip 239 saved (24.3 MB) — queued for transcription
+2026-04-02 01:15:12 [INFO] [downloader] ↓ clip 240 | 2024-09-25 | Board of Supervisors
+2026-04-02 01:20:41 [INFO] [downloader] ✓ clip 233 saved (202.0 MB) — queued for transcription
+2026-04-02 01:20:42 [INFO] [downloader] ↓ clip 241 | 2024-09-25 | Board of Supervisors
+2026-04-02 02:18:42 [WARNING] [downloader] TRANSIENT error clip 240 — resetting to pending: yt-dlp failed (exit 1): ERROR: 
+2026-04-02 02:18:42 [INFO] [downloader] ↓ clip 242 | 2024-09-25 | Board of Supervisors - Frederick Water Board Joint Meeting
+2026-04-02 02:22:42 [INFO] [downloader] ✓ clip 242 saved (4.8 MB) — queued for transcription
+2026-04-02 02:22:42 [INFO] [downloader] ↓ clip 243 | 2024-10-02 | Planning Commission
+2026-04-02 02:37:28 [INFO] [transcriber] ~38310 words transcribed
+2026-04-02 02:37:28 [INFO] [transcriber] Saved → data/bos_transcripts/2024-01-10_clip207_Board_of_Supervisors
+2026-04-02 02:37:28 [INFO] [transcriber] clip 207 done ✓
