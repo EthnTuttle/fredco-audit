@@ -142,7 +142,7 @@ clip_id,meeting_date,title,status,error,output_dir,updated_at
 209,2024-02-07,Board of Supervisors - School Board Joint Session,done,,data/bos_transcripts/2024-02-07_clip209_Board_of_Supervisors_-_School_Board_Joint_Session,2026-03-26T22:33:12.366956
 212,2024-02-14,Board of Supervisors,done,,data/bos_transcripts/2024-02-14_clip212_Board_of_Supervisors,2026-04-02T10:24:48.335123
 213,2024-02-21,Planning Commission,done,,data/bos_transcripts/2024-02-21_clip213_Planning_Commission,2026-04-02T12:45:33.377339
-214,2024-02-28,Board of Supervisors,downloading,,,2026-04-01T19:59:40.773834
+214,2024-02-28,Board of Supervisors,done,,data/bos_transcripts/2024-02-28_clip214_Board_of_Supervisors,2026-04-02T13:33:22.391966
 215,2024-03-06,Planning Commission,downloading,,,2026-04-01T20:02:10.729972
 217,2024-03-13,Board of Supervisors,downloading,,,2026-04-01T20:52:40.926408
 218,2024-03-20,Planning Commission,done,,data/bos_transcripts/2024-03-20_clip218_Planning_Commission,2026-03-27T00:29:15.626335
