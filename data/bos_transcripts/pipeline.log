@@ -29435,3 +29435,49 @@ whisper_init_with_params_no_st
 2026-04-02 02:37:28 [INFO] [transcriber] ~38310 words transcribed
 2026-04-02 02:37:28 [INFO] [transcriber] Saved → data/bos_transcripts/2024-01-10_clip207_Board_of_Supervisors
 2026-04-02 02:37:28 [INFO] [transcriber] clip 207 done ✓
+2026-04-02 02:37:32 [INFO] [git] Committed and pushed: Add BoS transcript: 2024-01-10 clip207 Board of Supervisors
+2026-04-02 02:37:32 [INFO] ────────────────────────────────────────────────────────────
+2026-04-02 02:37:32 [INFO] [transcriber] clip 208 | 2024-01-24 | Board of Supervisors
+2026-04-02 02:37:32 [INFO] [transcriber] Transcribing clip208.m4a …
+2026-04-02 02:43:12 [WARNING] [downloader] TRANSIENT error clip 237 — resetting to pending: yt-dlp failed (exit 1): ERROR: 
+2026-04-02 02:43:12 [INFO] [downloader] ↓ clip 244 | 2024-10-09 | Board of Supervisors
+2026-04-02 03:22:42 [INFO] [downloader] ✓ clip 243 saved (86.8 MB) — queued for transcription
+2026-04-02 03:22:42 [INFO] [downloader] ↓ clip 245 | 2024-10-23 | Board of Supervisors - Economic Development Authority Joint Meeting
+2026-04-02 03:23:12 [WARNING] [downloader] TRANSIENT error clip 241 — resetting to pending: yt-dlp failed (exit 1): ERROR: 
+2026-04-02 03:23:12 [INFO] [downloader] ↓ clip 246 | 2024-10-23 | Board of Supervisors
+2026-04-02 03:24:12 [ERROR] [downloader] FAILED download clip 246: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip246/clip246.mp4.part-Frag35.part'
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/./scripts/bos_pipeline.py", line 723, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/./scripts/bos_pipeline.py", line 501, in _download_audio
+    current_size = _staging_bytes()
+                   ^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/./scripts/bos_pipeline.py", line 492, in _staging_bytes
+    return sum(f.stat().st_size for f in clip_dir.rglob("*") if f.is_file())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/./scripts/bos_pipeline.py", line 492, in <genexpr>
+    return sum(f.stat().st_size for f in clip_dir.rglob("*") if f.is_file())
+               ^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 842, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip246/clip246.mp4.part-Frag35.part'
+2026-04-02 03:24:12 [INFO] [downloader] ↓ clip 247 | 2024-10-30 | Board of Supervisors
+2026-04-02 04:02:42 [INFO] [downloader] ✓ clip 245 saved (64.0 MB) — queued for transcription
+2026-04-02 04:02:42 [INFO] [downloader] ↓ clip 248 | 2024-11-06 | Board of Supervisors
+2026-04-02 04:21:42 [INFO] [downloader] ✓ clip 244 saved (142.0 MB) — queued for transcription
+2026-04-02 04:21:42 [INFO] [downloader] ↓ clip 249 | 2024-11-06 | Planning Commission
+2026-04-02 04:35:12 [INFO] [downloader] ✓ clip 247 saved (104.5 MB) — queued for transcription
+2026-04-02 04:35:12 [INFO] [downloader] ↓ clip 250 | 2024-11-13 | Board of Supervisors
+2026-04-02 04:50:42 [INFO] [downloader] ✓ clip 249 saved (46.0 MB) — queued for transcription
+2026-04-02 04:50:42 [INFO] [downloader] ↓ clip 252 | 2024-11-20 | Planning Commission
+2026-04-02 05:07:42 [INFO] [downloader] ✓ clip 248 saved (99.4 MB) — queued for transcription
+2026-04-02 05:07:42 [INFO] [downloader] ↓ clip 253 | 2024-12-04 | Planning Commission
+2026-04-02 05:22:12 [INFO] [downloader] ✓ clip 250 saved (62.5 MB) — queued for transcription
+2026-04-02 05:22:12 [INFO] [downloader] ↓ clip 254 | 2024-12-04 | Planning Commission
+2026-04-02 05:34:42 [INFO] [downloader] ✓ clip 254 saved (17.5 MB) — queued for transcription
+2026-04-02 05:34:42 [INFO] [downloader] ↓ clip 255 | 2024-12-11 | Board of Supervisors
+2026-04-02 05:59:29 [INFO] [transcriber] ~26824 words transcribed
+2026-04-02 05:59:29 [INFO] [transcriber] Saved → data/bos_transcripts/2024-01-24_clip208_Board_of_Supervisors
+2026-04-02 05:59:29 [INFO] [transcriber] clip 208 done ✓
