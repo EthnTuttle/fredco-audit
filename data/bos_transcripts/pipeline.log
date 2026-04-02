@@ -29387,3 +29387,22 @@ whisper_init_with_params_no_st
 2026-04-01 19:33:30 [INFO] [transcriber] ~26044 words transcribed
 2026-04-01 19:33:30 [INFO] [transcriber] Saved → data/bos_transcripts/2023-12-13_clip205_Board_of_Supervisors
 2026-04-01 19:33:30 [INFO] [transcriber] clip 205 done ✓
+2026-04-01 19:33:34 [INFO] [git] Committed and pushed: Add BoS transcript: 2023-12-13 clip205 Board of Supervisors
+2026-04-01 19:33:34 [INFO] ────────────────────────────────────────────────────────────
+2026-04-01 19:33:34 [INFO] [transcriber] clip 206 | 2024-01-03 | Planning Commission
+2026-04-01 19:33:34 [INFO] [transcriber] Transcribing clip206.m4a …
+2026-04-01 19:50:41 [INFO] [downloader] ✓ clip 223 saved (83.3 MB) — queued for transcription
+2026-04-01 19:50:41 [INFO] [downloader] ↓ clip 224 | 2024-05-15 | Planning Commission
+2026-04-01 20:08:41 [INFO] [downloader] ✓ clip 221 saved (149.3 MB) — queued for transcription
+2026-04-01 20:08:41 [INFO] [downloader] ↓ clip 225 | 2024-05-22 | Board of Supervisors
+2026-04-01 20:24:11 [INFO] [downloader] ✓ clip 222 saved (169.8 MB) — queued for transcription
+2026-04-01 20:24:11 [INFO] [downloader] ↓ clip 226 | 2024-05-22 | Board of Supervisors
+2026-04-01 20:30:11 [INFO] [downloader] ✓ clip 225 saved (30.9 MB) — queued for transcription
+2026-04-01 20:30:11 [INFO] [downloader] ↓ clip 227 | 2024-06-05 | Planning Commission
+2026-04-01 20:47:41 [INFO] [downloader] ✓ clip 224 saved (83.9 MB) — queued for transcription
+2026-04-01 20:47:41 [INFO] [downloader] ↓ clip 228 | 2024-06-12 | Board of Supervisors
+2026-04-01 21:23:41 [INFO] [downloader] ✓ clip 227 saved (79.9 MB) — queued for transcription
+2026-04-01 21:23:41 [INFO] [downloader] ↓ clip 229 | 2024-07-03 | Planning Commission
+2026-04-01 21:29:17 [INFO] [transcriber] ~16171 words transcribed
+2026-04-01 21:29:17 [INFO] [transcriber] Saved → data/bos_transcripts/2024-01-03_clip206_Planning_Commission
+2026-04-01 21:29:17 [INFO] [transcriber] clip 206 done ✓
