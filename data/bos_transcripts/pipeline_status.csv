@@ -167,7 +167,7 @@ clip_id,meeting_date,title,status,error,output_dir,updated_at
 239,2024-09-18,Planning Commission,done,,data/bos_transcripts/2024-09-18_clip239_Planning_Commission,2026-04-04T10:09:05.244293
 240,2024-09-25,Board of Supervisors,pending,,,2026-04-02T06:18:42.322640
 241,2024-09-25,Board of Supervisors,pending,,,2026-04-02T07:23:12.257012
-242,2024-09-25,Board of Supervisors - Frederick Water Board Joint Meeting,downloading,,,2026-04-02T06:18:42.337378
+242,2024-09-25,Board of Supervisors - Frederick Water Board Joint Meeting,done,,data/bos_transcripts/2024-09-25_clip242_Board_of_Supervisors_-_Frederick_Water_Board_Joint_Meeting,2026-04-04T10:14:59.378889
 243,2024-10-02,Planning Commission,downloading,,,2026-04-02T06:22:42.350588
 244,2024-10-09,Board of Supervisors,downloading,,,2026-04-02T06:43:12.142356
 245,2024-10-23,Board of Supervisors - Economic Development Authority Joint Meeting,downloading,,,2026-04-02T07:22:42.504456
