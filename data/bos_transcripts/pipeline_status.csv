@@ -172,7 +172,7 @@ clip_id,meeting_date,title,status,error,output_dir,updated_at
 244,2024-10-09,Board of Supervisors,done,,data/bos_transcripts/2024-10-09_clip244_Board_of_Supervisors,2026-04-04T15:09:24.679670
 245,2024-10-23,Board of Supervisors - Economic Development Authority Joint Meeting,done,,data/bos_transcripts/2024-10-23_clip245_Board_of_Supervisors_-_Economic_Development_Authority_Joint,2026-04-04T16:23:18.541888
 246,2024-10-23,Board of Supervisors,failed,download: [Errno 2] No such file or directory: '/home/radio/code/fredco-audit/data/bos_transcripts/.staging/clip246/clip246.mp4.part-Frag35.part',,2026-04-02T07:24:12.407243
-247,2024-10-30,Board of Supervisors,downloading,,,2026-04-02T07:24:12.416186
+247,2024-10-30,Board of Supervisors,done,,data/bos_transcripts/2024-10-30_clip247_Board_of_Supervisors,2026-04-04T18:50:48.272436
 248,2024-11-06,Board of Supervisors,downloading,,,2026-04-02T08:02:42.586896
 249,2024-11-06,Planning Commission,downloading,,,2026-04-02T08:21:42.311705
 250,2024-11-13,Board of Supervisors,downloading,,,2026-04-02T08:35:12.604454
