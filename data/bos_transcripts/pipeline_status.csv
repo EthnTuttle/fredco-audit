@@ -159,7 +159,7 @@ clip_id,meeting_date,title,status,error,output_dir,updated_at
 229,2024-07-03,Planning Commission,done,,data/bos_transcripts/2024-07-03_clip229_Planning_Commission,2026-04-03T18:36:56.287253
 230,2024-07-10,Board of Supervisors,done,,data/bos_transcripts/2024-07-10_clip230_Board_of_Supervisors,2026-04-03T21:21:17.526086
 232,2024-08-14,Board of Supervisors - Planning Commission Joint Work Session,done,,data/bos_transcripts/2024-08-14_clip232_Board_of_Supervisors_-_Planning_Commission_Joint_Work_Sessio,2026-04-03T23:23:49.381354
-233,2024-08-14,Board of Supervisors,downloading,,,2026-04-02T02:58:41.712482
+233,2024-08-14,Board of Supervisors,done,,data/bos_transcripts/2024-08-14_clip233_Board_of_Supervisors,2026-04-04T03:55:25.051805
 235,2024-09-04,Planning Commission,downloading,,,2026-04-02T03:09:41.868435
 236,2024-09-11,Board of Supervisors-Public Works & Landfill Oversight Committees Joint Meeting,downloading,,,2026-04-02T03:36:41.702799
 237,2024-09-11,Board of Supervisors,pending,,,2026-04-02T06:43:12.129911
