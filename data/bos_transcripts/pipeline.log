@@ -29794,3 +29794,10 @@ and the repository exists.
 2026-04-05 10:54:05 [INFO] [transcriber] ~11984 words transcribed
 2026-04-05 10:54:05 [INFO] [transcriber] Saved → data/bos_transcripts/2025-01-08_clip259_Board_of_Supervisors
 2026-04-05 10:54:05 [INFO] [transcriber] clip 259 done ✓
+2026-04-05 10:54:09 [INFO] [git] Committed and pushed: Add BoS transcript: 2025-01-08 clip259 Board of Supervisors
+2026-04-05 10:54:09 [INFO] ────────────────────────────────────────────────────────────
+2026-04-05 10:54:09 [INFO] [transcriber] clip 260 | 2025-01-08 | Board of Supervisors
+2026-04-05 10:54:09 [INFO] [transcriber] Transcribing clip260.m4a …
+2026-04-05 12:42:05 [INFO] [transcriber] ~12426 words transcribed
+2026-04-05 12:42:05 [INFO] [transcriber] Saved → data/bos_transcripts/2025-01-08_clip260_Board_of_Supervisors
+2026-04-05 12:42:05 [INFO] [transcriber] clip 260 done ✓
