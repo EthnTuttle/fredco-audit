@@ -29762,3 +29762,10 @@ FileNotFoundError: [Errno 2] No such file or directory: '/home/radio/code/fredco
 2026-04-05 01:29:53 [INFO] [transcriber] ~3078 words transcribed
 2026-04-05 01:29:53 [INFO] [transcriber] Saved → data/bos_transcripts/2024-12-04_clip254_Planning_Commission
 2026-04-05 01:29:53 [INFO] [transcriber] clip 254 done ✓
+2026-04-05 01:29:57 [INFO] [git] Committed and pushed: Add BoS transcript: 2024-12-04 clip254 Planning Commission
+2026-04-05 01:29:57 [INFO] ────────────────────────────────────────────────────────────
+2026-04-05 01:29:57 [INFO] [transcriber] clip 255 | 2024-12-11 | Board of Supervisors
+2026-04-05 01:29:57 [INFO] [transcriber] Transcribing clip255.m4a …
+2026-04-05 02:37:47 [INFO] [transcriber] ~9180 words transcribed
+2026-04-05 02:37:47 [INFO] [transcriber] Saved → data/bos_transcripts/2024-12-11_clip255_Board_of_Supervisors
+2026-04-05 02:37:47 [INFO] [transcriber] clip 255 done ✓
