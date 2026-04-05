@@ -29769,3 +29769,14 @@ FileNotFoundError: [Errno 2] No such file or directory: '/home/radio/code/fredco
 2026-04-05 02:37:47 [INFO] [transcriber] ~9180 words transcribed
 2026-04-05 02:37:47 [INFO] [transcriber] Saved → data/bos_transcripts/2024-12-11_clip255_Board_of_Supervisors
 2026-04-05 02:37:47 [INFO] [transcriber] clip 255 done ✓
+2026-04-05 02:38:07 [WARNING] [git] git operation failed (clip 255): ssh: Could not resolve hostname github.com: Name or service not known
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+2026-04-05 02:38:07 [INFO] ────────────────────────────────────────────────────────────
+2026-04-05 02:38:07 [INFO] [transcriber] clip 256 | 2024-12-11 | Board of Supervisors
+2026-04-05 02:38:07 [INFO] [transcriber] Transcribing clip256.m4a …
+2026-04-05 06:53:28 [INFO] [transcriber] ~30782 words transcribed
+2026-04-05 06:53:28 [INFO] [transcriber] Saved → data/bos_transcripts/2024-12-11_clip256_Board_of_Supervisors
+2026-04-05 06:53:28 [INFO] [transcriber] clip 256 done ✓
