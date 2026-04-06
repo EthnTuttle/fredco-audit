@@ -187,7 +187,7 @@ clip_id,meeting_date,title,status,error,output_dir,updated_at
 260,2025-01-08,Board of Supervisors,done,,data/bos_transcripts/2025-01-08_clip260_Board_of_Supervisors,2026-04-05T16:42:05.073855
 261,2025-01-15,Planning Commission,done,,data/bos_transcripts/2025-01-15_clip261_Planning_Commission,2026-04-05T20:54:33.369530
 262,2025-01-22,Board of Supervisors,done,,data/bos_transcripts/2025-01-22_clip262_Board_of_Supervisors,2026-03-27T12:39:26.334050
-263,2025-01-22,Board of Supervisors,downloading,,,2026-04-02T12:14:43.132941
+263,2025-01-22,Board of Supervisors,done,,data/bos_transcripts/2025-01-22_clip263_Board_of_Supervisors,2026-04-06T00:22:17.604654
 264,2025-01-24,Board of Supervisors,downloading,,,2026-04-02T12:38:12.902032
 265,2025-02-05,Board of Supervisors,done,,data/bos_transcripts/2025-02-05_clip265_Board_of_Supervisors,2026-03-27T15:16:15.144056
 266,2025-02-13,Board of Supervisors,downloading,,,2026-04-02T13:45:43.269555
