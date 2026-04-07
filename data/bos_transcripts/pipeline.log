@@ -29914,3 +29914,10 @@ and the repository exists.
 2026-04-07 11:49:03 [INFO] [transcriber] ~18079 words transcribed
 2026-04-07 11:49:03 [INFO] [transcriber] Saved → data/bos_transcripts/2025-04-16_clip280_Planning_Commission
 2026-04-07 11:49:03 [INFO] [transcriber] clip 280 done ✓
+2026-04-07 11:49:07 [INFO] [git] Committed and pushed: Add BoS transcript: 2025-04-16 clip280 Planning Commission
+2026-04-07 11:49:07 [INFO] ────────────────────────────────────────────────────────────
+2026-04-07 11:49:07 [INFO] [transcriber] clip 281 | 2025-04-23 | Board of Supervisors
+2026-04-07 11:49:07 [INFO] [transcriber] Transcribing clip281.m4a …
+2026-04-07 16:46:47 [INFO] [transcriber] ~36004 words transcribed
+2026-04-07 16:46:47 [INFO] [transcriber] Saved → data/bos_transcripts/2025-04-23_clip281_Board_of_Supervisors
+2026-04-07 16:46:47 [INFO] [transcriber] clip 281 done ✓
