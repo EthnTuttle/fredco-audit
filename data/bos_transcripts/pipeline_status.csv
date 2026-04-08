@@ -251,4 +251,4 @@ clip_id,meeting_date,title,status,error,output_dir,updated_at
 332,2026-03-11,Board of Supervisors,done,,data/bos_transcripts/2026-03-11_clip332_Board_of_Supervisors,2026-04-01T05:36:25.996928
 334,2026-03-11,Board of Supervisors,done,,data/bos_transcripts/2026-03-11_clip334_Board_of_Supervisors,2026-04-01T07:25:27.793540
 337,2026-03-18,Planning Commission,done,,data/bos_transcripts/2026-03-18_clip337_Planning_Commission,2026-04-07T22:36:21.674257
-338,2026-03-25,Board of Supervisors,downloading,,,2026-04-02T22:03:14.252011
+338,2026-03-25,Board of Supervisors,done,,data/bos_transcripts/2026-03-25_clip338_Board_of_Supervisors,2026-04-08T02:05:05.407609
