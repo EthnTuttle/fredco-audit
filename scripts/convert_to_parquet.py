@@ -117,6 +117,10 @@ FILES_TO_CONVERT = [
     {"json": "vdoe/table17_ratios.json", "parquet": "vdoe_table17_ratios.parquet", "record_path": "data"},
     {"json": "vdoe/table18_admin_personnel.json", "parquet": "vdoe_table18_admin.parquet", "record_path": "data"},
     {"json": "vdoe/table19_instructional.json", "parquet": "vdoe_table19_instructional.parquet", "record_path": "data"},
+
+    # Daily county reports (refreshed by scripts/refresh_daily_reports.py)
+    {"json": "business_licenses.json", "parquet": "business_licenses.parquet", "record_path": "records"},
+    {"json": "delinquent_real_estate_taxes.json", "parquet": "delinquent_real_estate_taxes.parquet", "record_path": "records"},
 ]
 
 
