@@ -3,8 +3,11 @@
 Parse Frederick County business license PDF into structured JSON.
 
 Source: https://frdnet.fcva.us/buslicinfc.pdf
-Format: Fixed-width monospace text, two columns (Trade Name | Owner Name)
+Format: Fixed-width two-column PDF (Trade Name | Owner Name)
 Updated: daily by the county
+
+Uses pdfplumber word-level extraction with x-position column split.
+Column boundary: x < 248 = trade name, x >= 248 = owner name.
 
 Output: data/processed/business_licenses.json
 """
@@ -12,6 +15,7 @@ Output: data/processed/business_licenses.json
 import json
 import re
 import sys
+from collections import defaultdict
 from datetime import datetime, date
 from pathlib import Path
 
@@ -19,56 +23,58 @@ import pdfplumber
 
 PDF_PATH = Path(__file__).parent.parent / "data" / "raw" / "misc" / "buslicinfc.pdf"
 OUT_PATH = Path(__file__).parent.parent / "data" / "processed" / "business_licenses.json"
-
 SOURCE_URL = "https://frdnet.fcva.us/buslicinfc.pdf"
 
-# Lines to skip (header / column-header patterns)
-SKIP_PATTERNS = [
-    re.compile(r"^Businesses Licensed", re.IGNORECASE),
-    re.compile(r"^Date:\s*"),
-    re.compile(r"^Trade Name\s+Name"),
-    re.compile(r"^\s*Page:\s*\d+"),
-    re.compile(r"^\s*$"),
-]
+# x-coordinate boundary between the two columns (verified from word positions)
+COL_SPLIT_X = 240
 
 
-def should_skip(line: str) -> bool:
-    return any(p.search(line) for p in SKIP_PATTERNS)
+def extract_report_date(page) -> str | None:
+    """Pull the report date from page words."""
+    for word in page.extract_words():
+        m = re.match(r"Date:(\d{1,2}/\d{1,2}/\d{4})", word["text"])
+        if m:
+            try:
+                return datetime.strptime(m.group(1), "%m/%d/%Y").strftime("%Y-%m-%d")
+            except ValueError:
+                pass
+    return None
 
 
-def parse_data_line(line: str) -> tuple[str, str | None] | None:
-    """Split a data line into (trade_name, owner_name).
+def words_to_rows(page) -> list[dict]:
+    """Convert page words to (trade_name, owner_name) rows using x-position split."""
+    words = page.extract_words(x_tolerance=3, y_tolerance=3)
 
-    Lines are fixed-width.  The two columns are separated by two or more
-    consecutive spaces.  When the Name column contains only '.' the owner
-    is unknown (→ None).
-    """
-    stripped = line.strip()
-    if not stripped:
-        return None
+    # Group words by their y-position (rounded to handle minor float drift)
+    by_y: dict[float, list] = defaultdict(list)
+    for w in words:
+        by_y[round(w["top"])].append(w)
 
-    # Split on first run of 2+ spaces
-    parts = re.split(r" {2,}", stripped, maxsplit=1)
-    trade_name = parts[0].strip()
-    if not trade_name:
-        return None
+    rows = []
+    for y in sorted(by_y):
+        line_words = sorted(by_y[y], key=lambda w: w["x0"])
 
-    raw_name = parts[1].strip() if len(parts) > 1 else ""
-    owner_name: str | None = None if raw_name in ("", ".") else raw_name
+        left_words = [w["text"] for w in line_words if w["x0"] < COL_SPLIT_X]
+        right_words = [w["text"] for w in line_words if w["x0"] >= COL_SPLIT_X]
 
-    return trade_name, owner_name
+        if not left_words:
+            continue
 
+        trade_name = " ".join(left_words)
+        raw_right = " ".join(right_words)
 
-def extract_report_date(text: str) -> str:
-    """Pull the report date from the first few lines of page 1."""
-    m = re.search(r"Date:\s*(\d{1,2}/\d{1,2}/(\d{4}))", text)
-    if m:
-        # Reformat M/D/YYYY → YYYY-MM-DD
-        try:
-            return datetime.strptime(m.group(1), "%m/%d/%Y").strftime("%Y-%m-%d")
-        except ValueError:
-            pass
-    return date.today().isoformat()
+        # Skip header lines
+        if trade_name in ("Trade Name", "Trade") or "Businesses Licensed" in trade_name:
+            continue
+        if re.match(r"^Date:", trade_name) or re.match(r"^Page:", trade_name):
+            continue
+
+        # Right column "." means owner unknown
+        owner_name: str | None = None if raw_right in ("", ".") else raw_right
+
+        rows.append({"trade_name": trade_name, "owner_name": owner_name})
+
+    return rows
 
 
 def parse(pdf_path: Path = PDF_PATH) -> dict:
@@ -77,19 +83,9 @@ def parse(pdf_path: Path = PDF_PATH) -> dict:
 
     with pdfplumber.open(pdf_path) as pdf:
         for page_num, page in enumerate(pdf.pages, 1):
-            text = page.extract_text(x_tolerance=3, y_tolerance=3) or ""
-
             if page_num == 1:
-                report_date = extract_report_date(text)
-
-            for line in text.splitlines():
-                if should_skip(line):
-                    continue
-                result = parse_data_line(line)
-                if result is None:
-                    continue
-                trade_name, owner_name = result
-                records.append({"trade_name": trade_name, "owner_name": owner_name})
+                report_date = extract_report_date(page)
+            records.extend(words_to_rows(page))
 
     return {
         "metadata": {
@@ -109,10 +105,14 @@ def main():
         print(f"ERROR: PDF not found at {PDF_PATH}", file=sys.stderr)
         sys.exit(1)
 
-    print(f"Parsing {PDF_PATH} ...")
+    print(f"Parsing {PDF_PATH.name} ...")
     data = parse()
     n = data["metadata"]["total_records"]
-    print(f"  Parsed {n:,} business license records (report date: {data['metadata']['report_date']})")
+    print(f"  {n:,} records  (report date: {data['metadata']['report_date']})")
+
+    # Spot-check: count records where owner_name was captured
+    with_owner = sum(1 for r in data["records"] if r["owner_name"])
+    print(f"  {with_owner:,} have owner names ({with_owner/n*100:.0f}%)")
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(OUT_PATH, "w") as f:

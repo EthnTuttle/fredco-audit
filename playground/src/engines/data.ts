@@ -139,12 +139,12 @@ export const PARQUET_MANIFEST: Record<string, { size: number; sha256: string }> 
 
   // Daily county reports (refreshed by scripts/refresh_daily_reports.py)
   'business_licenses.parquet': {
-    size: 81580,
-    sha256: '7e37bfa86176dfd1b695d8136216de3977adeb2089d8bf44fe290569858d801b'
+    size: 90137,
+    sha256: 'aac6573d19a104bea4569c820e7892881832daa2bf497b9cf6c20e2955c21f6e'
   },
   'delinquent_real_estate_taxes.parquet': {
-    size: 72478,
-    sha256: 'f195268009139d45f7809accb5d93b89264f6e29fb91fb3098b0851a46cd8a1c'
+    size: 72448,
+    sha256: '4096a108f2ff92949e01be7343fe1e327428527140671b49b010f5a30744af81'
   },
 };
 
