@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delinquent Real Estate Taxes - Open Frederick</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="feedback.css">
+    <style>
+        :root {
+            --primary: #1e40af;
+            --primary-light: #3b82f6;
+            --success: #059669;
+            --warning: #d97706;
+            --danger: #dc2626;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--gray-100);
+            color: var(--gray-800);
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+
+        header {
+            background: linear-gradient(135deg, #7f1d1d 0%, #dc2626 100%);
+            color: white;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+        }
+
+        header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 10px; }
+        header p { font-size: 1.1rem; opacity: 0.9; }
+        .subtitle { font-size: 0.9rem; opacity: 0.8; margin-top: 5px; }
+
+        .nav-bar {
+            background: white;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .nav-bar a { color: var(--primary); text-decoration: none; font-weight: 500; padding: 8px 16px; border-radius: 6px; transition: background 0.2s; }
+        .nav-bar a:hover { background: var(--gray-100); }
+        .nav-bar a.active { background: var(--primary); color: white; }
+        .nav-bar span { color: var(--gray-300); }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .stat-card.danger  { border-left: 4px solid var(--danger); }
+        .stat-card.warning { border-left: 4px solid var(--warning); }
+        .stat-card.info    { border-left: 4px solid var(--primary-light); }
+        .stat-card.purple  { border-left: 4px solid #7c3aed; }
+
+        .stat-label { font-size: 0.85rem; color: var(--gray-600); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+        .stat-value { font-size: 2rem; font-weight: 700; color: var(--gray-900); }
+        .stat-detail { font-size: 0.85rem; color: var(--gray-600); margin-top: 8px; }
+
+        .section { margin-bottom: 40px; }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--gray-200);
+        }
+        .section-header h2 { font-size: 1.5rem; color: var(--gray-800); }
+
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 24px;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 600px) { .chart-grid { grid-template-columns: 1fr; } }
+
+        .chart-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .chart-card h3 { font-size: 1.1rem; color: var(--gray-700); margin-bottom: 20px; }
+        .chart-container { position: relative; height: 300px; }
+
+        .table-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow-x: auto;
+            margin-bottom: 24px;
+        }
+        .table-card h3 { margin-bottom: 15px; color: var(--gray-800); font-size: 1.1rem; }
+
+        table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+        th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--gray-200); }
+        th { background: var(--gray-50); font-weight: 600; color: var(--gray-700); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        tr:hover { background: var(--gray-50); }
+        td.amount { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; color: var(--danger); }
+        td.count  { text-align: right; font-variant-numeric: tabular-nums; }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .badge-red    { background: #fee2e2; color: #991b1b; }
+        .badge-yellow { background: #fef3c7; color: #92400e; }
+        .badge-purple { background: #ede9fe; color: #5b21b6; }
+        .badge-blue   { background: #dbeafe; color: #1e40af; }
+
+        /* Query Cards */
+        .query-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+
+        .query-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--primary-light);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .query-card.danger  { border-left-color: var(--danger); }
+        .query-card.warning { border-left-color: var(--warning); }
+        .query-card.purple  { border-left-color: #7c3aed; }
+        .query-card.success { border-left-color: var(--success); }
+
+        .query-title { font-weight: 600; color: var(--gray-800); font-size: 1rem; }
+        .query-desc  { font-size: 0.875rem; color: var(--gray-600); flex: 1; }
+
+        .query-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--primary);
+            color: white;
+            padding: 8px 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: background 0.2s;
+            align-self: flex-start;
+        }
+        .query-link:hover { background: #1d4ed8; }
+        .query-link.danger  { background: var(--danger); }
+        .query-link.danger:hover { background: #b91c1c; }
+        .query-link.warning { background: var(--warning); }
+        .query-link.warning:hover { background: #b45309; }
+        .query-link.purple  { background: #7c3aed; }
+        .query-link.purple:hover { background: #6d28d9; }
+        .query-link.success { background: var(--success); }
+        .query-link.success:hover { background: #047857; }
+
+        /* Search */
+        .search-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        .search-input {
+            flex: 1;
+            min-width: 200px;
+            padding: 10px 15px;
+            border: 1px solid var(--gray-300);
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .search-input:focus { outline: none; border-color: var(--danger); box-shadow: 0 0 0 3px rgba(220,38,38,0.1); }
+        .result-count { font-size: 0.85rem; color: var(--gray-600); margin-bottom: 10px; }
+
+        .analysis-box {
+            background: #fef2f2;
+            border: 1px solid #fca5a5;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .analysis-box h4 { color: #991b1b; margin-bottom: 8px; font-size: 1rem; }
+        .analysis-box p  { color: #7f1d1d; font-size: 0.9rem; line-height: 1.6; }
+        .analysis-box.info { background: #eff6ff; border-color: #93c5fd; }
+        .analysis-box.info h4 { color: #1e40af; }
+        .analysis-box.info p  { color: #1e3a8a; }
+
+        footer { text-align: center; padding: 30px; color: var(--gray-600); font-size: 0.9rem; border-top: 1px solid var(--gray-200); margin-top: 40px; }
+        footer a { color: var(--primary); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Delinquent Real Estate Taxes</h1>
+            <p>Frederick County properties with unpaid real estate taxes</p>
+            <p class="subtitle">Source: Frederick County Commissioner of the Revenue &mdash; Updated daily</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="nav-bar">
+            <a href="index.html">Home</a>
+            <span>|</span>
+            <a href="budget.html">Budget</a>
+            <span>|</span>
+            <a href="education.html">Education</a>
+            <span>|</span>
+            <a href="property.html">Property</a>
+            <span>|</span>
+            <a href="delinquent.html" class="active">Tax Delinquency</a>
+            <span>|</span>
+            <a href="map.html">Map</a>
+            <span>|</span>
+            <a href="data.html">Data</a>
+            <span>|</span>
+            <a href="playground/">Playground</a>
+        </div>
+
+        <!-- Key Stats -->
+        <div class="stats-grid">
+            <div class="stat-card danger">
+                <div class="stat-label">Total Delinquent</div>
+                <div class="stat-value">$9.66M</div>
+                <div class="stat-detail">Across all delinquent accounts</div>
+            </div>
+            <div class="stat-card warning">
+                <div class="stat-label">Delinquent Accounts</div>
+                <div class="stat-value">2,897</div>
+                <div class="stat-detail">Individual parcel accounts</div>
+            </div>
+            <div class="stat-card info">
+                <div class="stat-label">Unique Owners</div>
+                <div class="stat-value">2,312</div>
+                <div class="stat-detail">269 own 2+ delinquent parcels</div>
+            </div>
+            <div class="stat-card purple">
+                <div class="stat-label">Largest Single Owner</div>
+                <div class="stat-value">$589K</div>
+                <div class="stat-detail">Paramount Corporation — 95 parcels</div>
+            </div>
+        </div>
+
+        <div class="analysis-box">
+            <h4>Key Findings</h4>
+            <p>
+                The top 10 owners account for <strong>$1.5M</strong> (15.5%) of all delinquent taxes despite representing less than 0.4% of accounts.
+                The <strong>$5,000–$10,000 bracket</strong> — 779 accounts — drives 68% of total dollars owed.
+                Corporate entities (LLCs, corporations, trusts) hold <strong>598 delinquent parcels</strong> totaling $2.3M.
+                This report is updated daily by the county; payments made after the report date may not be reflected.
+            </p>
+        </div>
+
+        <!-- Charts -->
+        <div class="section">
+            <div class="section-header">
+                <h2>Distribution</h2>
+            </div>
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h3>Accounts by Delinquency Bracket</h3>
+                    <div class="chart-container">
+                        <canvas id="bracketCountChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Total Dollars by Bracket</h3>
+                    <div class="chart-container">
+                        <canvas id="bracketDollarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h3>Individual vs. Corporate/LLC/Trust Accounts</h3>
+                    <div class="chart-container">
+                        <canvas id="entityTypeChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Top 10 Delinquent Owners</h3>
+                    <div class="chart-container">
+                        <canvas id="topOwnersChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pre-made Queries -->
+        <div class="section">
+            <div class="section-header">
+                <h2>Explore in Data Playground</h2>
+            </div>
+            <div class="query-grid">
+                <div class="query-card danger">
+                    <div class="query-title">Top Owners by Total Owed</div>
+                    <div class="query-desc">Ranks all owners by their combined delinquency across all parcels. Identifies who owes the most in aggregate.</div>
+                    <a href="playground/#share=JTdCJTIydiUyMiUzQSUyMDElMkMlMjAlMjJxJTIyJTNBJTIwJTIyLS0lMjBUb3AlMjAzMCUyMG93bmVycyUyMGJ5JTIwdG90YWwlMjBkZWxpbnF1ZW50JTIwYW1vdW50JTVDblNFTEVDVCU1Q24lMjAlMjBvd25lcl9uYW1lJTJDJTVDbiUyMCUyMENPVU5UJTI4JTJBJTI5JTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwQVMlMjBwYXJjZWxzJTJDJTVDbiUyMCUyMFNVTSUyOGFtb3VudF9kZWxpbnF1ZW50JTI5JTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwQVMlMjB0b3RhbF9kZWxpbnF1ZW50JTJDJTVDbiUyMCUyMFJPVU5EJTI4QVZHJTI4YW1vdW50X2RlbGlucXVlbnQlMjklMjklMjBBUyUyMGF2Z19wZXJfcGFyY2VsJTVDbkZST00lMjBkZWxpbnF1ZW50X3JlYWxfZXN0YXRlX3RheGVzJTVDbkdST1VQJTIwQlklMjBvd25lcl9uYW1lJTVDbk9SREVSJTIwQlklMjB0b3RhbF9kZWxpbnF1ZW50JTIwREVTQyU1Q25MSU1JVCUyMDMwJTIyJTJDJTIwJTIydCUyMiUzQSUyMCUyMnRhYmxlJTIyJTdE" class="query-link danger">Run Query &rarr;</a>
+                </div>
+                <div class="query-card warning">
+                    <div class="query-title">Multi-Parcel Delinquent Owners</div>
+                    <div class="query-desc">Owners with 3 or more delinquent parcels. Reveals serial non-payers and potential land speculation with unpaid obligations.</div>
+                    <a href="playground/#share=JTdCJTIydiUyMiUzQSUyMDElMkMlMjAlMjJxJTIyJTNBJTIwJTIyLS0lMjBPd25lcnMlMjB3aXRoJTIwMyUyMG9yJTIwbW9yZSUyMGRlbGlucXVlbnQlMjBwYXJjZWxzJTVDblNFTEVDVCU1Q24lMjAlMjBvd25lcl9uYW1lJTJDJTVDbiUyMCUyMENPVU5UJTI4JTJBJTI5JTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwQVMlMjBwYXJjZWxfY291bnQlMkMlNUNuJTIwJTIwU1VNJTI4YW1vdW50X2RlbGlucXVlbnQlMjklMjBBUyUyMHRvdGFsX2RlbGlucXVlbnQlMkMlNUNuJTIwJTIwTUlOJTI4YW1vdW50X2RlbGlucXVlbnQlMjklMjBBUyUyMG1pbl9wYXJjZWwlMkMlNUNuJTIwJTIwTUFYJTI4YW1vdW50X2RlbGlucXVlbnQlMjklMjBBUyUyMG1heF9wYXJjZWwlNUNuRlJPTSUyMGRlbGlucXVlbnRfcmVhbF9lc3RhdGVfdGF4ZXMlNUNuR1JPVVAlMjBCWSUyMG93bmVyX25hbWUlNUNuSEFWSU5HJTIwQ09VTlQlMjglMkElMjklMjAlM0UlM0QlMjAzJTVDbk9SREVSJTIwQlklMjBwYXJjZWxfY291bnQlMjBERVNDJTJDJTIwdG90YWxfZGVsaW5xdWVudCUyMERFU0MlMjIlMkMlMjAlMjJ0JTIyJTNBJTIwJTIydGFibGUlMjIlN0Q=" class="query-link warning">Run Query &rarr;</a>
+                </div>
+                <div class="query-card purple">
+                    <div class="query-title">Corporate &amp; LLC Delinquencies</div>
+                    <div class="query-desc">Filters to business entities — LLCs, corporations, trusts, development companies. Useful for identifying delinquent developers.</div>
+                    <a href="playground/#share=JTdCJTIydiUyMiUzQSUyMDElMkMlMjAlMjJxJTIyJTNBJTIwJTIyLS0lMjBDb3Jwb3JhdGUlMjAvJTIwTExDJTIwLyUyMFRydXN0JTIwZGVsaW5xdWVuY2llcyU1Q25TRUxFQ1QlNUNuJTIwJTIwb3duZXJfbmFtZSUyQyU1Q24lMjAlMjBDT1VOVCUyOCUyQSUyOSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMEFTJTIwcGFyY2VscyUyQyU1Q24lMjAlMjBTVU0lMjhhbW91bnRfZGVsaW5xdWVudCUyOSUyMEFTJTIwdG90YWxfZGVsaW5xdWVudCU1Q25GUk9NJTIwZGVsaW5xdWVudF9yZWFsX2VzdGF0ZV90YXhlcyU1Q25XSEVSRSUyMG93bmVyX25hbWUlMjBJTElLRSUyMCUyNyUyNUxMQyUyNSUyNyU1Q24lMjAlMjAlMjBPUiUyMG93bmVyX25hbWUlMjBJTElLRSUyMCUyNyUyNUlOQyUyNSUyNyU1Q24lMjAlMjAlMjBPUiUyMG93bmVyX25hbWUlMjBJTElLRSUyMCUyNyUyNUNPUlAlMjUlMjclNUNuJTIwJTIwJTIwT1IlMjBvd25lcl9uYW1lJTIwSUxJS0UlMjAlMjclMjVUUlVTVCUyNSUyNyU1Q24lMjAlMjAlMjBPUiUyMG93bmVyX25hbWUlMjBJTElLRSUyMCUyNyUyNUNPTVBBTlklMjUlMjclNUNuJTIwJTIwJTIwT1IlMjBvd25lcl9uYW1lJTIwSUxJS0UlMjAlMjclMjVERVZFTE9QTUVOVCUyNSUyNyU1Q24lMjAlMjAlMjBPUiUyMG93bmVyX25hbWUlMjBJTElLRSUyMCUyNyUyNVBST1BFUlRJRVMlMjUlMjclNUNuJTIwJTIwJTIwT1IlMjBvd25lcl9uYW1lJTIwSUxJS0UlMjAlMjclMjVFTlRFUlBSSVNFUyUyNSUyNyU1Q24lMjAlMjAlMjBPUiUyMG93bmVyX25hbWUlMjBJTElLRSUyMCUyNyUyNUhPTERJTkdTJTI1JTI3JTVDbkdST1VQJTIwQlklMjBvd25lcl9uYW1lJTVDbk9SREVSJTIwQlklMjB0b3RhbF9kZWxpbnF1ZW50JTIwREVTQyUyMiUyQyUyMCUyMnQlMjIlM0ElMjAlMjJ0YWJsZSUyMiU3RA==" class="query-link purple">Run Query &rarr;</a>
+                </div>
+                <div class="query-card danger">
+                    <div class="query-title">High-Value Single Parcels ($10K+)</div>
+                    <div class="query-desc">Individual parcels with over $10,000 delinquent — the most severely delinquent properties in the county.</div>
+                    <a href="playground/#share=JTdCJTIydiUyMiUzQSUyMDElMkMlMjAlMjJxJTIyJTNBJTIwJTIyLS0lMjBIaWdoLXZhbHVlJTIwc2luZ2xlLXBhcmNlbCUyMGRlbGlucXVlbmNpZXMlMjAlMjhvdmVyJTIwJTI0MTAlMkMwMDAlMjklNUNuU0VMRUNUJTVDbiUyMCUyMHBhcmNlbF9pZCUyQyU1Q24lMjAlMjBvd25lcl9uYW1lJTJDJTVDbiUyMCUyMGFtb3VudF9kZWxpbnF1ZW50JTVDbkZST00lMjBkZWxpbnF1ZW50X3JlYWxfZXN0YXRlX3RheGVzJTVDbldIRVJFJTIwYW1vdW50X2RlbGlucXVlbnQlMjAlM0UlM0QlMjAxMDAwMCU1Q25PUkRFUiUyMEJZJTIwYW1vdW50X2RlbGlucXVlbnQlMjBERVNDJTIyJTJDJTIwJTIydCUyMiUzQSUyMCUyMnRhYmxlJTIyJTdE" class="query-link danger">Run Query &rarr;</a>
+                </div>
+                <div class="query-card">
+                    <div class="query-title">Amount Distribution by Bracket</div>
+                    <div class="query-desc">Shows how accounts and dollars are distributed across delinquency size brackets. Reveals where the tax gap is concentrated.</div>
+                    <a href="playground/#share=JTdCJTIydiUyMiUzQSUyMDElMkMlMjAlMjJxJTIyJTNBJTIwJTIyLS0lMjBEZWxpbnF1ZW5jeSUyMGFtb3VudCUyMGRpc3RyaWJ1dGlvbiUyMGJ5JTIwYnJhY2tldCU1Q25TRUxFQ1QlNUNuJTIwJTIwQ0FTRSU1Q24lMjAlMjAlMjAlMjBXSEVOJTIwYW1vdW50X2RlbGlucXVlbnQlMjAlM0MlMjAxMDAlMjAlMjAlMjAlMjBUSEVOJTIwJTI3JTI0MCU1Q3UyMDEzJTI0MTAwJTI3JTVDbiUyMCUyMCUyMCUyMFdIRU4lMjBhbW91bnRfZGVsaW5xdWVudCUyMCUzQyUyMDUwMCUyMCUyMCUyMCUyMFRIRU4lMjAlMjclMjQxMDAlNUN1MjAxMyUyNDUwMCUyNyU1Q24lMjAlMjAlMjAlMjBXSEVOJTIwYW1vdW50X2RlbGlucXVlbnQlMjAlM0MlMjAxMDAwJTIwJTIwJTIwVEhFTiUyMCUyNyUyNDUwMCU1Q3UyMDEzJTI0MSUyQzAwMCUyNyU1Q24lMjAlMjAlMjAlMjBXSEVOJTIwYW1vdW50X2RlbGlucXVlbnQlMjAlM0MlMjA1MDAwJTIwJTIwJTIwVEhFTiUyMCUyNyUyNDElMkMwMDAlNUN1MjAxMyUyNDUlMkMwMDAlMjclNUNuJTIwJTIwJTIwJTIwV0hFTiUyMGFtb3VudF9kZWxpbnF1ZW50JTIwJTNDJTIwMTAwMDAlMjAlMjBUSEVOJTIwJTI3JTI0NSUyQzAwMCU1Q3UyMDEzJTI0MTAlMkMwMDAlMjclNUNuJTIwJTIwJTIwJTIwRUxTRSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyNyUyNDEwJTJDMDAwJTJCJTI3JTVDbiUyMCUyMEVORCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMEFTJTIwYnJhY2tldCUyQyU1Q24lMjAlMjBDT1VOVCUyOCUyQSUyOSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMEFTJTIwcmVjb3JkcyUyQyU1Q24lMjAlMjBTVU0lMjhhbW91bnRfZGVsaW5xdWVudCUyOSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMEFTJTIwdG90YWxfZG9sbGFycyUyQyU1Q24lMjAlMjBST1VORCUyODEwMC4wJTIwJTJBJTIwQ09VTlQlMjglMkElMjklMjAvJTIwU1VNJTI4Q09VTlQlMjglMkElMjklMjklMjBPVkVSJTIwJTI4JTI5JTJDJTIwMSUyOSUyMEFTJTIwcGN0X3JlY29yZHMlMkMlNUNuJTIwJTIwUk9VTkQlMjgxMDAuMCUyMCUyQSUyMFNVTSUyOGFtb3VudF9kZWxpbnF1ZW50JTI5JTIwLyUyMFNVTSUyOFNVTSUyOGFtb3VudF9kZWxpbnF1ZW50JTI5JTI5JTIwT1ZFUiUyMCUyOCUyOSUyQyUyMDElMjklMjBBUyUyMHBjdF9kb2xsYXJzJTVDbkZST00lMjBkZWxpbnF1ZW50X3JlYWxfZXN0YXRlX3RheGVzJTVDbkdST1VQJTIwQlklMjAxJTVDbk9SREVSJTIwQlklMjBNSU4lMjhhbW91bnRfZGVsaW5xdWVudCUyOSUyMiUyQyUyMCUyMnQlMjIlM0ElMjAlMjJ0YWJsZSUyMiU3RA==" class="query-link">Run Query &rarr;</a>
+                </div>
+                <div class="query-card success">
+                    <div class="query-title">Search by Owner Name</div>
+                    <div class="query-desc">Opens the playground with a template to look up any owner name. Edit the ILIKE pattern to search for any individual or company.</div>
+                    <a href="playground/#share=JTdCJTIydiUyMiUzQSUyMDElMkMlMjAlMjJxJTIyJTNBJTIwJTIyLS0lMjBTZWFyY2glMjBieSUyMG93bmVyJTIwbmFtZSUyMCUyOGVkaXQlMjB0aGUlMjBuYW1lJTIwYmVsb3clMjklNUNuU0VMRUNUJTVDbiUyMCUyMHBhcmNlbF9pZCUyQyU1Q24lMjAlMjBvd25lcl9uYW1lJTJDJTVDbiUyMCUyMGFtb3VudF9kZWxpbnF1ZW50JTVDbkZST00lMjBkZWxpbnF1ZW50X3JlYWxfZXN0YXRlX3RheGVzJTVDbldIRVJFJTIwb3duZXJfbmFtZSUyMElMSUtFJTIwJTI3JTI1U01JVEglMjUlMjclNUNuT1JERVJJTiUyMEJZJTIwYW1vdW50X2RlbGlucXVlbnQlMjBERVNDJTIyJTJDJTIwJTIydCUyMiUzQSUyMCUyMnRhYmxlJTIyJTdE" class="query-link success">Open Template &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Owners Table -->
+        <div class="section">
+            <div class="section-header">
+                <h2>Top Delinquent Owners</h2>
+            </div>
+            <div class="table-card">
+                <h3>25 Largest Delinquencies by Owner</h3>
+                <div class="search-box">
+                    <input type="text" id="ownerSearch" class="search-input" placeholder="Filter by owner name..." oninput="filterTable()">
+                </div>
+                <div class="result-count" id="resultCount"></div>
+                <table id="ownersTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Owner</th>
+                            <th style="text-align:right">Parcels</th>
+                            <th style="text-align:right">Total Delinquent</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ownersBody">
+                        <!-- populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Full Searchable List -->
+        <div class="section">
+            <div class="section-header">
+                <h2>All Delinquent Accounts</h2>
+            </div>
+            <div class="table-card">
+                <div class="search-box">
+                    <input type="text" id="allSearch" class="search-input" placeholder="Search owner name or parcel ID..." oninput="filterAll()">
+                </div>
+                <div class="result-count" id="allCount"></div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Parcel ID</th>
+                            <th>Owner</th>
+                            <th style="text-align:right">Amount Delinquent</th>
+                        </tr>
+                    </thead>
+                    <tbody id="allBody">
+                        <!-- populated by JS -->
+                    </tbody>
+                </table>
+                <div id="allPager" style="margin-top:12px; font-size:0.85rem; color:var(--gray-600);"></div>
+            </div>
+        </div>
+
+        <div class="analysis-box info">
+            <h4>About This Data</h4>
+            <p>
+                This report is published daily by the Frederick County Commissioner of the Revenue.
+                It lists real estate accounts with outstanding balances as of the report date.
+                Payments made after the report is generated will not be reflected until the next day's update.
+                For the most current status of a specific parcel, use the
+                <a href="https://taxes.co.frederick.va.us/applications/TRAPPS/INDEX.HTM" target="_blank" rel="noopener">county's Real Estate Public Inquiry portal</a>.
+            </p>
+        </div>
+
+        <footer>
+            <p>Data from Frederick County Commissioner of the Revenue &mdash; Updated daily &mdash;
+            <a href="https://frdnet.fcva.us/REDLQTAXES.pdf" target="_blank" rel="noopener">Source PDF</a> &mdash;
+            <a href="playground/#share=JTdCJTIydiUyMiUzQSUyMDElMkMlMjAlMjJxJTIyJTNBJTIwJTIyU0VMRUNUJTIwKiUyMEZST00lMjBkZWxpbnF1ZW50X3JlYWxfZXN0YXRlX3RheGVzJTIwT1JERVIlMjBCWSUyMGFtb3VudF9kZWxpbnF1ZW50JTIwREVTQyUyMiUyQyUyMCUyMnQlMjIlM0ElMjAlMjJ0YWJsZSUyMiU3RA==">Query full dataset in Playground</a></p>
+        </footer>
+    </div>
+
+    <script>
+    // Data embedded at build/parse time — would be fetched from JSON in a dynamic app
+    const RAW_DATA = [];  // populated below via fetch
+
+    const CORP_KEYWORDS = ['LLC','INC','CORP','LTD','TRUST','COMPANY','DEVELOPMENT',
+                           'PROPERTIES','ENTERPRISES','HOLDINGS','GROUP','VENTURES','LP ','LLP'];
+
+    function isCorpEntity(name) {
+        if (!name) return false;
+        const u = name.toUpperCase();
+        return CORP_KEYWORDS.some(k => u.includes(k));
+    }
+
+    function fmt$(n) {
+        return '$' + n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+    }
+
+    // ---- Charts ----
+    const BRACKETS = ['$0–$100','$100–$500','$500–$1K','$1K–$5K','$5K–$10K','$10K+'];
+    const BRACKET_COUNTS  = [376, 415, 619, 639, 779, 69];
+    const BRACKET_DOLLARS = [13006, 111466, 456966, 1422807, 6572072, 1084171];
+
+    const RED_PALETTE = ['#fca5a5','#f87171','#ef4444','#dc2626','#b91c1c','#991b1b'];
+
+    new Chart(document.getElementById('bracketCountChart'), {
+        type: 'bar',
+        data: { labels: BRACKETS, datasets: [{ label: 'Accounts', data: BRACKET_COUNTS, backgroundColor: RED_PALETTE }] },
+        options: { responsive: true, maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: { y: { beginAtZero: true } } }
+    });
+
+    new Chart(document.getElementById('bracketDollarChart'), {
+        type: 'bar',
+        data: { labels: BRACKETS, datasets: [{ label: 'Total $', data: BRACKET_DOLLARS, backgroundColor: RED_PALETTE }] },
+        options: { responsive: true, maintainAspectRatio: false,
+            plugins: { legend: { display: false },
+                tooltip: { callbacks: { label: ctx => fmt$(ctx.raw) } } },
+            scales: { y: { beginAtZero: true, ticks: { callback: v => '$' + (v/1000).toFixed(0) + 'K' } } } }
+    });
+
+    new Chart(document.getElementById('entityTypeChart'), {
+        type: 'doughnut',
+        data: {
+            labels: ['Individual / Other', 'Corporate / LLC / Trust'],
+            datasets: [{ data: [7342033, 2318455],
+                backgroundColor: ['#3b82f6','#dc2626'], borderWidth: 2 }]
+        },
+        options: { responsive: true, maintainAspectRatio: false,
+            plugins: { tooltip: { callbacks: { label: ctx => ctx.label + ': ' + fmt$(ctx.raw) } } } }
+    });
+
+    new Chart(document.getElementById('topOwnersChart'), {
+        type: 'bar',
+        data: {
+            labels: ['Paramount Corp','Frederick Corp','HNS LLC','Martin Alton F',
+                     'Ashraf Feroz','Ogunquit Dev','Bromwell D.L.','Business Vacation',
+                     'Hall B Vandenburg','Westview Homes'],
+            datasets: [{ label: 'Total Delinquent',
+                data: [588920, 270816, 133806, 100630, 89098, 87845, 81657, 49285, 47978, 46855],
+                backgroundColor: '#dc2626' }]
+        },
+        options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+            plugins: { legend: { display: false },
+                tooltip: { callbacks: { label: ctx => fmt$(ctx.raw) } } },
+            scales: { x: { ticks: { callback: v => '$' + (v/1000).toFixed(0) + 'K' } } } }
+    });
+
+    // ---- Tables (loaded from JSON) ----
+    let allRecords = [];
+    let ownerSummary = [];
+
+    // All records table pagination
+    const PAGE_SIZE = 100;
+    let allPage = 0;
+    let filteredAll = [];
+
+    function buildOwnerSummary(records) {
+        const map = {};
+        for (const r of records) {
+            const k = r.owner_name || '(unknown)';
+            if (!map[k]) map[k] = { owner_name: k, parcels: 0, total: 0 };
+            map[k].parcels++;
+            map[k].total += r.amount_delinquent;
+        }
+        return Object.values(map).sort((a,b) => b.total - a.total);
+    }
+
+    function renderOwners(data) {
+        const tbody = document.getElementById('ownersBody');
+        const query = document.getElementById('ownerSearch').value.toLowerCase();
+        const rows = data.filter(d => d.owner_name.toLowerCase().includes(query)).slice(0, 50);
+        document.getElementById('resultCount').textContent =
+            `Showing ${rows.length} of ${data.length} owners`;
+        tbody.innerHTML = rows.map((d, i) => {
+            const isCorp = isCorpEntity(d.owner_name);
+            const badge = isCorp
+                ? '<span class="badge badge-red">Corporate</span>'
+                : '<span class="badge badge-blue">Individual</span>';
+            return `<tr>
+                <td>${i+1}</td>
+                <td>${d.owner_name}</td>
+                <td class="count">${d.parcels}</td>
+                <td class="amount">${fmt$(d.total)}</td>
+                <td>${badge}</td>
+            </tr>`;
+        }).join('');
+    }
+
+    function renderAll() {
+        const tbody = document.getElementById('allBody');
+        const start = allPage * PAGE_SIZE;
+        const page = filteredAll.slice(start, start + PAGE_SIZE);
+        tbody.innerHTML = page.map(r => `<tr>
+            <td><code style="font-size:0.8rem">${r.parcel_id}</code></td>
+            <td>${r.owner_name || '<em style="color:var(--gray-600)">—</em>'}</td>
+            <td class="amount">${fmt$(r.amount_delinquent)}</td>
+        </tr>`).join('');
+        const total = filteredAll.length;
+        const end = Math.min(start + PAGE_SIZE, total);
+        document.getElementById('allCount').textContent =
+            `Showing ${start+1}–${end} of ${total.toLocaleString()} accounts`;
+        const pages = Math.ceil(total / PAGE_SIZE);
+        document.getElementById('allPager').innerHTML = pages > 1
+            ? `Page ${allPage+1} of ${pages} &nbsp;
+               ${allPage > 0 ? '<button onclick="changePage(-1)">&#8592; Prev</button>' : ''}
+               ${allPage < pages-1 ? '<button onclick="changePage(1)">Next &#8594;</button>' : ''}`
+            : '';
+    }
+
+    function changePage(dir) { allPage = Math.max(0, allPage + dir); renderAll(); }
+
+    function filterTable() { renderOwners(ownerSummary); }
+
+    function filterAll() {
+        const q = document.getElementById('allSearch').value.toLowerCase();
+        filteredAll = q
+            ? allRecords.filter(r =>
+                (r.owner_name || '').toLowerCase().includes(q) ||
+                r.parcel_id.toLowerCase().includes(q))
+            : allRecords;
+        allPage = 0;
+        renderAll();
+    }
+
+    // Fetch live data from the processed JSON
+    fetch('data/processed/delinquent_real_estate_taxes.json')
+        .then(r => r.json())
+        .then(data => {
+            allRecords = data.records.sort((a,b) => b.amount_delinquent - a.amount_delinquent);
+            ownerSummary = buildOwnerSummary(allRecords);
+            filteredAll = allRecords;
+            renderOwners(ownerSummary);
+            renderAll();
+
+            // Update report date in header
+            if (data.metadata && data.metadata.report_date) {
+                const sub = document.querySelector('header .subtitle');
+                if (sub) sub.textContent =
+                    `Source: Frederick County Commissioner of the Revenue — Report date: ${data.metadata.report_date}`;
+            }
+        })
+        .catch(() => {
+            // Fallback: tables stay empty, charts still render
+            document.getElementById('resultCount').textContent = 'Data unavailable — open the Playground links above to query directly.';
+        });
+    </script>
+    <script src="feedback.js"></script>
+</body>
+</html>
