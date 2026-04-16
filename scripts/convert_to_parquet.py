@@ -121,6 +121,7 @@ FILES_TO_CONVERT = [
     # Daily county reports (refreshed by scripts/refresh_daily_reports.py)
     {"json": "business_licenses.json", "parquet": "business_licenses.parquet", "record_path": "records"},
     {"json": "delinquent_real_estate_taxes.json", "parquet": "delinquent_real_estate_taxes.parquet", "record_path": "records"},
+    {"json": "delinquent_with_gis.json", "parquet": "delinquent_with_gis.parquet", "record_path": "records"},
 ]
 
 

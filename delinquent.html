@@ -390,6 +390,71 @@
             </div>
         </div>
 
+        <!-- GIS Cross-Reference -->
+        <div class="section">
+            <div class="section-header">
+                <h2>Cross-Reference with GIS Parcel Data</h2>
+            </div>
+            <div class="analysis-box info">
+                <h4>How This Works</h4>
+                <p>
+                    Delinquent tax parcel IDs were matched against Frederick County's GIS parcel database
+                    (50,005 parcels). <strong>96.7% of records matched</strong>, adding district, zoning,
+                    and assessed value to each delinquent account. The enriched table
+                    <code>delinquent_with_gis</code> is available in the Playground.
+                </p>
+            </div>
+
+            <!-- District breakdown chart -->
+            <div class="chart-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px,1fr));">
+                <div class="chart-card">
+                    <h3>Total Delinquency by Magisterial District</h3>
+                    <div class="chart-container">
+                        <canvas id="districtChart"></canvas>
+                    </div>
+                </div>
+                <div class="table-card" style="box-shadow:none; padding:0;">
+                    <table>
+                        <thead><tr><th>District</th><th style="text-align:right">Accounts</th><th style="text-align:right">Total Owed</th><th style="text-align:right">% of Total</th></tr></thead>
+                        <tbody>
+                            <tr><td>Back Creek</td><td class="count">1,833</td><td class="amount">$7,197,627</td><td class="count">74.5%</td></tr>
+                            <tr><td>Gainesboro</td><td class="count">565</td><td class="amount">$1,062,685</td><td class="count">11.0%</td></tr>
+                            <tr><td>Shawnee</td><td class="count">101</td><td class="amount">$303,409</td><td class="count">3.1%</td></tr>
+                            <tr><td>Red Bud</td><td class="count">90</td><td class="amount">$273,092</td><td class="count">2.8%</td></tr>
+                            <tr><td>Stonewall</td><td class="count">93</td><td class="amount">$169,694</td><td class="count">1.8%</td></tr>
+                            <tr><td>Opequon</td><td class="count">78</td><td class="amount">$162,180</td><td class="count">1.7%</td></tr>
+                            <tr><td>Stephens City</td><td class="count">25</td><td class="amount">$123,817</td><td class="count">1.3%</td></tr>
+                            <tr><td>Middletown</td><td class="count">15</td><td class="amount">$120,217</td><td class="count">1.2%</td></tr>
+                            <tr><td style="color:var(--gray-600)"><em>Unmatched</em></td><td class="count">97</td><td class="amount" style="color:var(--gray-600)">$247,766</td><td class="count">2.6%</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="query-grid">
+                <div class="query-card">
+                    <div class="query-title">Delinquencies by District</div>
+                    <div class="query-desc">Aggregates total owed and account counts by magisterial district using the GIS-enriched table.</div>
+                    <a href="playground/#share=JTdCJTIydiUyMiUzQSUyMDElMkMlMjAlMjJxJTIyJTNBJTIwJTIyLS0lMjBEZWxpbnF1ZW5jaWVzJTIwYnklMjBtYWdpc3RlcmlhbCUyMGRpc3RyaWN0JTVDblNFTEVDVCU1Q24lMjAlMjBDT0FMRVNDRSUyOGRpc3RyaWN0JTJDJTIwJTI3JTI4dW5tYXRjaGVkJTI5JTI3JTI5JTIwJTIwQVMlMjBkaXN0cmljdCUyQyU1Q24lMjAlMjBDT1VOVCUyOCUyQSUyOSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMEFTJTIwYWNjb3VudHMlMkMlNUNuJTIwJTIwU1VNJTI4YW1vdW50X2RlbGlucXVlbnQlMjklMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjBBUyUyMHRvdGFsX2RlbGlucXVlbnQlMkMlNUNuJTIwJTIwUk9VTkQlMjhBVkclMjhhbW91bnRfZGVsaW5xdWVudCUyOSUyOSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMEFTJTIwYXZnX3Blcl9hY2NvdW50JTVDbkZST00lMjBkZWxpbnF1ZW50X3dpdGhfZ2lzJTVDbkdST1VQJTIwQlklMjBkaXN0cmljdCU1Q25PUkRFUiUyMEJZJTIwdG90YWxfZGVsaW5xdWVudCUyMERFU0MlMjIlMkMlMjAlMjJ0JTIyJTNBJTIwJTIydGFibGUlMjIlN0Q=" class="query-link">Run Query &rarr;</a>
+                </div>
+                <div class="query-card warning">
+                    <div class="query-title">Delinquencies by Zoning</div>
+                    <div class="query-desc">Breaks down delinquencies by zoning classification with average assessed values — useful for identifying which land-use types carry the most tax debt.</div>
+                    <a href="playground/#share=JTdCJTIydiUyMiUzQSUyMDElMkMlMjAlMjJxJTIyJTNBJTIwJTIyLS0lMjBEZWxpbnF1ZW5jaWVzJTIwYnklMjB6b25pbmclMjBjbGFzc2lmaWNhdGlvbiU1Q25TRUxFQ1QlNUNuJTIwJTIwQ09BTEVTQ0UlMjh6b25lJTJDJTIwJTI3JTI4dW5rbm93biUyOSUyNyUyOSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMEFTJTIwem9uZSUyQyU1Q24lMjAlMjBDT1VOVCUyOCUyQSUyOSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMEFTJTIwYWNjb3VudHMlMkMlNUNuJTIwJTIwU1VNJTI4YW1vdW50X2RlbGlucXVlbnQlMjklMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjBBUyUyMHRvdGFsX2RlbGlucXVlbnQlMkMlNUNuJTIwJTIwUk9VTkQlMjhBVkclMjh0b3RhbF92YWx1ZSUyOSUyOSUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMCUyMEFTJTIwYXZnX2Fzc2Vzc2VkX3ZhbHVlJTJDJTVDbiUyMCUyMFJPVU5EJTI4QVZHJTI4YW1vdW50X2RlbGlucXVlbnQlMjklMjklMjAlMjAlMjAlMjAlMjAlMjAlMjAlMjBBUyUyMGF2Z19kZWxpbnF1ZW50JTVDbkZST00lMjBkZWxpbnF1ZW50X3dpdGhfZ2lzJTVDbldIRVJFJTIwem9uZSUyMElTJTIwTk9UJTIwTlVMTCU1Q25HUk9VUCUyMEJZJTIwem9uZSU1Q25PUkRFUiUyMEJZJTIwdG90YWxfZGVsaW5xdWVudCUyMERFU0MlMjIlMkMlMjAlMjJ0JTIyJTNBJTIwJTIydGFibGUlMjIlN0Q=" class="query-link warning">Run Query &rarr;</a>
+                </div>
+                <div class="query-card danger">
+                    <div class="query-title">Delinquency as % of Assessed Value</div>
+                    <div class="query-desc">Finds parcels where owed taxes are a high percentage of the property's assessed value — potential indicators of financially distressed properties.</div>
+                    <a href="playground/#share=JTdCJTIydiUyMiUzQSUyMDElMkMlMjAlMjJxJTIyJTNBJTIwJTIyLS0lMjBEZWxpbnF1ZW5jeSUyMGFtb3VudCUyMHZzLiUyMGFzc2Vzc2VkJTIwcHJvcGVydHklMjB2YWx1ZSU1Q24tLSUyMCUyOGhpZ2glMjByYXRpbyUyMG1heSUyMGluZGljYXRlJTIwb3Zlci1sZXZlcmFnZWQlMjBvciUyMGRpc3RyZXNzZWQlMjBwcm9wZXJ0aWVzJTI5JTVDblNFTEVDVCU1Q24lMjAlMjBwYXJjZWxfaWQlMkMlNUNuJTIwJTIwb3duZXJfbmFtZSUyQyU1Q24lMjAlMjBkaXN0cmljdCUyQyU1Q24lMjAlMjB6b25lJTJDJTVDbiUyMCUyMGFtb3VudF9kZWxpbnF1ZW50JTJDJTVDbiUyMCUyMHRvdGFsX3ZhbHVlJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwQVMlMjBhc3Nlc3NlZF92YWx1ZSUyQyU1Q24lMjAlMjBST1VORCUyOCU1Q24lMjAlMjAlMjAlMjAxMDAuMCUyMCUyQSUyMGFtb3VudF9kZWxpbnF1ZW50JTIwLyUyME5VTExJRiUyOHRvdGFsX3ZhbHVlJTJDJTIwMCUyOSUyQyUyMDIlNUNuJTIwJTIwJTI5JTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwQVMlMjBkZWxpbnF1ZW50X3BjdF9vZl92YWx1ZSU1Q25GUk9NJTIwZGVsaW5xdWVudF93aXRoX2dpcyU1Q25XSEVSRSUyMHRvdGFsX3ZhbHVlJTIwJTNFJTIwMCU1Q24lMjAlMjBBTkQlMjB0b3RhbF92YWx1ZSUyMCUzQyUyMDIwMDAwMCU1Q25PUkRFUiUyMEJZJTIwZGVsaW5xdWVudF9wY3Rfb2ZfdmFsdWUlMjBERVNDJTIwTlVMTFMlMjBMQVNUJTVDbkxJTUlUJTIwNTAlMjIlMkMlMjAlMjJ0JTIyJTNBJTIwJTIydGFibGUlMjIlN0Q=" class="query-link danger">Run Query &rarr;</a>
+                </div>
+                <div class="query-card">
+                    <div class="query-title">Back Creek Large Delinquencies</div>
+                    <div class="query-desc">Back Creek holds 74% of all delinquent dollars. This query shows its highest-value individual accounts with zoning and acreage context.</div>
+                    <a href="playground/#share=JTdCJTIydiUyMiUzQSUyMDElMkMlMjAlMjJxJTIyJTNBJTIwJTIyLS0lMjBMYXJnZSUyMGRlbGlucXVlbmNpZXMlMjBpbiUyMEJhY2slMjBDcmVlayUyMGRpc3RyaWN0JTVDblNFTEVDVCU1Q24lMjAlMjBwYXJjZWxfaWQlMkMlNUNuJTIwJTIwb3duZXJfbmFtZSUyQyU1Q24lMjAlMjB6b25lJTJDJTVDbiUyMCUyMGFtb3VudF9kZWxpbnF1ZW50JTJDJTVDbiUyMCUyMHRvdGFsX3ZhbHVlJTIwQVMlMjBhc3Nlc3NlZF92YWx1ZSUyQyU1Q24lMjAlMjBhY3JlYWdlJTVDbkZST00lMjBkZWxpbnF1ZW50X3dpdGhfZ2lzJTVDbldIRVJFJTIwZGlzdHJpY3QlMjAlM0QlMjAlMjdCYWNrJTIwQ3JlZWslMjclNUNuJTIwJTIwQU5EJTIwYW1vdW50X2RlbGlucXVlbnQlMjAlM0UlM0QlMjA1MDAwJTVDbk9SREVSJTIwQlklMjBhbW91bnRfZGVsaW5xdWVudCUyMERFU0MlMjIlMkMlMjAlMjJ0JTIyJTNBJTIwJTIydGFibGUlMjIlN0Q=" class="query-link">Run Query &rarr;</a>
+                </div>
+            </div>
+        </div>
+
         <!-- Full Searchable List -->
         <div class="section">
             <div class="section-header">
@@ -500,6 +565,20 @@
             plugins: { legend: { display: false },
                 tooltip: { callbacks: { label: ctx => fmt$(ctx.raw) } } },
             scales: { x: { ticks: { callback: v => '$' + (v/1000).toFixed(0) + 'K' } } } }
+    });
+
+    new Chart(document.getElementById('districtChart'), {
+        type: 'bar',
+        data: {
+            labels: ['Back Creek','Gainesboro','Shawnee','Red Bud','Stonewall','Opequon','Stephens City','Middletown'],
+            datasets: [{ label: 'Total Delinquent',
+                data: [7197627, 1062685, 303409, 273092, 169694, 162180, 123817, 120217],
+                backgroundColor: ['#991b1b','#b91c1c','#dc2626','#ef4444','#f87171','#fca5a5','#fecaca','#fee2e2'] }]
+        },
+        options: { responsive: true, maintainAspectRatio: false,
+            plugins: { legend: { display: false },
+                tooltip: { callbacks: { label: ctx => fmt$(ctx.raw) } } },
+            scales: { y: { ticks: { callback: v => '$' + (v/1000000).toFixed(1) + 'M' } } } }
     });
 
     // ---- Tables (loaded from JSON) ----

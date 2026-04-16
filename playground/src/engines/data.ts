@@ -138,6 +138,10 @@ export const PARQUET_MANIFEST: Record<string, { size: number; sha256: string }> 
   },
 
   // Daily county reports (refreshed by scripts/refresh_daily_reports.py)
+  'delinquent_with_gis.parquet': {
+    size: 172210,
+    sha256: 'fbd978eb4871543776ea6cdb9a85c32dbb573de8b9f9349dff001cf0164031c4'
+  },
   'business_licenses.parquet': {
     size: 90137,
     sha256: 'aac6573d19a104bea4569c820e7892881832daa2bf497b9cf6c20e2955c21f6e'

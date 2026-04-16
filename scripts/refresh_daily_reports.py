@@ -222,6 +222,12 @@ def main():
                 continue
 
     if not args.dry_run:
+        # GIS join (runs after delinquent parse, uses static GIS data)
+        log.info("--- GIS join ---")
+        if not run_parser(SCRIPTS / "join_delinquent_gis.py"):
+            log.error("GIS join failed")
+            errors += 1
+
         if not run_conversion():
             log.error("Parquet conversion failed")
             errors += 1
@@ -230,6 +236,7 @@ def main():
     for report in REPORTS:
         if not patch_manifest(report["parquet"], DATA_TS):
             errors += 1
+    patch_manifest(PARQUET / "delinquent_with_gis.parquet", DATA_TS)
 
     log.info("=" * 60)
     if errors:
