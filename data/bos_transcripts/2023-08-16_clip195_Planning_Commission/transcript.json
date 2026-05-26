@@ -13,3463 +13,4043 @@
       "id": 0,
       "start": 0.0,
       "end": 22.0,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 1,
       "start": 30.0,
       "end": 49.68,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 2,
       "start": 60.0,
       "end": 89.98,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_10"
     },
     {
       "id": 3,
       "start": 90.0,
       "end": 119.98,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 4,
       "start": 120.0,
       "end": 149.98,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 5,
       "start": 150.0,
       "end": 179.98,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 6,
       "start": 180.0,
       "end": 182.0,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 7,
       "start": 182.0,
       "end": 182.5,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 8,
       "start": 194.42,
       "end": 201.72,
-      "text": "Good evening."
+      "text": "Good evening.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 9,
       "start": 201.88,
       "end": 203.76,
-      "text": "I call to order the July 19,"
+      "text": "I call to order the July 19,",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 10,
       "start": 204.0,
       "end": 206.1,
-      "text": "2023 Frederick County Planning Commission."
+      "text": "2023 Frederick County Planning Commission.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 11,
       "start": 206.34,
       "end": 207.76,
-      "text": "Can we take a moment of silence, please?"
+      "text": "Can we take a moment of silence, please?",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 12,
       "start": 210.0,
       "end": 212.0,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 13,
       "start": 216.8,
       "end": 216.98,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 14,
       "start": 217.94,
       "end": 219.5,
-      "text": "Planning Commissioners, just a reminder,"
+      "text": "Planning Commissioners, just a reminder,",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 15,
       "start": 219.64,
       "end": 221.72,
-      "text": "please make sure you turn on your mics before you speak"
+      "text": "please make sure you turn on your mics before you speak",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 16,
       "start": 221.72,
       "end": 224.08,
-      "text": "and then turn them back off since we're limited"
+      "text": "and then turn them back off since we're limited",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 17,
       "start": 224.08,
       "end": 225.92,
-      "text": "on the amount of mics that can be on."
+      "text": "on the amount of mics that can be on.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 18,
       "start": 226.8,
       "end": 228.94,
-      "text": "Next thing up is the adoption of the agenda."
+      "text": "Next thing up is the adoption of the agenda.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 19,
       "start": 229.32,
       "end": 233.0,
-      "text": "Staff has informed us that CUP 06236A"
+      "text": "Staff has informed us that CUP 06236A",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 20,
       "start": 233.78,
       "end": 237.16,
-      "text": "and 07236B for Diamond Communications"
+      "text": "and 07236B for Diamond Communications",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 21,
       "start": 237.16,
       "end": 239.56,
-      "text": "are not able to be heard at this time."
+      "text": "are not able to be heard at this time.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 22,
       "start": 239.56,
       "end": 239.62,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 23,
       "start": 239.62,
       "end": 239.66,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 24,
       "start": 239.66,
       "end": 239.72,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 25,
       "start": 239.72,
       "end": 239.76,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 26,
       "start": 239.76,
       "end": 239.78,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 27,
       "start": 239.78,
       "end": 239.8,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 28,
       "start": 239.8,
       "end": 239.82,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 29,
       "start": 239.82,
       "end": 239.84,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 30,
       "start": 239.84,
       "end": 239.86,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 31,
       "start": 239.86,
       "end": 239.88,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 32,
       "start": 239.88,
       "end": 239.98,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 33,
       "start": 240.0,
       "end": 240.02,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 34,
       "start": 240.02,
       "end": 240.06,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 35,
       "start": 240.06,
       "end": 240.12,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 36,
       "start": 240.12,
       "end": 240.14,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 37,
       "start": 240.14,
       "end": 242.96,
-      "text": "All right."
+      "text": "All right.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 38,
       "start": 262.86,
       "end": 263.22,
-      "text": "All right."
+      "text": "All right.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 39,
       "start": 264.8,
       "end": 265.94,
-      "text": "All those in favor?"
+      "text": "All those in favor?",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 40,
       "start": 266.48,
       "end": 266.72,
-      "text": "Aye."
+      "text": "Aye.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 41,
       "start": 266.96,
       "end": 267.42,
-      "text": "All right."
+      "text": "All right.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 42,
       "start": 267.48,
       "end": 268.36,
-      "text": "We're good on that."
+      "text": "We're good on that.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 43,
       "start": 268.72,
       "end": 269.68,
-      "text": "Committee reports,"
+      "text": "Committee reports,",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 44,
       "start": 269.78,
       "end": 269.82,
-      "text": "of which I believe,"
+      "text": "of which I believe,",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 45,
       "start": 269.82,
       "end": 273.5,
-      "text": "I've got Frederick Water, I wanna make sure,"
+      "text": "I've got Frederick Water, I wanna make sure,",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 46,
       "start": 273.5,
       "end": 275.76,
-      "text": "CPPC, we don't have anything, we don't have anything"
+      "text": "CPPC, we don't have anything, we don't have anything",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 47,
       "start": 275.76,
       "end": 280.76,
-      "text": "with DRC and historical, do you?"
+      "text": "with DRC and historical, do you?",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 48,
       "start": 281.32,
       "end": 286.32,
-      "text": "Okay, Frederick Water met and the board authorized"
+      "text": "Okay, Frederick Water met and the board authorized",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 49,
       "start": 286.82,
       "end": 288.42,
-      "text": "Chairman Oates to execute an agreement"
+      "text": "Chairman Oates to execute an agreement",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 50,
       "start": 288.42,
       "end": 291.54,
-      "text": "with Madison Village pertaining to payments,"
+      "text": "with Madison Village pertaining to payments,",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 51,
       "start": 291.54,
       "end": 294.76,
-      "text": "availability for their project phase three,"
+      "text": "availability for their project phase three,",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 52,
       "start": 294.76,
       "end": 298.16,
-      "text": "it includes five multi-family buildings"
+      "text": "it includes five multi-family buildings",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 53,
       "start": 298.16,
       "end": 300.72,
-      "text": "and the funding is a three and a half million dollar"
+      "text": "and the funding is a three and a half million dollar",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 54,
       "start": 300.72,
       "end": 304.9,
-      "text": "project, they also authorized, the board also authorized"
+      "text": "project, they also authorized, the board also authorized",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 55,
       "start": 304.9,
       "end": 307.68,
-      "text": "Chairman Oates to execute an agreement with Carmoose"
+      "text": "Chairman Oates to execute an agreement with Carmoose",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 56,
       "start": 307.68,
       "end": 310.16,
-      "text": "which will facilitate the construction of long-term"
+      "text": "which will facilitate the construction of long-term",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 57,
       "start": 310.16,
       "end": 313.38,
-      "text": "maintenance and shared cost of water,"
+      "text": "maintenance and shared cost of water,",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 58,
       "start": 313.38,
       "end": 317.02,
-      "text": "raw water pump station and pipeline that will convey"
+      "text": "raw water pump station and pipeline that will convey",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 59,
       "start": 317.02,
       "end": 321.58,
-      "text": "raw water from pits one and two to the plant site."
+      "text": "raw water from pits one and two to the plant site.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 60,
       "start": 322.9,
       "end": 327.48,
-      "text": "For the month of July, rainfall was two and a half inches"
+      "text": "For the month of July, rainfall was two and a half inches",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 61,
       "start": 327.48,
       "end": 328.16,
-      "text": "and"
+      "text": "and",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 62,
       "start": 328.16,
       "end": 333.16,
-      "text": "their customer base was 18,206, so that's Frederick Water."
+      "text": "their customer base was 18,206, so that's Frederick Water.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 63,
       "start": 333.84,
       "end": 337.28,
-      "text": "So we have Winchester City, good evening sir,"
+      "text": "So we have Winchester City, good evening sir,",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 64,
       "start": 337.28,
       "end": 338.28,
-      "text": "thank you for coming."
+      "text": "thank you for coming.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 65,
       "start": 341.2,
       "end": 342.72,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_09"
     },
     {
       "id": 66,
       "start": 342.72,
       "end": 344.84,
-      "text": "So you got a report for us?"
+      "text": "So you got a report for us?",
+      "speaker": "SPEAKER_09"
     },
     {
       "id": 67,
       "start": 344.84,
       "end": 348.46,
-      "text": "So we met yesterday, we reviewed a application"
+      "text": "So we met yesterday, we reviewed a application",
+      "speaker": "SPEAKER_09"
     },
     {
       "id": 68,
       "start": 348.46,
       "end": 351.92,
-      "text": "for zone 1.67 acres of land on York Avenue"
+      "text": "for zone 1.67 acres of land on York Avenue",
+      "speaker": "SPEAKER_09"
     },
     {
       "id": 69,
       "start": 351.92,
       "end": 354.66,
-      "text": "from medium density residential to medium density"
+      "text": "from medium density residential to medium density",
+      "speaker": "SPEAKER_09"
     },
     {
       "id": 70,
       "start": 354.66,
       "end": 358.16,
-      "text": "residential with a plan use development overlay, a PUD overlay,"
+      "text": "residential with a plan use development overlay, a PUD overlay,",
+      "speaker": "SPEAKER_09"
     },
     {
       "id": 71,
       "start": 358.16,
       "end": 362.44,
-      "text": "and the planning commission voted in favor of that"
+      "text": "and the planning commission voted in favor of that",
+      "speaker": "SPEAKER_09"
     },
     {
       "id": 72,
       "start": 362.44,
       "end": 365.46,
-      "text": "application and that was the only thing on our agenda."
+      "text": "application and that was the only thing on our agenda.",
+      "speaker": "SPEAKER_09"
     },
     {
       "id": 73,
       "start": 365.46,
       "end": 367.08,
-      "text": "Wonderful, excellent."
+      "text": "Wonderful, excellent.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 74,
       "start": 367.08,
       "end": 368.5,
-      "text": "Well thank you for coming out this evening."
+      "text": "Well thank you for coming out this evening.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 75,
       "start": 368.5,
       "end": 369.44,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 76,
       "start": 369.44,
       "end": 374.12,
-      "text": "Okay, we don't, Ms. Lockridge is down enjoying vacation"
+      "text": "Okay, we don't, Ms. Lockridge is down enjoying vacation",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 77,
       "start": 374.12,
       "end": 377.92,
-      "text": "so she's not here tonight, so we'll move on."
+      "text": "so she's not here tonight, so we'll move on.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 78,
       "start": 377.92,
       "end": 380.92,
-      "text": "At this, the next thing up is citizens comments"
+      "text": "At this, the next thing up is citizens comments",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 79,
       "start": 380.92,
       "end": 384.2,
-      "text": "and this is for, which is open for any items"
+      "text": "and this is for, which is open for any items",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 80,
       "start": 384.2,
       "end": 386.84,
-      "text": "not before the commission, for public hearing"
+      "text": "not before the commission, for public hearing",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 81,
       "start": 386.84,
       "end": 388.0,
-      "text": "or on the agenda."
+      "text": "or on the agenda.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 82,
       "start": 388.0,
       "end": 390.84,
-      "text": "If, please state your name and magisterial district"
+      "text": "If, please state your name and magisterial district",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 83,
       "start": 390.84,
       "end": 393.4,
-      "text": "and keep your comments to three minutes or less."
+      "text": "and keep your comments to three minutes or less.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 84,
       "start": 393.4,
       "end": 395.34,
-      "text": "Do we have anybody that wants to speak?"
+      "text": "Do we have anybody that wants to speak?",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 85,
       "start": 396.76,
       "end": 399.88,
-      "text": "Okay, I will close the citizen comments."
+      "text": "Okay, I will close the citizen comments.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 86,
       "start": 399.88,
       "end": 401.76,
-      "text": "Now we're gonna move on to public hearings."
+      "text": "Now we're gonna move on to public hearings.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 87,
       "start": 401.76,
       "end": 404.96,
-      "text": "So we're gonna jump down to 6C."
+      "text": "So we're gonna jump down to 6C.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 88,
       "start": 408.86,
       "end": 411.32,
-      "text": "Mr. Bishop, that would be you."
+      "text": "Mr. Bishop, that would be you.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 89,
       "start": 414.88,
       "end": 416.84,
-      "text": "We're moving quickly through this one."
+      "text": "We're moving quickly through this one.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 90,
       "start": 418.0,
       "end": 422.46,
-      "text": "I apologize, you caught me confirming"
+      "text": "I apologize, you caught me confirming",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 91,
       "start": 422.46,
       "end": 423.76,
-      "text": "my colleague over there."
+      "text": "my colleague over there.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 92,
       "start": 426.76,
       "end": 429.88,
-      "text": "Thank you Mr. Chairman and members of the commission."
+      "text": "Thank you Mr. Chairman and members of the commission.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 93,
       "start": 429.88,
       "end": 432.54,
-      "text": "Tonight you have a rezoning before you public hearing"
+      "text": "Tonight you have a rezoning before you public hearing",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 94,
       "start": 432.54,
       "end": 435.06,
-      "text": "for Global Headquarters LLC."
+      "text": "for Global Headquarters LLC.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 95,
       "start": 435.06,
       "end": 437.48,
-      "text": "Many of you may be more familiar with it"
+      "text": "Many of you may be more familiar with it",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 96,
       "start": 437.48,
       "end": 441.08,
-      "text": "as the former headquarters of the Bowman Trucking Company."
+      "text": "as the former headquarters of the Bowman Trucking Company.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 97,
       "start": 442.0,
       "end": 447.0,
-      "text": "This is a request to rezone plus or minus 1.86 acres from M2"
+      "text": "This is a request to rezone plus or minus 1.86 acres from M2",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 98,
       "start": 447.0,
       "end": 451.24,
-      "text": "Industrial General to B2 General Business"
+      "text": "Industrial General to B2 General Business",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 99,
       "start": 451.24,
       "end": 456.0,
-      "text": "and also to take .29 acres that is already zoned B2"
+      "text": "and also to take .29 acres that is already zoned B2",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 100,
       "start": 456.0,
       "end": 458.72,
-      "text": "and add proffers to it."
+      "text": "and add proffers to it.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 101,
       "start": 458.72,
       "end": 462.34,
-      "text": "This property is located just east of the intersection"
+      "text": "This property is located just east of the intersection",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 102,
       "start": 462.34,
       "end": 465.68,
-      "text": "of Route 277 and Double Church Road,"
+      "text": "of Route 277 and Double Church Road,",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 103,
       "start": 465.68,
       "end": 469.62,
-      "text": "right next to the Dollar Tree on the south side of 277 there."
+      "text": "right next to the Dollar Tree on the south side of 277 there.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 104,
       "start": 469.62,
       "end": 472.06,
-      "text": "And if you could let me go to the graphic here,"
+      "text": "And if you could let me go to the graphic here,",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 105,
       "start": 472.06,
       "end": 475.06,
-      "text": "there's a picture of it and that's the Dollar Tree"
+      "text": "there's a picture of it and that's the Dollar Tree",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 106,
       "start": 475.06,
       "end": 475.92,
-      "text": "right there."
+      "text": "right there.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 107,
       "start": 475.92,
       "end": 476.66,
-      "text": "And just off the screen, there's a picture of it."
+      "text": "And just off the screen, there's a picture of it.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 108,
       "start": 476.66,
       "end": 480.36,
-      "text": "The screen here is your intersection of Double Church Road"
+      "text": "The screen here is your intersection of Double Church Road",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 109,
       "start": 480.36,
       "end": 482.22,
-      "text": "and Route 277."
+      "text": "and Route 277.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 110,
       "start": 482.22,
       "end": 485.88,
-      "text": "That's the terminus of the recent Route 277 work"
+      "text": "That's the terminus of the recent Route 277 work",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 111,
       "start": 487.12,
       "end": 489.28,
-      "text": "for those interested in that."
+      "text": "for those interested in that.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 112,
       "start": 492.44,
       "end": 494.92,
-      "text": "This is designated in your comprehensive plan,"
+      "text": "This is designated in your comprehensive plan,",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 113,
       "start": 494.92,
       "end": 497.46,
-      "text": "the Southern Frederick Area Plan to be specific"
+      "text": "the Southern Frederick Area Plan to be specific",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 114,
       "start": 497.46,
       "end": 498.68,
-      "text": "as an urban center."
+      "text": "as an urban center.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 115,
       "start": 498.68,
       "end": 502.42,
-      "text": "It's called the Sharando Center inside the text of that plan."
+      "text": "It's called the Sharando Center inside the text of that plan.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 116,
       "start": 505.46,
       "end": 506.66,
-      "text": "And there you have your current zone"
+      "text": "And there you have your current zone",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 117,
       "start": 506.66,
       "end": 508.3,
-      "text": "and the current zone."
+      "text": "and the current zone.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 118,
       "start": 508.3,
       "end": 512.14,
-      "text": "We actually don't think these lines out of RGIS"
+      "text": "We actually don't think these lines out of RGIS",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 119,
       "start": 512.14,
       "end": 513.42,
-      "text": "are totally accurate here."
+      "text": "are totally accurate here.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 120,
       "start": 513.42,
       "end": 516.98,
-      "text": "We do, the next door parcel is actually not split zoned"
+      "text": "We do, the next door parcel is actually not split zoned",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 121,
       "start": 516.98,
       "end": 518.6,
-      "text": "as it appears to show here,"
+      "text": "as it appears to show here,",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 122,
       "start": 518.6,
       "end": 520.56,
-      "text": "while this parcel is split zoned,"
+      "text": "while this parcel is split zoned,",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 123,
       "start": 520.56,
       "end": 522.68,
-      "text": "the one that's under consideration."
+      "text": "the one that's under consideration.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 124,
       "start": 522.68,
       "end": 527.68,
-      "text": "So you have B2 to the, I'm sorry, to the east and the west"
+      "text": "So you have B2 to the, I'm sorry, to the east and the west",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 125,
       "start": 529.34,
       "end": 531.54,
-      "text": "and that is what the applicant is seeking"
+      "text": "and that is what the applicant is seeking",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 126,
       "start": 531.54,
       "end": 534.22,
-      "text": "for this parcel as well."
+      "text": "for this parcel as well.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 127,
       "start": 534.22,
       "end": 536.66,
-      "text": "In terms of proffers, the applicant has proffered."
+      "text": "In terms of proffers, the applicant has proffered.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 128,
       "start": 536.66,
       "end": 539.78,
-      "text": "To restrict direct access to Fairfax Pike"
+      "text": "To restrict direct access to Fairfax Pike",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 129,
       "start": 539.78,
       "end": 542.56,
-      "text": "and they intend to gain access to the property"
+      "text": "and they intend to gain access to the property",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 130,
       "start": 542.56,
       "end": 545.24,
-      "text": "via an inter parcel connection to the east"
+      "text": "via an inter parcel connection to the east",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 131,
       "start": 545.24,
       "end": 549.88,
-      "text": "and a roadway that's going to be built on that property."
+      "text": "and a roadway that's going to be built on that property.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 132,
       "start": 549.88,
       "end": 553.26,
-      "text": "Dedication of additional right of way along 277"
+      "text": "Dedication of additional right of way along 277",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 133,
       "start": 553.26,
       "end": 556.5,
-      "text": "as noted in the proffers as necessary to construct"
+      "text": "as noted in the proffers as necessary to construct",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 134,
       "start": 556.5,
       "end": 559.48,
-      "text": "the road frontage improvements for the full access entrance"
+      "text": "the road frontage improvements for the full access entrance",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 135,
       "start": 559.48,
       "end": 561.1,
-      "text": "that I had just mentioned that they'll be gaining"
+      "text": "that I had just mentioned that they'll be gaining",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 136,
       "start": 561.1,
       "end": 564.56,
-      "text": "inter parcel access to, to parcel 8681,"
+      "text": "inter parcel access to, to parcel 8681,",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 137,
       "start": 564.56,
       "end": 566.54,
-      "text": "which is the parcel to the east."
+      "text": "which is the parcel to the east.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 138,
       "start": 566.66,
       "end": 569.04,
-      "text": "And also 10 cents per square foot"
+      "text": "And also 10 cents per square foot",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 139,
       "start": 569.04,
       "end": 571.12,
-      "text": "for fire and rescue purposes."
+      "text": "for fire and rescue purposes.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 140,
       "start": 573.0,
       "end": 576.58,
-      "text": "Before you, you have the proffered GDP."
+      "text": "Before you, you have the proffered GDP.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 141,
       "start": 576.58,
       "end": 579.56,
-      "text": "Once again, just to point some things out,"
+      "text": "Once again, just to point some things out,",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 142,
       "start": 579.56,
       "end": 582.04,
-      "text": "you do see the proffered trail along here."
+      "text": "you do see the proffered trail along here.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 143,
       "start": 582.04,
       "end": 586.06,
-      "text": "No direct access that is to Route 277"
+      "text": "No direct access that is to Route 277",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 144,
       "start": 586.06,
       "end": 590.04,
-      "text": "and generalized location of a future inter parcel"
+      "text": "and generalized location of a future inter parcel",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 145,
       "start": 590.04,
       "end": 592.74,
-      "text": "that will bring them over to the roadway being constructed"
+      "text": "that will bring them over to the roadway being constructed",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 146,
       "start": 592.74,
       "end": 595.2,
-      "text": "on the other global headquarters property."
+      "text": "on the other global headquarters property.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 147,
       "start": 595.2,
       "end": 596.34,
-      "text": "I failed to mention earlier,"
+      "text": "I failed to mention earlier,",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 148,
       "start": 596.34,
       "end": 599.0,
-      "text": "in my presentation, all of these properties,"
+      "text": "in my presentation, all of these properties,",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 149,
       "start": 599.0,
       "end": 600.22,
-      "text": "both of these properties rather,"
+      "text": "both of these properties rather,",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 150,
       "start": 600.22,
       "end": 601.82,
-      "text": "are under common ownership."
+      "text": "are under common ownership.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 151,
       "start": 601.82,
       "end": 604.92,
-      "text": "So it's not as if they need to go seek a deal to gain that."
+      "text": "So it's not as if they need to go seek a deal to gain that.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 152,
       "start": 604.92,
       "end": 605.96,
-      "text": "They already have it."
+      "text": "They already have it.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 153,
       "start": 608.76,
       "end": 612.08,
-      "text": "With that said, the agency comments that were received"
+      "text": "With that said, the agency comments that were received",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 154,
       "start": 612.08,
       "end": 613.86,
-      "text": "appear to have been addressed,"
+      "text": "appear to have been addressed,",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 155,
       "start": 613.86,
       "end": 616.44,
-      "text": "with the exception of where you'll see in the staff report,"
+      "text": "with the exception of where you'll see in the staff report,",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 156,
       "start": 616.44,
       "end": 619.72,
-      "text": "I have noted the need for greater clarity"
+      "text": "I have noted the need for greater clarity",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 157,
       "start": 619.72,
       "end": 624.06,
-      "text": "in the proffers related to future 277 widening needs."
+      "text": "in the proffers related to future 277 widening needs.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 158,
       "start": 624.06,
       "end": 626.22,
-      "text": "Mr. Frank and I have already discussed that,"
+      "text": "Mr. Frank and I have already discussed that,",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 159,
       "start": 626.22,
       "end": 627.38,
-      "text": "leading up to this meeting,"
+      "text": "leading up to this meeting,",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 160,
       "start": 627.38,
       "end": 629.74,
-      "text": "and while I will let him speak directly to it,"
+      "text": "and while I will let him speak directly to it,",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 161,
       "start": 629.74,
       "end": 632.04,
-      "text": "it is my impression that the applicant intends"
+      "text": "it is my impression that the applicant intends",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 162,
       "start": 632.04,
       "end": 634.48,
-      "text": "to include that in their proffers."
+      "text": "to include that in their proffers.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 163,
       "start": 635.5,
       "end": 637.88,
-      "text": "As noted earlier, this is a public hearing."
+      "text": "As noted earlier, this is a public hearing.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 164,
       "start": 637.88,
       "end": 640.14,
-      "text": "Staff following that public hearing staff"
+      "text": "Staff following that public hearing staff",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 165,
       "start": 640.14,
       "end": 643.32,
-      "text": "is seeking a recommendation to the Board of Supervisors."
+      "text": "is seeking a recommendation to the Board of Supervisors.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 166,
       "start": 643.32,
       "end": 645.0,
-      "text": "I can take any questions you may have,"
+      "text": "I can take any questions you may have,",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 167,
       "start": 645.0,
       "end": 647.6,
-      "text": "and as I noted, Mr. Frank is here for the applicant."
+      "text": "and as I noted, Mr. Frank is here for the applicant.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 168,
       "start": 647.6,
       "end": 648.68,
-      "text": "Thank you, Mr. Bishop."
+      "text": "Thank you, Mr. Bishop.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 169,
       "start": 648.68,
       "end": 650.54,
-      "text": "So any questions for Mr. Bishop?"
+      "text": "So any questions for Mr. Bishop?",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 170,
       "start": 650.54,
       "end": 651.64,
-      "text": "I'm looking to the left."
+      "text": "I'm looking to the left.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 171,
       "start": 652.78,
       "end": 653.62,
-      "text": "And right."
+      "text": "And right.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 172,
       "start": 653.62,
       "end": 654.46,
-      "text": "I have one, John."
+      "text": "I have one, John.",
+      "speaker": "SPEAKER_10"
     },
     {
       "id": 173,
       "start": 654.46,
       "end": 655.3,
-      "text": "Yes, sir."
+      "text": "Yes, sir.",
+      "speaker": "SPEAKER_10"
     },
     {
       "id": 174,
       "start": 655.3,
       "end": 657.36,
-      "text": "When you pull up Google Maps,"
+      "text": "When you pull up Google Maps,",
+      "speaker": "SPEAKER_10"
     },
     {
       "id": 175,
       "start": 657.36,
       "end": 658.62,
-      "text": "it's showing a structure on there,"
+      "text": "it's showing a structure on there,",
+      "speaker": "SPEAKER_10"
     },
     {
       "id": 176,
       "start": 658.62,
       "end": 661.56,
-      "text": "but inside the packet it showed was just bare ground."
+      "text": "but inside the packet it showed was just bare ground.",
+      "speaker": "SPEAKER_10"
     },
     {
       "id": 177,
       "start": 663.66,
       "end": 664.5,
-      "text": "I couldn't."
+      "text": "I couldn't.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 178,
       "start": 667.44,
       "end": 668.28,
-      "text": "Okay."
+      "text": "Okay.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 179,
       "start": 668.28,
       "end": 671.54,
-      "text": "I think there used to be the warehouse type building there"
+      "text": "I think there used to be the warehouse type building there",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 180,
       "start": 671.54,
       "end": 674.26,
-      "text": "that was for the Bowman Trucking,"
+      "text": "that was for the Bowman Trucking,",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 181,
       "start": 674.26,
       "end": 675.76,
-      "text": "and it's since been demolished."
+      "text": "and it's since been demolished.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 182,
       "start": 675.76,
       "end": 677.16,
-      "text": "It's all bare now, thank you."
+      "text": "It's all bare now, thank you.",
+      "speaker": "SPEAKER_10"
     },
     {
       "id": 183,
       "start": 678.12,
       "end": 680.08,
-      "text": "We gotta get Google to update their map."
+      "text": "We gotta get Google to update their map.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 184,
       "start": 681.98,
       "end": 683.12,
-      "text": "They're usually pretty good."
+      "text": "They're usually pretty good.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 185,
       "start": 683.12,
       "end": 684.44,
-      "text": "We're ahead of them for another."
+      "text": "We're ahead of them for another.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 186,
       "start": 684.44,
       "end": 685.28,
-      "text": "We're ahead of them for another."
+      "text": "We're ahead of them for another.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 187,
       "start": 685.3,
       "end": 686.3,
-      "text": "We're ahead of them for the moment."
+      "text": "We're ahead of them for the moment.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 188,
       "start": 686.3,
       "end": 691.3,
-      "text": "Is there any questions for the applicant?"
+      "text": "Is there any questions for the applicant?",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 189,
       "start": 692.2,
       "end": 693.5,
-      "text": "Anybody have any questions?"
+      "text": "Anybody have any questions?",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 190,
       "start": 693.5,
       "end": 694.92,
-      "text": "Oh, Mr. Stowe, okay."
+      "text": "Oh, Mr. Stowe, okay.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 191,
       "start": 694.92,
       "end": 697.16,
-      "text": "Could we have the applicant on the floor, please?"
+      "text": "Could we have the applicant on the floor, please?",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 192,
       "start": 702.04,
       "end": 703.64,
-      "text": "David enjoys me asking questions."
+      "text": "David enjoys me asking questions.",
+      "speaker": "SPEAKER_12"
     },
     {
       "id": 193,
       "start": 705.58,
       "end": 708.26,
-      "text": "Good evening, Mr. Chairman, members of the Commission."
+      "text": "Good evening, Mr. Chairman, members of the Commission.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 194,
       "start": 708.26,
       "end": 709.4,
-      "text": "My name is David Frank."
+      "text": "My name is David Frank.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 195,
       "start": 709.4,
       "end": 711.5,
-      "text": "I'm with Pannoni, and I'm representing the owner"
+      "text": "I'm with Pannoni, and I'm representing the owner",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 196,
       "start": 711.5,
       "end": 712.94,
-      "text": "on this application."
+      "text": "on this application.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 197,
       "start": 712.94,
       "end": 714.62,
-      "text": "Mr. Frank, good to see you again."
+      "text": "Mr. Frank, good to see you again.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 198,
       "start": 714.62,
       "end": 716.8,
-      "text": "Okay, we'll start with Mr. Stowe here."
+      "text": "Okay, we'll start with Mr. Stowe here.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 199,
       "start": 716.8,
       "end": 717.64,
-      "text": "Been a long time."
+      "text": "Been a long time.",
+      "speaker": "SPEAKER_12"
     },
     {
       "id": 200,
       "start": 717.64,
       "end": 718.64,
-      "text": "David, in your impact study,"
+      "text": "David, in your impact study,",
+      "speaker": "SPEAKER_12"
     },
     {
       "id": 201,
       "start": 718.64,
       "end": 721.98,
-      "text": "you talked on sewer conveyance and water supply,"
+      "text": "you talked on sewer conveyance and water supply,",
+      "speaker": "SPEAKER_12"
     },
     {
       "id": 202,
       "start": 721.98,
       "end": 725.6,
-      "text": "and you basically say, hey, what we're proposing"
+      "text": "and you basically say, hey, what we're proposing",
+      "speaker": "SPEAKER_12"
     },
     {
       "id": 203,
       "start": 725.6,
       "end": 727.86,
-      "text": "is not gonna increase the demand for services,"
+      "text": "is not gonna increase the demand for services,",
+      "speaker": "SPEAKER_12"
     },
     {
       "id": 204,
       "start": 727.86,
       "end": 730.24,
-      "text": "yet it appears Frederick Water's asking you"
+      "text": "yet it appears Frederick Water's asking you",
+      "speaker": "SPEAKER_12"
     },
     {
       "id": 205,
       "start": 730.24,
       "end": 732.82,
-      "text": "to rebuild a pump station, a wastewater pump station."
+      "text": "to rebuild a pump station, a wastewater pump station.",
+      "speaker": "SPEAKER_12"
     },
     {
       "id": 206,
       "start": 732.82,
       "end": 735.28,
-      "text": "Can you elaborate on that a little bit more?"
+      "text": "Can you elaborate on that a little bit more?",
+      "speaker": "SPEAKER_12"
     },
     {
       "id": 207,
       "start": 735.28,
       "end": 740.28,
-      "text": "Yes, so this rezoning application was originally"
+      "text": "Yes, so this rezoning application was originally",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 208,
       "start": 740.62,
       "end": 743.44,
-      "text": "intended to be submitted probably about two years ago,"
+      "text": "intended to be submitted probably about two years ago,",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 209,
       "start": 744.62,
       "end": 747.36,
-      "text": "and there are a lot of improvements associated"
+      "text": "and there are a lot of improvements associated",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 210,
       "start": 747.36,
       "end": 749.12,
-      "text": "with the development going on right now"
+      "text": "with the development going on right now",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 211,
       "start": 749.12,
       "end": 754.12,
-      "text": "on the parcels to the east of this particular property,"
+      "text": "on the parcels to the east of this particular property,",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 212,
       "start": 755.26,
       "end": 757.4,
-      "text": "and a project known as Fairfax Downs."
+      "text": "and a project known as Fairfax Downs.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 213,
       "start": 757.4,
       "end": 759.18,
-      "text": "Those developments, the commercial"
+      "text": "Those developments, the commercial",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 214,
       "start": 759.18,
       "end": 760.88,
-      "text": "and residential development that's going in"
+      "text": "and residential development that's going in",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 215,
       "start": 760.88,
       "end": 764.38,
-      "text": "with that project requires the upgrade"
+      "text": "with that project requires the upgrade",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 216,
       "start": 764.38,
       "end": 766.42,
-      "text": "of the existing facilities, the pump station"
+      "text": "of the existing facilities, the pump station",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 217,
       "start": 766.42,
       "end": 769.14,
-      "text": "that's located on the Sharando High School."
+      "text": "that's located on the Sharando High School.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 218,
       "start": 769.14,
       "end": 772.56,
-      "text": "So Frederick Water's comments are clearly stating that"
+      "text": "So Frederick Water's comments are clearly stating that",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 219,
       "start": 772.56,
       "end": 773.7,
-      "text": "until that pump station is upgraded, and there's no demand,"
+      "text": "until that pump station is upgraded, and there's no demand,",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 220,
       "start": 773.7,
       "end": 774.6,
-      "text": "it's not gonna be a good thing."
+      "text": "it's not gonna be a good thing.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 221,
       "start": 774.62,
       "end": 776.4,
-      "text": "and the proper facilities are in place,"
+      "text": "and the proper facilities are in place,",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 222,
       "start": 777.34,
       "end": 782.14,
-      "text": "this particular piece of property won't have capacity to be served."
+      "text": "this particular piece of property won't have capacity to be served.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 223,
       "start": 782.52,
       "end": 786.42,
-      "text": "But that is all happening with the development of the commercial properties to the east."
+      "text": "But that is all happening with the development of the commercial properties to the east.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 224,
       "start": 788.32,
       "end": 793.22,
-      "text": "Mr. Bishop's done a good job at explaining what the application is proposing."
+      "text": "Mr. Bishop's done a good job at explaining what the application is proposing.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 225,
       "start": 793.6,
       "end": 796.32,
-      "text": "We're looking to go down zone from industrial to commercial."
+      "text": "We're looking to go down zone from industrial to commercial.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 226,
       "start": 796.64,
       "end": 797.5,
-      "text": "It makes sense."
+      "text": "It makes sense.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 227,
       "start": 797.62,
       "end": 799.2,
-      "text": "This is a little bit of a cleanup exercise."
+      "text": "This is a little bit of a cleanup exercise.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 228,
       "start": 799.88,
       "end": 803.36,
-      "text": "Again, the Bowman Trucking property was in industrial use many years ago,"
+      "text": "Again, the Bowman Trucking property was in industrial use many years ago,",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 229,
       "start": 803.36,
       "end": 805.52,
-      "text": "and indeed the building has been demolished,"
+      "text": "and indeed the building has been demolished,",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 230,
       "start": 805.66,
       "end": 808.28,
-      "text": "and it is planned for future commercial development."
+      "text": "and it is planned for future commercial development.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 231,
       "start": 808.86,
       "end": 811.86,
-      "text": "So I think I got your question answered."
+      "text": "So I think I got your question answered.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 232,
       "start": 812.32,
       "end": 812.94,
-      "text": "You did. Thank you."
+      "text": "You did. Thank you.",
+      "speaker": "SPEAKER_12"
     },
     {
       "id": 233,
       "start": 812.98,
       "end": 813.82,
-      "text": "I think it's a great project."
+      "text": "I think it's a great project.",
+      "speaker": "SPEAKER_12"
     },
     {
       "id": 234,
       "start": 813.92,
       "end": 814.74,
-      "text": "I certainly support it."
+      "text": "I certainly support it.",
+      "speaker": "SPEAKER_12"
     },
     {
       "id": 235,
       "start": 814.96,
       "end": 815.28,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 236,
       "start": 816.02,
       "end": 816.96,
-      "text": "Mr. Thomas."
+      "text": "Mr. Thomas.",
+      "speaker": "SPEAKER_04"
     },
     {
       "id": 237,
       "start": 817.54,
       "end": 822.5,
-      "text": "Mr. Bishop's comment about the widening of 277,"
+      "text": "Mr. Bishop's comment about the widening of 277,",
+      "speaker": "SPEAKER_04"
     },
     {
       "id": 238,
       "start": 823.12,
       "end": 828.08,
-      "text": "do you agree with the proposal or the discussion that you two had"
+      "text": "do you agree with the proposal or the discussion that you two had",
+      "speaker": "SPEAKER_04"
     },
     {
       "id": 239,
       "start": 828.08,
       "end": 831.88,
-      "text": "about changing the verbiage and including that in your proffer?"
+      "text": "about changing the verbiage and including that in your proffer?",
+      "speaker": "SPEAKER_04"
     },
     {
       "id": 240,
       "start": 832.36,
       "end": 832.84,
-      "text": "Absolutely."
+      "text": "Absolutely.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 241,
       "start": 832.84,
       "end": 833.08,
-      "text": "Absolutely."
+      "text": "Absolutely.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 242,
       "start": 833.08,
       "end": 835.6,
-      "text": "We're going to clarify the GDP and the proffers."
+      "text": "We're going to clarify the GDP and the proffers.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 243,
       "start": 835.9,
       "end": 838.6,
-      "text": "To be more specific, there's going to be 60 feet of right-of-way"
+      "text": "To be more specific, there's going to be 60 feet of right-of-way",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 244,
       "start": 838.6,
       "end": 840.98,
-      "text": "from the center line of existing 277."
+      "text": "from the center line of existing 277.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 245,
       "start": 841.1,
       "end": 842.08,
-      "text": "That's going to be dedicated."
+      "text": "That's going to be dedicated.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 246,
       "start": 843.26,
       "end": 849.66,
-      "text": "And the construction plans are actually underway for the work in 277."
+      "text": "And the construction plans are actually underway for the work in 277.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 247,
       "start": 849.78,
       "end": 853.88,
-      "text": "So all the right-of-way is going to be not only from the subject property,"
+      "text": "So all the right-of-way is going to be not only from the subject property,",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 248,
       "start": 854.02,
       "end": 855.76,
-      "text": "but all the way down to Warrior Drive."
+      "text": "but all the way down to Warrior Drive.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 249,
       "start": 856.64,
       "end": 857.24,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 250,
       "start": 858.34,
       "end": 858.9,
-      "text": "All righty."
+      "text": "All righty.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 251,
       "start": 859.9,
       "end": 860.82,
-      "text": "Any other questions?"
+      "text": "Any other questions?",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 252,
       "start": 862.0,
       "end": 862.8,
-      "text": "Mr. Kearns."
+      "text": "Mr. Kearns.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 253,
       "start": 863.08,
       "end": 864.38,
-      "text": "Real quick one for you."
+      "text": "Real quick one for you.",
+      "speaker": "SPEAKER_05"
     },
     {
       "id": 254,
       "start": 864.56,
       "end": 869.72,
-      "text": "This predates me, the Sharando Center, Town Center, as I'm reading it here."
+      "text": "This predates me, the Sharando Center, Town Center, as I'm reading it here.",
+      "speaker": "SPEAKER_05"
     },
     {
       "id": 255,
       "start": 870.62,
       "end": 875.68,
-      "text": "Is this the final piece of the puzzle in all of that down there?"
+      "text": "Is this the final piece of the puzzle in all of that down there?",
+      "speaker": "SPEAKER_05"
     },
     {
       "id": 256,
       "start": 875.8,
       "end": 882.14,
-      "text": "I'm just curious if this is the last piece to allow all of that to move forward."
+      "text": "I'm just curious if this is the last piece to allow all of that to move forward.",
+      "speaker": "SPEAKER_05"
     },
     {
       "id": 257,
       "start": 882.36,
       "end": 886.8,
-      "text": "I can say this is the last piece of the puzzle owned by Global Headquarters."
+      "text": "I can say this is the last piece of the puzzle owned by Global Headquarters.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 258,
       "start": 887.38,
       "end": 892.78,
-      "text": "If you look at the picture, there are properties to the south and to the west."
+      "text": "If you look at the picture, there are properties to the south and to the west.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 259,
       "start": 893.08,
       "end": 896.8,
-      "text": "That aren't zoned commercial or industrial or anything right now."
+      "text": "That aren't zoned commercial or industrial or anything right now.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 260,
       "start": 897.8,
       "end": 904.1,
-      "text": "But as far as what's fronting on 277, all the way across to Warrior Drive,"
+      "text": "But as far as what's fronting on 277, all the way across to Warrior Drive,",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 261,
       "start": 904.1,
       "end": 906.18,
-      "text": "yes, this is the last piece."
+      "text": "yes, this is the last piece.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 262,
       "start": 910.38,
       "end": 913.8,
-      "text": "Any additional questions?"
+      "text": "Any additional questions?",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 263,
       "start": 914.2,
       "end": 914.76,
-      "text": "Mr. Triplett."
+      "text": "Mr. Triplett.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 264,
       "start": 916.62,
       "end": 917.4,
-      "text": "Excuse me."
+      "text": "Excuse me.",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 265,
       "start": 917.9,
       "end": 921.3,
-      "text": "Does this affect any of the houses there, a house or two?"
+      "text": "Does this affect any of the houses there, a house or two?",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 266,
       "start": 921.66,
       "end": 923.06,
-      "text": "Are they going to be demolished?"
+      "text": "Are they going to be demolished?",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 267,
       "start": 923.08,
       "end": 925.56,
-      "text": "No, sir."
+      "text": "No, sir.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 268,
       "start": 925.98,
       "end": 927.3,
-      "text": "Right now, it's vacant."
+      "text": "Right now, it's vacant.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 269,
       "start": 927.56,
       "end": 930.28,
-      "text": "The old Bowman Trucking site has been demolished."
+      "text": "The old Bowman Trucking site has been demolished.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 270,
       "start": 930.38,
       "end": 935.12,
-      "text": "It's open land, and it is going to be incorporated essentially with the adjacent."
+      "text": "It's open land, and it is going to be incorporated essentially with the adjacent.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 271,
       "start": 935.96,
       "end": 936.86,
-      "text": "There's a land bay."
+      "text": "There's a land bay.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 272,
       "start": 937.46,
       "end": 943.08,
-      "text": "There's a proposed road called Shrewsbury that will be constructed leading from 277"
+      "text": "There's a proposed road called Shrewsbury that will be constructed leading from 277",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 273,
       "start": 943.72,
       "end": 950.22,
-      "text": "down to the proposed subdivision below the commercial properties fronting on 277"
+      "text": "down to the proposed subdivision below the commercial properties fronting on 277",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 274,
       "start": 951.06,
       "end": 952.7,
-      "text": "and to the immediate."
+      "text": "and to the immediate.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 275,
       "start": 953.08,
       "end": 958.8,
-      "text": "To the west of the subject property is an existing commercial use."
+      "text": "To the west of the subject property is an existing commercial use.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 276,
       "start": 958.9,
       "end": 959.98,
-      "text": "It's a Dollar Tree, I believe."
+      "text": "It's a Dollar Tree, I believe.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 277,
       "start": 960.52,
       "end": 965.0,
-      "text": "To the south is a property owned by the Neff Construction Company."
+      "text": "To the south is a property owned by the Neff Construction Company.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 278,
       "start": 965.76,
       "end": 966.0,
-      "text": "Okay."
+      "text": "Okay.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 279,
       "start": 966.08,
       "end": 966.68,
-      "text": "Thank you, sir."
+      "text": "Thank you, sir.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 280,
       "start": 968.04,
       "end": 968.72,
-      "text": "All right."
+      "text": "All right.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 281,
       "start": 969.54,
       "end": 969.9,
-      "text": "We good?"
+      "text": "We good?",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 282,
       "start": 971.7,
       "end": 972.44,
-      "text": "Thanks, sir."
+      "text": "Thanks, sir.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 283,
       "start": 972.6,
       "end": 973.36,
-      "text": "Appreciate your time."
+      "text": "Appreciate your time.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 284,
       "start": 973.42,
       "end": 973.76,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 285,
       "start": 973.92,
       "end": 974.26,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 286,
       "start": 975.18,
       "end": 980.62,
-      "text": "I open this public hearing to anyone who wants to come forward and speak for or against this item."
+      "text": "I open this public hearing to anyone who wants to come forward and speak for or against this item.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 287,
       "start": 980.62,
       "end": 981.88,
-      "text": "Please come forward now."
+      "text": "Please come forward now.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 288,
       "start": 981.98,
       "end": 982.6,
-      "text": "State your name."
+      "text": "State your name.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 289,
       "start": 982.6,
       "end": 983.5,
-      "text": "You're a Magisterial District."
+      "text": "You're a Magisterial District.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 290,
       "start": 983.64,
       "end": 985.8,
-      "text": "And please keep your comments to three minutes, please."
+      "text": "And please keep your comments to three minutes, please.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 291,
       "start": 986.34,
       "end": 988.04,
-      "text": "I don't know if I get three minutes or not."
+      "text": "I don't know if I get three minutes or not.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 292,
       "start": 988.18,
       "end": 989.14,
-      "text": "I'm Ron Allen."
+      "text": "I'm Ron Allen.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 293,
       "start": 991.08,
       "end": 992.98,
-      "text": "What's your Magisterial District, sir?"
+      "text": "What's your Magisterial District, sir?",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 294,
       "start": 993.0,
       "end": 994.88,
-      "text": "I'm right across right over this property."
+      "text": "I'm right across right over this property.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 295,
       "start": 995.4,
       "end": 997.34,
-      "text": "It's directly out my picture window."
+      "text": "It's directly out my picture window.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 296,
       "start": 997.72,
       "end": 997.88,
-      "text": "Okay."
+      "text": "Okay.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 297,
       "start": 998.2,
       "end": 999.16,
-      "text": "There's no houses there."
+      "text": "There's no houses there.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 298,
       "start": 999.24,
       "end": 1000.0,
-      "text": "There's nothing there."
+      "text": "There's nothing there.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 299,
       "start": 1000.7,
       "end": 1003.7,
-      "text": "My concern is how much of the road they're going to widen."
+      "text": "My concern is how much of the road they're going to widen.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 300,
       "start": 1003.84,
       "end": 1006.96,
-      "text": "We've been told for 30 years they're going to take our houses out of there."
+      "text": "We've been told for 30 years they're going to take our houses out of there.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 301,
       "start": 1007.1,
       "end": 1012.34,
-      "text": "I'm concerned about saving my house, seeing that that entire side of the road is completely open."
+      "text": "I'm concerned about saving my house, seeing that that entire side of the road is completely open.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 302,
       "start": 1012.48,
       "end": 1012.58,
-      "text": "Okay."
+      "text": "Okay.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 303,
       "start": 1012.92,
       "end": 1016.22,
-      "text": "So we've gotta plan ahead for a lot of things where there's nothing on that side right now."
+      "text": "So we've gotta plan ahead for a lot of things where there's nothing on that side right now.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 304,
       "start": 1016.54,
       "end": 1021.94,
-      "text": "She's removed the property, I mean the buildings and all that, and what they put in there is fine"
+      "text": "She's removed the property, I mean the buildings and all that, and what they put in there is fine",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 305,
       "start": 1021.94,
       "end": 1023.5,
-      "text": "by me but it's out my picture window."
+      "text": "by me but it's out my picture window.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 306,
       "start": 1024.1,
       "end": 1027.62,
-      "text": "That's my only concern is what they're going to do with that road."
+      "text": "That's my only concern is what they're going to do with that road.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 307,
       "start": 1027.62,
       "end": 1031.38,
-      "text": "Is that going to affect anything on that north side of the road?"
+      "text": "Is that going to affect anything on that north side of the road?",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 308,
       "start": 1032.74,
       "end": 1034.42,
-      "text": "That's my question."
+      "text": "That's my question.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 309,
       "start": 1034.42,
       "end": 1037.98,
-      "text": "We'll let the applicant, if you must, answer the question."
+      "text": "We'll let the applicant, if you must, answer the question.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 310,
       "start": 1037.98,
       "end": 1041.92,
-      "text": "If you have more to say ."
+      "text": "If you have more to say .",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 311,
       "start": 1041.92,
       "end": 1043.88,
-      "text": "you're going to do. Thanks, sir."
+      "text": "you're going to do. Thanks, sir.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 312,
       "start": 1044.0,
       "end": 1045.1,
-      "text": "Save that house."
+      "text": "Save that house.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 313,
       "start": 1046.1,
       "end": 1047.82,
-      "text": "So to address his concern,"
+      "text": "So to address his concern,",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 314,
       "start": 1048.18,
       "end": 1049.98,
-      "text": "the road improvements that are happening right"
+      "text": "the road improvements that are happening right",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 315,
       "start": 1049.98,
       "end": 1052.08,
-      "text": "now are all happening on"
+      "text": "now are all happening on",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 316,
       "start": 1052.08,
       "end": 1053.88,
-      "text": "our side of the centerline."
+      "text": "our side of the centerline.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 317,
       "start": 1054.66,
       "end": 1054.84,
-      "text": "Their"
+      "text": "Their",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 318,
       "start": 1054.84,
       "end": 1057.96,
-      "text": "improvements are on the eastbound"
+      "text": "improvements are on the eastbound",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 319,
       "start": 1057.96,
       "end": 1059.52,
-      "text": "side of 277."
+      "text": "side of 277.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 320,
       "start": 1059.9,
       "end": 1061.16,
-      "text": "Additional turn lanes,"
+      "text": "Additional turn lanes,",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 321,
       "start": 1061.92,
       "end": 1063.82,
-      "text": "road widening. It"
+      "text": "road widening. It",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 322,
       "start": 1063.82,
       "end": 1066.06,
-      "text": "appears there are going to be some medians constructed as well"
+      "text": "appears there are going to be some medians constructed as well",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 323,
       "start": 1066.06,
       "end": 1067.7,
-      "text": "in the centerline."
+      "text": "in the centerline.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 324,
       "start": 1067.76,
       "end": 1069.78,
-      "text": "So all the construction that's happening is"
+      "text": "So all the construction that's happening is",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 325,
       "start": 1069.78,
       "end": 1071.84,
-      "text": "moving from centerline"
+      "text": "moving from centerline",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 326,
       "start": 1071.84,
       "end": 1073.82,
-      "text": "277 south away"
+      "text": "277 south away",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 327,
       "start": 1073.82,
       "end": 1075.72,
-      "text": "from the gentleman's property. So there's nothing"
+      "text": "from the gentleman's property. So there's nothing",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 328,
       "start": 1075.72,
       "end": 1077.72,
-      "text": "on this gentleman's side of the property? Nothing"
+      "text": "on this gentleman's side of the property? Nothing",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 329,
       "start": 1077.72,
       "end": 1079.42,
-      "text": "that's proposed on his side of the property, correct."
+      "text": "that's proposed on his side of the property, correct.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 330,
       "start": 1079.86,
       "end": 1081.76,
-      "text": "Okay. Basically what I want"
+      "text": "Okay. Basically what I want",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 331,
       "start": 1081.76,
       "end": 1083.38,
-      "text": "to know. Mr. Bishop?"
+      "text": "to know. Mr. Bishop?",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 332,
       "start": 1084.8,
       "end": 1085.76,
-      "text": "Sorry, I fell out of the gate."
+      "text": "Sorry, I fell out of the gate.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 333,
       "start": 1086.14,
       "end": 1087.76,
-      "text": "You need to jump in. Absolutely."
+      "text": "You need to jump in. Absolutely.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 334,
       "start": 1088.68,
       "end": 1089.08,
-      "text": "There's,"
+      "text": "There's,",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 335,
       "start": 1089.68,
       "end": 1091.66,
-      "text": "this doesn't change the fact that there is a"
+      "text": "this doesn't change the fact that there is a",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 336,
       "start": 1091.66,
       "end": 1093.62,
-      "text": "comprehensive plan to"
+      "text": "comprehensive plan to",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 337,
       "start": 1093.62,
       "end": 1095.64,
-      "text": "widen 277 through this,"
+      "text": "widen 277 through this,",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 338,
       "start": 1095.74,
       "end": 1097.52,
-      "text": "and I cannot guarantee it would not"
+      "text": "and I cannot guarantee it would not",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 339,
       "start": 1097.52,
       "end": 1099.9,
-      "text": "at some point in the undetermined future"
+      "text": "at some point in the undetermined future",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 340,
       "start": 1099.9,
       "end": 1101.82,
-      "text": "impact this gentleman's property."
+      "text": "impact this gentleman's property.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 341,
       "start": 1101.84,
       "end": 1103.74,
-      "text": "What the applicant's doing today, no, it"
+      "text": "What the applicant's doing today, no, it",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 342,
       "start": 1103.74,
       "end": 1105.42,
-      "text": "does not. However,"
+      "text": "does not. However,",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 343,
       "start": 1105.7,
       "end": 1108.2,
-      "text": "specific to the overall 277"
+      "text": "specific to the overall 277",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 344,
       "start": 1108.2,
       "end": 1109.94,
-      "text": "widening, which of course is unfunded"
+      "text": "widening, which of course is unfunded",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 345,
       "start": 1109.94,
       "end": 1111.36,
-      "text": "and the timeline is undetermined,"
+      "text": "and the timeline is undetermined,",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 346,
       "start": 1111.64,
       "end": 1113.7,
-      "text": "I can't say it would or would not impact"
+      "text": "I can't say it would or would not impact",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 347,
       "start": 1113.7,
       "end": 1115.62,
-      "text": "his property. It most likely would if I'm being"
+      "text": "his property. It most likely would if I'm being",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 348,
       "start": 1115.62,
       "end": 1117.88,
-      "text": "100% honest. I don't know to what extent."
+      "text": "100% honest. I don't know to what extent.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 349,
       "start": 1118.62,
       "end": 1119.98,
-      "text": "So I just wanted to be clear"
+      "text": "So I just wanted to be clear",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 350,
       "start": 1119.98,
       "end": 1121.76,
-      "text": "that we're talking a little bit about two different"
+      "text": "that we're talking a little bit about two different",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 351,
       "start": 1121.76,
       "end": 1123.68,
-      "text": "things there. I appreciate you jumping in, because"
+      "text": "things there. I appreciate you jumping in, because",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 352,
       "start": 1123.68,
       "end": 1125.92,
-      "text": "I wanted to clarify that what the applicant's"
+      "text": "I wanted to clarify that what the applicant's",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 353,
       "start": 1125.92,
       "end": 1127.22,
-      "text": "doing is not going to impact him."
+      "text": "doing is not going to impact him.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 354,
       "start": 1128.02,
       "end": 1130.02,
-      "text": "He deserves a fair full picture."
+      "text": "He deserves a fair full picture.",
+      "speaker": "SPEAKER_11"
     },
     {
       "id": 355,
       "start": 1130.02,
       "end": 1131.82,
-      "text": "Absolutely, and let the gentleman talk."
+      "text": "Absolutely, and let the gentleman talk.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 356,
       "start": 1131.84,
       "end": 1133.12,
-      "text": "I'll talk to you later about transportation."
+      "text": "I'll talk to you later about transportation.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 357,
       "start": 1133.58,
       "end": 1134.58,
-      "text": "So, thank you."
+      "text": "So, thank you.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 358,
       "start": 1135.5,
       "end": 1136.18,
-      "text": "There is"
+      "text": "There is",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 359,
       "start": 1136.18,
       "end": 1139.92,
-      "text": "probably going to be some construction on my"
+      "text": "probably going to be some construction on my",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 360,
       "start": 1139.92,
       "end": 1141.78,
-      "text": "side. There'll be a right-hand turn lane going"
+      "text": "side. There'll be a right-hand turn lane going",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 361,
       "start": 1141.78,
       "end": 1143.86,
-      "text": "into the street. I'm on the corner of Nottoway."
+      "text": "into the street. I'm on the corner of Nottoway.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 362,
       "start": 1143.96,
       "end": 1145.42,
-      "text": "It's a street right there in front of it."
+      "text": "It's a street right there in front of it.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 363,
       "start": 1145.88,
       "end": 1147.68,
-      "text": "Like I said, all this is out my picture window."
+      "text": "Like I said, all this is out my picture window.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 364,
       "start": 1148.34,
       "end": 1149.8,
-      "text": "And I had originally the"
+      "text": "And I had originally the",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 365,
       "start": 1149.8,
       "end": 1151.9,
-      "text": "narrowest place, because he had a home across"
+      "text": "narrowest place, because he had a home across",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 366,
       "start": 1151.9,
       "end": 1153.86,
-      "text": "the road there. But I do know that"
+      "text": "the road there. But I do know that",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 367,
       "start": 1153.86,
       "end": 1155.76,
-      "text": "originally with what the plans that they've"
+      "text": "originally with what the plans that they've",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 368,
       "start": 1155.76,
       "end": 1157.9,
-      "text": "showed before, they only needed"
+      "text": "showed before, they only needed",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 369,
       "start": 1157.9,
       "end": 1159.7,
-      "text": "to take like 10 feet off the other side, and they"
+      "text": "to take like 10 feet off the other side, and they",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 370,
       "start": 1159.7,
       "end": 1161.74,
-      "text": "could save us. So that was my"
+      "text": "could save us. So that was my",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 371,
       "start": 1161.74,
       "end": 1163.66,
-      "text": "biggest concern. That's all I came here for"
+      "text": "biggest concern. That's all I came here for",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 372,
       "start": 1163.66,
       "end": 1165.64,
-      "text": "tonight, just to see about saving"
+      "text": "tonight, just to see about saving",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 373,
       "start": 1165.64,
       "end": 1167.82,
-      "text": "my home and what's going to happen. And it sounds like"
+      "text": "my home and what's going to happen. And it sounds like",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 374,
       "start": 1167.82,
       "end": 1169.78,
-      "text": "as long as I get another 20 years, I might"
+      "text": "as long as I get another 20 years, I might",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 375,
       "start": 1169.78,
       "end": 1170.78,
-      "text": "not be there much longer."
+      "text": "not be there much longer.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 376,
       "start": 1172.32,
       "end": 1173.18,
-      "text": "Thank you, sir."
+      "text": "Thank you, sir.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 377,
       "start": 1174.1,
       "end": 1175.84,
-      "text": "Alrighty. Thank you for coming"
+      "text": "Alrighty. Thank you for coming",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 378,
       "start": 1175.84,
       "end": 1176.6,
-      "text": "forward, Doug."
+      "text": "forward, Doug.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 379,
       "start": 1177.3,
       "end": 1179.72,
-      "text": "Anybody else to Doug this time?"
+      "text": "Anybody else to Doug this time?",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 380,
       "start": 1180.32,
       "end": 1181.68,
-      "text": "Alright. I'm going to close"
+      "text": "Alright. I'm going to close",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 381,
       "start": 1181.68,
       "end": 1182.6,
-      "text": "the public hearing."
+      "text": "the public hearing.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 382,
       "start": 1184.8,
       "end": 1185.88,
-      "text": "Commissioners, discussion?"
+      "text": "Commissioners, discussion?",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 383,
       "start": 1187.62,
       "end": 1189.04,
-      "text": "Anybody have anything to say?"
+      "text": "Anybody have anything to say?",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 384,
       "start": 1190.9,
       "end": 1191.72,
-      "text": "Well, okay."
+      "text": "Well, okay.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 385,
       "start": 1191.74,
       "end": 1193.38,
-      "text": "We're on a good one here."
+      "text": "We're on a good one here.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 386,
       "start": 1193.66,
       "end": 1195.6,
-      "text": "Mr. Chairman, I recommend approval of"
+      "text": "Mr. Chairman, I recommend approval of",
+      "speaker": "SPEAKER_04"
     },
     {
       "id": 387,
       "start": 1195.6,
       "end": 1197.76,
-      "text": "rezoning 02-23"
+      "text": "rezoning 02-23",
+      "speaker": "SPEAKER_04"
     },
     {
       "id": 388,
       "start": 1197.76,
       "end": 1199.38,
-      "text": "of global headquarters."
+      "text": "of global headquarters.",
+      "speaker": "SPEAKER_04"
     },
     {
       "id": 389,
       "start": 1200.6,
       "end": 1201.9,
-      "text": "Alright. I've got a motion."
+      "text": "Alright. I've got a motion.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 390,
       "start": 1202.2,
       "end": 1203.94,
-      "text": "I'll second it. Alright. We have a second."
+      "text": "I'll second it. Alright. We have a second.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 391,
       "start": 1204.12,
       "end": 1205.38,
-      "text": "We'll start with Mr. Triplett."
+      "text": "We'll start with Mr. Triplett.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 392,
       "start": 1206.48,
       "end": 1207.0,
-      "text": "Yes."
+      "text": "Yes.",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 393,
       "start": 1207.54,
       "end": 1209.1,
-      "text": "Higgins, yes. Manuel, yes."
+      "text": "Higgins, yes. Manuel, yes.",
+      "speaker": "SPEAKER_12"
     },
     {
       "id": 394,
       "start": 1209.62,
       "end": 1211.12,
-      "text": "Kern, yes. Orndorff, yes."
+      "text": "Kern, yes. Orndorff, yes.",
+      "speaker": "SPEAKER_12"
     },
     {
       "id": 395,
       "start": 1211.32,
       "end": 1212.86,
-      "text": "Thomas, yes. Molden, yes."
+      "text": "Thomas, yes. Molden, yes.",
+      "speaker": "SPEAKER_12"
     },
     {
       "id": 396,
       "start": 1213.46,
       "end": 1215.66,
-      "text": "Stowe, yes. Markert, yes."
+      "text": "Stowe, yes. Markert, yes.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 397,
       "start": 1216.3,
       "end": 1217.78,
-      "text": "Brumback, yes. And the chair"
+      "text": "Brumback, yes. And the chair",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 398,
       "start": 1217.78,
       "end": 1219.62,
-      "text": "votes yes. Alright. And this will"
+      "text": "votes yes. Alright. And this will",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 399,
       "start": 1219.62,
       "end": 1221.72,
-      "text": "move forward to the Board of Supervisors."
+      "text": "move forward to the Board of Supervisors.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 400,
       "start": 1221.74,
       "end": 1222.3,
-      "text": "Who's"
+      "text": "Who's",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 401,
       "start": 1222.3,
       "end": 1225.74,
-      "text": "September 13th?"
+      "text": "September 13th?",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 402,
       "start": 1230.76,
       "end": 1232.54,
-      "text": "Alright. Next item up."
+      "text": "Alright. Next item up.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 403,
       "start": 1233.7,
       "end": 1235.36,
-      "text": "Hello, Ms. Feltner. How are you?"
+      "text": "Hello, Ms. Feltner. How are you?",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 404,
       "start": 1235.82,
       "end": 1237.08,
-      "text": "I'm good. How are you?"
+      "text": "I'm good. How are you?",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 405,
       "start": 1237.22,
       "end": 1237.42,
-      "text": "Good."
+      "text": "Good.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 406,
       "start": 1240.12,
       "end": 1241.6,
-      "text": "Thank you, Mr. Chairman and"
+      "text": "Thank you, Mr. Chairman and",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 407,
       "start": 1241.6,
       "end": 1243.32,
-      "text": "members of the Commission. This is a"
+      "text": "members of the Commission. This is a",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 408,
       "start": 1243.32,
       "end": 1245.26,
-      "text": "conditional use permit for a tractor truck"
+      "text": "conditional use permit for a tractor truck",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 409,
       "start": 1245.26,
       "end": 1246.48,
-      "text": "and trailer truck parking."
+      "text": "and trailer truck parking.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 410,
       "start": 1247.34,
       "end": 1249.42,
-      "text": "The subject property is located"
+      "text": "The subject property is located",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 411,
       "start": 1249.42,
       "end": 1251.62,
-      "text": "on Ebert Road in the Stonewall Magisterial"
+      "text": "on Ebert Road in the Stonewall Magisterial",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 412,
       "start": 1251.62,
       "end": 1252.16,
-      "text": "District."
+      "text": "District.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 413,
       "start": 1254.16,
       "end": 1255.02,
-      "text": "If you turn your"
+      "text": "If you turn your",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 414,
       "start": 1255.02,
       "end": 1257.58,
-      "text": "turn to the left, the property"
+      "text": "turn to the left, the property",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 415,
       "start": 1257.58,
       "end": 1258.62,
-      "text": "is outlined in blue."
+      "text": "is outlined in blue.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 416,
       "start": 1259.54,
       "end": 1261.52,
-      "text": "It is located east of"
+      "text": "It is located east of",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 417,
       "start": 1261.52,
       "end": 1263.58,
-      "text": "81 and west of Route 11"
+      "text": "81 and west of Route 11",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 418,
       "start": 1263.58,
       "end": 1265.34,
-      "text": "or Martinsburg Pike."
+      "text": "or Martinsburg Pike.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 419,
       "start": 1265.62,
       "end": 1267.84,
-      "text": "And it's accessed off of Ebert Road."
+      "text": "And it's accessed off of Ebert Road.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 420,
       "start": 1269.56,
       "end": 1270.5,
-      "text": "There's the Ebert Road."
+      "text": "There's the Ebert Road.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 421,
       "start": 1273.54,
       "end": 1275.48,
-      "text": "The parking layout as proposed"
+      "text": "The parking layout as proposed",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 422,
       "start": 1275.48,
       "end": 1277.4,
-      "text": "is approximately 107 parking"
+      "text": "is approximately 107 parking",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 423,
       "start": 1277.4,
       "end": 1277.92,
-      "text": "spaces."
+      "text": "spaces.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 424,
       "start": 1281.62,
       "end": 1285.12,
-      "text": "Tractor truck and trailer truck parking"
+      "text": "Tractor truck and trailer truck parking",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 425,
       "start": 1285.12,
       "end": 1287.06,
-      "text": "is only permitted as a conditional"
+      "text": "is only permitted as a conditional",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 426,
       "start": 1287.06,
       "end": 1288.76,
-      "text": "use permit in an M2 district."
+      "text": "use permit in an M2 district.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 427,
       "start": 1289.24,
       "end": 1290.8,
-      "text": "The property is zoned M2"
+      "text": "The property is zoned M2",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 428,
       "start": 1290.8,
       "end": 1293.16,
-      "text": "and the current land"
+      "text": "and the current land",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 429,
       "start": 1293.16,
       "end": 1295.2,
-      "text": "use is vacant. The surrounding"
+      "text": "use is vacant. The surrounding",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 430,
       "start": 1295.2,
       "end": 1296.84,
-      "text": "properties are also zoned M2"
+      "text": "properties are also zoned M2",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 431,
       "start": 1296.84,
       "end": 1298.82,
-      "text": "and utilized for industrial purposes."
+      "text": "and utilized for industrial purposes.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 432,
       "start": 1301.24,
       "end": 1302.96,
-      "text": "The supplementary use"
+      "text": "The supplementary use",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 433,
       "start": 1302.96,
       "end": 1305.22,
-      "text": "regulations require that the area utilized"
+      "text": "regulations require that the area utilized",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 434,
       "start": 1305.22,
       "end": 1306.78,
-      "text": "for parking and the storage"
+      "text": "for parking and the storage",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 435,
       "start": 1306.78,
       "end": 1309.02,
-      "text": "shall have a gravel or paved surface."
+      "text": "shall have a gravel or paved surface.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 436,
       "start": 1309.52,
       "end": 1311.38,
-      "text": "All paved and gravel surfaces have to be"
+      "text": "All paved and gravel surfaces have to be",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 437,
       "start": 1311.38,
       "end": 1312.3,
-      "text": "properly maintained."
+      "text": "properly maintained.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 438,
       "start": 1313.22,
       "end": 1315.54,
-      "text": "No inoperable tractor trucks or damaged"
+      "text": "No inoperable tractor trucks or damaged",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 439,
       "start": 1315.54,
       "end": 1317.22,
-      "text": "salvaged trucks or unlicensed"
+      "text": "salvaged trucks or unlicensed",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 440,
       "start": 1317.22,
       "end": 1319.26,
-      "text": "trailers shall be parked or stored on the"
+      "text": "trailers shall be parked or stored on the",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 441,
       "start": 1319.26,
       "end": 1321.34,
-      "text": "property. Fuel sales"
+      "text": "property. Fuel sales",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 442,
       "start": 1321.34,
       "end": 1322.0,
-      "text": "are not permitted."
+      "text": "are not permitted.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 443,
       "start": 1323.22,
       "end": 1325.2,
-      "text": "Maintenance of truck and trailers are"
+      "text": "Maintenance of truck and trailers are",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 444,
       "start": 1325.2,
       "end": 1326.28,
-      "text": "also not permitted."
+      "text": "also not permitted.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 445,
       "start": 1327.76,
       "end": 1329.46,
-      "text": "The facility shall be required"
+      "text": "The facility shall be required",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 446,
       "start": 1329.46,
       "end": 1330.52,
-      "text": "to be landscaped"
+      "text": "to be landscaped",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 447,
       "start": 1330.52,
       "end": 1333.16,
-      "text": "shall be required to"
+      "text": "shall be required to",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 448,
       "start": 1333.16,
       "end": 1335.42,
-      "text": "landscape the yard area and the front setback"
+      "text": "landscape the yard area and the front setback",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 449,
       "start": 1335.42,
       "end": 1336.92,
-      "text": "as well as the side and the rear."
+      "text": "as well as the side and the rear.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 450,
       "start": 1338.06,
       "end": 1339.24,
-      "text": "And the Board of Supervisors"
+      "text": "And the Board of Supervisors",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 451,
       "start": 1339.24,
       "end": 1341.06,
-      "text": "can opt for an"
+      "text": "can opt for an",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 452,
       "start": 1341.06,
       "end": 1344.4,
-      "text": "alternative landscaping based off of the topography"
+      "text": "alternative landscaping based off of the topography",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 453,
       "start": 1344.4,
       "end": 1345.94,
-      "text": "and the adjacent land uses."
+      "text": "and the adjacent land uses.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 454,
       "start": 1346.94,
       "end": 1349.04,
-      "text": "A site plan in accordance with the Frederick County"
+      "text": "A site plan in accordance with the Frederick County",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 455,
       "start": 1349.04,
       "end": 1351.7,
-      "text": "requirements of Article 8 is required to be submitted"
+      "text": "requirements of Article 8 is required to be submitted",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 456,
       "start": 1351.7,
       "end": 1353.5,
-      "text": "and approved by Frederick County."
+      "text": "and approved by Frederick County.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 457,
       "start": 1355.56,
       "end": 1358.28,
-      "text": "Should the Planning Commission find this use appropriate,"
+      "text": "Should the Planning Commission find this use appropriate,",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 458,
       "start": 1358.28,
       "end": 1360.22,
-      "text": "staff would recommend the following conditions."
+      "text": "staff would recommend the following conditions.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 459,
       "start": 1360.9,
       "end": 1362.98,
-      "text": "All review agency comments and requirements"
+      "text": "All review agency comments and requirements",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 460,
       "start": 1362.98,
       "end": 1364.62,
-      "text": "shall be complied with at all times."
+      "text": "shall be complied with at all times.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 461,
       "start": 1365.34,
       "end": 1367.1,
-      "text": "A site plan shall be submitted and approved"
+      "text": "A site plan shall be submitted and approved",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 462,
       "start": 1367.1,
       "end": 1369.62,
-      "text": "by Frederick County prior to the establishment of the use."
+      "text": "by Frederick County prior to the establishment of the use.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 463,
       "start": 1370.26,
       "end": 1370.98,
-      "text": "The site plan shall"
+      "text": "The site plan shall",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 464,
       "start": 1370.98,
       "end": 1373.14,
-      "text": "meet the requirements of the Frederick County Zoning Ordinance"
+      "text": "meet the requirements of the Frederick County Zoning Ordinance",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 465,
       "start": 1373.14,
       "end": 1374.78,
-      "text": "for tractor truck and trailer truck"
+      "text": "for tractor truck and trailer truck",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 466,
       "start": 1374.78,
       "end": 1377.0,
-      "text": "tractor truck trailer parking."
+      "text": "tractor truck trailer parking.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 467,
       "start": 1377.68,
       "end": 1379.1,
-      "text": "Any expansion requires"
+      "text": "Any expansion requires",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 468,
       "start": 1379.1,
       "end": 1381.06,
-      "text": "a new conditional use permit."
+      "text": "a new conditional use permit.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 469,
       "start": 1382.24,
       "end": 1383.2,
-      "text": "Following the public hearing,"
+      "text": "Following the public hearing,",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 470,
       "start": 1383.34,
       "end": 1385.1,
-      "text": "staff is seeking a recommendation from the Planning"
+      "text": "staff is seeking a recommendation from the Planning",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 471,
       "start": 1385.1,
       "end": 1387.58,
-      "text": "Commission to forward to the Board of Supervisors."
+      "text": "Commission to forward to the Board of Supervisors.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 472,
       "start": 1388.12,
       "end": 1389.18,
-      "text": "Staff is available to"
+      "text": "Staff is available to",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 473,
       "start": 1389.18,
       "end": 1391.04,
-      "text": "answer any questions and the applicant"
+      "text": "answer any questions and the applicant",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 474,
       "start": 1391.04,
       "end": 1392.98,
-      "text": "as well as the applicant representative is also"
+      "text": "as well as the applicant representative is also",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 475,
       "start": 1392.98,
       "end": 1393.44,
-      "text": "available."
+      "text": "available.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 476,
       "start": 1394.82,
       "end": 1397.0,
-      "text": "Thank you, Ms. Feltner. Do I have any"
+      "text": "Thank you, Ms. Feltner. Do I have any",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 477,
       "start": 1397.0,
       "end": 1398.14,
-      "text": "questions for Ms. Feltner?"
+      "text": "questions for Ms. Feltner?",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 478,
       "start": 1399.3,
       "end": 1399.7,
-      "text": "Nothing."
+      "text": "Nothing.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 479,
       "start": 1399.7,
       "end": 1401.74,
-      "text": "Okay, Mr. Stowe."
+      "text": "Okay, Mr. Stowe.",
+      "speaker": "SPEAKER_12"
     },
     {
       "id": 480,
       "start": 1403.64,
       "end": 1405.54,
-      "text": "Was there a complaint about this property"
+      "text": "Was there a complaint about this property",
+      "speaker": "SPEAKER_12"
     },
     {
       "id": 481,
       "start": 1405.54,
       "end": 1406.76,
-      "text": "or is this voluntary?"
+      "text": "or is this voluntary?",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 482,
       "start": 1407.3,
       "end": 1409.02,
-      "text": "This is an active violation"
+      "text": "This is an active violation",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 483,
       "start": 1409.02,
       "end": 1411.76,
-      "text": "to come into compliance."
+      "text": "to come into compliance.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 484,
       "start": 1412.18,
       "end": 1413.76,
-      "text": "A conditional use permit is required"
+      "text": "A conditional use permit is required",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 485,
       "start": 1413.76,
       "end": 1415.52,
-      "text": "and the applicant is seeking such."
+      "text": "and the applicant is seeking such.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 486,
       "start": 1416.32,
       "end": 1416.98,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 487,
       "start": 1416.98,
       "end": 1417.5,
-      "text": "Okay."
+      "text": "Okay.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 488,
       "start": 1418.62,
       "end": 1419.5,
-      "text": "Am I right?"
+      "text": "Am I right?",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 489,
       "start": 1420.54,
       "end": 1421.94,
-      "text": "We're good. Okay."
+      "text": "We're good. Okay.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 490,
       "start": 1422.84,
       "end": 1424.2,
-      "text": "Any questions for the"
+      "text": "Any questions for the",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 491,
       "start": 1424.2,
       "end": 1425.72,
-      "text": "Ms. Brubach?"
+      "text": "Ms. Brubach?",
+      "speaker": "SPEAKER_07"
     },
     {
       "id": 492,
       "start": 1426.0,
       "end": 1428.9,
-      "text": "To piggyback off that,"
+      "text": "To piggyback off that,",
+      "speaker": "SPEAKER_07"
     },
     {
       "id": 493,
       "start": 1429.0,
       "end": 1429.58,
-      "text": "it's currently,"
+      "text": "it's currently,",
+      "speaker": "SPEAKER_07"
     },
     {
       "id": 494,
       "start": 1429.7,
       "end": 1431.82,
-      "text": "it's used for trailer storage"
+      "text": "it's used for trailer storage",
+      "speaker": "SPEAKER_07"
     },
     {
       "id": 495,
       "start": 1431.82,
       "end": 1433.6,
-      "text": "or trailer truck parking."
+      "text": "or trailer truck parking.",
+      "speaker": "SPEAKER_07"
     },
     {
       "id": 496,
       "start": 1434.16,
       "end": 1435.66,
-      "text": "It's currently vacant,"
+      "text": "It's currently vacant,",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 497,
       "start": 1435.92,
       "end": 1437.66,
-      "text": "but it is currently under a violation"
+      "text": "but it is currently under a violation",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 498,
       "start": 1437.66,
       "end": 1439.04,
-      "text": "for the trailer."
+      "text": "for the trailer.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 499,
       "start": 1439.68,
       "end": 1440.06,
-      "text": "Yes."
+      "text": "Yes.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 500,
       "start": 1442.28,
       "end": 1443.08,
-      "text": "All right."
+      "text": "All right.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 501,
       "start": 1443.84,
       "end": 1444.22,
-      "text": "Looking."
+      "text": "Looking.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 502,
       "start": 1444.92,
       "end": 1447.04,
-      "text": "Anybody have any questions for the applicant?"
+      "text": "Anybody have any questions for the applicant?",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 503,
       "start": 1449.18,
       "end": 1449.7,
-      "text": "Okay."
+      "text": "Okay.",
+      "speaker": "SPEAKER_10"
     },
     {
       "id": 504,
       "start": 1449.98,
       "end": 1450.8,
-      "text": "Thank you, Ms. Feltner."
+      "text": "Thank you, Ms. Feltner.",
+      "speaker": "SPEAKER_10"
     },
     {
       "id": 505,
       "start": 1450.86,
       "end": 1452.78,
-      "text": "I'm sorry, Amy. When you said it was currently vacant,"
+      "text": "I'm sorry, Amy. When you said it was currently vacant,",
+      "speaker": "SPEAKER_10"
     },
     {
       "id": 506,
       "start": 1453.32,
       "end": 1455.08,
-      "text": "that means there's no tractor truck parking"
+      "text": "that means there's no tractor truck parking",
+      "speaker": "SPEAKER_10"
     },
     {
       "id": 507,
       "start": 1455.08,
       "end": 1455.74,
-      "text": "on there now at all?"
+      "text": "on there now at all?",
+      "speaker": "SPEAKER_10"
     },
     {
       "id": 508,
       "start": 1455.74,
       "end": 1457.8,
-      "text": "So they come in compliance, they got them all"
+      "text": "So they come in compliance, they got them all",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 509,
       "start": 1457.8,
       "end": 1458.12,
-      "text": "off there?"
+      "text": "off there?",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 510,
       "start": 1458.12,
       "end": 1459.66,
-      "text": "No."
+      "text": "No.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 511,
       "start": 1460.88,
       "end": 1463.08,
-      "text": "The actual property is vacant,"
+      "text": "The actual property is vacant,",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 512,
       "start": 1463.2,
       "end": 1464.26,
-      "text": "as in there's no structure."
+      "text": "as in there's no structure.",
+      "speaker": "SPEAKER_10"
     },
     {
       "id": 513,
       "start": 1464.6,
       "end": 1465.78,
-      "text": "Okay. I got you. Okay."
+      "text": "Okay. I got you. Okay.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 514,
       "start": 1466.68,
       "end": 1467.66,
-      "text": "Sorry about that."
+      "text": "Sorry about that.",
+      "speaker": "SPEAKER_10"
     },
     {
       "id": 515,
       "start": 1469.5,
       "end": 1469.98,
-      "text": "Good."
+      "text": "Good.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 516,
       "start": 1470.78,
       "end": 1471.52,
-      "text": "No, no, no."
+      "text": "No, no, no.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 517,
       "start": 1472.1,
       "end": 1473.14,
-      "text": "Thank you, Ms. Feltner."
+      "text": "Thank you, Ms. Feltner.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 518,
       "start": 1473.48,
       "end": 1474.08,
-      "text": "All right."
+      "text": "All right.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 519,
       "start": 1474.82,
       "end": 1477.36,
-      "text": "I open this public hearing to anyone who wants to come forward"
+      "text": "I open this public hearing to anyone who wants to come forward",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 520,
       "start": 1477.36,
       "end": 1479.4,
-      "text": "and speak for or against this item."
+      "text": "and speak for or against this item.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 521,
       "start": 1479.52,
       "end": 1481.04,
-      "text": "Please come forward, state your name,"
+      "text": "Please come forward, state your name,",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 522,
       "start": 1481.18,
       "end": 1483.62,
-      "text": "Magistral District, and keep comments for three minutes."
+      "text": "Magistral District, and keep comments for three minutes.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 523,
       "start": 1484.22,
       "end": 1486.28,
-      "text": "And I don't see people rushing forward here,"
+      "text": "And I don't see people rushing forward here,",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 524,
       "start": 1486.28,
       "end": 1488.1,
-      "text": "so we're going to close this public hearing."
+      "text": "so we're going to close this public hearing.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 525,
       "start": 1488.12,
       "end": 1490.82,
-      "text": "Discussion among the commissioners."
+      "text": "Discussion among the commissioners.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 526,
       "start": 1490.82,
       "end": 1493.62,
-      "text": "Anybody have anything they want to add to it?"
+      "text": "Anybody have anything they want to add to it?",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 527,
       "start": 1493.62,
       "end": 1497.4,
-      "text": "I think this one's pretty well, pretty, pretty strict,"
+      "text": "I think this one's pretty well, pretty, pretty strict,",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 528,
       "start": 1497.4,
       "end": 1498.28,
-      "text": "cut and dry."
+      "text": "cut and dry.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 529,
       "start": 1498.28,
       "end": 1499.12,
-      "text": "Okay."
+      "text": "Okay.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 530,
       "start": 1499.12,
       "end": 1501.58,
-      "text": "I need a motion from the Stonewall District."
+      "text": "I need a motion from the Stonewall District.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 531,
       "start": 1503.0,
       "end": 1504.1,
-      "text": "We've elected Justin."
+      "text": "We've elected Justin.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 532,
       "start": 1508.34,
       "end": 1509.5,
-      "text": "Motion to approve."
+      "text": "Motion to approve.",
+      "speaker": "SPEAKER_05"
     },
     {
       "id": 533,
       "start": 1509.5,
       "end": 1510.68,
-      "text": "Okay. We got a motion."
+      "text": "Okay. We got a motion.",
+      "speaker": "SPEAKER_05"
     },
     {
       "id": 534,
       "start": 1510.68,
       "end": 1511.52,
-      "text": "Yes."
+      "text": "Yes.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 535,
       "start": 1511.52,
       "end": 1512.36,
-      "text": "Second."
+      "text": "Second.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 536,
       "start": 1512.36,
       "end": 1515.02,
-      "text": "All right. You got a motion, we got a second."
+      "text": "All right. You got a motion, we got a second.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 537,
       "start": 1515.02,
       "end": 1516.78,
-      "text": "Mrs. Broomback."
+      "text": "Mrs. Broomback.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 538,
       "start": 1516.78,
       "end": 1517.8,
-      "text": "Broomback, yes."
+      "text": "Broomback, yes.",
+      "speaker": "SPEAKER_10"
     },
     {
       "id": 539,
       "start": 1518.12,
       "end": 1519.88,
-      "text": "Markard, yes."
+      "text": "Markard, yes.",
+      "speaker": "SPEAKER_10"
     },
     {
       "id": 540,
       "start": 1519.88,
       "end": 1520.94,
-      "text": "Stowe, yes."
+      "text": "Stowe, yes.",
+      "speaker": "SPEAKER_10"
     },
     {
       "id": 541,
       "start": 1520.94,
       "end": 1522.0,
-      "text": "Molden, yes."
+      "text": "Molden, yes.",
+      "speaker": "SPEAKER_10"
     },
     {
       "id": 542,
       "start": 1522.0,
       "end": 1523.02,
-      "text": "Thomas, yes."
+      "text": "Thomas, yes.",
+      "speaker": "SPEAKER_10"
     },
     {
       "id": 543,
       "start": 1523.02,
       "end": 1524.18,
-      "text": "Orndorff, yes."
+      "text": "Orndorff, yes.",
+      "speaker": "SPEAKER_10"
     },
     {
       "id": 544,
       "start": 1524.18,
       "end": 1525.14,
-      "text": "Kerr, yes."
+      "text": "Kerr, yes.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 545,
       "start": 1525.14,
       "end": 1525.98,
-      "text": "Emanuel, yes."
+      "text": "Emanuel, yes.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 546,
       "start": 1525.98,
       "end": 1526.82,
-      "text": "Akins, yes."
+      "text": "Akins, yes.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 547,
       "start": 1526.82,
       "end": 1527.86,
-      "text": "Tripp, yes."
+      "text": "Tripp, yes.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 548,
       "start": 1527.86,
       "end": 1529.88,
-      "text": "And the vote, the chair votes yes."
+      "text": "And the vote, the chair votes yes.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 549,
       "start": 1529.88,
       "end": 1532.64,
-      "text": "Okay. This will go before the Board of Supervisors"
+      "text": "Okay. This will go before the Board of Supervisors",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 550,
       "start": 1532.64,
       "end": 1533.94,
-      "text": "on September 13th."
+      "text": "on September 13th.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 551,
       "start": 1533.94,
       "end": 1536.18,
-      "text": "So, thank you very much."
+      "text": "So, thank you very much.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 552,
       "start": 1536.18,
       "end": 1537.94,
-      "text": "Now we're under other."
+      "text": "Now we're under other.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 553,
       "start": 1537.94,
       "end": 1538.84,
-      "text": "Mr. Pearson."
+      "text": "Mr. Pearson.",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 554,
       "start": 1538.84,
       "end": 1541.94,
-      "text": "Thank you, Mr. Chairman."
+      "text": "Thank you, Mr. Chairman.",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 555,
       "start": 1541.94,
       "end": 1545.0,
-      "text": "Just a couple items for you at your coming"
+      "text": "Just a couple items for you at your coming",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 556,
       "start": 1545.0,
       "end": 1547.22,
-      "text": "Transportation Committee meeting for those interested"
+      "text": "Transportation Committee meeting for those interested",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 557,
       "start": 1547.22,
       "end": 1547.92,
-      "text": "on August 21st."
+      "text": "on August 21st.",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 558,
       "start": 1547.92,
       "end": 1549.74,
-      "text": "28th at 830 AM."
+      "text": "28th at 830 AM.",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 559,
       "start": 1549.74,
       "end": 1551.56,
-      "text": "There's going to be a presentation on the changes"
+      "text": "There's going to be a presentation on the changes",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 560,
       "start": 1551.56,
       "end": 1553.36,
-      "text": "to the smart scale process."
+      "text": "to the smart scale process.",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 561,
       "start": 1553.36,
       "end": 1554.92,
-      "text": "For those of you who are interested in that,"
+      "text": "For those of you who are interested in that,",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 562,
       "start": 1554.92,
       "end": 1556.28,
-      "text": "if you'd like to attend,"
+      "text": "if you'd like to attend,",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 563,
       "start": 1556.28,
       "end": 1561.08,
-      "text": "it'll be here in the purple room in the county offices."
+      "text": "it'll be here in the purple room in the county offices.",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 564,
       "start": 1561.08,
       "end": 1563.34,
-      "text": "As far as site plans or current planning applications"
+      "text": "As far as site plans or current planning applications",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 565,
       "start": 1563.34,
       "end": 1567.0,
-      "text": "of interest, HP Hood has submitted a 25,000 square foot"
+      "text": "of interest, HP Hood has submitted a 25,000 square foot",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 566,
       "start": 1567.0,
       "end": 1569.68,
-      "text": "expansion and then we've recently got an application"
+      "text": "expansion and then we've recently got an application",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 567,
       "start": 1569.68,
       "end": 1573.06,
-      "text": "for a new wall wall on Prince Frederick and Route 50."
+      "text": "for a new wall wall on Prince Frederick and Route 50.",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 568,
       "start": 1573.06,
       "end": 1575.14,
-      "text": "Happy to answer any questions that you all might have"
+      "text": "Happy to answer any questions that you all might have",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 569,
       "start": 1575.14,
       "end": 1576.3,
-      "text": "about any items."
+      "text": "about any items.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 570,
       "start": 1576.3,
       "end": 1578.4,
-      "text": "Thank you, Mr. Pearson."
+      "text": "Thank you, Mr. Pearson.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 571,
       "start": 1578.4,
       "end": 1580.28,
-      "text": "Any questions?"
+      "text": "Any questions?",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 572,
       "start": 1580.28,
       "end": 1581.12,
-      "text": "All right."
+      "text": "All right.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 573,
       "start": 1581.96,
       "end": 1583.48,
-      "text": "Do I have a motion to adjourn?"
+      "text": "Do I have a motion to adjourn?",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 574,
       "start": 1583.48,
       "end": 1584.64,
-      "text": "So moved."
+      "text": "So moved.",
+      "speaker": "SPEAKER_08"
     },
     {
       "id": 575,
       "start": 1584.64,
       "end": 1585.48,
-      "text": "We are adjourned."
+      "text": "We are adjourned.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 576,
       "start": 1585.48,
       "end": 1586.68,
-      "text": "Have a great evening, folks."
+      "text": "Have a great evening, folks.",
+      "speaker": "UNKNOWN"
     }
-  ]
+  ],
+  "diarization": true,
+  "diarization_model": "pyannote/speaker-diarization-3.1",
+  "whisper_model": "small"
 }

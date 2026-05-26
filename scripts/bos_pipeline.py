@@ -78,6 +78,7 @@ Notes
 """
 
 import argparse
+import fcntl
 import json
 import logging
 import queue
@@ -570,6 +571,7 @@ def _transcribe_cpp(audio_path: Path, model_path: str, whisper_cli: str, threads
             "--model", model_path,
             "--language", "en",
             "--threads", str(threads),
+            "--no-gpu",
             "--output-json",
             "--output-file", str(out_base),
             str(audio_path),
@@ -890,6 +892,21 @@ def cmd_run(args) -> None:
     _shutdown = False
     signal.signal(signal.SIGINT,  _handle_signal)
     signal.signal(signal.SIGTERM, _handle_signal)
+
+    # Acquire an exclusive process lock so only one `run` can be active at a time.
+    # The cron job uses `flock -n pipeline.lock` on the same file, so they interoperate.
+    lock_path = TRANSCRIPT_DIR / "pipeline.lock"
+    lock_fh = open(lock_path, "w")
+    try:
+        fcntl.flock(lock_fh, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except OSError:
+        log.error(
+            "Another pipeline run is already active (lock held: %s). "
+            "Exiting to avoid staging-file conflicts.",
+            lock_path,
+        )
+        lock_fh.close()
+        return
 
     conn = init_db(DB_PATH)
     pending = get_pending(conn, include_failed=args.retry_failed)

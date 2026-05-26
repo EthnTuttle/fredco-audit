@@ -13,1705 +13,1992 @@
       "id": 0,
       "start": 0.0,
       "end": 0.62,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 1,
       "start": 30.0,
       "end": 30.62,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 2,
       "start": 60.0,
       "end": 60.62,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 3,
       "start": 90.0,
       "end": 90.62,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 4,
       "start": 120.0,
       "end": 120.62,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 5,
       "start": 150.0,
       "end": 150.62,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 6,
       "start": 180.0,
       "end": 180.62,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 7,
       "start": 210.0,
       "end": 210.62,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 8,
       "start": 240.0,
       "end": 240.62,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 9,
       "start": 270.0,
       "end": 270.62,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 10,
       "start": 300.0,
       "end": 300.62,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 11,
       "start": 330.0,
       "end": 330.62,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 12,
       "start": 360.0,
       "end": 360.62,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 13,
       "start": 390.0,
       "end": 390.62,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 14,
       "start": 420.0,
       "end": 420.62,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 15,
       "start": 450.0,
       "end": 450.62,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 16,
       "start": 480.0,
       "end": 480.62,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 17,
       "start": 510.0,
       "end": 510.62,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 18,
       "start": 540.0,
       "end": 540.62,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 19,
       "start": 570.0,
       "end": 571.0,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 20,
       "start": 600.0,
       "end": 604.42,
-      "text": "you"
+      "text": "you",
+      "speaker": "SPEAKER_05"
     },
     {
       "id": 21,
       "start": 604.42,
       "end": 605.38,
-      "text": "you"
+      "text": "you",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 22,
       "start": 605.38,
       "end": 607.5,
-      "text": "you"
+      "text": "you",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 23,
       "start": 607.5,
       "end": 608.52,
-      "text": "you"
+      "text": "you",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 24,
       "start": 608.52,
       "end": 611.58,
-      "text": "you"
+      "text": "you",
+      "speaker": "SPEAKER_05"
     },
     {
       "id": 25,
       "start": 611.58,
       "end": 615.56,
-      "text": "you"
+      "text": "you",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 26,
       "start": 615.56,
       "end": 615.64,
-      "text": "you"
+      "text": "you",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 27,
       "start": 615.64,
       "end": 617.74,
-      "text": "you"
+      "text": "you",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 28,
       "start": 617.74,
       "end": 622.8,
-      "text": "you"
+      "text": "you",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 29,
       "start": 622.8,
       "end": 622.86,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 30,
       "start": 622.86,
       "end": 622.88,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 31,
       "start": 622.88,
       "end": 624.98,
-      "text": "you"
+      "text": "you",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 32,
       "start": 624.98,
       "end": 626.96,
-      "text": "you"
+      "text": "you",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 33,
       "start": 626.96,
       "end": 628.9,
-      "text": "you"
+      "text": "you",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 34,
       "start": 628.9,
       "end": 629.04,
-      "text": "you"
+      "text": "you",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 35,
       "start": 629.04,
       "end": 629.92,
-      "text": "you"
+      "text": "you",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 36,
       "start": 629.92,
       "end": 630.0,
-      "text": "you"
+      "text": "you",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 37,
       "start": 660.0,
       "end": 689.98,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 38,
       "start": 690.0,
       "end": 719.98,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 39,
       "start": 720.0,
       "end": 749.98,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 40,
       "start": 750.0,
       "end": 779.98,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 41,
       "start": 780.0,
       "end": 809.98,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_04"
     },
     {
       "id": 42,
       "start": 810.0,
       "end": 835.2,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_04"
     },
     {
       "id": 43,
       "start": 840.0,
       "end": 869.98,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 44,
       "start": 870.0,
       "end": 896.74,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 45,
       "start": 900.0,
       "end": 929.98,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 46,
       "start": 930.0,
       "end": 959.98,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_05"
     },
     {
       "id": 47,
       "start": 960.0,
       "end": 989.98,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_05"
     },
     {
       "id": 48,
       "start": 990.0,
       "end": 1019.98,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_05"
     },
     {
       "id": 49,
       "start": 1020.0,
       "end": 1049.98,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_05"
     },
     {
       "id": 50,
       "start": 1050.0,
       "end": 1050.92,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 51,
       "start": 1053.46,
       "end": 1057.3,
-      "text": "Good evening."
+      "text": "Good evening.",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 52,
       "start": 1057.3,
       "end": 1059.56,
-      "text": "My name is Sonia and I live in the recount ward district."
+      "text": "My name is Sonia and I live in the recount ward district.",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 53,
       "start": 1061.84,
       "end": 1065.12,
-      "text": "I know most of you on the board through my advocacy with"
+      "text": "I know most of you on the board through my advocacy with",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 54,
       "start": 1065.12,
       "end": 1066.0,
-      "text": "Frederick county strong."
+      "text": "Frederick county strong.",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 55,
       "start": 1066.62,
       "end": 1069.56,
-      "text": "I've been engaged in local issues and policy ever since"
+      "text": "I've been engaged in local issues and policy ever since",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 56,
       "start": 1069.56,
       "end": 1072.0,
-      "text": "becoming a parent and have attended many board of"
+      "text": "becoming a parent and have attended many board of",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 57,
       "start": 1072.0,
       "end": 1072.9,
-      "text": "supervisor meetings."
+      "text": "supervisor meetings.",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 58,
       "start": 1073.42,
       "end": 1076.02,
-      "text": "I started attending these meetings more regularly to"
+      "text": "I started attending these meetings more regularly to",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 59,
       "start": 1076.02,
       "end": 1078.66,
-      "text": "understand the needs of the community and the priority of"
+      "text": "understand the needs of the community and the priority of",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 60,
       "start": 1078.66,
       "end": 1079.06,
-      "text": "the board."
+      "text": "the board.",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 61,
       "start": 1079.68,
       "end": 1079.98,
-      "text": "All of you are welcome to join me in saying hello to the"
+      "text": "All of you are welcome to join me in saying hello to the",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 62,
       "start": 1079.98,
       "end": 1085.38,
-      "text": "understand the motivations of many of the decisions made by the board, I feel like it wasn't fully"
+      "text": "understand the motivations of many of the decisions made by the board, I feel like it wasn't fully",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 63,
       "start": 1085.38,
       "end": 1090.74,
-      "text": "representative of the constituency of our community. I realized it was time for me to get off the"
+      "text": "representative of the constituency of our community. I realized it was time for me to get off the",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 64,
       "start": 1090.74,
       "end": 1096.2,
-      "text": "sidelines and see how I could become a more active participant in our legislative process."
+      "text": "sidelines and see how I could become a more active participant in our legislative process.",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 65,
       "start": 1096.62,
       "end": 1101.44,
-      "text": "We've had conversations, we've had differences of opinions, but I believe we've been civil and"
+      "text": "We've had conversations, we've had differences of opinions, but I believe we've been civil and",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 66,
       "start": 1101.44,
       "end": 1106.96,
-      "text": "respectful to each other. I have a bachelor's and master's degree in information systems, and I've"
+      "text": "respectful to each other. I have a bachelor's and master's degree in information systems, and I've",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 67,
       "start": 1106.96,
       "end": 1112.28,
-      "text": "had over 10 years of experience in the recruiting and healthcare industry. I worked in IT as a"
+      "text": "had over 10 years of experience in the recruiting and healthcare industry. I worked in IT as a",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 68,
       "start": 1112.28,
       "end": 1117.78,
-      "text": "programmer and a business and quality assurance analyst. I oversaw teams, interviewed stakeholders,"
+      "text": "programmer and a business and quality assurance analyst. I oversaw teams, interviewed stakeholders,",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 69,
       "start": 1118.24,
       "end": 1123.22,
-      "text": "gathered requirements, and encouraged all parties to come to a consensus when creating a product to"
+      "text": "gathered requirements, and encouraged all parties to come to a consensus when creating a product to",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 70,
       "start": 1123.22,
       "end": 1128.74,
-      "text": "reflect the needs of the business. But before moving to Winchester 14 years ago, my husband and"
+      "text": "reflect the needs of the business. But before moving to Winchester 14 years ago, my husband and",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 71,
       "start": 1128.74,
       "end": 1134.96,
-      "text": "I lived in Richmond. I have three daughters, ages 12, 9, and 6. Soon after we moved here, we quickly"
+      "text": "I lived in Richmond. I have three daughters, ages 12, 9, and 6. Soon after we moved here, we quickly",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 72,
       "start": 1134.96,
       "end": 1136.94,
-      "text": "realized Winchester was a great place to live. I've been a part of the business for a long time, and"
+      "text": "realized Winchester was a great place to live. I've been a part of the business for a long time, and",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 73,
       "start": 1136.94,
       "end": 1138.9,
-      "text": "I've had a lot of fun here. I've been able to build a family here, and I'm proud to be a part of it."
+      "text": "I've had a lot of fun here. I've been able to build a family here, and I'm proud to be a part of it.",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 74,
       "start": 1138.9,
       "end": 1143.1,
-      "text": "I love our life here. It's beautiful, the people we've met throughout our time here have been warm"
+      "text": "I love our life here. It's beautiful, the people we've met throughout our time here have been warm",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 75,
       "start": 1143.1,
       "end": 1148.94,
-      "text": "and welcoming, and our family is happy and proud to call Winchester home. I believe that every human"
+      "text": "and welcoming, and our family is happy and proud to call Winchester home. I believe that every human",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 76,
       "start": 1148.94,
       "end": 1154.3,
-      "text": "being has the right to a good quality of life, with access to education, healthcare, clean air,"
+      "text": "being has the right to a good quality of life, with access to education, healthcare, clean air,",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 77,
       "start": 1154.3,
       "end": 1159.26,
-      "text": "water, and food. I want everyone in this County to thrive, from the babies to the elderly, and"
+      "text": "water, and food. I want everyone in this County to thrive, from the babies to the elderly, and",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 78,
       "start": 1159.26,
       "end": 1164.78,
-      "text": "everyone in between. My love for this County has allowed me to think about its future and consider"
+      "text": "everyone in between. My love for this County has allowed me to think about its future and consider",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 79,
       "start": 1164.78,
       "end": 1166.54,
-      "text": "how we can shape its future generations. I'm so grateful for the support that our city has given"
+      "text": "how we can shape its future generations. I'm so grateful for the support that our city has given",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 80,
       "start": 1166.54,
       "end": 1166.58,
-      "text": "us. I'm so thankful for the support that our city has given us. I'm so grateful for the support that"
+      "text": "us. I'm so thankful for the support that our city has given us. I'm so grateful for the support that",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 81,
       "start": 1166.58,
       "end": 1171.3,
-      "text": "generations. The county has been developed at a faster rate than the infrastructure can"
+      "text": "generations. The county has been developed at a faster rate than the infrastructure can",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 82,
       "start": 1171.3,
       "end": 1176.82,
-      "text": "withstand. This county will have to play catch up for years and years to come. In the meantime,"
+      "text": "withstand. This county will have to play catch up for years and years to come. In the meantime,",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 83,
       "start": 1176.82,
       "end": 1181.64,
-      "text": "there are growing pains. Expensive band aids that aren't fiscally responsible take the"
+      "text": "there are growing pains. Expensive band aids that aren't fiscally responsible take the",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 84,
       "start": 1181.64,
       "end": 1186.0,
-      "text": "place of proper planning. The schools are operating on a needs-based budget without"
+      "text": "place of proper planning. The schools are operating on a needs-based budget without",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 85,
       "start": 1186.0,
       "end": 1190.68,
-      "text": "a chance to provide more opportunities that will allow the students to compete at a higher"
+      "text": "a chance to provide more opportunities that will allow the students to compete at a higher",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 86,
       "start": 1190.68,
       "end": 1195.52,
-      "text": "level with their neighboring counties and throughout Virginia. The traffic on 7 and"
+      "text": "level with their neighboring counties and throughout Virginia. The traffic on 7 and",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 87,
       "start": 1195.52,
       "end": 1200.36,
-      "text": "11 during peak time is out of control. There are food deserts all over the county with"
+      "text": "11 during peak time is out of control. There are food deserts all over the county with",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 88,
       "start": 1200.36,
       "end": 1205.2,
-      "text": "abandoned shopping centers sprinkled in between. I don't want to be someone who complains about"
+      "text": "abandoned shopping centers sprinkled in between. I don't want to be someone who complains about",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 89,
       "start": 1205.2,
       "end": 1209.88,
-      "text": "these issues before us. Instead, I would like to take my love for this county and the people"
+      "text": "these issues before us. Instead, I would like to take my love for this county and the people",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 90,
       "start": 1209.88,
       "end": 1216.3,
-      "text": "in it, along with my experience as a professional and my perspective as a mom, to propose solutions"
+      "text": "in it, along with my experience as a professional and my perspective as a mom, to propose solutions",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 91,
       "start": 1216.3,
       "end": 1221.64,
-      "text": "that not only make financial sense but are also sustainable. I desire to be part of a"
+      "text": "that not only make financial sense but are also sustainable. I desire to be part of a",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 92,
       "start": 1221.64,
       "end": 1225.48,
-      "text": "team that makes all of our lives better for years and years to come."
+      "text": "team that makes all of our lives better for years and years to come.",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 93,
       "start": 1225.48,
       "end": 1225.5,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 94,
       "start": 1225.52,
       "end": 1230.28,
-      "text": "Working with Frederick County Strong has encouraged me to start conversations with everyone, from"
+      "text": "Working with Frederick County Strong has encouraged me to start conversations with everyone, from",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 95,
       "start": 1230.28,
       "end": 1234.2,
-      "text": "parents with their kids at tennis lessons to people in line at the grocery store to"
+      "text": "parents with their kids at tennis lessons to people in line at the grocery store to",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 96,
       "start": 1234.2,
       "end": 1238.66,
-      "text": "practically anyone I meet on the street. I've talked to people of all different backgrounds"
+      "text": "practically anyone I meet on the street. I've talked to people of all different backgrounds",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 97,
       "start": 1238.66,
       "end": 1242.94,
-      "text": "with different political beliefs and different thoughts on education in Frederick County"
+      "text": "with different political beliefs and different thoughts on education in Frederick County",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 98,
       "start": 1242.94,
       "end": 1247.08,
-      "text": "to work towards a common goal, a better environment for learning and a future for the kids of"
+      "text": "to work towards a common goal, a better environment for learning and a future for the kids of",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 99,
       "start": 1247.08,
       "end": 1251.48,
-      "text": "Frederick County. I would love to see input from residents when working towards budget"
+      "text": "Frederick County. I would love to see input from residents when working towards budget",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 100,
       "start": 1251.48,
       "end": 1255.48,
-      "text": "season. Former Shawnee supervisor Shannon Trout had a great idea of a future for the"
+      "text": "season. Former Shawnee supervisor Shannon Trout had a great idea of a future for the",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 101,
       "start": 1255.48,
       "end": 1260.66,
-      "text": "students of Frederick County. She said the city and the community should be more inclusive"
+      "text": "students of Frederick County. She said the city and the community should be more inclusive",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 102,
       "start": 1260.66,
       "end": 1264.0,
-      "text": "of each other, and the city should be more involved in the work of the city. I said that"
+      "text": "of each other, and the city should be more involved in the work of the city. I said that",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 103,
       "start": 1264.0,
       "end": 1266.96,
-      "text": "this is a great idea to involve civic engagement in a respectful and civil manner. We all pay"
+      "text": "this is a great idea to involve civic engagement in a respectful and civil manner. We all pay",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 104,
       "start": 1266.96,
       "end": 1269.56,
-      "text": "taxes and we all have priorities on what will make our lives better in Frederick County."
+      "text": "taxes and we all have priorities on what will make our lives better in Frederick County.",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 105,
       "start": 1269.56,
       "end": 1274.66,
-      "text": "During my time on the Citizen Budget Advisory Committee for FCPS, we did create a survey"
+      "text": "During my time on the Citizen Budget Advisory Committee for FCPS, we did create a survey",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 106,
       "start": 1274.66,
       "end": 1279.16,
-      "text": "to see what priorities the residents of Frederick County would like to see the school board"
+      "text": "to see what priorities the residents of Frederick County would like to see the school board",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 107,
       "start": 1279.16,
       "end": 1283.82,
-      "text": "and FCPS focus on. Last year, it was a pilot program. This year, we would love to expand"
+      "text": "and FCPS focus on. Last year, it was a pilot program. This year, we would love to expand",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 108,
       "start": 1283.82,
       "end": 1284.82,
-      "text": "it to all residents in Frederick County. This year, I have been working with my peers and"
+      "text": "it to all residents in Frederick County. This year, I have been working with my peers and",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 109,
       "start": 1284.82,
       "end": 1285.44,
-      "text": "my colleagues to make sure that the students and their families are getting the most out of"
+      "text": "my colleagues to make sure that the students and their families are getting the most out of",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 110,
       "start": 1285.44,
       "end": 1290.0,
-      "text": "of Frederick County. As supervisor, I would recommend that the board work together with FCPS,"
+      "text": "of Frederick County. As supervisor, I would recommend that the board work together with FCPS,",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 111,
       "start": 1290.16,
       "end": 1295.0,
-      "text": "the school board, and the citizen budget advisory committee to execute this. If I was chosen as"
+      "text": "the school board, and the citizen budget advisory committee to execute this. If I was chosen as",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 112,
       "start": 1295.0,
       "end": 1299.5,
-      "text": "supervisor, I would respect the education and experience of those that work for local government."
+      "text": "supervisor, I would respect the education and experience of those that work for local government.",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 113,
       "start": 1299.94,
       "end": 1305.22,
-      "text": "I would also love to see a general breakdown on what a family's median income is, what taxes they"
+      "text": "I would also love to see a general breakdown on what a family's median income is, what taxes they",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 114,
       "start": 1305.22,
       "end": 1309.82,
-      "text": "pay, and what the breakdown of that amount is for each county department. I think education is"
+      "text": "pay, and what the breakdown of that amount is for each county department. I think education is",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 115,
       "start": 1309.82,
       "end": 1314.7,
-      "text": "elevation, and the more you know, the more you grow. It is important that this board represents"
+      "text": "elevation, and the more you know, the more you grow. It is important that this board represents",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 116,
       "start": 1314.7,
       "end": 1320.0,
-      "text": "the dynamic community we live in, and I can add that perspective. I look forward to being a voice"
+      "text": "the dynamic community we live in, and I can add that perspective. I look forward to being a voice",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 117,
       "start": 1320.0,
       "end": 1326.2,
-      "text": "for the community as a member of the board of supervisors. Thank you. Thank you, ma'am. Albert"
+      "text": "for the community as a member of the board of supervisors. Thank you. Thank you, ma'am. Albert",
+      "speaker": "SPEAKER_00"
     },
     {
       "id": 118,
       "start": 1326.2,
       "end": 1341.48,
-      "text": "Orndorff. Chairman Jewell, Vice Chairman McCain-Slaughter, and other members of the board,"
+      "text": "Orndorff. Chairman Jewell, Vice Chairman McCain-Slaughter, and other members of the board,",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 119,
       "start": 1341.48,
       "end": 1344.26,
-      "text": "Mr. Dunn, Mr. Wells, Mr. Leroux,"
+      "text": "Mr. Dunn, Mr. Wells, Mr. Leroux,",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 120,
       "start": 1344.7,
       "end": 1351.88,
-      "text": "and Mr. Aiken. I scripted out some comments, but I think I'm just going to talk through it."
+      "text": "and Mr. Aiken. I scripted out some comments, but I think I'm just going to talk through it.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 121,
       "start": 1353.18,
       "end": 1360.68,
-      "text": "As you know, I spent 43 years, 42 years plus in public education at all levels. First 10"
+      "text": "As you know, I spent 43 years, 42 years plus in public education at all levels. First 10",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 122,
       "start": 1360.68,
       "end": 1368.8,
-      "text": "was at teaching level, and then the remaining 30 was at the administrative level,"
+      "text": "was at teaching level, and then the remaining 30 was at the administrative level,",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 123,
       "start": 1368.8,
       "end": 1372.02,
-      "text": "all levels up to the assistant superintendent for administration."
+      "text": "all levels up to the assistant superintendent for administration.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 124,
       "start": 1374.7,
       "end": 1381.18,
-      "text": "On my resume, I left out a couple things I would like to add. One, I am a member of the"
+      "text": "On my resume, I left out a couple things I would like to add. One, I am a member of the",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 125,
       "start": 1381.18,
       "end": 1391.9,
-      "text": "Middletown Presbyterian Church, and also, toward the end of my career at Fort Frederick County"
+      "text": "Middletown Presbyterian Church, and also, toward the end of my career at Fort Frederick County",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 126,
       "start": 1391.9,
       "end": 1399.0,
-      "text": "Schools, I was also an adjunct professor for JMU. Taught the principalship and school law,"
+      "text": "Schools, I was also an adjunct professor for JMU. Taught the principalship and school law,",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 127,
       "start": 1399.62,
       "end": 1402.86,
-      "text": "which is a lot of constitutional law, one of my favorite areas."
+      "text": "which is a lot of constitutional law, one of my favorite areas.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 128,
       "start": 1404.7,
       "end": 1415.42,
-      "text": "So I do have some experience there as well. Since I retired, I have an LLC, and I do consulting"
+      "text": "So I do have some experience there as well. Since I retired, I have an LLC, and I do consulting",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 129,
       "start": 1415.42,
       "end": 1421.44,
-      "text": "across the state, primarily up and down the valley, but also recently in the Richmond area"
+      "text": "across the state, primarily up and down the valley, but also recently in the Richmond area",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 130,
       "start": 1421.44,
       "end": 1429.1,
-      "text": "with school divisions, Title IX, when they have a need for someone from the outside to come in"
+      "text": "with school divisions, Title IX, when they have a need for someone from the outside to come in",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 131,
       "start": 1429.1,
       "end": 1433.18,
-      "text": "and take a look at a situation, also Title VII."
+      "text": "and take a look at a situation, also Title VII.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 132,
       "start": 1434.7,
       "end": 1440.98,
-      "text": "And some other investigations and assisting them, usually with a high-profile issue that they may have."
+      "text": "And some other investigations and assisting them, usually with a high-profile issue that they may have.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 133,
       "start": 1440.98,
       "end": 1446.04,
-      "text": "And again, just needing someone with experience outside of their division."
+      "text": "And again, just needing someone with experience outside of their division.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 134,
       "start": 1448.78,
       "end": 1456.36,
-      "text": "Putting things in context about myself and experience over the years, I, again, have been a lifelong"
+      "text": "Putting things in context about myself and experience over the years, I, again, have been a lifelong",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 135,
       "start": 1456.36,
       "end": 1462.56,
-      "text": "resident of Back Creek District. Actually, I'm the seventh generation."
+      "text": "resident of Back Creek District. Actually, I'm the seventh generation.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 136,
       "start": 1463.62,
       "end": 1464.68,
-      "text": "My grandchildren, my wife, and my children, they're all from the same district."
+      "text": "My grandchildren, my wife, and my children, they're all from the same district.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 137,
       "start": 1464.7,
       "end": 1471.3,
-      "text": "My brother is from the ninth generation, so we've been here since 1777, although my brother is in Iowa."
+      "text": "My brother is from the ninth generation, so we've been here since 1777, although my brother is in Iowa.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 138,
       "start": 1471.8,
       "end": 1473.02,
-      "text": "I don't know what happened to him."
+      "text": "I don't know what happened to him.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 139,
       "start": 1476.34,
       "end": 1480.84,
-      "text": "During my time with the school system, in particular the 30 years in administration,"
+      "text": "During my time with the school system, in particular the 30 years in administration,",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 140,
       "start": 1481.26,
       "end": 1483.62,
-      "text": "you have a lot of contact with parents."
+      "text": "you have a lot of contact with parents.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 141,
       "start": 1485.04,
       "end": 1493.0,
-      "text": "And as you go along building the budget and have input at various levels, you have contact with committees."
+      "text": "And as you go along building the budget and have input at various levels, you have contact with committees.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 142,
       "start": 1493.0,
       "end": 1502.34,
-      "text": "And in my role in particular, as an executive administrator, working with the budget committee,"
+      "text": "And in my role in particular, as an executive administrator, working with the budget committee,",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 143,
       "start": 1502.46,
       "end": 1510.78,
-      "text": "presenting, and again, I probably don't look a whole lot different than I did before when I was answering questions for you on budget."
+      "text": "presenting, and again, I probably don't look a whole lot different than I did before when I was answering questions for you on budget.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 144,
       "start": 1512.28,
       "end": 1518.56,
-      "text": "Some of the things, the big projects that you do, causes you to interact with county departments."
+      "text": "Some of the things, the big projects that you do, causes you to interact with county departments.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 145,
       "start": 1519.46,
       "end": 1522.72,
-      "text": "When you build a school, I was part of building."
+      "text": "When you build a school, I was part of building.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 146,
       "start": 1523.0,
       "end": 1525.02,
-      "text": "I was part of building a high school, Millbrook High School."
+      "text": "I was part of building a high school, Millbrook High School.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 147,
       "start": 1526.74,
       "end": 1531.92,
-      "text": "Part of the design and then construction, that was a classic design bid build."
+      "text": "Part of the design and then construction, that was a classic design bid build.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 148,
       "start": 1532.62,
       "end": 1537.02,
-      "text": "Three middle schools and five elementary schools."
+      "text": "Three middle schools and five elementary schools.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 149,
       "start": 1537.96,
       "end": 1542.8,
-      "text": "Two or three major renovations of schools and then a transportation center."
+      "text": "Two or three major renovations of schools and then a transportation center.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 150,
       "start": 1544.22,
       "end": 1551.02,
-      "text": "The process that we used, design bid build, which is pretty traditional."
+      "text": "The process that we used, design bid build, which is pretty traditional.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 151,
       "start": 1551.92,
       "end": 1552.98,
-      "text": "And then, you know, we had to go through a lot of things."
+      "text": "And then, you know, we had to go through a lot of things.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 152,
       "start": 1552.98,
       "end": 1553.0,
-      "text": "We had to go through a lot of things."
+      "text": "We had to go through a lot of things.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 153,
       "start": 1553.32,
       "end": 1554.24,
-      "text": "We had to go through a lot of things."
+      "text": "We had to go through a lot of things.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 154,
       "start": 1554.24,
       "end": 1555.06,
-      "text": "We had to go through a lot of things."
+      "text": "We had to go through a lot of things.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 155,
       "start": 1555.06,
       "end": 1558.86,
-      "text": "Also, we did PPEA at the request of the Board of Supervisors."
+      "text": "Also, we did PPEA at the request of the Board of Supervisors.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 156,
       "start": 1559.28,
       "end": 1566.28,
-      "text": "And that was, let's see, Greenwood Mill."
+      "text": "And that was, let's see, Greenwood Mill.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 157,
       "start": 1567.54,
       "end": 1571.44,
-      "text": "And we've also done construction management at risk."
+      "text": "And we've also done construction management at risk.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 158,
       "start": 1572.82,
       "end": 1580.52,
-      "text": "On two recent projects and with the new high school, I assume they're doing a design bid build."
+      "text": "On two recent projects and with the new high school, I assume they're doing a design bid build.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 159,
       "start": 1582.02,
       "end": 1582.98,
-      "text": "So I'm from Greenwood."
+      "text": "So I'm from Greenwood.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 160,
       "start": 1582.98,
       "end": 1591.62,
-      "text": "familiar with the contracting process, all phases of it. I didn't do that alone. And"
+      "text": "familiar with the contracting process, all phases of it. I didn't do that alone. And",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 161,
       "start": 1591.62,
       "end": 1600.98,
-      "text": "it's important that you gather information from the school level, others within your"
+      "text": "it's important that you gather information from the school level, others within your",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 162,
       "start": 1600.98,
       "end": 1606.42,
-      "text": "organization that have input, in particular your finance people. And then working with"
+      "text": "organization that have input, in particular your finance people. And then working with",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 163,
       "start": 1606.42,
       "end": 1612.5,
-      "text": "the departments here, you work with planning and development. We searched and worked literally"
+      "text": "the departments here, you work with planning and development. We searched and worked literally",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 164,
       "start": 1612.5,
       "end": 1617.96,
-      "text": "with the Board of Supervisors bringing in in closed session to purchase the land that"
+      "text": "with the Board of Supervisors bringing in in closed session to purchase the land that",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 165,
       "start": 1617.96,
       "end": 1623.82,
-      "text": "they're using, the 83 acres to build the high school. And that was a long process. And working"
+      "text": "they're using, the 83 acres to build the high school. And that was a long process. And working",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 166,
       "start": 1623.82,
       "end": 1633.82,
-      "text": "through and communicating. When you communicate, you build trust. And when you ask questions,"
+      "text": "through and communicating. When you communicate, you build trust. And when you ask questions,",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 167,
       "start": 1633.82,
       "end": 1640.24,
-      "text": "Board of Supervisor members, you base that on your answer. So I'm already at overtime,"
+      "text": "Board of Supervisor members, you base that on your answer. So I'm already at overtime,",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 168,
       "start": 1640.24,
       "end": 1642.14,
-      "text": "but I wanted to give you that overview."
+      "text": "but I wanted to give you that overview.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 169,
       "start": 1642.14,
       "end": 1649.38,
-      "text": "Quickly mentioned, before you throw me off the podium, two other key projects that talk"
+      "text": "Quickly mentioned, before you throw me off the podium, two other key projects that talk",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 170,
       "start": 1649.38,
       "end": 1655.52,
-      "text": "about cooperation is the SRO program, the memorandum of understanding with the sheriff's"
+      "text": "about cooperation is the SRO program, the memorandum of understanding with the sheriff's",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 171,
       "start": 1655.52,
       "end": 1668.44,
-      "text": "office, and the other was parks and rec, the facility use agreement. We would not have"
+      "text": "office, and the other was parks and rec, the facility use agreement. We would not have",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 172,
       "start": 1668.44,
       "end": 1670.08,
-      "text": "been able to open schools if it was not that cooperative."
+      "text": "been able to open schools if it was not that cooperative.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 173,
       "start": 1670.08,
       "end": 1671.08,
-      "text": "Dr. That's the other key project. And quickly mentioned, before you throw me off the podium,"
+      "text": "Dr. That's the other key project. And quickly mentioned, before you throw me off the podium,",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 174,
       "start": 1671.08,
       "end": 1672.08,
-      "text": "two other key projects that talk about cooperation, is the SRO program, the memorandum of understanding,"
+      "text": "two other key projects that talk about cooperation, is the SRO program, the memorandum of understanding,",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 175,
       "start": 1672.08,
       "end": 1677.84,
-      "text": "cooperation and them providing child care after the pandemic."
+      "text": "cooperation and them providing child care after the pandemic.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 176,
       "start": 1678.56,
       "end": 1684.76,
-      "text": "And when you go through tough times, working with the various departments,"
+      "text": "And when you go through tough times, working with the various departments,",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 177,
       "start": 1685.1,
       "end": 1688.84,
-      "text": "knowing the community, and it's not always easy."
+      "text": "knowing the community, and it's not always easy.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 178,
       "start": 1689.12,
       "end": 1689.54,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_02"
     },
     {
       "id": 179,
       "start": 1691.82,
       "end": 1692.82,
-      "text": "Hugh Van Meter."
+      "text": "Hugh Van Meter.",
+      "speaker": "SPEAKER_01"
     },
     {
       "id": 180,
       "start": 1698.82,
       "end": 1699.62,
-      "text": "Mr. Chairman."
+      "text": "Mr. Chairman.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 181,
       "start": 1699.62,
       "end": 1702.28,
-      "text": "My name is Barry Van Meter, Back Creek District."
+      "text": "My name is Barry Van Meter, Back Creek District.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 182,
       "start": 1704.16,
       "end": 1705.8,
-      "text": "Thank you all for the opportunity to speak today."
+      "text": "Thank you all for the opportunity to speak today.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 183,
       "start": 1706.42,
       "end": 1709.86,
-      "text": "My name is Barry Van Meter, and I've been a resident of Back Creek and Frederick County for 51 years."
+      "text": "My name is Barry Van Meter, and I've been a resident of Back Creek and Frederick County for 51 years.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 184,
       "start": 1710.4,
       "end": 1711.98,
-      "text": "My family has deep roots in this county."
+      "text": "My family has deep roots in this county.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 185,
       "start": 1712.08,
       "end": 1713.18,
-      "text": "We go all the way back to Bell Grove."
+      "text": "We go all the way back to Bell Grove.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 186,
       "start": 1713.9,
       "end": 1716.56,
-      "text": "I grew up on a farm in Star Tannery that's still in the family today."
+      "text": "I grew up on a farm in Star Tannery that's still in the family today.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 187,
       "start": 1717.34,
       "end": 1720.1,
-      "text": "I attended Gore Elementary, the original Frederick County Middle School,"
+      "text": "I attended Gore Elementary, the original Frederick County Middle School,",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 188,
       "start": 1720.46,
       "end": 1722.2,
-      "text": "and James Wood back when it was the only high school."
+      "text": "and James Wood back when it was the only high school.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 189,
       "start": 1722.68,
       "end": 1723.22,
-      "text": "Go Colonels."
+      "text": "Go Colonels.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 190,
       "start": 1724.28,
       "end": 1726.12,
-      "text": "I went to Lower Fairfax Community College,"
+      "text": "I went to Lower Fairfax Community College,",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 191,
       "start": 1726.34,
       "end": 1728.74,
-      "text": "and then on to James Madison University where I got my"
+      "text": "and then on to James Madison University where I got my",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 192,
       "start": 1728.74,
       "end": 1729.12,
-      "text": "degree."
+      "text": "degree.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 193,
       "start": 1729.62,
       "end": 1731.38,
-      "text": "Bachelor's in Business Administration."
+      "text": "Bachelor's in Business Administration.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 194,
       "start": 1732.12,
       "end": 1733.12,
-      "text": "I then returned home."
+      "text": "I then returned home.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 195,
       "start": 1734.32,
       "end": 1738.66,
-      "text": "I did some time in construction work before building a starter house in Shawnee Land in 2000."
+      "text": "I did some time in construction work before building a starter house in Shawnee Land in 2000.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 196,
       "start": 1739.28,
       "end": 1742.94,
-      "text": "I got married and ultimately had three children, and my starter home got way too small."
+      "text": "I got married and ultimately had three children, and my starter home got way too small.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 197,
       "start": 1743.86,
       "end": 1747.74,
-      "text": "I love the community, and so we decided to build another house in Shawnee Land near the lake,"
+      "text": "I love the community, and so we decided to build another house in Shawnee Land near the lake,",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 198,
       "start": 1747.78,
       "end": 1748.96,
-      "text": "and I've lived there ever since."
+      "text": "and I've lived there ever since.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 199,
       "start": 1749.82,
       "end": 1753.92,
-      "text": "My daughters are age 20, 18, and 13, all of which have come up through public schools."
+      "text": "My daughters are age 20, 18, and 13, all of which have come up through public schools.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 200,
       "start": 1755.2,
       "end": 1757.24,
-      "text": "The oldest just graduated, William and Mary."
+      "text": "The oldest just graduated, William and Mary.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 201,
       "start": 1757.58,
       "end": 1759.62,
-      "text": "My middle daughter is currently a senior at James Wood."
+      "text": "My middle daughter is currently a senior at James Wood.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 202,
       "start": 1760.18,
       "end": 1763.06,
-      "text": "She's a senior in the community, involved in swimming, track, and any other clubs she can get herself into."
+      "text": "She's a senior in the community, involved in swimming, track, and any other clubs she can get herself into.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 203,
       "start": 1764.12,
       "end": 1765.22,
-      "text": "The youngest is in eighth grade."
+      "text": "The youngest is in eighth grade.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 204,
       "start": 1765.22,
       "end": 1766.68,
-      "text": "She's also involved in track and field."
+      "text": "She's also involved in track and field.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 205,
       "start": 1767.52,
       "end": 1770.66,
-      "text": "So we are very involved and supportive with Frederick County Public Schools."
+      "text": "So we are very involved and supportive with Frederick County Public Schools.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 206,
       "start": 1771.6,
       "end": 1774.0,
-      "text": "Our families attended Fellowship Bible Church on Middle Road."
+      "text": "Our families attended Fellowship Bible Church on Middle Road.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 207,
       "start": 1774.5,
       "end": 1779.66,
-      "text": "We've been there from the time it was a single building to the additional add-ons to the megastructure it's become."
+      "text": "We've been there from the time it was a single building to the additional add-ons to the megastructure it's become.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 208,
       "start": 1781.28,
       "end": 1783.36,
-      "text": "I think this is very symbolic of Frederick County itself."
+      "text": "I think this is very symbolic of Frederick County itself.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 209,
       "start": 1783.38,
       "end": 1787.54,
-      "text": "In my lifetime, and particularly in the last 20 years, we've seen massive growth in the county."
+      "text": "In my lifetime, and particularly in the last 20 years, we've seen massive growth in the county.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 210,
       "start": 1788.14,
       "end": 1789.46,
-      "text": "We've seen farms disappear to become a community."
+      "text": "We've seen farms disappear to become a community.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 211,
       "start": 1789.46,
       "end": 1789.58,
-      "text": "We've seen a lot of people move out of the community."
+      "text": "We've seen a lot of people move out of the community.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 212,
       "start": 1789.58,
       "end": 1790.94,
-      "text": "We've seen businesses and subdivisions."
+      "text": "We've seen businesses and subdivisions.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 213,
       "start": 1791.58,
       "end": 1798.34,
-      "text": "Homes and townhomes have popped up everywhere, it seems, even in the strangest of places, like next to a sewage treatment plant,"
+      "text": "Homes and townhomes have popped up everywhere, it seems, even in the strangest of places, like next to a sewage treatment plant,",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 214,
       "start": 1799.24,
       "end": 1802.08,
-      "text": "which is not someplace I would want to live, but I also grew up on a farm."
+      "text": "which is not someplace I would want to live, but I also grew up on a farm.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 215,
       "start": 1803.68,
       "end": 1808.04,
-      "text": "This has been very prevalent, particularly on the east side of the county, but the western side has not been immune."
+      "text": "This has been very prevalent, particularly on the east side of the county, but the western side has not been immune.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 216,
       "start": 1808.88,
       "end": 1812.5,
-      "text": "This has come with challenges to our infrastructure, our county government, and to our residents."
+      "text": "This has come with challenges to our infrastructure, our county government, and to our residents.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 217,
       "start": 1813.66,
       "end": 1815.9,
-      "text": "Shawnee Land over the years has experienced similar growth."
+      "text": "Shawnee Land over the years has experienced similar growth.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 218,
       "start": 1816.34,
       "end": 1818.98,
-      "text": "I served for 12 years on the advisory board up there."
+      "text": "I served for 12 years on the advisory board up there.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 219,
       "start": 1819.58,
       "end": 1825.7,
-      "text": "We've faced similar issues, challenges with increased population, roads, our lakes, historic preservation, and Mother Nature herself."
+      "text": "We've faced similar issues, challenges with increased population, roads, our lakes, historic preservation, and Mother Nature herself.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 220,
       "start": 1826.44,
       "end": 1831.44,
-      "text": "We were able to navigate these challenges with a combination of teamwork, communication, community involvement, and positivity."
+      "text": "We were able to navigate these challenges with a combination of teamwork, communication, community involvement, and positivity.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 221,
       "start": 1832.14,
       "end": 1838.3,
-      "text": "By doing this, we were often able to come up with outside-the-box solutions to achieve our goals without negatively impacting our budget."
+      "text": "By doing this, we were often able to come up with outside-the-box solutions to achieve our goals without negatively impacting our budget.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 222,
       "start": 1839.42,
       "end": 1841.92,
-      "text": "As you know, the sanitary district is entirely self-funded."
+      "text": "As you know, the sanitary district is entirely self-funded.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 223,
       "start": 1842.38,
       "end": 1844.66,
-      "text": "We do not get any county money to maintain our subdivision."
+      "text": "We do not get any county money to maintain our subdivision.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 224,
       "start": 1845.34,
       "end": 1847.18,
-      "text": "So we have to make our ends meet ourselves."
+      "text": "So we have to make our ends meet ourselves.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 225,
       "start": 1847.9,
       "end": 1849.56,
-      "text": "Over the years, we've tried to keep our costs down."
+      "text": "Over the years, we've tried to keep our costs down.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 226,
       "start": 1850.1,
       "end": 1851.06,
-      "text": "And our fees to a minimum."
+      "text": "And our fees to a minimum.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 227,
       "start": 1851.7,
       "end": 1855.7,
-      "text": "Fiscal responsibility was a priority for our residents because we pay fees and taxes."
+      "text": "Fiscal responsibility was a priority for our residents because we pay fees and taxes.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 228,
       "start": 1857.4,
       "end": 1860.9,
-      "text": "Additionally, I've served the county for 22 years as a law enforcement officer."
+      "text": "Additionally, I've served the county for 22 years as a law enforcement officer.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 229,
       "start": 1860.9,
       "end": 1863.62,
-      "text": "I started under Sheriff Williamson and now under Sheriff Milholland."
+      "text": "I started under Sheriff Williamson and now under Sheriff Milholland.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 230,
       "start": 1864.44,
       "end": 1867.64,
-      "text": "I've risen through the ranks to the rank of lieutenant where I currently manage the morning shift."
+      "text": "I've risen through the ranks to the rank of lieutenant where I currently manage the morning shift.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 231,
       "start": 1868.84,
       "end": 1871.76,
-      "text": "This has given me the opportunity to meet with the public in a variety of circumstances."
+      "text": "This has given me the opportunity to meet with the public in a variety of circumstances.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 232,
       "start": 1872.52,
       "end": 1875.44,
-      "text": "I've been involved with community meetings, HOAs, board meetings."
+      "text": "I've been involved with community meetings, HOAs, board meetings.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 233,
       "start": 1875.94,
       "end": 1877.94,
-      "text": "In addition, I've traveled the length and width of this county."
+      "text": "In addition, I've traveled the length and width of this county.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 234,
       "start": 1879.58,
       "end": 1882.56,
-      "text": "Not only is responding to calls for service, but also community policing."
+      "text": "Not only is responding to calls for service, but also community policing.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 235,
       "start": 1883.34,
       "end": 1884.9,
-      "text": "I've been able to get out and talk with people."
+      "text": "I've been able to get out and talk with people.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 236,
       "start": 1885.5,
       "end": 1887.7,
-      "text": "Talk about their lives, their concerns, and things that impact them."
+      "text": "Talk about their lives, their concerns, and things that impact them.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 237,
       "start": 1888.12,
       "end": 1892.62,
-      "text": "It is not uncommon to stop and have a conversation with someone over a cup of coffee in a store somewhere."
+      "text": "It is not uncommon to stop and have a conversation with someone over a cup of coffee in a store somewhere.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 238,
       "start": 1893.42,
       "end": 1895.22,
-      "text": "The people in this county have been very supportive."
+      "text": "The people in this county have been very supportive.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 239,
       "start": 1895.52,
       "end": 1897.6,
-      "text": "Not only of the sheriff's office, but of the county itself."
+      "text": "Not only of the sheriff's office, but of the county itself.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 240,
       "start": 1898.68,
       "end": 1903.02,
-      "text": "One of the things I've taken away from my time in law enforcement is that no matter how routine the call may seem to me,"
+      "text": "One of the things I've taken away from my time in law enforcement is that no matter how routine the call may seem to me,",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 241,
       "start": 1903.56,
       "end": 1905.42,
-      "text": "the person with the issue, it is very important."
+      "text": "the person with the issue, it is very important.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 242,
       "start": 1906.16,
       "end": 1909.46,
-      "text": "We need to put ourselves in that person's shoes in order to effectively help them."
+      "text": "We need to put ourselves in that person's shoes in order to effectively help them.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 243,
       "start": 1909.46,
       "end": 1909.56,
-      "text": "We need to put ourselves in that person's shoes in order to effectively help them."
+      "text": "We need to put ourselves in that person's shoes in order to effectively help them.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 244,
       "start": 1909.58,
       "end": 1909.62,
-      "text": "We need to put ourselves in that person's shoes in order to effectively help them."
+      "text": "We need to put ourselves in that person's shoes in order to effectively help them.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 245,
       "start": 1909.62,
       "end": 1913.1,
-      "text": "I took this with me from my time on the advisory committee."
+      "text": "I took this with me from my time on the advisory committee.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 246,
       "start": 1913.62,
       "end": 1917.84,
-      "text": "I believe that no matter what side of an argument that you stand on, it is just as important as the other side."
+      "text": "I believe that no matter what side of an argument that you stand on, it is just as important as the other side.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 247,
       "start": 1918.54,
       "end": 1920.72,
-      "text": "Their opinions be respected, even if you disagree with it."
+      "text": "Their opinions be respected, even if you disagree with it.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 248,
       "start": 1921.4,
       "end": 1925.42,
-      "text": "We can have open communication and civil debate about any topic."
+      "text": "We can have open communication and civil debate about any topic.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 249,
       "start": 1926.52,
       "end": 1930.48,
-      "text": "Ultimately, when things come to a vote, there will be times when you're the winning and on the losing side of that vote."
+      "text": "Ultimately, when things come to a vote, there will be times when you're the winning and on the losing side of that vote.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 250,
       "start": 1930.78,
       "end": 1931.4,
-      "text": "And that's okay."
+      "text": "And that's okay.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 251,
       "start": 1932.02,
       "end": 1933.14,
-      "text": "We do not have to agree."
+      "text": "We do not have to agree.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 252,
       "start": 1933.22,
       "end": 1936.12,
-      "text": "We just have to respect each other as each of us is trying to do the best for the county."
+      "text": "We just have to respect each other as each of us is trying to do the best for the county.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 253,
       "start": 1937.12,
       "end": 1939.46,
-      "text": "I firmly believe that a positive attitude will always net a positive outcome."
+      "text": "I firmly believe that a positive attitude will always net a positive outcome.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 254,
       "start": 1939.46,
       "end": 1939.96,
-      "text": "I firmly believe that a positive attitude will always net a positive outcome."
+      "text": "I firmly believe that a positive attitude will always net a positive outcome.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 255,
       "start": 1941.02,
       "end": 1942.66,
-      "text": "This is what I bring as a board member."
+      "text": "This is what I bring as a board member.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 256,
       "start": 1943.02,
       "end": 1944.98,
-      "text": "I have deep ties to the county, particularly Back Creek."
+      "text": "I have deep ties to the county, particularly Back Creek.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 257,
       "start": 1945.78,
       "end": 1949.32,
-      "text": "I have served on the sanitary advisory committee for over a dozen years."
+      "text": "I have served on the sanitary advisory committee for over a dozen years.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 258,
       "start": 1949.86,
       "end": 1952.7,
-      "text": "I have over two decades of law enforcement helping people resolve their problems."
+      "text": "I have over two decades of law enforcement helping people resolve their problems.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 259,
       "start": 1953.46,
       "end": 1957.38,
-      "text": "I feel that these qualities would make me a candidate for interim supervisor."
+      "text": "I feel that these qualities would make me a candidate for interim supervisor.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 260,
       "start": 1958.1,
       "end": 1964.0,
-      "text": "I believe teamwork, community engagement, communication, positivity are the keys to success in just about any endeavor."
+      "text": "I believe teamwork, community engagement, communication, positivity are the keys to success in just about any endeavor.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 261,
       "start": 1964.78,
       "end": 1969.34,
-      "text": "I look forward to working with each of you to improve our county, not just for us, but for our children and for the rest of the county."
+      "text": "I look forward to working with each of you to improve our county, not just for us, but for our children and for the rest of the county.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 262,
       "start": 1969.34,
       "end": 1969.44,
-      "text": "I look forward to working with each of you to improve our county, not just for us, but for our children and for the rest of the county."
+      "text": "I look forward to working with each of you to improve our county, not just for us, but for our children and for the rest of the county.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 263,
       "start": 1969.46,
       "end": 1969.92,
-      "text": "I look forward to working with each of you to improve our county, not just for us, but for our children and for the rest of the county."
+      "text": "I look forward to working with each of you to improve our county, not just for us, but for our children and for the rest of the county.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 264,
       "start": 1970.52,
       "end": 1972.14,
-      "text": "Thank you for your time and your consideration."
+      "text": "Thank you for your time and your consideration.",
+      "speaker": "SPEAKER_03"
     },
     {
       "id": 265,
       "start": 1972.88,
       "end": 1973.3,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 266,
       "start": 1973.3,
       "end": 1973.6,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 267,
       "start": 1973.6,
       "end": 1973.98,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 268,
       "start": 1977.98,
       "end": 1981.48,
-      "text": "Thank you all for coming out."
+      "text": "Thank you all for coming out.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 269,
       "start": 1981.58,
       "end": 1982.0,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 270,
       "start": 1983.46,
       "end": 1989.0,
-      "text": "I'm speaking for all of us, but I'm saying we really appreciate the community stepping up."
+      "text": "I'm speaking for all of us, but I'm saying we really appreciate the community stepping up.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 271,
       "start": 1989.0,
       "end": 1993.06,
-      "text": "We had it with the Gainesboro seat, and we're having it with the Back Creek seat."
+      "text": "We had it with the Gainesboro seat, and we're having it with the Back Creek seat.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 272,
       "start": 1993.34,
       "end": 1998.72,
-      "text": "And we just appreciate what we're seeing and the folks that are applying."
+      "text": "And we just appreciate what we're seeing and the folks that are applying.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 273,
       "start": 1998.82,
       "end": 1999.34,
-      "text": "And we just appreciate what we're seeing and the folks that are applying."
+      "text": "And we just appreciate what we're seeing and the folks that are applying.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 274,
       "start": 1999.34,
       "end": 2003.0,
-      "text": "It's our community that cares about our county, and we all care about our county."
+      "text": "It's our community that cares about our county, and we all care about our county.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 275,
       "start": 2003.2,
       "end": 2005.94,
-      "text": "So I just really appreciate you coming out."
+      "text": "So I just really appreciate you coming out.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 276,
       "start": 2006.58,
       "end": 2009.4,
-      "text": "And with that, our public meeting will be adjourned."
+      "text": "And with that, our public meeting will be adjourned.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 277,
       "start": 2009.76,
       "end": 2011.1,
-      "text": "Madam Chair, Madam Vice Chair?"
+      "text": "Madam Chair, Madam Vice Chair?",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 278,
       "start": 2011.42,
       "end": 2012.68,
-      "text": "I move for adjournment."
+      "text": "I move for adjournment.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 279,
       "start": 2013.82,
       "end": 2014.3,
-      "text": "Second."
+      "text": "Second.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 280,
       "start": 2015.16,
       "end": 2015.82,
-      "text": "So moved."
+      "text": "So moved.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 281,
       "start": 2015.92,
       "end": 2016.48,
-      "text": "We're adjourned."
+      "text": "We're adjourned.",
+      "speaker": "SPEAKER_06"
     },
     {
       "id": 282,
       "start": 2023.14,
       "end": 2024.88,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "UNKNOWN"
     },
     {
       "id": 283,
       "start": 2029.34,
       "end": 2059.32,
-      "text": "Thank you."
+      "text": "Thank you.",
+      "speaker": "UNKNOWN"
     }
-  ]
+  ],
+  "diarization": true,
+  "diarization_model": "pyannote/speaker-diarization-3.1",
+  "whisper_model": "small"
 }

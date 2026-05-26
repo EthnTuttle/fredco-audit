@@ -72,6 +72,12 @@ def main():
         segments = data.get("segments", [])
         duration = segments[-1]["end"] if segments else 0
 
+        # Diarization: present if any segment has a non-UNKNOWN speaker label
+        has_diarization = any(
+            s.get("speaker") not in (None, "UNKNOWN")
+            for s in segments
+        )
+
         manifest.append({
             "clip_id": clip_id,
             "title": title,
@@ -80,6 +86,7 @@ def main():
             "transcribed_at": transcribed_at,
             "duration": fmt_duration(duration),
             "segment_count": len(segments),
+            "has_diarization": has_diarization,
         })
 
         index.append({

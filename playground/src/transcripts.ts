@@ -20,6 +20,7 @@ interface ManifestEntry {
   meeting_url: string;
   duration: string;
   segment_count: number;
+  has_diarization?: boolean;
 }
 
 interface IndexEntry {
@@ -34,6 +35,7 @@ interface Segment {
   start: number;
   end: number;
   text: string;
+  speaker?: string;
 }
 
 interface TranscriptData {
@@ -121,6 +123,7 @@ function renderMeetingList(entries: ManifestEntry[]) {
     <a class="meeting-item" href="${clipUrl(e.clip_id)}">
       <span class="meeting-date">${e.meeting_date}</span>
       <span class="meeting-title">${escape(e.title)}</span>
+      ${e.has_diarization ? '<span class="meeting-badge">speakers</span>' : ''}
       <span class="meeting-duration">${e.duration}</span>
     </a>
   `).join('');
@@ -200,9 +203,58 @@ function debounce<T extends (...args: any[]) => void>(fn: T, ms: number): T {
   }) as T;
 }
 
+// ── Speaker colors ────────────────────────────────────────────────────────────
+
+// 15 distinct colors for SPEAKER_00–SPEAKER_14; UNKNOWN gets a neutral grey
+const SPEAKER_COLORS = [
+  '#00d9ff', '#e94560', '#7bed9f', '#ffd166', '#a29bfe',
+  '#fd79a8', '#55efc4', '#fdcb6e', '#74b9ff', '#ff7675',
+  '#81ecec', '#fab1a0', '#b2bec3', '#6c5ce7', '#00cec9',
+];
+
+function speakerColor(label: string): string {
+  if (!label || label === 'UNKNOWN') return '#666';
+  const m = label.match(/(\d+)$/);
+  if (!m) return '#888';
+  return SPEAKER_COLORS[parseInt(m[1], 10) % SPEAKER_COLORS.length];
+}
+
+function speakerLabel(label: string): string {
+  if (!label || label === 'UNKNOWN') return 'UNKNOWN';
+  // SPEAKER_00 → Speaker 1 (1-indexed for readability)
+  const m = label.match(/(\d+)$/);
+  if (!m) return label;
+  return `Speaker ${parseInt(m[1], 10) + 1}`;
+}
+
 // ── Reader view ───────────────────────────────────────────────────────────────
 
 const BLOCK_SECONDS = 300; // 5-minute blocks
+
+interface SpeakerTurn {
+  speaker: string;
+  start: number;
+  text: string;
+}
+
+function groupIntoTurns(segments: Segment[]): SpeakerTurn[] {
+  const turns: SpeakerTurn[] = [];
+  let current: SpeakerTurn | null = null;
+
+  for (const seg of segments) {
+    const speaker = seg.speaker ?? 'UNKNOWN';
+    const text = seg.text.trim();
+    if (!text) continue;
+    if (current && current.speaker === speaker) {
+      current.text += ' ' + text;
+    } else {
+      if (current) turns.push(current);
+      current = { speaker, start: seg.start, text };
+    }
+  }
+  if (current) turns.push(current);
+  return turns;
+}
 
 function renderReader(data: TranscriptData) {
   const { meta, segments } = data;
@@ -212,34 +264,60 @@ function renderReader(data: TranscriptData) {
     return;
   }
 
-  // Group segments into 5-minute blocks
-  const blocks: { blockStart: number; segs: Segment[] }[] = [];
-  let currentBlock: Segment[] = [];
-  let blockStart = 0;
+  const hasDiarization = segments.some(s => s.speaker && s.speaker !== 'UNKNOWN');
 
-  for (const seg of segments) {
-    const blockIdx = Math.floor(seg.start / BLOCK_SECONDS);
-    if (blockIdx > Math.floor(blockStart / BLOCK_SECONDS) && currentBlock.length > 0) {
-      blocks.push({ blockStart, segs: currentBlock });
-      blockStart = blockIdx * BLOCK_SECONDS;
-      currentBlock = [seg];
-    } else {
-      currentBlock.push(seg);
+  let bodyHtml: string;
+
+  if (hasDiarization) {
+    // Speaker-turn view
+    const turns = groupIntoTurns(segments);
+    bodyHtml = turns.map(turn => {
+      const color = speakerColor(turn.speaker);
+      const label = speakerLabel(turn.speaker);
+      return `
+        <div class="turn-block">
+          <div class="turn-meta">
+            <span class="turn-timestamp">${fmtTimestamp(turn.start)}</span>
+            <span class="turn-speaker" style="color:${color}">${escape(label)}</span>
+          </div>
+          <div class="turn-text">${escape(turn.text)}</div>
+        </div>
+      `;
+    }).join('');
+  } else {
+    // 5-minute block view (no diarization)
+    const blocks: { blockStart: number; segs: Segment[] }[] = [];
+    let currentBlock: Segment[] = [];
+    let blockStart = 0;
+
+    for (const seg of segments) {
+      const blockIdx = Math.floor(seg.start / BLOCK_SECONDS);
+      if (blockIdx > Math.floor(blockStart / BLOCK_SECONDS) && currentBlock.length > 0) {
+        blocks.push({ blockStart, segs: currentBlock });
+        blockStart = blockIdx * BLOCK_SECONDS;
+        currentBlock = [seg];
+      } else {
+        currentBlock.push(seg);
+      }
     }
-  }
-  if (currentBlock.length > 0) {
-    blocks.push({ blockStart, segs: currentBlock });
+    if (currentBlock.length > 0) {
+      blocks.push({ blockStart, segs: currentBlock });
+    }
+
+    bodyHtml = blocks.map(({ blockStart: bs, segs }) => {
+      const text = segs.map(s => s.text.trim()).join(' ');
+      return `
+        <div class="segment-block">
+          <div class="block-timestamp">[${fmtTimestamp(bs)}]</div>
+          <div class="block-text">${escape(text)}</div>
+        </div>
+      `;
+    }).join('');
   }
 
-  const blocksHtml = blocks.map(({ blockStart: bs, segs }) => {
-    const text = segs.map(s => s.text.trim()).join(' ');
-    return `
-      <div class="segment-block">
-        <div class="block-timestamp">[${fmtTimestamp(bs)}]</div>
-        <div class="block-text">${escape(text)}</div>
-      </div>
-    `;
-  }).join('');
+  const diarBadge = hasDiarization
+    ? '<span class="reader-badge">speaker-diarized</span>'
+    : '';
 
   readerContent.innerHTML = `
     <div class="reader-header">
@@ -249,9 +327,10 @@ function renderReader(data: TranscriptData) {
         <span>${fmtDate(meta.meeting_date)}</span>
         <span><a href="${escape(meta.meeting_url)}" target="_blank" rel="noopener">Watch on Granicus ↗</a></span>
         <span>${segments.length} segments</span>
+        ${diarBadge}
       </div>
     </div>
-    ${blocksHtml}
+    ${bodyHtml}
   `;
 }
 
