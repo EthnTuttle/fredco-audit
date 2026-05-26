@@ -381,8 +381,9 @@ def phase_process():
 
     log("Starting diarization in background...")
     run_ssh(
-        f"cd {SERVER_DIR} && nohup {SERVER_VENV} scripts/bos_speaker_diarize.py"
-        f" --device {DIARIZE_DEVICE} > diarize.log 2>&1 &",
+        f"cd {SERVER_DIR} && nohup {SERVER_VENV} -u scripts/bos_speaker_diarize.py"
+        f" --device {DIARIZE_DEVICE}"
+        f" > diarize.log 2>&1 &",
         capture=False,
     )
 
