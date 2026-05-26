@@ -408,57 +408,46 @@ def phase_monitor():
         log(f"Completed diarizations: {result.stdout.strip()}")
 
 def phase_sync():
-    """Phase 4: Copy results back from server."""
-    log("=== Phase 4: Sync Results from Server ===")
+    """Phase 4: Rsync transcript JSONs back from server and update local DB."""
+    log(f"=== Phase 4: Sync Results from {SERVER} ===")
 
-    log("Finding processed transcripts...")
+    # Rsync all transcript.json files back, excluding audio files
+    log("Rsyncing transcript JSONs back...")
+    result = subprocess.run(
+        [
+            "rsync", "-az", "--progress",
+            "--include=*/",
+            "--include=*/transcript.json",
+            "--include=*/transcript.txt",
+            "--exclude=*",
+            f"{SERVER}:{SERVER_DIR}/data/bos_transcripts/",
+            str(TRANSCRIPT_DIR) + "/",
+        ],
+        capture_output=True, text=True,
+    )
+    if result.returncode == 0:
+        log("Rsync complete")
+    else:
+        log(f"Rsync error: {result.stderr[:200]}")
 
-    result = run_ssh(f"find {SERVER_DIR}/data/bos_transcripts -name 'transcript.json' -newer {SERVER_DIR}/.gitignore 2>/dev/null | head -20")
-    if result.returncode == 0 and result.stdout:
-        log(f"Found transcripts: {result.stdout}")
-
-    log("Copying processed transcripts back...")
-
-    transcript_dirs = []
-    result = run_ssh(f"ls -d {SERVER_DIR}/data/bos_transcripts/????-??-??_clip* 2>/dev/null")
-    if result.returncode == 0 and result.stdout:
-        transcript_dirs = result.stdout.strip().split('\n')
-
-    log(f"Found {len(transcript_dirs)} transcript directories")
-
-    for td in transcript_dirs:
-        td = td.strip()
-        if not td:
-            continue
-
-        result = run_ssh(f"test -d {td} && basename {td}")
-        if result.returncode != 0:
-            continue
-
-        dir_name = result.stdout.strip()
-        local_dir = TRANSCRIPT_DIR / dir_name
-        local_dir.mkdir(parents=True, exist_ok=True)
-
-        log(f"  Copying {dir_name}...")
-        run_ssh(f"scp -r {SERVER}:{td}/* {local_dir}/", capture=False)
-
-    log("Updating local database...")
-    run_ssh(f"sqlite3 {SERVER_DIR}/data/bos_transcripts/pipeline.db \"SELECT clip_id, diarized FROM meetings WHERE diarized = 1\" > /tmp/diarized.txt")
-
-    conn = sqlite3.connect(str(DB_PATH))
-    with open("/tmp/diarized.txt") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            parts = line.split('|')
-            if len(parts) >= 2:
-                clip_id = parts[0].strip()
+    # Update local DB to mark diarized clips
+    log("Updating local DB from server...")
+    result = run_ssh(
+        f'sqlite3 {SERVER_DIR}/data/bos_transcripts/pipeline.db'
+        f' "SELECT clip_id FROM meetings WHERE diarized = 1"'
+    )
+    if result.returncode == 0 and result.stdout.strip():
+        conn = sqlite3.connect(str(DB_PATH))
+        for line in result.stdout.strip().splitlines():
+            clip_id = line.strip()
+            if clip_id:
                 conn.execute("UPDATE meetings SET diarized = 1 WHERE clip_id = ?", (clip_id,))
-    conn.commit()
-    conn.close()
+        conn.commit()
+        n = conn.execute("SELECT COUNT(*) FROM meetings WHERE diarized=1").fetchone()[0]
+        conn.close()
+        log(f"Marked {n} meetings as diarized locally")
 
-    log("=== Sync Complete ===")
+    log("=== Sync Complete — run build_transcript_index.py to publish ===")
 
 def phase_cleanup():
     """Phase 5: Clean up audio from server."""
