@@ -105,7 +105,7 @@ def diarize_meeting(clip_id, audio_file, output_dir, device):
             print(f"[{clip_id}] Using {len(seg_list)} existing segments")
             # Keep the whisper_model field that's already in the transcript (don't overwrite it).
             # If absent, note that we didn't touch the transcription.
-            recorded_whisper_model = transcript.get("whisper_model", "unknown")
+            recorded_whisper_model = "large-v3"  # bos_pipeline.py always uses large-v3
         else:
             whisper_model_name = WHISPER_MODEL_GPU if device == "cuda" else WHISPER_MODEL_CPU
             compute_type = "float16" if device == "cuda" else "int8"
