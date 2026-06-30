@@ -29935,3 +29935,749 @@ and the repository exists.
 2026-04-07 22:05:05 [INFO] [transcriber] ~25472 words transcribed
 2026-04-07 22:05:05 [INFO] [transcriber] Saved → data/bos_transcripts/2026-03-25_clip338_Board_of_Supervisors
 2026-04-07 22:05:05 [INFO] [transcriber] clip 338 done ✓
+2026-04-07 22:05:09 [INFO] [git] Committed and pushed: Add BoS transcript: 2026-03-25 clip338 Board of Supervisors
+2026-04-07 22:05:09 [INFO] [transcriber] All meetings processed.
+2026-04-07 22:05:09 [INFO] ────────────────────────────────────────────────────────────
+2026-04-07 22:05:09 [INFO] Run finished: 61 done, 4 failed this session. DB totals: done=249 | failed=1 | pending=3
+2026-04-08 13:46:11 [INFO] Starting run: 4 meetings | model=large-v3 | threads=14 | dl-workers=3 | prefetch=4
+2026-04-08 13:46:11 [INFO] Download thread started (workers: 3, prefetch queue depth: 4).
+2026-04-08 13:46:11 [INFO] [downloader] ↓ clip 237 | 2024-09-11 | Board of Supervisors
+2026-04-08 13:46:11 [INFO] [downloader] ↓ clip 240 | 2024-09-25 | Board of Supervisors
+2026-04-08 13:46:11 [INFO] [downloader] ↓ clip 241 | 2024-09-25 | Board of Supervisors
+2026-04-08 13:46:12 [WARNING] Interrupt received — finishing current meeting then stopping. Press Ctrl-C again to force-quit.
+2026-04-08 13:46:12 [WARNING] Force-quit requested.
+2026-04-08 13:46:13 [WARNING] Force-quit requested.
+2026-04-12 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-04-12 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:194: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-04-12 03:00:03 [INFO] Scrape complete: 1 new meetings inserted, 253 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-04-12 03:00:03 [INFO] Scrape complete: 1 new meetings inserted, 253 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-04-12 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-04-12 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-04-19 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-04-19 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:194: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-04-19 03:00:03 [INFO] Scrape complete: 1 new meetings inserted, 254 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-04-19 03:00:03 [INFO] Scrape complete: 1 new meetings inserted, 254 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-04-19 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-04-19 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-04-26 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-04-26 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:194: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-04-26 03:00:02 [INFO] Scrape complete: 1 new meetings inserted, 255 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-04-26 03:00:02 [INFO] Scrape complete: 1 new meetings inserted, 255 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-04-26 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-04-26 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-04-30 12:09:26 [INFO] Starting run: 7 meetings | model=large-v3 | threads=8 | dl-workers=3 | prefetch=4
+2026-04-30 12:09:26 [INFO] Download thread started (workers: 3, prefetch queue depth: 4).
+2026-04-30 12:09:26 [INFO] [downloader] Removing stale staging dir: clip240
+2026-04-30 12:09:26 [INFO] [downloader] Removing stale staging dir: clip241
+2026-04-30 12:09:26 [INFO] [downloader] Removing stale staging dir: clip237
+2026-04-30 12:09:26 [INFO] [downloader] ↓ clip 240 | 2024-09-25 | Board of Supervisors
+2026-04-30 12:09:26 [INFO] [downloader] ↓ clip 237 | 2024-09-11 | Board of Supervisors
+2026-04-30 12:09:26 [INFO] [downloader] ↓ clip 241 | 2024-09-25 | Board of Supervisors
+2026-04-30 12:11:46 [WARNING] Interrupt received — finishing current meeting then stopping. Press Ctrl-C again to force-quit.
+2026-04-30 12:11:56 [ERROR] [downloader] FAILED download clip 237: yt-dlp failed (exit -15): 
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 723, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 514, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit -15): 
+2026-04-30 12:11:56 [ERROR] [downloader] FAILED download clip 240: yt-dlp failed (exit -15): 
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 723, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 514, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit -15): 
+2026-04-30 12:11:56 [INFO] [downloader] ↓ clip 246 | 2024-10-23 | Board of Supervisors
+2026-04-30 12:11:56 [ERROR] [downloader] FAILED download clip 241: yt-dlp failed (exit -15): 
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 723, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 514, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit -15): 
+2026-04-30 12:11:56 [INFO] [downloader] ↓ clip 339 | 2026-04-08 | Board of Supervisors
+2026-04-30 12:11:56 [INFO] [downloader] ↓ clip 340 | 2026-04-15 | Planning Commission
+2026-04-30 12:12:51 [WARNING] Force-quit requested.
+2026-05-03 03:00:02 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-05-03 03:00:02 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:194: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-05-03 03:00:04 [INFO] Scrape complete: 0 new meetings inserted, 256 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-05-03 03:00:04 [INFO] Scrape complete: 0 new meetings inserted, 256 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-05-03 03:00:04 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-05-03 03:00:04 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-05-10 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-05-10 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:194: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-05-10 03:00:03 [INFO] Scrape complete: 4 new meetings inserted, 256 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-05-10 03:00:03 [INFO] Scrape complete: 4 new meetings inserted, 256 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-05-10 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-05-10 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-05-17 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-05-17 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:194: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-05-17 03:00:03 [INFO] Scrape complete: 1 new meetings inserted, 260 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-05-17 03:00:03 [INFO] Scrape complete: 1 new meetings inserted, 260 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-05-17 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-05-17 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-05-24 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-05-24 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:194: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-05-24 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 261 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-05-24 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 261 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-05-24 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-05-24 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-05-31 03:00:02 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-05-31 03:00:02 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:194: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-05-31 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 261 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-05-31 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 261 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-05-31 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-05-31 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-06-07 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-06-07 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:194: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-07 03:00:03 [INFO] Scrape complete: 1 new meetings inserted, 261 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-06-07 03:00:03 [INFO] Scrape complete: 1 new meetings inserted, 261 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-06-07 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-06-07 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-06-14 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-06-14 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:194: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-14 03:00:03 [INFO] Scrape complete: 3 new meetings inserted, 262 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-06-14 03:00:03 [INFO] Scrape complete: 3 new meetings inserted, 262 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-06-14 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-06-14 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-06-21 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-06-21 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:194: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-21 03:00:03 [INFO] Scrape complete: 1 new meetings inserted, 265 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-06-21 03:00:03 [INFO] Scrape complete: 1 new meetings inserted, 265 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-06-21 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-06-21 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-06-25 15:31:23 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-06-25 15:31:25 [INFO] Scrape complete: 0 new meetings inserted, 266 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-06-25 15:31:33 [INFO] Starting run: 17 meetings | model=large-v3 | threads=14 | dl-workers=3 | prefetch=4
+2026-06-25 15:31:33 [INFO] Starting run: 17 meetings | model=large-v3 | threads=14 | dl-workers=3 | prefetch=4
+2026-06-25 15:31:33 [INFO] Download thread started (workers: 3, prefetch queue depth: 4).
+2026-06-25 15:31:33 [INFO] Download thread started (workers: 3, prefetch queue depth: 4).
+2026-06-25 15:31:33 [INFO] [downloader] ↓ clip 353 | 2026-06-10 | Board of Supervisors
+2026-06-25 15:31:33 [INFO] [downloader] ↓ clip 353 | 2026-06-10 | Board of Supervisors
+2026-06-25 15:31:33 [INFO] [downloader] ↓ clip 355 | 2026-06-17 | Board of Supervisors
+2026-06-25 15:31:33 [INFO] [downloader] ↓ clip 355 | 2026-06-17 | Board of Supervisors
+2026-06-25 15:31:33 [INFO] [downloader] ↓ clip 354 | 2026-06-10 | Board of Supervisors
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-25 15:31:33 [INFO] [downloader] ↓ clip 354 | 2026-06-10 | Board of Supervisors
+2026-06-25 15:31:35 [INFO] [transcriber] Loading Whisper model 'large-v3' …
+2026-06-25 15:31:35 [INFO] [transcriber] Loading Whisper model 'large-v3' …
+2026-06-25 15:31:48 [INFO] [transcriber] Model loaded. Waiting for audio …
+2026-06-25 15:31:48 [INFO] [transcriber] Model loaded. Waiting for audio …
+2026-06-25 15:32:04 [ERROR] [downloader] FAILED download clip 355: yt-dlp failed (exit 1): ERROR: [html5] 355?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 355?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:32:04 [ERROR] [downloader] FAILED download clip 355: yt-dlp failed (exit 1): ERROR: [html5] 355?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 355?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-25 15:32:04 [ERROR] [downloader] FAILED download clip 354: yt-dlp failed (exit 1): ERROR: [html5] 354?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 354?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:32:04 [ERROR] [downloader] FAILED download clip 354: yt-dlp failed (exit 1): ERROR: [html5] 354?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 354?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:32:04 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:32:04 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:32:04 [INFO] [transcriber] clip 355 | 2026-06-17 | Board of Supervisors
+2026-06-25 15:32:04 [INFO] [transcriber] clip 355 | 2026-06-17 | Board of Supervisors
+2026-06-25 15:32:04 [INFO] [downloader] ↓ clip 352 | 2026-06-09 | Planning Commission
+2026-06-25 15:32:04 [INFO] [downloader] ↓ clip 352 | 2026-06-09 | Planning Commission
+2026-06-25 15:32:04 [INFO] [downloader] ↓ clip 351 | 2026-06-03 | Planning Commission
+2026-06-25 15:32:04 [INFO] [downloader] ↓ clip 351 | 2026-06-03 | Planning Commission
+2026-06-25 15:32:04 [ERROR] [downloader] FAILED download clip 353: yt-dlp failed (exit 1): ERROR: [html5] 353?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 353?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:32:04 [ERROR] [downloader] FAILED download clip 353: yt-dlp failed (exit 1): ERROR: [html5] 353?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 353?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-25 15:32:04 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:32:04 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:32:04 [INFO] [transcriber] clip 353 | 2026-06-10 | Board of Supervisors
+2026-06-25 15:32:04 [INFO] [transcriber] clip 353 | 2026-06-10 | Board of Supervisors
+2026-06-25 15:32:04 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:32:04 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:32:04 [INFO] [downloader] ↓ clip 350 | 2026-05-13 | Board of Supervisors
+2026-06-25 15:32:04 [INFO] [downloader] ↓ clip 350 | 2026-05-13 | Board of Supervisors
+2026-06-25 15:32:04 [INFO] [transcriber] clip 354 | 2026-06-10 | Board of Supervisors
+2026-06-25 15:32:04 [INFO] [transcriber] clip 354 | 2026-06-10 | Board of Supervisors
+2026-06-25 15:32:34 [ERROR] [downloader] FAILED download clip 351: yt-dlp failed (exit 1): ERROR: [html5] 351?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 351?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:32:34 [ERROR] [downloader] FAILED download clip 351: yt-dlp failed (exit 1): ERROR: [html5] 351?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 351?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-25 15:32:34 [INFO] [downloader] ↓ clip 349 | 2026-05-07 | Community Information Exchange: Data Centers
+2026-06-25 15:32:34 [INFO] [downloader] ↓ clip 349 | 2026-05-07 | Community Information Exchange: Data Centers
+2026-06-25 15:32:34 [ERROR] [downloader] FAILED download clip 352: yt-dlp failed (exit 1): ERROR: [html5] 352?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 352?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:32:34 [ERROR] [downloader] FAILED download clip 352: yt-dlp failed (exit 1): ERROR: [html5] 352?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 352?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:32:34 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:32:34 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:32:34 [INFO] [downloader] ↓ clip 345 | 2026-05-06 | Board of Supervisors
+2026-06-25 15:32:34 [INFO] [downloader] ↓ clip 345 | 2026-05-06 | Board of Supervisors
+2026-06-25 15:32:34 [INFO] [transcriber] clip 352 | 2026-06-09 | Planning Commission
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-25 15:32:34 [INFO] [transcriber] clip 352 | 2026-06-09 | Planning Commission
+2026-06-25 15:32:34 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:32:34 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:32:34 [INFO] [transcriber] clip 351 | 2026-06-03 | Planning Commission
+2026-06-25 15:32:34 [INFO] [transcriber] clip 351 | 2026-06-03 | Planning Commission
+2026-06-25 15:32:34 [ERROR] [downloader] FAILED download clip 350: yt-dlp failed (exit 1): ERROR: [html5] 350?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 350?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:32:34 [ERROR] [downloader] FAILED download clip 350: yt-dlp failed (exit 1): ERROR: [html5] 350?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 350?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-25 15:32:34 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:32:34 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:32:34 [INFO] [transcriber] clip 350 | 2026-05-13 | Board of Supervisors
+2026-06-25 15:32:34 [INFO] [transcriber] clip 350 | 2026-05-13 | Board of Supervisors
+2026-06-25 15:32:34 [INFO] [downloader] ↓ clip 346 | 2026-05-06 | Planning Commission
+2026-06-25 15:32:34 [INFO] [downloader] ↓ clip 346 | 2026-05-06 | Planning Commission
+2026-06-25 15:33:04 [ERROR] [downloader] FAILED download clip 349: yt-dlp failed (exit 1): ERROR: [html5] 349?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 349?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:33:04 [ERROR] [downloader] FAILED download clip 349: yt-dlp failed (exit 1): ERROR: [html5] 349?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 349?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-25 15:33:04 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:33:04 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:33:04 [INFO] [transcriber] clip 349 | 2026-05-07 | Community Information Exchange: Data Centers
+2026-06-25 15:33:04 [INFO] [transcriber] clip 349 | 2026-05-07 | Community Information Exchange: Data Centers
+2026-06-25 15:33:04 [INFO] [downloader] ↓ clip 344 | 2026-05-05 | Planning Commission
+2026-06-25 15:33:04 [INFO] [downloader] ↓ clip 344 | 2026-05-05 | Planning Commission
+2026-06-25 15:33:04 [ERROR] [downloader] FAILED download clip 345: yt-dlp failed (exit 1): ERROR: [html5] 345?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 345?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:33:04 [ERROR] [downloader] FAILED download clip 345: yt-dlp failed (exit 1): ERROR: [html5] 345?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 345?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:33:04 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:33:04 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:33:04 [INFO] [transcriber] clip 345 | 2026-05-06 | Board of Supervisors
+2026-06-25 15:33:04 [INFO] [transcriber] clip 345 | 2026-05-06 | Board of Supervisors
+2026-06-25 15:33:04 [INFO] [downloader] ↓ clip 341 | 2026-04-22 | Board of Supervisors
+2026-06-25 15:33:04 [INFO] [downloader] ↓ clip 341 | 2026-04-22 | Board of Supervisors
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-25 15:33:04 [ERROR] [downloader] FAILED download clip 346: yt-dlp failed (exit 1): ERROR: [html5] 346?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 346?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:33:04 [ERROR] [downloader] FAILED download clip 346: yt-dlp failed (exit 1): ERROR: [html5] 346?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 346?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-25 15:33:04 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:33:04 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:33:04 [INFO] [transcriber] clip 346 | 2026-05-06 | Planning Commission
+2026-06-25 15:33:04 [INFO] [transcriber] clip 346 | 2026-05-06 | Planning Commission
+2026-06-25 15:33:04 [INFO] [downloader] Removing stale staging dir: clip340
+2026-06-25 15:33:04 [INFO] [downloader] Removing stale staging dir: clip340
+2026-06-25 15:33:04 [INFO] [downloader] ↓ clip 340 | 2026-04-15 | Planning Commission
+2026-06-25 15:33:04 [INFO] [downloader] ↓ clip 340 | 2026-04-15 | Planning Commission
+2026-06-25 15:33:34 [ERROR] [downloader] FAILED download clip 344: yt-dlp failed (exit 1): ERROR: [html5] 344?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 344?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:33:34 [ERROR] [downloader] FAILED download clip 344: yt-dlp failed (exit 1): ERROR: [html5] 344?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 344?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-25 15:33:34 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:33:34 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:33:34 [INFO] [transcriber] clip 344 | 2026-05-05 | Planning Commission
+2026-06-25 15:33:34 [INFO] [transcriber] clip 344 | 2026-05-05 | Planning Commission
+2026-06-25 15:33:34 [INFO] [downloader] Removing stale staging dir: clip339
+2026-06-25 15:33:34 [INFO] [downloader] Removing stale staging dir: clip339
+2026-06-25 15:33:34 [ERROR] [downloader] FAILED download clip 341: yt-dlp failed (exit 1): ERROR: [html5] 341?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 341?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:33:34 [ERROR] [downloader] FAILED download clip 341: yt-dlp failed (exit 1): ERROR: [html5] 341?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 341?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:33:34 [INFO] [downloader] ↓ clip 339 | 2026-04-08 | Board of Supervisors
+2026-06-25 15:33:34 [INFO] [downloader] ↓ clip 339 | 2026-04-08 | Board of Supervisors
+2026-06-25 15:33:34 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:33:34 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:33:34 [INFO] [transcriber] clip 341 | 2026-04-22 | Board of Supervisors
+2026-06-25 15:33:34 [INFO] [transcriber] clip 341 | 2026-04-22 | Board of Supervisors
+2026-06-25 15:33:34 [INFO] [downloader] Removing stale staging dir: clip246
+2026-06-25 15:33:34 [INFO] [downloader] Removing stale staging dir: clip246
+2026-06-25 15:33:34 [INFO] [downloader] ↓ clip 246 | 2024-10-23 | Board of Supervisors
+2026-06-25 15:33:34 [INFO] [downloader] ↓ clip 246 | 2024-10-23 | Board of Supervisors
+2026-06-25 15:33:34 [ERROR] [downloader] FAILED download clip 340: yt-dlp failed (exit 1): ERROR: [html5] 340?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 340?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:33:34 [ERROR] [downloader] FAILED download clip 340: yt-dlp failed (exit 1): ERROR: [html5] 340?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 340?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-25 15:33:34 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:33:34 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:33:34 [INFO] [transcriber] clip 340 | 2026-04-15 | Planning Commission
+2026-06-25 15:33:34 [INFO] [transcriber] clip 340 | 2026-04-15 | Planning Commission
+2026-06-25 15:33:34 [INFO] [downloader] ↓ clip 240 | 2024-09-25 | Board of Supervisors
+2026-06-25 15:33:34 [INFO] [downloader] ↓ clip 240 | 2024-09-25 | Board of Supervisors
+2026-06-25 15:34:04 [ERROR] [downloader] FAILED download clip 339: yt-dlp failed (exit 1): ERROR: [html5] 339?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 339?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:34:04 [ERROR] [downloader] FAILED download clip 339: yt-dlp failed (exit 1): ERROR: [html5] 339?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 339?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-25 15:34:04 [ERROR] [downloader] FAILED download clip 246: yt-dlp failed (exit 1): ERROR: [html5] 246?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 246?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:34:04 [ERROR] [downloader] FAILED download clip 246: yt-dlp failed (exit 1): ERROR: [html5] 246?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 246?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:34:04 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:34:04 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:34:04 [INFO] [transcriber] clip 339 | 2026-04-08 | Board of Supervisors
+2026-06-25 15:34:04 [INFO] [transcriber] clip 339 | 2026-04-08 | Board of Supervisors
+2026-06-25 15:34:04 [INFO] [downloader] ↓ clip 241 | 2024-09-25 | Board of Supervisors
+2026-06-25 15:34:04 [INFO] [downloader] ↓ clip 241 | 2024-09-25 | Board of Supervisors
+2026-06-25 15:34:04 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:34:04 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:34:04 [INFO] [downloader] ↓ clip 237 | 2024-09-11 | Board of Supervisors
+2026-06-25 15:34:04 [INFO] [downloader] ↓ clip 237 | 2024-09-11 | Board of Supervisors
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-25 15:34:04 [INFO] [transcriber] clip 246 | 2024-10-23 | Board of Supervisors
+2026-06-25 15:34:04 [INFO] [transcriber] clip 246 | 2024-10-23 | Board of Supervisors
+2026-06-25 15:34:04 [ERROR] [downloader] FAILED download clip 240: yt-dlp failed (exit 1): ERROR: [html5] 240?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 240?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:34:04 [ERROR] [downloader] FAILED download clip 240: yt-dlp failed (exit 1): ERROR: [html5] 240?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 240?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-25 15:34:04 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:34:04 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:34:04 [INFO] [transcriber] clip 240 | 2024-09-25 | Board of Supervisors
+2026-06-25 15:34:04 [INFO] [transcriber] clip 240 | 2024-09-25 | Board of Supervisors
+2026-06-25 15:34:34 [ERROR] [downloader] FAILED download clip 241: yt-dlp failed (exit 1): ERROR: [html5] 241?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 241?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:34:34 [ERROR] [downloader] FAILED download clip 241: yt-dlp failed (exit 1): ERROR: [html5] 241?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 241?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:34:34 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:34:34 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:34:34 [INFO] [transcriber] clip 241 | 2024-09-25 | Board of Supervisors
+2026-06-25 15:34:34 [INFO] [transcriber] clip 241 | 2024-09-25 | Board of Supervisors
+2026-06-25 15:34:34 [ERROR] [downloader] FAILED download clip 237: yt-dlp failed (exit 1): ERROR: [html5] 237?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 237?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:34:34 [ERROR] [downloader] FAILED download clip 237: yt-dlp failed (exit 1): ERROR: [html5] 237?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 725, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 516, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 237?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-06-25 15:34:34 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:34:34 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:34:34 [INFO] [transcriber] clip 237 | 2024-09-11 | Board of Supervisors
+2026-06-25 15:34:34 [INFO] [transcriber] clip 237 | 2024-09-11 | Board of Supervisors
+2026-06-25 15:34:34 [INFO] [downloader] All downloads dispatched.
+2026-06-25 15:34:34 [INFO] [downloader] All downloads dispatched.
+2026-06-25 15:34:34 [INFO] [transcriber] All meetings processed.
+2026-06-25 15:34:34 [INFO] [transcriber] All meetings processed.
+2026-06-25 15:34:34 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:34:34 [INFO] ────────────────────────────────────────────────────────────
+2026-06-25 15:34:34 [INFO] Run finished: 0 done, 17 failed this session. DB totals: done=249 | failed=17
+2026-06-25 15:34:34 [INFO] Run finished: 0 done, 17 failed this session. DB totals: done=249 | failed=17
+[2026-06-26 03:00:01] === cron run start ===
+[2026-06-26 03:00:01] scraping...
+2026-06-26 03:00:02 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-06-26 03:00:02 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:194: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-26 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 266 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-06-26 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 266 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-06-26 03:00:03] transcribing...
+2026-06-26 03:00:04 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-06-26 03:00:04 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+[2026-06-26 03:00:04] committing 252 changed transcript files...
+error: pack-objects died of signal 9
+error: pack-objects died of signal 9
+error: remote unpack failed: eof before pack header was fully read
+To ssh://git.virginiafreedom.tech:2222/EthnTuttle/fredco-audit.git
+ ! [remote rejected]   master -> master (unpacker error)
+error: failed to push some refs to 'ssh://git.virginiafreedom.tech:2222/EthnTuttle/fredco-audit.git'
+[2026-06-27 03:00:01] === cron run start ===
+[2026-06-27 03:00:01] scraping...
+2026-06-27 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-06-27 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:194: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-27 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 266 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-06-27 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 266 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-06-27 03:00:03] transcribing...
+2026-06-27 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-06-27 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+[2026-06-27 03:00:03] committing 1 changed transcript files...
+error: pack-objects died of signal 9
+error: pack-objects died of signal 9
+error: remote unpack failed: eof before pack header was fully read
+To ssh://git.virginiafreedom.tech:2222/EthnTuttle/fredco-audit.git
+ ! [remote rejected]   master -> master (unpacker error)
+error: failed to push some refs to 'ssh://git.virginiafreedom.tech:2222/EthnTuttle/fredco-audit.git'
+[2026-06-28 03:00:01] === cron run start ===
+[2026-06-28 03:00:01] scraping...
+2026-06-28 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-06-28 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:194: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-28 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 266 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-06-28 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 266 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-06-28 03:00:03] transcribing...
+2026-06-28 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-06-28 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+[2026-06-28 03:00:03] committing 1 changed transcript files...
+error: pack-objects died of signal 9
+error: pack-objects died of signal 9
+error: remote unpack failed: eof before pack header was fully read
+To ssh://git.virginiafreedom.tech:2222/EthnTuttle/fredco-audit.git
+ ! [remote rejected]   master -> master (unpacker error)
+error: failed to push some refs to 'ssh://git.virginiafreedom.tech:2222/EthnTuttle/fredco-audit.git'
+[2026-06-29 03:00:01] === cron run start ===
+[2026-06-29 03:00:01] scraping...
+2026-06-29 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-06-29 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:194: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-29 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 266 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-06-29 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 266 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-06-29 03:00:03] transcribing...
+2026-06-29 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-06-29 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+[2026-06-29 03:00:03] committing 1 changed transcript files...
+error: pack-objects died of signal 9
+error: pack-objects died of signal 9
+error: remote unpack failed: eof before pack header was fully read
+To ssh://git.virginiafreedom.tech:2222/EthnTuttle/fredco-audit.git
+ ! [remote rejected]   master -> master (unpacker error)
+error: failed to push some refs to 'ssh://git.virginiafreedom.tech:2222/EthnTuttle/fredco-audit.git'
+[2026-06-30 03:00:01] === cron run start ===
+[2026-06-30 03:00:01] scraping...
+2026-06-30 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-06-30 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:194: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-30 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 266 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-06-30 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 266 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-06-30 03:00:03] transcribing...
+2026-06-30 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-06-30 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+[2026-06-30 03:00:04] committing 1 changed transcript files...
+error: pack-objects died of signal 9
+error: pack-objects died of signal 9
+error: remote unpack failed: eof before pack header was fully read
+To ssh://git.virginiafreedom.tech:2222/EthnTuttle/fredco-audit.git
+ ! [remote rejected]   master -> master (unpacker error)
+error: failed to push some refs to 'ssh://git.virginiafreedom.tech:2222/EthnTuttle/fredco-audit.git'
+2026-06-30 09:16:31 [INFO] Starting run: 17 meetings | model=large-v3 | threads=14 | dl-workers=3 | prefetch=4
+2026-06-30 09:16:31 [INFO] Starting run: 17 meetings | model=large-v3 | threads=14 | dl-workers=3 | prefetch=4
+2026-06-30 09:16:31 [INFO] Download thread started (workers: 3, prefetch queue depth: 4).
+2026-06-30 09:16:31 [INFO] Download thread started (workers: 3, prefetch queue depth: 4).
+2026-06-30 09:16:31 [INFO] [downloader] ↓ clip 353 | 2026-06-10 | Board of Supervisors
+2026-06-30 09:16:31 [INFO] [downloader] ↓ clip 353 | 2026-06-10 | Board of Supervisors
+2026-06-30 09:16:31 [INFO] [downloader] ↓ clip 355 | 2026-06-17 | Board of Supervisors
+2026-06-30 09:16:31 [INFO] [downloader] ↓ clip 355 | 2026-06-17 | Board of Supervisors
+2026-06-30 09:16:31 [INFO] [downloader] ↓ clip 354 | 2026-06-10 | Board of Supervisors
+2026-06-30 09:16:31 [INFO] [downloader] ↓ clip 354 | 2026-06-10 | Board of Supervisors
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-30 09:16:34 [INFO] [transcriber] Loading Whisper model 'large-v3' …
+2026-06-30 09:16:34 [INFO] [transcriber] Loading Whisper model 'large-v3' …
+2026-06-30 09:16:49 [INFO] [transcriber] Model loaded. Waiting for audio …
+2026-06-30 09:16:49 [INFO] [transcriber] Model loaded. Waiting for audio …
+2026-06-30 09:38:31 [INFO] [downloader] ✓ clip 355 saved (83.9 MB) — queued for transcription
+2026-06-30 09:38:31 [INFO] [downloader] ✓ clip 355 saved (83.9 MB) — queued for transcription
+2026-06-30 09:38:31 [INFO] ────────────────────────────────────────────────────────────
+2026-06-30 09:38:31 [INFO] ────────────────────────────────────────────────────────────
+2026-06-30 09:38:31 [INFO] [transcriber] clip 355 | 2026-06-17 | Board of Supervisors
+2026-06-30 09:38:31 [INFO] [transcriber] clip 355 | 2026-06-17 | Board of Supervisors
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-30 09:38:31 [INFO] [downloader] ↓ clip 352 | 2026-06-09 | Planning Commission
+2026-06-30 09:38:31 [INFO] [downloader] ↓ clip 352 | 2026-06-09 | Planning Commission
+2026-06-30 09:38:31 [INFO] [transcriber] Transcribing clip355.m4a …
+2026-06-30 09:38:31 [INFO] [transcriber] Transcribing clip355.m4a …
+  0%|          | 0/677875 [00:00<?, ?frames/s]  0%|          | 3000/677875 [00:08<32:17, 348.41frames/s]2026-06-30 09:39:01 [INFO] [downloader] ✓ clip 353 saved (55.6 MB) — queued for transcription
+2026-06-30 09:39:01 [INFO] [downloader] ✓ clip 353 saved (55.6 MB) — queued for transcription
+2026-06-30 09:39:01 [INFO] [downloader] ↓ clip 351 | 2026-06-03 | Planning Commission
+2026-06-30 09:39:01 [INFO] [downloader] ↓ clip 351 | 2026-06-03 | Planning Commission
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+  1%|          | 6000/677875 [00:18<34:32, 324.25frames/s]  1%|▏         | 9000/677875 [00:28<35:10, 316.92frames/s]  2%|▏         | 12000/677875 [00:38<36:04, 307.61frames/s]  2%|▏         | 15000/677875 [00:46<33:37, 328.64frames/s]  3%|▎         | 18000/677875 [00:53<31:05, 353.81frames/s]  3%|▎         | 21000/677875 [01:01<30:00, 364.91frames/s]  4%|▎         | 24000/677875 [01:09<29:27, 369.92frames/s]  4%|▍         | 27000/677875 [01:17<29:38, 365.95frames/s]  4%|▍         | 30000/677875 [01:26<30:08, 358.31frames/s]  5%|▍         | 33000/677875 [01:34<29:26, 365.07frames/s]  5%|▍         | 33000/677875 [01:49<29:26, 365.07frames/s]  5%|▌         | 36000/677875 [01:57<46:04, 232.16frames/s]  5%|▌         | 36000/677875 [02:09<46:04, 232.16frames/s]  6%|▌         | 39000/677875 [02:44<1:22:39, 128.81frames/s]  6%|▌         | 42000/677875 [02:53<1:07:04, 158.01frames/s]  7%|▋         | 45000/677875 [03:02<56:02, 188.20frames/s]    7%|▋         | 48000/677875 [03:10<47:16, 222.09frames/s]  8%|▊         | 51000/677875 [03:18<40:55, 255.30frames/s]  8%|▊         | 54000/677875 [03:27<37:39, 276.17frames/s]  8%|▊         | 57000/677875 [03:35<35:02, 295.31frames/s]  9%|▉         | 60000/677875 [03:44<33:36, 306.35frames/s]  9%|▉         | 63000/677875 [03:52<31:43, 323.06frames/s] 10%|▉         | 66000/677875 [04:01<31:07, 327.63frames/s] 10%|█         | 69000/677875 [04:09<29:41, 341.84frames/s] 11%|█         | 72000/677875 [04:17<28:56, 349.00frames/s] 11%|█         | 75000/677875 [04:25<28:24, 353.70frames/s] 12%|█▏        | 78000/677875 [04:33<27:55, 358.04frames/s] 12%|█▏        | 81000/677875 [04:43<28:28, 349.32frames/s] 12%|█▏        | 84000/677875 [04:52<29:36, 334.39frames/s] 13%|█▎        | 87000/677875 [05:03<30:57, 318.04frames/s] 13%|█▎        | 87000/677875 [05:20<30:57, 318.04frames/s] 13%|█▎        | 90000/677875 [06:32<1:49:05, 89.82frames/s] 14%|█▎        | 93000/677875 [06:41<1:24:34, 115.26frames/s] 14%|█▍        | 96000/677875 [06:49<1:06:07, 146.66frames/s] 15%|█▍        | 99000/677875 [06:56<53:18, 180.98frames/s]   15%|█▌        | 102000/677875 [07:04<44:19, 216.53frames/s] 15%|█▌        | 105000/677875 [07:11<38:14, 249.71frames/s] 16%|█▌        | 108000/677875 [07:19<34:07, 278.37frames/s] 16%|█▋        | 111000/677875 [07:27<31:33, 299.40frames/s] 17%|█▋        | 114000/677875 [07:35<29:22, 319.88frames/s] 17%|█▋        | 117000/677875 [07:43<27:52, 335.36frames/s] 18%|█▊        | 120000/677875 [07:52<27:19, 340.17frames/s] 18%|█▊        | 123000/677875 [08:00<26:58, 342.83frames/s] 19%|█▊        | 126000/677875 [08:09<26:42, 344.32frames/s] 19%|█▊        | 126000/677875 [08:20<26:42, 344.32frames/s] 19%|█▉        | 129000/677875 [11:49<3:39:53, 41.60frames/s] 19%|█▉        | 129000/677875 [12:00<3:39:53, 41.60frames/s] 19%|█▉        | 131742/677875 [12:19<3:05:11, 49.15frames/s] 19%|█▉        | 131742/677875 [12:30<3:05:11, 49.15frames/s] 20%|█▉        | 134742/677875 [12:53<2:39:24, 56.79frames/s] 20%|█▉        | 134742/677875 [13:10<2:39:24, 56.79frames/s]2026-06-30 09:52:01 [INFO] [downloader] ✓ clip 354 saved (77.3 MB) — queued for transcription
+2026-06-30 09:52:01 [INFO] [downloader] ✓ clip 354 saved (77.3 MB) — queued for transcription
+2026-06-30 09:52:01 [INFO] [downloader] ↓ clip 350 | 2026-05-13 | Board of Supervisors
+2026-06-30 09:52:01 [INFO] [downloader] ↓ clip 350 | 2026-05-13 | Board of Supervisors
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+ 20%|██        | 137740/677875 [13:31<2:24:54, 62.12frames/s] 20%|██        | 137740/677875 [13:50<2:24:54, 62.12frames/s] 21%|██        | 140740/677875 [14:00<2:06:46, 70.61frames/s] 21%|██        | 140740/677875 [14:10<2:06:46, 70.61frames/s] 21%|██        | 143740/677875 [14:25<1:50:10, 80.80frames/s] 21%|██        | 143740/677875 [14:40<1:50:10, 80.80frames/s] 22%|██▏       | 146702/677875 [14:48<1:37:17, 90.99frames/s] 22%|██▏       | 146702/677875 [15:00<1:37:17, 90.99frames/s] 22%|██▏       | 149702/677875 [15:10<1:27:14, 100.91frames/s] 22%|██▏       | 149702/677875 [15:20<1:27:14, 100.91frames/s] 23%|██▎       | 152678/677875 [15:38<1:25:21, 102.54frames/s] 23%|██▎       | 152678/677875 [15:50<1:25:21, 102.54frames/s] 23%|██▎       | 155678/677875 [16:11<1:27:52, 99.04frames/s]  23%|██▎       | 155678/677875 [16:30<1:27:52, 99.04frames/s] 23%|██▎       | 158668/677875 [19:54<4:15:17, 33.90frames/s] 23%|██▎       | 158668/677875 [20:10<4:15:17, 33.90frames/s] 24%|██▍       | 161660/677875 [20:14<3:15:12, 44.08frames/s] 24%|██▍       | 161660/677875 [20:30<3:15:12, 44.08frames/s] 24%|██▍       | 164660/677875 [20:34<2:32:44, 56.00frames/s] 24%|██▍       | 164660/677875 [20:50<2:32:44, 56.00frames/s] 25%|██▍       | 167660/677875 [22:51<3:42:46, 38.17frames/s] 25%|██▌       | 170418/677875 [23:07<2:52:26, 49.05frames/s] 25%|██▌       | 170418/677875 [23:20<2:52:26, 49.05frames/s] 26%|██▌       | 173418/677875 [23:28<2:17:30, 61.15frames/s] 26%|██▌       | 173418/677875 [23:40<2:17:30, 61.15frames/s] 26%|██▌       | 176404/677875 [23:56<1:58:22, 70.61frames/s] 26%|██▌       | 176404/677875 [24:10<1:58:22, 70.61frames/s] 26%|██▋       | 179404/677875 [24:17<1:39:46, 83.26frames/s] 26%|██▋       | 179404/677875 [24:30<1:39:46, 83.26frames/s] 27%|██▋       | 182404/677875 [24:38<1:26:33, 95.40frames/s] 27%|██▋       | 182404/677875 [24:50<1:26:33, 95.40frames/s] 27%|██▋       | 185304/677875 [25:55<2:04:58, 65.69frames/s] 27%|██▋       | 185304/677875 [26:10<2:04:58, 65.69frames/s] 28%|██▊       | 188280/677875 [29:04<4:03:01, 33.58frames/s] 28%|██▊       | 188280/677875 [29:20<4:03:01, 33.58frames/s] 28%|██▊       | 191114/677875 [29:21<3:05:44, 43.68frames/s] 28%|██▊       | 191114/677875 [29:40<3:05:44, 43.68frames/s] 29%|██▊       | 194066/677875 [29:42<2:26:24, 55.07frames/s] 29%|██▊       | 194066/677875 [30:00<2:26:24, 55.07frames/s] 29%|██▉       | 197066/677875 [30:03<1:57:56, 67.95frames/s] 29%|██▉       | 197066/677875 [30:20<1:57:56, 67.95frames/s] 30%|██▉       | 200050/677875 [32:58<3:43:05, 35.70frames/s] 30%|██▉       | 200050/677875 [33:10<3:43:05, 35.70frames/s] 30%|██▉       | 202622/677875 [33:12<2:53:30, 45.65frames/s] 30%|██▉       | 202622/677875 [33:30<2:53:30, 45.65frames/s] 30%|███       | 205620/677875 [33:32<2:14:41, 58.43frames/s] 30%|███       | 205620/677875 [33:50<2:14:41, 58.43frames/s] 31%|███       | 208544/677875 [36:59<4:21:13, 29.94frames/s] 31%|███       | 208544/677875 [37:10<4:21:13, 29.94frames/s] 31%|███       | 211424/677875 [37:28<3:25:37, 37.81frames/s] 31%|███       | 211424/677875 [37:40<3:25:37, 37.81frames/s] 32%|███▏      | 214424/677875 [37:50<2:38:18, 48.79frames/s] 32%|███▏      | 214424/677875 [38:00<2:38:18, 48.79frames/s] 32%|███▏      | 217424/677875 [38:15<2:09:03, 59.46frames/s] 32%|███▏      | 217424/677875 [38:30<2:09:03, 59.46frames/s] 33%|███▎      | 220424/677875 [38:41<1:49:44, 69.47frames/s] 33%|███▎      | 220424/677875 [39:00<1:49:44, 69.47frames/s] 33%|███▎      | 223422/677875 [39:02<1:31:24, 82.86frames/s] 33%|███▎      | 223422/677875 [39:20<1:31:24, 82.86frames/s] 33%|███▎      | 226416/677875 [41:33<2:58:08, 42.24frames/s] 33%|███▎      | 226416/677875 [41:50<2:58:08, 42.24frames/s] 34%|███▎      | 228732/677875 [41:57<2:32:42, 49.02frames/s] 34%|███▎      | 228732/677875 [42:10<2:32:42, 49.02frames/s] 34%|███▍      | 231732/677875 [42:18<1:59:26, 62.25frames/s] 34%|███▍      | 231732/677875 [42:30<1:59:26, 62.25frames/s] 35%|███▍      | 234732/677875 [42:43<1:41:00, 73.13frames/s] 35%|███▍      | 234732/677875 [43:00<1:41:00, 73.13frames/s] 35%|███▌      | 237732/677875 [43:11<1:30:47, 80.80frames/s] 35%|███▌      | 237732/677875 [43:30<1:30:47, 80.80frames/s] 36%|███▌      | 240708/677875 [43:34<1:19:51, 91.24frames/s] 36%|███▌      | 240708/677875 [43:50<1:19:51, 91.24frames/s] 36%|███▌      | 243704/677875 [44:03<1:16:23, 94.71frames/s] 36%|███▌      | 243704/677875 [44:20<1:16:23, 94.71frames/s] 36%|███▋      | 246674/677875 [47:09<3:08:35, 38.11frames/s] 36%|███▋      | 246674/677875 [47:20<3:08:35, 38.11frames/s] 37%|███▋      | 249598/677875 [47:28<2:25:08, 49.18frames/s] 37%|███▋      | 249598/677875 [47:40<2:25:08, 49.18frames/s] 37%|███▋      | 252596/677875 [47:51<1:57:07, 60.52frames/s] 37%|███▋      | 252596/677875 [48:10<1:57:07, 60.52frames/s] 38%|███▊      | 255596/677875 [48:18<1:40:27, 70.05frames/s] 38%|███▊      | 255596/677875 [48:30<1:40:27, 70.05frames/s] 38%|███▊      | 258590/677875 [48:39<1:24:35, 82.61frames/s] 38%|███▊      | 258590/677875 [48:50<1:24:35, 82.61frames/s] 39%|███▊      | 261470/677875 [49:11<1:21:23, 85.28frames/s] 39%|███▊      | 261470/677875 [49:30<1:21:23, 85.28frames/s]2026-06-30 10:28:31 [INFO] [downloader] ✓ clip 350 saved (70.8 MB) — queued for transcription
+2026-06-30 10:28:31 [INFO] [downloader] ✓ clip 350 saved (70.8 MB) — queued for transcription
+2026-06-30 10:28:31 [INFO] [downloader] ↓ clip 349 | 2026-05-07 | Community Information Exchange: Data Centers
+2026-06-30 10:28:31 [INFO] [downloader] ↓ clip 349 | 2026-05-07 | Community Information Exchange: Data Centers
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+ 39%|███▉      | 264454/677875 [51:58<2:53:11, 39.78frames/s] 39%|███▉      | 264454/677875 [52:10<2:53:11, 39.78frames/s] 39%|███▉      | 266744/677875 [52:17<2:23:39, 47.70frames/s] 39%|███▉      | 266744/677875 [52:30<2:23:39, 47.70frames/s] 40%|███▉      | 269744/677875 [52:39<1:52:47, 60.30frames/s] 40%|███▉      | 269744/677875 [52:50<1:52:47, 60.30frames/s] 40%|████      | 272742/677875 [52:59<1:31:04, 74.13frames/s] 40%|████      | 272742/677875 [53:10<1:31:04, 74.13frames/s] 41%|████      | 275740/677875 [54:36<2:09:22, 51.80frames/s]2026-06-30 10:33:31 [INFO] [downloader] ✓ clip 352 saved (98.6 MB) — queued for transcription
+2026-06-30 10:33:31 [INFO] [downloader] ✓ clip 352 saved (98.6 MB) — queued for transcription
+2026-06-30 10:33:31 [INFO] [downloader] ↓ clip 345 | 2026-05-06 | Board of Supervisors
+2026-06-30 10:33:31 [INFO] [downloader] ↓ clip 345 | 2026-05-06 | Board of Supervisors
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+ 41%|████      | 275740/677875 [54:50<2:09:22, 51.80frames/s] 41%|████      | 278738/677875 [55:01<1:46:14, 62.61frames/s] 41%|████      | 278738/677875 [55:20<1:46:14, 62.61frames/s] 42%|████▏     | 281738/677875 [55:30<1:32:54, 71.07frames/s] 42%|████▏     | 281738/677875 [55:40<1:32:54, 71.07frames/s] 42%|████▏     | 284738/677875 [55:50<1:17:27, 84.60frames/s] 42%|████▏     | 284738/677875 [56:00<1:17:27, 84.60frames/s] 42%|████▏     | 287738/677875 [56:09<1:06:19, 98.04frames/s] 42%|████▏     | 287738/677875 [56:20<1:06:19, 98.04frames/s] 43%|████▎     | 290738/677875 [56:49<1:11:43, 89.95frames/s] 43%|████▎     | 290738/677875 [57:00<1:11:43, 89.95frames/s] 43%|████▎     | 293718/677875 [57:13<1:05:04, 98.39frames/s] 43%|████▎     | 293718/677875 [57:30<1:05:04, 98.39frames/s] 44%|████▍     | 296668/677875 [1:01:03<3:12:43, 32.97frames/s] 44%|████▍     | 299214/677875 [1:01:16<2:28:55, 42.38frames/s] 44%|████▍     | 299214/677875 [1:01:30<2:28:55, 42.38frames/s] 45%|████▍     | 302214/677875 [1:04:33<3:49:35, 27.27frames/s] 45%|████▍     | 302214/677875 [1:04:50<3:49:35, 27.27frames/s] 45%|████▍     | 304838/677875 [1:04:52<2:56:43, 35.18frames/s] 45%|████▍     | 304838/677875 [1:05:10<2:56:43, 35.18frames/s] 45%|████▌     | 307836/677875 [1:06:44<3:12:36, 32.02frames/s] 45%|████▌     | 307836/677875 [1:07:00<3:12:36, 32.02frames/s] 46%|████▌     | 310804/677875 [1:08:46<3:29:30, 29.20frames/s] 46%|████▌     | 310804/677875 [1:09:00<3:29:30, 29.20frames/s] 46%|████▌     | 313284/677875 [1:09:05<2:45:07, 36.80frames/s] 46%|████▌     | 313284/677875 [1:09:20<2:45:07, 36.80frames/s] 47%|████▋     | 316284/677875 [1:09:29<2:07:06, 47.41frames/s] 47%|████▋     | 316284/677875 [1:09:40<2:07:06, 47.41frames/s]2026-06-30 10:48:31 [INFO] [downloader] ✓ clip 345 saved (25.8 MB) — queued for transcription
+2026-06-30 10:48:31 [INFO] [downloader] ✓ clip 345 saved (25.8 MB) — queued for transcription
+2026-06-30 10:48:31 [INFO] [downloader] ↓ clip 346 | 2026-05-06 | Planning Commission
+2026-06-30 10:48:31 [INFO] [downloader] ↓ clip 346 | 2026-05-06 | Planning Commission
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+ 47%|████▋     | 319234/677875 [1:09:56<1:43:52, 57.54frames/s] 47%|████▋     | 319234/677875 [1:10:10<1:43:52, 57.54frames/s] 48%|████▊     | 321996/677875 [1:10:34<1:36:53, 61.22frames/s] 48%|████▊     | 321996/677875 [1:10:50<1:36:53, 61.22frames/s] 48%|████▊     | 324996/677875 [1:10:57<1:20:21, 73.19frames/s] 48%|████▊     | 324996/677875 [1:11:10<1:20:21, 73.19frames/s] 48%|████▊     | 327996/677875 [1:11:30<1:14:49, 77.94frames/s] 48%|████▊     | 327996/677875 [1:11:40<1:14:49, 77.94frames/s] 49%|████▉     | 330972/677875 [1:11:49<1:03:03, 91.69frames/s] 49%|████▉     | 330972/677875 [1:12:00<1:03:03, 91.69frames/s] 49%|████▉     | 333956/677875 [1:12:06<53:08, 107.85frames/s]  49%|████▉     | 333956/677875 [1:12:20<53:08, 107.85frames/s] 50%|████▉     | 336824/677875 [1:14:22<1:56:30, 48.79frames/s] 50%|████▉     | 336824/677875 [1:14:40<1:56:30, 48.79frames/s] 50%|█████     | 339490/677875 [1:14:47<1:37:58, 57.57frames/s] 50%|█████     | 339490/677875 [1:15:00<1:37:58, 57.57frames/s] 51%|█████     | 342490/677875 [1:15:33<1:33:36, 59.72frames/s] 51%|█████     | 342490/677875 [1:15:50<1:33:36, 59.72frames/s] 51%|█████     | 345490/677875 [1:15:55<1:16:36, 72.31frames/s] 51%|█████     | 345490/677875 [1:16:10<1:16:36, 72.31frames/s] 51%|█████▏    | 348490/677875 [1:16:17<1:05:00, 84.45frames/s] 51%|█████▏    | 348490/677875 [1:16:30<1:05:00, 84.45frames/s] 52%|█████▏    | 351490/677875 [1:17:23<1:21:19, 66.89frames/s] 52%|█████▏    | 351490/677875 [1:17:40<1:21:19, 66.89frames/s] 52%|█████▏    | 354490/677875 [1:17:48<1:09:45, 77.26frames/s] 52%|█████▏    | 354490/677875 [1:18:00<1:09:45, 77.26frames/s] 53%|█████▎    | 357404/677875 [1:18:13<1:02:12, 85.85frames/s] 53%|█████▎    | 357404/677875 [1:18:30<1:02:12, 85.85frames/s] 53%|█████▎    | 360404/677875 [1:18:42<58:48, 89.97frames/s]   53%|█████▎    | 360404/677875 [1:19:00<58:48, 89.97frames/s] 54%|█████▎    | 363404/677875 [1:19:17<59:08, 88.61frames/s] 54%|█████▎    | 363404/677875 [1:19:30<59:08, 88.61frames/s] 54%|█████▍    | 366384/677875 [1:19:40<52:49, 98.27frames/s] 54%|█████▍    | 366384/677875 [1:19:50<52:49, 98.27frames/s] 54%|█████▍    | 369384/677875 [1:20:02<48:03, 106.99frames/s] 54%|█████▍    | 369384/677875 [1:20:20<48:03, 106.99frames/s] 55%|█████▍    | 372330/677875 [1:20:23<44:07, 115.41frames/s] 55%|█████▍    | 372330/677875 [1:20:40<44:07, 115.41frames/s] 55%|█████▌    | 375230/677875 [1:20:50<44:19, 113.79frames/s] 55%|█████▌    | 375230/677875 [1:21:01<44:19, 113.79frames/s] 56%|█████▌    | 378230/677875 [1:21:10<40:51, 122.24frames/s] 56%|█████▌    | 378230/677875 [1:21:21<40:51, 122.24frames/s] 56%|█████▌    | 381230/677875 [1:21:32<39:07, 126.35frames/s] 56%|█████▌    | 381230/677875 [1:21:51<39:07, 126.35frames/s] 57%|█████▋    | 384214/677875 [1:24:15<1:47:26, 45.55frames/s] 57%|█████▋    | 384214/677875 [1:24:31<1:47:26, 45.55frames/s] 57%|█████▋    | 386822/677875 [1:24:34<1:27:22, 55.52frames/s] 57%|█████▋    | 386822/677875 [1:24:51<1:27:22, 55.52frames/s] 58%|█████▊    | 389822/677875 [1:25:03<1:13:42, 65.13frames/s] 58%|█████▊    | 389822/677875 [1:25:21<1:13:42, 65.13frames/s] 58%|█████▊    | 392822/677875 [1:26:57<1:45:52, 44.87frames/s] 58%|█████▊    | 392822/677875 [1:27:11<1:45:52, 44.87frames/s] 58%|█████▊    | 395822/677875 [1:30:00<2:40:33, 29.28frames/s] 58%|█████▊    | 395822/677875 [1:30:11<2:40:33, 29.28frames/s] 59%|█████▉    | 398526/677875 [1:30:19<2:03:21, 37.74frames/s] 59%|█████▉    | 398526/677875 [1:30:31<2:03:21, 37.74frames/s] 59%|█████▉    | 401526/677875 [1:30:37<1:32:58, 49.54frames/s] 59%|█████▉    | 401526/677875 [1:30:51<1:32:58, 49.54frames/s] 60%|█████▉    | 404526/677875 [1:30:59<1:13:53, 61.65frames/s] 60%|█████▉    | 404526/677875 [1:31:11<1:13:53, 61.65frames/s] 60%|██████    | 407526/677875 [1:31:42<1:10:23, 64.00frames/s] 60%|██████    | 407526/677875 [1:32:01<1:10:23, 64.00frames/s] 61%|██████    | 410518/677875 [1:32:46<1:17:38, 57.39frames/s] 61%|██████    | 410518/677875 [1:33:01<1:17:38, 57.39frames/s] 61%|██████    | 412892/677875 [1:33:08<1:07:36, 65.32frames/s] 61%|██████    | 412892/677875 [1:33:21<1:07:36, 65.32frames/s] 61%|██████▏   | 415892/677875 [1:33:34<57:38, 75.74frames/s]   61%|██████▏   | 415892/677875 [1:33:51<57:38, 75.74frames/s] 62%|██████▏   | 418884/677875 [1:36:51<2:07:32, 33.84frames/s] 62%|██████▏   | 418884/677875 [1:37:11<2:07:32, 33.84frames/s] 62%|██████▏   | 421606/677875 [1:37:14<1:40:14, 42.61frames/s] 62%|██████▏   | 421606/677875 [1:37:31<1:40:14, 42.61frames/s] 63%|██████▎   | 424606/677875 [1:37:40<1:19:32, 53.07frames/s] 63%|██████▎   | 424606/677875 [1:37:51<1:19:32, 53.07frames/s] 63%|██████▎   | 427526/677875 [1:38:03<1:04:43, 64.46frames/s] 63%|██████▎   | 427526/677875 [1:38:21<1:04:43, 64.46frames/s] 64%|██████▎   | 430526/677875 [1:38:27<54:35, 75.51frames/s]   64%|██████▎   | 430526/677875 [1:38:41<54:35, 75.51frames/s] 64%|██████▍   | 433526/677875 [1:38:50<47:09, 86.35frames/s] 64%|██████▍   | 433526/677875 [1:39:01<47:09, 86.35frames/s] 64%|██████▍   | 436526/677875 [1:39:17<43:14, 93.02frames/s] 64%|██████▍   | 436526/677875 [1:39:31<43:14, 93.02frames/s] 65%|██████▍   | 439526/677875 [1:39:45<40:54, 97.11frames/s] 65%|██████▍   | 439526/677875 [1:40:01<40:54, 97.11frames/s] 65%|██████▌   | 442480/677875 [1:40:11<38:43, 101.30frames/s] 65%|██████▌   | 442480/677875 [1:40:31<38:43, 101.30frames/s] 66%|██████▌   | 445480/677875 [1:40:33<35:08, 110.20frames/s] 66%|██████▌   | 445480/677875 [1:40:51<35:08, 110.20frames/s] 66%|██████▌   | 448480/677875 [1:40:56<33:03, 115.68frames/s] 66%|██████▌   | 448480/677875 [1:41:11<33:03, 115.68frames/s] 67%|██████▋   | 451480/677875 [1:41:12<28:57, 130.30frames/s] 67%|██████▋   | 451480/677875 [1:41:31<28:57, 130.30frames/s] 67%|██████▋   | 454462/677875 [1:41:43<31:31, 118.11frames/s] 67%|██████▋   | 454462/677875 [1:42:01<31:31, 118.11frames/s] 67%|██████▋   | 457462/677875 [1:42:07<30:53, 118.94frames/s] 67%|██████▋   | 457462/677875 [1:42:21<30:53, 118.94frames/s] 68%|██████▊   | 460462/677875 [1:42:28<28:47, 125.85frames/s] 68%|██████▊   | 460462/677875 [1:42:41<28:47, 125.85frames/s] 68%|██████▊   | 463462/677875 [1:43:03<32:13, 110.88frames/s] 68%|██████▊   | 463462/677875 [1:43:21<32:13, 110.88frames/s] 69%|██████▉   | 466462/677875 [1:43:21<28:53, 121.96frames/s] 69%|██████▉   | 469462/677875 [1:43:39<26:09, 132.75frames/s] 69%|██████▉   | 469462/677875 [1:43:51<26:09, 132.75frames/s] 70%|██████▉   | 472462/677875 [1:44:09<28:17, 121.01frames/s] 70%|██████▉   | 472462/677875 [1:44:21<28:17, 121.01frames/s] 70%|███████   | 475214/677875 [1:45:14<42:20, 79.77frames/s]  70%|███████   | 475214/677875 [1:45:31<42:20, 79.77frames/s] 71%|███████   | 478214/677875 [1:45:40<37:50, 87.93frames/s] 71%|███████   | 478214/677875 [1:45:51<37:50, 87.93frames/s] 71%|███████   | 481210/677875 [1:46:18<38:29, 85.14frames/s] 71%|███████   | 481210/677875 [1:46:31<38:29, 85.14frames/s] 71%|███████▏  | 484132/677875 [1:46:47<36:10, 89.27frames/s] 71%|███████▏  | 484132/677875 [1:47:01<36:10, 89.27frames/s] 72%|███████▏  | 487132/677875 [1:47:19<35:22, 89.88frames/s] 72%|███████▏  | 487132/677875 [1:47:31<35:22, 89.88frames/s] 72%|███████▏  | 490034/677875 [1:47:43<31:55, 98.04frames/s] 72%|███████▏  | 490034/677875 [1:48:01<31:55, 98.04frames/s] 73%|███████▎  | 493026/677875 [1:48:12<31:07, 99.01frames/s] 73%|███████▎  | 493026/677875 [1:48:31<31:07, 99.01frames/s] 73%|███████▎  | 495990/677875 [1:48:32<27:32, 110.07frames/s] 73%|███████▎  | 495990/677875 [1:48:51<27:32, 110.07frames/s] 74%|███████▎  | 498978/677875 [1:51:30<1:12:31, 41.12frames/s] 74%|███████▎  | 498978/677875 [1:51:41<1:12:31, 41.12frames/s] 74%|███████▍  | 501354/677875 [1:51:44<57:42, 50.98frames/s]   74%|███████▍  | 504354/677875 [1:51:58<43:12, 66.92frames/s] 74%|███████▍  | 504354/677875 [1:52:11<43:12, 66.92frames/s] 75%|███████▍  | 507354/677875 [1:52:14<33:53, 83.85frames/s] 75%|███████▍  | 507354/677875 [1:52:31<33:53, 83.85frames/s] 75%|███████▌  | 510284/677875 [1:53:18<41:37, 67.11frames/s] 75%|███████▌  | 510284/677875 [1:53:31<41:37, 67.11frames/s] 76%|███████▌  | 513284/677875 [1:53:40<34:29, 79.54frames/s] 76%|███████▌  | 513284/677875 [1:53:51<34:29, 79.54frames/s] 76%|███████▌  | 516284/677875 [1:54:03<29:51, 90.22frames/s] 76%|███████▌  | 516284/677875 [1:54:21<29:51, 90.22frames/s] 77%|███████▋  | 519284/677875 [1:55:06<37:18, 70.84frames/s] 77%|███████▋  | 519284/677875 [1:55:21<37:18, 70.84frames/s] 77%|███████▋  | 522284/677875 [1:58:14<1:14:33, 34.78frames/s] 77%|███████▋  | 524460/677875 [1:58:26<59:30, 42.96frames/s]   77%|███████▋  | 524460/677875 [1:58:41<59:30, 42.96frames/s] 78%|███████▊  | 527460/677875 [1:58:41<43:38, 57.45frames/s] 78%|███████▊  | 530460/677875 [1:58:58<33:36, 73.09frames/s] 78%|███████▊  | 530460/677875 [1:59:11<33:36, 73.09frames/s] 79%|███████▊  | 533460/677875 [2:02:51<1:20:44, 29.81frames/s] 79%|███████▉  | 536130/677875 [2:03:07<1:00:46, 38.87frames/s] 79%|███████▉  | 536130/677875 [2:03:21<1:00:46, 38.87frames/s] 80%|███████▉  | 539130/677875 [2:03:22<44:37, 51.82frames/s]   80%|███████▉  | 539130/677875 [2:03:41<44:37, 51.82frames/s] 80%|███████▉  | 542128/677875 [2:04:16<42:39, 53.03frames/s] 80%|███████▉  | 542128/677875 [2:04:31<42:39, 53.03frames/s] 80%|████████  | 545128/677875 [2:08:01<1:19:43, 27.75frames/s] 80%|████████  | 545128/677875 [2:08:21<1:19:43, 27.75frames/s] 81%|████████  | 547494/677875 [2:08:21<1:02:55, 34.54frames/s] 81%|████████  | 547494/677875 [2:08:41<1:02:55, 34.54frames/s]2026-06-30 11:47:31 [INFO] [downloader] ✓ clip 351 saved (171.1 MB) — queued for transcription
+2026-06-30 11:47:31 [INFO] [downloader] ✓ clip 351 saved (171.1 MB) — queued for transcription
+2026-06-30 11:47:31 [INFO] [downloader] ↓ clip 344 | 2026-05-05 | Planning Commission
+2026-06-30 11:47:31 [INFO] [downloader] ↓ clip 344 | 2026-05-05 | Planning Commission
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+ 81%|████████  | 550492/677875 [2:10:00<1:04:18, 33.02frames/s] 81%|████████  | 550492/677875 [2:10:11<1:04:18, 33.02frames/s]2026-06-30 11:49:31 [INFO] [downloader] ✓ clip 349 saved (215.5 MB) — queued for transcription
+2026-06-30 11:49:31 [INFO] [downloader] ✓ clip 349 saved (215.5 MB) — queued for transcription
+2026-06-30 11:49:31 [INFO] [downloader] ↓ clip 341 | 2026-04-22 | Board of Supervisors
+2026-06-30 11:49:31 [INFO] [downloader] ↓ clip 341 | 2026-04-22 | Board of Supervisors
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+ 82%|████████▏ | 553448/677875 [2:11:53<1:07:56, 30.52frames/s] 82%|████████▏ | 553448/677875 [2:12:11<1:07:56, 30.52frames/s] 82%|████████▏ | 556448/677875 [2:12:14<50:08, 40.35frames/s]   82%|████████▏ | 556448/677875 [2:12:31<50:08, 40.35frames/s] 83%|████████▎ | 559248/677875 [2:12:41<40:17, 49.07frames/s] 83%|████████▎ | 562148/677875 [2:12:52<29:31, 65.34frames/s] 83%|████████▎ | 564948/677875 [2:13:02<22:26, 83.86frames/s] 83%|████████▎ | 564948/677875 [2:13:21<22:26, 83.86frames/s] 84%|████████▍ | 567848/677875 [2:16:10<51:08, 35.86frames/s] 84%|████████▍ | 567848/677875 [2:16:21<51:08, 35.86frames/s] 84%|████████▍ | 570848/677875 [2:16:24<36:54, 48.32frames/s] 84%|████████▍ | 570848/677875 [2:16:41<36:54, 48.32frames/s] 85%|████████▍ | 573848/677875 [2:16:44<28:30, 60.80frames/s] 85%|████████▍ | 573848/677875 [2:17:01<28:30, 60.80frames/s] 85%|████████▌ | 576848/677875 [2:17:02<22:19, 75.42frames/s] 85%|████████▌ | 576848/677875 [2:17:21<22:19, 75.42frames/s] 86%|████████▌ | 579848/677875 [2:17:22<18:20, 89.05frames/s] 86%|████████▌ | 579848/677875 [2:17:41<18:20, 89.05frames/s] 86%|████████▌ | 582810/677875 [2:18:25<22:37, 70.05frames/s] 86%|████████▌ | 582810/677875 [2:18:41<22:37, 70.05frames/s] 86%|████████▋ | 585810/677875 [2:18:42<17:54, 85.71frames/s] 86%|████████▋ | 585810/677875 [2:19:01<17:54, 85.71frames/s] 87%|████████▋ | 588810/677875 [2:19:05<15:33, 95.45frames/s] 87%|████████▋ | 588810/677875 [2:19:21<15:33, 95.45frames/s] 87%|████████▋ | 591810/677875 [2:19:24<13:12, 108.64frames/s] 87%|████████▋ | 591810/677875 [2:19:41<13:12, 108.64frames/s] 88%|████████▊ | 594810/677875 [2:22:14<32:33, 42.52frames/s]  88%|████████▊ | 594810/677875 [2:22:31<32:33, 42.52frames/s] 88%|████████▊ | 597328/677875 [2:22:35<26:02, 51.54frames/s] 88%|████████▊ | 597328/677875 [2:22:51<26:02, 51.54frames/s] 89%|████████▊ | 600326/677875 [2:22:56<20:07, 64.23frames/s] 89%|████████▊ | 600326/677875 [2:23:11<20:07, 64.23frames/s] 89%|████████▉ | 603320/677875 [2:23:13<15:33, 79.85frames/s] 89%|████████▉ | 603320/677875 [2:23:31<15:33, 79.85frames/s] 89%|████████▉ | 606264/677875 [2:27:19<40:31, 29.45frames/s] 89%|████████▉ | 606264/677875 [2:27:31<40:31, 29.45frames/s] 90%|████████▉ | 608824/677875 [2:27:34<30:19, 37.96frames/s] 90%|█████████ | 611822/677875 [2:27:50<21:46, 50.55frames/s] 90%|█████████ | 611822/677875 [2:28:01<21:46, 50.55frames/s] 91%|█████████ | 614822/677875 [2:28:14<16:52, 62.28frames/s] 91%|█████████ | 614822/677875 [2:28:31<16:52, 62.28frames/s] 91%|█████████ | 617778/677875 [2:29:25<18:30, 54.14frames/s] 91%|█████████ | 617778/677875 [2:29:41<18:30, 54.14frames/s]2026-06-30 12:11:31 [INFO] [downloader] ✓ clip 346 saved (189.3 MB) — queued for transcription
+2026-06-30 12:11:31 [INFO] [downloader] ✓ clip 346 saved (189.3 MB) — queued for transcription
+2026-06-30 12:11:31 [INFO] [downloader] ↓ clip 340 | 2026-04-15 | Planning Commission
+2026-06-30 12:11:31 [INFO] [downloader] ↓ clip 340 | 2026-04-15 | Planning Commission
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+ 92%|█████████▏| 620734/677875 [2:32:51<32:25, 29.38frames/s] 92%|█████████▏| 620734/677875 [2:33:11<32:25, 29.38frames/s] 92%|█████████▏| 623676/677875 [2:33:30<25:03, 36.04frames/s] 92%|█████████▏| 623676/677875 [2:33:41<25:03, 36.04frames/s] 92%|█████████▏| 626676/677875 [2:33:55<18:38, 45.76frames/s] 92%|█████████▏| 626676/677875 [2:34:11<18:38, 45.76frames/s] 93%|█████████▎| 629676/677875 [2:34:15<13:48, 58.15frames/s] 93%|█████████▎| 629676/677875 [2:34:31<13:48, 58.15frames/s] 93%|█████████▎| 632676/677875 [2:35:00<12:27, 60.44frames/s] 93%|█████████▎| 632676/677875 [2:35:11<12:27, 60.44frames/s] 94%|█████████▍| 635676/677875 [2:35:30<10:14, 68.70frames/s] 94%|█████████▍| 635676/677875 [2:35:41<10:14, 68.70frames/s] 94%|█████████▍| 638628/677875 [2:36:01<08:45, 74.69frames/s] 94%|█████████▍| 638628/677875 [2:36:21<08:45, 74.69frames/s] 95%|█████████▍| 641624/677875 [2:36:35<07:41, 78.47frames/s] 95%|█████████▍| 641624/677875 [2:36:51<07:41, 78.47frames/s] 95%|█████████▌| 644624/677875 [2:37:40<08:35, 64.54frames/s] 95%|█████████▌| 644624/677875 [2:37:51<08:35, 64.54frames/s] 96%|█████████▌| 647624/677875 [2:38:09<06:54, 73.07frames/s] 96%|█████████▌| 647624/677875 [2:38:21<06:54, 73.07frames/s] 96%|█████████▌| 650588/677875 [2:38:32<05:24, 83.99frames/s] 96%|█████████▌| 650588/677875 [2:38:51<05:24, 83.99frames/s] 96%|█████████▋| 653566/677875 [2:40:46<08:50, 45.80frames/s] 96%|█████████▋| 653566/677875 [2:41:01<08:50, 45.80frames/s] 97%|█████████▋| 656164/677875 [2:41:02<06:22, 56.72frames/s] 97%|█████████▋| 656164/677875 [2:41:21<06:22, 56.72frames/s] 97%|█████████▋| 659164/677875 [2:41:22<04:26, 70.30frames/s] 97%|█████████▋| 659164/677875 [2:41:41<04:26, 70.30frames/s] 98%|█████████▊| 662132/677875 [2:42:41<04:42, 55.70frames/s] 98%|█████████▊| 662132/677875 [2:43:01<04:42, 55.70frames/s] 98%|█████████▊| 665054/677875 [2:43:03<03:10, 67.46frames/s] 98%|█████████▊| 665054/677875 [2:43:21<03:10, 67.46frames/s] 99%|█████████▊| 668054/677875 [2:45:57<04:35, 35.65frames/s] 99%|█████████▊| 668054/677875 [2:46:11<04:35, 35.65frames/s] 99%|█████████▉| 670686/677875 [2:46:12<02:37, 45.77frames/s] 99%|█████████▉| 670686/677875 [2:46:31<02:37, 45.77frames/s] 99%|█████████▉| 673686/677875 [2:46:34<01:12, 57.78frames/s]100%|█████████▉| 676686/677875 [2:46:46<00:15, 75.75frames/s]100%|█████████▉| 676686/677875 [2:47:01<00:15, 75.75frames/s]2026-06-30 12:26:01 [INFO] [downloader] ✓ clip 341 saved (57.6 MB) — queued for transcription
+2026-06-30 12:26:01 [INFO] [downloader] ✓ clip 341 saved (57.6 MB) — queued for transcription
+2026-06-30 12:26:01 [INFO] [downloader] ↓ clip 339 | 2026-04-08 | Board of Supervisors
+2026-06-30 12:26:01 [INFO] [downloader] ↓ clip 339 | 2026-04-08 | Board of Supervisors
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+100%|██████████| 677875/677875 [2:47:49<00:00, 52.24frames/s]100%|██████████| 677875/677875 [2:47:49<00:00, 67.32frames/s]
+2026-06-30 12:26:33 [INFO] [transcriber] ~15040 words transcribed
+2026-06-30 12:26:33 [INFO] [transcriber] ~15040 words transcribed
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:639: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "transcribed_at": datetime.utcnow().isoformat(),
+2026-06-30 12:26:33 [INFO] [transcriber] Saved → data/bos_transcripts/2026-06-17_clip355_Board_of_Supervisors
+2026-06-30 12:26:33 [INFO] [transcriber] Saved → data/bos_transcripts/2026-06-17_clip355_Board_of_Supervisors
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-06-30 12:26:33 [INFO] [transcriber] clip 355 done ✓
+2026-06-30 12:26:33 [INFO] [transcriber] clip 355 done ✓
