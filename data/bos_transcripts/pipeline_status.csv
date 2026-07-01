@@ -259,7 +259,7 @@ clip_id,meeting_date,title,status,error,output_dir,updated_at
 345,2026-05-06,Board of Supervisors,downloading,,,2026-06-30T14:33:31.518304
 346,2026-05-06,Planning Commission,downloading,,,2026-06-30T14:48:31.561524
 349,2026-05-07,Community Information Exchange: Data Centers,downloading,,,2026-06-30T14:28:31.518839
-350,2026-05-13,Board of Supervisors,downloading,,,2026-06-30T13:52:01.437353
+350,2026-05-13,Board of Supervisors,done,,data/bos_transcripts/2026-05-13_clip350_Board_of_Supervisors,2026-07-01T07:45:15.346826
 351,2026-06-03,Planning Commission,done,,data/bos_transcripts/2026-06-03_clip351_Planning_Commission,2026-07-01T05:10:00.979907
 352,2026-06-09,Planning Commission,done,,data/bos_transcripts/2026-06-09_clip352_Planning_Commission,2026-06-30T23:27:54.647045
 353,2026-06-10,Board of Supervisors,done,,data/bos_transcripts/2026-06-10_clip353_Board_of_Supervisors,2026-06-30T17:50:49.850502
