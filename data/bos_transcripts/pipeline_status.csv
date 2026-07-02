@@ -162,7 +162,7 @@ clip_id,meeting_date,title,status,error,output_dir,updated_at
 233,2024-08-14,Board of Supervisors,done,,data/bos_transcripts/2024-08-14_clip233_Board_of_Supervisors,2026-04-04T03:55:25.051805
 235,2024-09-04,Planning Commission,done,,data/bos_transcripts/2024-09-04_clip235_Planning_Commission,2026-04-04T07:22:06.385209
 236,2024-09-11,Board of Supervisors-Public Works & Landfill Oversight Committees Joint Meeting,done,,data/bos_transcripts/2024-09-11_clip236_Board_of_Supervisors-Public_Works___Landfill_Oversight_Commi,2026-04-04T09:35:09.644075
-237,2024-09-11,Board of Supervisors,downloading,,,2026-06-30T17:39:01.895432
+237,2024-09-11,Board of Supervisors,done,,data/bos_transcripts/2024-09-11_clip237_Board_of_Supervisors,2026-07-02T13:59:41.429063
 238,2024-09-18,Board of Supervisors,done,,data/bos_transcripts/2024-09-18_clip238_Board_of_Supervisors,2026-03-27T07:08:49.706980
 239,2024-09-18,Planning Commission,done,,data/bos_transcripts/2024-09-18_clip239_Planning_Commission,2026-04-04T10:09:05.244293
 240,2024-09-25,Board of Supervisors,done,,data/bos_transcripts/2024-09-25_clip240_Board_of_Supervisors,2026-07-02T06:46:32.382920
