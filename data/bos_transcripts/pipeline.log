@@ -30873,3 +30873,21 @@ error: failed to push some refs to 'ssh://git.virginiafreedom.tech:2222/EthnTutt
 2026-07-13 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
 2026-07-13 03:00:03 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
 [2026-07-13 03:00:04] committing 1 changed transcript files...
+error: pack-objects died of signal 9
+error: pack-objects died of signal 9
+error: remote unpack failed: eof before pack header was fully read
+To ssh://git.virginiafreedom.tech:2222/EthnTuttle/fredco-audit.git
+ ! [remote rejected]   master -> master (unpacker error)
+error: failed to push some refs to 'ssh://git.virginiafreedom.tech:2222/EthnTuttle/fredco-audit.git'
+[2026-07-14 03:00:01] === cron run start ===
+[2026-07-14 03:00:01] scraping...
+2026-07-14 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-07-14 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+/home/radio/code/fredco-audit/scripts/bos_pipeline.py:194: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().isoformat()
+2026-07-14 03:00:08 [INFO] Scrape complete: 0 new meetings inserted, 268 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+2026-07-14 03:00:08 [INFO] Scrape complete: 0 new meetings inserted, 268 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-07-14 03:00:08] transcribing...
+2026-07-14 03:00:08 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+2026-07-14 03:00:08 [ERROR] Another pipeline run is already active (lock held: /home/radio/code/fredco-audit/data/bos_transcripts/pipeline.lock). Exiting to avoid staging-file conflicts.
+[2026-07-14 03:00:09] committing 1 changed transcript files...
