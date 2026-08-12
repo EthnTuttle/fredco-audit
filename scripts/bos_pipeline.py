@@ -90,7 +90,7 @@ import subprocess
 import sys
 import threading
 import time
-from datetime import datetime, date
+from datetime import datetime, date, timezone
 from pathlib import Path
 from typing import Optional
 
@@ -184,6 +184,20 @@ def init_db(db_path: Path) -> sqlite3.Connection:
     return conn
 
 
+def utc_now_iso() -> str:
+    """
+    UTC timestamp in the naive ISO format this pipeline has always stored.
+
+    datetime.utcnow() is deprecated in Python 3.12. The documented replacement,
+    datetime.now(timezone.utc), appends "+00:00" — which would make new rows
+    disagree in format with every existing scraped_at/updated_at value and every
+    transcribed_at in the committed transcript.json files. Stripping tzinfo keeps
+    the output byte-identical; the `status` reader already treats these naive
+    strings as UTC.
+    """
+    return datetime.now(timezone.utc).replace(tzinfo=None).isoformat()
+
+
 def upsert_meeting(conn: sqlite3.Connection, clip_id: int, title: str,
                    meeting_date: str, meeting_url: str) -> bool:
     """
@@ -191,7 +205,7 @@ def upsert_meeting(conn: sqlite3.Connection, clip_id: int, title: str,
 
     Returns True if a new row was inserted, False if it already existed.
     """
-    now = datetime.utcnow().isoformat()
+    now = utc_now_iso()
     cursor = conn.execute(
         "SELECT clip_id FROM meetings WHERE clip_id = ?", (clip_id,)
     )
@@ -210,7 +224,7 @@ def upsert_meeting(conn: sqlite3.Connection, clip_id: int, title: str,
 def set_status(conn: sqlite3.Connection, clip_id: int, status: str,
                error: Optional[str] = None, output_dir: Optional[str] = None) -> None:
     """Update the status (and optionally error/output_dir) for a meeting."""
-    now = datetime.utcnow().isoformat()
+    now = utc_now_iso()
     conn.execute(
         """UPDATE meetings
            SET status = ?, error = ?, output_dir = COALESCE(?, output_dir),
@@ -634,7 +648,7 @@ def _save_transcript(result: dict, out_dir: Path, meeting: sqlite3.Row) -> None:
             "title": meeting["title"],
             "meeting_date": meeting["meeting_date"],
             "meeting_url": meeting["meeting_url"],
-            "transcribed_at": datetime.utcnow().isoformat(),
+            "transcribed_at": utc_now_iso(),
             "whisper_language": result.get("language", "en"),
         },
         "transcript": result["text"].strip(),
@@ -1026,7 +1040,6 @@ def cmd_status(args) -> None:
         "WHERE status = 'done' ORDER BY updated_at DESC LIMIT 5"
     ).fetchall()
     if done:
-        from datetime import datetime, timezone
         now = datetime.now(timezone.utc)
         print("Recently completed:")
         for row in done:
