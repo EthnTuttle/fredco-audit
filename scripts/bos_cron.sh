@@ -24,11 +24,13 @@ $PYTHON scripts/bos_pipeline.py run --threads 14 >> "$LOG" 2>&1 || true
 
 # Commit and push any new/changed transcripts
 cd "$REPO"
-CHANGED=$(git status --porcelain -- data/bos_transcripts/ | grep -c '' || true)
+CHANGED=$(git status --porcelain -- data/bos_transcripts/ ':(exclude)data/bos_transcripts/audio' | grep -c '' || true)
 
 if [ "$CHANGED" -gt 0 ]; then
     log "committing $CHANGED changed transcript files..."
-    git add data/bos_transcripts/
+    # Explicit exclude as well as .gitignore: audio is 200-700 MB per meeting and
+    # once bloated .git to 43 GB when a bare `git add` swept it in.
+    git add -- data/bos_transcripts/ ':(exclude)data/bos_transcripts/audio'
     git commit -m "Add BoS meeting transcripts (auto-pipeline $(date '+%Y-%m-%d'))"
     git push origin master >> "$LOG" 2>&1
     log "pushed to origin"

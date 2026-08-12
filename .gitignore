@@ -34,6 +34,14 @@ data/processed/temp/*.json
 # OCR output (large - ~164MB for all years)
 data/processed/ocr/
 
+# BoS pipeline audio - never commit. Source downloads and decoded intermediates
+# run 200-700 MB per meeting; transcripts are the durable output. Re-downloadable
+# from Granicus via yt-dlp if needed.
+data/bos_transcripts/audio/
+data/bos_transcripts/.staging/
+*.m4a
+*.wav
+
 # Analysis outputs
 !data/analysis/.gitkeep
 !data/analysis/dashboards/.gitkeep
