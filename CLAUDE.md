@@ -921,45 +921,67 @@ tail -f data/bos_transcripts/pipeline.log
 kill -TERM $(cat data/bos_transcripts/pipeline.pid)
 ```
 
-### Automatic Weekly Updates (Cron)
+### Automatic Daily Updates (Cron)
 
-A cron job runs every Sunday at 3am to scrape for newly posted meetings and
-process any that are pending. It uses `flock -n` to hold an exclusive lock on
-`data/bos_transcripts/pipeline.lock`, so if the pipeline is already running
-(e.g. still working through the initial backlog), the cron job exits
-immediately without starting a second instance.
+A cron job runs daily at 3am via `scripts/bos_cron.sh`, which scrapes for newly
+posted meetings, transcribes any that are pending, then commits and pushes new
+transcripts.
 
 **Installed cron entry** (`crontab -l` to verify):
 
 ```
-0 3 * * 0  cd /home/ethan/code/fredco-audit && \
-  flock -n data/bos_transcripts/pipeline.lock \
-    python3 scripts/bos_pipeline.py scrape >> data/bos_transcripts/pipeline.log 2>&1 && \
-  flock -n data/bos_transcripts/pipeline.lock \
-    python3 scripts/bos_pipeline.py run >> data/bos_transcripts/pipeline.log 2>&1
+0 3 * * *  flock -n /home/radio/code/fredco-audit/data/bos_transcripts/cron.lock /home/radio/code/fredco-audit/scripts/bos_cron.sh
 ```
+
+**Two lock files, and why they must differ:**
+
+| Lock | Held by | Guards against |
+|------|---------|----------------|
+| `cron.lock` | the cron `flock` wrapper, for all of `bos_cron.sh` | a second cron run overlapping a long one |
+| `pipeline.lock` | `bos_pipeline.py run` itself (`fcntl.flock`) | a manual `run` colliding with the cron's `run` |
+
+The wrapper **must not** flock `pipeline.lock`. It holds its lock for the entire
+script, so `run` could never acquire the same file and would log *"Another
+pipeline run is already active"* and exit without transcribing. That regression
+was live from 2026-04-12 to 2026-08-12: 114 blocked cron runs, during which all
+real progress came from manual invocations.
 
 **How the overlap guard works:**
 - `flock -n LOCKFILE CMD` acquires an exclusive lock on `LOCKFILE` before running `CMD`
-- If the lock is already held (pipeline running), exits immediately with code 1
-- The shell `&&` means `run` is skipped if `scrape` couldn't acquire the lock
+- If the lock is already held, it exits immediately with code 1
 - The lock releases automatically when the process exits — even on `kill -9`
 - No lockfile cleanup needed; `flock` manages it via the open file descriptor
+
+**Verify the locks don't collide** (inner must acquire):
+```bash
+flock -n data/bos_transcripts/cron.lock -c \
+  'flock -n data/bos_transcripts/pipeline.lock -c "echo inner acquired" || echo DEADLOCKED'
+```
 
 **To install on a fresh machine** (after cloning the repo):
 ```bash
 (crontab -l 2>/dev/null; cat <<'EOF'
 
-# Frederick County BoS pipeline — weekly scrape + process
-0 3 * * 0  cd /home/ethan/code/fredco-audit && flock -n data/bos_transcripts/pipeline.lock python3 scripts/bos_pipeline.py scrape >> data/bos_transcripts/pipeline.log 2>&1 && flock -n data/bos_transcripts/pipeline.lock python3 scripts/bos_pipeline.py run >> data/bos_transcripts/pipeline.log 2>&1
+# Frederick County BoS pipeline — daily scrape + transcribe + push
+0 3 * * *  flock -n /home/radio/code/fredco-audit/data/bos_transcripts/cron.lock /home/radio/code/fredco-audit/scripts/bos_cron.sh
 EOF
 ) | crontab -
 ```
 
 **To remove the cron job:**
 ```bash
-crontab -l | grep -v bos_pipeline | crontab -
+crontab -l | grep -v bos_cron | crontab -
 ```
+
+### Audio is never committed
+
+Raw audio (`data/bos_transcripts/audio/`) runs 200–700 MB per meeting and is
+gitignored. A bare `git add data/bos_transcripts/` in `bos_cron.sh` once swept it
+into 41 daily commits and grew `.git` to 43 GB, which made `git push` fail with
+`pack-objects died of signal 9` (OOM). Transcripts are the durable output; audio
+is re-downloadable from Granicus via yt-dlp, and `.wav` are ffmpeg-decodable from
+the retained `.m4a`. The `git add` in `bos_cron.sh` carries an explicit
+`:(exclude)` for the audio path in addition to the `.gitignore` rules.
 
 ### Dependencies
 

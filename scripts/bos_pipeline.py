@@ -894,7 +894,10 @@ def cmd_run(args) -> None:
     signal.signal(signal.SIGTERM, _handle_signal)
 
     # Acquire an exclusive process lock so only one `run` can be active at a time.
-    # The cron job uses `flock -n pipeline.lock` on the same file, so they interoperate.
+    # NOTE: the cron wrapper must flock a *different* file (cron.lock). If it locks
+    # this same path, the lock it holds for the whole wrapper blocks the `run` below
+    # from ever acquiring it, and transcription silently no-ops. That regression ran
+    # from 2026-04-12 to 2026-08-12 and cost 114 blocked runs.
     lock_path = TRANSCRIPT_DIR / "pipeline.lock"
     lock_fh = open(lock_path, "w")
     try:

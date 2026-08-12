@@ -14,17 +14,27 @@ log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" >> "$LOG"; }
 
 log "=== cron run start ==="
 
+# bos_pipeline.py already writes to $LOG via its own logging FileHandler, so
+# redirecting its stdout here too wrote every line twice. Keep stderr (tracebacks
+# and warnings bypass logging) and drop the duplicate stdout.
+
 # Scrape for new meetings
 log "scraping..."
-$PYTHON scripts/bos_pipeline.py scrape >> "$LOG" 2>&1
+$PYTHON scripts/bos_pipeline.py scrape >/dev/null 2>> "$LOG"
 
 # Transcribe pending (includes retry of stuck "downloading" states)
 log "transcribing..."
-$PYTHON scripts/bos_pipeline.py run --threads 14 >> "$LOG" 2>&1 || true
+$PYTHON scripts/bos_pipeline.py run --threads 14 >/dev/null 2>> "$LOG" || true
 
 # Commit and push any new/changed transcripts
 cd "$REPO"
-CHANGED=$(git status --porcelain -- data/bos_transcripts/ ':(exclude)data/bos_transcripts/audio' | grep -c '' || true)
+# pipeline.log changes on every run, so counting it here made CHANGED always
+# non-zero and produced a daily empty "Add BoS transcripts" commit. Exclude it
+# from the trigger only — the `git add` below still commits it alongside real
+# transcripts, preserving the failure history it is tracked for.
+CHANGED=$(git status --porcelain -- data/bos_transcripts/ \
+    ':(exclude)data/bos_transcripts/audio' \
+    ':(exclude)data/bos_transcripts/pipeline.log' | grep -c '' || true)
 
 if [ "$CHANGED" -gt 0 ]; then
     log "committing $CHANGED changed transcript files..."

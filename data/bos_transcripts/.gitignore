@@ -2,6 +2,7 @@
 pipeline.db-shm
 pipeline.db-wal
 pipeline.lock
+cron.lock
 pipeline.pid
 
 # Un-ignore pipeline.log (overrides root *.log rule) — committed for failure history
