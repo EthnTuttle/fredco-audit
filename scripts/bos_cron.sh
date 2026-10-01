@@ -26,6 +26,14 @@ $PYTHON scripts/bos_pipeline.py scrape >/dev/null 2>> "$LOG"
 log "transcribing..."
 $PYTHON scripts/bos_pipeline.py run --threads 14 >/dev/null 2>> "$LOG" || true
 
+# Failed clips are not retried automatically, so make them visible in the log
+# (a CDN change once left 11 meetings failed for 3 months with no warning).
+# `|| true`: under pipefail a failing status would otherwise abort before commit.
+FAILED=$($PYTHON scripts/bos_pipeline.py status 2>/dev/null | awk '$1=="failed"{print $2}' || true)
+if [ "${FAILED:-0}" -gt 0 ]; then
+    log "WARNING: $FAILED clip(s) in failed state — check 'bos_pipeline.py status', then 'run --retry-failed'"
+fi
+
 # Commit and push any new/changed transcripts
 cd "$REPO"
 # pipeline.log changes on every run, so counting it here made CHANGED always
@@ -38,9 +46,17 @@ CHANGED=$(git status --porcelain -- data/bos_transcripts/ \
 
 if [ "$CHANGED" -gt 0 ]; then
     log "committing $CHANGED changed transcript files..."
-    # Explicit exclude as well as .gitignore: audio is 200-700 MB per meeting and
-    # once bloated .git to 43 GB when a bare `git add` swept it in.
-    git add -- data/bos_transcripts/ ':(exclude)data/bos_transcripts/audio'
+    # Audio is 200-700 MB per meeting and once bloated .git to 43 GB when a bare
+    # `git add` swept it in. .gitignore keeps it out; don't also pass an
+    # ':(exclude)' pathspec for it — naming an ignored path makes `git add` exit 1,
+    # which under set -e silently killed every commit from 2026-08-13 on.
+    # Instead, verify afterwards that nothing under audio/ got staged.
+    git add -- data/bos_transcripts/
+    if [ -n "$(git diff --cached --name-only -- data/bos_transcripts/audio)" ]; then
+        git reset -q -- data/bos_transcripts/audio
+        log "ERROR: audio files were staged despite .gitignore; unstaged them, aborting commit"
+        exit 1
+    fi
     git commit -m "Add BoS meeting transcripts (auto-pipeline $(date '+%Y-%m-%d'))"
     git push origin master >> "$LOG" 2>&1
     log "pushed to origin"

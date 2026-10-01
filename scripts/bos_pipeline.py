@@ -60,21 +60,27 @@ Pre-fetched audio is staged in  data/bos_transcripts/.staging/  (auto-cleaned).
 
 Requirements
 ------------
-    pip install openai-whisper yt-dlp requests beautifulsoup4
+    pip install openai-whisper "yt-dlp[default,curl-cffi]" requests beautifulsoup4
     # ffmpeg must be on PATH (used by Whisper for audio decoding)
 
 Notes
 -----
 - Whisper large-v3 model (~1.5 GB) is downloaded on first use and cached in
   ~/.cache/whisper by default.
-- Audio is downloaded as m4a (audio-only stream) to minimise bandwidth and
-  storage. The staging file is deleted once transcription completes.
-- yt-dlp uses the public Granicus HLS stream; no login is required.
+- Granicus now serves only a muxed 720p stream (~1.8 Mbit/s, ~2 GB per
+  2.5-hour meeting); yt-dlp downloads it and keeps just the m4a audio
+  (~100 MB). The staging file is deleted once transcription completes.
+- yt-dlp uses the public Granicus HLS stream; no login is required, but since
+  ~2026-07 the CloudFront WAF on archive-stream.granicus.com 403s non-browser
+  TLS fingerprints, so yt-dlp must run with --impersonate (needs curl_cffi).
+  yt-dlp is invoked as `sys.executable -m yt_dlp`, so run this script with the
+  interpreter that has it installed (cron uses the Summit2025-Media venv).
 - Thread count controls Whisper CPU threads AND PyTorch intraop threads.
   8 threads is a sensible default on a 24-core machine; reduce if you need
   the machine to stay fully responsive. The download thread uses negligible CPU.
 - --prefetch controls how many audio files are queued ahead of transcription.
-  Each file is ~50–200 MB; prefetch=2 caps staging at ~400 MB max.
+  Each finished file is ~50–200 MB, but a slot holds the ~2 GB muxed
+  download until audio extraction finishes, so budget ~2–3 GB per slot.
 """
 
 import argparse
@@ -88,6 +94,7 @@ import signal
 import sqlite3
 import subprocess
 import sys
+import tempfile
 import threading
 import time
 from datetime import datetime, date, timezone
@@ -115,6 +122,10 @@ CUTOFF_DATE = date(2020, 1, 1)
 # Default Whisper settings
 DEFAULT_MODEL = "large-v3"
 DEFAULT_THREADS = 8
+
+# Browser TLS fingerprint yt-dlp presents to the Granicus CDN (via curl_cffi).
+# Without it every playlist/segment request 403s with "Request blocked".
+YTDLP_IMPERSONATE = "chrome"
 
 # HTTP headers to avoid bot-detection blocks
 REQUEST_HEADERS = {
@@ -459,6 +470,35 @@ def _handle_signal(signum, frame):
         sys.exit(1)
 
 
+def _check_ytdlp_impersonation() -> Optional[str]:
+    """
+    Return None if this interpreter's yt-dlp can impersonate
+    YTDLP_IMPERSONATE, otherwise a human-readable reason.
+
+    Checked once per run so a missing curl_cffi fails fast instead of marking
+    every clip failed with yt-dlp's misleading "No video formats found!".
+    """
+    try:
+        proc = subprocess.run(
+            [sys.executable, "-m", "yt_dlp", "--list-impersonate-targets"],
+            capture_output=True, text=True, timeout=60,
+        )
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        return f"could not run yt_dlp with {sys.executable}: {exc}"
+    if proc.returncode != 0:
+        return (f"yt_dlp not usable with {sys.executable}: "
+                f"{(proc.stderr or proc.stdout).strip()[:300]}")
+    # Usable targets list "curl_cffi" as Source; missing deps add
+    # "(unavailable)" (older yt-dlp: "(not available)")
+    if not any(line.lower().startswith(YTDLP_IMPERSONATE) and "curl_cffi" in line
+               and "unavailable" not in line and "not available" not in line
+               for line in proc.stdout.splitlines()):
+        return (f"yt_dlp under {sys.executable} cannot impersonate "
+                f"'{YTDLP_IMPERSONATE}' (install with: {sys.executable} -m pip "
+                f"install -U 'yt-dlp[default,curl-cffi]')")
+    return None
+
+
 def _download_audio(clip_id: int, player_url: str, dest: Path,
                     rate_limit: Optional[str],
                     stall_timeout: int = 600) -> Path:
@@ -484,7 +524,11 @@ def _download_audio(clip_id: int, player_url: str, dest: Path,
     clip_dir.mkdir(parents=True, exist_ok=True)
     output_template = str(clip_dir / f"clip{clip_id}.%(ext)s")
     cmd = [
-        "yt-dlp",
+        # Same interpreter as the pipeline, so cron doesn't pick up a stale
+        # /usr/bin/yt-dlp from PATH that lacks impersonation support.
+        sys.executable, "-m", "yt_dlp",
+        "--impersonate", YTDLP_IMPERSONATE,  # CDN WAF blocks non-browser TLS
+        "--hls-prefer-native",         # ffmpeg's HLS fetcher can't impersonate → 403
         "--no-playlist",
         "-x",                          # extract audio only
         "--audio-format", "m4a",
@@ -492,8 +536,9 @@ def _download_audio(clip_id: int, player_url: str, dest: Path,
         "--no-progress",               # clean log output
         "--no-warnings",
         "--retries", "5",
-        "--fragment-retries", "5",
+        "--fragment-retries", "10",    # CDN 403s a few % of requests even when impersonating
         "--retry-sleep", "exp=1:15",   # exponential backoff capped at 15 s
+        "--retry-sleep", "fragment:exp=1:15",
         "-o", output_template,
         player_url,
     ]
@@ -503,31 +548,64 @@ def _download_audio(clip_id: int, player_url: str, dest: Path,
     log.debug("yt-dlp command: %s", " ".join(cmd))
 
     def _staging_bytes() -> int:
-        return sum(f.stat().st_size for f in clip_dir.rglob("*") if f.is_file())
+        total = 0
+        for f in clip_dir.rglob("*"):
+            try:
+                if f.is_file():
+                    total += f.stat().st_size
+            except FileNotFoundError:
+                pass  # hlsnative creates/deletes .part-FragN files constantly
+        return total
 
-    proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    last_size = _staging_bytes()
-    last_change = time.monotonic()
-    poll_interval = 30  # seconds between size checks
+    def _run_ytdlp() -> tuple[int, str]:
+        # stdout gets a line per fragment retry, enough over a long meeting to
+        # fill a 64 KB pipe and freeze yt-dlp; nobody reads it, so discard it.
+        # stderr goes to a temp file for the same reason, not a pipe.
+        with tempfile.TemporaryFile() as err:
+            proc = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=err)
+            try:
+                last_size = _staging_bytes()
+                last_change = time.monotonic()
+                poll_interval = 30  # seconds between size checks
 
-    while proc.poll() is None:
-        time.sleep(poll_interval)
-        current_size = _staging_bytes()
-        if current_size != last_size:
-            last_size = current_size
-            last_change = time.monotonic()
-        elif time.monotonic() - last_change > stall_timeout:
-            proc.kill()
-            proc.wait()
-            raise RuntimeError(
-                f"download stalled for >{stall_timeout}s with no progress — killed"
-            )
+                while proc.poll() is None:
+                    time.sleep(poll_interval)
+                    current_size = _staging_bytes()
+                    if current_size != last_size:
+                        last_size = current_size
+                        last_change = time.monotonic()
+                    elif time.monotonic() - last_change > stall_timeout:
+                        raise RuntimeError(
+                            f"download stalled for >{stall_timeout}s with no progress — killed"
+                        )
+            finally:
+                if proc.poll() is None:
+                    proc.kill()
+                    proc.wait()
+            err.seek(0)
+            return proc.returncode, err.read().decode(errors="replace").strip()
 
-    _, stderr_bytes = proc.communicate()
-    if proc.returncode != 0:
-        raise RuntimeError(
-            f"yt-dlp failed (exit {proc.returncode}): {stderr_bytes.decode(errors='replace').strip()}"
-        )
+    # yt-dlp doesn't retry a 403 on the master playlist (reported as "no
+    # formats") or on the variant chunklist ("HTTP Error 403"), and the CDN
+    # still 403s an occasional impersonated request. Re-run a few times before
+    # giving up on the clip.
+    extract_attempts = 3
+    for attempt in range(1, extract_attempts + 1):
+        returncode, stderr = _run_ytdlp()
+        if returncode == 0:
+            break
+        refused = "No video formats found" in stderr or "HTTP Error 403" in stderr
+        if refused and attempt < extract_attempts:
+            log.warning("clip %d: CDN refused request (attempt %d/%d), retrying",
+                        clip_id, attempt, extract_attempts)
+            time.sleep(10 * attempt)
+            continue
+        if refused:
+            # "CDN refused" is in _fetch_one's _TRANSIENT list, so the clip goes
+            # back to pending for the next run instead of sticking in failed
+            raise RuntimeError(f"CDN refused after {extract_attempts} attempts "
+                               f"(exit {returncode}): {stderr}")
+        raise RuntimeError(f"yt-dlp failed (exit {returncode}): {stderr}")
 
     # Find the downloaded file (extension may vary)
     candidates = [f for f in clip_dir.glob(f"clip{clip_id}.*") if not f.name.endswith((".part", ".ytdl"))]
@@ -748,9 +826,11 @@ def _download_worker(
 
                 # Transient server errors (502, 503, timeouts) — reset to pending so
                 # the next pipeline run retries automatically without --retry-failed.
-                _TRANSIENT = ("502", "503", "timed out", "time out", "Bad Gateway",
-                              "Service Unavailable", "Connection reset", "Connection refused",
-                              "stalled")
+                # Match "HTTP Error 50x", not bare "502"/"503": err_str contains
+                # the clip id and staging path, so clip 503 would always match.
+                _TRANSIENT = ("HTTP Error 502", "HTTP Error 503", "timed out", "time out",
+                              "Bad Gateway", "Service Unavailable", "Connection reset",
+                              "Connection refused", "stalled", "CDN refused")
                 if any(t in err_str for t in _TRANSIENT):
                     log.warning("[downloader] TRANSIENT error clip %d — resetting to pending: %s",
                                 clip_id, err_str.splitlines()[0])
@@ -951,6 +1031,13 @@ def cmd_run(args) -> None:
                      meeting["clip_id"], meeting["meeting_date"], meeting["title"])
         conn.close()
         return
+
+    # Fail fast (leaving clips untouched) if yt-dlp can't get past the CDN WAF
+    problem = _check_ytdlp_impersonation()
+    if problem:
+        log.error("Aborting run, no clips touched: %s", problem)
+        conn.close()
+        sys.exit(1)
 
     # Create / clean the staging directory
     staging_dir = TRANSCRIPT_DIR / ".staging"

@@ -900,9 +900,9 @@ module on process exit).
 |----------|-------|
 | CPU | 8 threads (configurable via `--threads`) |
 | RAM | ~10 GB peak (Whisper large-v3 model + audio buffer) |
-| Disk (peak) | ~100–200 MB per meeting (audio temp file, auto-deleted) |
+| Disk (peak) | ~2–3 GB per prefetch slot (muxed video until audio is extracted; auto-deleted) |
 | Disk (final) | ~200–500 KB per meeting (JSON + TXT transcripts only) |
-| Network | ~60–120 MB per 2-hour meeting (audio-only HLS stream) |
+| Network | ~1.6–2 GB per 2-hour meeting (Granicus now serves only muxed 720p HLS) |
 
 ### Background Execution
 
@@ -990,7 +990,7 @@ All dependencies are already installed in this environment:
 | Package | Purpose |
 |---------|---------|
 | `openai-whisper` | Speech-to-text transcription |
-| `yt-dlp` | Audio extraction from Granicus HLS streams |
+| `yt-dlp[default,curl-cffi]` | Audio extraction from Granicus HLS streams. `curl_cffi` is required: since ~2026-07 the Granicus CDN 403s non-browser TLS, so the pipeline runs `python -m yt_dlp --impersonate chrome --hls-prefer-native` with its own interpreter (use the Summit2025-Media venv, not `/usr/bin/python3`) |
 | `ffmpeg` | Audio decoding (used by Whisper internally) |
 | `requests` | HTTP for scraping the archive page |
 | `beautifulsoup4` | HTML parsing of the archive page |
