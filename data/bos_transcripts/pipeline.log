@@ -31421,3 +31421,649 @@ To ssh://git.virginiafreedom.tech:2222/EthnTuttle/fredco-audit.git
 error: failed to push some refs to 'ssh://git.virginiafreedom.tech:2222/EthnTuttle/fredco-audit.git'
 2026-08-12 12:19:20 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
 2026-08-12 12:19:21 [INFO] Scrape complete: 0 new meetings inserted, 269 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-08-13 03:00:02] === cron run start ===
+[2026-08-13 03:00:02] scraping...
+2026-08-13 03:00:02 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-08-13 03:00:03 [INFO] Scrape complete: 1 new meetings inserted, 269 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-08-13 03:00:03] transcribing...
+2026-08-13 03:00:03 [INFO] Starting run: 4 meetings | model=large-v3 | threads=14 | dl-workers=3 | prefetch=4
+2026-08-13 03:00:03 [INFO] Download thread started (workers: 3, prefetch queue depth: 4).
+2026-08-13 03:00:03 [INFO] [downloader] ↓ clip 356 | 2026-07-01 | Planning Commission
+2026-08-13 03:00:03 [INFO] [downloader] ↓ clip 357 | 2026-07-08 | Board of Supervisors
+2026-08-13 03:00:03 [INFO] [downloader] ↓ clip 358 | 2026-07-23 | Board of Supervisors
+2026-08-13 03:00:06 [INFO] [transcriber] Loading Whisper model 'large-v3' …
+2026-08-13 03:00:23 [INFO] [transcriber] Model loaded. Waiting for audio …
+2026-08-13 03:00:33 [ERROR] [downloader] FAILED download clip 356: yt-dlp failed (exit 1): ERROR: [html5] 356?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 737, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 528, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 356?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-08-13 03:00:33 [ERROR] [downloader] FAILED download clip 357: yt-dlp failed (exit 1): ERROR: [html5] 357?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 737, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 528, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 357?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-08-13 03:00:33 [INFO] ────────────────────────────────────────────────────────────
+2026-08-13 03:00:33 [INFO] [transcriber] clip 356 | 2026-07-01 | Planning Commission
+2026-08-13 03:00:33 [INFO] [downloader] ↓ clip 359 | 2026-08-12 | Board of Supervisors
+2026-08-13 03:00:33 [INFO] ────────────────────────────────────────────────────────────
+2026-08-13 03:00:33 [INFO] [transcriber] clip 357 | 2026-07-08 | Board of Supervisors
+2026-08-13 03:00:34 [ERROR] [downloader] FAILED download clip 358: yt-dlp failed (exit 1): ERROR: [html5] 358?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 737, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 528, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 358?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-08-13 03:00:34 [INFO] ────────────────────────────────────────────────────────────
+2026-08-13 03:00:34 [INFO] [transcriber] clip 358 | 2026-07-23 | Board of Supervisors
+2026-08-13 03:01:03 [ERROR] [downloader] FAILED download clip 359: yt-dlp failed (exit 1): ERROR: [html5] 359?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 737, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 528, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 359?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-08-13 03:01:03 [INFO] ────────────────────────────────────────────────────────────
+2026-08-13 03:01:03 [INFO] [transcriber] clip 359 | 2026-08-12 | Board of Supervisors
+2026-08-13 03:01:03 [INFO] [downloader] All downloads dispatched.
+2026-08-13 03:01:03 [INFO] [transcriber] All meetings processed.
+2026-08-13 03:01:04 [INFO] ────────────────────────────────────────────────────────────
+2026-08-13 03:01:04 [INFO] Run finished: 0 done, 4 failed this session. DB totals: done=266 | failed=4
+[2026-08-13 03:01:05] committing 1 changed transcript files...
+[2026-08-14 03:00:01] === cron run start ===
+[2026-08-14 03:00:01] scraping...
+2026-08-14 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-08-14 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 270 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-08-14 03:00:03] transcribing...
+2026-08-14 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-08-14 03:00:03] committing 1 changed transcript files...
+[2026-08-15 03:00:01] === cron run start ===
+[2026-08-15 03:00:01] scraping...
+2026-08-15 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-08-15 03:00:02 [INFO] Scrape complete: 0 new meetings inserted, 270 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-08-15 03:00:02] transcribing...
+2026-08-15 03:00:02 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-08-15 03:00:02] committing 1 changed transcript files...
+[2026-08-16 03:00:01] === cron run start ===
+[2026-08-16 03:00:01] scraping...
+2026-08-16 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-08-16 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 270 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-08-16 03:00:03] transcribing...
+2026-08-16 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-08-16 03:00:03] committing 1 changed transcript files...
+[2026-08-17 03:00:01] === cron run start ===
+[2026-08-17 03:00:01] scraping...
+2026-08-17 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-08-17 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 270 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-08-17 03:00:03] transcribing...
+2026-08-17 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-08-17 03:00:03] committing 1 changed transcript files...
+[2026-08-18 03:00:01] === cron run start ===
+[2026-08-18 03:00:01] scraping...
+2026-08-18 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-08-18 03:00:02 [INFO] Scrape complete: 0 new meetings inserted, 270 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-08-18 03:00:02] transcribing...
+2026-08-18 03:00:02 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-08-18 03:00:02] committing 1 changed transcript files...
+[2026-08-19 03:00:01] === cron run start ===
+[2026-08-19 03:00:01] scraping...
+2026-08-19 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-08-19 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 270 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-08-19 03:00:03] transcribing...
+2026-08-19 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-08-19 03:00:03] committing 1 changed transcript files...
+[2026-08-20 03:00:01] === cron run start ===
+[2026-08-20 03:00:01] scraping...
+2026-08-20 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-08-20 03:00:02 [INFO] Scrape complete: 0 new meetings inserted, 270 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-08-20 03:00:02] transcribing...
+2026-08-20 03:00:02 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-08-20 03:00:02] committing 1 changed transcript files...
+[2026-08-21 03:00:01] === cron run start ===
+[2026-08-21 03:00:01] scraping...
+2026-08-21 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-08-21 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 270 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-08-21 03:00:03] transcribing...
+2026-08-21 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-08-21 03:00:03] committing 1 changed transcript files...
+[2026-08-22 03:00:01] === cron run start ===
+[2026-08-22 03:00:01] scraping...
+2026-08-22 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-08-22 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 270 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-08-22 03:00:03] transcribing...
+2026-08-22 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-08-22 03:00:03] committing 1 changed transcript files...
+[2026-08-23 03:00:01] === cron run start ===
+[2026-08-23 03:00:01] scraping...
+2026-08-23 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-08-23 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 270 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-08-23 03:00:03] transcribing...
+2026-08-23 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-08-23 03:00:04] committing 1 changed transcript files...
+[2026-08-24 03:00:01] === cron run start ===
+[2026-08-24 03:00:01] scraping...
+2026-08-24 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-08-24 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 270 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-08-24 03:00:03] transcribing...
+2026-08-24 03:00:04 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-08-24 03:00:04] committing 1 changed transcript files...
+[2026-08-25 03:00:01] === cron run start ===
+[2026-08-25 03:00:01] scraping...
+2026-08-25 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-08-25 03:00:04 [INFO] Scrape complete: 0 new meetings inserted, 270 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-08-25 03:00:04] transcribing...
+2026-08-25 03:00:04 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-08-25 03:00:04] committing 1 changed transcript files...
+[2026-08-26 03:00:01] === cron run start ===
+[2026-08-26 03:00:01] scraping...
+2026-08-26 03:00:02 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-08-26 03:00:04 [INFO] Scrape complete: 0 new meetings inserted, 270 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-08-26 03:00:04] transcribing...
+2026-08-26 03:00:04 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-08-26 03:00:04] committing 1 changed transcript files...
+[2026-08-27 03:00:01] === cron run start ===
+[2026-08-27 03:00:01] scraping...
+2026-08-27 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-08-27 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 270 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-08-27 03:00:03] transcribing...
+2026-08-27 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-08-27 03:00:03] committing 1 changed transcript files...
+[2026-08-28 03:00:01] === cron run start ===
+[2026-08-28 03:00:01] scraping...
+2026-08-28 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-08-28 03:00:07 [INFO] Scrape complete: 0 new meetings inserted, 270 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-08-28 03:00:07] transcribing...
+2026-08-28 03:00:08 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-08-28 03:00:08] committing 1 changed transcript files...
+[2026-08-29 03:00:01] === cron run start ===
+[2026-08-29 03:00:01] scraping...
+2026-08-29 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-08-29 03:00:11 [INFO] Scrape complete: 0 new meetings inserted, 270 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-08-29 03:00:11] transcribing...
+2026-08-29 03:00:11 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-08-29 03:00:11] committing 1 changed transcript files...
+[2026-08-30 03:00:01] === cron run start ===
+[2026-08-30 03:00:01] scraping...
+2026-08-30 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-08-30 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 270 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-08-30 03:00:03] transcribing...
+2026-08-30 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-08-30 03:00:03] committing 1 changed transcript files...
+[2026-08-31 03:00:01] === cron run start ===
+[2026-08-31 03:00:01] scraping...
+2026-08-31 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+Traceback (most recent call last):
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -2] Name or service not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/urllib3/connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='fcva.granicus.com', port=443): Failed to resolve 'fcva.granicus.com' ([Errno -2] Name or service not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='fcva.granicus.com', port=443): Max retries exceeded with url: /ViewPublisher.php?view_id=1 (Caused by NameResolutionError("HTTPSConnection(host='fcva.granicus.com', port=443): Failed to resolve 'fcva.granicus.com' ([Errno -2] Name or service not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 1212, in <module>
+    main()
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 1208, in main
+    args.func(args)
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 373, in cmd_scrape
+    resp = session.get(GRANICUS_ARCHIVE_URL, timeout=30)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/Videos/Summit2025-Media/venv/lib/python3.12/site-packages/requests/adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='fcva.granicus.com', port=443): Max retries exceeded with url: /ViewPublisher.php?view_id=1 (Caused by NameResolutionError("HTTPSConnection(host='fcva.granicus.com', port=443): Failed to resolve 'fcva.granicus.com' ([Errno -2] Name or service not known)"))
+[2026-09-01 03:00:01] === cron run start ===
+[2026-09-01 03:00:01] scraping...
+2026-09-01 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-01 03:00:08 [INFO] Scrape complete: 0 new meetings inserted, 270 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-01 03:00:08] transcribing...
+2026-09-01 03:00:08 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-01 03:00:08] committing 1 changed transcript files...
+[2026-09-03 03:00:01] === cron run start ===
+[2026-09-03 03:00:01] scraping...
+2026-09-03 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-03 03:00:03 [INFO] Scrape complete: 1 new meetings inserted, 270 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-03 03:00:03] transcribing...
+2026-09-03 03:00:03 [INFO] Starting run: 1 meetings | model=large-v3 | threads=14 | dl-workers=3 | prefetch=4
+2026-09-03 03:00:03 [INFO] Download thread started (workers: 3, prefetch queue depth: 4).
+2026-09-03 03:00:03 [INFO] [downloader] ↓ clip 360 | 2026-09-02 | Planning Commission
+2026-09-03 03:00:06 [INFO] [transcriber] Loading Whisper model 'large-v3' …
+2026-09-03 03:00:18 [INFO] [transcriber] Model loaded. Waiting for audio …
+2026-09-03 03:00:33 [ERROR] [downloader] FAILED download clip 360: yt-dlp failed (exit 1): ERROR: [html5] 360?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 737, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 528, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 360?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-09-03 03:00:33 [INFO] ────────────────────────────────────────────────────────────
+2026-09-03 03:00:33 [INFO] [transcriber] clip 360 | 2026-09-02 | Planning Commission
+2026-09-03 03:00:33 [INFO] [downloader] All downloads dispatched.
+2026-09-03 03:00:33 [INFO] [transcriber] All meetings processed.
+2026-09-03 03:00:33 [INFO] ────────────────────────────────────────────────────────────
+2026-09-03 03:00:33 [INFO] Run finished: 0 done, 1 failed this session. DB totals: done=266 | failed=5
+[2026-09-03 03:00:35] committing 1 changed transcript files...
+[2026-09-04 03:00:01] === cron run start ===
+[2026-09-04 03:00:01] scraping...
+2026-09-04 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-04 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 271 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-04 03:00:03] transcribing...
+2026-09-04 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-04 03:00:03] committing 1 changed transcript files...
+[2026-09-05 03:00:01] === cron run start ===
+[2026-09-05 03:00:01] scraping...
+2026-09-05 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-05 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 271 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-05 03:00:03] transcribing...
+2026-09-05 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-05 03:00:03] committing 1 changed transcript files...
+[2026-09-06 03:00:01] === cron run start ===
+[2026-09-06 03:00:01] scraping...
+2026-09-06 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-06 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 271 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-06 03:00:03] transcribing...
+2026-09-06 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-06 03:00:03] committing 1 changed transcript files...
+[2026-09-07 03:00:01] === cron run start ===
+[2026-09-07 03:00:01] scraping...
+2026-09-07 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-07 03:00:02 [INFO] Scrape complete: 0 new meetings inserted, 271 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-07 03:00:02] transcribing...
+2026-09-07 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-07 03:00:03] committing 1 changed transcript files...
+[2026-09-08 03:00:01] === cron run start ===
+[2026-09-08 03:00:01] scraping...
+2026-09-08 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-08 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 271 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-08 03:00:03] transcribing...
+2026-09-08 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-08 03:00:03] committing 1 changed transcript files...
+[2026-09-09 03:00:01] === cron run start ===
+[2026-09-09 03:00:01] scraping...
+2026-09-09 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-09 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 271 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-09 03:00:03] transcribing...
+2026-09-09 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-09 03:00:03] committing 1 changed transcript files...
+[2026-09-10 03:00:01] === cron run start ===
+[2026-09-10 03:00:01] scraping...
+2026-09-10 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-10 03:00:03 [INFO] Scrape complete: 1 new meetings inserted, 271 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-10 03:00:03] transcribing...
+2026-09-10 03:00:03 [INFO] Starting run: 1 meetings | model=large-v3 | threads=14 | dl-workers=3 | prefetch=4
+2026-09-10 03:00:03 [INFO] Download thread started (workers: 3, prefetch queue depth: 4).
+2026-09-10 03:00:03 [INFO] [downloader] ↓ clip 361 | 2026-09-09 | Board of Supervisors
+2026-09-10 03:00:04 [INFO] [transcriber] Loading Whisper model 'large-v3' …
+2026-09-10 03:00:18 [INFO] [transcriber] Model loaded. Waiting for audio …
+2026-09-10 03:00:33 [ERROR] [downloader] FAILED download clip 361: yt-dlp failed (exit 1): ERROR: [html5] 361?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 737, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 528, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 361?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-09-10 03:00:33 [INFO] [downloader] All downloads dispatched.
+2026-09-10 03:00:33 [INFO] ────────────────────────────────────────────────────────────
+2026-09-10 03:00:33 [INFO] [transcriber] clip 361 | 2026-09-09 | Board of Supervisors
+2026-09-10 03:00:33 [INFO] [transcriber] All meetings processed.
+2026-09-10 03:00:33 [INFO] ────────────────────────────────────────────────────────────
+2026-09-10 03:00:33 [INFO] Run finished: 0 done, 1 failed this session. DB totals: done=266 | failed=6
+[2026-09-10 03:00:33] committing 1 changed transcript files...
+[2026-09-11 03:00:01] === cron run start ===
+[2026-09-11 03:00:01] scraping...
+2026-09-11 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-11 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 272 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-11 03:00:03] transcribing...
+2026-09-11 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-11 03:00:03] committing 1 changed transcript files...
+[2026-09-12 03:00:01] === cron run start ===
+[2026-09-12 03:00:01] scraping...
+2026-09-12 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-12 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 272 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-12 03:00:03] transcribing...
+2026-09-12 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-12 03:00:03] committing 1 changed transcript files...
+[2026-09-13 03:00:01] === cron run start ===
+[2026-09-13 03:00:01] scraping...
+2026-09-13 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-13 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 272 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-13 03:00:03] transcribing...
+2026-09-13 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-13 03:00:03] committing 1 changed transcript files...
+[2026-09-14 03:00:01] === cron run start ===
+[2026-09-14 03:00:01] scraping...
+2026-09-14 03:00:02 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-14 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 272 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-14 03:00:03] transcribing...
+2026-09-14 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-14 03:00:03] committing 1 changed transcript files...
+[2026-09-16 03:00:01] === cron run start ===
+[2026-09-16 03:00:01] scraping...
+2026-09-16 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-16 03:00:04 [INFO] Scrape complete: 0 new meetings inserted, 272 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-16 03:00:04] transcribing...
+2026-09-16 03:00:04 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-16 03:00:04] committing 1 changed transcript files...
+[2026-09-17 03:00:01] === cron run start ===
+[2026-09-17 03:00:01] scraping...
+2026-09-17 03:00:02 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-17 03:00:03 [INFO] Scrape complete: 3 new meetings inserted, 272 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-17 03:00:03] transcribing...
+2026-09-17 03:00:03 [INFO] Starting run: 3 meetings | model=large-v3 | threads=14 | dl-workers=3 | prefetch=4
+2026-09-17 03:00:03 [INFO] Download thread started (workers: 3, prefetch queue depth: 4).
+2026-09-17 03:00:03 [INFO] [downloader] ↓ clip 364 | 2026-09-16 | Planning Commission
+2026-09-17 03:00:03 [INFO] [downloader] ↓ clip 363 | 2026-09-16 | Planning Commission
+2026-09-17 03:00:03 [INFO] [downloader] ↓ clip 362 | 2026-09-16 | Planning Commission
+2026-09-17 03:00:06 [INFO] [transcriber] Loading Whisper model 'large-v3' …
+2026-09-17 03:00:18 [INFO] [transcriber] Model loaded. Waiting for audio …
+2026-09-17 03:00:33 [ERROR] [downloader] FAILED download clip 364: yt-dlp failed (exit 1): ERROR: [html5] 364?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 737, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 528, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 364?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-09-17 03:00:33 [ERROR] [downloader] FAILED download clip 363: yt-dlp failed (exit 1): ERROR: [html5] 363?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 737, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 528, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 363?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-09-17 03:00:33 [ERROR] [downloader] FAILED download clip 362: yt-dlp failed (exit 1): ERROR: [html5] 362?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 737, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 528, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 362?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-09-17 03:00:33 [INFO] ────────────────────────────────────────────────────────────
+2026-09-17 03:00:33 [INFO] [transcriber] clip 362 | 2026-09-16 | Planning Commission
+2026-09-17 03:00:33 [INFO] [downloader] All downloads dispatched.
+2026-09-17 03:00:33 [INFO] ────────────────────────────────────────────────────────────
+2026-09-17 03:00:33 [INFO] [transcriber] clip 363 | 2026-09-16 | Planning Commission
+2026-09-17 03:00:33 [INFO] ────────────────────────────────────────────────────────────
+2026-09-17 03:00:33 [INFO] [transcriber] clip 364 | 2026-09-16 | Planning Commission
+2026-09-17 03:00:33 [INFO] [transcriber] All meetings processed.
+2026-09-17 03:00:33 [INFO] ────────────────────────────────────────────────────────────
+2026-09-17 03:00:33 [INFO] Run finished: 0 done, 3 failed this session. DB totals: done=266 | failed=9
+[2026-09-17 03:00:35] committing 1 changed transcript files...
+[2026-09-18 03:00:01] === cron run start ===
+[2026-09-18 03:00:01] scraping...
+2026-09-18 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-18 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 275 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-18 03:00:03] transcribing...
+2026-09-18 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-18 03:00:03] committing 1 changed transcript files...
+[2026-09-19 03:00:01] === cron run start ===
+[2026-09-19 03:00:01] scraping...
+2026-09-19 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-19 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 275 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-19 03:00:03] transcribing...
+2026-09-19 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-19 03:00:03] committing 1 changed transcript files...
+[2026-09-20 03:00:01] === cron run start ===
+[2026-09-20 03:00:01] scraping...
+2026-09-20 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-20 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 275 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-20 03:00:03] transcribing...
+2026-09-20 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-20 03:00:03] committing 1 changed transcript files...
+[2026-09-21 03:00:01] === cron run start ===
+[2026-09-21 03:00:01] scraping...
+2026-09-21 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-21 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 275 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-21 03:00:03] transcribing...
+2026-09-21 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-21 03:00:03] committing 1 changed transcript files...
+[2026-09-22 03:00:01] === cron run start ===
+[2026-09-22 03:00:01] scraping...
+2026-09-22 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-22 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 275 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-22 03:00:03] transcribing...
+2026-09-22 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-22 03:00:03] committing 1 changed transcript files...
+[2026-09-23 03:00:01] === cron run start ===
+[2026-09-23 03:00:01] scraping...
+2026-09-23 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-23 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 275 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-23 03:00:03] transcribing...
+2026-09-23 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-23 03:00:03] committing 1 changed transcript files...
+[2026-09-24 03:00:01] === cron run start ===
+[2026-09-24 03:00:01] scraping...
+2026-09-24 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-24 03:00:03 [INFO] Scrape complete: 2 new meetings inserted, 275 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-24 03:00:03] transcribing...
+2026-09-24 03:00:03 [INFO] Starting run: 2 meetings | model=large-v3 | threads=14 | dl-workers=3 | prefetch=4
+2026-09-24 03:00:03 [INFO] Download thread started (workers: 3, prefetch queue depth: 4).
+2026-09-24 03:00:03 [INFO] [downloader] ↓ clip 365 | 2026-09-23 | Board of Supervisors
+2026-09-24 03:00:03 [INFO] [downloader] ↓ clip 366 | 2026-09-23 | Board of Supervisors
+2026-09-24 03:00:04 [INFO] [transcriber] Loading Whisper model 'large-v3' …
+2026-09-24 03:00:13 [INFO] [transcriber] Model loaded. Waiting for audio …
+2026-09-24 03:00:33 [ERROR] [downloader] FAILED download clip 365: yt-dlp failed (exit 1): ERROR: [html5] 365?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 737, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 528, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 365?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-09-24 03:00:33 [ERROR] [downloader] FAILED download clip 366: yt-dlp failed (exit 1): ERROR: [html5] 366?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+Traceback (most recent call last):
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 737, in _fetch_one
+    audio_path = _download_audio(clip_id, meeting["meeting_url"],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/radio/code/fredco-audit/scripts/bos_pipeline.py", line 528, in _download_audio
+    raise RuntimeError(
+RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 366?view_id=1&redirect=true-1: No video formats found!; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2026-09-24 03:00:33 [INFO] ────────────────────────────────────────────────────────────
+2026-09-24 03:00:33 [INFO] [transcriber] clip 365 | 2026-09-23 | Board of Supervisors
+2026-09-24 03:00:33 [INFO] ────────────────────────────────────────────────────────────
+2026-09-24 03:00:33 [INFO] [transcriber] clip 366 | 2026-09-23 | Board of Supervisors
+2026-09-24 03:00:33 [INFO] [downloader] All downloads dispatched.
+2026-09-24 03:00:33 [INFO] [transcriber] All meetings processed.
+2026-09-24 03:00:33 [INFO] ────────────────────────────────────────────────────────────
+2026-09-24 03:00:33 [INFO] Run finished: 0 done, 2 failed this session. DB totals: done=266 | failed=11
+[2026-09-24 03:00:34] committing 1 changed transcript files...
+[2026-09-25 03:00:01] === cron run start ===
+[2026-09-25 03:00:01] scraping...
+2026-09-25 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-25 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 277 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-25 03:00:03] transcribing...
+2026-09-25 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-25 03:00:03] committing 1 changed transcript files...
+[2026-09-26 03:00:01] === cron run start ===
+[2026-09-26 03:00:01] scraping...
+2026-09-26 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-26 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 277 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-26 03:00:03] transcribing...
+2026-09-26 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-26 03:00:03] committing 1 changed transcript files...
+[2026-09-27 03:00:01] === cron run start ===
+[2026-09-27 03:00:01] scraping...
+2026-09-27 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-27 03:00:04 [INFO] Scrape complete: 0 new meetings inserted, 277 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-27 03:00:04] transcribing...
+2026-09-27 03:00:04 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-27 03:00:04] committing 1 changed transcript files...
+[2026-09-28 03:00:01] === cron run start ===
+[2026-09-28 03:00:01] scraping...
+2026-09-28 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-28 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 277 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-28 03:00:03] transcribing...
+2026-09-28 03:00:04 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-28 03:00:04] committing 1 changed transcript files...
+[2026-09-29 03:00:01] === cron run start ===
+[2026-09-29 03:00:01] scraping...
+2026-09-29 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-29 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 277 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-29 03:00:03] transcribing...
+2026-09-29 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-29 03:00:04] committing 1 changed transcript files...
+[2026-09-30 03:00:01] === cron run start ===
+[2026-09-30 03:00:01] scraping...
+2026-09-30 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-09-30 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 277 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-09-30 03:00:03] transcribing...
+2026-09-30 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-09-30 03:00:03] committing 1 changed transcript files...
+[2026-10-01 03:00:01] === cron run start ===
+[2026-10-01 03:00:01] scraping...
+2026-10-01 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-10-01 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 277 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-10-01 03:00:03] transcribing...
+2026-10-01 03:00:03 [INFO] No pending meetings found. Run 'scrape' first, or use --retry-failed to re-process failures.
+[2026-10-01 03:00:03] committing 1 changed transcript files...
+2026-10-01 16:47:42 [INFO] Starting run: 11 meetings | model=large-v3 | threads=14 | dl-workers=3 | prefetch=4
+2026-10-01 16:47:43 [INFO] Download thread started (workers: 3, prefetch queue depth: 4).
+2026-10-01 16:47:43 [INFO] [downloader] ↓ clip 356 | 2026-07-01 | Planning Commission
+2026-10-01 16:47:43 [INFO] [downloader] ↓ clip 357 | 2026-07-08 | Board of Supervisors
+2026-10-01 16:47:43 [INFO] [downloader] ↓ clip 358 | 2026-07-23 | Board of Supervisors
+2026-10-01 16:47:46 [INFO] [transcriber] Loading Whisper model 'large-v3' …
+2026-10-01 16:48:04 [INFO] [transcriber] Model loaded. Waiting for audio …
+2026-10-01 16:48:13 [WARNING] clip 356: CDN refused request (attempt 1/3), retrying
+2026-10-01 18:05:23 [WARNING] [downloader] TRANSIENT error clip 356 — resetting to pending: download stalled for >600s with no progress — killed
+2026-10-01 18:05:23 [INFO] ────────────────────────────────────────────────────────────
+2026-10-01 18:05:23 [INFO] [transcriber] clip 356 | 2026-07-01 | Planning Commission
+2026-10-01 18:05:23 [INFO] [downloader] ↓ clip 359 | 2026-08-12 | Board of Supervisors
+2026-10-01 18:05:43 [WARNING] [downloader] TRANSIENT error clip 357 — resetting to pending: download stalled for >600s with no progress — killed
+2026-10-01 18:05:43 [INFO] ────────────────────────────────────────────────────────────
+2026-10-01 18:05:43 [INFO] [transcriber] clip 357 | 2026-07-08 | Board of Supervisors
+2026-10-01 18:05:43 [INFO] [downloader] ↓ clip 360 | 2026-09-02 | Planning Commission
+2026-10-01 18:05:43 [WARNING] [downloader] TRANSIENT error clip 358 — resetting to pending: download stalled for >600s with no progress — killed
+2026-10-01 18:05:43 [INFO] ────────────────────────────────────────────────────────────
+2026-10-01 18:05:43 [INFO] [transcriber] clip 358 | 2026-07-23 | Board of Supervisors
+2026-10-01 18:05:43 [INFO] [downloader] ↓ clip 361 | 2026-09-09 | Board of Supervisors
+2026-10-01 18:05:53 [WARNING] [downloader] TRANSIENT error clip 359 — resetting to pending: yt-dlp failed (exit 1): ERROR: [generic] MediaPlayer: Unable to download webpage: Failed to perform, curl: (28) Resolving timed out after 20000 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform, curl: (28) Resolving timed out after 20000 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.'))
+2026-10-01 18:05:53 [INFO] ────────────────────────────────────────────────────────────
+2026-10-01 18:05:53 [INFO] [downloader] ↓ clip 362 | 2026-09-16 | Planning Commission
+2026-10-01 18:05:53 [INFO] [transcriber] clip 359 | 2026-08-12 | Board of Supervisors
+2026-10-01 18:06:13 [WARNING] [downloader] TRANSIENT error clip 360 — resetting to pending: yt-dlp failed (exit 1): ERROR: [generic] MediaPlayer: Unable to download webpage: Failed to perform, curl: (28) Resolving timed out after 20000 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform, curl: (28) Resolving timed out after 20000 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.'))
+2026-10-01 18:06:13 [INFO] ────────────────────────────────────────────────────────────
+2026-10-01 18:06:13 [INFO] [transcriber] clip 360 | 2026-09-02 | Planning Commission
+2026-10-01 18:06:13 [INFO] [downloader] ↓ clip 363 | 2026-09-16 | Planning Commission
+2026-10-01 18:06:13 [WARNING] [downloader] TRANSIENT error clip 361 — resetting to pending: yt-dlp failed (exit 1): ERROR: [generic] MediaPlayer: Unable to download webpage: Failed to perform, curl: (28) Resolving timed out after 20002 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform, curl: (28) Resolving timed out after 20002 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.'))
+2026-10-01 18:06:13 [INFO] ────────────────────────────────────────────────────────────
+2026-10-01 18:06:13 [INFO] [downloader] ↓ clip 364 | 2026-09-16 | Planning Commission
+2026-10-01 18:06:13 [INFO] [transcriber] clip 361 | 2026-09-09 | Board of Supervisors
+2026-10-01 18:06:23 [WARNING] [downloader] TRANSIENT error clip 362 — resetting to pending: yt-dlp failed (exit 1): ERROR: [generic] MediaPlayer: Unable to download webpage: Failed to perform, curl: (28) Resolving timed out after 20002 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform, curl: (28) Resolving timed out after 20002 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.'))
+2026-10-01 18:06:23 [INFO] ────────────────────────────────────────────────────────────
+2026-10-01 18:06:23 [INFO] [transcriber] clip 362 | 2026-09-16 | Planning Commission
+2026-10-01 18:06:23 [INFO] [downloader] ↓ clip 365 | 2026-09-23 | Board of Supervisors
+2026-10-01 18:06:43 [WARNING] [downloader] TRANSIENT error clip 363 — resetting to pending: yt-dlp failed (exit 1): ERROR: [generic] MediaPlayer: Unable to download webpage: Failed to perform, curl: (28) Resolving timed out after 20002 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform, curl: (28) Resolving timed out after 20002 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.'))
+2026-10-01 18:06:43 [INFO] ────────────────────────────────────────────────────────────
+2026-10-01 18:06:43 [INFO] [transcriber] clip 363 | 2026-09-16 | Planning Commission
+2026-10-01 18:06:43 [INFO] [downloader] ↓ clip 366 | 2026-09-23 | Board of Supervisors
+2026-10-01 18:06:43 [WARNING] [downloader] TRANSIENT error clip 364 — resetting to pending: yt-dlp failed (exit 1): ERROR: [generic] MediaPlayer: Unable to download webpage: Failed to perform, curl: (28) Resolving timed out after 20002 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform, curl: (28) Resolving timed out after 20002 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.'))
+2026-10-01 18:06:43 [INFO] ────────────────────────────────────────────────────────────
+2026-10-01 18:06:43 [INFO] [transcriber] clip 364 | 2026-09-16 | Planning Commission
+2026-10-01 18:06:53 [WARNING] [downloader] TRANSIENT error clip 365 — resetting to pending: yt-dlp failed (exit 1): ERROR: [generic] MediaPlayer: Unable to download webpage: Failed to perform, curl: (28) Resolving timed out after 20002 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform, curl: (28) Resolving timed out after 20002 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.'))
+2026-10-01 18:06:53 [INFO] ────────────────────────────────────────────────────────────
+2026-10-01 18:06:53 [INFO] [transcriber] clip 365 | 2026-09-23 | Board of Supervisors
+2026-10-01 18:07:13 [WARNING] [downloader] TRANSIENT error clip 366 — resetting to pending: yt-dlp failed (exit 1): ERROR: [generic] MediaPlayer: Unable to download webpage: Failed to perform, curl: (28) Resolving timed out after 20002 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details. (caused by TransportError('Failed to perform, curl: (28) Resolving timed out after 20002 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.'))
+2026-10-01 18:07:13 [INFO] ────────────────────────────────────────────────────────────
+2026-10-01 18:07:13 [INFO] [transcriber] clip 366 | 2026-09-23 | Board of Supervisors
+2026-10-01 18:07:13 [INFO] [downloader] All downloads dispatched.
+2026-10-01 18:07:13 [INFO] [transcriber] All meetings processed.
+2026-10-01 18:07:14 [INFO] ────────────────────────────────────────────────────────────
+2026-10-01 18:07:14 [INFO] Run finished: 0 done, 11 failed this session. DB totals: done=266 | pending=11
+[2026-10-02 03:00:01] === cron run start ===
+[2026-10-02 03:00:01] scraping...
+2026-10-02 03:00:01 [INFO] Fetching Granicus archive: https://fcva.granicus.com/ViewPublisher.php?view_id=1
+2026-10-02 03:00:03 [INFO] Scrape complete: 0 new meetings inserted, 277 already in DB, 6 before 2020-01-01 (ignored), 0 parse errors
+[2026-10-02 03:00:03] transcribing...
+2026-10-02 03:00:03 [INFO] Starting run: 11 meetings | model=large-v3 | threads=14 | dl-workers=3 | prefetch=4
+2026-10-02 03:00:03 [INFO] Download thread started (workers: 3, prefetch queue depth: 4).
+2026-10-02 03:00:03 [INFO] [downloader] ↓ clip 356 | 2026-07-01 | Planning Commission
+2026-10-02 03:00:03 [INFO] [downloader] ↓ clip 357 | 2026-07-08 | Board of Supervisors
+2026-10-02 03:00:03 [INFO] [downloader] ↓ clip 358 | 2026-07-23 | Board of Supervisors
+2026-10-02 03:00:05 [INFO] [transcriber] Loading Whisper model 'large-v3' …
+2026-10-02 03:00:24 [INFO] [transcriber] Model loaded. Waiting for audio …
+2026-10-02 04:26:33 [INFO] [downloader] ✓ clip 356 saved (115.3 MB) — queued for transcription
+2026-10-02 04:26:33 [INFO] ────────────────────────────────────────────────────────────
+2026-10-02 04:26:33 [INFO] [transcriber] clip 356 | 2026-07-01 | Planning Commission
+2026-10-02 04:26:33 [INFO] [downloader] ↓ clip 359 | 2026-08-12 | Board of Supervisors
+2026-10-02 04:26:33 [INFO] [transcriber] Transcribing clip356.m4a …
+  0%|          | 0/931761 [00:00<?, ?frames/s]  0%|          | 3000/931761 [00:10<52:52, 292.80frames/s]  1%|          | 6000/931761 [00:21<54:34, 282.71frames/s]  1%|          | 9000/931761 [00:32<56:57, 270.00frames/s]  1%|▏         | 12000/931761 [00:43<55:23, 276.77frames/s]  2%|▏         | 15000/931761 [00:53<54:08, 282.17frames/s]  2%|▏         | 18000/931761 [01:05<56:35, 269.13frames/s]  2%|▏         | 21000/931761 [01:16<55:23, 274.05frames/s]  3%|▎         | 24000/931761 [01:27<56:22, 268.40frames/s]  3%|▎         | 24000/931761 [01:40<56:22, 268.40frames/s]  3%|▎         | 27000/931761 [01:42<1:01:05, 246.81frames/s]  3%|▎         | 30000/931761 [01:52<58:33, 256.64frames/s]    4%|▎         | 33000/931761 [02:04<58:19, 256.85frames/s]  4%|▍         | 36000/931761 [02:16<59:09, 252.34frames/s]  4%|▍         | 36000/931761 [02:30<59:09, 252.34frames/s]  4%|▍         | 39000/931761 [03:55<3:08:39, 78.87frames/s]  4%|▍         | 39000/931761 [04:10<3:08:39, 78.87frames/s]  5%|▍         | 42000/931761 [04:34<3:10:44, 77.75frames/s]  5%|▍         | 42000/931761 [04:50<3:10:44, 77.75frames/s]  5%|▍         | 44996/931761 [05:09<3:03:47, 80.41frames/s]  5%|▍         | 44996/931761 [05:20<3:03:47, 80.41frames/s]  5%|▌         | 47974/931761 [05:38<2:51:41, 85.79frames/s]  5%|▌         | 47974/931761 [05:50<2:51:41, 85.79frames/s]  5%|▌         | 50974/931761 [06:10<2:46:23, 88.22frames/s]  5%|▌         | 50974/931761 [06:30<2:46:23, 88.22frames/s]  6%|▌         | 53974/931761 [06:40<2:39:44, 91.58frames/s]  6%|▌         | 53974/931761 [07:00<2:39:44, 91.58frames/s]  6%|▌         | 56934/931761 [11:47<9:22:13, 25.93frames/s]  6%|▋         | 59836/931761 [12:29<7:37:48, 31.74frames/s]  6%|▋         | 59836/931761 [12:40<7:37:48, 31.74frames/s]  7%|▋         | 62836/931761 [13:01<6:04:17, 39.75frames/s]  7%|▋         | 62836/931761 [13:20<6:04:17, 39.75frames/s]  7%|▋         | 65836/931761 [17:38<10:56:55, 21.97frames/s]  7%|▋         | 65836/931761 [17:50<10:56:55, 21.97frames/s]  7%|▋         | 68298/931761 [18:33<9:28:00, 25.34frames/s] 2026-10-02 04:45:34 [INFO] [downloader] ✓ clip 358 saved (144.3 MB) — queued for transcription
+2026-10-02 04:45:34 [INFO] [downloader] ↓ clip 360 | 2026-09-02 | Planning Commission
+  7%|▋         | 68298/931761 [18:50<9:28:00, 25.34frames/s]  8%|▊         | 71298/931761 [19:06<7:17:17, 32.79frames/s]  8%|▊         | 71298/931761 [19:20<7:17:17, 32.79frames/s]  8%|▊         | 74298/931761 [19:34<5:43:02, 41.66frames/s]  8%|▊         | 74298/931761 [19:50<5:43:02, 41.66frames/s]  8%|▊         | 77298/931761 [20:13<4:53:58, 48.44frames/s]  8%|▊         | 77298/931761 [20:30<4:53:58, 48.44frames/s]  9%|▊         | 80166/931761 [20:46<4:14:53, 55.68frames/s]  9%|▊         | 80166/931761 [21:00<4:14:53, 55.68frames/s]  9%|▉         | 83166/931761 [21:21<3:46:08, 62.54frames/s]  9%|▉         | 83166/931761 [21:40<3:46:08, 62.54frames/s]  9%|▉         | 86166/931761 [21:51<3:19:27, 70.66frames/s]  9%|▉         | 86166/931761 [22:10<3:19:27, 70.66frames/s] 10%|▉         | 89164/931761 [22:15<2:52:48, 81.27frames/s] 10%|▉         | 89164/931761 [22:30<2:52:48, 81.27frames/s] 10%|▉         | 92136/931761 [22:49<2:49:01, 82.79frames/s] 10%|▉         | 92136/931761 [23:00<2:49:01, 82.79frames/s] 10%|█         | 95136/931761 [24:22<4:07:22, 56.37frames/s] 10%|█         | 95136/931761 [24:40<4:07:22, 56.37frames/s] 11%|█         | 98136/931761 [26:51<6:20:56, 36.47frames/s] 11%|█         | 98136/931761 [27:10<6:20:56, 36.47frames/s] 11%|█         | 101136/931761 [30:21<9:16:02, 24.90frames/s] 11%|█         | 101136/931761 [30:40<9:16:02, 24.90frames/s] 11%|█         | 103688/931761 [30:43<7:17:39, 31.53frames/s] 11%|█         | 103688/931761 [31:00<7:17:39, 31.53frames/s] 11%|█▏        | 106688/931761 [31:09<5:38:09, 40.67frames/s] 11%|█▏        | 106688/931761 [31:20<5:38:09, 40.67frames/s] 12%|█▏        | 109684/931761 [31:46<4:45:18, 48.02frames/s] 12%|█▏        | 109684/931761 [32:00<4:45:18, 48.02frames/s] 12%|█▏        | 112662/931761 [37:18<11:00:20, 20.67frames/s] 12%|█▏        | 115062/931761 [37:42<8:43:41, 25.99frames/s]  12%|█▏        | 115062/931761 [38:00<8:43:41, 25.99frames/s] 13%|█▎        | 118060/931761 [40:40<10:10:32, 22.21frames/s] 13%|█▎        | 118060/931761 [41:00<10:10:32, 22.21frames/s] 13%|█▎        | 121058/931761 [41:06<7:35:44, 29.65frames/s]  13%|█▎        | 121058/931761 [41:20<7:35:44, 29.65frames/s] 13%|█▎        | 124056/931761 [45:39<11:31:56, 19.46frames/s] 13%|█▎        | 124056/931761 [45:50<11:31:56, 19.46frames/s] 14%|█▎        | 127056/931761 [46:17<8:50:31, 25.28frames/s]  14%|█▎        | 127056/931761 [46:30<8:50:31, 25.28frames/s]2026-10-02 05:14:04 [INFO] [downloader] ✓ clip 357 saved (178.2 MB) — queued for transcription
+2026-10-02 05:14:04 [INFO] [downloader] ↓ clip 361 | 2026-09-09 | Board of Supervisors
+ 14%|█▍        | 130056/931761 [48:25<9:00:52, 24.70frames/s] 14%|█▍        | 130056/931761 [48:40<9:00:52, 24.70frames/s] 14%|█▍        | 133056/931761 [51:44<10:42:25, 20.72frames/s] 14%|█▍        | 133056/931761 [52:00<10:42:25, 20.72frames/s] 15%|█▍        | 136002/931761 [52:11<8:05:45, 27.30frames/s]  15%|█▍        | 136002/931761 [52:30<8:05:45, 27.30frames/s] 15%|█▍        | 139000/931761 [52:44<6:22:33, 34.54frames/s] 15%|█▍        | 139000/931761 [53:00<6:22:33, 34.54frames/s] 15%|█▌        | 141976/931761 [53:51<5:54:37, 37.12frames/s] 15%|█▌        | 141976/931761 [54:10<5:54:37, 37.12frames/s] 16%|█▌        | 144796/931761 [54:15<4:44:14, 46.15frames/s] 16%|█▌        | 144796/931761 [54:30<4:44:14, 46.15frames/s] 16%|█▌        | 147794/931761 [54:50<4:02:54, 53.79frames/s] 16%|█▌        | 147794/931761 [55:10<4:02:54, 53.79frames/s] 16%|█▌        | 150748/931761 [55:24<3:34:41, 60.63frames/s] 16%|█▌        | 150748/931761 [55:40<3:34:41, 60.63frames/s] 16%|█▋        | 153702/931761 [59:56<8:28:17, 25.51frames/s] 16%|█▋        | 153702/931761 [1:00:10<8:28:17, 25.51frames/s] 17%|█▋        | 156564/931761 [1:00:23<6:33:07, 32.86frames/s] 17%|█▋        | 156564/931761 [1:00:40<6:33:07, 32.86frames/s] 17%|█▋        | 159562/931761 [1:01:01<5:22:18, 39.93frames/s] 17%|█▋        | 159562/931761 [1:01:20<5:22:18, 39.93frames/s] 17%|█▋        | 162562/931761 [1:01:37<4:29:36, 47.55frames/s] 17%|█▋        | 162562/931761 [1:01:50<4:29:36, 47.55frames/s] 18%|█▊        | 165562/931761 [1:06:44<9:43:36, 21.88frames/s] 18%|█▊        | 168094/931761 [1:07:12<7:43:07, 27.48frames/s] 18%|█▊        | 168094/931761 [1:07:30<7:43:07, 27.48frames/s] 18%|█▊        | 171092/931761 [1:07:46<6:03:01, 34.92frames/s] 18%|█▊        | 171092/931761 [1:08:00<6:03:01, 34.92frames/s] 19%|█▊        | 174092/931761 [1:08:19<4:52:43, 43.14frames/s] 19%|█▊        | 174092/931761 [1:08:30<4:52:43, 43.14frames/s] 19%|█▉        | 177090/931761 [1:08:58<4:12:52, 49.74frames/s] 19%|█▉        | 177090/931761 [1:09:10<4:12:52, 49.74frames/s] 19%|█▉        | 179992/931761 [1:09:28<3:35:21, 58.18frames/s] 19%|█▉        | 179992/931761 [1:09:40<3:35:21, 58.18frames/s] 20%|█▉        | 182992/931761 [1:10:54<4:17:22, 48.49frames/s] 20%|█▉        | 182992/931761 [1:11:10<4:17:22, 48.49frames/s] 20%|█▉        | 185992/931761 [1:11:23<3:34:58, 57.82frames/s] 20%|█▉        | 185992/931761 [1:11:40<3:34:58, 57.82frames/s] 20%|██        | 188976/931761 [1:11:57<3:12:35, 64.28frames/s] 20%|██        | 188976/931761 [1:12:10<3:12:35, 64.28frames/s] 21%|██        | 191962/931761 [1:12:31<2:56:17, 69.94frames/s] 21%|██        | 191962/931761 [1:12:50<2:56:17, 69.94frames/s] 21%|██        | 194908/931761 [1:13:16<2:58:47, 68.69frames/s] 21%|██        | 194908/931761 [1:13:30<2:58:47, 68.69frames/s] 21%|██        | 197908/931761 [1:16:00<5:26:18, 37.48frames/s] 21%|██        | 197908/931761 [1:16:10<5:26:18, 37.48frames/s] 22%|██▏       | 200648/931761 [1:16:35<4:36:59, 43.99frames/s] 22%|██▏       | 200648/931761 [1:16:50<4:36:59, 43.99frames/s] 22%|██▏       | 203642/931761 [1:17:10<3:55:18, 51.57frames/s] 22%|██▏       | 203642/931761 [1:17:30<3:55:18, 51.57frames/s] 22%|██▏       | 206632/931761 [1:17:52<3:34:55, 56.23frames/s] 22%|██▏       | 206632/931761 [1:18:10<3:34:55, 56.23frames/s] 22%|██▏       | 209632/931761 [1:18:30<3:14:42, 61.81frames/s] 22%|██▏       | 209632/931761 [1:18:40<3:14:42, 61.81frames/s] 23%|██▎       | 212532/931761 [1:19:15<3:11:40, 62.54frames/s] 23%|██▎       | 212532/931761 [1:19:30<3:11:40, 62.54frames/s] 23%|██▎       | 215432/931761 [1:19:57<3:05:47, 64.26frames/s] 23%|██▎       | 215432/931761 [1:20:10<3:05:47, 64.26frames/s] 23%|██▎       | 218332/931761 [1:20:41<3:04:14, 64.54frames/s] 23%|██▎       | 218332/931761 [1:21:00<3:04:14, 64.54frames/s] 24%|██▎       | 221232/931761 [1:24:20<6:34:38, 30.01frames/s] 24%|██▎       | 221232/931761 [1:24:30<6:34:38, 30.01frames/s] 24%|██▍       | 223816/931761 [1:24:46<5:18:37, 37.03frames/s] 24%|██▍       | 223816/931761 [1:25:00<5:18:37, 37.03frames/s] 24%|██▍       | 226816/931761 [1:25:09<4:06:13, 47.72frames/s] 24%|██▍       | 226816/931761 [1:25:20<4:06:13, 47.72frames/s] 25%|██▍       | 229816/931761 [1:25:46<3:33:18, 54.85frames/s] 25%|██▍       | 229816/931761 [1:26:00<3:33:18, 54.85frames/s] 25%|██▍       | 232816/931761 [1:26:16<3:03:16, 63.56frames/s] 25%|██▍       | 232816/931761 [1:26:30<3:03:16, 63.56frames/s] 25%|██▌       | 235814/931761 [1:26:45<2:40:56, 72.07frames/s] 25%|██▌       | 235814/931761 [1:27:00<2:40:56, 72.07frames/s] 26%|██▌       | 238812/931761 [1:29:12<4:43:09, 40.79frames/s] 26%|██▌       | 238812/931761 [1:29:30<4:43:09, 40.79frames/s] 26%|██▌       | 241812/931761 [1:29:44<3:53:41, 49.21frames/s] 26%|██▌       | 241812/931761 [1:30:00<3:53:41, 49.21frames/s] 26%|██▋       | 244810/931761 [1:31:12<4:24:16, 43.32frames/s] 26%|██▋       | 244810/931761 [1:31:30<4:24:16, 43.32frames/s] 27%|██▋       | 247806/931761 [1:32:53<4:58:50, 38.15frames/s] 27%|██▋       | 247806/931761 [1:33:10<4:58:50, 38.15frames/s] 27%|██▋       | 250806/931761 [1:33:38<4:20:18, 43.60frames/s] 27%|██▋       | 250806/931761 [1:33:50<4:20:18, 43.60frames/s] 27%|██▋       | 253806/931761 [1:34:11<3:38:34, 51.69frames/s] 27%|██▋       | 253806/931761 [1:34:30<3:38:34, 51.69frames/s] 28%|██▊       | 256806/931761 [1:34:54<3:20:19, 56.15frames/s] 28%|██▊       | 256806/931761 [1:35:10<3:20:19, 56.15frames/s] 28%|██▊       | 259806/931761 [1:35:26<2:55:19, 63.88frames/s] 28%|██▊       | 259806/931761 [1:35:40<2:55:19, 63.88frames/s] 28%|██▊       | 262806/931761 [1:35:58<2:38:15, 70.45frames/s] 28%|██▊       | 262806/931761 [1:36:10<2:38:15, 70.45frames/s] 29%|██▊       | 265806/931761 [1:36:34<2:29:47, 74.10frames/s] 29%|██▊       | 265806/931761 [1:36:50<2:29:47, 74.10frames/s] 29%|██▉       | 268806/931761 [1:37:04<2:17:18, 80.47frames/s] 29%|██▉       | 268806/931761 [1:37:20<2:17:18, 80.47frames/s] 29%|██▉       | 271806/931761 [1:37:36<2:10:46, 84.11frames/s] 29%|██▉       | 271806/931761 [1:37:50<2:10:46, 84.11frames/s] 29%|██▉       | 274800/931761 [1:38:10<2:08:36, 85.13frames/s] 29%|██▉       | 274800/931761 [1:38:20<2:08:36, 85.13frames/s] 30%|██▉       | 277796/931761 [1:38:55<2:19:14, 78.28frames/s] 30%|██▉       | 277796/931761 [1:39:10<2:19:14, 78.28frames/s] 30%|███       | 280796/931761 [1:39:36<2:20:49, 77.04frames/s] 30%|███       | 280796/931761 [1:39:50<2:20:49, 77.04frames/s] 30%|███       | 283796/931761 [1:40:04<2:08:40, 83.93frames/s] 30%|███       | 283796/931761 [1:40:20<2:08:40, 83.93frames/s] 31%|███       | 286696/931761 [1:42:55<4:36:30, 38.88frames/s] 31%|███       | 286696/931761 [1:43:10<4:36:30, 38.88frames/s]2026-10-02 06:11:04 [INFO] [downloader] ✓ clip 359 saved (114.9 MB) — queued for transcription
+2026-10-02 06:11:04 [INFO] [downloader] ↓ clip 362 | 2026-09-16 | Planning Commission
+ 31%|███       | 289596/931761 [1:46:14<6:50:26, 26.08frames/s] 31%|███       | 289596/931761 [1:46:30<6:50:26, 26.08frames/s] 31%|███▏      | 292596/931761 [1:46:38<5:10:32, 34.30frames/s] 31%|███▏      | 292596/931761 [1:46:50<5:10:32, 34.30frames/s] 32%|███▏      | 295596/931761 [1:47:07<4:06:26, 43.02frames/s] 32%|███▏      | 295596/931761 [1:47:20<4:06:26, 43.02frames/s] 32%|███▏      | 298594/931761 [1:47:41<3:27:57, 50.74frames/s] 32%|███▏      | 298594/931761 [1:48:00<3:27:57, 50.74frames/s] 32%|███▏      | 301594/931761 [1:48:17<3:02:34, 57.53frames/s] 32%|███▏      | 301594/931761 [1:48:30<3:02:34, 57.53frames/s] 33%|███▎      | 304578/931761 [1:48:57<2:49:12, 61.78frames/s] 33%|███▎      | 304578/931761 [1:49:10<2:49:12, 61.78frames/s] 33%|███▎      | 307576/931761 [1:49:32<2:33:25, 67.81frames/s] 33%|███▎      | 307576/931761 [1:49:50<2:33:25, 67.81frames/s] 33%|███▎      | 310576/931761 [1:50:16<2:32:34, 67.86frames/s] 33%|███▎      | 310576/931761 [1:50:30<2:32:34, 67.86frames/s] 34%|███▎      | 313576/931761 [1:50:55<2:26:56, 70.12frames/s] 34%|███▎      | 313576/931761 [1:51:10<2:26:56, 70.12frames/s] 34%|███▍      | 316534/931761 [1:51:28<2:16:32, 75.10frames/s] 34%|███▍      | 316534/931761 [1:51:40<2:16:32, 75.10frames/s] 34%|███▍      | 319534/931761 [1:52:26<2:34:42, 65.95frames/s]2026-10-02 06:19:34 [INFO] [downloader] ✓ clip 361 saved (82.4 MB) — queued for transcription
+2026-10-02 06:19:34 [INFO] [downloader] ↓ clip 363 | 2026-09-16 | Planning Commission
+ 34%|███▍      | 319534/931761 [1:52:40<2:34:42, 65.95frames/s] 35%|███▍      | 322534/931761 [1:53:05<2:27:23, 68.89frames/s] 35%|███▍      | 322534/931761 [1:53:20<2:27:23, 68.89frames/s]2026-10-02 06:20:34 [INFO] [downloader] ✓ clip 363 saved (0.6 MB) — queued for transcription
+2026-10-02 06:20:34 [INFO] [downloader] ↓ clip 364 | 2026-09-16 | Planning Commission
+ 35%|███▍      | 325534/931761 [1:58:25<7:06:07, 23.71frames/s] 35%|███▌      | 327984/931761 [1:58:47<5:37:52, 29.78frames/s] 35%|███▌      | 327984/931761 [1:59:00<5:37:52, 29.78frames/s] 36%|███▌      | 330984/931761 [1:59:18<4:23:24, 38.01frames/s] 36%|███▌      | 330984/931761 [1:59:30<4:23:24, 38.01frames/s] 36%|███▌      | 333984/931761 [1:59:46<3:30:03, 47.43frames/s] 36%|███▌      | 333984/931761 [2:00:00<3:30:03, 47.43frames/s] 36%|███▌      | 336974/931761 [2:00:17<2:55:51, 56.37frames/s] 36%|███▌      | 336974/931761 [2:00:30<2:55:51, 56.37frames/s] 36%|███▋      | 339972/931761 [2:00:50<2:35:13, 63.54frames/s] 36%|███▋      | 339972/931761 [2:01:00<2:35:13, 63.54frames/s] 37%|███▋      | 342972/931761 [2:01:20<2:17:25, 71.40frames/s] 37%|███▋      | 342972/931761 [2:01:30<2:17:25, 71.40frames/s] 37%|███▋      | 345910/931761 [2:01:45<2:00:59, 80.70frames/s] 37%|███▋      | 345910/931761 [2:02:00<2:00:59, 80.70frames/s] 37%|███▋      | 348896/931761 [2:06:47<6:20:02, 25.56frames/s] 38%|███▊      | 351396/931761 [2:07:16<5:08:07, 31.39frames/s] 38%|███▊      | 351396/931761 [2:07:30<5:08:07, 31.39frames/s] 38%|███▊      | 354396/931761 [2:07:49<4:03:46, 39.47frames/s] 38%|███▊      | 354396/931761 [2:08:00<4:03:46, 39.47frames/s] 38%|███▊      | 357374/931761 [2:12:45<7:40:11, 20.80frames/s] 38%|███▊      | 357374/931761 [2:13:00<7:40:11, 20.80frames/s] 39%|███▊      | 360208/931761 [2:13:09<5:47:13, 27.43frames/s] 39%|███▊      | 360208/931761 [2:13:20<5:47:13, 27.43frames/s] 39%|███▉      | 363208/931761 [2:13:33<4:21:39, 36.22frames/s] 39%|███▉      | 363208/931761 [2:13:50<4:21:39, 36.22frames/s] 39%|███▉      | 366208/931761 [2:14:05<3:32:09, 44.43frames/s] 39%|███▉      | 366208/931761 [2:14:20<3:32:09, 44.43frames/s] 40%|███▉      | 369192/931761 [2:16:18<4:33:32, 34.28frames/s] 40%|███▉      | 369192/931761 [2:16:30<4:33:32, 34.28frames/s] 40%|███▉      | 372192/931761 [2:16:56<3:45:16, 41.40frames/s] 40%|███▉      | 372192/931761 [2:17:10<3:45:16, 41.40frames/s] 40%|████      | 375162/931761 [2:19:22<4:53:34, 31.60frames/s] 40%|████      | 375162/931761 [2:19:40<4:53:34, 31.60frames/s] 41%|████      | 378102/931761 [2:19:47<3:48:05, 40.46frames/s] 41%|████      | 378102/931761 [2:20:00<3:48:05, 40.46frames/s] 41%|████      | 381102/931761 [2:20:37<3:24:51, 44.80frames/s] 41%|████      | 381102/931761 [2:20:50<3:24:51, 44.80frames/s] 41%|████      | 384076/931761 [2:25:36<6:58:09, 21.83frames/s] 41%|████▏     | 386572/931761 [2:26:00<5:28:53, 27.63frames/s] 41%|████▏     | 386572/931761 [2:26:10<5:28:53, 27.63frames/s] 42%|████▏     | 389572/931761 [2:26:24<4:08:02, 36.43frames/s] 42%|████▏     | 389572/931761 [2:26:40<4:08:02, 36.43frames/s] 42%|████▏     | 392572/931761 [2:26:59<3:22:54, 44.29frames/s] 42%|████▏     | 392572/931761 [2:27:10<3:22:54, 44.29frames/s] 42%|████▏     | 395516/931761 [2:27:30<2:48:51, 52.93frames/s] 42%|████▏     | 395516/931761 [2:27:40<2:48:51, 52.93frames/s] 43%|████▎     | 398510/931761 [2:29:57<4:09:45, 35.58frames/s] 43%|████▎     | 398510/931761 [2:30:10<4:09:45, 35.58frames/s] 43%|████▎     | 401510/931761 [2:30:31<3:23:23, 43.45frames/s] 43%|████▎     | 401510/931761 [2:30:50<3:23:23, 43.45frames/s] 43%|████▎     | 404510/931761 [2:35:00<6:19:17, 23.17frames/s]2026-10-02 07:02:04 [INFO] [downloader] ✓ clip 362 saved (66.8 MB) — queued for transcription
+2026-10-02 07:02:04 [INFO] [downloader] ↓ clip 365 | 2026-09-23 | Board of Supervisors
+ 43%|████▎     | 404510/931761 [2:35:10<6:19:17, 23.17frames/s] 44%|████▎     | 407336/931761 [2:35:24<4:49:34, 30.18frames/s] 44%|████▎     | 407336/931761 [2:35:40<4:49:34, 30.18frames/s] 44%|████▍     | 410336/931761 [2:35:56<3:48:51, 37.97frames/s] 44%|████▍     | 410336/931761 [2:36:10<3:48:51, 37.97frames/s] 44%|████▍     | 413332/931761 [2:38:24<4:47:29, 30.06frames/s] 44%|████▍     | 413332/931761 [2:38:40<4:47:29, 30.06frames/s] 45%|████▍     | 416292/931761 [2:38:56<3:48:26, 37.61frames/s] 45%|████▍     | 416292/931761 [2:39:10<3:48:26, 37.61frames/s]2026-10-02 07:06:34 [INFO] [downloader] ✓ clip 364 saved (59.3 MB) — queued for transcription
+2026-10-02 07:06:34 [INFO] [downloader] ↓ clip 366 | 2026-09-23 | Board of Supervisors
+ 45%|████▍     | 419282/931761 [2:41:14<4:37:29, 30.78frames/s] 45%|████▍     | 419282/931761 [2:41:30<4:37:29, 30.78frames/s]2026-10-02 07:13:04 [INFO] [downloader] ✓ clip 360 saved (168.2 MB) — queued for transcription
+ 45%|████▌     | 422202/931761 [2:48:00<9:04:12, 15.61frames/s] 46%|████▌     | 425186/931761 [2:48:20<6:34:42, 21.39frames/s] 46%|████▌     | 425186/931761 [2:48:40<6:34:42, 21.39frames/s] 46%|████▌     | 428186/931761 [2:48:49<4:58:04, 28.16frames/s] 46%|████▌     | 428186/931761 [2:49:00<4:58:04, 28.16frames/s] 46%|████▋     | 431186/931761 [2:49:20<3:53:06, 35.79frames/s] 46%|████▋     | 431186/931761 [2:49:40<3:53:06, 35.79frames/s] 47%|████▋     | 434186/931761 [2:49:53<3:08:59, 43.88frames/s] 47%|████▋     | 434186/931761 [2:50:10<3:08:59, 43.88frames/s] 47%|████▋     | 437152/931761 [2:50:30<2:42:21, 50.77frames/s] 47%|████▋     | 437152/931761 [2:50:40<2:42:21, 50.77frames/s] 47%|████▋     | 440148/931761 [2:52:07<3:12:47, 42.50frames/s] 47%|████▋     | 440148/931761 [2:52:20<3:12:47, 42.50frames/s] 48%|████▊     | 443094/931761 [2:55:25<4:57:09, 27.41frames/s] 48%|████▊     | 443094/931761 [2:55:40<4:57:09, 27.41frames/s] 48%|████▊     | 445746/931761 [2:55:48<3:53:36, 34.67frames/s] 48%|████▊     | 445746/931761 [2:56:00<3:53:36, 34.67frames/s] 48%|████▊     | 448746/931761 [2:56:10<2:58:41, 45.05frames/s] 48%|████▊     | 448746/931761 [2:56:20<2:58:41, 45.05frames/s] 48%|████▊     | 451690/931761 [2:56:33<2:22:31, 56.14frames/s] 48%|████▊     | 451690/931761 [2:56:50<2:22:31, 56.14frames/s] 49%|████▉     | 454690/931761 [3:01:44<5:50:20, 22.70frames/s] 49%|████▉     | 456854/931761 [3:02:10<4:47:44, 27.51frames/s] 49%|████▉     | 456854/931761 [3:02:20<4:47:44, 27.51frames/s] 49%|████▉     | 459782/931761 [3:02:35<3:36:59, 36.25frames/s] 49%|████▉     | 459782/931761 [3:02:50<3:36:59, 36.25frames/s] 50%|████▉     | 462782/931761 [3:03:04<2:51:44, 45.51frames/s] 50%|████▉     | 462782/931761 [3:03:20<2:51:44, 45.51frames/s]2026-10-02 07:30:34 [INFO] [downloader] ✓ clip 365 saved (39.9 MB) — queued for transcription
+ 50%|████▉     | 465782/931761 [3:03:43<2:28:24, 52.33frames/s] 50%|████▉     | 465782/931761 [3:04:00<2:28:24, 52.33frames/s] 50%|█████     | 468744/931761 [3:05:34<3:10:40, 40.47frames/s] 50%|█████     | 468744/931761 [3:05:50<3:10:40, 40.47frames/s] 51%|█████     | 471704/931761 [3:06:05<2:36:17, 49.06frames/s] 51%|█████     | 471704/931761 [3:06:20<2:36:17, 49.06frames/s] 51%|█████     | 474704/931761 [3:06:32<2:08:45, 59.16frames/s] 51%|█████     | 474704/931761 [3:06:50<2:08:45, 59.16frames/s] 51%|█████     | 477028/931761 [3:07:58<2:47:00, 45.38frames/s] 51%|█████     | 477028/931761 [3:08:10<2:47:00, 45.38frames/s] 52%|█████▏    | 480028/931761 [3:08:27<2:16:24, 55.19frames/s] 52%|█████▏    | 480028/931761 [3:08:40<2:16:24, 55.19frames/s] 52%|█████▏    | 482996/931761 [3:08:56<1:56:17, 64.32frames/s] 52%|█████▏    | 482996/931761 [3:09:10<1:56:17, 64.32frames/s] 52%|█████▏    | 485996/931761 [3:09:31<1:46:22, 69.84frames/s] 52%|█████▏    | 485996/931761 [3:09:50<1:46:22, 69.84frames/s] 52%|█████▏    | 488996/931761 [3:10:12<1:43:46, 71.11frames/s] 52%|█████▏    | 488996/931761 [3:10:30<1:43:46, 71.11frames/s] 53%|█████▎    | 491896/931761 [3:10:42<1:35:28, 76.79frames/s] 53%|█████▎    | 491896/931761 [3:11:00<1:35:28, 76.79frames/s] 53%|█████▎    | 494896/931761 [3:11:18<1:32:21, 78.83frames/s] 53%|█████▎    | 494896/931761 [3:11:30<1:32:21, 78.83frames/s] 53%|█████▎    | 497796/931761 [3:11:49<1:27:37, 82.54frames/s] 53%|█████▎    | 497796/931761 [3:12:00<1:27:37, 82.54frames/s] 54%|█████▎    | 500696/931761 [3:12:21<1:24:56, 84.58frames/s] 54%|█████▎    | 500696/931761 [3:12:40<1:24:56, 84.58frames/s] 54%|█████▍    | 503596/931761 [3:12:50<1:20:27, 88.68frames/s] 54%|█████▍    | 503596/931761 [3:13:10<1:20:27, 88.68frames/s] 54%|█████▍    | 506396/931761 [3:13:17<1:15:56, 93.36frames/s] 54%|█████▍    | 506396/931761 [3:13:30<1:15:56, 93.36frames/s] 55%|█████▍    | 509296/931761 [3:14:30<1:46:44, 65.96frames/s] 55%|█████▍    | 509296/931761 [3:14:50<1:46:44, 65.96frames/s] 55%|█████▍    | 512096/931761 [3:16:53<2:59:12, 39.03frames/s] 55%|█████▍    | 512096/931761 [3:17:10<2:59:12, 39.03frames/s] 55%|█████▌    | 515096/931761 [3:21:36<5:26:22, 21.28frames/s] 55%|█████▌    | 515096/931761 [3:21:50<5:26:22, 21.28frames/s] 56%|█████▌    | 517880/931761 [3:22:08<4:12:41, 27.30frames/s] 56%|█████▌    | 517880/931761 [3:22:20<4:12:41, 27.30frames/s] 56%|█████▌    | 520760/931761 [3:22:38<3:16:34, 34.85frames/s] 56%|█████▌    | 520760/931761 [3:22:50<3:16:34, 34.85frames/s] 56%|█████▌    | 523738/931761 [3:23:09<2:36:56, 43.33frames/s] 56%|█████▌    | 523738/931761 [3:23:20<2:36:56, 43.33frames/s] 57%|█████▋    | 526672/931761 [3:23:42<2:11:41, 51.27frames/s] 57%|█████▋    | 526672/931761 [3:24:00<2:11:41, 51.27frames/s] 57%|█████▋    | 529672/931761 [3:24:09<1:49:07, 61.41frames/s] 57%|█████▋    | 529672/931761 [3:24:20<1:49:07, 61.41frames/s] 57%|█████▋    | 532656/931761 [3:24:41<1:37:27, 68.25frames/s] 57%|█████▋    | 532656/931761 [3:25:00<1:37:27, 68.25frames/s] 57%|█████▋    | 535656/931761 [3:25:08<1:25:15, 77.44frames/s] 57%|█████▋    | 535656/931761 [3:25:20<1:25:15, 77.44frames/s] 58%|█████▊    | 538638/931761 [3:25:47<1:24:42, 77.35frames/s] 58%|█████▊    | 538638/931761 [3:26:00<1:24:42, 77.35frames/s] 58%|█████▊    | 541550/931761 [3:26:17<1:19:20, 81.97frames/s] 58%|█████▊    | 541550/931761 [3:26:30<1:19:20, 81.97frames/s] 58%|█████▊    | 544550/931761 [3:26:52<1:17:32, 83.22frames/s] 58%|█████▊    | 544550/931761 [3:27:10<1:17:32, 83.22frames/s] 59%|█████▉    | 547550/931761 [3:27:24<1:14:02, 86.48frames/s] 59%|█████▉    | 547550/931761 [3:27:40<1:14:02, 86.48frames/s] 59%|█████▉    | 550532/931761 [3:28:02<1:15:55, 83.69frames/s] 59%|█████▉    | 550532/931761 [3:28:20<1:15:55, 83.69frames/s] 59%|█████▉    | 553442/931761 [3:28:30<1:11:18, 88.42frames/s] 59%|█████▉    | 553442/931761 [3:28:50<1:11:18, 88.42frames/s] 60%|█████▉    | 556408/931761 [3:28:58<1:06:44, 93.73frames/s] 60%|█████▉    | 556408/931761 [3:29:10<1:06:44, 93.73frames/s] 60%|██████    | 559382/931761 [3:29:31<1:07:25, 92.05frames/s] 60%|██████    | 559382/931761 [3:29:50<1:07:25, 92.05frames/s] 60%|██████    | 562382/931761 [3:29:57<1:02:51, 97.93frames/s] 60%|██████    | 562382/931761 [3:30:10<1:02:51, 97.93frames/s] 61%|██████    | 565282/931761 [3:30:46<1:14:04, 82.46frames/s] 61%|██████    | 565282/931761 [3:31:00<1:14:04, 82.46frames/s] 61%|██████    | 568278/931761 [3:31:27<1:16:32, 79.14frames/s] 61%|██████    | 568278/931761 [3:31:40<1:16:32, 79.14frames/s] 61%|██████▏   | 571260/931761 [3:32:00<1:12:55, 82.39frames/s] 61%|██████▏   | 571260/931761 [3:32:10<1:12:55, 82.39frames/s] 62%|██████▏   | 574260/931761 [3:32:42<1:15:49, 78.57frames/s] 62%|██████▏   | 574260/931761 [3:33:00<1:15:49, 78.57frames/s] 62%|██████▏   | 577260/931761 [3:33:20<1:15:09, 78.60frames/s] 62%|██████▏   | 577260/931761 [3:33:30<1:15:09, 78.60frames/s] 62%|██████▏   | 580248/931761 [3:33:58<1:14:24, 78.74frames/s] 62%|██████▏   | 580248/931761 [3:34:10<1:14:24, 78.74frames/s] 63%|██████▎   | 583198/931761 [3:36:21<2:15:27, 42.89frames/s] 63%|██████▎   | 583198/931761 [3:36:40<2:15:27, 42.89frames/s] 63%|██████▎   | 586116/931761 [3:37:00<1:57:14, 49.14frames/s] 63%|██████▎   | 586116/931761 [3:37:10<1:57:14, 49.14frames/s] 63%|██████▎   | 589116/931761 [3:37:33<1:40:11, 56.99frames/s] 63%|██████▎   | 589116/931761 [3:37:50<1:40:11, 56.99frames/s] 64%|██████▎   | 592040/931761 [3:39:38<2:21:30, 40.01frames/s] 64%|██████▎   | 592040/931761 [3:39:50<2:21:30, 40.01frames/s] 64%|██████▍   | 595040/931761 [3:40:12<1:57:05, 47.93frames/s] 64%|██████▍   | 595040/931761 [3:40:30<1:57:05, 47.93frames/s] 64%|██████▍   | 597940/931761 [3:42:32<2:41:16, 34.50frames/s] 64%|██████▍   | 597940/931761 [3:42:50<2:41:16, 34.50frames/s] 64%|██████▍   | 600940/931761 [3:42:58<2:05:39, 43.88frames/s] 64%|██████▍   | 600940/931761 [3:43:10<2:05:39, 43.88frames/s] 65%|██████▍   | 603840/931761 [3:43:33<1:47:28, 50.85frames/s] 65%|██████▍   | 603840/931761 [3:43:50<1:47:28, 50.85frames/s] 65%|██████▌   | 606740/931761 [3:44:10<1:35:31, 56.70frames/s] 65%|██████▌   | 606740/931761 [3:44:30<1:35:31, 56.70frames/s] 65%|██████▌   | 609640/931761 [3:44:47<1:26:31, 62.05frames/s] 65%|██████▌   | 609640/931761 [3:45:00<1:26:31, 62.05frames/s] 66%|██████▌   | 612640/931761 [3:45:28<1:22:04, 64.80frames/s] 66%|██████▌   | 612640/931761 [3:45:40<1:22:04, 64.80frames/s] 66%|██████▌   | 615440/931761 [3:47:56<2:18:26, 38.08frames/s] 66%|██████▌   | 615440/931761 [3:48:10<2:18:26, 38.08frames/s] 66%|██████▋   | 618340/931761 [3:50:56<3:12:53, 27.08frames/s] 66%|██████▋   | 618340/931761 [3:51:10<3:12:53, 27.08frames/s] 67%|██████▋   | 621264/931761 [3:51:32<2:32:38, 33.90frames/s] 67%|██████▋   | 621264/931761 [3:51:50<2:32:38, 33.90frames/s] 67%|██████▋   | 624264/931761 [3:52:04<2:01:52, 42.05frames/s] 67%|██████▋   | 624264/931761 [3:52:20<2:01:52, 42.05frames/s] 67%|██████▋   | 627264/931761 [3:52:39<1:41:55, 49.79frames/s] 67%|██████▋   | 627264/931761 [3:52:50<1:41:55, 49.79frames/s] 68%|██████▊   | 630264/931761 [3:53:17<1:29:41, 56.03frames/s] 68%|██████▊   | 630264/931761 [3:53:30<1:29:41, 56.03frames/s] 68%|██████▊   | 633264/931761 [3:53:44<1:15:12, 66.15frames/s] 68%|██████▊   | 633264/931761 [3:54:00<1:15:12, 66.15frames/s] 68%|██████▊   | 636264/931761 [3:55:55<1:56:50, 42.15frames/s] 68%|██████▊   | 636264/931761 [3:56:10<1:56:50, 42.15frames/s] 69%|██████▊   | 639264/931761 [3:59:27<3:04:41, 26.40frames/s] 69%|██████▊   | 639264/931761 [3:59:41<3:04:41, 26.40frames/s] 69%|██████▉   | 642022/931761 [4:00:05<2:29:49, 32.23frames/s] 69%|██████▉   | 642022/931761 [4:00:21<2:29:49, 32.23frames/s] 69%|██████▉   | 645022/931761 [4:00:46<2:03:02, 38.84frames/s] 69%|██████▉   | 645022/931761 [4:01:01<2:03:02, 38.84frames/s] 70%|██████▉   | 648022/931761 [4:01:23<1:42:35, 46.10frames/s] 70%|██████▉   | 648022/931761 [4:01:41<1:42:35, 46.10frames/s] 70%|██████▉   | 651022/931761 [4:02:00<1:28:10, 53.07frames/s] 70%|██████▉   | 651022/931761 [4:02:11<1:28:10, 53.07frames/s] 70%|███████   | 654022/931761 [4:02:31<1:15:20, 61.44frames/s] 70%|███████   | 654022/931761 [4:02:51<1:15:20, 61.44frames/s] 71%|███████   | 657002/931761 [4:06:08<2:32:13, 30.08frames/s] 71%|███████   | 657002/931761 [4:06:21<2:32:13, 30.08frames/s] 71%|███████   | 659648/931761 [4:06:32<2:00:43, 37.56frames/s] 71%|███████   | 659648/931761 [4:06:51<2:00:43, 37.56frames/s] 71%|███████   | 662648/931761 [4:07:06<1:37:49, 45.85frames/s] 71%|███████   | 662648/931761 [4:07:21<1:37:49, 45.85frames/s] 71%|███████▏  | 665630/931761 [4:09:29<2:12:28, 33.48frames/s] 71%|███████▏  | 665630/931761 [4:09:41<2:12:28, 33.48frames/s]2026-10-02 08:37:05 [INFO] [downloader] ✓ clip 366 saved (115.5 MB) — queued for transcription
+ 72%|███████▏  | 668430/931761 [4:12:16<2:48:57, 25.98frames/s] 72%|███████▏  | 668430/931761 [4:12:31<2:48:57, 25.98frames/s] 72%|███████▏  | 671332/931761 [4:12:51<2:12:35, 32.74frames/s] 72%|███████▏  | 671332/931761 [4:13:11<2:12:35, 32.74frames/s] 72%|███████▏  | 674332/931761 [4:13:23<1:44:54, 40.90frames/s] 72%|███████▏  | 674332/931761 [4:13:41<1:44:54, 40.90frames/s] 73%|███████▎  | 677332/931761 [4:13:58<1:27:07, 48.67frames/s] 73%|███████▎  | 677332/931761 [4:14:11<1:27:07, 48.67frames/s] 73%|███████▎  | 680332/931761 [4:14:32<1:14:21, 56.36frames/s] 73%|███████▎  | 680332/931761 [4:14:51<1:14:21, 56.36frames/s] 73%|███████▎  | 683332/931761 [4:15:19<1:10:54, 58.39frames/s] 73%|███████▎  | 683332/931761 [4:15:31<1:10:54, 58.39frames/s] 74%|███████▎  | 686332/931761 [4:17:02<1:31:00, 44.95frames/s] 74%|███████▎  | 686332/931761 [4:17:21<1:31:00, 44.95frames/s] 74%|███████▍  | 689308/931761 [4:17:37<1:17:26, 52.18frames/s] 74%|███████▍  | 689308/931761 [4:17:51<1:17:26, 52.18frames/s] 74%|███████▍  | 692308/931761 [4:18:17<1:09:25, 57.48frames/s] 74%|███████▍  | 692308/931761 [4:18:31<1:09:25, 57.48frames/s] 75%|███████▍  | 695288/931761 [4:18:57<1:03:52, 61.71frames/s] 75%|███████▍  | 695288/931761 [4:19:11<1:03:52, 61.71frames/s] 75%|███████▍  | 698288/931761 [4:19:30<56:54, 68.38frames/s]   75%|███████▍  | 698288/931761 [4:19:41<56:54, 68.38frames/s] 75%|███████▌  | 701264/931761 [4:22:00<1:37:24, 39.44frames/s] 75%|███████▌  | 701264/931761 [4:22:11<1:37:24, 39.44frames/s] 76%|███████▌  | 704264/931761 [4:22:32<1:19:24, 47.74frames/s] 76%|███████▌  | 704264/931761 [4:22:51<1:19:24, 47.74frames/s] 76%|███████▌  | 707264/931761 [4:23:18<1:11:54, 52.03frames/s] 76%|███████▌  | 707264/931761 [4:23:31<1:11:54, 52.03frames/s] 76%|███████▌  | 710264/931761 [4:27:28<2:21:54, 26.01frames/s] 76%|███████▌  | 710264/931761 [4:27:41<2:21:54, 26.01frames/s] 77%|███████▋  | 713088/931761 [4:27:55<1:50:04, 33.11frames/s] 77%|███████▋  | 713088/931761 [4:28:11<1:50:04, 33.11frames/s] 77%|███████▋  | 716088/931761 [4:28:20<1:24:33, 42.51frames/s] 77%|███████▋  | 716088/931761 [4:28:31<1:24:33, 42.51frames/s] 77%|███████▋  | 719088/931761 [4:28:57<1:11:22, 49.66frames/s] 77%|███████▋  | 719088/931761 [4:29:11<1:11:22, 49.66frames/s] 77%|███████▋  | 722088/931761 [4:33:46<2:30:34, 23.21frames/s] 77%|███████▋  | 722088/931761 [4:34:01<2:30:34, 23.21frames/s] 78%|███████▊  | 723998/931761 [4:34:09<2:06:20, 27.41frames/s] 78%|███████▊  | 723998/931761 [4:34:21<2:06:20, 27.41frames/s] 78%|███████▊  | 726998/931761 [4:34:36<1:33:57, 36.32frames/s] 78%|███████▊  | 726998/931761 [4:34:51<1:33:57, 36.32frames/s] 78%|███████▊  | 729998/931761 [4:35:10<1:15:14, 44.69frames/s] 78%|███████▊  | 729998/931761 [4:35:21<1:15:14, 44.69frames/s] 79%|███████▊  | 732998/931761 [4:35:40<1:01:23, 53.96frames/s] 79%|███████▊  | 732998/931761 [4:35:51<1:01:23, 53.96frames/s] 79%|███████▉  | 735946/931761 [4:36:18<54:44, 59.61frames/s]   79%|███████▉  | 735946/931761 [4:36:31<54:44, 59.61frames/s] 79%|███████▉  | 738946/931761 [4:36:55<49:21, 65.10frames/s] 79%|███████▉  | 738946/931761 [4:37:11<49:21, 65.10frames/s] 80%|███████▉  | 741846/931761 [4:37:27<44:31, 71.08frames/s] 80%|███████▉  | 741846/931761 [4:37:41<44:31, 71.08frames/s] 80%|███████▉  | 744746/931761 [4:37:53<39:24, 79.11frames/s] 80%|███████▉  | 744746/931761 [4:38:11<39:24, 79.11frames/s] 80%|████████  | 747646/931761 [4:38:25<37:18, 82.25frames/s] 80%|████████  | 747646/931761 [4:38:41<37:18, 82.25frames/s] 81%|████████  | 750646/931761 [4:38:57<35:07, 85.94frames/s] 81%|████████  | 750646/931761 [4:39:11<35:07, 85.94frames/s] 81%|████████  | 753546/931761 [4:39:32<35:03, 84.70frames/s] 81%|████████  | 753546/931761 [4:39:51<35:03, 84.70frames/s] 81%|████████  | 756446/931761 [4:40:02<33:01, 88.49frames/s] 81%|████████  | 756446/931761 [4:40:21<33:01, 88.49frames/s] 82%|████████▏ | 759446/931761 [4:40:35<32:25, 88.57frames/s] 82%|████████▏ | 759446/931761 [4:40:51<32:25, 88.57frames/s] 82%|████████▏ | 762346/931761 [4:41:09<32:09, 87.79frames/s] 82%|████████▏ | 762346/931761 [4:41:21<32:09, 87.79frames/s] 82%|████████▏ | 764446/931761 [4:43:43<1:12:16, 38.59frames/s] 82%|████████▏ | 764446/931761 [4:44:01<1:12:16, 38.59frames/s] 82%|████████▏ | 767392/931761 [4:48:48<2:19:09, 19.69frames/s] 83%|████████▎ | 770002/931761 [4:49:17<1:45:58, 25.44frames/s] 83%|████████▎ | 770002/931761 [4:49:31<1:45:58, 25.44frames/s] 83%|████████▎ | 773002/931761 [4:49:45<1:18:30, 33.71frames/s] 83%|████████▎ | 773002/931761 [4:50:01<1:18:30, 33.71frames/s] 83%|████████▎ | 776002/931761 [4:50:20<1:02:27, 41.56frames/s] 83%|████████▎ | 776002/931761 [4:50:31<1:02:27, 41.56frames/s] 84%|████████▎ | 779002/931761 [4:51:00<52:45, 48.25frames/s]   84%|████████▎ | 779002/931761 [4:51:11<52:45, 48.25frames/s] 84%|████████▍ | 781996/931761 [4:51:32<44:04, 56.63frames/s] 84%|████████▍ | 781996/931761 [4:51:51<44:04, 56.63frames/s] 84%|████████▍ | 784996/931761 [4:52:07<38:41, 63.23frames/s] 84%|████████▍ | 784996/931761 [4:52:21<38:41, 63.23frames/s] 85%|████████▍ | 787972/931761 [4:55:31<1:16:00, 31.53frames/s] 85%|████████▍ | 787972/931761 [4:55:41<1:16:00, 31.53frames/s] 85%|████████▍ | 790592/931761 [4:55:59<1:00:59, 38.58frames/s] 85%|████████▍ | 790592/931761 [4:56:11<1:00:59, 38.58frames/s] 85%|████████▌ | 793592/931761 [4:56:29<48:27, 47.52frames/s]   85%|████████▌ | 793592/931761 [4:56:41<48:27, 47.52frames/s] 85%|████████▌ | 796592/931761 [4:57:03<40:33, 55.54frames/s] 85%|████████▌ | 796592/931761 [4:57:21<40:33, 55.54frames/s] 86%|████████▌ | 799592/931761 [4:57:46<37:19, 59.01frames/s] 86%|████████▌ | 799592/931761 [4:58:01<37:19, 59.01frames/s] 86%|████████▌ | 802592/931761 [4:58:19<32:26, 66.37frames/s] 86%|████████▌ | 802592/931761 [4:58:31<32:26, 66.37frames/s] 86%|████████▋ | 805592/931761 [4:58:46<27:50, 75.53frames/s] 86%|████████▋ | 805592/931761 [4:59:01<27:50, 75.53frames/s] 87%|████████▋ | 808592/931761 [4:59:17<25:27, 80.61frames/s] 87%|████████▋ | 808592/931761 [4:59:31<25:27, 80.61frames/s] 87%|████████▋ | 811590/931761 [4:59:58<25:37, 78.16frames/s] 87%|████████▋ | 811590/931761 [5:00:11<25:37, 78.16frames/s] 87%|████████▋ | 814554/931761 [5:00:28<23:24, 83.47frames/s] 87%|████████▋ | 814554/931761 [5:00:41<23:24, 83.47frames/s] 88%|████████▊ | 817554/931761 [5:01:09<23:41, 80.35frames/s] 88%|████████▊ | 817554/931761 [5:01:21<23:41, 80.35frames/s] 88%|████████▊ | 820550/931761 [5:01:44<22:37, 81.95frames/s] 88%|████████▊ | 820550/931761 [5:02:01<22:37, 81.95frames/s] 88%|████████▊ | 823550/931761 [5:02:23<22:29, 80.22frames/s] 88%|████████▊ | 823550/931761 [5:02:41<22:29, 80.22frames/s] 89%|████████▊ | 826550/931761 [5:02:51<20:15, 86.56frames/s] 89%|████████▊ | 826550/931761 [5:03:01<20:15, 86.56frames/s] 89%|████████▉ | 829550/931761 [5:03:27<19:55, 85.53frames/s] 89%|████████▉ | 829550/931761 [5:03:41<19:55, 85.53frames/s] 89%|████████▉ | 832550/931761 [5:04:10<20:36, 80.24frames/s] 89%|████████▉ | 832550/931761 [5:04:21<20:36, 80.24frames/s] 90%|████████▉ | 835550/931761 [5:04:45<19:34, 81.94frames/s] 90%|████████▉ | 835550/931761 [5:05:01<19:34, 81.94frames/s] 90%|████████▉ | 838550/931761 [5:05:20<18:42, 83.01frames/s] 90%|████████▉ | 838550/931761 [5:05:31<18:42, 83.01frames/s] 90%|█████████ | 841550/931761 [5:05:57<18:17, 82.21frames/s] 90%|█████████ | 841550/931761 [5:06:11<18:17, 82.21frames/s] 91%|█████████ | 844544/931761 [5:06:38<18:18, 79.38frames/s] 91%|█████████ | 844544/931761 [5:06:51<18:18, 79.38frames/s] 91%|█████████ | 847544/931761 [5:08:45<30:15, 46.38frames/s] 91%|█████████ | 847544/931761 [5:09:01<30:15, 46.38frames/s] 91%|█████████▏| 850544/931761 [5:09:15<24:29, 55.25frames/s] 91%|█████████▏| 850544/931761 [5:09:31<24:29, 55.25frames/s] 92%|█████████▏| 853544/931761 [5:09:53<21:23, 60.93frames/s] 92%|█████████▏| 853544/931761 [5:10:11<21:23, 60.93frames/s] 92%|█████████▏| 856444/931761 [5:10:27<18:56, 66.26frames/s] 92%|█████████▏| 856444/931761 [5:10:41<18:56, 66.26frames/s] 92%|█████████▏| 859344/931761 [5:11:12<18:17, 66.01frames/s] 92%|█████████▏| 859344/931761 [5:11:31<18:17, 66.01frames/s] 93%|█████████▎| 862244/931761 [5:13:49<30:58, 37.41frames/s] 93%|█████████▎| 862244/931761 [5:14:01<30:58, 37.41frames/s] 93%|█████████▎| 865244/931761 [5:14:28<24:59, 44.36frames/s] 93%|█████████▎| 865244/931761 [5:14:41<24:59, 44.36frames/s] 93%|█████████▎| 868244/931761 [5:14:54<19:24, 54.57frames/s] 93%|█████████▎| 868244/931761 [5:15:11<19:24, 54.57frames/s] 94%|█████████▎| 871244/931761 [5:15:20<15:36, 64.61frames/s] 94%|█████████▎| 871244/931761 [5:15:31<15:36, 64.61frames/s] 94%|█████████▍| 874144/931761 [5:15:48<13:12, 72.68frames/s] 94%|█████████▍| 874144/931761 [5:16:01<13:12, 72.68frames/s] 94%|█████████▍| 877144/931761 [5:16:29<12:27, 73.04frames/s] 94%|█████████▍| 877144/931761 [5:16:41<12:27, 73.04frames/s] 94%|█████████▍| 880044/931761 [5:17:05<11:31, 74.82frames/s] 94%|█████████▍| 880044/931761 [5:17:21<11:31, 74.82frames/s] 95%|█████████▍| 882944/931761 [5:17:42<10:43, 75.90frames/s] 95%|█████████▍| 882944/931761 [5:18:01<10:43, 75.90frames/s] 95%|█████████▌| 885944/931761 [5:18:21<09:58, 76.59frames/s] 95%|█████████▌| 885944/931761 [5:18:31<09:58, 76.59frames/s] 95%|█████████▌| 888944/931761 [5:21:20<19:24, 36.77frames/s] 95%|█████████▌| 888944/931761 [5:21:31<19:24, 36.77frames/s] 96%|█████████▌| 891944/931761 [5:21:47<14:24, 46.04frames/s] 96%|█████████▌| 891944/931761 [5:22:01<14:24, 46.04frames/s] 96%|█████████▌| 894944/931761 [5:22:16<11:05, 55.33frames/s] 96%|█████████▌| 894944/931761 [5:22:31<11:05, 55.33frames/s] 96%|█████████▋| 897922/931761 [5:26:51<22:44, 24.80frames/s] 96%|█████████▋| 897922/931761 [5:27:01<22:44, 24.80frames/s] 97%|█████████▋| 900694/931761 [5:27:16<16:15, 31.86frames/s] 97%|█████████▋| 900694/931761 [5:27:31<16:15, 31.86frames/s] 97%|█████████▋| 903694/931761 [5:27:42<11:26, 40.91frames/s] 97%|█████████▋| 903694/931761 [5:28:01<11:26, 40.91frames/s] 97%|█████████▋| 906694/931761 [5:29:58<12:52, 32.45frames/s] 97%|█████████▋| 906694/931761 [5:30:11<12:52, 32.45frames/s] 98%|█████████▊| 909678/931761 [5:30:37<09:21, 39.30frames/s] 98%|█████████▊| 909678/931761 [5:30:51<09:21, 39.30frames/s] 98%|█████████▊| 912678/931761 [5:31:19<06:59, 45.49frames/s] 98%|█████████▊| 912678/931761 [5:31:32<06:59, 45.49frames/s] 98%|█████████▊| 915678/931761 [5:31:54<05:03, 53.01frames/s] 98%|█████████▊| 915678/931761 [5:32:12<05:03, 53.01frames/s] 99%|█████████▊| 918678/931761 [5:34:15<05:57, 36.57frames/s] 99%|█████████▊| 918678/931761 [5:34:32<05:57, 36.57frames/s] 99%|█████████▉| 920878/931761 [5:35:11<04:52, 37.19frames/s] 99%|█████████▉| 920878/931761 [5:35:22<04:52, 37.19frames/s] 99%|█████████▉| 923678/931761 [5:36:07<03:20, 40.22frames/s] 99%|█████████▉| 923678/931761 [5:36:22<03:20, 40.22frames/s] 99%|█████████▉| 926678/931761 [5:37:58<02:25, 34.82frames/s] 99%|█████████▉| 926678/931761 [5:38:12<02:25, 34.82frames/s]100%|█████████▉| 929678/931761 [5:39:44<01:03, 32.58frames/s]100%|█████████▉| 929678/931761 [5:40:02<01:03, 32.58frames/s]100%|██████████| 931761/931761 [5:43:24<00:00, 20.65frames/s]100%|██████████| 931761/931761 [5:43:24<00:00, 45.22frames/s]
+2026-10-02 10:10:20 [INFO] [transcriber] ~25183 words transcribed
+2026-10-02 10:10:20 [INFO] [transcriber] Saved → data/bos_transcripts/2026-07-01_clip356_Planning_Commission
+2026-10-02 10:10:20 [INFO] [transcriber] clip 356 done ✓
