@@ -32115,3 +32115,12 @@ RuntimeError: yt-dlp failed (exit 1): ERROR: [html5] 366?view_id=1&redirect=true
 2026-10-03 14:21:22 [INFO] [transcriber] ~14328 words transcribed
 2026-10-03 14:21:22 [INFO] [transcriber] Saved → data/bos_transcripts/2026-09-16_clip362_Planning_Commission
 2026-10-03 14:21:22 [INFO] [transcriber] clip 362 done ✓
+2026-10-03 14:21:26 [INFO] [git] Committed and pushed: Add BoS transcript: 2026-09-16 clip362 Planning Commission
+2026-10-03 14:21:26 [INFO] ────────────────────────────────────────────────────────────
+2026-10-03 14:21:26 [INFO] [downloader] All downloads dispatched.
+2026-10-03 14:21:26 [INFO] [transcriber] clip 363 | 2026-09-16 | Planning Commission
+2026-10-03 14:21:26 [INFO] [transcriber] Transcribing clip363.m4a …
+  0%|          | 0/4576 [00:00<?, ?frames/s] 64%|██████▍   | 2940/4576 [00:29<00:16, 99.34frames/s] 64%|██████▍   | 2940/4576 [00:48<00:16, 99.34frames/s]100%|██████████| 4576/4576 [00:50<00:00, 89.73frames/s]100%|██████████| 4576/4576 [00:50<00:00, 91.44frames/s]
+2026-10-03 14:22:17 [INFO] [transcriber] ~142 words transcribed
+2026-10-03 14:22:17 [INFO] [transcriber] Saved → data/bos_transcripts/2026-09-16_clip363_Planning_Commission
+2026-10-03 14:22:17 [INFO] [transcriber] clip 363 done ✓
