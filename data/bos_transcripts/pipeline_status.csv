@@ -270,7 +270,7 @@ clip_id,meeting_date,title,status,error,output_dir,updated_at
 358,2026-07-23,Board of Supervisors,done,,data/bos_transcripts/2026-07-23_clip358_Board_of_Supervisors,2026-10-03T00:18:10.507942
 359,2026-08-12,Board of Supervisors,done,,data/bos_transcripts/2026-08-12_clip359_Board_of_Supervisors,2026-10-03T05:22:21.501340
 360,2026-09-02,Planning Commission,done,,data/bos_transcripts/2026-09-02_clip360_Planning_Commission,2026-10-03T12:31:40.917124
-361,2026-09-09,Board of Supervisors,downloading,,,2026-10-02T09:14:04.642970
+361,2026-09-09,Board of Supervisors,done,,data/bos_transcripts/2026-09-09_clip361_Board_of_Supervisors,2026-10-03T15:41:09.411609
 362,2026-09-16,Planning Commission,downloading,,,2026-10-02T10:11:04.612196
 363,2026-09-16,Planning Commission,downloading,,,2026-10-02T10:19:34.808964
 364,2026-09-16,Planning Commission,downloading,,,2026-10-02T10:20:34.829547
